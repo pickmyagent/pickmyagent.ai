@@ -60,19 +60,6 @@ body {
   outline-offset: 3px;
 }
 
-.skip-link {
-  position: absolute;
-  left: 1rem;
-  top: -4rem;
-  z-index: 80;
-  padding: 0.6rem 0.9rem;
-  font-weight: 700;
-}
-
-.skip-link:focus {
-  top: 1rem;
-}
-
 .btn-gold {
   position: relative;
   isolation: isolate;
@@ -124,6 +111,24 @@ body {
   to {
     transform: translateX(130%);
   }
+}
+
+/* Higher specificity than .btn-gold so the link stays out of the flex column.
+   Otherwise position:relative wins, the link stretches to the body width, and
+   left: 1rem pushes it past the right edge. */
+a.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  width: max-content;
+  max-width: calc(100% - 2rem);
+  padding: 0.6rem 0.9rem;
+  font-weight: 700;
+}
+
+a.skip-link:focus {
+  top: 1rem;
 }
 
 .frame {
