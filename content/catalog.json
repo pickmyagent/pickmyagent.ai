@@ -1,0 +1,2920 @@
+{
+  "site": {
+    "name": "PickMyAgent",
+    "url": "https://pickmyagent.ai",
+    "catalogCheckedDate": "2026-10-15",
+    "newThisWeekSince": "2026-10-08",
+    "recentReleaseSince": "2026-10-01",
+    "methodologyVersion": "1.0",
+    "tagline": "Find the AI agent (or tool) that fits the job."
+  },
+  "categories": [
+    {
+      "slug": "agent-frameworks",
+      "title": "Agent frameworks & orchestration",
+      "summary": "Libraries and platforms for multi-step and multi-agent work."
+    },
+    {
+      "slug": "coding-agents",
+      "title": "Coding agents & copilots",
+      "summary": "IDE agents and copilots that edit, run, and review code."
+    },
+    {
+      "slug": "tool-use",
+      "title": "Tool use, MCP & browser agents",
+      "summary": "Connect apps, tools, and browser control."
+    },
+    {
+      "slug": "workflow-automation",
+      "title": "Workflow automation",
+      "summary": "Automations across the apps you already use."
+    },
+    {
+      "slug": "search-rag",
+      "title": "Search, crawl & RAG infra",
+      "summary": "Search, crawl, memory, and vector infrastructure."
+    },
+    {
+      "slug": "game-ai",
+      "title": "Game AI & NPCs",
+      "summary": "Characters and agents for games and Discord."
+    },
+    {
+      "slug": "creative-media",
+      "title": "Creative media (image, video, audio, 3D)",
+      "summary": "Art, 3D, voice, and video for makers and creators."
+    },
+    {
+      "slug": "knowledge",
+      "title": "Knowledge, notes & meetings",
+      "summary": "Capture, summarize, and query team context."
+    }
+  ],
+  "tools": [
+    {
+      "id": "autogen",
+      "slug": "autogen",
+      "name": "AutoGen (Microsoft)",
+      "websiteUrl": "https://github.com/microsoft/autogen",
+      "affiliateUrl": null,
+      "shortDescription": "Microsoft open-source Python library for multi-agent conversations. Newest release we found is from 2025.",
+      "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. We installed autogen-agentchat and imported it, with no model call. The latest Python GitHub release we found, python-v0.7.5, was published on September 30, 2025 — older than the other frameworks in this check. Treat freshness as an open question, not a verdict.",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "toolTypes": [
+        "framework",
+        "agent"
+      ],
+      "platforms": [
+        "cli",
+        "self_host"
+      ],
+      "pricingModel": [
+        "open_source",
+        "free"
+      ],
+      "pricingNotes": "No SaaS pricing page for the framework. Latest GitHub python release python-v0.7.5 dated 2025-09-30 — older than peers; industry notes mention Microsoft Agent Framework as successor — flag for catalog freshness.",
+      "pricingUrl": "https://microsoft.github.io/autogen/stable/index.html",
+      "docsUrl": "https://microsoft.github.io/autogen/stable/index.html",
+      "freeTier": true,
+      "freeTierNotes": "Open-source library; no product paywall for the framework itself (LLM provider costs separate).",
+      "openSource": true,
+      "repoUrl": "https://github.com/microsoft/autogen",
+      "bestFor": [
+        "Python experiments with multi-agent conversations",
+        "Teams that want an open-source library with no product paywall"
+      ],
+      "notIdealFor": [
+        "A frequently updated hosted product",
+        "Anyone who needs a 2026 release cadence — we did not find one"
+      ],
+      "smokeStatus": "tested-hands-on",
+      "smokeTested": true,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import autogen_agentchat",
+        "package": "autogen-agentchat==0.7.5",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "latestRelease": {
+        "repo": "microsoft/autogen",
+        "tag": "python-v0.7.5",
+        "name": "python-v0.7.5",
+        "publishedAt": "2025-09-30T06:18:26Z",
+        "url": "https://github.com/microsoft/autogen/releases/tag/python-v0.7.5"
+      },
+      "problems": [
+        "Latest Autogen python release on GitHub is 2025-09-30; may be maintenance-mode relative to newer Microsoft Agent Framework."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://github.com/microsoft/autogen",
+        "https://microsoft.github.io/autogen/stable/index.html",
+        "https://github.com/microsoft/autogen/releases/tag/python-v0.7.5"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://github.com/microsoft/autogen"
+      }
+    },
+    {
+      "id": "autogpt",
+      "slug": "autogpt",
+      "name": "AutoGPT",
+      "websiteUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+      "affiliateUrl": null,
+      "shortDescription": "Open-source agent project with a platform beta. Site and repo checked; local install not run.",
+      "longDescription": "AutoGPT is an open-source agent project. We checked the GitHub repo and agpt.co/pricing. A platform beta release was published on October 14, 2026. We did not install it locally. The repo is the free path; hosted plans may be paid.",
+      "categories": [
+        "agent-frameworks",
+        "coding-agents"
+      ],
+      "useCaseTags": [
+        "coding-agents",
+        "multi-agent-workflows"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "self_host",
+        "web"
+      ],
+      "pricingModel": [
+        "open_source"
+      ],
+      "pricingNotes": "Platform release autogpt-platform-beta-v0.8.4 on 2026-10-14.",
+      "pricingUrl": "https://agpt.co/pricing",
+      "docsUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+      "freeTier": true,
+      "freeTierNotes": "Open-source repo. agpt.co/pricing HTTP 200 — cloud offerings may be paid; OSS self-host path exists.",
+      "openSource": true,
+      "repoUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+      "bestFor": [
+        "Reading an open-source autonomous-agent codebase",
+        "Teams watching the platform beta releases"
+      ],
+      "notIdealFor": [
+        "A tiny script where a smaller library is enough",
+        "A hands-on install — we did not run one"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": {
+        "repo": "Significant-Gravitas/AutoGPT",
+        "tag": "autogpt-platform-beta-v0.8.4",
+        "name": "autogpt-platform-beta-v0.8.4",
+        "publishedAt": "2026-10-14T16:22:16Z",
+        "url": "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.8.4"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://github.com/Significant-Gravitas/AutoGPT",
+        "https://agpt.co/pricing",
+        "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.8.4"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://github.com/Significant-Gravitas/AutoGPT"
+      }
+    },
+    {
+      "id": "bitpart",
+      "slug": "bitpart",
+      "name": "Bitpart",
+      "websiteUrl": "https://www.bitpart.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "NPC engine for games, with SDKs described on the product page. No public price grid found on our check.",
+      "longDescription": "Bitpart builds NPCs for games. The product page describes SDKs. We did not find a public pricing grid, so price and free tier are unconfirmed — do not assume a number. We did not install an SDK.",
+      "categories": [
+        "game-ai"
+      ],
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact"
+      ],
+      "pricingNotes": "Contact/sales likely; do not invent prices.",
+      "pricingUrl": "https://www.bitpart.ai/product",
+      "docsUrl": "https://www.bitpart.ai/",
+      "freeTier": null,
+      "freeTierNotes": "No public pricing grid found in crawl; product page describes SDKs. Free tier unconfirmed.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Game teams evaluating an NPC engine with SDKs",
+        "Projects that can talk to the vendor about price"
+      ],
+      "notIdealFor": [
+        "A published self-serve price",
+        "A docs-complete install guide — docs URL is the product site"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [
+        "No public pricing page with clear free tier found."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.bitpart.ai/",
+        "https://www.bitpart.ai/product"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.bitpart.ai/"
+      }
+    },
+    {
+      "id": "browser_use",
+      "slug": "browser-use",
+      "name": "Browser Use",
+      "websiteUrl": "https://browser-use.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Open-source Python agent that controls a browser. We imported the package locally; no model call.",
+      "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. We did not sign up, pay, or call a model. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
+      "categories": [
+        "tool-use"
+      ],
+      "useCaseTags": [
+        "tool-use-browser"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "cli",
+        "self_host"
+      ],
+      "pricingModel": [
+        "open_source",
+        "usage"
+      ],
+      "pricingNotes": "Cloud stealth browsers billed separately per docs/marketing.",
+      "pricingUrl": "https://browser-use.com/",
+      "docsUrl": "https://docs.browser-use.com/",
+      "freeTier": true,
+      "freeTierNotes": "Open-source Python agent; docs mention cloud browser pricing samples (e.g. $0.02 per browser-hour in earlier marketing fetch). Local OSS usable with your own browser/LLM keys.",
+      "openSource": true,
+      "repoUrl": "https://github.com/browser-use/browser-use",
+      "bestFor": [
+        "Agents that need to open pages, click, and type",
+        "Python projects that can bring their own browser and model"
+      ],
+      "notIdealFor": [
+        "Jobs that only need an HTTP search API",
+        "A no-code hosted agent with no local setup"
+      ],
+      "smokeStatus": "tested-hands-on",
+      "smokeTested": true,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import browser_use; from browser_use import Agent",
+        "package": "browser-use==0.13.11",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "latestRelease": {
+        "repo": "browser-use/browser-use",
+        "tag": "0.13.11",
+        "name": "0.13.11",
+        "publishedAt": "2026-10-07T04:23:18Z",
+        "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.11"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://browser-use.com/",
+        "https://docs.browser-use.com/",
+        "https://github.com/browser-use/browser-use/releases/tag/0.13.11"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://browser-use.com/"
+      }
+    },
+    {
+      "id": "claude",
+      "slug": "claude",
+      "name": "Claude (Anthropic)",
+      "websiteUrl": "https://www.anthropic.com/claude",
+      "affiliateUrl": null,
+      "shortDescription": "Anthropic Claude product and API for chat and coding. Docs checked; we did not sign up.",
+      "longDescription": "Claude is Anthropic’s model product, used for chat and coding. The URL we checked redirected toward the Claude product overview. The pricing page included a $0 option in the text we could read; API billing is separate. We did not create an account.",
+      "categories": [
+        "coding-agents"
+      ],
+      "useCaseTags": [
+        "coding-agents"
+      ],
+      "toolTypes": [
+        "model_api",
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "usage",
+        "subscription"
+      ],
+      "pricingNotes": "Site redirects product overview to claude.com. API billed separately.",
+      "pricingUrl": "https://www.anthropic.com/pricing",
+      "docsUrl": "https://docs.claude.com/",
+      "freeTier": true,
+      "freeTierNotes": "Anthropic pricing page includes $0 option in crawl text (Claude consumer/API tiers — confirm Free vs Pro on page).",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Chat and coding help through Claude’s product or API",
+        "Teams already comparing model providers"
+      ],
+      "notIdealFor": [
+        "A self-hosted open-source agent runtime",
+        "Anyone who needs a local install from this check"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.anthropic.com/claude",
+        "https://www.anthropic.com/pricing",
+        "https://docs.claude.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://claude.com/product/overview"
+      }
+    },
+    {
+      "id": "composio",
+      "slug": "composio",
+      "name": "Composio",
+      "websiteUrl": "https://composio.dev/",
+      "affiliateUrl": null,
+      "shortDescription": "Connects agents to third-party apps and tools. Docs and a $0 Hobby plan were checked; not installed here.",
+      "longDescription": "Composio is a tool-use layer between agents and third-party apps. The pricing page we crawled included Hobby / $0 / no-credit-card language. We checked docs and the October 15, 2026 CLI release, and we did not install it or create an account.",
+      "categories": [
+        "tool-use"
+      ],
+      "useCaseTags": [
+        "tool-use-browser"
+      ],
+      "toolTypes": [
+        "infra"
+      ],
+      "platforms": [
+        "web",
+        "cli"
+      ],
+      "pricingModel": [
+        "open_source",
+        "freemium"
+      ],
+      "pricingNotes": "Confirm current Hobby limits on composio.dev/pricing.",
+      "pricingUrl": "https://composio.dev/pricing",
+      "docsUrl": "https://docs.composio.dev/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing page crawl includes Hobby/$0/no credit card language.",
+      "openSource": true,
+      "repoUrl": "https://github.com/ComposioHQ/composio",
+      "bestFor": [
+        "Agents that need many SaaS tools without custom OAuth for each one",
+        "Teams evaluating a hosted tool layer with an open-source SDK"
+      ],
+      "notIdealFor": [
+        "A single API you already call directly",
+        "A local hands-on test — we did not run one"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": {
+        "repo": "ComposioHQ/composio",
+        "tag": "@composio/cli@0.4.4",
+        "name": "CLI @composio/cli@0.4.4",
+        "publishedAt": "2026-10-15T12:48:24Z",
+        "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.4"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://composio.dev/",
+        "https://composio.dev/pricing",
+        "https://docs.composio.dev/",
+        "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.4"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://composio.dev/"
+      }
+    },
+    {
+      "id": "continue",
+      "slug": "continue",
+      "name": "Continue",
+      "websiteUrl": "https://continue.dev/",
+      "affiliateUrl": null,
+      "shortDescription": "Open-source coding agent and IDE extension. The /pricing URL returned 404 on our check.",
+      "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. We checked the homepage, docs, and GitHub releases. continue.dev/pricing returned HTTP 404, so there is no separate pricing page in this listing — the open-source extension is the free path we could confirm. We did not install the extension.",
+      "categories": [
+        "coding-agents"
+      ],
+      "useCaseTags": [
+        "coding-agents"
+      ],
+      "toolTypes": [
+        "copilot"
+      ],
+      "platforms": [
+        "ide"
+      ],
+      "pricingModel": [
+        "open_source"
+      ],
+      "pricingNotes": "Confirm any Continue cloud/team pricing on site; OSS install is IDE extension (not pip-tested here).",
+      "pricingUrl": "https://www.continue.dev/",
+      "docsUrl": "https://docs.continue.dev/",
+      "freeTier": true,
+      "freeTierNotes": "Open-source coding agent/extension (homepage). Dedicated /pricing returned 404 in this pass.",
+      "openSource": true,
+      "repoUrl": "https://github.com/continuedev/continue",
+      "bestFor": [
+        "Developers who want an open-source copilot in the IDE",
+        "Teams that would rather extend the editor they already use"
+      ],
+      "notIdealFor": [
+        "A hosted IDE with a published price grid",
+        "A confirmed cloud plan — the pricing URL 404’d"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": {
+        "repo": "continuedev/continue",
+        "tag": "v2.0.0-vscode",
+        "name": "v2.0.0-vscode",
+        "publishedAt": "2026-06-19T00:24:01Z",
+        "url": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
+      },
+      "problems": [
+        "continue.dev/pricing returned HTTP 404."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://continue.dev/",
+        "https://www.continue.dev/",
+        "https://docs.continue.dev/",
+        "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://continue.dev/"
+      }
+    },
+    {
+      "id": "convai",
+      "slug": "convai",
+      "name": "Convai",
+      "websiteUrl": "https://convai.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Conversational characters for games. Site loaded; pricing text did not come through, so the free tier is unconfirmed.",
+      "longDescription": "Convai makes conversational characters for games. The homepage returned HTTP 200. The pricing URL did not yield readable plan text in this environment, so the free tier is unconfirmed. We did not create an account.",
+      "categories": [
+        "game-ai"
+      ],
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": "Confirm on convai.com/pricing in a browser.",
+      "pricingUrl": "https://convai.com/pricing",
+      "docsUrl": "https://docs.convai.com/",
+      "freeTier": null,
+      "freeTierNotes": "Site loads (200). Pricing URL fetches failed/empty in this pass — free tier unconfirmed.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "In-game characters that talk with the player",
+        "Teams comparing hosted NPC platforms"
+      ],
+      "notIdealFor": [
+        "A confirmed price or free tier from this check",
+        "Workflow automation outside a game"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [
+        "Could not extract pricing/free tier from pricing URL in this environment."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://convai.com/",
+        "https://convai.com/pricing",
+        "https://docs.convai.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://convai.com/"
+      }
+    },
+    {
+      "id": "crewai",
+      "slug": "crewai",
+      "name": "CrewAI",
+      "websiteUrl": "https://crewai.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Open-source framework for crews of role-based agents that split a job into tasks.",
+      "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source package and the hosted product are separate. Figures below are only what we could read on the pricing page during the October 15, 2026 check.",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "toolTypes": [
+        "framework",
+        "agent"
+      ],
+      "platforms": [
+        "cli",
+        "self_host"
+      ],
+      "pricingModel": [
+        "open_source",
+        "freemium",
+        "enterprise"
+      ],
+      "pricingNotes": "Enterprise Custom. Open-source framework separate from cloud Free/Enterprise.",
+      "pricingUrl": "https://www.crewai.com/pricing",
+      "docsUrl": "https://docs.crewai.com/",
+      "freeTier": true,
+      "freeTierNotes": "Basic plan Free: visual editor, GitHub integration, 50 workflow executions/month (cloud). OSS/framework also installable via pip/uv without cloud.",
+      "openSource": true,
+      "repoUrl": "https://github.com/crewAIInc/crewAI",
+      "bestFor": [
+        "Multi-step jobs you can split across roles",
+        "Python teams who want a crew abstraction they can install"
+      ],
+      "notIdealFor": [
+        "A single chat box with no workflow",
+        "Teams that only want a closed SaaS and will not touch Python"
+      ],
+      "smokeStatus": "tested-hands-on",
+      "smokeTested": true,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import crewai",
+        "package": "crewai==1.15.28",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "latestRelease": {
+        "repo": "crewAIInc/crewAI",
+        "tag": "1.15.28",
+        "name": "1.15.28",
+        "publishedAt": "2026-10-14T04:47:00Z",
+        "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.28"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://crewai.com/",
+        "https://www.crewai.com/pricing",
+        "https://docs.crewai.com/",
+        "https://github.com/crewAIInc/crewAI/releases/tag/1.15.28"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://crewai.com/"
+      }
+    },
+    {
+      "id": "cursor",
+      "slug": "cursor",
+      "name": "Cursor",
+      "websiteUrl": "https://cursor.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Desktop IDE with an agent that can edit, run, and review code. Docs and pricing checked; not installed here.",
+      "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. We opened the site, docs, and pricing page. The pricing page showed a $0 tier next to paid plans. We did not install the app or sign in, so this listing is docs checked, not smoke-tested.",
+      "categories": [
+        "coding-agents"
+      ],
+      "useCaseTags": [
+        "coding-agents"
+      ],
+      "toolTypes": [
+        "copilot",
+        "agent"
+      ],
+      "platforms": [
+        "ide",
+        "desktop"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Paid plans present; confirm current inclusions on cursor.com/pricing.",
+      "pricingUrl": "https://cursor.com/pricing",
+      "docsUrl": "https://cursor.com/docs",
+      "freeTier": true,
+      "freeTierNotes": "Pricing page shows $0 /mo tier alongside paid ($8/$30/$100/$200 /mo samples in crawl).",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Developers who want an agent inside the editor",
+        "Day-to-day coding where the agent should touch the repo"
+      ],
+      "notIdealFor": [
+        "A headless library you import from Python",
+        "A hands-on install check — we did not run one"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://cursor.com/",
+        "https://cursor.com/pricing",
+        "https://cursor.com/docs"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://cursor.com/"
+      }
+    },
+    {
+      "id": "descript",
+      "slug": "descript",
+      "name": "Descript",
+      "websiteUrl": "https://www.descript.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Edit video and audio by editing the transcript. Pricing page included a free-to-start option.",
+      "longDescription": "Descript edits audio and video from the transcript. The pricing crawl included free-to-start or hobby and $0 language, with paid samples in a roughly $16–$65 range. Confirm current limits on the pricing page. We did not install the app.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web",
+        "desktop"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Paid samples $16–$65 range in crawl.",
+      "pricingUrl": "https://www.descript.com/pricing",
+      "docsUrl": "https://help.descript.com/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes free to start / hobby / $0 language.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Cutting and cleaning talking-head or podcast video",
+        "Creators who edit by editing words"
+      ],
+      "notIdealFor": [
+        "Generating a character voice from scratch as the main job",
+        "In-game agents"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.descript.com/",
+        "https://www.descript.com/pricing",
+        "https://help.descript.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.descript.com/"
+      }
+    },
+    {
+      "id": "dify",
+      "slug": "dify",
+      "name": "Dify",
+      "websiteUrl": "https://dify.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Open-source platform to build agent workflows visually, with a self-hosted community edition.",
+      "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page. We checked the site, docs, and pricing. We did not install it. Cloud price samples in the page text should be re-read on the live pricing page before you rely on them.",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "toolTypes": [
+        "framework",
+        "agent"
+      ],
+      "platforms": [
+        "web",
+        "self_host"
+      ],
+      "pricingModel": [
+        "open_source",
+        "freemium",
+        "enterprise"
+      ],
+      "pricingNotes": "Self-host Community Edition vs cloud paid.",
+      "pricingUrl": "https://dify.ai/pricing",
+      "docsUrl": "https://docs.dify.ai/",
+      "freeTier": true,
+      "freeTierNotes": "Community Edition (self-host, open-source) referenced on pricing page. Cloud paid tiers also listed (samples included $590/$1590 in page text — verify current).",
+      "openSource": true,
+      "repoUrl": "https://github.com/langgenius/dify",
+      "bestFor": [
+        "Teams who want a visual agent builder they can self-host",
+        "Projects that need a product UI, not only a library"
+      ],
+      "notIdealFor": [
+        "A small Python script with no surrounding app",
+        "Hands-on proof from us — this one is docs checked only"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": {
+        "repo": "langgenius/dify",
+        "tag": "1.17.1",
+        "name": "v1.17.1 - Bug Fixes and Improvements",
+        "publishedAt": "2026-09-10T10:04:06Z",
+        "url": "https://github.com/langgenius/dify/releases/tag/1.17.1"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://dify.ai/",
+        "https://dify.ai/pricing",
+        "https://docs.dify.ai/",
+        "https://github.com/langgenius/dify/releases/tag/1.17.1"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://dify.ai/"
+      }
+    },
+    {
+      "id": "elevenlabs",
+      "slug": "elevenlabs",
+      "name": "ElevenLabs",
+      "websiteUrl": "https://elevenlabs.io/",
+      "affiliateUrl": null,
+      "shortDescription": "Voice and audio generation. Pricing page loaded, but the text was too thin to confirm a free tier.",
+      "longDescription": "ElevenLabs generates voice and audio. The pricing page returned HTTP 200, but the extracted text was only a few hundred characters, so a free tier was not confirmed in this pass. Re-check elevenlabs.io/pricing in a browser before claiming a free plan. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": "Re-check elevenlabs.io/pricing in browser before claiming Free.",
+      "pricingUrl": "https://elevenlabs.io/pricing",
+      "docsUrl": "https://elevenlabs.io/docs",
+      "freeTier": null,
+      "freeTierNotes": "Pricing page HTTP 200 but extracted text was very thin (528 chars) — free tier historically exists; NOT confirmed in this extract.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Voice for characters, trailers, or streams",
+        "Teams comparing hosted speech tools"
+      ],
+      "notIdealFor": [
+        "A confirmed free-tier claim from this check",
+        "Image or 3D generation"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [
+        "Pricing page content barely extractable via crawl."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://elevenlabs.io/",
+        "https://elevenlabs.io/pricing",
+        "https://elevenlabs.io/docs"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://elevenlabs.io/"
+      }
+    },
+    {
+      "id": "firecrawl",
+      "slug": "firecrawl",
+      "name": "Firecrawl",
+      "websiteUrl": "https://www.firecrawl.dev/",
+      "affiliateUrl": null,
+      "shortDescription": "Turns websites into markdown for LLMs. Open-source repo plus a cloud API with a free plan.",
+      "longDescription": "Firecrawl crawls pages into markdown for language models. We checked the site, pricing, docs, and the GitHub release. The pricing crawl mentioned a free or hobby plan and a $0 sample, with paid tiers above that. We did not run a local install.",
+      "categories": [
+        "tool-use",
+        "search-rag"
+      ],
+      "useCaseTags": [
+        "tool-use-browser",
+        "research-rag"
+      ],
+      "toolTypes": [
+        "infra"
+      ],
+      "platforms": [
+        "web",
+        "self_host"
+      ],
+      "pricingModel": [
+        "open_source",
+        "freemium",
+        "usage"
+      ],
+      "pricingNotes": "OSS repo exists; cloud has paid tiers (samples $16/$75 etc.).",
+      "pricingUrl": "https://www.firecrawl.dev/pricing",
+      "docsUrl": "https://docs.firecrawl.dev/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl mentions free plan / hobby and $0 /mo sample.",
+      "openSource": true,
+      "repoUrl": "https://github.com/mendableai/firecrawl",
+      "bestFor": [
+        "Turning pages into clean text for retrieval",
+        "Teams that want either a cloud API or an open-source repo"
+      ],
+      "notIdealFor": [
+        "Interactive browser tasks such as clicking and login flows",
+        "A general web-search API — that is a different job"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": {
+        "repo": "mendableai/firecrawl",
+        "tag": "v2.11.0",
+        "name": "Firecrawl v2.11.0",
+        "publishedAt": "2026-06-19T15:09:30Z",
+        "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.0"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.firecrawl.dev/",
+        "https://www.firecrawl.dev/pricing",
+        "https://docs.firecrawl.dev/",
+        "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.0"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.firecrawl.dev/"
+      }
+    },
+    {
+      "id": "flowise",
+      "slug": "flowise",
+      "name": "Flowise",
+      "websiteUrl": "https://flowiseai.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Open-source, low-code builder for LLM flows you can self-host. Cloud free tier was not clearly confirmed.",
+      "longDescription": "Flowise is a low-code builder for LLM flows. The npm package and GitHub repo are the open-source path we could confirm. The pricing page came back thin in our crawl, so a cloud free tier is not confirmed. We did not install it.",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "toolTypes": [
+        "framework"
+      ],
+      "platforms": [
+        "web",
+        "self_host"
+      ],
+      "pricingModel": [
+        "open_source"
+      ],
+      "pricingNotes": "npm view flowise version=3.1.4. Hands-on install not run.",
+      "pricingUrl": "https://flowiseai.com/pricing",
+      "docsUrl": "https://docs.flowiseai.com/",
+      "freeTier": true,
+      "freeTierNotes": "Open-source self-host (npm package flowise@3.1.4 on npm registry). Pricing page returned thin content in crawl; cloud free tier not clearly confirmed.",
+      "openSource": true,
+      "repoUrl": "https://github.com/FlowiseAI/Flowise",
+      "bestFor": [
+        "Visual flows on infrastructure you run yourself",
+        "Teams already comfortable with a Node service"
+      ],
+      "notIdealFor": [
+        "A confirmed free hosted plan — we could not verify one",
+        "Code-first agent libraries, if that is all you need"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": {
+        "repo": "FlowiseAI/Flowise",
+        "tag": "flowise@3.1.4",
+        "name": "flowise@3.1.4",
+        "publishedAt": "2026-07-29T15:51:25Z",
+        "url": "https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.4"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://flowiseai.com/",
+        "https://flowiseai.com/pricing",
+        "https://docs.flowiseai.com/",
+        "https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.4"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://flowiseai.com/"
+      }
+    },
+    {
+      "id": "granola",
+      "slug": "granola",
+      "name": "Granola",
+      "websiteUrl": "https://www.granola.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Meeting notes that sit alongside your calls. Pricing page included a $0 plan.",
+      "longDescription": "Granola takes meeting notes. The pricing crawl included $0 alongside $14 and $35. Confirm free-plan limits on the pricing page. We did not install the app or join a call.",
+      "categories": [
+        "knowledge"
+      ],
+      "useCaseTags": [
+        "meetings-knowledge"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "desktop"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Confirm Free limits on granola.ai/pricing.",
+      "pricingUrl": "https://www.granola.ai/pricing",
+      "docsUrl": "https://www.granola.ai/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0 alongside $14/$35.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Notes during meetings you are already in",
+        "People who want a desktop notepad more than a wiki"
+      ],
+      "notIdealFor": [
+        "A team wiki or long-term knowledge base",
+        "Game or stream production"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.granola.ai/",
+        "https://www.granola.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.granola.ai/"
+      }
+    },
+    {
+      "id": "heygen",
+      "slug": "heygen",
+      "name": "HeyGen",
+      "websiteUrl": "https://www.heygen.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Avatar and spokesperson video. Pricing page showed a $0/mo option alongside paid plans.",
+      "longDescription": "HeyGen makes avatar and spokesperson videos. The pricing crawl included $0/month alongside $29 and $49 per month samples. Confirm what the free plan includes. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Confirm Free inclusions on heygen.com/pricing.",
+      "pricingUrl": "https://www.heygen.com/pricing",
+      "docsUrl": "https://docs.heygen.com/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0/mo alongside $29/$49 /mo.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Spokesperson or avatar videos",
+        "Teams that want a hosted avatar tool with a $0 tier on the page we read"
+      ],
+      "notIdealFor": [
+        "Gameplay capture or VOD clipping",
+        "A local open-source editor"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.heygen.com/",
+        "https://www.heygen.com/pricing",
+        "https://docs.heygen.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.heygen.com/"
+      }
+    },
+    {
+      "id": "inworld",
+      "slug": "inworld",
+      "name": "Inworld",
+      "websiteUrl": "https://inworld.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Character AI for games and interactive agents. Pricing page included a $0 sample; not hands-on tested.",
+      "longDescription": "Inworld builds character AI for games and interactive experiences. The pricing crawl included a $0 sample among paid usage samples. Confirm the current free allotment on the pricing page. We checked docs and did not run a hands-on session.",
+      "categories": [
+        "game-ai"
+      ],
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "Paid usage samples also present; confirm free allotment.",
+      "pricingUrl": "https://inworld.ai/pricing",
+      "docsUrl": "https://docs.inworld.ai/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0 among samples.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Game characters with dialogue",
+        "Teams that want a hosted character stack and docs"
+      ],
+      "notIdealFor": [
+        "A local Python library we smoke-tested — we did not",
+        "Image or 3D asset generation"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://inworld.ai/",
+        "https://inworld.ai/pricing",
+        "https://docs.inworld.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://inworld.ai/"
+      }
+    },
+    {
+      "id": "langchain",
+      "slug": "langchain",
+      "name": "LangChain",
+      "websiteUrl": "https://www.langchain.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Open-source libraries for agents, chains, and tool calling, plus optional LangSmith traces.",
+      "longDescription": "LangChain is a set of libraries for composing agent and tool-calling workflows. LangSmith, the tracing product on the same site, is separate: the pricing page we read listed a $0 developer plan and a paid Plus plan. We imported the Python package locally and did not call a model.",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "toolTypes": [
+        "framework"
+      ],
+      "platforms": [
+        "cli",
+        "self_host"
+      ],
+      "pricingModel": [
+        "open_source",
+        "freemium"
+      ],
+      "pricingNotes": "Plus $39/seat/mo. Enterprise custom.",
+      "pricingUrl": "https://www.langchain.com/pricing",
+      "docsUrl": "https://docs.langchain.com/",
+      "freeTier": true,
+      "freeTierNotes": "OSS libraries free. LangSmith Developer plan $0/seat with up to 5k base traces/mo then pay-as-you-go.",
+      "openSource": true,
+      "repoUrl": "https://github.com/langchain-ai/langchain",
+      "bestFor": [
+        "Developers composing agent workflows in code",
+        "Teams that want run traces via LangSmith"
+      ],
+      "notIdealFor": [
+        "People who want only a visual builder",
+        "A finished consumer chat product"
+      ],
+      "smokeStatus": "tested-hands-on",
+      "smokeTested": true,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import langchain; from langchain.agents import create_agent",
+        "package": "langchain==1.4.6",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "latestRelease": {
+        "repo": "langchain-ai/langchain",
+        "tag": "langchain-core==1.6.10",
+        "name": "langchain-core==1.6.10",
+        "publishedAt": "2026-10-12T14:14:03Z",
+        "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.10"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.langchain.com/",
+        "https://www.langchain.com/pricing",
+        "https://docs.langchain.com/",
+        "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.10"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.langchain.com/"
+      }
+    },
+    {
+      "id": "llamaindex",
+      "slug": "llamaindex",
+      "name": "LlamaIndex",
+      "websiteUrl": "https://www.llamaindex.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Open-source framework for retrieval and agents over your own data. Cloud free tier unconfirmed.",
+      "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. We installed and imported llama-index-core. The pricing page loaded, but the crawl did not clearly show a free cloud tier, so that part stays unconfirmed.",
+      "categories": [
+        "agent-frameworks",
+        "search-rag"
+      ],
+      "useCaseTags": [
+        "multi-agent-workflows",
+        "research-rag"
+      ],
+      "toolTypes": [
+        "framework"
+      ],
+      "platforms": [
+        "cli",
+        "self_host"
+      ],
+      "pricingModel": [
+        "open_source"
+      ],
+      "pricingNotes": "Confirm LlamaCloud tiers on official pricing page before publishing $ amounts.",
+      "pricingUrl": "https://www.llamaindex.ai/pricing",
+      "docsUrl": "https://docs.llamaindex.ai/en/stable/",
+      "freeTier": null,
+      "freeTierNotes": "OSS core is free to install. Pricing page HTTP 200 but crawl text did not clearly extract a free SaaS tier; treat cloud free tier as unconfirmed from this pass.",
+      "openSource": true,
+      "repoUrl": "https://github.com/run-llama/llama_index",
+      "bestFor": [
+        "RAG pipelines over documents you already have",
+        "Python teams building retrieval into an agent"
+      ],
+      "notIdealFor": [
+        "A finished consumer chat app",
+        "Anyone who needs a confirmed free cloud tier from this check"
+      ],
+      "smokeStatus": "tested-hands-on",
+      "smokeTested": true,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import llama_index.core",
+        "package": "llama-index-core==0.14.25",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "latestRelease": {
+        "repo": "run-llama/llama_index",
+        "tag": "v0.14.25",
+        "name": "v0.14.25",
+        "publishedAt": "2026-09-21T16:22:27Z",
+        "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.25"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.llamaindex.ai/",
+        "https://www.llamaindex.ai/pricing",
+        "https://docs.llamaindex.ai/en/stable/",
+        "https://github.com/run-llama/llama_index/releases/tag/v0.14.25"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.llamaindex.ai/"
+      }
+    },
+    {
+      "id": "make",
+      "slug": "make",
+      "name": "Make",
+      "websiteUrl": "https://www.make.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Visual automation across apps. The pricing FAQ we fetched describes a free plan with 1,000 credits a month.",
+      "longDescription": "Make is a visual automation product. A direct HTML crawl of pricing sometimes returned 403; a fetch of the official pricing FAQ did describe a Free plan with 1,000 credits per month. Paid Core, Pro, and Teams plans sit above that. We did not create an account.",
+      "categories": [
+        "workflow-automation"
+      ],
+      "useCaseTags": [
+        "workflow-automation"
+      ],
+      "toolTypes": [
+        "automation"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Credits billing unit as of Aug 27 (year not re-stated on snippet). Core/Pro/Teams paid.",
+      "pricingUrl": "https://www.make.com/en/pricing",
+      "docsUrl": "https://www.make.com/en/help",
+      "freeTier": true,
+      "freeTierNotes": "Official pricing FAQ states Free plan includes 1000 credits per month (and related storage). Direct HTML crawl sometimes 403; WebFetch of pricing page succeeded.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Visual multi-step automations",
+        "Teams that want a hosted builder rather than a library"
+      ],
+      "notIdealFor": [
+        "Code-first agent frameworks",
+        "Self-hosting the automation engine"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.make.com/",
+        "https://www.make.com/en/pricing",
+        "https://www.make.com/en/help"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.make.com/"
+      }
+    },
+    {
+      "id": "mem0",
+      "slug": "mem0",
+      "name": "Mem0",
+      "websiteUrl": "https://mem0.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Memory layer for agents. We imported the Python package locally; no account and no model call.",
+      "longDescription": "Mem0 stores memory for agents. We installed mem0ai and imported it, with no API key and no model call. The cloud pricing page loaded; a free SaaS tier was not cleanly parsed, so the confirmed free path from this check is the open-source package.",
+      "categories": [
+        "search-rag"
+      ],
+      "useCaseTags": [
+        "research-rag"
+      ],
+      "toolTypes": [
+        "infra"
+      ],
+      "platforms": [
+        "cli",
+        "self_host",
+        "web"
+      ],
+      "pricingModel": [
+        "open_source"
+      ],
+      "pricingNotes": "Confirm Mem0 platform free tier on mem0.ai/pricing.",
+      "pricingUrl": "https://mem0.ai/pricing",
+      "docsUrl": "https://docs.mem0.ai/",
+      "freeTier": true,
+      "freeTierNotes": "OSS package mem0ai installs freely. Cloud pricing page HTTP 200; free SaaS tier details not cleanly parsed — OSS path confirmed via install.",
+      "openSource": true,
+      "repoUrl": "https://github.com/mem0ai/mem0",
+      "bestFor": [
+        "Adding persistent memory to an agent you already run",
+        "Python projects that can install the open-source package"
+      ],
+      "notIdealFor": [
+        "A full research chat product",
+        "A confirmed free cloud allotment — re-read the pricing page"
+      ],
+      "smokeStatus": "tested-hands-on",
+      "smokeTested": true,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import mem0",
+        "package": "mem0ai==2.2.1",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "latestRelease": {
+        "repo": "mem0ai/mem0",
+        "tag": "ts-v3.3.1",
+        "name": "Mem0 Node SDK (v3.3.1)",
+        "publishedAt": "2026-09-25T17:36:35Z",
+        "url": "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.1"
+      },
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://mem0.ai/",
+        "https://mem0.ai/pricing",
+        "https://docs.mem0.ai/",
+        "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.1"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://mem0.ai/"
+      }
+    },
+    {
+      "id": "meshy",
+      "slug": "meshy",
+      "name": "Meshy",
+      "websiteUrl": "https://www.meshy.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Text and image to 3D assets. Pricing page showed a $0 option and no-card language.",
+      "longDescription": "Meshy turns text and images into 3D assets. The pricing crawl showed $0 and no-credit-card language, with a paid sample around $20 per month. Confirm inclusions on the pricing page. We did not create an account or generate a model.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "game-creative"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Paid samples include $20 /mo.",
+      "pricingUrl": "https://www.meshy.ai/pricing",
+      "docsUrl": "https://docs.meshy.ai/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl shows $0 / $0 /mo and no credit card language.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Quick 3D assets for a game or prototype",
+        "Creators who want a $0 way to try the product"
+      ],
+      "notIdealFor": [
+        "Final production modeling without an artist pass",
+        "Voice, video, or NPC logic"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.meshy.ai/",
+        "https://www.meshy.ai/pricing",
+        "https://docs.meshy.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.meshy.ai/"
+      }
+    },
+    {
+      "id": "midjourney",
+      "slug": "midjourney",
+      "name": "Midjourney",
+      "websiteUrl": "https://www.midjourney.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Image generation. Official plans we read are paid subscriptions, with no free tier on the comparison.",
+      "longDescription": "Midjourney generates images. The homepage often returns HTTP 403 to automated clients; the plan comparison we could read lists Basic $10, Standard $30, Pro $60, and Mega $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article, not a guess — re-check the article before you quote them. We did not subscribe.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "game-creative"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web",
+        "discord"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "CHANGED/NOTE: No free tier on official plan chart. Homepage midjourney.com HTTP 403 here.",
+      "pricingUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+      "docsUrl": "https://docs.midjourney.com/",
+      "freeTier": false,
+      "freeTierNotes": "Official plan comparison: Basic $10, Standard $30, Pro $60, Mega $120 monthly — all subscriptions. No free plan listed. Docs homepage also 403 to crawler.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Image generation when a paid subscription is acceptable",
+        "Game concept art exploration"
+      ],
+      "notIdealFor": [
+        "A free tier — the official comparison we read does not list one",
+        "3D models, voice, or video editing"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [
+        "No free tier on official Midjourney plans.",
+        "Homepage/docs often HTTP 403 to automated clients."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.midjourney.com/",
+        "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+        "https://docs.midjourney.com/"
+      ],
+      "siteLoad": {
+        "status": 403,
+        "finalUrl": "https://www.midjourney.com/"
+      }
+    },
+    {
+      "id": "mistscale",
+      "slug": "mistscale",
+      "name": "MistScale",
+      "websiteUrl": "https://mistscale.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Memory for game NPCs. Homepage checked; a dedicated /docs URL returned 404 once.",
+      "longDescription": "MistScale is aimed at memory for game NPCs. Homepage copy we had already seen talks about trying it without a card; reconfirm that on the live page. mistscale.com/docs returned 404 in one check, and we did not find a separate pricing URL. We did not create an account.",
+      "categories": [
+        "game-ai"
+      ],
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "toolTypes": [
+        "infra"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "Dedicated pricing URL not found; pricing may be embedded on homepage.",
+      "pricingUrl": "https://mistscale.com/",
+      "docsUrl": "https://mistscale.com/",
+      "freeTier": true,
+      "freeTierNotes": "Homepage copy includes trying without a card / talking in minutes language in earlier research fetch; reconfirm on live homepage. Docs path /docs was 404 in one fetch.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "NPCs that need to remember the player",
+        "Teams comparing memory products rather than full character stacks"
+      ],
+      "notIdealFor": [
+        "A standalone art or voice tool",
+        "Deep public docs — the docs path 404’d in this check"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [
+        "mistscale.com/docs returned 404 in one check."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://mistscale.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://mistscale.com/"
+      }
+    },
+    {
+      "id": "modl",
+      "slug": "modl",
+      "name": "modl.ai",
+      "websiteUrl": "https://modl.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Game AI tools. Homepage loaded; /pricing returned 404, so pricing is unconfirmed.",
+      "longDescription": "modl.ai is a game AI product. The homepage returned HTTP 200 and /pricing returned 404, so we do not have a public price. Free tier is unconfirmed. We did not create an account.",
+      "categories": [
+        "game-ai"
+      ],
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact"
+      ],
+      "pricingNotes": "No public pricing page found at /pricing.",
+      "pricingUrl": "https://modl.ai/",
+      "docsUrl": "https://modl.ai/",
+      "freeTier": null,
+      "freeTierNotes": "Homepage 200; /pricing 404. Free tier unconfirmed.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Game teams looking up modl.ai’s current product page"
+      ],
+      "notIdealFor": [
+        "A self-serve price comparison",
+        "A smoke-tested install"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [
+        "modl.ai/pricing returned 404."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://modl.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://modl.ai/"
+      }
+    },
+    {
+      "id": "n8n",
+      "slug": "n8n",
+      "name": "n8n",
+      "websiteUrl": "https://n8n.io/",
+      "affiliateUrl": null,
+      "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan. Our local npm install failed.",
+      "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. We tried `npm install n8n@2.43.6` and it failed in this environment (node-gyp / distutils). Registry, docs, and pricing were still checked, so the status stays docs checked.",
+      "categories": [
+        "workflow-automation"
+      ],
+      "useCaseTags": [
+        "workflow-automation"
+      ],
+      "toolTypes": [
+        "automation"
+      ],
+      "platforms": [
+        "web",
+        "self_host"
+      ],
+      "pricingModel": [
+        "open_source",
+        "subscription"
+      ],
+      "pricingNotes": "Cloud Starter/Pro/Business/Enterprise paid. Community Edition is the free forever self-host option.",
+      "pricingUrl": "https://n8n.io/pricing/",
+      "docsUrl": "https://docs.n8n.io/",
+      "freeTier": true,
+      "freeTierNotes": "Community Edition self-hosted free (GitHub). n8n Cloud: free trial without card; paid Starter from 20€/mo billed annually (official pricing page). Not a permanent free cloud tier.",
+      "openSource": true,
+      "repoUrl": "https://github.com/n8n-io/n8n",
+      "bestFor": [
+        "Automations you can self-host",
+        "Multi-step workflows across apps you already use"
+      ],
+      "notIdealFor": [
+        "A one-import Python agent library",
+        "A permanent free cloud plan — we did not find one"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "npm install attempted and failed (node-gyp/distutils). Registry+docs+pricing verified.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": {
+        "repo": "n8n-io/n8n",
+        "tag": "n8n@2.43.6",
+        "name": "n8n@2.43.6",
+        "publishedAt": "2026-10-15T07:26:03Z",
+        "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
+      },
+      "problems": [
+        "Attempted local `npm install n8n@2.43.6` failed (node-gyp/isolated-vm needs distutils; ModuleNotFoundError: distutils). npm registry metadata OK (2.43.6)."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://n8n.io/",
+        "https://n8n.io/pricing/",
+        "https://docs.n8n.io/",
+        "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://n8n.io/"
+      }
+    },
+    {
+      "id": "notion",
+      "slug": "notion",
+      "name": "Notion",
+      "websiteUrl": "https://www.notion.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Docs, wikis, and agents in a team workspace. Pricing page included a $0 plan.",
+      "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. The pricing crawl included $0 alongside $10 and $20. AI features may sit on paid plans — confirm which agent features are on Free. We did not create a workspace.",
+      "categories": [
+        "knowledge"
+      ],
+      "useCaseTags": [
+        "meetings-knowledge"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "AI features may require paid Notion plans — confirm which AI/agent features are on Free.",
+      "pricingUrl": "https://www.notion.com/pricing",
+      "docsUrl": "https://developers.notion.com/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0 alongside $10/$20.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Team docs that you also want to query",
+        "Groups already writing in Notion"
+      ],
+      "notIdealFor": [
+        "Local-only notes with no account",
+        "A dedicated meeting bot — see Granola for that job"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.notion.com/",
+        "https://www.notion.com/pricing",
+        "https://developers.notion.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.notion.com/"
+      }
+    },
+    {
+      "id": "nvidia_ace",
+      "slug": "nvidia-ace",
+      "name": "NVIDIA ACE for Games",
+      "websiteUrl": "https://developer.nvidia.com/ace-for-games",
+      "affiliateUrl": null,
+      "shortDescription": "NVIDIA ACE toolkit for in-game characters, including developer downloads. Not a simple SaaS signup.",
+      "longDescription": "NVIDIA ACE for Games is a developer toolkit for in-game characters. The page we read describes downloads and plugins; Unreal plugins were noted as MIT-licensed in that earlier read. It is not a simple hosted free tier — it assumes NVIDIA developer access and hardware. We did not install the SDK. Open-source status for the whole product was not recorded as a yes or no.",
+      "categories": [
+        "game-ai"
+      ],
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "unreal"
+      ],
+      "pricingModel": [
+        "free"
+      ],
+      "pricingNotes": "SDK/download model rather than subscription grid on the page we read.",
+      "pricingUrl": "https://developer.nvidia.com/ace-for-games",
+      "docsUrl": "https://docs.nvidia.com/ace/",
+      "freeTier": true,
+      "freeTierNotes": "Developer downloads/plugins described; Unreal plugins noted MIT-licensed in earlier page content. Requires NVIDIA developer access / hardware assumptions — not a simple SaaS free tier.",
+      "openSource": null,
+      "repoUrl": null,
+      "bestFor": [
+        "Game teams already on NVIDIA’s developer stack",
+        "In-game characters where a local or OEM runtime matters"
+      ],
+      "notIdealFor": [
+        "A five-minute SaaS signup with a public price grid",
+        "Discord bots or non-game chat"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://developer.nvidia.com/ace-for-games",
+        "https://docs.nvidia.com/ace/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://developer.nvidia.com/ace-for-games"
+      }
+    },
+    {
+      "id": "obsidian",
+      "slug": "obsidian",
+      "name": "Obsidian",
+      "websiteUrl": "https://obsidian.md/",
+      "affiliateUrl": null,
+      "shortDescription": "Local-first notes app. Official pricing says the app is free without limits; Sync and Publish are paid.",
+      "longDescription": "Obsidian is a local-first notes app. The official pricing page says the app is free without limits and does not require a sign-up. Sync and Publish are paid add-ons ($4 and $8 per month billed annually on the page we read). Catalyst is a $25 one-time option, and a commercial license was listed at $50 per user per year. We did not install the app.",
+      "categories": [
+        "knowledge"
+      ],
+      "useCaseTags": [
+        "meetings-knowledge"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "desktop"
+      ],
+      "pricingModel": [
+        "free",
+        "subscription"
+      ],
+      "pricingNotes": "Catalyst $25 one-time optional; Commercial $50/user/year optional.",
+      "pricingUrl": "https://obsidian.md/pricing",
+      "docsUrl": "https://help.obsidian.md/",
+      "freeTier": true,
+      "freeTierNotes": "Official pricing: 'Free without limits' for the app — no sign-up required. Sync/Publish are paid add-ons ($4/$8 /mo billed annually).",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Personal or team notes that live in local files",
+        "People who want the app itself without a subscription"
+      ],
+      "notIdealFor": [
+        "Hosted meeting transcription",
+        "A multiplayer wiki with no local files"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://obsidian.md/",
+        "https://obsidian.md/pricing",
+        "https://help.obsidian.md/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://obsidian.md/"
+      }
+    },
+    {
+      "id": "opus",
+      "slug": "opus",
+      "name": "Opus Clip",
+      "websiteUrl": "https://www.opus.pro/",
+      "affiliateUrl": null,
+      "shortDescription": "Cuts long videos into short clips. A lasting free plan was not clearly separated from starter pricing.",
+      "longDescription": "Opus Clip turns long videos into short clips. The pricing crawl mentioned starter, no-credit-card language, and $15 samples. A lasting free plan was not clearly separated from a trial or starter tier, so the free tier stays unconfirmed. We did not upload a video.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": "Confirm free trial vs free plan on opus.pro/pricing.",
+      "pricingUrl": "https://www.opus.pro/pricing",
+      "docsUrl": "https://help.opus.pro/",
+      "freeTier": null,
+      "freeTierNotes": "Pricing crawl mentions starter / no credit card and $15 samples — free forever tier not clearly confirmed.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Cutting a stream VOD or long video into shorts",
+        "Creators who want a hosted clipper"
+      ],
+      "notIdealFor": [
+        "A confirmed forever-free plan from this check",
+        "Generating the original footage"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.opus.pro/",
+        "https://www.opus.pro/pricing",
+        "https://help.opus.pro/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.opus.pro/"
+      }
+    },
+    {
+      "id": "perplexity",
+      "slug": "perplexity",
+      "name": "Perplexity",
+      "websiteUrl": "https://www.perplexity.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Web research product. Homepage returned HTTP 403 to our checker, so this listing is not fully checked.",
+      "longDescription": "Perplexity answers questions from the web. The homepage returned HTTP 403 to our client. Docs were reachable, but we could not cleanly confirm a consumer Free versus Pro split. This listing is untested. A 403 here is an environment limit, not proof a browser cannot open the site.",
+      "categories": [
+        "search-rag"
+      ],
+      "useCaseTags": [
+        "research-rag"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": "Use docs.perplexity.ai pricing guide; confirm Free tier in browser.",
+      "pricingUrl": "https://docs.perplexity.ai/guides/pricing",
+      "docsUrl": "https://docs.perplexity.ai/",
+      "freeTier": null,
+      "freeTierNotes": "Homepage HTTP 403 to crawler. Docs accessible. Consumer Free vs Pro not cleanly extracted — unconfirmed in this pass.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Web research, once you confirm the current plan in a browser"
+      ],
+      "notIdealFor": [
+        "Anyone treating this card as a finished verification",
+        "A self-hosted crawler or vector database"
+      ],
+      "smokeStatus": "untested",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [
+        "perplexity.ai homepage HTTP 403 from this environment."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.perplexity.ai/",
+        "https://docs.perplexity.ai/guides/pricing",
+        "https://docs.perplexity.ai/"
+      ],
+      "siteLoad": {
+        "status": 403,
+        "finalUrl": "https://www.perplexity.ai/"
+      }
+    },
+    {
+      "id": "pinecone",
+      "slug": "pinecone",
+      "name": "Pinecone",
+      "websiteUrl": "https://www.pinecone.io/",
+      "affiliateUrl": null,
+      "shortDescription": "Managed vector database for retrieval. A true $0 tier was not clearly confirmed on the pricing page.",
+      "longDescription": "Pinecone is a managed vector database used in retrieval stacks. The pricing crawl mentioned Starter and paid monthly samples. A true $0 free tier was not clearly confirmed, so it stays unconfirmed. We did not create an account.",
+      "categories": [
+        "search-rag"
+      ],
+      "useCaseTags": [
+        "research-rag"
+      ],
+      "toolTypes": [
+        "infra"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": "Confirm Starter vs free on pinecone.io/pricing.",
+      "pricingUrl": "https://www.pinecone.io/pricing/",
+      "docsUrl": "https://docs.pinecone.io/",
+      "freeTier": null,
+      "freeTierNotes": "Pricing crawl mentioned Starter and paid samples ($20/$50/$500/mo). A true $0 free tier was not clearly confirmed in extract — treat as unconfirmed.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Hosted vector search inside a RAG stack",
+        "Teams that do not want to run the database themselves"
+      ],
+      "notIdealFor": [
+        "A confirmed free tier from this check",
+        "Web search or page crawling — different tools"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.pinecone.io/",
+        "https://www.pinecone.io/pricing/",
+        "https://docs.pinecone.io/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.pinecone.io/"
+      }
+    },
+    {
+      "id": "replit",
+      "slug": "replit",
+      "name": "Replit",
+      "websiteUrl": "https://replit.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Browser IDE with a coding agent. Homepage and pricing returned HTTP 403, so this listing is not fully checked.",
+      "longDescription": "Replit is a browser IDE with a coding agent. From this environment the homepage and pricing URL returned HTTP 403, while the docs root returned HTTP 200. We could not confirm a free tier. The listing stays untested until someone re-checks it in a normal browser. A 403 to our client is not proof the site is down.",
+      "categories": [
+        "coding-agents"
+      ],
+      "useCaseTags": [
+        "coding-agents"
+      ],
+      "toolTypes": [
+        "copilot",
+        "agent"
+      ],
+      "platforms": [
+        "web",
+        "ide"
+      ],
+      "pricingModel": [],
+      "pricingNotes": "Could not read official pricing HTML (403).",
+      "pricingUrl": "https://replit.com/pricing",
+      "docsUrl": "https://docs.replit.com/",
+      "freeTier": null,
+      "freeTierNotes": "Homepage and pricing returned HTTP 403 to this crawler. Docs root HTTP 200. Free tier not confirmed in this pass.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Coding in the browser, once you confirm the current product yourself"
+      ],
+      "notIdealFor": [
+        "Anyone relying on this card as a completed check",
+        "A self-hosted agent framework"
+      ],
+      "smokeStatus": "untested",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [
+        "replit.com and pricing blocked with HTTP 403 from this environment."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://replit.com/",
+        "https://replit.com/pricing",
+        "https://docs.replit.com/"
+      ],
+      "siteLoad": {
+        "status": 403,
+        "finalUrl": "https://replit.com/"
+      }
+    },
+    {
+      "id": "runway",
+      "slug": "runway",
+      "name": "Runway",
+      "websiteUrl": "https://runway.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Video generation and editing. Pricing page loaded; a free tier was not clearly confirmed.",
+      "longDescription": "Runway generates and edits video. The site resolved at runway.com (from the older runwayml.com host). The pricing page returned HTTP 200 with a lot of content, but a free tier was not cleanly extracted, so it stays unconfirmed. One fetch of the help center returned 403. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "game-creative",
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": "help.runwayml.com returned 403 in one fetch.",
+      "pricingUrl": "https://runwayml.com/pricing",
+      "docsUrl": "https://help.runwayml.com/",
+      "freeTier": null,
+      "freeTierNotes": "runwayml.com/pricing HTTP 200 with substantial content; free tier not cleanly extracted from text — unconfirmed.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Generating or editing video for a game or a stream",
+        "Creators comparing hosted video tools"
+      ],
+      "notIdealFor": [
+        "A confirmed free plan from this check",
+        "In-game NPC dialogue"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://runway.com/",
+        "https://runwayml.com/pricing",
+        "https://help.runwayml.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://runway.com/"
+      }
+    },
+    {
+      "id": "scenario",
+      "slug": "scenario",
+      "name": "Scenario",
+      "websiteUrl": "https://www.scenario.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Game art generation. The pricing page we checked mentions a free plan.",
+      "longDescription": "Scenario generates art aimed at games. The pricing crawl mentioned a free tier or free plan, plus starter language and no-credit-card wording. Paid samples in that crawl included $15, $45, and $75 per month — confirm them on the live page. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "game-creative"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Paid samples $15/$45/$75 /mo in crawl.",
+      "pricingUrl": "https://www.scenario.com/pricing",
+      "docsUrl": "https://docs.scenario.com/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl mentions free tier / free plan / starter / no credit card.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Game-specific image styles and asset sets",
+        "Art pipelines that want a free plan to start"
+      ],
+      "notIdealFor": [
+        "3D mesh generation — see Meshy for that job",
+        "A hands-on generation test — we did not run one"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.scenario.com/",
+        "https://www.scenario.com/pricing",
+        "https://docs.scenario.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.scenario.com/"
+      }
+    },
+    {
+      "id": "tavernbard",
+      "slug": "tavernbard",
+      "name": "Tavernbard",
+      "websiteUrl": "https://www.tavernbard.com/",
+      "affiliateUrl": null,
+      "shortDescription": "AI game master for Discord. Homepage describes a free path that uses your own AI subscription.",
+      "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared in the crawl; confirm what is free versus paid on the live site. /pricing returned 404. We did not join a server or create an account.",
+      "categories": [
+        "game-ai"
+      ],
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "discord",
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "/pricing returned 404; pricing appears on homepage.",
+      "pricingUrl": "https://www.tavernbard.com/",
+      "docsUrl": "https://www.tavernbard.com/",
+      "freeTier": true,
+      "freeTierNotes": "Homepage describes free play path using your own AI subscription; price sample $49.99 also appeared in crawl (likely paid plan). Confirm exact free vs paid on site.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Tabletop-style games run in Discord",
+        "Groups that already pay for a model subscription"
+      ],
+      "notIdealFor": [
+        "In-engine NPCs inside Unity or Unreal",
+        "A dedicated pricing page — that URL 404’d"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [
+        "tavernbard.com/pricing returned 404."
+      ],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.tavernbard.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.tavernbard.com/"
+      }
+    },
+    {
+      "id": "tavily",
+      "slug": "tavily",
+      "name": "Tavily",
+      "websiteUrl": "https://www.tavily.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Search API for agents that need web results. Pricing page showed a $0 option; not installed here.",
+      "longDescription": "Tavily is a search API meant for agents. The pricing crawl included $0 and no-credit-card language, plus paid usage samples. Confirm the current free allotment on the pricing page. We did not call the API.",
+      "categories": [
+        "tool-use",
+        "search-rag"
+      ],
+      "useCaseTags": [
+        "tool-use-browser",
+        "research-rag"
+      ],
+      "toolTypes": [
+        "infra"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "usage"
+      ],
+      "pricingNotes": "Usage samples also showed paid figures; confirm free credit allotment on page.",
+      "pricingUrl": "https://tavily.com/pricing",
+      "docsUrl": "https://docs.tavily.com/",
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0 and no-credit-card language.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Agent retrieval that starts with web search",
+        "Apps that want search results, not a full browser"
+      ],
+      "notIdealFor": [
+        "Crawling your own site into a corpus",
+        "Interactive clicking and logged-in browsing"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://www.tavily.com/",
+        "https://tavily.com/pricing",
+        "https://docs.tavily.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.tavily.com/"
+      }
+    },
+    {
+      "id": "zapier",
+      "slug": "zapier",
+      "name": "Zapier",
+      "websiteUrl": "https://zapier.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Connects the apps you already use. Pricing page loaded, but a free task tier was not clearly confirmed.",
+      "longDescription": "Zapier connects SaaS apps, including agent-style steps. The pricing page returned HTTP 200, but the text we extracted did not clearly show the free task tier, so that detail stays unconfirmed. We did not create an account.",
+      "categories": [
+        "workflow-automation"
+      ],
+      "useCaseTags": [
+        "workflow-automation"
+      ],
+      "toolTypes": [
+        "automation"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": "Re-open zapier.com/pricing in a browser to confirm free task limits before publishing.",
+      "pricingUrl": "https://zapier.com/pricing",
+      "docsUrl": "https://docs.zapier.com/",
+      "freeTier": null,
+      "freeTierNotes": "Pricing page HTTP 200 but crawl text did not clearly extract Free plan details in this pass — historically Zapier has a free task tier; mark unconfirmed here.",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Connecting hosted apps without running a server",
+        "Teams that already live in Zapier’s app directory"
+      ],
+      "notIdealFor": [
+        "Self-hosted or offline workflows",
+        "A confirmed free-tier claim from this check"
+      ],
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "sources": [
+        "https://zapier.com/",
+        "https://zapier.com/pricing",
+        "https://docs.zapier.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://zapier.com/"
+      }
+    }
+  ],
+  "useCases": [
+    {
+      "slug": "coding-agents",
+      "title": "Code with an AI agent",
+      "summary": "IDE agents and copilots that edit, run, and review code.",
+      "audienceHints": [
+        "builders"
+      ],
+      "matchTags": [
+        "coding-agents"
+      ],
+      "recommended": [
+        {
+          "toolId": "cursor",
+          "why": "A desktop IDE whose agent edits and reviews code. Docs and pricing checked, including a $0 tier on the page. Not installed here."
+        },
+        {
+          "toolId": "continue",
+          "why": "Open-source IDE extension. Homepage and docs checked. The dedicated pricing URL returned 404."
+        },
+        {
+          "toolId": "claude",
+          "why": "Anthropic’s Claude product and API, including coding workflows. Docs checked; we did not sign up."
+        }
+      ]
+    },
+    {
+      "slug": "game-creative",
+      "title": "Create for games & streams",
+      "summary": "Art, 3D, voice, and video for makers and creators.",
+      "audienceHints": [
+        "gamers",
+        "creators"
+      ],
+      "matchTags": [
+        "game-creative",
+        "creator-video-audio"
+      ],
+      "recommended": [
+        {
+          "toolId": "scenario",
+          "why": "Game art. The pricing page we checked mentions a free plan."
+        },
+        {
+          "toolId": "meshy",
+          "why": "3D assets from text or images. Pricing page showed a $0 option."
+        },
+        {
+          "toolId": "elevenlabs",
+          "why": "Voice. Pricing page loaded, but the extract was too thin to confirm a free tier."
+        },
+        {
+          "toolId": "runway",
+          "why": "Video generation and editing. Pricing page loaded; free tier unconfirmed."
+        },
+        {
+          "toolId": "opus",
+          "why": "Short clips from a long video — the stream-VOD job. A lasting free plan was not clearly confirmed."
+        }
+      ]
+    },
+    {
+      "slug": "game-npcs",
+      "title": "Game NPCs & in-game agents",
+      "summary": "Characters and agents that live in a game engine or in Discord.",
+      "audienceHints": [
+        "gamers",
+        "builders"
+      ],
+      "matchTags": [
+        "game-npcs"
+      ],
+      "recommended": [
+        {
+          "toolId": "inworld",
+          "why": "Character AI for games. Pricing page included a $0 sample. Docs checked, not hands-on."
+        },
+        {
+          "toolId": "convai",
+          "why": "Conversational game characters. Site loaded; pricing text did not, so the free tier is unconfirmed."
+        },
+        {
+          "toolId": "nvidia_ace",
+          "why": "NVIDIA’s in-game character toolkit, with developer downloads rather than a simple SaaS grid."
+        },
+        {
+          "toolId": "mistscale",
+          "why": "Memory so NPCs can remember the player. Homepage checked; /docs returned 404 once."
+        },
+        {
+          "toolId": "tavernbard",
+          "why": "AI game master for Discord, with a free path that uses your own model subscription."
+        }
+      ]
+    },
+    {
+      "slug": "meetings-knowledge",
+      "title": "Meetings, notes & knowledge",
+      "summary": "Capture, summarize, and query your team’s context.",
+      "audienceHints": [
+        "builders"
+      ],
+      "matchTags": [
+        "meetings-knowledge"
+      ],
+      "recommended": [
+        {
+          "toolId": "notion",
+          "why": "Team docs and wikis, with agent features. Pricing page included a $0 plan."
+        },
+        {
+          "toolId": "granola",
+          "why": "Meeting notes. Pricing page included a $0 plan. Not installed here."
+        },
+        {
+          "toolId": "obsidian",
+          "why": "Local-first notes. The app is free without limits on the official pricing page; Sync and Publish are paid."
+        }
+      ]
+    },
+    {
+      "slug": "multi-agent-workflows",
+      "title": "Build multi-agent workflows",
+      "summary": "Crews, graphs, and orchestrators for multi-step work.",
+      "audienceHints": [
+        "builders"
+      ],
+      "matchTags": [
+        "multi-agent-workflows"
+      ],
+      "recommended": [
+        {
+          "toolId": "crewai",
+          "why": "Role-based crews in Python. We installed the package and imported it on October 15, 2026 — no API key and no model call."
+        },
+        {
+          "toolId": "langchain",
+          "why": "Libraries for agents and tool calling. Local import checked the same day. LangSmith tracing is a separate product on the pricing page."
+        },
+        {
+          "toolId": "autogen",
+          "why": "Microsoft’s multi-agent Python library. We imported it locally. The newest Python release we found was September 30, 2025."
+        },
+        {
+          "toolId": "dify",
+          "why": "A visual builder with a self-hosted community edition. Site, docs, and pricing were checked; we did not install it."
+        }
+      ]
+    },
+    {
+      "slug": "research-rag",
+      "title": "Research & retrieve the web",
+      "summary": "Search, crawl, and cite for agent retrieval.",
+      "audienceHints": [
+        "builders"
+      ],
+      "matchTags": [
+        "research-rag"
+      ],
+      "recommended": [
+        {
+          "toolId": "tavily",
+          "why": "Web search built for agents, with a $0 option on the pricing page we read."
+        },
+        {
+          "toolId": "firecrawl",
+          "why": "Turns sites into markdown you can index. Open-source repo plus a cloud free-plan mention."
+        },
+        {
+          "toolId": "mem0",
+          "why": "Memory for agents. We imported the Python package locally; no account and no model call."
+        },
+        {
+          "toolId": "llamaindex",
+          "why": "Framework for retrieval over your data. Local import checked. Cloud free tier unconfirmed."
+        },
+        {
+          "toolId": "pinecone",
+          "why": "Managed vector database. Pricing page checked; a true $0 tier was not clearly confirmed."
+        }
+      ]
+    },
+    {
+      "slug": "tool-use-browser",
+      "title": "Give agents tools & browsers",
+      "summary": "Connect apps, MCP-style tool use, and browser control.",
+      "audienceHints": [
+        "builders"
+      ],
+      "matchTags": [
+        "tool-use-browser"
+      ],
+      "recommended": [
+        {
+          "toolId": "browser_use",
+          "why": "Python agent that drives a browser. We imported the package locally on October 15, 2026, with no model call."
+        },
+        {
+          "toolId": "composio",
+          "why": "Tool layer for third-party apps. Pricing page included a $0 Hobby plan. Not installed here."
+        },
+        {
+          "toolId": "firecrawl",
+          "why": "Crawl pages into markdown for a model. Docs and a free-plan mention were checked."
+        },
+        {
+          "toolId": "tavily",
+          "why": "Search API for agents. Pricing page showed a $0 option. We did not call the API."
+        }
+      ]
+    },
+    {
+      "slug": "workflow-automation",
+      "title": "Automate business workflows",
+      "summary": "Agents and automations across the apps you already use.",
+      "audienceHints": [
+        "builders"
+      ],
+      "matchTags": [
+        "workflow-automation"
+      ],
+      "recommended": [
+        {
+          "toolId": "n8n",
+          "why": "Self-host Community Edition for free, or use paid n8n Cloud. Our local npm install failed; docs and pricing were checked."
+        },
+        {
+          "toolId": "make",
+          "why": "Visual automations. The pricing FAQ we fetched describes a free plan with 1,000 credits a month."
+        },
+        {
+          "toolId": "zapier",
+          "why": "Connects hosted apps. The pricing page loaded, but a free task tier was not clearly confirmed."
+        }
+      ]
+    }
+  ]
+}

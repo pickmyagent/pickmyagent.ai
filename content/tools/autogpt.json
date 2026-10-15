@@ -1,0 +1,72 @@
+{
+  "id": "autogpt",
+  "slug": "autogpt",
+  "name": "AutoGPT",
+  "websiteUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+  "affiliateUrl": null,
+  "shortDescription": "Open-source agent project with a platform beta. Site and repo checked; local install not run.",
+  "longDescription": "AutoGPT is an open-source agent project. We checked the GitHub repo and agpt.co/pricing. A platform beta release was published on October 14, 2026. We did not install it locally. The repo is the free path; hosted plans may be paid.",
+  "categories": [
+    "agent-frameworks",
+    "coding-agents"
+  ],
+  "useCaseTags": [
+    "coding-agents",
+    "multi-agent-workflows"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "self_host",
+    "web"
+  ],
+  "pricingModel": [
+    "open_source"
+  ],
+  "pricingNotes": "Platform release autogpt-platform-beta-v0.8.4 on 2026-10-14.",
+  "pricingUrl": "https://agpt.co/pricing",
+  "docsUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+  "freeTier": true,
+  "freeTierNotes": "Open-source repo. agpt.co/pricing HTTP 200 — cloud offerings may be paid; OSS self-host path exists.",
+  "openSource": true,
+  "repoUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+  "bestFor": [
+    "Reading an open-source autonomous-agent codebase",
+    "Teams watching the platform beta releases"
+  ],
+  "notIdealFor": [
+    "A tiny script where a smaller library is enough",
+    "A hands-on install — we did not run one"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": {
+    "repo": "Significant-Gravitas/AutoGPT",
+    "tag": "autogpt-platform-beta-v0.8.4",
+    "name": "autogpt-platform-beta-v0.8.4",
+    "publishedAt": "2026-10-14T16:22:16Z",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.8.4"
+  },
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://github.com/Significant-Gravitas/AutoGPT",
+    "https://agpt.co/pricing",
+    "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.8.4"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://github.com/Significant-Gravitas/AutoGPT"
+  }
+}

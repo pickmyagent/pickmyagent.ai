@@ -1,0 +1,66 @@
+{
+  "id": "claude",
+  "slug": "claude",
+  "name": "Claude (Anthropic)",
+  "websiteUrl": "https://www.anthropic.com/claude",
+  "affiliateUrl": null,
+  "shortDescription": "Anthropic Claude product and API for chat and coding. Docs checked; we did not sign up.",
+  "longDescription": "Claude is Anthropic’s model product, used for chat and coding. The URL we checked redirected toward the Claude product overview. The pricing page included a $0 option in the text we could read; API billing is separate. We did not create an account.",
+  "categories": [
+    "coding-agents"
+  ],
+  "useCaseTags": [
+    "coding-agents"
+  ],
+  "toolTypes": [
+    "model_api",
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "usage",
+    "subscription"
+  ],
+  "pricingNotes": "Site redirects product overview to claude.com. API billed separately.",
+  "pricingUrl": "https://www.anthropic.com/pricing",
+  "docsUrl": "https://docs.claude.com/",
+  "freeTier": true,
+  "freeTierNotes": "Anthropic pricing page includes $0 option in crawl text (Claude consumer/API tiers — confirm Free vs Pro on page).",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Chat and coding help through Claude’s product or API",
+    "Teams already comparing model providers"
+  ],
+  "notIdealFor": [
+    "A self-hosted open-source agent runtime",
+    "Anyone who needs a local install from this check"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://www.anthropic.com/claude",
+    "https://www.anthropic.com/pricing",
+    "https://docs.claude.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://claude.com/product/overview"
+  }
+}

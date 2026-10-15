@@ -1,0 +1,78 @@
+{
+  "id": "llamaindex",
+  "slug": "llamaindex",
+  "name": "LlamaIndex",
+  "websiteUrl": "https://www.llamaindex.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Open-source framework for retrieval and agents over your own data. Cloud free tier unconfirmed.",
+  "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. We installed and imported llama-index-core. The pricing page loaded, but the crawl did not clearly show a free cloud tier, so that part stays unconfirmed.",
+  "categories": [
+    "agent-frameworks",
+    "search-rag"
+  ],
+  "useCaseTags": [
+    "multi-agent-workflows",
+    "research-rag"
+  ],
+  "toolTypes": [
+    "framework"
+  ],
+  "platforms": [
+    "cli",
+    "self_host"
+  ],
+  "pricingModel": [
+    "open_source"
+  ],
+  "pricingNotes": "Confirm LlamaCloud tiers on official pricing page before publishing $ amounts.",
+  "pricingUrl": "https://www.llamaindex.ai/pricing",
+  "docsUrl": "https://docs.llamaindex.ai/en/stable/",
+  "freeTier": null,
+  "freeTierNotes": "OSS core is free to install. Pricing page HTTP 200 but crawl text did not clearly extract a free SaaS tier; treat cloud free tier as unconfirmed from this pass.",
+  "openSource": true,
+  "repoUrl": "https://github.com/run-llama/llama_index",
+  "bestFor": [
+    "RAG pipelines over documents you already have",
+    "Python teams building retrieval into an agent"
+  ],
+  "notIdealFor": [
+    "A finished consumer chat app",
+    "Anyone who needs a confirmed free cloud tier from this check"
+  ],
+  "smokeStatus": "tested-hands-on",
+  "smokeTested": true,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+  "handsOn": {
+    "performed": true,
+    "detail": "pip install + import llama_index.core",
+    "package": "llama-index-core==0.14.25",
+    "llmCall": false,
+    "accountSignup": false,
+    "payment": false
+  },
+  "latestRelease": {
+    "repo": "run-llama/llama_index",
+    "tag": "v0.14.25",
+    "name": "v0.14.25",
+    "publishedAt": "2026-09-21T16:22:27Z",
+    "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.25"
+  },
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://www.llamaindex.ai/",
+    "https://www.llamaindex.ai/pricing",
+    "https://docs.llamaindex.ai/en/stable/",
+    "https://github.com/run-llama/llama_index/releases/tag/v0.14.25"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.llamaindex.ai/"
+  }
+}

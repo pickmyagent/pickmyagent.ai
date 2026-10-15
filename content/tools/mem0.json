@@ -1,0 +1,77 @@
+{
+  "id": "mem0",
+  "slug": "mem0",
+  "name": "Mem0",
+  "websiteUrl": "https://mem0.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Memory layer for agents. We imported the Python package locally; no account and no model call.",
+  "longDescription": "Mem0 stores memory for agents. We installed mem0ai and imported it, with no API key and no model call. The cloud pricing page loaded; a free SaaS tier was not cleanly parsed, so the confirmed free path from this check is the open-source package.",
+  "categories": [
+    "search-rag"
+  ],
+  "useCaseTags": [
+    "research-rag"
+  ],
+  "toolTypes": [
+    "infra"
+  ],
+  "platforms": [
+    "cli",
+    "self_host",
+    "web"
+  ],
+  "pricingModel": [
+    "open_source"
+  ],
+  "pricingNotes": "Confirm Mem0 platform free tier on mem0.ai/pricing.",
+  "pricingUrl": "https://mem0.ai/pricing",
+  "docsUrl": "https://docs.mem0.ai/",
+  "freeTier": true,
+  "freeTierNotes": "OSS package mem0ai installs freely. Cloud pricing page HTTP 200; free SaaS tier details not cleanly parsed — OSS path confirmed via install.",
+  "openSource": true,
+  "repoUrl": "https://github.com/mem0ai/mem0",
+  "bestFor": [
+    "Adding persistent memory to an agent you already run",
+    "Python projects that can install the open-source package"
+  ],
+  "notIdealFor": [
+    "A full research chat product",
+    "A confirmed free cloud allotment — re-read the pricing page"
+  ],
+  "smokeStatus": "tested-hands-on",
+  "smokeTested": true,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+  "handsOn": {
+    "performed": true,
+    "detail": "pip install + import mem0",
+    "package": "mem0ai==2.2.1",
+    "llmCall": false,
+    "accountSignup": false,
+    "payment": false
+  },
+  "latestRelease": {
+    "repo": "mem0ai/mem0",
+    "tag": "ts-v3.3.1",
+    "name": "Mem0 Node SDK (v3.3.1)",
+    "publishedAt": "2026-09-25T17:36:35Z",
+    "url": "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.1"
+  },
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://mem0.ai/",
+    "https://mem0.ai/pricing",
+    "https://docs.mem0.ai/",
+    "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.1"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://mem0.ai/"
+  }
+}

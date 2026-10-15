@@ -1,0 +1,63 @@
+{
+  "id": "elevenlabs",
+  "slug": "elevenlabs",
+  "name": "ElevenLabs",
+  "websiteUrl": "https://elevenlabs.io/",
+  "affiliateUrl": null,
+  "shortDescription": "Voice and audio generation. Pricing page loaded, but the text was too thin to confirm a free tier.",
+  "longDescription": "ElevenLabs generates voice and audio. The pricing page returned HTTP 200, but the extracted text was only a few hundred characters, so a free tier was not confirmed in this pass. Re-check elevenlabs.io/pricing in a browser before claiming a free plan. We did not create an account.",
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "creator-video-audio"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [],
+  "pricingNotes": "Re-check elevenlabs.io/pricing in browser before claiming Free.",
+  "pricingUrl": "https://elevenlabs.io/pricing",
+  "docsUrl": "https://elevenlabs.io/docs",
+  "freeTier": null,
+  "freeTierNotes": "Pricing page HTTP 200 but extracted text was very thin (528 chars) — free tier historically exists; NOT confirmed in this extract.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Voice for characters, trailers, or streams",
+    "Teams comparing hosted speech tools"
+  ],
+  "notIdealFor": [
+    "A confirmed free-tier claim from this check",
+    "Image or 3D generation"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [
+    "Pricing page content barely extractable via crawl."
+  ],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://elevenlabs.io/",
+    "https://elevenlabs.io/pricing",
+    "https://elevenlabs.io/docs"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://elevenlabs.io/"
+  }
+}

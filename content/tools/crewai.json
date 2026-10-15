@@ -1,0 +1,79 @@
+{
+  "id": "crewai",
+  "slug": "crewai",
+  "name": "CrewAI",
+  "websiteUrl": "https://crewai.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Open-source framework for crews of role-based agents that split a job into tasks.",
+  "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source package and the hosted product are separate. Figures below are only what we could read on the pricing page during the October 15, 2026 check.",
+  "categories": [
+    "agent-frameworks"
+  ],
+  "useCaseTags": [
+    "multi-agent-workflows"
+  ],
+  "toolTypes": [
+    "framework",
+    "agent"
+  ],
+  "platforms": [
+    "cli",
+    "self_host"
+  ],
+  "pricingModel": [
+    "open_source",
+    "freemium",
+    "enterprise"
+  ],
+  "pricingNotes": "Enterprise Custom. Open-source framework separate from cloud Free/Enterprise.",
+  "pricingUrl": "https://www.crewai.com/pricing",
+  "docsUrl": "https://docs.crewai.com/",
+  "freeTier": true,
+  "freeTierNotes": "Basic plan Free: visual editor, GitHub integration, 50 workflow executions/month (cloud). OSS/framework also installable via pip/uv without cloud.",
+  "openSource": true,
+  "repoUrl": "https://github.com/crewAIInc/crewAI",
+  "bestFor": [
+    "Multi-step jobs you can split across roles",
+    "Python teams who want a crew abstraction they can install"
+  ],
+  "notIdealFor": [
+    "A single chat box with no workflow",
+    "Teams that only want a closed SaaS and will not touch Python"
+  ],
+  "smokeStatus": "tested-hands-on",
+  "smokeTested": true,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+  "handsOn": {
+    "performed": true,
+    "detail": "pip install + import crewai",
+    "package": "crewai==1.15.28",
+    "llmCall": false,
+    "accountSignup": false,
+    "payment": false
+  },
+  "latestRelease": {
+    "repo": "crewAIInc/crewAI",
+    "tag": "1.15.28",
+    "name": "1.15.28",
+    "publishedAt": "2026-10-14T04:47:00Z",
+    "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.28"
+  },
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://crewai.com/",
+    "https://www.crewai.com/pricing",
+    "https://docs.crewai.com/",
+    "https://github.com/crewAIInc/crewAI/releases/tag/1.15.28"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://crewai.com/"
+  }
+}

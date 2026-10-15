@@ -1,0 +1,66 @@
+{
+  "id": "cursor",
+  "slug": "cursor",
+  "name": "Cursor",
+  "websiteUrl": "https://cursor.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Desktop IDE with an agent that can edit, run, and review code. Docs and pricing checked; not installed here.",
+  "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. We opened the site, docs, and pricing page. The pricing page showed a $0 tier next to paid plans. We did not install the app or sign in, so this listing is docs checked, not smoke-tested.",
+  "categories": [
+    "coding-agents"
+  ],
+  "useCaseTags": [
+    "coding-agents"
+  ],
+  "toolTypes": [
+    "copilot",
+    "agent"
+  ],
+  "platforms": [
+    "ide",
+    "desktop"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Paid plans present; confirm current inclusions on cursor.com/pricing.",
+  "pricingUrl": "https://cursor.com/pricing",
+  "docsUrl": "https://cursor.com/docs",
+  "freeTier": true,
+  "freeTierNotes": "Pricing page shows $0 /mo tier alongside paid ($8/$30/$100/$200 /mo samples in crawl).",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Developers who want an agent inside the editor",
+    "Day-to-day coding where the agent should touch the repo"
+  ],
+  "notIdealFor": [
+    "A headless library you import from Python",
+    "A hands-on install check — we did not run one"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://cursor.com/",
+    "https://cursor.com/pricing",
+    "https://cursor.com/docs"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://cursor.com/"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "perplexity",
+  "slug": "perplexity",
+  "name": "Perplexity",
+  "websiteUrl": "https://www.perplexity.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Web research product. Homepage returned HTTP 403 to our checker, so this listing is not fully checked.",
+  "longDescription": "Perplexity answers questions from the web. The homepage returned HTTP 403 to our client. Docs were reachable, but we could not cleanly confirm a consumer Free versus Pro split. This listing is untested. A 403 here is an environment limit, not proof a browser cannot open the site.",
+  "categories": [
+    "search-rag"
+  ],
+  "useCaseTags": [
+    "research-rag"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [],
+  "pricingNotes": "Use docs.perplexity.ai pricing guide; confirm Free tier in browser.",
+  "pricingUrl": "https://docs.perplexity.ai/guides/pricing",
+  "docsUrl": "https://docs.perplexity.ai/",
+  "freeTier": null,
+  "freeTierNotes": "Homepage HTTP 403 to crawler. Docs accessible. Consumer Free vs Pro not cleanly extracted — unconfirmed in this pass.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Web research, once you confirm the current plan in a browser"
+  ],
+  "notIdealFor": [
+    "Anyone treating this card as a finished verification",
+    "A self-hosted crawler or vector database"
+  ],
+  "smokeStatus": "untested",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [
+    "perplexity.ai homepage HTTP 403 from this environment."
+  ],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://www.perplexity.ai/",
+    "https://docs.perplexity.ai/guides/pricing",
+    "https://docs.perplexity.ai/"
+  ],
+  "siteLoad": {
+    "status": 403,
+    "finalUrl": "https://www.perplexity.ai/"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "continue",
+  "slug": "continue",
+  "name": "Continue",
+  "websiteUrl": "https://continue.dev/",
+  "affiliateUrl": null,
+  "shortDescription": "Open-source coding agent and IDE extension. The /pricing URL returned 404 on our check.",
+  "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. We checked the homepage, docs, and GitHub releases. continue.dev/pricing returned HTTP 404, so there is no separate pricing page in this listing — the open-source extension is the free path we could confirm. We did not install the extension.",
+  "categories": [
+    "coding-agents"
+  ],
+  "useCaseTags": [
+    "coding-agents"
+  ],
+  "toolTypes": [
+    "copilot"
+  ],
+  "platforms": [
+    "ide"
+  ],
+  "pricingModel": [
+    "open_source"
+  ],
+  "pricingNotes": "Confirm any Continue cloud/team pricing on site; OSS install is IDE extension (not pip-tested here).",
+  "pricingUrl": "https://www.continue.dev/",
+  "docsUrl": "https://docs.continue.dev/",
+  "freeTier": true,
+  "freeTierNotes": "Open-source coding agent/extension (homepage). Dedicated /pricing returned 404 in this pass.",
+  "openSource": true,
+  "repoUrl": "https://github.com/continuedev/continue",
+  "bestFor": [
+    "Developers who want an open-source copilot in the IDE",
+    "Teams that would rather extend the editor they already use"
+  ],
+  "notIdealFor": [
+    "A hosted IDE with a published price grid",
+    "A confirmed cloud plan — the pricing URL 404’d"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": {
+    "repo": "continuedev/continue",
+    "tag": "v2.0.0-vscode",
+    "name": "v2.0.0-vscode",
+    "publishedAt": "2026-06-19T00:24:01Z",
+    "url": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
+  },
+  "problems": [
+    "continue.dev/pricing returned HTTP 404."
+  ],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://continue.dev/",
+    "https://www.continue.dev/",
+    "https://docs.continue.dev/",
+    "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://continue.dev/"
+  }
+}

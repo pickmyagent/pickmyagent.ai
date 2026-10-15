@@ -1,0 +1,63 @@
+{
+  "id": "mistscale",
+  "slug": "mistscale",
+  "name": "MistScale",
+  "websiteUrl": "https://mistscale.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Memory for game NPCs. Homepage checked; a dedicated /docs URL returned 404 once.",
+  "longDescription": "MistScale is aimed at memory for game NPCs. Homepage copy we had already seen talks about trying it without a card; reconfirm that on the live page. mistscale.com/docs returned 404 in one check, and we did not find a separate pricing URL. We did not create an account.",
+  "categories": [
+    "game-ai"
+  ],
+  "useCaseTags": [
+    "game-npcs"
+  ],
+  "toolTypes": [
+    "infra"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium"
+  ],
+  "pricingNotes": "Dedicated pricing URL not found; pricing may be embedded on homepage.",
+  "pricingUrl": "https://mistscale.com/",
+  "docsUrl": "https://mistscale.com/",
+  "freeTier": true,
+  "freeTierNotes": "Homepage copy includes trying without a card / talking in minutes language in earlier research fetch; reconfirm on live homepage. Docs path /docs was 404 in one fetch.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "NPCs that need to remember the player",
+    "Teams comparing memory products rather than full character stacks"
+  ],
+  "notIdealFor": [
+    "A standalone art or voice tool",
+    "Deep public docs — the docs path 404’d in this check"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [
+    "mistscale.com/docs returned 404 in one check."
+  ],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://mistscale.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://mistscale.com/"
+  }
+}

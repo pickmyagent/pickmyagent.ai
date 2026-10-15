@@ -1,0 +1,63 @@
+{
+  "id": "convai",
+  "slug": "convai",
+  "name": "Convai",
+  "websiteUrl": "https://convai.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Conversational characters for games. Site loaded; pricing text did not come through, so the free tier is unconfirmed.",
+  "longDescription": "Convai makes conversational characters for games. The homepage returned HTTP 200. The pricing URL did not yield readable plan text in this environment, so the free tier is unconfirmed. We did not create an account.",
+  "categories": [
+    "game-ai"
+  ],
+  "useCaseTags": [
+    "game-npcs"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [],
+  "pricingNotes": "Confirm on convai.com/pricing in a browser.",
+  "pricingUrl": "https://convai.com/pricing",
+  "docsUrl": "https://docs.convai.com/",
+  "freeTier": null,
+  "freeTierNotes": "Site loads (200). Pricing URL fetches failed/empty in this pass — free tier unconfirmed.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "In-game characters that talk with the player",
+    "Teams comparing hosted NPC platforms"
+  ],
+  "notIdealFor": [
+    "A confirmed price or free tier from this check",
+    "Workflow automation outside a game"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [
+    "Could not extract pricing/free tier from pricing URL in this environment."
+  ],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://convai.com/",
+    "https://convai.com/pricing",
+    "https://docs.convai.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://convai.com/"
+  }
+}

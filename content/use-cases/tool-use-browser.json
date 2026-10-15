@@ -1,0 +1,29 @@
+{
+  "slug": "tool-use-browser",
+  "title": "Give agents tools & browsers",
+  "summary": "Connect apps, MCP-style tool use, and browser control.",
+  "audienceHints": [
+    "builders"
+  ],
+  "matchTags": [
+    "tool-use-browser"
+  ],
+  "recommended": [
+    {
+      "toolId": "browser_use",
+      "why": "Python agent that drives a browser. We imported the package locally on October 15, 2026, with no model call."
+    },
+    {
+      "toolId": "composio",
+      "why": "Tool layer for third-party apps. Pricing page included a $0 Hobby plan. Not installed here."
+    },
+    {
+      "toolId": "firecrawl",
+      "why": "Crawl pages into markdown for a model. Docs and a free-plan mention were checked."
+    },
+    {
+      "toolId": "tavily",
+      "why": "Search API for agents. Pricing page showed a $0 option. We did not call the API."
+    }
+  ]
+}

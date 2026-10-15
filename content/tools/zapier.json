@@ -1,0 +1,61 @@
+{
+  "id": "zapier",
+  "slug": "zapier",
+  "name": "Zapier",
+  "websiteUrl": "https://zapier.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Connects the apps you already use. Pricing page loaded, but a free task tier was not clearly confirmed.",
+  "longDescription": "Zapier connects SaaS apps, including agent-style steps. The pricing page returned HTTP 200, but the text we extracted did not clearly show the free task tier, so that detail stays unconfirmed. We did not create an account.",
+  "categories": [
+    "workflow-automation"
+  ],
+  "useCaseTags": [
+    "workflow-automation"
+  ],
+  "toolTypes": [
+    "automation"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [],
+  "pricingNotes": "Re-open zapier.com/pricing in a browser to confirm free task limits before publishing.",
+  "pricingUrl": "https://zapier.com/pricing",
+  "docsUrl": "https://docs.zapier.com/",
+  "freeTier": null,
+  "freeTierNotes": "Pricing page HTTP 200 but crawl text did not clearly extract Free plan details in this pass — historically Zapier has a free task tier; mark unconfirmed here.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Connecting hosted apps without running a server",
+    "Teams that already live in Zapier’s app directory"
+  ],
+  "notIdealFor": [
+    "Self-hosted or offline workflows",
+    "A confirmed free-tier claim from this check"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://zapier.com/",
+    "https://zapier.com/pricing",
+    "https://docs.zapier.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://zapier.com/"
+  }
+}

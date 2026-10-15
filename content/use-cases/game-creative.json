@@ -1,0 +1,35 @@
+{
+  "slug": "game-creative",
+  "title": "Create for games & streams",
+  "summary": "Art, 3D, voice, and video for makers and creators.",
+  "audienceHints": [
+    "gamers",
+    "creators"
+  ],
+  "matchTags": [
+    "game-creative",
+    "creator-video-audio"
+  ],
+  "recommended": [
+    {
+      "toolId": "scenario",
+      "why": "Game art. The pricing page we checked mentions a free plan."
+    },
+    {
+      "toolId": "meshy",
+      "why": "3D assets from text or images. Pricing page showed a $0 option."
+    },
+    {
+      "toolId": "elevenlabs",
+      "why": "Voice. Pricing page loaded, but the extract was too thin to confirm a free tier."
+    },
+    {
+      "toolId": "runway",
+      "why": "Video generation and editing. Pricing page loaded; free tier unconfirmed."
+    },
+    {
+      "toolId": "opus",
+      "why": "Short clips from a long video — the stream-VOD job. A lasting free plan was not clearly confirmed."
+    }
+  ]
+}

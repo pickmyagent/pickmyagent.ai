@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "agent-frameworks",
+    "title": "Agent frameworks & orchestration",
+    "summary": "Libraries and platforms for multi-step and multi-agent work."
+  },
+  {
+    "slug": "coding-agents",
+    "title": "Coding agents & copilots",
+    "summary": "IDE agents and copilots that edit, run, and review code."
+  },
+  {
+    "slug": "tool-use",
+    "title": "Tool use, MCP & browser agents",
+    "summary": "Connect apps, tools, and browser control."
+  },
+  {
+    "slug": "workflow-automation",
+    "title": "Workflow automation",
+    "summary": "Automations across the apps you already use."
+  },
+  {
+    "slug": "search-rag",
+    "title": "Search, crawl & RAG infra",
+    "summary": "Search, crawl, memory, and vector infrastructure."
+  },
+  {
+    "slug": "game-ai",
+    "title": "Game AI & NPCs",
+    "summary": "Characters and agents for games and Discord."
+  },
+  {
+    "slug": "creative-media",
+    "title": "Creative media (image, video, audio, 3D)",
+    "summary": "Art, 3D, voice, and video for makers and creators."
+  },
+  {
+    "slug": "knowledge",
+    "title": "Knowledge, notes & meetings",
+    "summary": "Capture, summarize, and query team context."
+  }
+]

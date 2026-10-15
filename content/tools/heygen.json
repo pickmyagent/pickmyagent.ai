@@ -1,0 +1,64 @@
+{
+  "id": "heygen",
+  "slug": "heygen",
+  "name": "HeyGen",
+  "websiteUrl": "https://www.heygen.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Avatar and spokesperson video. Pricing page showed a $0/mo option alongside paid plans.",
+  "longDescription": "HeyGen makes avatar and spokesperson videos. The pricing crawl included $0/month alongside $29 and $49 per month samples. Confirm what the free plan includes. We did not create an account.",
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "creator-video-audio"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Confirm Free inclusions on heygen.com/pricing.",
+  "pricingUrl": "https://www.heygen.com/pricing",
+  "docsUrl": "https://docs.heygen.com/",
+  "freeTier": true,
+  "freeTierNotes": "Pricing crawl includes $0/mo alongside $29/$49 /mo.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Spokesperson or avatar videos",
+    "Teams that want a hosted avatar tool with a $0 tier on the page we read"
+  ],
+  "notIdealFor": [
+    "Gameplay capture or VOD clipping",
+    "A local open-source editor"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://www.heygen.com/",
+    "https://www.heygen.com/pricing",
+    "https://docs.heygen.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.heygen.com/"
+  }
+}

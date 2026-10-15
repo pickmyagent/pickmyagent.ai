@@ -1,0 +1,62 @@
+{
+  "id": "runway",
+  "slug": "runway",
+  "name": "Runway",
+  "websiteUrl": "https://runway.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Video generation and editing. Pricing page loaded; a free tier was not clearly confirmed.",
+  "longDescription": "Runway generates and edits video. The site resolved at runway.com (from the older runwayml.com host). The pricing page returned HTTP 200 with a lot of content, but a free tier was not cleanly extracted, so it stays unconfirmed. One fetch of the help center returned 403. We did not create an account.",
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "game-creative",
+    "creator-video-audio"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [],
+  "pricingNotes": "help.runwayml.com returned 403 in one fetch.",
+  "pricingUrl": "https://runwayml.com/pricing",
+  "docsUrl": "https://help.runwayml.com/",
+  "freeTier": null,
+  "freeTierNotes": "runwayml.com/pricing HTTP 200 with substantial content; free tier not cleanly extracted from text — unconfirmed.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generating or editing video for a game or a stream",
+    "Creators comparing hosted video tools"
+  ],
+  "notIdealFor": [
+    "A confirmed free plan from this check",
+    "In-game NPC dialogue"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://runway.com/",
+    "https://runwayml.com/pricing",
+    "https://help.runwayml.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://runway.com/"
+  }
+}

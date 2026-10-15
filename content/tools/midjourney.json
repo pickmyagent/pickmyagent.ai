@@ -1,0 +1,67 @@
+{
+  "id": "midjourney",
+  "slug": "midjourney",
+  "name": "Midjourney",
+  "websiteUrl": "https://www.midjourney.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Image generation. Official plans we read are paid subscriptions, with no free tier on the comparison.",
+  "longDescription": "Midjourney generates images. The homepage often returns HTTP 403 to automated clients; the plan comparison we could read lists Basic $10, Standard $30, Pro $60, and Mega $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article, not a guess — re-check the article before you quote them. We did not subscribe.",
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "game-creative"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web",
+    "discord"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "CHANGED/NOTE: No free tier on official plan chart. Homepage midjourney.com HTTP 403 here.",
+  "pricingUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+  "docsUrl": "https://docs.midjourney.com/",
+  "freeTier": false,
+  "freeTierNotes": "Official plan comparison: Basic $10, Standard $30, Pro $60, Mega $120 monthly — all subscriptions. No free plan listed. Docs homepage also 403 to crawler.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Image generation when a paid subscription is acceptable",
+    "Game concept art exploration"
+  ],
+  "notIdealFor": [
+    "A free tier — the official comparison we read does not list one",
+    "3D models, voice, or video editing"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [
+    "No free tier on official Midjourney plans.",
+    "Homepage/docs often HTTP 403 to automated clients."
+  ],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://www.midjourney.com/",
+    "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+    "https://docs.midjourney.com/"
+  ],
+  "siteLoad": {
+    "status": 403,
+    "finalUrl": "https://www.midjourney.com/"
+  }
+}

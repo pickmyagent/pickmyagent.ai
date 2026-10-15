@@ -1,0 +1,74 @@
+{
+  "id": "n8n",
+  "slug": "n8n",
+  "name": "n8n",
+  "websiteUrl": "https://n8n.io/",
+  "affiliateUrl": null,
+  "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan. Our local npm install failed.",
+  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. We tried `npm install n8n@2.43.6` and it failed in this environment (node-gyp / distutils). Registry, docs, and pricing were still checked, so the status stays docs checked.",
+  "categories": [
+    "workflow-automation"
+  ],
+  "useCaseTags": [
+    "workflow-automation"
+  ],
+  "toolTypes": [
+    "automation"
+  ],
+  "platforms": [
+    "web",
+    "self_host"
+  ],
+  "pricingModel": [
+    "open_source",
+    "subscription"
+  ],
+  "pricingNotes": "Cloud Starter/Pro/Business/Enterprise paid. Community Edition is the free forever self-host option.",
+  "pricingUrl": "https://n8n.io/pricing/",
+  "docsUrl": "https://docs.n8n.io/",
+  "freeTier": true,
+  "freeTierNotes": "Community Edition self-hosted free (GitHub). n8n Cloud: free trial without card; paid Starter from 20€/mo billed annually (official pricing page). Not a permanent free cloud tier.",
+  "openSource": true,
+  "repoUrl": "https://github.com/n8n-io/n8n",
+  "bestFor": [
+    "Automations you can self-host",
+    "Multi-step workflows across apps you already use"
+  ],
+  "notIdealFor": [
+    "A one-import Python agent library",
+    "A permanent free cloud plan — we did not find one"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "npm install attempted and failed (node-gyp/distutils). Registry+docs+pricing verified.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": {
+    "repo": "n8n-io/n8n",
+    "tag": "n8n@2.43.6",
+    "name": "n8n@2.43.6",
+    "publishedAt": "2026-10-15T07:26:03Z",
+    "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
+  },
+  "problems": [
+    "Attempted local `npm install n8n@2.43.6` failed (node-gyp/isolated-vm needs distutils; ModuleNotFoundError: distutils). npm registry metadata OK (2.43.6)."
+  ],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://n8n.io/",
+    "https://n8n.io/pricing/",
+    "https://docs.n8n.io/",
+    "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://n8n.io/"
+  }
+}
