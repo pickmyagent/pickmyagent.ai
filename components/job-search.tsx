@@ -90,13 +90,13 @@ export function JobSearch({
           />
           <button
             type="submit"
-            className="h-12 bg-lime px-5 font-semibold text-lime-ink hover:bg-white"
+            className="btn-gold h-12 px-5 font-semibold"
           >
             Find agents
           </button>
           <Link
             href="/use-cases"
-            className="inline-flex h-12 items-center justify-center border border-line px-5 font-semibold hover:border-lime"
+            className="inline-flex h-12 items-center justify-center border border-line px-5 font-semibold hover:border-gold"
           >
             Browse use cases
           </Link>
@@ -118,7 +118,7 @@ export function JobSearch({
 
         {trimmed ? (
           <div id="match-results" className="mb-8 scroll-mt-24">
-            <h3 className="font-mono text-xs tracking-[0.16em] text-lime uppercase">
+            <h3 className="font-mono text-xs tracking-[0.16em] text-gold uppercase">
               Tools that match
             </h3>
             {visibleTools.length === 0 ? (
@@ -163,9 +163,9 @@ export function JobSearch({
               <li key={useCase.slug}>
                 <Link
                   href={`/use-cases/${useCase.slug}`}
-                  className="flex h-full flex-col border border-line bg-panel p-4 hover:border-lime"
+                  className="flex h-full flex-col border border-line bg-panel p-4 hover:border-gold"
                 >
-                  <span className="font-mono text-xs text-lime">
+                  <span className="font-mono text-xs text-gold">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="mt-2 text-lg font-semibold tracking-tight">

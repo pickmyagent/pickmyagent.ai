@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body className="flex min-h-full flex-col">
-        <a href="#content" className="skip-link">
+        <a href="#content" className="skip-link btn-gold">
           Skip to content
         </a>
         <SiteHeader />

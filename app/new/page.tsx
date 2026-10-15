@@ -75,7 +75,7 @@ export default function NewPage() {
       ) : null}
 
       <p className="mt-10 text-sm">
-        <Link href="/newsletter" className="font-semibold text-lime hover:underline">
+        <Link href="/newsletter" className="font-semibold text-gold hover:underline">
           Get the weekly digest
         </Link>
         <span className="text-muted"> — the list is not connected yet.</span>

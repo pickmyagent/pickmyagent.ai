@@ -63,7 +63,7 @@ export default async function UseCasePage({
           { label: useCase.title },
         ]}
       />
-      <p className="font-mono text-xs tracking-[0.18em] text-lime uppercase">
+      <p className="font-mono text-xs tracking-[0.18em] text-gold uppercase">
         Use case
       </p>
       <h1 className="mt-2 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -131,7 +131,7 @@ export default async function UseCasePage({
       ) : null}
 
       <p className="mt-10 text-sm">
-        <Link href="/tools" className="font-semibold text-lime hover:underline">
+        <Link href="/tools" className="font-semibold text-gold hover:underline">
           Filter the full tool index
         </Link>
       </p>

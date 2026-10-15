@@ -62,7 +62,7 @@ export default async function CategoryPage({
           { label: category.title },
         ]}
       />
-      <p className="font-mono text-xs tracking-[0.18em] text-lime uppercase">
+      <p className="font-mono text-xs tracking-[0.18em] text-gold uppercase">
         Category
       </p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">

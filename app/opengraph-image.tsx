@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { RobotFace } from "@/components/robot-face";
 
 export const alt = "PickMyAgent — find the AI agent that fits the job";
 export const size = { width: 1200, height: 630 };
@@ -20,23 +21,17 @@ export default function OpenGraphImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center" }}>
+          <div style={{ display: "flex", marginRight: 18 }}>
+            <RobotFace size={72} />
+          </div>
           <div
             style={{
               display: "flex",
-              width: 56,
-              height: 56,
-              border: "2px solid #d6f25c",
-              color: "#d6f25c",
-              alignItems: "center",
-              justifyContent: "center",
               fontSize: 28,
-              fontWeight: 700,
-              marginRight: 16,
+              letterSpacing: 4,
+              color: "#e8c872",
             }}
           >
-            P
-          </div>
-          <div style={{ display: "flex", fontSize: 28, letterSpacing: 4 }}>
             PICKMYAGENT
           </div>
         </div>

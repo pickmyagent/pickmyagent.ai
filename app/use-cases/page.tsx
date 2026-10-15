@@ -48,9 +48,9 @@ export default function UseCasesPage() {
             <li key={useCase.slug}>
               <Link
                 href={`/use-cases/${useCase.slug}`}
-                className="flex h-full flex-col border border-line bg-panel p-4 hover:border-lime"
+                className="flex h-full flex-col border border-line bg-panel p-4 hover:border-gold"
               >
-                <span className="font-mono text-xs text-lime">
+                <span className="font-mono text-xs text-gold">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="mt-2 text-lg font-semibold">{useCase.title}</span>

@@ -50,7 +50,7 @@ export default function HowWeTestPage() {
         ].map(([label, value]) => (
           <div key={label} className="border border-line bg-panel p-3">
             <dt className="text-sm text-muted">{label}</dt>
-            <dd className="mt-1 font-mono text-2xl text-lime">{value}</dd>
+            <dd className="mt-1 font-mono text-2xl text-gold">{value}</dd>
           </div>
         ))}
       </dl>
@@ -61,7 +61,7 @@ export default function HowWeTestPage() {
 
       <section className="mt-10 space-y-4 leading-relaxed">
         <h2 className="text-xl font-semibold">What the labels mean</h2>
-        <h3 className="pt-2 font-semibold text-lime">Smoke-tested</h3>
+        <h3 className="pt-2 font-semibold text-gold">Smoke-tested</h3>
         <p className="text-muted">
           We ran a real local install or an equivalent hello-path in this
           environment, such as <code className="font-mono text-text">pip install</code>{" "}
@@ -151,7 +151,7 @@ export default function HowWeTestPage() {
           site is new.
         </p>
         <p>
-          <Link href="/new" className="font-semibold text-lime hover:underline">
+          <Link href="/new" className="font-semibold text-gold hover:underline">
             See the current list
           </Link>
           . The same rules are summarized for agents in{" "}

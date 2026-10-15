@@ -63,7 +63,7 @@ export default function HomePage() {
       />
 
       <section className="max-w-3xl">
-        <p className="font-mono text-xs tracking-[0.18em] text-lime uppercase">
+        <p className="font-mono text-xs tracking-[0.18em] text-gold uppercase">
           AI tools, sorted by the job
         </p>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
@@ -91,7 +91,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex gap-4 text-sm font-semibold">
-            <Link href="/new" className="text-lime hover:underline">
+            <Link href="/new" className="text-gold hover:underline">
               See all new
             </Link>
             <Link href="/newsletter" className="text-text hover:underline">
@@ -144,7 +144,7 @@ export default function HomePage() {
         <ol className="mt-5 grid gap-3 sm:grid-cols-2">
           {STEPS.map((step, index) => (
             <li key={step} className="border border-line bg-panel p-4">
-              <span className="font-mono text-xs text-lime">
+              <span className="font-mono text-xs text-gold">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <p className="mt-2">{step}</p>
@@ -157,7 +157,7 @@ export default function HomePage() {
         </p>
         <Link
           href="/how-we-test"
-          className="mt-4 inline-flex font-semibold text-lime hover:underline"
+          className="mt-4 inline-flex font-semibold text-gold hover:underline"
         >
           Read the full methodology
         </Link>
@@ -188,7 +188,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/submit"
-            className="mt-5 inline-flex h-12 items-center bg-lime px-5 font-semibold text-lime-ink hover:bg-white"
+            className="btn-gold mt-5 inline-flex h-12 items-center px-5 font-semibold"
           >
             Submit a tool
           </Link>

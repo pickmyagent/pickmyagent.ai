@@ -9,7 +9,7 @@ export function PageHeader({
 }) {
   return (
     <header className="mb-8 max-w-3xl">
-      <p className="font-mono text-xs tracking-[0.18em] text-lime uppercase">
+      <p className="font-mono text-xs tracking-[0.18em] text-gold uppercase">
         {eyebrow}
       </p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">

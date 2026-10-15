@@ -134,7 +134,7 @@ export function SubmitForm({ submitEmail }: { submitEmail: string | null }) {
       </div>
       <button
         type="submit"
-        className="h-12 bg-lime px-5 font-semibold text-lime-ink hover:bg-white"
+        className="btn-gold h-12 px-5 font-semibold"
       >
         {submitEmail ? "Email this submission" : "Copy submission"}
       </button>
@@ -144,7 +144,7 @@ export function SubmitForm({ submitEmail }: { submitEmail: string | null }) {
         not set, so they are not listed here.
       </p>
       {status ? (
-        <p role="status" className="text-sm text-lime">
+        <p role="status" className="text-sm text-gold">
           {status}
         </p>
       ) : null}

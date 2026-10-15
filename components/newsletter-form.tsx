@@ -62,7 +62,7 @@ export function NewsletterForm({
         ) : null}
         <button
           type="submit"
-          className="h-12 shrink-0 bg-lime px-5 font-semibold text-lime-ink hover:bg-white"
+          className="btn-gold h-12 shrink-0 px-5 font-semibold"
         >
           Subscribe
         </button>
@@ -74,7 +74,7 @@ export function NewsletterForm({
           : " Signup is a placeholder until a provider is connected."}
       </p>
       {message ? (
-        <p role="status" className="mt-3 text-sm text-lime">
+        <p role="status" className="mt-3 text-sm text-gold">
           {message}
         </p>
       ) : null}

@@ -7,8 +7,11 @@
   --line: #31384a;
   --text: #f4f6fb;
   --muted: #c5cde0;
-  --lime: #d6f25c;
-  --lime-ink: #141807;
+  /* Text gold. About 12:1 on --bg and about 10:1 on --panel. */
+  --gold: #e8c872;
+  --gold-bright: #f6e7c1;
+  /* Near-black for type on the gold button gradient. */
+  --gold-ink: #1a1408;
   --ice: #b9ddff;
   --amber: #ffd27a;
   --coral: #ffb4a2;
@@ -22,8 +25,9 @@
   --color-line: var(--line);
   --color-text: var(--text);
   --color-muted: var(--muted);
-  --color-lime: var(--lime);
-  --color-lime-ink: var(--lime-ink);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-ink: var(--gold-ink);
   --color-ice: var(--ice);
   --color-amber: var(--amber);
   --color-coral: var(--coral);
@@ -46,13 +50,13 @@ body {
   color: var(--text);
   font-family: var(--font-sans), sans-serif;
   background-image:
-    linear-gradient(to right, rgb(214 242 92 / 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(214 242 92 / 0.035) 1px, transparent 1px);
+    linear-gradient(to right, rgb(232 200 114 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(232 200 114 / 0.045) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
 :focus-visible {
-  outline: 2px solid var(--text);
+  outline: 2px solid var(--gold-bright);
   outline-offset: 3px;
 }
 
@@ -61,14 +65,65 @@ body {
   left: 1rem;
   top: -4rem;
   z-index: 80;
-  background: var(--lime);
-  color: var(--lime-ink);
   padding: 0.6rem 0.9rem;
   font-weight: 700;
 }
 
 .skip-link:focus {
   top: 1rem;
+}
+
+.btn-gold {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--gold-ink);
+  background-color: #d4aa45;
+  background-image: linear-gradient(
+    118deg,
+    #f7e8bc 0%,
+    #e8c56a 18%,
+    #c9963a 42%,
+    #f8edcf 50%,
+    #e2b85a 68%,
+    #c4922a 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgb(255 248 225 / 0.8),
+    inset 0 -1px 0 rgb(110 74 18 / 0.35);
+}
+
+.btn-gold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    102deg,
+    transparent 28%,
+    rgb(255 250 232 / 0.55) 48%,
+    transparent 68%
+  );
+  transform: translateX(-130%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-gold:hover::before {
+    animation: gold-sheen 720ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-gold:hover {
+    filter: brightness(1.06);
+  }
+}
+
+@keyframes gold-sheen {
+  to {
+    transform: translateX(130%);
+  }
 }
 
 .frame {
@@ -87,18 +142,18 @@ body {
 .frame::before {
   top: -1px;
   left: -1px;
-  border-top: 2px solid var(--lime);
-  border-left: 2px solid var(--lime);
+  border-top: 2px solid var(--gold);
+  border-left: 2px solid var(--gold);
 }
 
 .frame::after {
   right: -1px;
   bottom: -1px;
-  border-right: 2px solid var(--lime);
-  border-bottom: 2px solid var(--lime);
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
 }
 
 ::selection {
-  background: var(--lime);
-  color: var(--lime-ink);
+  background: var(--gold);
+  color: var(--gold-ink);
 }

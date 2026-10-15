@@ -148,7 +148,7 @@ export function ToolBrowser({
               type="checkbox"
               checked={openSourceOnly}
               onChange={(event) => setOpenSourceOnly(event.target.checked)}
-              className="h-4 w-4 accent-lime"
+              className="h-4 w-4 accent-gold"
             />
             Open source only
           </label>

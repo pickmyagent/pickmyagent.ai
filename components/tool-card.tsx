@@ -29,7 +29,7 @@ export function ToolCard({
           <h3 className="text-lg font-semibold tracking-tight">{tool.name}</h3>
           <span
             aria-hidden="true"
-            className="grid h-9 w-9 shrink-0 place-items-center border border-line bg-bg font-mono text-xs text-lime"
+            className="grid h-9 w-9 shrink-0 place-items-center border border-line bg-bg font-mono text-xs text-gold"
           >
             {monogram(tool.name)}
           </span>
@@ -38,7 +38,7 @@ export function ToolCard({
           {tool.shortDescription}
         </p>
         {why ? (
-          <p className="mt-3 border-l-2 border-lime pl-3 text-sm leading-relaxed text-text">
+          <p className="mt-3 border-l-2 border-gold pl-3 text-sm leading-relaxed text-text">
             {why}
           </p>
         ) : null}

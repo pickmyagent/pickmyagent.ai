@@ -90,7 +90,7 @@ export default async function ToolPage({
 
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
         <article>
-          <p className="font-mono text-xs tracking-[0.18em] text-lime uppercase">
+          <p className="font-mono text-xs tracking-[0.18em] text-gold uppercase">
             Tool
           </p>
           <h1 className="mt-2 text-4xl font-semibold tracking-tight">{tool.name}</h1>
@@ -106,14 +106,14 @@ export default async function ToolPage({
           <div className="mt-6 flex flex-wrap gap-3">
             <ExternalLink
               href={tool.websiteUrl}
-              className="inline-flex h-11 items-center bg-lime px-4 font-semibold text-lime-ink hover:bg-white"
+              className="btn-gold inline-flex h-11 items-center px-4 font-semibold"
             >
               Visit website
             </ExternalLink>
             {tool.pricingUrl ? (
               <ExternalLink
                 href={tool.pricingUrl}
-                className="inline-flex h-11 items-center border border-line px-4 font-semibold hover:border-lime"
+                className="inline-flex h-11 items-center border border-line px-4 font-semibold hover:border-gold"
               >
                 Pricing
               </ExternalLink>
@@ -121,7 +121,7 @@ export default async function ToolPage({
             {tool.docsUrl ? (
               <ExternalLink
                 href={tool.docsUrl}
-                className="inline-flex h-11 items-center border border-line px-4 font-semibold hover:border-lime"
+                className="inline-flex h-11 items-center border border-line px-4 font-semibold hover:border-gold"
               >
                 Docs
               </ExternalLink>
@@ -129,7 +129,7 @@ export default async function ToolPage({
             {tool.repoUrl ? (
               <ExternalLink
                 href={tool.repoUrl}
-                className="inline-flex h-11 items-center border border-line px-4 font-semibold hover:border-lime"
+                className="inline-flex h-11 items-center border border-line px-4 font-semibold hover:border-gold"
               >
                 Repository
               </ExternalLink>
@@ -206,7 +206,7 @@ export default async function ToolPage({
         </article>
 
         <aside className="h-fit border border-line bg-panel p-4 lg:sticky lg:top-24">
-          <h2 className="font-mono text-xs tracking-[0.16em] text-lime uppercase">
+          <h2 className="font-mono text-xs tracking-[0.16em] text-gold uppercase">
             Facts from the check
           </h2>
           <dl className="mt-2">

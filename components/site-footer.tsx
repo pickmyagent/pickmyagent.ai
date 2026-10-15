@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RobotMark } from "@/components/robot-mark";
 
 const LINKS = [
   { href: "/about", label: "About" },
@@ -18,7 +19,10 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <p className="font-semibold">PickMyAgent</p>
+            <p className="flex items-center gap-2 font-semibold text-gold">
+              <RobotMark className="h-6 w-6 shrink-0" />
+              PickMyAgent
+            </p>
             <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted">
               PickMyAgent is an independent directory. We may use affiliate
               links later; if we do, we’ll disclose them. Paid placements will

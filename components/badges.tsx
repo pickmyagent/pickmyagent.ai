@@ -7,10 +7,10 @@ function Pill({
   tone,
 }: {
   children: React.ReactNode;
-  tone: "lime" | "ice" | "amber" | "line";
+  tone: "gold" | "ice" | "amber" | "line";
 }) {
   const tones = {
-    lime: "border-lime/60 bg-lime/15 text-lime",
+    gold: "border-[#c9a24a] bg-[#2c2414] text-gold",
     ice: "border-ice/50 bg-[#163044] text-ice",
     amber: "border-amber/50 bg-[#3a2d12] text-amber",
     line: "border-line bg-panel-2 text-muted",
@@ -27,7 +27,7 @@ function Pill({
 export function StatusBadge({ status }: { status: SmokeStatus }) {
   const tone =
     status === "tested-hands-on"
-      ? "lime"
+      ? "gold"
       : status === "verified-docs-only"
         ? "ice"
         : "amber";

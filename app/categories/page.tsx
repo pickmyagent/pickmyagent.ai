@@ -43,7 +43,7 @@ export default function CategoriesPage() {
           <li key={category.slug}>
             <Link
               href={`/categories/${category.slug}`}
-              className="block h-full border border-line bg-panel p-4 hover:border-lime"
+              className="block h-full border border-line bg-panel p-4 hover:border-gold"
             >
               <span className="text-lg font-semibold">{category.title}</span>
               <span className="mt-2 block text-sm text-muted">{category.summary}</span>
