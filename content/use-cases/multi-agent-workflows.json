@@ -1,0 +1,29 @@
+{
+  "slug": "multi-agent-workflows",
+  "title": "Build multi-agent workflows",
+  "summary": "Crews, graphs, and orchestrators for multi-step work.",
+  "audienceHints": [
+    "builders"
+  ],
+  "matchTags": [
+    "multi-agent-workflows"
+  ],
+  "recommended": [
+    {
+      "toolId": "crewai",
+      "why": "Role-based crews in Python. We installed the package and imported it on October 15, 2026 — no API key and no model call."
+    },
+    {
+      "toolId": "langchain",
+      "why": "Libraries for agents and tool calling. Local import checked the same day. LangSmith tracing is a separate product on the pricing page."
+    },
+    {
+      "toolId": "autogen",
+      "why": "Microsoft’s multi-agent Python library. We imported it locally. The newest Python release we found was September 30, 2025."
+    },
+    {
+      "toolId": "dify",
+      "why": "A visual builder with a self-hosted community edition. Site, docs, and pricing were checked; we did not install it."
+    }
+  ]
+}

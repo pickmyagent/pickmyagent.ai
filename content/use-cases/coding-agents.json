@@ -1,0 +1,25 @@
+{
+  "slug": "coding-agents",
+  "title": "Code with an AI agent",
+  "summary": "IDE agents and copilots that edit, run, and review code.",
+  "audienceHints": [
+    "builders"
+  ],
+  "matchTags": [
+    "coding-agents"
+  ],
+  "recommended": [
+    {
+      "toolId": "cursor",
+      "why": "A desktop IDE whose agent edits and reviews code. Docs and pricing checked, including a $0 tier on the page. Not installed here."
+    },
+    {
+      "toolId": "continue",
+      "why": "Open-source IDE extension. Homepage and docs checked. The dedicated pricing URL returned 404."
+    },
+    {
+      "toolId": "claude",
+      "why": "Anthropic’s Claude product and API, including coding workflows. Docs checked; we did not sign up."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "modl",
+  "slug": "modl",
+  "name": "modl.ai",
+  "websiteUrl": "https://modl.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Game AI tools. Homepage loaded; /pricing returned 404, so pricing is unconfirmed.",
+  "longDescription": "modl.ai is a game AI product. The homepage returned HTTP 200 and /pricing returned 404, so we do not have a public price. Free tier is unconfirmed. We did not create an account.",
+  "categories": [
+    "game-ai"
+  ],
+  "useCaseTags": [
+    "game-npcs"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "No public pricing page found at /pricing.",
+  "pricingUrl": "https://modl.ai/",
+  "docsUrl": "https://modl.ai/",
+  "freeTier": null,
+  "freeTierNotes": "Homepage 200; /pricing 404. Free tier unconfirmed.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Game teams looking up modl.ai’s current product page"
+  ],
+  "notIdealFor": [
+    "A self-serve price comparison",
+    "A smoke-tested install"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [
+    "modl.ai/pricing returned 404."
+  ],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://modl.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://modl.ai/"
+  }
+}

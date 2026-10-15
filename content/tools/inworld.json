@@ -1,0 +1,63 @@
+{
+  "id": "inworld",
+  "slug": "inworld",
+  "name": "Inworld",
+  "websiteUrl": "https://inworld.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Character AI for games and interactive agents. Pricing page included a $0 sample; not hands-on tested.",
+  "longDescription": "Inworld builds character AI for games and interactive experiences. The pricing crawl included a $0 sample among paid usage samples. Confirm the current free allotment on the pricing page. We checked docs and did not run a hands-on session.",
+  "categories": [
+    "game-ai"
+  ],
+  "useCaseTags": [
+    "game-npcs"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium"
+  ],
+  "pricingNotes": "Paid usage samples also present; confirm free allotment.",
+  "pricingUrl": "https://inworld.ai/pricing",
+  "docsUrl": "https://docs.inworld.ai/",
+  "freeTier": true,
+  "freeTierNotes": "Pricing crawl includes $0 among samples.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Game characters with dialogue",
+    "Teams that want a hosted character stack and docs"
+  ],
+  "notIdealFor": [
+    "A local Python library we smoke-tested — we did not",
+    "Image or 3D asset generation"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://inworld.ai/",
+    "https://inworld.ai/pricing",
+    "https://docs.inworld.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://inworld.ai/"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "replit",
+  "slug": "replit",
+  "name": "Replit",
+  "websiteUrl": "https://replit.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Browser IDE with a coding agent. Homepage and pricing returned HTTP 403, so this listing is not fully checked.",
+  "longDescription": "Replit is a browser IDE with a coding agent. From this environment the homepage and pricing URL returned HTTP 403, while the docs root returned HTTP 200. We could not confirm a free tier. The listing stays untested until someone re-checks it in a normal browser. A 403 to our client is not proof the site is down.",
+  "categories": [
+    "coding-agents"
+  ],
+  "useCaseTags": [
+    "coding-agents"
+  ],
+  "toolTypes": [
+    "copilot",
+    "agent"
+  ],
+  "platforms": [
+    "web",
+    "ide"
+  ],
+  "pricingModel": [],
+  "pricingNotes": "Could not read official pricing HTML (403).",
+  "pricingUrl": "https://replit.com/pricing",
+  "docsUrl": "https://docs.replit.com/",
+  "freeTier": null,
+  "freeTierNotes": "Homepage and pricing returned HTTP 403 to this crawler. Docs root HTTP 200. Free tier not confirmed in this pass.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Coding in the browser, once you confirm the current product yourself"
+  ],
+  "notIdealFor": [
+    "Anyone relying on this card as a completed check",
+    "A self-hosted agent framework"
+  ],
+  "smokeStatus": "untested",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [
+    "replit.com and pricing blocked with HTTP 403 from this environment."
+  ],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://replit.com/",
+    "https://replit.com/pricing",
+    "https://docs.replit.com/"
+  ],
+  "siteLoad": {
+    "status": 403,
+    "finalUrl": "https://replit.com/"
+  }
+}

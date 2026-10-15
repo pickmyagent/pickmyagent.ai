@@ -1,0 +1,74 @@
+{
+  "id": "dify",
+  "slug": "dify",
+  "name": "Dify",
+  "websiteUrl": "https://dify.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Open-source platform to build agent workflows visually, with a self-hosted community edition.",
+  "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page. We checked the site, docs, and pricing. We did not install it. Cloud price samples in the page text should be re-read on the live pricing page before you rely on them.",
+  "categories": [
+    "agent-frameworks"
+  ],
+  "useCaseTags": [
+    "multi-agent-workflows"
+  ],
+  "toolTypes": [
+    "framework",
+    "agent"
+  ],
+  "platforms": [
+    "web",
+    "self_host"
+  ],
+  "pricingModel": [
+    "open_source",
+    "freemium",
+    "enterprise"
+  ],
+  "pricingNotes": "Self-host Community Edition vs cloud paid.",
+  "pricingUrl": "https://dify.ai/pricing",
+  "docsUrl": "https://docs.dify.ai/",
+  "freeTier": true,
+  "freeTierNotes": "Community Edition (self-host, open-source) referenced on pricing page. Cloud paid tiers also listed (samples included $590/$1590 in page text — verify current).",
+  "openSource": true,
+  "repoUrl": "https://github.com/langgenius/dify",
+  "bestFor": [
+    "Teams who want a visual agent builder they can self-host",
+    "Projects that need a product UI, not only a library"
+  ],
+  "notIdealFor": [
+    "A small Python script with no surrounding app",
+    "Hands-on proof from us — this one is docs checked only"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": {
+    "repo": "langgenius/dify",
+    "tag": "1.17.1",
+    "name": "v1.17.1 - Bug Fixes and Improvements",
+    "publishedAt": "2026-09-10T10:04:06Z",
+    "url": "https://github.com/langgenius/dify/releases/tag/1.17.1"
+  },
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://dify.ai/",
+    "https://dify.ai/pricing",
+    "https://docs.dify.ai/",
+    "https://github.com/langgenius/dify/releases/tag/1.17.1"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://dify.ai/"
+  }
+}

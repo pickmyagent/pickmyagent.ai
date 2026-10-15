@@ -1,0 +1,75 @@
+{
+  "id": "firecrawl",
+  "slug": "firecrawl",
+  "name": "Firecrawl",
+  "websiteUrl": "https://www.firecrawl.dev/",
+  "affiliateUrl": null,
+  "shortDescription": "Turns websites into markdown for LLMs. Open-source repo plus a cloud API with a free plan.",
+  "longDescription": "Firecrawl crawls pages into markdown for language models. We checked the site, pricing, docs, and the GitHub release. The pricing crawl mentioned a free or hobby plan and a $0 sample, with paid tiers above that. We did not run a local install.",
+  "categories": [
+    "tool-use",
+    "search-rag"
+  ],
+  "useCaseTags": [
+    "tool-use-browser",
+    "research-rag"
+  ],
+  "toolTypes": [
+    "infra"
+  ],
+  "platforms": [
+    "web",
+    "self_host"
+  ],
+  "pricingModel": [
+    "open_source",
+    "freemium",
+    "usage"
+  ],
+  "pricingNotes": "OSS repo exists; cloud has paid tiers (samples $16/$75 etc.).",
+  "pricingUrl": "https://www.firecrawl.dev/pricing",
+  "docsUrl": "https://docs.firecrawl.dev/",
+  "freeTier": true,
+  "freeTierNotes": "Pricing crawl mentions free plan / hobby and $0 /mo sample.",
+  "openSource": true,
+  "repoUrl": "https://github.com/mendableai/firecrawl",
+  "bestFor": [
+    "Turning pages into clean text for retrieval",
+    "Teams that want either a cloud API or an open-source repo"
+  ],
+  "notIdealFor": [
+    "Interactive browser tasks such as clicking and login flows",
+    "A general web-search API — that is a different job"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": {
+    "repo": "mendableai/firecrawl",
+    "tag": "v2.11.0",
+    "name": "Firecrawl v2.11.0",
+    "publishedAt": "2026-06-19T15:09:30Z",
+    "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.0"
+  },
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://www.firecrawl.dev/",
+    "https://www.firecrawl.dev/pricing",
+    "https://docs.firecrawl.dev/",
+    "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.0"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.firecrawl.dev/"
+  }
+}

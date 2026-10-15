@@ -1,0 +1,64 @@
+{
+  "id": "scenario",
+  "slug": "scenario",
+  "name": "Scenario",
+  "websiteUrl": "https://www.scenario.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Game art generation. The pricing page we checked mentions a free plan.",
+  "longDescription": "Scenario generates art aimed at games. The pricing crawl mentioned a free tier or free plan, plus starter language and no-credit-card wording. Paid samples in that crawl included $15, $45, and $75 per month — confirm them on the live page. We did not create an account.",
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "game-creative"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Paid samples $15/$45/$75 /mo in crawl.",
+  "pricingUrl": "https://www.scenario.com/pricing",
+  "docsUrl": "https://docs.scenario.com/",
+  "freeTier": true,
+  "freeTierNotes": "Pricing crawl mentions free tier / free plan / starter / no credit card.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Game-specific image styles and asset sets",
+    "Art pipelines that want a free plan to start"
+  ],
+  "notIdealFor": [
+    "3D mesh generation — see Meshy for that job",
+    "A hands-on generation test — we did not run one"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://www.scenario.com/",
+    "https://www.scenario.com/pricing",
+    "https://docs.scenario.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.scenario.com/"
+  }
+}

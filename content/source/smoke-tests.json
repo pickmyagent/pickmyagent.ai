@@ -1,0 +1,1299 @@
+{
+  "generatedAt": "2026-10-15T18:31:00-04:00",
+  "methodologyVersion": "1.0",
+  "counts": {
+    "total": 39,
+    "tested_hands_on": 6,
+    "verified_docs_only": 31,
+    "untested": 2,
+    "free_tier_true": 27,
+    "free_tier_false": 1,
+    "free_tier_unconfirmed": 11,
+    "site_200": 36,
+    "site_403": 3
+  },
+  "tools": [
+    {
+      "id": "crewai",
+      "name": "CrewAI",
+      "websiteUrl": "https://crewai.com/",
+      "pricingUrl": "https://www.crewai.com/pricing",
+      "docsUrl": "https://docs.crewai.com/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Basic plan Free: visual editor, GitHub integration, 50 workflow executions/month (cloud). OSS/framework also installable via pip/uv without cloud.",
+      "pricingNotes": "Enterprise Custom. Open-source framework separate from cloud Free/Enterprise.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://crewai.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "tested-hands-on",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "latestRelease": {
+        "repo": "crewAIInc/crewAI",
+        "tag": "1.15.28",
+        "name": "1.15.28",
+        "published_at": "2026-10-14T04:47:00Z",
+        "html_url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.28",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import crewai",
+        "package": "crewai==1.15.28",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "notes": "Install/import only; no API key, no LLM invoke, no signup."
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain",
+      "websiteUrl": "https://www.langchain.com/",
+      "pricingUrl": "https://www.langchain.com/pricing",
+      "docsUrl": "https://docs.langchain.com/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "OSS libraries free. LangSmith Developer plan $0/seat with up to 5k base traces/mo then pay-as-you-go.",
+      "pricingNotes": "Plus $39/seat/mo. Enterprise custom.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.langchain.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "tested-hands-on",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "latestRelease": {
+        "repo": "langchain-ai/langchain",
+        "tag": "langchain-core==1.6.10",
+        "name": "langchain-core==1.6.10",
+        "published_at": "2026-10-12T14:14:03Z",
+        "html_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.10",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import langchain; from langchain.agents import create_agent",
+        "package": "langchain==1.4.6",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "notes": "Install/import only; no API key, no LLM invoke, no signup."
+    },
+    {
+      "id": "llamaindex",
+      "name": "LlamaIndex",
+      "websiteUrl": "https://www.llamaindex.ai/",
+      "pricingUrl": "https://www.llamaindex.ai/pricing",
+      "docsUrl": "https://docs.llamaindex.ai/en/stable/",
+      "openSource": true,
+      "freeTier": null,
+      "freeTierNotes": "OSS core is free to install. Pricing page HTTP 200 but crawl text did not clearly extract a free SaaS tier; treat cloud free tier as unconfirmed from this pass.",
+      "pricingNotes": "Confirm LlamaCloud tiers on official pricing page before publishing $ amounts.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.llamaindex.ai/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "tested-hands-on",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "multi-agent-workflows",
+        "research-rag"
+      ],
+      "latestRelease": {
+        "repo": "run-llama/llama_index",
+        "tag": "v0.14.25",
+        "name": "v0.14.25",
+        "published_at": "2026-09-21T16:22:27Z",
+        "html_url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.25",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import llama_index.core",
+        "package": "llama-index-core==0.14.25",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "notes": "Install/import only; no API key, no LLM invoke, no signup."
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "websiteUrl": "https://dify.ai/",
+      "pricingUrl": "https://dify.ai/pricing",
+      "docsUrl": "https://docs.dify.ai/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Community Edition (self-host, open-source) referenced on pricing page. Cloud paid tiers also listed (samples included $590/$1590 in page text \u2014 verify current).",
+      "pricingNotes": "Self-host Community Edition vs cloud paid.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://dify.ai/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "latestRelease": {
+        "repo": "langgenius/dify",
+        "tag": "1.17.1",
+        "name": "v1.17.1 - Bug Fixes and Improvements",
+        "published_at": "2026-09-10T10:04:06Z",
+        "html_url": "https://github.com/langgenius/dify/releases/tag/1.17.1",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "flowise",
+      "name": "Flowise",
+      "websiteUrl": "https://flowiseai.com/",
+      "pricingUrl": "https://flowiseai.com/pricing",
+      "docsUrl": "https://docs.flowiseai.com/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Open-source self-host (npm package flowise@3.1.4 on npm registry). Pricing page returned thin content in crawl; cloud free tier not clearly confirmed.",
+      "pricingNotes": "npm view flowise version=3.1.4. Hands-on install not run.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://flowiseai.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "latestRelease": {
+        "repo": "FlowiseAI/Flowise",
+        "tag": "flowise@3.1.4",
+        "name": "flowise@3.1.4",
+        "published_at": "2026-07-29T15:51:25Z",
+        "html_url": "https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.4",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "autogen",
+      "name": "AutoGen (Microsoft)",
+      "websiteUrl": "https://github.com/microsoft/autogen",
+      "pricingUrl": "https://microsoft.github.io/autogen/stable//index.html",
+      "docsUrl": "https://microsoft.github.io/autogen/stable//index.html",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Open-source library; no product paywall for the framework itself (LLM provider costs separate).",
+      "pricingNotes": "No SaaS pricing page for the framework. Latest GitHub python release python-v0.7.5 dated 2025-09-30 \u2014 older than peers; industry notes mention Microsoft Agent Framework as successor \u2014 flag for catalog freshness.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://github.com/microsoft/autogen"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "tested-hands-on",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "multi-agent-workflows"
+      ],
+      "latestRelease": {
+        "repo": "microsoft/autogen",
+        "tag": "python-v0.7.5",
+        "name": "python-v0.7.5",
+        "published_at": "2025-09-30T06:18:26Z",
+        "html_url": "https://github.com/microsoft/autogen/releases/tag/python-v0.7.5",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [
+        "Latest Autogen python release on GitHub is 2025-09-30; may be maintenance-mode relative to newer Microsoft Agent Framework."
+      ],
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import autogen_agentchat",
+        "package": "autogen-agentchat==0.7.5",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "notes": "Install/import only; no API key, no LLM invoke, no signup."
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "websiteUrl": "https://cursor.com/",
+      "pricingUrl": "https://cursor.com/pricing",
+      "docsUrl": "https://cursor.com/docs",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Pricing page shows $0 /mo tier alongside paid ($8/$30/$100/$200 /mo samples in crawl).",
+      "pricingNotes": "Paid plans present; confirm current inclusions on cursor.com/pricing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://cursor.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "coding-agents"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": "Desktop IDE product; no single public GitHub release used.",
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "claude",
+      "name": "Claude (Anthropic)",
+      "websiteUrl": "https://www.anthropic.com/claude",
+      "pricingUrl": "https://www.anthropic.com/pricing",
+      "docsUrl": "https://docs.claude.com/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Anthropic pricing page includes $0 option in crawl text (Claude consumer/API tiers \u2014 confirm Free vs Pro on page).",
+      "pricingNotes": "Site redirects product overview to claude.com. API billed separately.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://claude.com/product/overview"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "coding-agents"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": "Model product; use Anthropic docs/changelog rather than a single GitHub tag.",
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "continue",
+      "name": "Continue",
+      "websiteUrl": "https://continue.dev/",
+      "pricingUrl": "https://www.continue.dev/",
+      "docsUrl": "https://docs.continue.dev/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Open-source coding agent/extension (homepage). Dedicated /pricing returned 404 in this pass.",
+      "pricingNotes": "Confirm any Continue cloud/team pricing on site; OSS install is IDE extension (not pip-tested here).",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://continue.dev/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "coding-agents"
+      ],
+      "latestRelease": {
+        "repo": "continuedev/continue",
+        "tag": "v2.0.0-vscode",
+        "name": "v2.0.0-vscode",
+        "published_at": "2026-06-19T00:24:01Z",
+        "html_url": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [
+        "continue.dev/pricing returned HTTP 404."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "websiteUrl": "https://replit.com/",
+      "pricingUrl": "https://replit.com/pricing",
+      "docsUrl": "https://docs.replit.com/",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "Homepage and pricing returned HTTP 403 to this crawler. Docs root HTTP 200. Free tier not confirmed in this pass.",
+      "pricingNotes": "Could not read official pricing HTML (403).",
+      "siteLoad": {
+        "status": 403,
+        "final": "https://replit.com/"
+      },
+      "siteLoadsOk": false,
+      "smokeStatus": "untested",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "coding-agents"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [
+        "replit.com and pricing blocked with HTTP 403 from this environment."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client."
+    },
+    {
+      "id": "autogpt",
+      "name": "AutoGPT",
+      "websiteUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+      "pricingUrl": "https://agpt.co/pricing",
+      "docsUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Open-source repo. agpt.co/pricing HTTP 200 \u2014 cloud offerings may be paid; OSS self-host path exists.",
+      "pricingNotes": "Platform release autogpt-platform-beta-v0.8.4 on 2026-10-14.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://github.com/Significant-Gravitas/AutoGPT"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "coding-agents",
+        "multi-agent-workflows"
+      ],
+      "latestRelease": {
+        "repo": "Significant-Gravitas/AutoGPT",
+        "tag": "autogpt-platform-beta-v0.8.4",
+        "name": "autogpt-platform-beta-v0.8.4",
+        "published_at": "2026-10-14T16:22:16Z",
+        "html_url": "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.8.4",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "browser_use",
+      "name": "Browser Use",
+      "websiteUrl": "https://browser-use.com/",
+      "pricingUrl": "https://browser-use.com/",
+      "docsUrl": "https://docs.browser-use.com/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Open-source Python agent; docs mention cloud browser pricing samples (e.g. $0.02 per browser-hour in earlier marketing fetch). Local OSS usable with your own browser/LLM keys.",
+      "pricingNotes": "Cloud stealth browsers billed separately per docs/marketing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://browser-use.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "tested-hands-on",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "tool-use-browser"
+      ],
+      "latestRelease": {
+        "repo": "browser-use/browser-use",
+        "tag": "0.13.11",
+        "name": "0.13.11",
+        "published_at": "2026-10-07T04:23:18Z",
+        "html_url": "https://github.com/browser-use/browser-use/releases/tag/0.13.11",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import browser_use; from browser_use import Agent",
+        "package": "browser-use==0.13.11",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "notes": "Install/import only; no API key, no LLM invoke, no signup."
+    },
+    {
+      "id": "composio",
+      "name": "Composio",
+      "websiteUrl": "https://composio.dev/",
+      "pricingUrl": "https://composio.dev/pricing",
+      "docsUrl": "https://docs.composio.dev/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Pricing page crawl includes Hobby/$0/no credit card language.",
+      "pricingNotes": "Confirm current Hobby limits on composio.dev/pricing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://composio.dev/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "tool-use-browser"
+      ],
+      "latestRelease": {
+        "repo": "ComposioHQ/composio",
+        "tag": "@composio/cli@0.4.4",
+        "name": "CLI @composio/cli@0.4.4",
+        "published_at": "2026-10-15T12:48:24Z",
+        "html_url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.4",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "tavily",
+      "name": "Tavily",
+      "websiteUrl": "https://www.tavily.com/",
+      "pricingUrl": "https://tavily.com/pricing",
+      "docsUrl": "https://docs.tavily.com/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0 and no-credit-card language.",
+      "pricingNotes": "Usage samples also showed paid figures; confirm free credit allotment on page.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.tavily.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "tool-use-browser",
+        "research-rag"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "firecrawl",
+      "name": "Firecrawl",
+      "websiteUrl": "https://www.firecrawl.dev/",
+      "pricingUrl": "https://www.firecrawl.dev/pricing",
+      "docsUrl": "https://docs.firecrawl.dev/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl mentions free plan / hobby and $0 /mo sample.",
+      "pricingNotes": "OSS repo exists; cloud has paid tiers (samples $16/$75 etc.).",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.firecrawl.dev/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "tool-use-browser",
+        "research-rag"
+      ],
+      "latestRelease": {
+        "repo": "mendableai/firecrawl",
+        "tag": "v2.11.0",
+        "name": "Firecrawl v2.11.0",
+        "published_at": "2026-06-19T15:09:30Z",
+        "html_url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.0",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "websiteUrl": "https://n8n.io/",
+      "pricingUrl": "https://n8n.io/pricing/",
+      "docsUrl": "https://docs.n8n.io/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "Community Edition self-hosted free (GitHub). n8n Cloud: free trial without card; paid Starter from 20\u20ac/mo billed annually (official pricing page). Not a permanent free cloud tier.",
+      "pricingNotes": "Cloud Starter/Pro/Business/Enterprise paid. Community Edition is the free forever self-host option.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://n8n.io/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "workflow-automation"
+      ],
+      "latestRelease": {
+        "repo": "n8n-io/n8n",
+        "tag": "n8n@2.43.6",
+        "name": "n8n@2.43.6",
+        "published_at": "2026-10-15T07:26:03Z",
+        "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [
+        "Attempted local `npm install n8n@2.43.6` failed (node-gyp/isolated-vm needs distutils; ModuleNotFoundError: distutils). npm registry metadata OK (2.43.6)."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "npm install attempted and failed (node-gyp/distutils). Registry+docs+pricing verified."
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "websiteUrl": "https://zapier.com/",
+      "pricingUrl": "https://zapier.com/pricing",
+      "docsUrl": "https://docs.zapier.com/",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "Pricing page HTTP 200 but crawl text did not clearly extract Free plan details in this pass \u2014 historically Zapier has a free task tier; mark unconfirmed here.",
+      "pricingNotes": "Re-open zapier.com/pricing in a browser to confirm free task limits before publishing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://zapier.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "workflow-automation"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "websiteUrl": "https://www.make.com/",
+      "pricingUrl": "https://www.make.com/en/pricing",
+      "docsUrl": "https://www.make.com/en/help",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Official pricing FAQ states Free plan includes 1000 credits per month (and related storage). Direct HTML crawl sometimes 403; WebFetch of pricing page succeeded.",
+      "pricingNotes": "Credits billing unit as of Aug 27 (year not re-stated on snippet). Core/Pro/Teams paid.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.make.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "workflow-automation"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "websiteUrl": "https://www.perplexity.ai/",
+      "pricingUrl": "https://docs.perplexity.ai/guides/pricing",
+      "docsUrl": "https://docs.perplexity.ai/",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "Homepage HTTP 403 to crawler. Docs accessible. Consumer Free vs Pro not cleanly extracted \u2014 unconfirmed in this pass.",
+      "pricingNotes": "Use docs.perplexity.ai pricing guide; confirm Free tier in browser.",
+      "siteLoad": {
+        "status": 403,
+        "final": "https://www.perplexity.ai/"
+      },
+      "siteLoadsOk": false,
+      "smokeStatus": "untested",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "research-rag"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [
+        "perplexity.ai homepage HTTP 403 from this environment."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client."
+    },
+    {
+      "id": "pinecone",
+      "name": "Pinecone",
+      "websiteUrl": "https://www.pinecone.io/",
+      "pricingUrl": "https://www.pinecone.io/pricing/",
+      "docsUrl": "https://docs.pinecone.io/",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "Pricing crawl mentioned Starter and paid samples ($20/$50/$500/mo). A true $0 free tier was not clearly confirmed in extract \u2014 treat as unconfirmed.",
+      "pricingNotes": "Confirm Starter vs free on pinecone.io/pricing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.pinecone.io/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "research-rag"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "mem0",
+      "name": "Mem0",
+      "websiteUrl": "https://mem0.ai/",
+      "pricingUrl": "https://mem0.ai/pricing",
+      "docsUrl": "https://docs.mem0.ai/",
+      "openSource": true,
+      "freeTier": true,
+      "freeTierNotes": "OSS package mem0ai installs freely. Cloud pricing page HTTP 200; free SaaS tier details not cleanly parsed \u2014 OSS path confirmed via install.",
+      "pricingNotes": "Confirm Mem0 platform free tier on mem0.ai/pricing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://mem0.ai/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "tested-hands-on",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "research-rag"
+      ],
+      "latestRelease": {
+        "repo": "mem0ai/mem0",
+        "tag": "ts-v3.3.1",
+        "name": "Mem0 Node SDK (v3.3.1)",
+        "published_at": "2026-09-25T17:36:35Z",
+        "html_url": "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.1",
+        "status": 200
+      },
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": true,
+        "detail": "pip install + import mem0",
+        "package": "mem0ai==2.2.1",
+        "llmCall": false,
+        "accountSignup": false,
+        "payment": false
+      },
+      "notes": "Install/import only; no API key, no LLM invoke, no signup."
+    },
+    {
+      "id": "bitpart",
+      "name": "Bitpart",
+      "websiteUrl": "https://www.bitpart.ai/",
+      "pricingUrl": "https://www.bitpart.ai/product",
+      "docsUrl": "https://www.bitpart.ai/",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "No public pricing grid found in crawl; product page describes SDKs. Free tier unconfirmed.",
+      "pricingNotes": "Contact/sales likely; do not invent prices.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.bitpart.ai/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [
+        "No public pricing page with clear free tier found."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "mistscale",
+      "name": "MistScale",
+      "websiteUrl": "https://mistscale.com/",
+      "pricingUrl": "https://mistscale.com/",
+      "docsUrl": "https://mistscale.com/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Homepage copy includes trying without a card / talking in minutes language in earlier research fetch; reconfirm on live homepage. Docs path /docs was 404 in one fetch.",
+      "pricingNotes": "Dedicated pricing URL not found; pricing may be embedded on homepage.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://mistscale.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [
+        "mistscale.com/docs returned 404 in one check."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "nvidia_ace",
+      "name": "NVIDIA ACE for Games",
+      "websiteUrl": "https://developer.nvidia.com/ace-for-games",
+      "pricingUrl": "https://developer.nvidia.com/ace-for-games",
+      "docsUrl": "https://docs.nvidia.com/ace/",
+      "openSource": null,
+      "freeTier": true,
+      "freeTierNotes": "Developer downloads/plugins described; Unreal plugins noted MIT-licensed in earlier page content. Requires NVIDIA developer access / hardware assumptions \u2014 not a simple SaaS free tier.",
+      "pricingNotes": "SDK/download model rather than subscription grid on the page we read.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://developer.nvidia.com/ace-for-games"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "inworld",
+      "name": "Inworld",
+      "websiteUrl": "https://inworld.ai/",
+      "pricingUrl": "https://inworld.ai/pricing",
+      "docsUrl": "https://docs.inworld.ai/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0 among samples.",
+      "pricingNotes": "Paid usage samples also present; confirm free allotment.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://inworld.ai/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "convai",
+      "name": "Convai",
+      "websiteUrl": "https://convai.com/",
+      "pricingUrl": "https://convai.com/pricing",
+      "docsUrl": "https://docs.convai.com/",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "Site loads (200). Pricing URL fetches failed/empty in this pass \u2014 free tier unconfirmed.",
+      "pricingNotes": "Confirm on convai.com/pricing in a browser.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://convai.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [
+        "Could not extract pricing/free tier from pricing URL in this environment."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "modl",
+      "name": "modl.ai",
+      "websiteUrl": "https://modl.ai/",
+      "pricingUrl": "https://modl.ai/",
+      "docsUrl": "https://modl.ai/",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "Homepage 200; /pricing 404. Free tier unconfirmed.",
+      "pricingNotes": "No public pricing page found at /pricing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://modl.ai/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [
+        "modl.ai/pricing returned 404."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "tavernbard",
+      "name": "Tavernbard",
+      "websiteUrl": "https://www.tavernbard.com/",
+      "pricingUrl": "https://www.tavernbard.com/",
+      "docsUrl": "https://www.tavernbard.com/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Homepage describes free play path using your own AI subscription; price sample $49.99 also appeared in crawl (likely paid plan). Confirm exact free vs paid on site.",
+      "pricingNotes": "/pricing returned 404; pricing appears on homepage.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.tavernbard.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-npcs"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [
+        "tavernbard.com/pricing returned 404."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "websiteUrl": "https://www.midjourney.com/",
+      "pricingUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+      "docsUrl": "https://docs.midjourney.com/",
+      "openSource": false,
+      "freeTier": false,
+      "freeTierNotes": "Official plan comparison: Basic $10, Standard $30, Pro $60, Mega $120 monthly \u2014 all subscriptions. No free plan listed. Docs homepage also 403 to crawler.",
+      "pricingNotes": "CHANGED/NOTE: No free tier on official plan chart. Homepage midjourney.com HTTP 403 here.",
+      "siteLoad": {
+        "status": 403,
+        "final": "https://www.midjourney.com/"
+      },
+      "siteLoadsOk": false,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-creative"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [
+        "No free tier on official Midjourney plans.",
+        "Homepage/docs often HTTP 403 to automated clients."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client."
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "websiteUrl": "https://runway.com/",
+      "pricingUrl": "https://runwayml.com/pricing",
+      "docsUrl": "https://help.runwayml.com/",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "runwayml.com/pricing HTTP 200 with substantial content; free tier not cleanly extracted from text \u2014 unconfirmed.",
+      "pricingNotes": "help.runwayml.com returned 403 in one fetch.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://runway.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-creative",
+        "creator-video-audio"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "scenario",
+      "name": "Scenario",
+      "websiteUrl": "https://www.scenario.com/",
+      "pricingUrl": "https://www.scenario.com/pricing",
+      "docsUrl": "https://docs.scenario.com/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl mentions free tier / free plan / starter / no credit card.",
+      "pricingNotes": "Paid samples $15/$45/$75 /mo in crawl.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.scenario.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-creative"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "meshy",
+      "name": "Meshy",
+      "websiteUrl": "https://www.meshy.ai/",
+      "pricingUrl": "https://www.meshy.ai/pricing",
+      "docsUrl": "https://docs.meshy.ai/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl shows $0 / $0 /mo and no credit card language.",
+      "pricingNotes": "Paid samples include $20 /mo.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.meshy.ai/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "game-creative"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "websiteUrl": "https://elevenlabs.io/",
+      "pricingUrl": "https://elevenlabs.io/pricing",
+      "docsUrl": "https://elevenlabs.io/docs",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "Pricing page HTTP 200 but extracted text was very thin (528 chars) \u2014 free tier historically exists; NOT confirmed in this extract.",
+      "pricingNotes": "Re-check elevenlabs.io/pricing in browser before claiming Free.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://elevenlabs.io/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [
+        "Pricing page content barely extractable via crawl."
+      ],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "websiteUrl": "https://www.descript.com/",
+      "pricingUrl": "https://www.descript.com/pricing",
+      "docsUrl": "https://help.descript.com/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes free to start / hobby / $0 language.",
+      "pricingNotes": "Paid samples $16\u2013$65 range in crawl.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.descript.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "websiteUrl": "https://www.heygen.com/",
+      "pricingUrl": "https://www.heygen.com/pricing",
+      "docsUrl": "https://docs.heygen.com/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0/mo alongside $29/$49 /mo.",
+      "pricingNotes": "Confirm Free inclusions on heygen.com/pricing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.heygen.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "opus",
+      "name": "Opus Clip",
+      "websiteUrl": "https://www.opus.pro/",
+      "pricingUrl": "https://www.opus.pro/pricing",
+      "docsUrl": "https://help.opus.pro/",
+      "openSource": false,
+      "freeTier": null,
+      "freeTierNotes": "Pricing crawl mentions starter / no credit card and $15 samples \u2014 free forever tier not clearly confirmed.",
+      "pricingNotes": "Confirm free trial vs free plan on opus.pro/pricing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.opus.pro/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "websiteUrl": "https://www.notion.com/",
+      "pricingUrl": "https://www.notion.com/pricing",
+      "docsUrl": "https://developers.notion.com/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0 alongside $10/$20.",
+      "pricingNotes": "AI features may require paid Notion plans \u2014 confirm which AI/agent features are on Free.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.notion.com/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "meetings-knowledge"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "websiteUrl": "https://www.granola.ai/",
+      "pricingUrl": "https://www.granola.ai/pricing",
+      "docsUrl": "https://www.granola.ai/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Pricing crawl includes $0 alongside $14/$35.",
+      "pricingNotes": "Confirm Free limits on granola.ai/pricing.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://www.granola.ai/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "meetings-knowledge"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "websiteUrl": "https://obsidian.md/",
+      "pricingUrl": "https://obsidian.md/pricing",
+      "docsUrl": "https://help.obsidian.md/",
+      "openSource": false,
+      "freeTier": true,
+      "freeTierNotes": "Official pricing: 'Free without limits' for the app \u2014 no sign-up required. Sync/Publish are paid add-ons ($4/$8 /mo billed annually).",
+      "pricingNotes": "Catalyst $25 one-time optional; Commercial $50/user/year optional.",
+      "siteLoad": {
+        "status": 200,
+        "final": "https://obsidian.md/"
+      },
+      "siteLoadsOk": true,
+      "smokeStatus": "verified-docs-only",
+      "checkedAt": "2026-10-15T18:31:00-04:00",
+      "checkedDate": "2026-10-15",
+      "useCaseTags": [
+        "meetings-knowledge"
+      ],
+      "latestRelease": null,
+      "latestReleaseNotes": null,
+      "problems": [],
+      "handsOn": {
+        "performed": false
+      },
+      "notes": "No local install attempted (SaaS/desktop/extension or install not feasible without account)."
+    }
+  ]
+}

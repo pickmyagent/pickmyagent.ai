@@ -1,0 +1,25 @@
+{
+  "slug": "workflow-automation",
+  "title": "Automate business workflows",
+  "summary": "Agents and automations across the apps you already use.",
+  "audienceHints": [
+    "builders"
+  ],
+  "matchTags": [
+    "workflow-automation"
+  ],
+  "recommended": [
+    {
+      "toolId": "n8n",
+      "why": "Self-host Community Edition for free, or use paid n8n Cloud. Our local npm install failed; docs and pricing were checked."
+    },
+    {
+      "toolId": "make",
+      "why": "Visual automations. The pricing FAQ we fetched describes a free plan with 1,000 credits a month."
+    },
+    {
+      "toolId": "zapier",
+      "why": "Connects hosted apps. The pricing page loaded, but a free task tier was not clearly confirmed."
+    }
+  ]
+}

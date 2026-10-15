@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #07090f;
+  --panel: #10141c;
+  --panel-2: #171c27;
+  --line: #31384a;
+  --text: #f4f6fb;
+  --muted: #c5cde0;
+  /* Text gold. About 12:1 on --bg and about 10:1 on --panel. */
+  --gold: #e8c872;
+  --gold-bright: #f6e7c1;
+  /* Near-black for type on the gold button gradient. */
+  --gold-ink: #1a1408;
+  --ice: #b9ddff;
+  --amber: #ffd27a;
+  --coral: #ffb4a2;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-ink: var(--gold-ink);
+  --color-ice: var(--ice);
+  --color-amber: var(--amber);
+  --color-coral: var(--coral);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), sans-serif;
+  background-image:
+    linear-gradient(to right, rgb(232 200 114 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(232 200 114 / 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+}
+
+.btn-gold {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--gold-ink);
+  background-color: #d4aa45;
+  background-image: linear-gradient(
+    118deg,
+    #f7e8bc 0%,
+    #e8c56a 18%,
+    #c9963a 42%,
+    #f8edcf 50%,
+    #e2b85a 68%,
+    #c4922a 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgb(255 248 225 / 0.8),
+    inset 0 -1px 0 rgb(110 74 18 / 0.35);
+}
+
+.btn-gold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    102deg,
+    transparent 28%,
+    rgb(255 250 232 / 0.55) 48%,
+    transparent 68%
+  );
+  transform: translateX(-130%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-gold:hover::before {
+    animation: gold-sheen 720ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-gold:hover {
+    filter: brightness(1.06);
+  }
+}
+
+@keyframes gold-sheen {
+  to {
+    transform: translateX(130%);
+  }
+}
+
+/* Higher specificity than .btn-gold so the link stays out of the flex column.
+   Otherwise position:relative wins, the link stretches to the body width, and
+   left: 1rem pushes it past the right edge. */
+a.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  width: max-content;
+  max-width: calc(100% - 2rem);
+  padding: 0.6rem 0.9rem;
+  font-weight: 700;
+}
+
+a.skip-link:focus {
+  top: 1rem;
+}
+
+.frame {
+  position: relative;
+}
+
+.frame::before,
+.frame::after {
+  content: "";
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  pointer-events: none;
+}
+
+.frame::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--gold);
+  border-left: 2px solid var(--gold);
+}
+
+.frame::after {
+  right: -1px;
+  bottom: -1px;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--gold-ink);
+}

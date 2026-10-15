@@ -1,0 +1,34 @@
+{
+  "slug": "game-npcs",
+  "title": "Game NPCs & in-game agents",
+  "summary": "Characters and agents that live in a game engine or in Discord.",
+  "audienceHints": [
+    "gamers",
+    "builders"
+  ],
+  "matchTags": [
+    "game-npcs"
+  ],
+  "recommended": [
+    {
+      "toolId": "inworld",
+      "why": "Character AI for games. Pricing page included a $0 sample. Docs checked, not hands-on."
+    },
+    {
+      "toolId": "convai",
+      "why": "Conversational game characters. Site loaded; pricing text did not, so the free tier is unconfirmed."
+    },
+    {
+      "toolId": "nvidia_ace",
+      "why": "NVIDIA’s in-game character toolkit, with developer downloads rather than a simple SaaS grid."
+    },
+    {
+      "toolId": "mistscale",
+      "why": "Memory so NPCs can remember the player. Homepage checked; /docs returned 404 once."
+    },
+    {
+      "toolId": "tavernbard",
+      "why": "AI game master for Discord, with a free path that uses your own model subscription."
+    }
+  ]
+}

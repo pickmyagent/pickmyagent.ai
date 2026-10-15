@@ -1,0 +1,33 @@
+{
+  "slug": "research-rag",
+  "title": "Research & retrieve the web",
+  "summary": "Search, crawl, and cite for agent retrieval.",
+  "audienceHints": [
+    "builders"
+  ],
+  "matchTags": [
+    "research-rag"
+  ],
+  "recommended": [
+    {
+      "toolId": "tavily",
+      "why": "Web search built for agents, with a $0 option on the pricing page we read."
+    },
+    {
+      "toolId": "firecrawl",
+      "why": "Turns sites into markdown you can index. Open-source repo plus a cloud free-plan mention."
+    },
+    {
+      "toolId": "mem0",
+      "why": "Memory for agents. We imported the Python package locally; no account and no model call."
+    },
+    {
+      "toolId": "llamaindex",
+      "why": "Framework for retrieval over your data. Local import checked. Cloud free tier unconfirmed."
+    },
+    {
+      "toolId": "pinecone",
+      "why": "Managed vector database. Pricing page checked; a true $0 tier was not clearly confirmed."
+    }
+  ]
+}

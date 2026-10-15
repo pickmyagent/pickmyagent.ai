@@ -1,0 +1,76 @@
+{
+  "id": "browser_use",
+  "slug": "browser-use",
+  "name": "Browser Use",
+  "websiteUrl": "https://browser-use.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Open-source Python agent that controls a browser. We imported the package locally; no model call.",
+  "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. We did not sign up, pay, or call a model. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
+  "categories": [
+    "tool-use"
+  ],
+  "useCaseTags": [
+    "tool-use-browser"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "cli",
+    "self_host"
+  ],
+  "pricingModel": [
+    "open_source",
+    "usage"
+  ],
+  "pricingNotes": "Cloud stealth browsers billed separately per docs/marketing.",
+  "pricingUrl": "https://browser-use.com/",
+  "docsUrl": "https://docs.browser-use.com/",
+  "freeTier": true,
+  "freeTierNotes": "Open-source Python agent; docs mention cloud browser pricing samples (e.g. $0.02 per browser-hour in earlier marketing fetch). Local OSS usable with your own browser/LLM keys.",
+  "openSource": true,
+  "repoUrl": "https://github.com/browser-use/browser-use",
+  "bestFor": [
+    "Agents that need to open pages, click, and type",
+    "Python projects that can bring their own browser and model"
+  ],
+  "notIdealFor": [
+    "Jobs that only need an HTTP search API",
+    "A no-code hosted agent with no local setup"
+  ],
+  "smokeStatus": "tested-hands-on",
+  "smokeTested": true,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+  "handsOn": {
+    "performed": true,
+    "detail": "pip install + import browser_use; from browser_use import Agent",
+    "package": "browser-use==0.13.11",
+    "llmCall": false,
+    "accountSignup": false,
+    "payment": false
+  },
+  "latestRelease": {
+    "repo": "browser-use/browser-use",
+    "tag": "0.13.11",
+    "name": "0.13.11",
+    "publishedAt": "2026-10-07T04:23:18Z",
+    "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.11"
+  },
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://browser-use.com/",
+    "https://docs.browser-use.com/",
+    "https://github.com/browser-use/browser-use/releases/tag/0.13.11"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://browser-use.com/"
+  }
+}

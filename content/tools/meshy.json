@@ -1,0 +1,64 @@
+{
+  "id": "meshy",
+  "slug": "meshy",
+  "name": "Meshy",
+  "websiteUrl": "https://www.meshy.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Text and image to 3D assets. Pricing page showed a $0 option and no-card language.",
+  "longDescription": "Meshy turns text and images into 3D assets. The pricing crawl showed $0 and no-credit-card language, with a paid sample around $20 per month. Confirm inclusions on the pricing page. We did not create an account or generate a model.",
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "game-creative"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Paid samples include $20 /mo.",
+  "pricingUrl": "https://www.meshy.ai/pricing",
+  "docsUrl": "https://docs.meshy.ai/",
+  "freeTier": true,
+  "freeTierNotes": "Pricing crawl shows $0 / $0 /mo and no credit card language.",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Quick 3D assets for a game or prototype",
+    "Creators who want a $0 way to try the product"
+  ],
+  "notIdealFor": [
+    "Final production modeling without an artist pass",
+    "Voice, video, or NPC logic"
+  ],
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-15T18:31:00-04:00",
+  "checkedDate": "2026-10-15",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "sources": [
+    "https://www.meshy.ai/",
+    "https://www.meshy.ai/pricing",
+    "https://docs.meshy.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.meshy.ai/"
+  }
+}

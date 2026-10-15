@@ -1,0 +1,25 @@
+{
+  "slug": "meetings-knowledge",
+  "title": "Meetings, notes & knowledge",
+  "summary": "Capture, summarize, and query your team’s context.",
+  "audienceHints": [
+    "builders"
+  ],
+  "matchTags": [
+    "meetings-knowledge"
+  ],
+  "recommended": [
+    {
+      "toolId": "notion",
+      "why": "Team docs and wikis, with agent features. Pricing page included a $0 plan."
+    },
+    {
+      "toolId": "granola",
+      "why": "Meeting notes. Pricing page included a $0 plan. Not installed here."
+    },
+    {
+      "toolId": "obsidian",
+      "why": "Local-first notes. The app is free without limits on the official pricing page; Sync and Publish are paid."
+    }
+  ]
+}
