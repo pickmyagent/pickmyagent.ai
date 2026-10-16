@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 import { RobotMark } from "@/components/robot-mark";
 
 const LINKS = [
@@ -29,6 +30,7 @@ export function SiteFooter() {
               links later; if we do, we’ll disclose them. Paid placements will
               be marked.
             </p>
+            <NewsletterSignup idPrefix="footer-newsletter" className="mt-6 max-w-xl" />
           </div>
           <p className="font-mono text-xs text-muted">pickmyagent.ai</p>
         </div>

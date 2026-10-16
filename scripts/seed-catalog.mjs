@@ -965,7 +965,7 @@ const categories = [
 
 const site = {
   name: "PickMyAgent",
-  url: "https://pickmyagent.ai",
+  url: "https://www.pickmyagent.ai",
   catalogCheckedDate: "2026-10-15",
   newThisWeekSince: "2026-10-08",
   recentReleaseSince: "2026-10-01",

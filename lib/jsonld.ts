@@ -1,4 +1,5 @@
 import { getSite } from "@/lib/catalog";
+import { verifiedOffers } from "@/lib/offers";
 import type { Tool } from "@/lib/types";
 
 export function absoluteUrl(path: string): string {
@@ -48,6 +49,7 @@ export function softwareLd(tool: Tool) {
       : tool.categories.includes("knowledge")
         ? "BusinessApplication"
         : "DeveloperApplication";
+  const offers = verifiedOffers(tool);
 
   return {
     "@context": "https://schema.org",
@@ -56,10 +58,19 @@ export function softwareLd(tool: Tool) {
     description: tool.shortDescription,
     url: tool.websiteUrl,
     applicationCategory: category,
-    ...(tool.pricingUrl
-      ? { offers: { "@type": "Offer", url: tool.pricingUrl } }
-      : {}),
+    ...(offers ? { offers } : {}),
     ...(sameAs.length > 0 ? { sameAs } : {}),
+  };
+}
+
+export function organizationLd() {
+  const site = getSite();
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: site.name,
+    url: site.url,
+    logo: absoluteUrl("/icon"),
   };
 }
 

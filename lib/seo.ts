@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 
+/** Canonical origin for metadataBase, canonical tags, sitemap, and robots. */
+export const CANONICAL_ORIGIN = "https://www.pickmyagent.ai";
+
 const TITLE_SUFFIX = " · PickMyAgent";
 
 export function pageMetadata({
@@ -17,7 +20,7 @@ export function pageMetadata({
   return {
     title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: `${CANONICAL_ORIGIN}${path}` },
     openGraph: {
       title: socialTitle,
       description,

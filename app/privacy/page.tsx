@@ -26,11 +26,11 @@ export default function PrivacyPage() {
       />
       <div className="space-y-4 leading-relaxed text-muted">
         <p>
-          The newsletter form is a placeholder until Beehiiv or Buttondown is
-          connected. Until then, the email you type is not sent anywhere and is
-          not saved. When a provider is connected, that provider’s own privacy
-          policy applies to the address you submit, and the form will say which
-          provider it uses.
+          The newsletter form is shown only when the list is connected. Until
+          then there is no email field on the site. When it is connected,
+          submitting the form sends your address to that provider, and that
+          provider’s privacy policy applies. PickMyAgent does not store the
+          address.
         </p>
         <p>
           The submit-a-tool form does not write to a database. If a public

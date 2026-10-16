@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "PickMyAgent",
-    "url": "https://pickmyagent.ai",
+    "url": "https://www.pickmyagent.ai",
     "catalogCheckedDate": "2026-10-15",
     "newThisWeekSince": "2026-10-08",
     "recentReleaseSince": "2026-10-01",
@@ -2274,7 +2274,7 @@
         "open_source",
         "subscription"
       ],
-      "pricingNotes": "Cloud Starter/Pro/Business/Enterprise paid. Community Edition is the free forever self-host option.",
+      "pricingNotes": "Cloud Starter was listed at 20 euros per month on annual billing, which is not a USD monthly price, so startingPrice stays null. Community Edition is the free self-host option.",
       "pricingUrl": "https://n8n.io/pricing/",
       "docsUrl": "https://docs.n8n.io/",
       "freeTier": null,

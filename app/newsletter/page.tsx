@@ -1,8 +1,8 @@
-import { NewsletterForm } from "@/components/newsletter-form";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 import { JsonLd } from "@/components/json-ld";
 import { PageHeader } from "@/components/page-header";
 import { breadcrumbLd } from "@/lib/jsonld";
-import { getNewsletterConfig } from "@/lib/newsletter";
+import { getNewsletterFormUrl } from "@/lib/newsletter";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
 });
 
 export default function NewsletterPage() {
-  const newsletter = getNewsletterConfig();
+  const newsletterUrl = getNewsletterFormUrl();
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
       <JsonLd
@@ -27,11 +27,13 @@ export default function NewsletterPage() {
         title="Weekly new agents & tools"
         lede="One short email: new listings, notable releases, no hype filler. The first digest ships when there is a week of real additions to send."
       />
-      <NewsletterForm
-        provider={newsletter.provider}
-        action={newsletter.action}
-        idPrefix="newsletter-page"
-      />
+      {newsletterUrl ? (
+        <NewsletterSignup idPrefix="newsletter-page" className="mt-8" />
+      ) : (
+        <p className="mt-8 text-muted">
+          The weekly email is not open for signups yet.
+        </p>
+      )}
     </div>
   );
 }

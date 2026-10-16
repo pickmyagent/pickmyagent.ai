@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { NewsletterForm } from "@/components/newsletter-form";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 import { JobSearch } from "@/components/job-search";
 import { JsonLd } from "@/components/json-ld";
 import { StatusBadge } from "@/components/badges";
 import { getCategories, getSite, getTools, getUseCases } from "@/lib/catalog";
 import { formatDate } from "@/lib/format";
-import { absoluteUrl, itemListLd, websiteLd } from "@/lib/jsonld";
-import { getNewsletterConfig } from "@/lib/newsletter";
+import { absoluteUrl, itemListLd, organizationLd, websiteLd } from "@/lib/jsonld";
+import { getNewsletterFormUrl } from "@/lib/newsletter";
 import { releasesSince } from "@/lib/query";
 
 const STEPS = [
@@ -21,11 +21,12 @@ export default function HomePage() {
   const tools = getTools();
   const useCases = getUseCases();
   const categories = getCategories();
-  const newsletter = getNewsletterConfig();
+  const newsletterUrl = getNewsletterFormUrl();
   const fresh = releasesSince(tools, site.newThisWeekSince);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
+      <JsonLd data={organizationLd()} />
       <JsonLd data={websiteLd()} />
       <JsonLd
         data={itemListLd(
@@ -139,20 +140,14 @@ export default function HomePage() {
         </Link>
       </section>
 
-      <section className="mt-16 grid gap-4 lg:grid-cols-2">
-        <div id="newsletter" className="scroll-mt-24 border border-line bg-panel p-5">
-          <h2 className="text-2xl font-semibold tracking-tight">
-            Weekly new agents & tools
-          </h2>
-          <p className="mt-2 text-muted">
-            One short email: new listings, notable releases, no hype filler.
-          </p>
-          <NewsletterForm
-            provider={newsletter.provider}
-            action={newsletter.action}
-            idPrefix="home-newsletter"
-          />
-        </div>
+      <section
+        className={`mt-16 grid gap-4 ${newsletterUrl ? "lg:grid-cols-2" : ""}`}
+      >
+        {newsletterUrl ? (
+          <div id="newsletter" className="scroll-mt-24 border border-line bg-panel p-5">
+            <NewsletterSignup idPrefix="home-newsletter" />
+          </div>
+        ) : null}
         <div id="submit" className="scroll-mt-24 border border-line bg-panel p-5">
           <h2 className="text-2xl font-semibold tracking-tight">
             List your AI or agent tool

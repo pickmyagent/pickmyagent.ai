@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { getSite } from "@/lib/catalog";
+import { CANONICAL_ORIGIN } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,10 +16,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const site = getSite();
-
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(CANONICAL_ORIGIN),
+  alternates: { canonical: `${CANONICAL_ORIGIN}/` },
   title: {
     default: "PickMyAgent — Find the AI agent that fits the job",
     template: "%s · PickMyAgent",
