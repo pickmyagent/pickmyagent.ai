@@ -4,14 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { RobotMark } from "@/components/robot-mark";
-import { isCommunityEnabled } from "@/lib/community-rules";
 
 const LINKS = [
   { href: "/use-cases", label: "Use cases" },
   { href: "/tools", label: "Tools" },
   { href: "/new", label: "New" },
   { href: "/how-we-test", label: "How we test" },
-  ...(isCommunityEnabled() ? [{ href: "/community", label: "Community" }] : []),
+  { href: "/community", label: "Community" },
 ];
 
 export function SiteHeader() {
