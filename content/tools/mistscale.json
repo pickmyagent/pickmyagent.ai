@@ -39,6 +39,8 @@
     "A standalone art or voice tool",
     "Deep public docs \u2014 the docs path 404\u2019d in this check"
   ],
+  "strength": "The homepage describes memory for game NPCs that need to remember the player.",
+  "weakness": "The MistScale docs URL returned 404, and we did not find a separate pricing page.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

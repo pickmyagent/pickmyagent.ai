@@ -128,6 +128,19 @@ for (const tool of tools) {
   if (tool.freeTier !== true && tool.freeTier !== false && tool.freeTier !== null) {
     fail(`${tool.id} freeTier must be true, false, or null`);
   }
+  for (const field of ["strength", "weakness"]) {
+    const value = tool[field];
+    if (typeof value !== "string" || value.length < 40 || value.length > 320) {
+      fail(`${tool.id} ${field} must be one sentence of 40–320 characters`);
+    }
+    if (value.includes("\n") || !value.endsWith(".")) {
+      fail(`${tool.id} ${field} must be a single sentence ending with a period`);
+    }
+    const body = value.slice(0, -1).replace(/\d+(?:\.\d+)+/g, "");
+    if (/[.!?]/.test(body)) {
+      fail(`${tool.id} ${field} must be one sentence`);
+    }
+  }
   if (tool.featuredPaid && !tool.featured) {
     fail(`${tool.id} featuredPaid requires featured`);
   }

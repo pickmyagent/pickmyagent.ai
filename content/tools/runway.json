@@ -38,6 +38,8 @@
     "A confirmed free plan from this check",
     "In-game NPC dialogue"
   ],
+  "strength": "The pricing page lists video generation and editing from $12 per month.",
+  "weakness": "A free tier was not clearly shown on that page, so it stays unconfirmed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

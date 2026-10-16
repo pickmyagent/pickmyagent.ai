@@ -19,6 +19,8 @@
   "pricingNotes": null,
   "openSource": false,
   "repoUrl": null,
+  "strength": "The free plan includes trimming, transitions, and some media-library assets for captioned social video.",
+  "weakness": "The Max plan is $24.99 per month, and it does not clip a live Twitch channel automatically.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",

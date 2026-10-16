@@ -37,6 +37,8 @@
     "A confirmed price or free tier from this check",
     "Workflow automation outside a game"
   ],
+  "strength": "The site describes conversational characters that talk with the player inside a game.",
+  "weakness": "The pricing page did not return a readable price or free-tier amount in this check.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

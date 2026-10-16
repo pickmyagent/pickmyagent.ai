@@ -41,6 +41,8 @@
     "Jobs that only need an HTTP search API",
     "A no-code hosted agent with no local setup"
   ],
+  "strength": "We imported browser-use 0.13.11, which is built for agents that open pages, click, and type.",
+  "weakness": "You bring your own browser and model, and the docs bill cloud stealth browsers separately from the library.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,
   "checkedAt": "2026-10-15T18:31:00-04:00",

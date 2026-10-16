@@ -23,6 +23,19 @@ for (const query of QUERIES) {
   });
 }
 
+test("every tool has one strength and one weakness", () => {
+  assert.equal(catalog.tools.length, 45);
+  for (const tool of catalog.tools) {
+    for (const field of ["strength", "weakness"] as const) {
+      const value = tool[field];
+      assert.equal(typeof value, "string", tool.id);
+      assert.ok(value.endsWith("."), `${tool.id} ${field}`);
+      const body = value.slice(0, -1).replace(/\d+(?:\.\d+)+/g, "");
+      assert.equal(/[.!?]/.test(body), false, `${tool.id} ${field} is more than one sentence`);
+    }
+  }
+});
+
 test("twitch highlight query ranks stream clip tools", () => {
   const ranked = rankCatalogQuery(
     "Create a highlight reel from my twitch streams",

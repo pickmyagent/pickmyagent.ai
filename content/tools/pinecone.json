@@ -37,6 +37,8 @@
     "A confirmed free tier from this check",
     "Web search or page crawling \u2014 different tools"
   ],
+  "strength": "Starter is free for hosted vector search, and Builder is $20 per month with a 3-week trial.",
+  "weakness": "Builder is $20 per month after the trial, and the free Starter limits were not spelled out on the page we parsed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

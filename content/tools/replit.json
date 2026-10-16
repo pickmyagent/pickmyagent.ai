@@ -38,6 +38,8 @@
     "Anyone relying on this card as a completed check",
     "A self-hosted agent framework"
   ],
+  "strength": "The recorded free plan includes up to 30 hours of chat and 60 projects in the browser IDE.",
+  "weakness": "Free chat stops at 30 hours and 60 projects, and Core starts at $20 per month.",
   "smokeStatus": "untested",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

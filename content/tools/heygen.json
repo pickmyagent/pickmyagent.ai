@@ -40,6 +40,8 @@
     "Gameplay capture or VOD clipping",
     "A local open-source editor"
   ],
+  "strength": "The free plan includes 3 avatar videos per month, up to 1 minute each.",
+  "weakness": "Free videos are capped at one minute, and the next plan starts at $29 per month.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

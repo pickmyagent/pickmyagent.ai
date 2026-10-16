@@ -95,6 +95,8 @@
         "A frequently updated hosted product",
         "Anyone who needs a 2026 release cadence — we did not find one"
       ],
+      "strength": "We imported autogen-agentchat 0.7.5 locally, and the library is open source with no product paywall.",
+      "weakness": "The newest Python release we found is dated September 30, 2025, older than the peers we checked.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -177,6 +179,8 @@
         "A tiny script where a smaller library is enough",
         "A hands-on install — we did not run one"
       ],
+      "strength": "The open-source repo is the free path, and a platform beta release was published on October 14, 2026.",
+      "weakness": "The hosted plan we checked starts at $50 per month after a 7-day trial, so it is not a free product.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -249,6 +253,8 @@
         "A published self-serve price",
         "A docs-complete install guide — docs URL is the product site"
       ],
+      "strength": "The product page describes an NPC engine with SDKs for game characters.",
+      "weakness": "No public price grid was on the pages we checked, so the cost has to be confirmed with the vendor.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -318,6 +324,8 @@
         "Jobs that only need an HTTP search API",
         "A no-code hosted agent with no local setup"
       ],
+      "strength": "We imported browser-use 0.13.11, which is built for agents that open pages, click, and type.",
+      "weakness": "You bring your own browser and model, and the docs bill cloud stealth browsers separately from the library.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -375,6 +383,8 @@
       "pricingNotes": null,
       "openSource": false,
       "repoUrl": null,
+      "strength": "The free plan includes templates and basic editing for YouTube, TikTok, and Reels.",
+      "weakness": "Pro is $19.99 per month, and this is an editor rather than a tool that clips a connected Twitch channel.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
@@ -441,6 +451,8 @@
       "pricingNotes": null,
       "openSource": false,
       "repoUrl": null,
+      "strength": "The free plan includes trimming, transitions, and some media-library assets for captioned social video.",
+      "weakness": "The Max plan is $24.99 per month, and it does not clip a live Twitch channel automatically.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
@@ -530,6 +542,8 @@
         "A self-hosted open-source agent runtime",
         "Anyone who needs a local install from this check"
       ],
+      "strength": "There is a free plan, and the paid plan we recorded starts at $20 per month, with the API billed separately.",
+      "weakness": "Claude is a hosted product and API, not a self-hosted open-source agent runtime.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -598,6 +612,8 @@
         "A single API you already call directly",
         "A local hands-on test — we did not run one"
       ],
+      "strength": "The Hobby plan includes 100,000 tool calls per month for connecting agents to third-party apps.",
+      "weakness": "The next plan starts at $29 per month once you need more than the Hobby tool-call allotment.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -671,6 +687,8 @@
         "A hosted IDE with a published price grid",
         "A confirmed cloud plan — the pricing URL 404’d"
       ],
+      "strength": "Continue is an open-source coding agent you install in the IDE you already use.",
+      "weakness": "The Continue pricing page returned HTTP 404 on our check, so a public price grid was not confirmed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -744,6 +762,8 @@
         "A confirmed price or free tier from this check",
         "Workflow automation outside a game"
       ],
+      "strength": "The site describes conversational characters that talk with the player inside a game.",
+      "weakness": "The pricing page did not return a readable price or free-tier amount in this check.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -816,6 +836,8 @@
         "A single chat box with no workflow",
         "Teams that only want a closed SaaS and will not touch Python"
       ],
+      "strength": "We imported crewai 1.15.28, an open-source framework that splits a job across role-based agents.",
+      "weakness": "The cloud free plan includes 50 workflow executions per month, and paid use above that is custom Enterprise pricing.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -897,6 +919,8 @@
         "A headless library you import from Python",
         "A hands-on install check — we did not run one"
       ],
+      "strength": "The free plan includes limited agent and chat requests in a desktop IDE that can edit the repo.",
+      "weakness": "The free plan caps agent and chat requests, and the pricing page we fetched did not state a clear lowest monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -965,6 +989,8 @@
         "Generating a character voice from scratch as the main job",
         "In-game agents"
       ],
+      "strength": "You edit video and audio by editing the transcript, and the free plan includes 60 minutes of media per month.",
+      "weakness": "Paid samples on the page ran from about $16 to $65, so a single monthly starting price was not clear.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1035,6 +1061,8 @@
         "A small Python script with no surrounding app",
         "Hands-on proof from us — this one is docs checked only"
       ],
+      "strength": "The pricing page includes a self-hosted community edition, and the cloud free plan includes 200 message credits.",
+      "weakness": "The cloud free plan stops at 200 message credits, and the page we checked did not list a monthly starting price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1085,6 +1113,8 @@
       "pricingNotes": null,
       "openSource": false,
       "repoUrl": null,
+      "strength": "It connects a Twitch, YouTube, or Kick channel and returns vertical highlight clips for Shorts, Reels, and TikTok.",
+      "weakness": "The pricing path we opened redirected to the homepage and did not list a monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
@@ -1170,6 +1200,8 @@
         "A confirmed free-tier claim from this check",
         "Image or 3D generation"
       ],
+      "strength": "The free plan includes 10,000 credits per month for voice and audio, and Starter is $6 per month.",
+      "weakness": "It generates voice and audio, so it does not cut video into highlight clips.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1243,6 +1275,8 @@
         "Interactive browser tasks such as clicking and login flows",
         "A general web-search API — that is a different job"
       ],
+      "strength": "The free cloud plan includes 1,000 credits per month to turn pages into markdown, and the repo is open source.",
+      "weakness": "Paid cloud samples on the page included about $16 and $75, and a monthly starting price was not confirmed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1317,6 +1351,8 @@
         "A confirmed free hosted plan — we could not verify one",
         "Code-first agent libraries, if that is all you need"
       ],
+      "strength": "The open-source npm package flowise 3.1.4 is a low-code builder you can self-host.",
+      "weakness": "The pricing page came back too thin to confirm a cloud free tier.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1391,6 +1427,8 @@
         "A team wiki or long-term knowledge base",
         "Game or stream production"
       ],
+      "strength": "The free plan covers meeting notes, and the paid plan starts at $14 per month.",
+      "weakness": "Free meeting history is limited, so a longer archive needs the paid plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1457,6 +1495,8 @@
         "Gameplay capture or VOD clipping",
         "A local open-source editor"
       ],
+      "strength": "The free plan includes 3 avatar videos per month, up to 1 minute each.",
+      "weakness": "Free videos are capped at one minute, and the next plan starts at $29 per month.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1523,6 +1563,8 @@
         "A local Python library we smoke-tested — we did not",
         "Image or 3D asset generation"
       ],
+      "strength": "The On-Demand plan is $0 to start, then you pay as you go for game character dialogue.",
+      "weakness": "There is no flat monthly starting price, because usage is pay as you go after the $0 plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1568,6 +1610,8 @@
       "pricingNotes": null,
       "openSource": false,
       "repoUrl": null,
+      "strength": "The free browser plan includes 10 credits for trimming, captions, and resizing video.",
+      "weakness": "Free exports are watermarked, limited to 4 minutes at 720p, with 5 GB of storage, and a Pro monthly price was not clearly listed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
@@ -1656,6 +1700,8 @@
         "People who want only a visual builder",
         "A finished consumer chat product"
       ],
+      "strength": "We imported langchain 1.4.6, including create_agent, for composing tool-calling workflows in code.",
+      "weakness": "LangSmith's developer plan includes 5,000 base traces per month before usage billing, and Plus is $39 per seat per month.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1737,6 +1783,8 @@
         "A finished consumer chat app",
         "Anyone who needs a confirmed free cloud tier from this check"
       ],
+      "strength": "We imported llama-index-core 0.14.25, and the cloud free plan includes 10,000 credits.",
+      "weakness": "Cloud Starter is $50 per month after the 10,000 free credits.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1816,6 +1864,8 @@
         "Code-first agent frameworks",
         "Self-hosting the automation engine"
       ],
+      "strength": "The official pricing FAQ describes a free plan with 1,000 credits per month for visual automations.",
+      "weakness": "The pricing page itself returned HTTP 403, so the paid Core, Pro, and Teams amounts were not confirmed from that page.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1884,6 +1934,8 @@
         "A full research chat product",
         "A confirmed free cloud allotment — re-read the pricing page"
       ],
+      "strength": "We imported mem0ai 2.2.1 locally, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
+      "weakness": "The paid plan starts at $19 per month once you pass those monthly request limits.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1963,6 +2015,8 @@
         "Final production modeling without an artist pass",
         "Voice, video, or NPC logic"
       ],
+      "strength": "The pricing page shows a $0 plan and says no credit card is needed to try text-to-3D and image-to-3D.",
+      "weakness": "The paid monthly price was shown as animated digits, so a starting price was not confirmed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2030,6 +2084,8 @@
         "A free tier — the official comparison we read does not list one",
         "3D models, voice, or video editing"
       ],
+      "strength": "The plan comparison we read lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month.",
+      "weakness": "That official plan comparison lists no free plan, so every plan we read is a paid subscription.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2099,6 +2155,8 @@
         "A standalone art or voice tool",
         "Deep public docs — the docs path 404’d in this check"
       ],
+      "strength": "The homepage describes memory for game NPCs that need to remember the player.",
+      "weakness": "The MistScale docs URL returned 404, and we did not find a separate pricing page.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2164,6 +2222,8 @@
         "A self-serve price comparison",
         "A smoke-tested install"
       ],
+      "strength": "The homepage loaded and describes game AI tools for teams checking the current product.",
+      "weakness": "The /pricing path returned HTTP 404, so there is no public price to compare.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2232,6 +2292,8 @@
         "A one-import Python agent library",
         "A permanent free cloud plan — we did not find one"
       ],
+      "strength": "Community Edition is a free self-host option for multi-step workflows across the apps you already use.",
+      "weakness": "Cloud Starter was listed at 20 euros per month on annual billing, with a card-free trial rather than a permanent free cloud plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2308,6 +2370,8 @@
         "Local-only notes with no account",
         "A dedicated meeting bot — see Granola for that job"
       ],
+      "strength": "The free workspace plan includes a trial of Notion AI, and the next plan starts at $10 per month.",
+      "weakness": "Notion AI on the free plan is a trial, not a confirmed ongoing allotment.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2374,6 +2438,8 @@
         "A five-minute SaaS signup with a public price grid",
         "Discord bots or non-game chat"
       ],
+      "strength": "The developer page describes downloads and plugins for in-game characters on NVIDIA's stack.",
+      "weakness": "It is an SDK download rather than a self-serve subscription with a public price grid.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2440,6 +2506,8 @@
         "Hosted meeting transcription",
         "A multiplayer wiki with no local files"
       ],
+      "strength": "The official pricing page says the app is free without limits and does not require a sign-up.",
+      "weakness": "Sync and Publish are separate paid add-ons, so device sync and a public site are not included with the free app.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2504,6 +2572,8 @@
         "A confirmed forever-free plan from this check",
         "Generating the original footage"
       ],
+      "strength": "The free plan includes 60 credits per month for cutting a long video into short clips.",
+      "weakness": "Free clips carry a watermark and stop being exportable after 3 days.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2567,6 +2637,8 @@
         "Anyone treating this card as a finished verification",
         "A self-hosted crawler or vector database"
       ],
+      "strength": "The docs describe a web-research product, with API pricing written up on the official docs site.",
+      "weakness": "The API pricing page we could read did not state a free-tier amount or a monthly starting price.",
       "smokeStatus": "untested",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2615,6 +2687,8 @@
       "pricingNotes": null,
       "openSource": false,
       "repoUrl": null,
+      "strength": "Starter is $10 per month for 900 credits, and Video Studio covers a short clip up to a 30-second multi-shot video.",
+      "weakness": "The free plan lists 0 credits per month and no commercial license, so extra use is credit packs.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
@@ -2700,6 +2774,8 @@
         "A confirmed free tier from this check",
         "Web search or page crawling — different tools"
       ],
+      "strength": "Starter is free for hosted vector search, and Builder is $20 per month with a 3-week trial.",
+      "weakness": "Builder is $20 per month after the trial, and the free Starter limits were not spelled out on the page we parsed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2765,6 +2841,8 @@
         "Anyone relying on this card as a completed check",
         "A self-hosted agent framework"
       ],
+      "strength": "The recorded free plan includes up to 30 hours of chat and 60 projects in the browser IDE.",
+      "weakness": "Free chat stops at 30 hours and 60 projects, and Core starts at $20 per month.",
       "smokeStatus": "untested",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2832,6 +2910,8 @@
         "A confirmed free plan from this check",
         "In-game NPC dialogue"
       ],
+      "strength": "The pricing page lists video generation and editing from $12 per month.",
+      "weakness": "A free tier was not clearly shown on that page, so it stays unconfirmed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2899,6 +2979,8 @@
         "3D mesh generation — see Meshy for that job",
         "A hands-on generation test — we did not run one"
       ],
+      "strength": "The free plan includes 50 credits per day for game art, and the paid plan starts at $15 per month.",
+      "weakness": "It generates images and style sets, not 3D meshes.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2942,6 +3024,8 @@
       "pricingNotes": null,
       "openSource": false,
       "repoUrl": null,
+      "strength": "It reframes Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks.",
+      "weakness": "It does not find the highlight inside a full VOD by itself, and the pricing page did not list a monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
@@ -3029,6 +3113,8 @@
         "In-engine NPCs inside Unity or Unreal",
         "A dedicated pricing page — that URL 404’d"
       ],
+      "strength": "The homepage describes an AI game master for Discord, including a play path that uses an AI subscription you already have.",
+      "weakness": "That play path still depends on an AI subscription you already have, /pricing returned 404, and a $49.99 homepage figure was not confirmed as a monthly plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -3098,6 +3184,8 @@
         "Crawling your own site into a corpus",
         "Interactive clicking and logged-in browsing"
       ],
+      "strength": "The free plan includes 1,000 API credits per month for agent web search.",
+      "weakness": "The next plan starts at $30 per month, and the API returns search results rather than clicking through a logged-in site.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -3162,6 +3250,8 @@
         "Self-hosted or offline workflows",
         "A confirmed free-tier claim from this check"
       ],
+      "strength": "The free plan includes 100 tasks per month for connecting hosted apps without running a server.",
+      "weakness": "Professional starts at $19.99 per month, and the workflows run on Zapier's cloud rather than a server you host.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",

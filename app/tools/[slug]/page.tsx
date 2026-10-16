@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Prose } from "@/components/prose";
 import { ToolCard } from "@/components/tool-card";
 import { ToolPricing } from "@/components/tool-pricing";
+import { ToolTradeoffs } from "@/components/tool-tradeoffs";
 import { getCategories, getSite, getTool, getTools, getUseCases } from "@/lib/catalog";
 import { formatDate } from "@/lib/format";
 import { breadcrumbLd, softwareLd } from "@/lib/jsonld";
@@ -94,6 +95,12 @@ export default async function ToolPage({
             Tool
           </p>
           <h1 className="mt-2 text-4xl font-semibold tracking-tight">{tool.name}</h1>
+          <div className="mt-5 max-w-xl border border-line bg-panel p-4">
+            <ToolPricing tool={tool} />
+            <div className="mt-3 border-t border-line pt-3">
+              <ToolTradeoffs tool={tool} />
+            </div>
+          </div>
           <div className="mt-4">
             <ToolBadges tool={tool} recentReleaseSince={site.recentReleaseSince} />
           </div>
@@ -209,9 +216,6 @@ export default async function ToolPage({
           <h2 className="font-mono text-xs tracking-[0.16em] text-gold uppercase">
             Facts from the check
           </h2>
-          <div className="mt-3">
-            <ToolPricing tool={tool} />
-          </div>
           <dl className="mt-2">
             <Fact term="Pricing model">
               {tool.pricingModel.length === 0

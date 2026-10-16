@@ -40,6 +40,8 @@
     "A team wiki or long-term knowledge base",
     "Game or stream production"
   ],
+  "strength": "The free plan covers meeting notes, and the paid plan starts at $14 per month.",
+  "weakness": "Free meeting history is limited, so a longer archive needs the paid plan.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

@@ -19,6 +19,8 @@
   "pricingNotes": null,
   "openSource": false,
   "repoUrl": null,
+  "strength": "The free plan includes templates and basic editing for YouTube, TikTok, and Reels.",
+  "weakness": "Pro is $19.99 per month, and this is an editor rather than a tool that clips a connected Twitch channel.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",

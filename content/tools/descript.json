@@ -41,6 +41,8 @@
     "Generating a character voice from scratch as the main job",
     "In-game agents"
   ],
+  "strength": "You edit video and audio by editing the transcript, and the free plan includes 60 minutes of media per month.",
+  "weakness": "Paid samples on the page ran from about $16 to $65, so a single monthly starting price was not clear.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
