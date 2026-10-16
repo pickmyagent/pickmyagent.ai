@@ -31,6 +31,11 @@ export default function TermsPage() {
           editorial notes, not scores.
         </p>
         <p>
+          Community posts belong to the person who wrote them. We can hide a
+          post that breaks the board rules. Do not post private information
+          about another person.
+        </p>
+        <p>
           Prices, free tiers, and release versions change. The tool page says
           when we checked. If a figure appears, it came from that check and can
           go stale.

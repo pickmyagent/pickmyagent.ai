@@ -22,6 +22,7 @@ export function GET() {
     `- [Categories](${site.url}/categories)`,
     `- [How we test](${site.url}/how-we-test)`,
     `- [About](${site.url}/about)`,
+    `- [Community](${site.url}/community)`,
     `- [New this week](${site.url}/new)`,
     "",
     "## Use cases",
