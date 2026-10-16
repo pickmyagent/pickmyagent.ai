@@ -33,5 +33,9 @@ test("twitch highlight query ranks stream clip tools", () => {
     names.some((name) => /eklipse|opus clip|streamladder/i.test(name)),
     `expected a clip tool, got ${names.join(", ")}`,
   );
+  assert.ok(
+    !names.some((name) => /elevenlabs/i.test(name)),
+    `voice tools should not rank for a highlight reel, got ${names.join(", ")}`,
+  );
   assert.equal(ranked.fallback, false);
 });

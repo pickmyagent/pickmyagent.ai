@@ -69,6 +69,8 @@ for (const group of SYNONYM_GROUPS) {
   for (const word of group) SYNONYMS.set(word, set);
 }
 
+const CLIP_TERMS = SYNONYMS.get("clip") ?? new Set<string>();
+
 export type RankedTool = {
   slug: string;
   name: string;
@@ -115,6 +117,15 @@ function words(text: string): string[] {
 
 export function queryTokens(query: string): string[] {
   return words(query).filter((token) => token.length > 1 && !STOPWORDS.has(token));
+}
+
+function hitsClipTerms(text: string, tokens: Set<string>): boolean {
+  if ([...tokens].some((token) => CLIP_TERMS.has(token))) return true;
+  const lower = text.toLowerCase();
+  for (const word of CLIP_TERMS) {
+    if (word.length >= 4 && lower.includes(word)) return true;
+  }
+  return false;
 }
 
 function points(text: string, tokens: Set<string>, terms: string[], exact: number, synonym: number): number {
@@ -207,7 +218,17 @@ export function rankCatalogQuery(
     };
   }
 
+  const queryWantsClips = terms.some((term) => CLIP_TERMS.has(term));
+
   for (const tool of indexedTools) {
+    const ownText = `${tool.name} ${tool.text}`;
+    const ownTokens = new Set([...tool.nameTokens, ...tool.tokens]);
+    // A highlight, clip, reel, or shorts query should not surface a voice tool
+    // that only shares a word like "streams".
+    if (queryWantsClips && !hitsClipTerms(ownText, ownTokens)) {
+      tool.score = 0;
+      continue;
+    }
     const caseText = indexedCases
       .filter((useCase) => tool.useCaseTags.some((tag) => useCase.matchTags.includes(tag)))
       .map((useCase) => useCase.text)

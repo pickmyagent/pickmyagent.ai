@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "About",
   description:
-    "PickMyAgent is an independent, use-case-first directory of AI tools and agents. No invented stats, testimonials, or rankings.",
+    "PickMyAgent takes the search off your plate and shows a short list of AI tools that can do the job, with pricing from the official page.",
   path: "/about",
 });
 
@@ -19,32 +19,36 @@ export default function AboutPage() {
           { name: "About", path: "/about" },
         ])}
       />
-      <PageHeader
-        eyebrow="About"
-        title="What PickMyAgent is"
-        lede="Tell us the job and we’ll recommend the few AI tools that actually fit, plus show you what’s new this week."
-      />
+      <PageHeader eyebrow="About" title="About PickMyAgent" />
       <div className="space-y-4 text-base leading-relaxed text-muted">
         <p>
-          PickMyAgent is a directory for people into AI, agents, tech, and
-          gaming. Pages start from a job — build a crew, code with an agent,
-          give that agent a browser, make game art, take meeting notes — and
-          show a short list.
+          There are thousands of AI tools, and new ones launch every week.
+          Finding the right one usually means hours of searching, sorting
+          through hype, and sometimes finding out the hard way that the new
+          tool you just paid for can’t do the job, or worse, just sucks at it!
         </p>
         <p>
-          It is independent. Listings are editorial. We do not publish star
-          ratings, testimonials, user counts, or “trusted by” lines. A
-          smoke-tested badge is only for a hands-on check, and the date of that
-          check is on the tool page.
+          PickMyAgent takes that off your plate. Tell us in our search bar what
+          you want to get done with AI, maybe turning your gaming streams into
+          highlight reels, automating everyday tasks, or making a short film,
+          and PickMyAgent will show you a short list of tools that can actually
+          do the job.
         </p>
         <p>
-          The catalog lives in this repository as JSON. There is no database
-          and no account system in this version. Submitting a tool does not
-          publish it, and there is no payment flow yet.
+          For every tool, we tell you what it’s good at, what it costs, and
+          whether there’s a free plan or trial, with a link to the official
+          pricing so you’re never surprised. No more wasted money on agents or
+          AI tools that don’t do what you need them to.
         </p>
         <p>
-          PickMyAgent is an independent directory. We may use affiliate links
-          later; if we do, we’ll disclose them. Paid placements will be marked.
+          When we say we’ve reviewed every tool ourselves, we mean it. Founder
+          David W. Bortz, in partnership with his AI agent of choice (we’ll keep
+          that a secret), painstakingly reviewed every tool searchable on
+          PickMyAgent.
+        </p>
+        <p>
+          No hype, no hour-long rabbit holes, no wasted subscriptions. Just the
+          right AI tool for the job, so you can get back to creating.
         </p>
       </div>
     </div>
