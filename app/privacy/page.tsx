@@ -33,6 +33,11 @@ export default function PrivacyPage() {
           address.
         </p>
         <p>
+          When the community board is connected, sign-in goes through Supabase
+          with Google or Discord, and the threads and replies you post are
+          stored there. Until the board is connected, the site has no accounts.
+        </p>
+        <p>
           The submit-a-tool form does not write to a database. If a public
           inbox is configured, the form opens your email app. Otherwise it
           copies the text to your clipboard. Do not include secrets in a

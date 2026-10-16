@@ -61,6 +61,12 @@ Optional environment variables, all public because the forms run in the browser:
 | --- | --- |
 | `NEXT_PUBLIC_NEWSLETTER_FORM_URL` | Beehiiv embed or subscribe URL. The home page and footer post the `email` field here. If unset, the signup is hidden. |
 | `NEXT_PUBLIC_SUBMIT_EMAIL` | Submit form opens a `mailto:` draft to this address |
+| `NEXT_PUBLIC_SUPABASE_URL` | Community board. If this or the anon key is unset, `/community` says Coming soon and the nav link is hidden. |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Public Supabase key for the community board. |
+| `SUPABASE_SERVICE_ROLE_KEY` | Server-only. Used to hide reported posts. Never expose it to the browser. |
+| `ADMIN_EMAILS` | Comma-separated emails that can hide posts. |
+
+Community setup is in [SETUP.md](SETUP.md). Stay on the Supabase free plan.
 
 Until the newsletter URL is set, the signup is not rendered. The submit form copies the text to the clipboard when no inbox is set. Nothing is auto-published.
 

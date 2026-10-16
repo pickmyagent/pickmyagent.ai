@@ -7,11 +7,13 @@
     "build": "node scripts/assemble-catalog.mjs && next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node scripts/assemble-catalog.mjs && node --experimental-strip-types --test tests/search.test.ts tests/seo.test.ts",
+    "test": "node scripts/assemble-catalog.mjs && node --experimental-strip-types --test tests/search.test.ts tests/seo.test.ts tests/community.test.ts",
     "catalog": "node scripts/assemble-catalog.mjs",
     "seed": "node scripts/seed-catalog.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.118.0",
     "next": "16.4.1",
     "react": "19.3.0",
     "react-dom": "19.3.0"
