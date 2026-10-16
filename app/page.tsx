@@ -48,7 +48,7 @@ export default function HomePage() {
         <p className="mt-4 text-lg leading-relaxed text-muted">
           PickMyAgent is a use-case-first directory. Tell us what you’re trying
           to do with AI, whether that’s creating clips for YouTube videos,
-          automating personal tasks, or even generating a full-length movie.
+          automating personal tasks, or even generating your own short film.
           PickMyAgent searches, gathers, and organizes the tools that can do the
           job, then helps you find the right AI tool and compare costs.
         </p>
