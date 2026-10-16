@@ -71,9 +71,10 @@ export default function HomePage() {
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-muted">
           PickMyAgent is a use-case-first directory. Tell us what you’re trying
-          to do — build an agent, ship game assets, automate a stream workflow —
-          and we’ll point you to a short list that fits, plus what’s new this
-          week.
+          to do with AI, whether that’s creating clips for YouTube videos,
+          automating personal tasks, or even generating a full-length movie.
+          PickMyAgent searches, gathers, and organizes the tools that can do the
+          job, then helps you find the right AI tool and compare costs.
         </p>
       </section>
 
