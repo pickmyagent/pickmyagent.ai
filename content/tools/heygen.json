@@ -26,7 +26,10 @@
   "pricingUrl": "https://www.heygen.com/pricing",
   "docsUrl": "https://docs.heygen.com/",
   "freeTier": true,
-  "freeTierNotes": "Pricing crawl includes $0/mo alongside $29/$49 /mo.",
+  "freeTierNotes": "3 videos per month, up to 1 minute each.",
+  "startingPrice": 29,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

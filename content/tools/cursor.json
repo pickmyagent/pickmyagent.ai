@@ -28,7 +28,10 @@
   "pricingUrl": "https://cursor.com/pricing",
   "docsUrl": "https://cursor.com/docs",
   "freeTier": true,
-  "freeTierNotes": "Pricing page shows $0 /mo tier alongside paid ($8/$30/$100/$200 /mo samples in crawl).",
+  "freeTierNotes": "Limited agent requests and limited chat requests.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
@@ -37,7 +40,7 @@
   ],
   "notIdealFor": [
     "A headless library you import from Python",
-    "A hands-on install check — we did not run one"
+    "A hands-on install check \u2014 we did not run one"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

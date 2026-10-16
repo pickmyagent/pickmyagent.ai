@@ -1,0 +1,65 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "creator-video-audio"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium"
+  ],
+  "pricingNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T19:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "kapwing",
+  "slug": "kapwing",
+  "name": "Kapwing",
+  "websiteUrl": "https://www.kapwing.com/",
+  "shortDescription": "Browser editor for trimming, captions, and resizing video into social clips.",
+  "longDescription": "Kapwing is an online video editor. Its pricing page lists a Free plan with 10 credits, a watermark, exports up to 4 minutes, 720p, and 5 GB of storage. A dollar amount for the lowest paid plan was not clearly tied to the Pro plan in the text we extracted, so the starting price stays unconfirmed. We did not create an account.",
+  "pricingUrl": "https://www.kapwing.com/pricing",
+  "docsUrl": "https://www.kapwing.com/help/add-captions/",
+  "freeTier": true,
+  "freeTierNotes": "10 credits. Watermark. Exports up to 4 minutes at 720p. 5 GB storage.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "bestFor": [
+    "Adding captions or resizing a video in the browser",
+    "Turning a longer video into a social clip"
+  ],
+  "notIdealFor": [
+    "A confirmed Pro price from this check",
+    "Connecting a Twitch channel and clipping the VOD automatically"
+  ],
+  "sources": [
+    "https://www.kapwing.com/",
+    "https://www.kapwing.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.kapwing.com/"
+  }
+}

@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.midjourney.com/",
   "affiliateUrl": null,
   "shortDescription": "Image generation. Official plans we read are paid subscriptions, with no free tier on the comparison.",
-  "longDescription": "Midjourney generates images. The homepage often returns HTTP 403 to automated clients; the plan comparison we could read lists Basic $10, Standard $30, Pro $60, and Mega $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article, not a guess — re-check the article before you quote them. We did not subscribe.",
+  "longDescription": "Midjourney generates images. The homepage often returns HTTP 403 to automated clients; the plan comparison we could read lists Basic $10, Standard $30, Pro $60, and Mega $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article, not a guess \u2014 re-check the article before you quote them. We did not subscribe.",
   "categories": [
     "creative-media"
   ],
@@ -25,8 +25,11 @@
   "pricingNotes": "CHANGED/NOTE: No free tier on official plan chart. Homepage midjourney.com HTTP 403 here.",
   "pricingUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
   "docsUrl": "https://docs.midjourney.com/",
-  "freeTier": false,
-  "freeTierNotes": "Official plan comparison: Basic $10, Standard $30, Pro $60, Mega $120 monthly — all subscriptions. No free plan listed. Docs homepage also 403 to crawler.",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
@@ -34,7 +37,7 @@
     "Game concept art exploration"
   ],
   "notIdealFor": [
-    "A free tier — the official comparison we read does not list one",
+    "A free tier \u2014 the official comparison we read does not list one",
     "3D models, voice, or video editing"
   ],
   "smokeStatus": "verified-docs-only",

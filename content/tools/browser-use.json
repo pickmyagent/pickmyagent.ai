@@ -24,10 +24,13 @@
     "usage"
   ],
   "pricingNotes": "Cloud stealth browsers billed separately per docs/marketing.",
-  "pricingUrl": "https://browser-use.com/",
+  "pricingUrl": "https://browser-use.com/pricing",
   "docsUrl": "https://docs.browser-use.com/",
   "freeTier": true,
-  "freeTierNotes": "Open-source Python agent; docs mention cloud browser pricing samples (e.g. $0.02 per browser-hour in earlier marketing fetch). Local OSS usable with your own browser/LLM keys.",
+  "freeTierNotes": "Pay as you go after a free start. No monthly subscription.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/browser-use/browser-use",
   "bestFor": [

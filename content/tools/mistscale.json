@@ -24,8 +24,11 @@
   "pricingNotes": "Dedicated pricing URL not found; pricing may be embedded on homepage.",
   "pricingUrl": "https://mistscale.com/",
   "docsUrl": "https://mistscale.com/",
-  "freeTier": true,
-  "freeTierNotes": "Homepage copy includes trying without a card / talking in minutes language in earlier research fetch; reconfirm on live homepage. Docs path /docs was 404 in one fetch.",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
@@ -34,7 +37,7 @@
   ],
   "notIdealFor": [
     "A standalone art or voice tool",
-    "Deep public docs — the docs path 404’d in this check"
+    "Deep public docs \u2014 the docs path 404\u2019d in this check"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

@@ -25,7 +25,10 @@
   "pricingUrl": "https://inworld.ai/pricing",
   "docsUrl": "https://docs.inworld.ai/",
   "freeTier": true,
-  "freeTierNotes": "Pricing crawl includes $0 among samples.",
+  "freeTierNotes": "On-Demand plan is $0, then pay as you go.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
@@ -33,7 +36,7 @@
     "Teams that want a hosted character stack and docs"
   ],
   "notIdealFor": [
-    "A local Python library we smoke-tested — we did not",
+    "A local Python library we smoke-tested \u2014 we did not",
     "Image or 3D asset generation"
   ],
   "smokeStatus": "verified-docs-only",

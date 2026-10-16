@@ -29,7 +29,10 @@
   "pricingUrl": "https://dify.ai/pricing",
   "docsUrl": "https://docs.dify.ai/",
   "freeTier": true,
-  "freeTierNotes": "Community Edition (self-host, open-source) referenced on pricing page. Cloud paid tiers also listed (samples included $590/$1590 in page text — verify current).",
+  "freeTierNotes": "200 message credits.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/langgenius/dify",
   "bestFor": [
@@ -38,7 +41,7 @@
   ],
   "notIdealFor": [
     "A small Python script with no surrounding app",
-    "Hands-on proof from us — this one is docs checked only"
+    "Hands-on proof from us \u2014 this one is docs checked only"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

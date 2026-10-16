@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.descript.com/",
   "affiliateUrl": null,
   "shortDescription": "Edit video and audio by editing the transcript. Pricing page included a free-to-start option.",
-  "longDescription": "Descript edits audio and video from the transcript. The pricing crawl included free-to-start or hobby and $0 language, with paid samples in a roughly $16–$65 range. Confirm current limits on the pricing page. We did not install the app.",
+  "longDescription": "Descript edits audio and video from the transcript. The pricing crawl included free-to-start or hobby and $0 language, with paid samples in a roughly $16\u2013$65 range. Confirm current limits on the pricing page. We did not install the app.",
   "categories": [
     "creative-media"
   ],
@@ -23,11 +23,14 @@
     "freemium",
     "subscription"
   ],
-  "pricingNotes": "Paid samples $16–$65 range in crawl.",
+  "pricingNotes": "Paid samples $16\u2013$65 range in crawl.",
   "pricingUrl": "https://www.descript.com/pricing",
   "docsUrl": "https://help.descript.com/",
   "freeTier": true,
-  "freeTierNotes": "Pricing crawl includes free to start / hobby / $0 language.",
+  "freeTierNotes": "60 minutes of media per month.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

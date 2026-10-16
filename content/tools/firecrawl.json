@@ -30,7 +30,10 @@
   "pricingUrl": "https://www.firecrawl.dev/pricing",
   "docsUrl": "https://docs.firecrawl.dev/",
   "freeTier": true,
-  "freeTierNotes": "Pricing crawl mentions free plan / hobby and $0 /mo sample.",
+  "freeTierNotes": "1,000 credits per month.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/mendableai/firecrawl",
   "bestFor": [
@@ -39,7 +42,7 @@
   ],
   "notIdealFor": [
     "Interactive browser tasks such as clicking and login flows",
-    "A general web-search API — that is a different job"
+    "A general web-search API \u2014 that is a different job"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

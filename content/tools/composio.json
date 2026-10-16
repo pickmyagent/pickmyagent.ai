@@ -27,7 +27,10 @@
   "pricingUrl": "https://composio.dev/pricing",
   "docsUrl": "https://docs.composio.dev/",
   "freeTier": true,
-  "freeTierNotes": "Pricing page crawl includes Hobby/$0/no credit card language.",
+  "freeTierNotes": "100,000 tool calls per month.",
+  "startingPrice": 29,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/ComposioHQ/composio",
   "bestFor": [
@@ -36,7 +39,7 @@
   ],
   "notIdealFor": [
     "A single API you already call directly",
-    "A local hands-on test — we did not run one"
+    "A local hands-on test \u2014 we did not run one"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

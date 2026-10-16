@@ -1,0 +1,67 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "creator-video-audio"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T19:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "pika",
+  "slug": "pika",
+  "name": "Pika",
+  "websiteUrl": "https://pika.art/",
+  "shortDescription": "Generates short videos from prompts, photos, or keyframes. Starter is $10/month.",
+  "longDescription": "Pika is a video generation product. Its site describes Video Studio for a short clip up to a 30-second multi-shot video. On October 16, 2026 the pricing page listed a Free plan with 0 credits per month (packs only, no commercial license) and Starter at $10 per month, billed monthly, with 900 credits. We did not create an account.",
+  "pricingUrl": "https://pika.art/pricing",
+  "docsUrl": "https://pika.art/faq",
+  "freeTier": true,
+  "freeTierNotes": "0 credits per month (packs only). No commercial license.",
+  "startingPrice": 10,
+  "freeTrial": null,
+  "bestFor": [
+    "Generating a short video from a prompt or a photo",
+    "Creators comparing hosted text-to-video tools"
+  ],
+  "notIdealFor": [
+    "Clipping an existing Twitch stream",
+    "A full-length movie at a confirmed runtime"
+  ],
+  "sources": [
+    "https://pika.art/",
+    "https://pika.art/pricing",
+    "https://pika.art/faq"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://pika.art/"
+  }
+}

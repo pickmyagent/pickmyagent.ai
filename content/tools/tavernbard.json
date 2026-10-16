@@ -25,8 +25,11 @@
   "pricingNotes": "/pricing returned 404; pricing appears on homepage.",
   "pricingUrl": "https://www.tavernbard.com/",
   "docsUrl": "https://www.tavernbard.com/",
-  "freeTier": true,
-  "freeTierNotes": "Homepage describes free play path using your own AI subscription; price sample $49.99 also appeared in crawl (likely paid plan). Confirm exact free vs paid on site.",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
@@ -35,7 +38,7 @@
   ],
   "notIdealFor": [
     "In-engine NPCs inside Unity or Unreal",
-    "A dedicated pricing page — that URL 404’d"
+    "A dedicated pricing page \u2014 that URL 404\u2019d"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

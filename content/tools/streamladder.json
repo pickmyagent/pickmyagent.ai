@@ -1,0 +1,63 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "creator-video-audio"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [],
+  "pricingNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T19:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "streamladder",
+  "slug": "streamladder",
+  "name": "StreamLadder",
+  "websiteUrl": "https://www.streamladder.com/",
+  "shortDescription": "Edits Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks.",
+  "longDescription": "StreamLadder's site says it imports clips from Twitch, YouTube, or Kick and turns horizontal stream footage into vertical short-form video, with layouts for gameplay and a facecam. The pricing page redirected to an app screen that did not list prices without JavaScript. We did not create an account.",
+  "pricingUrl": "https://www.streamladder.com/pricing",
+  "docsUrl": null,
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "bestFor": [
+    "Reframing a horizontal stream clip for Shorts or Reels",
+    "Streamers posting the same clip to TikTok, Reels, and Shorts"
+  ],
+  "notIdealFor": [
+    "Finding the highlight inside a full VOD on its own",
+    "A confirmed monthly price from this check"
+  ],
+  "sources": [
+    "https://www.streamladder.com/",
+    "https://www.streamladder.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.streamladder.com/"
+  }
+}

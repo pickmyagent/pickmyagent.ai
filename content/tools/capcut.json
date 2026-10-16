@@ -1,0 +1,66 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "creator-video-audio"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T19:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "capcut",
+  "slug": "capcut",
+  "name": "CapCut",
+  "websiteUrl": "https://www.capcut.com/",
+  "shortDescription": "Video editor for YouTube, TikTok, and Reels. Pricing lists Free and Pro at $19.99/month.",
+  "longDescription": "CapCut is a video editor for short-form and social video. On October 16, 2026 the pricing page listed Free at $0, with free templates and basic editing tools, and Pro at $19.99 per month. We did not install the app.",
+  "pricingUrl": "https://www.capcut.com/pricing",
+  "docsUrl": null,
+  "freeTier": true,
+  "freeTierNotes": "Free templates and basic editing tools.",
+  "startingPrice": 19.99,
+  "freeTrial": null,
+  "bestFor": [
+    "Editing a YouTube video or a short for TikTok and Reels",
+    "Creators who want templates and captions in one editor"
+  ],
+  "notIdealFor": [
+    "Clipping a Twitch VOD automatically from a connected channel",
+    "A local open-source editor"
+  ],
+  "sources": [
+    "https://www.capcut.com/",
+    "https://www.capcut.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.capcut.com/"
+  }
+}

@@ -25,11 +25,14 @@
   "pricingUrl": "https://modl.ai/",
   "docsUrl": "https://modl.ai/",
   "freeTier": null,
-  "freeTierNotes": "Homepage 200; /pricing 404. Free tier unconfirmed.",
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
-    "Game teams looking up modl.ai’s current product page"
+    "Game teams looking up modl.ai\u2019s current product page"
   ],
   "notIdealFor": [
     "A self-serve price comparison",

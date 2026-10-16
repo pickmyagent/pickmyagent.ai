@@ -27,7 +27,10 @@
   "pricingUrl": "https://mem0.ai/pricing",
   "docsUrl": "https://docs.mem0.ai/",
   "freeTier": true,
-  "freeTierNotes": "OSS package mem0ai installs freely. Cloud pricing page HTTP 200; free SaaS tier details not cleanly parsed — OSS path confirmed via install.",
+  "freeTierNotes": "10,000 add requests and 1,000 retrieval requests per month.",
+  "startingPrice": 19,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/mem0ai/mem0",
   "bestFor": [
@@ -36,7 +39,7 @@
   ],
   "notIdealFor": [
     "A full research chat product",
-    "A confirmed free cloud allotment — re-read the pricing page"
+    "A confirmed free cloud allotment \u2014 re-read the pricing page"
   ],
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,

@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.notion.com/",
   "affiliateUrl": null,
   "shortDescription": "Docs, wikis, and agents in a team workspace. Pricing page included a $0 plan.",
-  "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. The pricing crawl included $0 alongside $10 and $20. AI features may sit on paid plans — confirm which agent features are on Free. We did not create a workspace.",
+  "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. The pricing crawl included $0 alongside $10 and $20. AI features may sit on paid plans \u2014 confirm which agent features are on Free. We did not create a workspace.",
   "categories": [
     "knowledge"
   ],
@@ -22,11 +22,14 @@
     "freemium",
     "subscription"
   ],
-  "pricingNotes": "AI features may require paid Notion plans — confirm which AI/agent features are on Free.",
+  "pricingNotes": "AI features may require paid Notion plans \u2014 confirm which AI/agent features are on Free.",
   "pricingUrl": "https://www.notion.com/pricing",
   "docsUrl": "https://developers.notion.com/",
   "freeTier": true,
-  "freeTierNotes": "Pricing crawl includes $0 alongside $10/$20.",
+  "freeTierNotes": "Includes a trial of Notion AI.",
+  "startingPrice": 10,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
@@ -35,7 +38,7 @@
   ],
   "notIdealFor": [
     "Local-only notes with no account",
-    "A dedicated meeting bot — see Granola for that job"
+    "A dedicated meeting bot \u2014 see Granola for that job"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

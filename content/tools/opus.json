@@ -4,8 +4,8 @@
   "name": "Opus Clip",
   "websiteUrl": "https://www.opus.pro/",
   "affiliateUrl": null,
-  "shortDescription": "Cuts long videos into short clips. A lasting free plan was not clearly separated from starter pricing.",
-  "longDescription": "Opus Clip turns long videos into short clips. The pricing crawl mentioned starter, no-credit-card language, and $15 samples. A lasting free plan was not clearly separated from a trial or starter tier, so the free tier stays unconfirmed. We did not upload a video.",
+  "shortDescription": "Cuts long videos into short clips. The free plan lists 60 credits per month.",
+  "longDescription": "Opus Clip turns long videos into short clips. On October 16, 2026 the pricing page listed a free plan at $0 with 60 credits per month, a watermark, and clips that stop being exportable after 3 days. Starter was $15 per month. We did not upload a video.",
   "categories": [
     "creative-media"
   ],
@@ -22,8 +22,11 @@
   "pricingNotes": "Confirm free trial vs free plan on opus.pro/pricing.",
   "pricingUrl": "https://www.opus.pro/pricing",
   "docsUrl": "https://help.opus.pro/",
-  "freeTier": null,
-  "freeTierNotes": "Pricing crawl mentions starter / no credit card and $15 samples — free forever tier not clearly confirmed.",
+  "freeTier": true,
+  "freeTierNotes": "60 credits per month. Watermark. Clips stop being exportable after 3 days.",
+  "startingPrice": 15,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

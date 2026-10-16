@@ -1,0 +1,64 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "creator-video-audio"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [],
+  "pricingNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T19:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "eklipse",
+  "slug": "eklipse",
+  "name": "Eklipse",
+  "websiteUrl": "https://eklipse.gg/",
+  "shortDescription": "Finds highlight clips from Twitch, YouTube, and Kick streams and exports them vertical.",
+  "longDescription": "Eklipse says it connects a Twitch, YouTube, or Kick channel, watches the saved VOD, and returns highlight clips sized for TikTok, Reels, and Shorts. The pricing path we opened redirected to the homepage and did not list a monthly price. We did not connect an account.",
+  "pricingUrl": "https://eklipse.gg/pricing",
+  "docsUrl": "https://eklipse.gg/help/clip-twitch-vod-after-stream/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "bestFor": [
+    "Turning a Twitch or Kick stream into highlight clips",
+    "Vertical clips for Shorts, Reels, and TikTok"
+  ],
+  "notIdealFor": [
+    "Generating the original footage",
+    "A confirmed monthly price from this check"
+  ],
+  "sources": [
+    "https://eklipse.gg/",
+    "https://eklipse.gg/pricing",
+    "https://eklipse.gg/help/clip-twitch-vod-after-stream/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://eklipse.gg/"
+  }
+}

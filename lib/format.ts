@@ -22,9 +22,3 @@ export function formatDate(iso: string): string {
   return `${monthName} ${Number(date)}, ${year}`;
 }
 
-export function matchesQuery(haystack: string, query: string): boolean {
-  const terms = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  if (terms.length === 0) return true;
-  const hay = haystack.toLowerCase();
-  return terms.every((term) => hay.includes(term));
-}

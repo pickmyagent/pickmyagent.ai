@@ -26,7 +26,10 @@
   "pricingUrl": "https://www.granola.ai/pricing",
   "docsUrl": "https://www.granola.ai/",
   "freeTier": true,
-  "freeTierNotes": "Pricing crawl includes $0 alongside $14/$35.",
+  "freeTierNotes": "Limited meeting history.",
+  "startingPrice": 14,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

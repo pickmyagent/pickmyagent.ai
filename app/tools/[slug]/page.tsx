@@ -7,11 +7,11 @@ import { ExternalLink } from "@/components/external-link";
 import { JsonLd } from "@/components/json-ld";
 import { Prose } from "@/components/prose";
 import { ToolCard } from "@/components/tool-card";
+import { ToolPricing } from "@/components/tool-pricing";
 import { getCategories, getSite, getTool, getTools, getUseCases } from "@/lib/catalog";
 import { formatDate } from "@/lib/format";
 import { breadcrumbLd, softwareLd } from "@/lib/jsonld";
 import {
-  freeTierLabel,
   platformLabel,
   PRICING_LABELS,
   tagLabel,
@@ -209,14 +209,10 @@ export default async function ToolPage({
           <h2 className="font-mono text-xs tracking-[0.16em] text-gold uppercase">
             Facts from the check
           </h2>
+          <div className="mt-3">
+            <ToolPricing tool={tool} />
+          </div>
           <dl className="mt-2">
-            <Fact term="Free tier">{freeTierLabel(tool.freeTier)}</Fact>
-            {tool.freeTierNotes ? (
-              <Fact term="Free tier notes">{tool.freeTierNotes}</Fact>
-            ) : null}
-            {tool.pricingNotes ? (
-              <Fact term="Pricing notes">{tool.pricingNotes}</Fact>
-            ) : null}
             <Fact term="Pricing model">
               {tool.pricingModel.length === 0
                 ? "Not confirmed on this pass"

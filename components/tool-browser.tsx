@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { ToolCard } from "@/components/tool-card";
-import { matchesQuery } from "@/lib/format";
+import { textMatchesQuery } from "@/lib/search";
 import { PRICING_LABELS, TOOL_TYPE_LABELS } from "@/lib/labels";
 import { toolHaystack } from "@/lib/query";
 import type { PricingModel, SmokeStatus, Tool, ToolType, UseCase } from "@/lib/types";
@@ -37,7 +37,7 @@ export function ToolBrowser({
   const filtered = useMemo(() => {
     const selected = useCases.find((item) => item.slug === useCase);
     return tools.filter((tool) => {
-      if (!matchesQuery(`${toolHaystack(tool)} ${tool.name}`, query)) return false;
+      if (!textMatchesQuery(query, `${toolHaystack(tool)} ${tool.name}`)) return false;
       if (selected && !tool.useCaseTags.some((tag) => selected.matchTags.includes(tag))) {
         return false;
       }

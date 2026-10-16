@@ -5,7 +5,7 @@
   "websiteUrl": "https://n8n.io/",
   "affiliateUrl": null,
   "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan. Our local npm install failed.",
-  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. We tried `npm install n8n@2.43.6` and it failed in this environment (node-gyp / distutils). Registry, docs, and pricing were still checked, so the status stays docs checked.",
+  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud\u2019s Starter plan was listed at 20\u20ac/month on annual billing, with a card-free trial rather than a permanent free cloud tier. We tried `npm install n8n@2.43.6` and it failed in this environment (node-gyp / distutils). Registry, docs, and pricing were still checked, so the status stays docs checked.",
   "categories": [
     "workflow-automation"
   ],
@@ -26,8 +26,11 @@
   "pricingNotes": "Cloud Starter/Pro/Business/Enterprise paid. Community Edition is the free forever self-host option.",
   "pricingUrl": "https://n8n.io/pricing/",
   "docsUrl": "https://docs.n8n.io/",
-  "freeTier": true,
-  "freeTierNotes": "Community Edition self-hosted free (GitHub). n8n Cloud: free trial without card; paid Starter from 20€/mo billed annually (official pricing page). Not a permanent free cloud tier.",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/n8n-io/n8n",
   "bestFor": [
@@ -36,7 +39,7 @@
   ],
   "notIdealFor": [
     "A one-import Python agent library",
-    "A permanent free cloud plan — we did not find one"
+    "A permanent free cloud plan \u2014 we did not find one"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
