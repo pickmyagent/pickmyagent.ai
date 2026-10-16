@@ -1,14 +1,13 @@
 import type { MetadataRoute } from "next";
-import { getSite } from "@/lib/catalog";
+import { CANONICAL_ORIGIN } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
-  const site = getSite();
   return {
     rules: {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${site.url}/sitemap.xml`,
-    host: site.url,
+    sitemap: `${CANONICAL_ORIGIN}/sitemap.xml`,
+    host: CANONICAL_ORIGIN,
   };
 }

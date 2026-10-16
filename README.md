@@ -59,13 +59,12 @@ Optional environment variables, all public because the forms run in the browser:
 
 | Variable | Effect |
 | --- | --- |
-| `NEXT_PUBLIC_BUTTONDOWN_USERNAME` | Newsletter form posts to that Buttondown username |
-| `NEXT_PUBLIC_BEEHIIV_EMBED_URL` | Used when Buttondown is unset. Newsletter form posts the `email` field to this URL |
+| `NEXT_PUBLIC_NEWSLETTER_FORM_URL` | Beehiiv embed or subscribe URL. The home page and footer post the `email` field here. If unset, the signup is hidden. |
 | `NEXT_PUBLIC_SUBMIT_EMAIL` | Submit form opens a `mailto:` draft to this address |
 
-Until those are set, the newsletter form does not store the address, and the submit form copies the text to the clipboard. Nothing is auto-published.
+Until the newsletter URL is set, the signup is not rendered. The submit form copies the text to the clipboard when no inbox is set. Nothing is auto-published.
 
-Point `pickmyagent.ai` at the Vercel project after the domain is registered. Canonical URLs already use `https://pickmyagent.ai`.
+Point `www.pickmyagent.ai` at the Vercel project after the domain is registered. Canonical URLs use `https://www.pickmyagent.ai`.
 
 ## Checks
 
