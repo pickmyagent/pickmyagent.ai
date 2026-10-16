@@ -28,7 +28,7 @@ npm run dev
    - `creator-video-audio`
    - `meetings-knowledge`
 4. Put category slugs from `content/categories.json` in `categories`.
-5. Fill `bestFor`, `notIdealFor`, `pricingNotes`, and `freeTier` only from sources you actually opened. Use `freeTier: null` when a free tier is unconfirmed. `startingPrice` is the lowest paid plan in USD per month, `freeTrial` is the length written on the official pricing page, and `pricingCheckedAt` is the date that page was fetched. Leave each of those null when it was not on the page. Do not invent prices, ratings, testimonials, or user counts.
+5. Fill `bestFor`, `notIdealFor`, `strength`, `weakness`, `pricingNotes`, and `freeTier` only from sources you actually opened. `strength` and `weakness` are one sentence each, from the official docs, the pricing page, or the hands-on note. Use `freeTier: null` when a free tier is unconfirmed. `startingPrice` is the lowest paid plan in USD per month, `freeTrial` is the length written on the official pricing page, and `pricingCheckedAt` is the date that page was fetched. Leave each of those null when it was not on the page. Do not invent prices, ratings, testimonials, or user counts.
 6. Set the check fields together:
    - `smokeStatus: "tested-hands-on"` only after a local install or import with no account, no payment, and no model call. Then set `smokeTested: true`, `handsOn.performed: true`, and `checkedDate` (`YYYY-MM-DD`).
    - `smokeStatus: "verified-docs-only"` when the official site and docs or pricing pages were read, but there was no successful local hello-path. Set `smokeTested: false`. The site shows **Docs checked**.

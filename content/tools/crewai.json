@@ -43,6 +43,8 @@
     "A single chat box with no workflow",
     "Teams that only want a closed SaaS and will not touch Python"
   ],
+  "strength": "We imported crewai 1.15.28, an open-source framework that splits a job across role-based agents.",
+  "weakness": "The cloud free plan includes 50 workflow executions per month, and paid use above that is custom Enterprise pricing.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,
   "checkedAt": "2026-10-15T18:31:00-04:00",

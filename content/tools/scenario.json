@@ -40,6 +40,8 @@
     "3D mesh generation \u2014 see Meshy for that job",
     "A hands-on generation test \u2014 we did not run one"
   ],
+  "strength": "The free plan includes 50 credits per day for game art, and the paid plan starts at $15 per month.",
+  "weakness": "It generates images and style sets, not 3D meshes.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

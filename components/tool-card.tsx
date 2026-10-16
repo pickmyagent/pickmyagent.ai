@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ToolBadges } from "@/components/badges";
 import { ToolPricing } from "@/components/tool-pricing";
+import { ToolTradeoffs } from "@/components/tool-tradeoffs";
 import { formatDate } from "@/lib/format";
 import type { Tool } from "@/lib/types";
 
@@ -52,6 +53,9 @@ export function ToolCard({
       </Link>
       <div className="border-t border-line px-4 py-3">
         <ToolPricing tool={tool} />
+        <div className="mt-3 border-t border-line pt-3">
+          <ToolTradeoffs tool={tool} />
+        </div>
       </div>
     </article>
   );

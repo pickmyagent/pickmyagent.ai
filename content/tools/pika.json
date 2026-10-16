@@ -19,6 +19,8 @@
   "pricingNotes": null,
   "openSource": false,
   "repoUrl": null,
+  "strength": "Starter is $10 per month for 900 credits, and Video Studio covers a short clip up to a 30-second multi-shot video.",
+  "weakness": "The free plan lists 0 credits per month and no commercial license, so extra use is credit packs.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",

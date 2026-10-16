@@ -39,6 +39,8 @@
     "A five-minute SaaS signup with a public price grid",
     "Discord bots or non-game chat"
   ],
+  "strength": "The developer page describes downloads and plugins for in-game characters on NVIDIA's stack.",
+  "weakness": "It is an SDK download rather than a self-serve subscription with a public price grid.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

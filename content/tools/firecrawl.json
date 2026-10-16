@@ -44,6 +44,8 @@
     "Interactive browser tasks such as clicking and login flows",
     "A general web-search API \u2014 that is a different job"
   ],
+  "strength": "The free cloud plan includes 1,000 credits per month to turn pages into markdown, and the repo is open source.",
+  "weakness": "Paid cloud samples on the page included about $16 and $75, and a monthly starting price was not confirmed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

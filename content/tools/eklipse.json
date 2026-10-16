@@ -16,6 +16,8 @@
   "pricingNotes": null,
   "openSource": false,
   "repoUrl": null,
+  "strength": "It connects a Twitch, YouTube, or Kick channel and returns vertical highlight clips for Shorts, Reels, and TikTok.",
+  "weakness": "The pricing path we opened redirected to the homepage and did not list a monthly price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",

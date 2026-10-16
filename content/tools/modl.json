@@ -38,6 +38,8 @@
     "A self-serve price comparison",
     "A smoke-tested install"
   ],
+  "strength": "The homepage loaded and describes game AI tools for teams checking the current product.",
+  "weakness": "The /pricing path returned HTTP 404, so there is no public price to compare.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

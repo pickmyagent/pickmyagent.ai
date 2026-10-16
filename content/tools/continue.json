@@ -39,6 +39,8 @@
     "A hosted IDE with a published price grid",
     "A confirmed cloud plan \u2014 the pricing URL 404\u2019d"
   ],
+  "strength": "Continue is an open-source coding agent you install in the IDE you already use.",
+  "weakness": "The Continue pricing page returned HTTP 404 on our check, so a public price grid was not confirmed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

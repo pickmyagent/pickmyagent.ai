@@ -37,6 +37,8 @@
     "A confirmed forever-free plan from this check",
     "Generating the original footage"
   ],
+  "strength": "The free plan includes 60 credits per month for cutting a long video into short clips.",
+  "weakness": "Free clips carry a watermark and stop being exportable after 3 days.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

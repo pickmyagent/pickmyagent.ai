@@ -16,6 +16,8 @@
   "pricingNotes": null,
   "openSource": false,
   "repoUrl": null,
+  "strength": "It reframes Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks.",
+  "weakness": "It does not find the highlight inside a full VOD by itself, and the pricing page did not list a monthly price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",

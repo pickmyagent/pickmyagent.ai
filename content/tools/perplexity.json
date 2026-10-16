@@ -36,6 +36,8 @@
     "Anyone treating this card as a finished verification",
     "A self-hosted crawler or vector database"
   ],
+  "strength": "The docs describe a web-research product, with API pricing written up on the official docs site.",
+  "weakness": "The API pricing page we could read did not state a free-tier amount or a monthly starting price.",
   "smokeStatus": "untested",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

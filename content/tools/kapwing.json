@@ -18,6 +18,8 @@
   "pricingNotes": null,
   "openSource": false,
   "repoUrl": null,
+  "strength": "The free browser plan includes 10 credits for trimming, captions, and resizing video.",
+  "weakness": "Free exports are watermarked, limited to 4 minutes at 720p, with 5 GB of storage, and a Pro monthly price was not clearly listed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",

@@ -69,6 +69,10 @@ export type Tool = {
   repoUrl: string | null;
   bestFor: string[];
   notIdealFor: string[];
+  /** One sentence on what the tool is good at, from docs, pricing, or the hands-on note. */
+  strength: string;
+  /** One sentence on a real limitation, from docs, pricing, or the hands-on note. */
+  weakness: string;
   smokeStatus: SmokeStatus;
   smokeTested: boolean;
   checkedAt: string;
