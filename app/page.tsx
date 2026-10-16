@@ -67,7 +67,7 @@ export default function HomePage() {
           AI tools, sorted by the job
         </p>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
-          Find the AI agent (or tool) that fits the job.
+          Find the AI tool that fits the job.
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-muted">
           PickMyAgent is a use-case-first directory. Tell us what you’re trying
