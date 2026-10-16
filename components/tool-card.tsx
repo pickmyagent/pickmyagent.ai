@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ToolBadges } from "@/components/badges";
+import { ToolPricing } from "@/components/tool-pricing";
 import { formatDate } from "@/lib/format";
 import type { Tool } from "@/lib/types";
 
@@ -20,10 +21,10 @@ export function ToolCard({
   why?: string;
 }) {
   return (
-    <article className="h-full border border-line bg-panel">
+    <article className="flex h-full flex-col border border-line bg-panel">
       <Link
         href={`/tools/${tool.slug}`}
-        className="flex h-full flex-col p-4 no-underline hover:bg-panel-2"
+        className="flex flex-col p-4 no-underline hover:bg-panel-2"
       >
         <div className="flex items-start justify-between gap-3">
           <h3 className="text-lg font-semibold tracking-tight">{tool.name}</h3>
@@ -49,6 +50,9 @@ export function ToolCard({
           Checked {formatDate(tool.checkedDate)}
         </p>
       </Link>
+      <div className="border-t border-line px-4 py-3">
+        <ToolPricing tool={tool} />
+      </div>
     </article>
   );
 }

@@ -25,8 +25,11 @@
   "pricingNotes": "Credits billing unit as of Aug 27 (year not re-stated on snippet). Core/Pro/Teams paid.",
   "pricingUrl": "https://www.make.com/en/pricing",
   "docsUrl": "https://www.make.com/en/help",
-  "freeTier": true,
-  "freeTierNotes": "Official pricing FAQ states Free plan includes 1000 credits per month (and related storage). Direct HTML crawl sometimes 403; WebFetch of pricing page succeeded.",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

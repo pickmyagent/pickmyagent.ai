@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.anthropic.com/claude",
   "affiliateUrl": null,
   "shortDescription": "Anthropic Claude product and API for chat and coding. Docs checked; we did not sign up.",
-  "longDescription": "Claude is Anthropic’s model product, used for chat and coding. The URL we checked redirected toward the Claude product overview. The pricing page included a $0 option in the text we could read; API billing is separate. We did not create an account.",
+  "longDescription": "Claude is Anthropic\u2019s model product, used for chat and coding. The URL we checked redirected toward the Claude product overview. The pricing page included a $0 option in the text we could read; API billing is separate. We did not create an account.",
   "categories": [
     "coding-agents"
   ],
@@ -25,14 +25,17 @@
     "subscription"
   ],
   "pricingNotes": "Site redirects product overview to claude.com. API billed separately.",
-  "pricingUrl": "https://www.anthropic.com/pricing",
+  "pricingUrl": "https://claude.com/pricing",
   "docsUrl": "https://docs.claude.com/",
   "freeTier": true,
-  "freeTierNotes": "Anthropic pricing page includes $0 option in crawl text (Claude consumer/API tiers — confirm Free vs Pro on page).",
+  "freeTierNotes": null,
+  "startingPrice": 20,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
-    "Chat and coding help through Claude’s product or API",
+    "Chat and coding help through Claude\u2019s product or API",
     "Teams already comparing model providers"
   ],
   "notIdealFor": [

@@ -5,7 +5,7 @@
   "websiteUrl": "https://continue.dev/",
   "affiliateUrl": null,
   "shortDescription": "Open-source coding agent and IDE extension. The /pricing URL returned 404 on our check.",
-  "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. We checked the homepage, docs, and GitHub releases. continue.dev/pricing returned HTTP 404, so there is no separate pricing page in this listing — the open-source extension is the free path we could confirm. We did not install the extension.",
+  "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. We checked the homepage, docs, and GitHub releases. continue.dev/pricing returned HTTP 404, so there is no separate pricing page in this listing \u2014 the open-source extension is the free path we could confirm. We did not install the extension.",
   "categories": [
     "coding-agents"
   ],
@@ -24,8 +24,11 @@
   "pricingNotes": "Confirm any Continue cloud/team pricing on site; OSS install is IDE extension (not pip-tested here).",
   "pricingUrl": "https://www.continue.dev/",
   "docsUrl": "https://docs.continue.dev/",
-  "freeTier": true,
-  "freeTierNotes": "Open-source coding agent/extension (homepage). Dedicated /pricing returned 404 in this pass.",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/continuedev/continue",
   "bestFor": [
@@ -34,7 +37,7 @@
   ],
   "notIdealFor": [
     "A hosted IDE with a published price grid",
-    "A confirmed cloud plan — the pricing URL 404’d"
+    "A confirmed cloud plan \u2014 the pricing URL 404\u2019d"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

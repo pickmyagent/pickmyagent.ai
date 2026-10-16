@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { JobSearch, type SearchTool, type SearchUseCase } from "@/components/job-search";
+import { JobSearch } from "@/components/job-search";
 import { JsonLd } from "@/components/json-ld";
 import { StatusBadge } from "@/components/badges";
-import { getSite, getTools, getUseCases } from "@/lib/catalog";
+import { getCategories, getSite, getTools, getUseCases } from "@/lib/catalog";
 import { formatDate } from "@/lib/format";
 import { absoluteUrl, itemListLd, websiteLd } from "@/lib/jsonld";
 import { getNewsletterConfig } from "@/lib/newsletter";
-import { groupUseCase, releasesSince, toolHaystack } from "@/lib/query";
+import { releasesSince } from "@/lib/query";
 
 const STEPS = [
   "Open the official site and confirm it resolves.",
@@ -20,34 +20,9 @@ export default function HomePage() {
   const site = getSite();
   const tools = getTools();
   const useCases = getUseCases();
+  const categories = getCategories();
   const newsletter = getNewsletterConfig();
   const fresh = releasesSince(tools, site.newThisWeekSince);
-
-  const searchCases: SearchUseCase[] = useCases.map((useCase) => {
-    const groups = groupUseCase(tools, useCase);
-    const all = [
-      ...groups.recommended.map((item) => item.tool),
-      ...groups.related,
-      ...groups.unchecked,
-    ];
-    return {
-      slug: useCase.slug,
-      title: useCase.title,
-      summary: useCase.summary,
-      toolCount: all.length,
-      smokeTestedCount: all.filter((tool) => tool.smokeTested).length,
-      haystack: `${useCase.title} ${useCase.summary} ${useCase.audienceHints.join(" ")} ${useCase.matchTags.join(" ")}`,
-    };
-  });
-
-  const searchTools: SearchTool[] = tools.map((tool) => ({
-    slug: tool.slug,
-    name: tool.name,
-    shortDescription: tool.shortDescription,
-    haystack: toolHaystack(tool),
-    smokeStatus: tool.smokeStatus,
-    checkedDate: tool.checkedDate,
-  }));
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
@@ -79,7 +54,7 @@ export default function HomePage() {
       </section>
 
       <div className="mt-8">
-        <JobSearch useCases={searchCases} tools={searchTools} />
+        <JobSearch useCases={useCases} tools={tools} categories={categories} />
       </div>
 
       <section id="new" className="mt-16 scroll-mt-24">

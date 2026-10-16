@@ -25,8 +25,11 @@
   "pricingNotes": "npm view flowise version=3.1.4. Hands-on install not run.",
   "pricingUrl": "https://flowiseai.com/pricing",
   "docsUrl": "https://docs.flowiseai.com/",
-  "freeTier": true,
-  "freeTierNotes": "Open-source self-host (npm package flowise@3.1.4 on npm registry). Pricing page returned thin content in crawl; cloud free tier not clearly confirmed.",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/FlowiseAI/Flowise",
   "bestFor": [
@@ -34,7 +37,7 @@
     "Teams already comfortable with a Node service"
   ],
   "notIdealFor": [
-    "A confirmed free hosted plan — we could not verify one",
+    "A confirmed free hosted plan \u2014 we could not verify one",
     "Code-first agent libraries, if that is all you need"
   ],
   "smokeStatus": "verified-docs-only",

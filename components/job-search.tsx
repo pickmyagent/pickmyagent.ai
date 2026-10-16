@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { StatusBadge } from "@/components/badges";
-import { formatDate, matchesQuery } from "@/lib/format";
-import type { SmokeStatus } from "@/lib/types";
+import { formatDate } from "@/lib/format";
+import { rankCatalogQuery } from "@/lib/search";
+import type { Category, Tool, UseCase } from "@/lib/types";
 
 const PLACEHOLDERS = [
   "Build a multi-agent research crew",
@@ -14,30 +15,14 @@ const PLACEHOLDERS = [
   "Code agent that uses the browser",
 ];
 
-export type SearchUseCase = {
-  slug: string;
-  title: string;
-  summary: string;
-  toolCount: number;
-  smokeTestedCount: number;
-  haystack: string;
-};
-
-export type SearchTool = {
-  slug: string;
-  name: string;
-  shortDescription: string;
-  haystack: string;
-  smokeStatus: SmokeStatus;
-  checkedDate: string;
-};
-
 export function JobSearch({
   useCases,
   tools,
+  categories,
 }: {
-  useCases: SearchUseCase[];
-  tools: SearchTool[];
+  useCases: UseCase[];
+  tools: Tool[];
+  categories: Category[];
 }) {
   const [query, setQuery] = useState("");
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
@@ -53,16 +38,12 @@ export function JobSearch({
   }, [paused, query]);
 
   const trimmed = query.trim();
-  const visibleCases = useMemo(
-    () => useCases.filter((useCase) => matchesQuery(useCase.haystack, trimmed)),
-    [useCases, trimmed],
+  const ranked = useMemo(
+    () => rankCatalogQuery(trimmed, { tools, useCases, categories }),
+    [tools, useCases, categories, trimmed],
   );
-  const visibleTools = useMemo(() => {
-    if (!trimmed) return [];
-    return tools
-      .filter((tool) => matchesQuery(tool.haystack, trimmed))
-      .slice(0, 6);
-  }, [tools, trimmed]);
+  const visibleCases = ranked.useCases;
+  const visibleTools = ranked.tools;
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -119,11 +100,21 @@ export function JobSearch({
         {trimmed ? (
           <div id="match-results" className="mb-8 scroll-mt-24">
             <h3 className="font-mono text-xs tracking-[0.16em] text-gold uppercase">
-              Tools that match
+              {ranked.fallback ? "Closest matches" : "Tools that match"}
             </h3>
+            {ranked.fallback ? (
+              <p className="mt-3 text-muted">
+                Nothing matched that wording closely. These are the closest tools in the catalog.{" "}
+                <Link href="/submit" className="text-gold underline">
+                  Suggest a tool
+                </Link>
+              </p>
+            ) : null}
             {visibleTools.length === 0 ? (
               <p className="mt-3 text-muted">
-                No tool name or description matched that. Try browser, NPC, voice, or notes.
+                <Link href="/submit" className="text-gold underline">
+                  Suggest a tool
+                </Link>
               </p>
             ) : (
               <ul className="mt-3 divide-y divide-line border border-line bg-panel">
@@ -155,7 +146,9 @@ export function JobSearch({
 
         {visibleCases.length === 0 ? (
           <p className="text-muted">
-            No use case matched. Browse the full list or search the tool index.
+            <Link href="/submit" className="text-gold underline">
+              Suggest a tool
+            </Link>
           </p>
         ) : (
           <ul className="grid gap-3 sm:grid-cols-2">

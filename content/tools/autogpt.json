@@ -27,8 +27,11 @@
   "pricingNotes": "Platform release autogpt-platform-beta-v0.8.4 on 2026-10-14.",
   "pricingUrl": "https://agpt.co/pricing",
   "docsUrl": "https://github.com/Significant-Gravitas/AutoGPT",
-  "freeTier": true,
-  "freeTierNotes": "Open-source repo. agpt.co/pricing HTTP 200 — cloud offerings may be paid; OSS self-host path exists.",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": 50,
+  "freeTrial": "7 days",
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/Significant-Gravitas/AutoGPT",
   "bestFor": [
@@ -37,7 +40,7 @@
   ],
   "notIdealFor": [
     "A tiny script where a smaller library is enough",
-    "A hands-on install — we did not run one"
+    "A hands-on install \u2014 we did not run one"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

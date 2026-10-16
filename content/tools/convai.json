@@ -23,7 +23,10 @@
   "pricingUrl": "https://convai.com/pricing",
   "docsUrl": "https://docs.convai.com/",
   "freeTier": null,
-  "freeTierNotes": "Site loads (200). Pricing URL fetches failed/empty in this pass — free tier unconfirmed.",
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

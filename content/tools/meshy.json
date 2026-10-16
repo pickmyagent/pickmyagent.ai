@@ -26,7 +26,10 @@
   "pricingUrl": "https://www.meshy.ai/pricing",
   "docsUrl": "https://docs.meshy.ai/",
   "freeTier": true,
-  "freeTierNotes": "Pricing crawl shows $0 / $0 /mo and no credit card language.",
+  "freeTierNotes": "No credit card needed.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

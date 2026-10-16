@@ -4,8 +4,8 @@
   "name": "Pinecone",
   "websiteUrl": "https://www.pinecone.io/",
   "affiliateUrl": null,
-  "shortDescription": "Managed vector database for retrieval. A true $0 tier was not clearly confirmed on the pricing page.",
-  "longDescription": "Pinecone is a managed vector database used in retrieval stacks. The pricing crawl mentioned Starter and paid monthly samples. A true $0 free tier was not clearly confirmed, so it stays unconfirmed. We did not create an account.",
+  "shortDescription": "Managed vector database. Starter is free, and Builder is $20 per month.",
+  "longDescription": "Pinecone is a managed vector database used in retrieval stacks. On October 16, 2026 the pricing page listed Starter as free and Builder at $20 per month. We did not create an account.",
   "categories": [
     "search-rag"
   ],
@@ -22,8 +22,11 @@
   "pricingNotes": "Confirm Starter vs free on pinecone.io/pricing.",
   "pricingUrl": "https://www.pinecone.io/pricing/",
   "docsUrl": "https://docs.pinecone.io/",
-  "freeTier": null,
-  "freeTierNotes": "Pricing crawl mentioned Starter and paid samples ($20/$50/$500/mo). A true $0 free tier was not clearly confirmed in extract — treat as unconfirmed.",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": 20,
+  "freeTrial": "3 weeks",
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
@@ -32,7 +35,7 @@
   ],
   "notIdealFor": [
     "A confirmed free tier from this check",
-    "Web search or page crawling — different tools"
+    "Web search or page crawling \u2014 different tools"
   ],
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

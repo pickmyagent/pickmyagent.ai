@@ -105,6 +105,29 @@ for (const tool of tools) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(tool.checkedDate)) {
     fail(`${tool.id} checkedDate must be YYYY-MM-DD`);
   }
+  if (!("startingPrice" in tool)) fail(`${tool.id} needs startingPrice`);
+  if (
+    tool.startingPrice !== null &&
+    (typeof tool.startingPrice !== "number" ||
+      !Number.isFinite(tool.startingPrice) ||
+      tool.startingPrice < 0)
+  ) {
+    fail(`${tool.id} startingPrice must be a non-negative number or null`);
+  }
+  if (!("freeTrial" in tool)) fail(`${tool.id} needs freeTrial`);
+  if (tool.freeTrial !== null && typeof tool.freeTrial !== "string") {
+    fail(`${tool.id} freeTrial must be a string or null`);
+  }
+  if (!("pricingCheckedAt" in tool)) fail(`${tool.id} needs pricingCheckedAt`);
+  if (
+    tool.pricingCheckedAt !== null &&
+    !/^\d{4}-\d{2}-\d{2}$/.test(tool.pricingCheckedAt)
+  ) {
+    fail(`${tool.id} pricingCheckedAt must be YYYY-MM-DD or null`);
+  }
+  if (tool.freeTier !== true && tool.freeTier !== false && tool.freeTier !== null) {
+    fail(`${tool.id} freeTier must be true, false, or null`);
+  }
   if (tool.featuredPaid && !tool.featured) {
     fail(`${tool.id} featuredPaid requires featured`);
   }

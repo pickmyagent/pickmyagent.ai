@@ -80,8 +80,11 @@
       "pricingNotes": "No SaaS pricing page for the framework. Latest GitHub python release python-v0.7.5 dated 2025-09-30 — older than peers; industry notes mention Microsoft Agent Framework as successor — flag for catalog freshness.",
       "pricingUrl": "https://microsoft.github.io/autogen/stable/index.html",
       "docsUrl": "https://microsoft.github.io/autogen/stable/index.html",
-      "freeTier": true,
-      "freeTierNotes": "Open-source library; no product paywall for the framework itself (LLM provider costs separate).",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/microsoft/autogen",
       "bestFor": [
@@ -159,8 +162,11 @@
       "pricingNotes": "Platform release autogpt-platform-beta-v0.8.4 on 2026-10-14.",
       "pricingUrl": "https://agpt.co/pricing",
       "docsUrl": "https://github.com/Significant-Gravitas/AutoGPT",
-      "freeTier": true,
-      "freeTierNotes": "Open-source repo. agpt.co/pricing HTTP 200 — cloud offerings may be paid; OSS self-host path exists.",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 50,
+      "freeTrial": "7 days",
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/Significant-Gravitas/AutoGPT",
       "bestFor": [
@@ -229,7 +235,10 @@
       "pricingUrl": "https://www.bitpart.ai/product",
       "docsUrl": "https://www.bitpart.ai/",
       "freeTier": null,
-      "freeTierNotes": "No public pricing grid found in crawl; product page describes SDKs. Free tier unconfirmed.",
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -292,10 +301,13 @@
         "usage"
       ],
       "pricingNotes": "Cloud stealth browsers billed separately per docs/marketing.",
-      "pricingUrl": "https://browser-use.com/",
+      "pricingUrl": "https://browser-use.com/pricing",
       "docsUrl": "https://docs.browser-use.com/",
       "freeTier": true,
-      "freeTierNotes": "Open-source Python agent; docs mention cloud browser pricing samples (e.g. $0.02 per browser-hour in earlier marketing fetch). Local OSS usable with your own browser/LLM keys.",
+      "freeTierNotes": "Pay as you go after a free start. No monthly subscription.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/browser-use/browser-use",
       "bestFor": [
@@ -343,6 +355,138 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T19:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "capcut",
+      "slug": "capcut",
+      "name": "CapCut",
+      "websiteUrl": "https://www.capcut.com/",
+      "shortDescription": "Video editor for YouTube, TikTok, and Reels. Pricing lists Free and Pro at $19.99/month.",
+      "longDescription": "CapCut is a video editor for short-form and social video. On October 16, 2026 the pricing page listed Free at $0, with free templates and basic editing tools, and Pro at $19.99 per month. We did not install the app.",
+      "pricingUrl": "https://www.capcut.com/pricing",
+      "docsUrl": null,
+      "freeTier": true,
+      "freeTierNotes": "Free templates and basic editing tools.",
+      "startingPrice": 19.99,
+      "freeTrial": null,
+      "bestFor": [
+        "Editing a YouTube video or a short for TikTok and Reels",
+        "Creators who want templates and captions in one editor"
+      ],
+      "notIdealFor": [
+        "Clipping a Twitch VOD automatically from a connected channel",
+        "A local open-source editor"
+      ],
+      "sources": [
+        "https://www.capcut.com/",
+        "https://www.capcut.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.capcut.com/"
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T19:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "captions",
+      "slug": "captions",
+      "name": "Captions",
+      "websiteUrl": "https://captions.ai/",
+      "shortDescription": "AI video editor and caption tool. The paid Max plan is listed at $24.99/month.",
+      "longDescription": "Captions is an AI video editor that adds captions and can edit uploaded footage. On October 16, 2026 its pricing page said a free version includes basic tools such as trimming, transitions, and some media library assets. The Max plan was listed at $24.99 per month. We did not create an account.",
+      "pricingUrl": "https://captions.ai/pricing",
+      "docsUrl": "https://captions.ai/help/docs/captions/add-captions",
+      "freeTier": true,
+      "freeTierNotes": "Trimming, transitions, and some media library assets.",
+      "startingPrice": 24.99,
+      "freeTrial": null,
+      "bestFor": [
+        "Captioning a talking-head or social video",
+        "Editing footage into a shorter captioned clip"
+      ],
+      "notIdealFor": [
+        "Clipping a live Twitch channel automatically",
+        "A confirmed free-trial length from this check"
+      ],
+      "sources": [
+        "https://captions.ai/",
+        "https://captions.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://captions.ai/"
+      }
+    },
+    {
       "id": "claude",
       "slug": "claude",
       "name": "Claude (Anthropic)",
@@ -369,10 +513,13 @@
         "subscription"
       ],
       "pricingNotes": "Site redirects product overview to claude.com. API billed separately.",
-      "pricingUrl": "https://www.anthropic.com/pricing",
+      "pricingUrl": "https://claude.com/pricing",
       "docsUrl": "https://docs.claude.com/",
       "freeTier": true,
-      "freeTierNotes": "Anthropic pricing page includes $0 option in crawl text (Claude consumer/API tiers — confirm Free vs Pro on page).",
+      "freeTierNotes": null,
+      "startingPrice": 20,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -437,7 +584,10 @@
       "pricingUrl": "https://composio.dev/pricing",
       "docsUrl": "https://docs.composio.dev/",
       "freeTier": true,
-      "freeTierNotes": "Pricing page crawl includes Hobby/$0/no credit card language.",
+      "freeTierNotes": "100,000 tool calls per month.",
+      "startingPrice": 29,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/ComposioHQ/composio",
       "bestFor": [
@@ -506,8 +656,11 @@
       "pricingNotes": "Confirm any Continue cloud/team pricing on site; OSS install is IDE extension (not pip-tested here).",
       "pricingUrl": "https://www.continue.dev/",
       "docsUrl": "https://docs.continue.dev/",
-      "freeTier": true,
-      "freeTierNotes": "Open-source coding agent/extension (homepage). Dedicated /pricing returned 404 in this pass.",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/continuedev/continue",
       "bestFor": [
@@ -577,7 +730,10 @@
       "pricingUrl": "https://convai.com/pricing",
       "docsUrl": "https://docs.convai.com/",
       "freeTier": null,
-      "freeTierNotes": "Site loads (200). Pricing URL fetches failed/empty in this pass — free tier unconfirmed.",
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -646,7 +802,10 @@
       "pricingUrl": "https://www.crewai.com/pricing",
       "docsUrl": "https://docs.crewai.com/",
       "freeTier": true,
-      "freeTierNotes": "Basic plan Free: visual editor, GitHub integration, 50 workflow executions/month (cloud). OSS/framework also installable via pip/uv without cloud.",
+      "freeTierNotes": "50 workflow executions per month.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/crewAIInc/crewAI",
       "bestFor": [
@@ -724,7 +883,10 @@
       "pricingUrl": "https://cursor.com/pricing",
       "docsUrl": "https://cursor.com/docs",
       "freeTier": true,
-      "freeTierNotes": "Pricing page shows $0 /mo tier alongside paid ($8/$30/$100/$200 /mo samples in crawl).",
+      "freeTierNotes": "Limited agent requests and limited chat requests.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -789,7 +951,10 @@
       "pricingUrl": "https://www.descript.com/pricing",
       "docsUrl": "https://help.descript.com/",
       "freeTier": true,
-      "freeTierNotes": "Pricing crawl includes free to start / hobby / $0 language.",
+      "freeTierNotes": "60 minutes of media per month.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -856,7 +1021,10 @@
       "pricingUrl": "https://dify.ai/pricing",
       "docsUrl": "https://docs.dify.ai/",
       "freeTier": true,
-      "freeTierNotes": "Community Edition (self-host, open-source) referenced on pricing page. Cloud paid tiers also listed (samples included $590/$1590 in page text — verify current).",
+      "freeTierNotes": "200 message credits.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/langgenius/dify",
       "bestFor": [
@@ -900,13 +1068,77 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T19:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "eklipse",
+      "slug": "eklipse",
+      "name": "Eklipse",
+      "websiteUrl": "https://eklipse.gg/",
+      "shortDescription": "Finds highlight clips from Twitch, YouTube, and Kick streams and exports them vertical.",
+      "longDescription": "Eklipse says it connects a Twitch, YouTube, or Kick channel, watches the saved VOD, and returns highlight clips sized for TikTok, Reels, and Shorts. The pricing path we opened redirected to the homepage and did not list a monthly price. We did not connect an account.",
+      "pricingUrl": "https://eklipse.gg/pricing",
+      "docsUrl": "https://eklipse.gg/help/clip-twitch-vod-after-stream/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "bestFor": [
+        "Turning a Twitch or Kick stream into highlight clips",
+        "Vertical clips for Shorts, Reels, and TikTok"
+      ],
+      "notIdealFor": [
+        "Generating the original footage",
+        "A confirmed monthly price from this check"
+      ],
+      "sources": [
+        "https://eklipse.gg/",
+        "https://eklipse.gg/pricing",
+        "https://eklipse.gg/help/clip-twitch-vod-after-stream/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://eklipse.gg/"
+      }
+    },
+    {
       "id": "elevenlabs",
       "slug": "elevenlabs",
       "name": "ElevenLabs",
       "websiteUrl": "https://elevenlabs.io/",
       "affiliateUrl": null,
-      "shortDescription": "Voice and audio generation. Pricing page loaded, but the text was too thin to confirm a free tier.",
-      "longDescription": "ElevenLabs generates voice and audio. The pricing page returned HTTP 200, but the extracted text was only a few hundred characters, so a free tier was not confirmed in this pass. Re-check elevenlabs.io/pricing in a browser before claiming a free plan. We did not create an account.",
+      "shortDescription": "Voice and audio generation. The free plan includes 10,000 credits per month.",
+      "longDescription": "ElevenLabs generates voice and audio. On October 16, 2026 the pricing page listed Free at $0 per month with 10,000 credits, and Starter at $6 per month. We did not create an account.",
       "categories": [
         "creative-media"
       ],
@@ -923,8 +1155,11 @@
       "pricingNotes": "Re-check elevenlabs.io/pricing in browser before claiming Free.",
       "pricingUrl": "https://elevenlabs.io/pricing",
       "docsUrl": "https://elevenlabs.io/docs",
-      "freeTier": null,
-      "freeTierNotes": "Pricing page HTTP 200 but extracted text was very thin (528 chars) — free tier historically exists; NOT confirmed in this extract.",
+      "freeTier": true,
+      "freeTierNotes": "10,000 credits per month.",
+      "startingPrice": 6,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -994,7 +1229,10 @@
       "pricingUrl": "https://www.firecrawl.dev/pricing",
       "docsUrl": "https://docs.firecrawl.dev/",
       "freeTier": true,
-      "freeTierNotes": "Pricing crawl mentions free plan / hobby and $0 /mo sample.",
+      "freeTierNotes": "1,000 credits per month.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/mendableai/firecrawl",
       "bestFor": [
@@ -1064,8 +1302,11 @@
       "pricingNotes": "npm view flowise version=3.1.4. Hands-on install not run.",
       "pricingUrl": "https://flowiseai.com/pricing",
       "docsUrl": "https://docs.flowiseai.com/",
-      "freeTier": true,
-      "freeTierNotes": "Open-source self-host (npm package flowise@3.1.4 on npm registry). Pricing page returned thin content in crawl; cloud free tier not clearly confirmed.",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/FlowiseAI/Flowise",
       "bestFor": [
@@ -1136,7 +1377,10 @@
       "pricingUrl": "https://www.granola.ai/pricing",
       "docsUrl": "https://www.granola.ai/",
       "freeTier": true,
-      "freeTierNotes": "Pricing crawl includes $0 alongside $14/$35.",
+      "freeTierNotes": "Limited meeting history.",
+      "startingPrice": 14,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -1199,7 +1443,10 @@
       "pricingUrl": "https://www.heygen.com/pricing",
       "docsUrl": "https://docs.heygen.com/",
       "freeTier": true,
-      "freeTierNotes": "Pricing crawl includes $0/mo alongside $29/$49 /mo.",
+      "freeTierNotes": "3 videos per month, up to 1 minute each.",
+      "startingPrice": 29,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -1262,7 +1509,10 @@
       "pricingUrl": "https://inworld.ai/pricing",
       "docsUrl": "https://docs.inworld.ai/",
       "freeTier": true,
-      "freeTierNotes": "Pricing crawl includes $0 among samples.",
+      "freeTierNotes": "On-Demand plan is $0, then pay as you go.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -1299,6 +1549,71 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T19:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "kapwing",
+      "slug": "kapwing",
+      "name": "Kapwing",
+      "websiteUrl": "https://www.kapwing.com/",
+      "shortDescription": "Browser editor for trimming, captions, and resizing video into social clips.",
+      "longDescription": "Kapwing is an online video editor. Its pricing page lists a Free plan with 10 credits, a watermark, exports up to 4 minutes, 720p, and 5 GB of storage. A dollar amount for the lowest paid plan was not clearly tied to the Pro plan in the text we extracted, so the starting price stays unconfirmed. We did not create an account.",
+      "pricingUrl": "https://www.kapwing.com/pricing",
+      "docsUrl": "https://www.kapwing.com/help/add-captions/",
+      "freeTier": true,
+      "freeTierNotes": "10 credits. Watermark. Exports up to 4 minutes at 720p. 5 GB storage.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "bestFor": [
+        "Adding captions or resizing a video in the browser",
+        "Turning a longer video into a social clip"
+      ],
+      "notIdealFor": [
+        "A confirmed Pro price from this check",
+        "Connecting a Twitch channel and clipping the VOD automatically"
+      ],
+      "sources": [
+        "https://www.kapwing.com/",
+        "https://www.kapwing.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.kapwing.com/"
+      }
+    },
+    {
       "id": "langchain",
       "slug": "langchain",
       "name": "LangChain",
@@ -1327,7 +1642,10 @@
       "pricingUrl": "https://www.langchain.com/pricing",
       "docsUrl": "https://docs.langchain.com/",
       "freeTier": true,
-      "freeTierNotes": "OSS libraries free. LangSmith Developer plan $0/seat with up to 5k base traces/mo then pay-as-you-go.",
+      "freeTierNotes": "Up to 5,000 base traces per month, then pay as you go.",
+      "startingPrice": 39,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/langchain-ai/langchain",
       "bestFor": [
@@ -1381,8 +1699,8 @@
       "name": "LlamaIndex",
       "websiteUrl": "https://www.llamaindex.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Open-source framework for retrieval and agents over your own data. Cloud free tier unconfirmed.",
-      "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. We installed and imported llama-index-core. The pricing page loaded, but the crawl did not clearly show a free cloud tier, so that part stays unconfirmed.",
+      "shortDescription": "Open-source framework for retrieval and agents. The cloud free plan includes 10,000 credits.",
+      "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. We installed and imported llama-index-core. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
       "categories": [
         "agent-frameworks",
         "search-rag"
@@ -1404,8 +1722,11 @@
       "pricingNotes": "Confirm LlamaCloud tiers on official pricing page before publishing $ amounts.",
       "pricingUrl": "https://www.llamaindex.ai/pricing",
       "docsUrl": "https://docs.llamaindex.ai/en/stable/",
-      "freeTier": null,
-      "freeTierNotes": "OSS core is free to install. Pricing page HTTP 200 but crawl text did not clearly extract a free SaaS tier; treat cloud free tier as unconfirmed from this pass.",
+      "freeTier": true,
+      "freeTierNotes": "10,000 credits.",
+      "startingPrice": 50,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/run-llama/llama_index",
       "bestFor": [
@@ -1480,8 +1801,11 @@
       "pricingNotes": "Credits billing unit as of Aug 27 (year not re-stated on snippet). Core/Pro/Teams paid.",
       "pricingUrl": "https://www.make.com/en/pricing",
       "docsUrl": "https://www.make.com/en/help",
-      "freeTier": true,
-      "freeTierNotes": "Official pricing FAQ states Free plan includes 1000 credits per month (and related storage). Direct HTML crawl sometimes 403; WebFetch of pricing page succeeded.",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -1546,7 +1870,10 @@
       "pricingUrl": "https://mem0.ai/pricing",
       "docsUrl": "https://docs.mem0.ai/",
       "freeTier": true,
-      "freeTierNotes": "OSS package mem0ai installs freely. Cloud pricing page HTTP 200; free SaaS tier details not cleanly parsed — OSS path confirmed via install.",
+      "freeTierNotes": "10,000 add requests and 1,000 retrieval requests per month.",
+      "startingPrice": 19,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/mem0ai/mem0",
       "bestFor": [
@@ -1622,7 +1949,10 @@
       "pricingUrl": "https://www.meshy.ai/pricing",
       "docsUrl": "https://docs.meshy.ai/",
       "freeTier": true,
-      "freeTierNotes": "Pricing crawl shows $0 / $0 /mo and no credit card language.",
+      "freeTierNotes": "No credit card needed.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -1685,8 +2015,11 @@
       "pricingNotes": "CHANGED/NOTE: No free tier on official plan chart. Homepage midjourney.com HTTP 403 here.",
       "pricingUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
       "docsUrl": "https://docs.midjourney.com/",
-      "freeTier": false,
-      "freeTierNotes": "Official plan comparison: Basic $10, Standard $30, Pro $60, Mega $120 monthly — all subscriptions. No free plan listed. Docs homepage also 403 to crawler.",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -1751,8 +2084,11 @@
       "pricingNotes": "Dedicated pricing URL not found; pricing may be embedded on homepage.",
       "pricingUrl": "https://mistscale.com/",
       "docsUrl": "https://mistscale.com/",
-      "freeTier": true,
-      "freeTierNotes": "Homepage copy includes trying without a card / talking in minutes language in earlier research fetch; reconfirm on live homepage. Docs path /docs was 404 in one fetch.",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -1815,7 +2151,10 @@
       "pricingUrl": "https://modl.ai/",
       "docsUrl": "https://modl.ai/",
       "freeTier": null,
-      "freeTierNotes": "Homepage 200; /pricing 404. Free tier unconfirmed.",
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -1878,8 +2217,11 @@
       "pricingNotes": "Cloud Starter/Pro/Business/Enterprise paid. Community Edition is the free forever self-host option.",
       "pricingUrl": "https://n8n.io/pricing/",
       "docsUrl": "https://docs.n8n.io/",
-      "freeTier": true,
-      "freeTierNotes": "Community Edition self-hosted free (GitHub). n8n Cloud: free trial without card; paid Starter from 20€/mo billed annually (official pricing page). Not a permanent free cloud tier.",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": true,
       "repoUrl": "https://github.com/n8n-io/n8n",
       "bestFor": [
@@ -1952,7 +2294,10 @@
       "pricingUrl": "https://www.notion.com/pricing",
       "docsUrl": "https://developers.notion.com/",
       "freeTier": true,
-      "freeTierNotes": "Pricing crawl includes $0 alongside $10/$20.",
+      "freeTierNotes": "Includes a trial of Notion AI.",
+      "startingPrice": 10,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2014,8 +2359,11 @@
       "pricingNotes": "SDK/download model rather than subscription grid on the page we read.",
       "pricingUrl": "https://developer.nvidia.com/ace-for-games",
       "docsUrl": "https://docs.nvidia.com/ace/",
-      "freeTier": true,
-      "freeTierNotes": "Developer downloads/plugins described; Unreal plugins noted MIT-licensed in earlier page content. Requires NVIDIA developer access / hardware assumptions — not a simple SaaS free tier.",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": null,
       "repoUrl": null,
       "bestFor": [
@@ -2078,7 +2426,10 @@
       "pricingUrl": "https://obsidian.md/pricing",
       "docsUrl": "https://help.obsidian.md/",
       "freeTier": true,
-      "freeTierNotes": "Official pricing: 'Free without limits' for the app — no sign-up required. Sync/Publish are paid add-ons ($4/$8 /mo billed annually).",
+      "freeTierNotes": "No sign-up required.",
+      "startingPrice": 5,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2120,8 +2471,8 @@
       "name": "Opus Clip",
       "websiteUrl": "https://www.opus.pro/",
       "affiliateUrl": null,
-      "shortDescription": "Cuts long videos into short clips. A lasting free plan was not clearly separated from starter pricing.",
-      "longDescription": "Opus Clip turns long videos into short clips. The pricing crawl mentioned starter, no-credit-card language, and $15 samples. A lasting free plan was not clearly separated from a trial or starter tier, so the free tier stays unconfirmed. We did not upload a video.",
+      "shortDescription": "Cuts long videos into short clips. The free plan lists 60 credits per month.",
+      "longDescription": "Opus Clip turns long videos into short clips. On October 16, 2026 the pricing page listed a free plan at $0 with 60 credits per month, a watermark, and clips that stop being exportable after 3 days. Starter was $15 per month. We did not upload a video.",
       "categories": [
         "creative-media"
       ],
@@ -2138,8 +2489,11 @@
       "pricingNotes": "Confirm free trial vs free plan on opus.pro/pricing.",
       "pricingUrl": "https://www.opus.pro/pricing",
       "docsUrl": "https://help.opus.pro/",
-      "freeTier": null,
-      "freeTierNotes": "Pricing crawl mentions starter / no credit card and $15 samples — free forever tier not clearly confirmed.",
+      "freeTier": true,
+      "freeTierNotes": "60 credits per month. Watermark. Clips stop being exportable after 3 days.",
+      "startingPrice": 15,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2197,10 +2551,13 @@
       ],
       "pricingModel": [],
       "pricingNotes": "Use docs.perplexity.ai pricing guide; confirm Free tier in browser.",
-      "pricingUrl": "https://docs.perplexity.ai/guides/pricing",
+      "pricingUrl": "https://docs.perplexity.ai/docs/getting-started/pricing",
       "docsUrl": "https://docs.perplexity.ai/",
       "freeTier": null,
-      "freeTierNotes": "Homepage HTTP 403 to crawler. Docs accessible. Consumer Free vs Pro not cleanly extracted — unconfirmed in this pass.",
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2238,13 +2595,80 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T19:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "pika",
+      "slug": "pika",
+      "name": "Pika",
+      "websiteUrl": "https://pika.art/",
+      "shortDescription": "Generates short videos from prompts, photos, or keyframes. Starter is $10/month.",
+      "longDescription": "Pika is a video generation product. Its site describes Video Studio for a short clip up to a 30-second multi-shot video. On October 16, 2026 the pricing page listed a Free plan with 0 credits per month (packs only, no commercial license) and Starter at $10 per month, billed monthly, with 900 credits. We did not create an account.",
+      "pricingUrl": "https://pika.art/pricing",
+      "docsUrl": "https://pika.art/faq",
+      "freeTier": true,
+      "freeTierNotes": "0 credits per month (packs only). No commercial license.",
+      "startingPrice": 10,
+      "freeTrial": null,
+      "bestFor": [
+        "Generating a short video from a prompt or a photo",
+        "Creators comparing hosted text-to-video tools"
+      ],
+      "notIdealFor": [
+        "Clipping an existing Twitch stream",
+        "A full-length movie at a confirmed runtime"
+      ],
+      "sources": [
+        "https://pika.art/",
+        "https://pika.art/pricing",
+        "https://pika.art/faq"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://pika.art/"
+      }
+    },
+    {
       "id": "pinecone",
       "slug": "pinecone",
       "name": "Pinecone",
       "websiteUrl": "https://www.pinecone.io/",
       "affiliateUrl": null,
-      "shortDescription": "Managed vector database for retrieval. A true $0 tier was not clearly confirmed on the pricing page.",
-      "longDescription": "Pinecone is a managed vector database used in retrieval stacks. The pricing crawl mentioned Starter and paid monthly samples. A true $0 free tier was not clearly confirmed, so it stays unconfirmed. We did not create an account.",
+      "shortDescription": "Managed vector database. Starter is free, and Builder is $20 per month.",
+      "longDescription": "Pinecone is a managed vector database used in retrieval stacks. On October 16, 2026 the pricing page listed Starter as free and Builder at $20 per month. We did not create an account.",
       "categories": [
         "search-rag"
       ],
@@ -2261,8 +2685,11 @@
       "pricingNotes": "Confirm Starter vs free on pinecone.io/pricing.",
       "pricingUrl": "https://www.pinecone.io/pricing/",
       "docsUrl": "https://docs.pinecone.io/",
-      "freeTier": null,
-      "freeTierNotes": "Pricing crawl mentioned Starter and paid samples ($20/$50/$500/mo). A true $0 free tier was not clearly confirmed in extract — treat as unconfirmed.",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": 20,
+      "freeTrial": "3 weeks",
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2324,8 +2751,11 @@
       "pricingNotes": "Could not read official pricing HTML (403).",
       "pricingUrl": "https://replit.com/pricing",
       "docsUrl": "https://docs.replit.com/",
-      "freeTier": null,
-      "freeTierNotes": "Homepage and pricing returned HTTP 403 to this crawler. Docs root HTTP 200. Free tier not confirmed in this pass.",
+      "freeTier": true,
+      "freeTierNotes": "Up to 30 hours of chat and 60 projects.",
+      "startingPrice": 20,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2385,10 +2815,13 @@
       ],
       "pricingModel": [],
       "pricingNotes": "help.runwayml.com returned 403 in one fetch.",
-      "pricingUrl": "https://runwayml.com/pricing",
+      "pricingUrl": "https://runway.com/pricing",
       "docsUrl": "https://help.runwayml.com/",
       "freeTier": null,
-      "freeTierNotes": "runwayml.com/pricing HTTP 200 with substantial content; free tier not cleanly extracted from text — unconfirmed.",
+      "freeTierNotes": null,
+      "startingPrice": 12,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2452,7 +2885,10 @@
       "pricingUrl": "https://www.scenario.com/pricing",
       "docsUrl": "https://docs.scenario.com/",
       "freeTier": true,
-      "freeTierNotes": "Pricing crawl mentions free tier / free plan / starter / no credit card.",
+      "freeTierNotes": "50 free daily credits.",
+      "startingPrice": 15,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2489,6 +2925,69 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T19:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "streamladder",
+      "slug": "streamladder",
+      "name": "StreamLadder",
+      "websiteUrl": "https://www.streamladder.com/",
+      "shortDescription": "Edits Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks.",
+      "longDescription": "StreamLadder's site says it imports clips from Twitch, YouTube, or Kick and turns horizontal stream footage into vertical short-form video, with layouts for gameplay and a facecam. The pricing page redirected to an app screen that did not list prices without JavaScript. We did not create an account.",
+      "pricingUrl": "https://www.streamladder.com/pricing",
+      "docsUrl": null,
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "bestFor": [
+        "Reframing a horizontal stream clip for Shorts or Reels",
+        "Streamers posting the same clip to TikTok, Reels, and Shorts"
+      ],
+      "notIdealFor": [
+        "Finding the highlight inside a full VOD on its own",
+        "A confirmed monthly price from this check"
+      ],
+      "sources": [
+        "https://www.streamladder.com/",
+        "https://www.streamladder.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.streamladder.com/"
+      }
+    },
+    {
       "id": "tavernbard",
       "slug": "tavernbard",
       "name": "Tavernbard",
@@ -2515,8 +3014,11 @@
       "pricingNotes": "/pricing returned 404; pricing appears on homepage.",
       "pricingUrl": "https://www.tavernbard.com/",
       "docsUrl": "https://www.tavernbard.com/",
-      "freeTier": true,
-      "freeTierNotes": "Homepage describes free play path using your own AI subscription; price sample $49.99 also appeared in crawl (likely paid plan). Confirm exact free vs paid on site.",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2582,7 +3084,10 @@
       "pricingUrl": "https://tavily.com/pricing",
       "docsUrl": "https://docs.tavily.com/",
       "freeTier": true,
-      "freeTierNotes": "Pricing crawl includes $0 and no-credit-card language.",
+      "freeTierNotes": "1,000 API credits per month.",
+      "startingPrice": 30,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2624,8 +3129,8 @@
       "name": "Zapier",
       "websiteUrl": "https://zapier.com/",
       "affiliateUrl": null,
-      "shortDescription": "Connects the apps you already use. Pricing page loaded, but a free task tier was not clearly confirmed.",
-      "longDescription": "Zapier connects SaaS apps, including agent-style steps. The pricing page returned HTTP 200, but the text we extracted did not clearly show the free task tier, so that detail stays unconfirmed. We did not create an account.",
+      "shortDescription": "Connects the apps you already use. The free plan includes 100 tasks per month.",
+      "longDescription": "Zapier connects SaaS apps, including agent-style steps. On October 16, 2026 the pricing page listed Free at $0 with 100 tasks per month, and Professional starting from $19.99 per month. We did not create an account.",
       "categories": [
         "workflow-automation"
       ],
@@ -2642,8 +3147,11 @@
       "pricingNotes": "Re-open zapier.com/pricing in a browser to confirm free task limits before publishing.",
       "pricingUrl": "https://zapier.com/pricing",
       "docsUrl": "https://docs.zapier.com/",
-      "freeTier": null,
-      "freeTierNotes": "Pricing page HTTP 200 but crawl text did not clearly extract Free plan details in this pass — historically Zapier has a free task tier; mark unconfirmed here.",
+      "freeTier": true,
+      "freeTierNotes": "100 tasks per month.",
+      "startingPrice": 19.99,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-16",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [

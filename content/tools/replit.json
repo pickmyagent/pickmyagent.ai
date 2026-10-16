@@ -24,8 +24,11 @@
   "pricingNotes": "Could not read official pricing HTML (403).",
   "pricingUrl": "https://replit.com/pricing",
   "docsUrl": "https://docs.replit.com/",
-  "freeTier": null,
-  "freeTierNotes": "Homepage and pricing returned HTTP 403 to this crawler. Docs root HTTP 200. Free tier not confirmed in this pass.",
+  "freeTier": true,
+  "freeTierNotes": "Up to 30 hours of chat and 60 projects.",
+  "startingPrice": 20,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

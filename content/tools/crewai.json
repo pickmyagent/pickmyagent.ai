@@ -29,7 +29,10 @@
   "pricingUrl": "https://www.crewai.com/pricing",
   "docsUrl": "https://docs.crewai.com/",
   "freeTier": true,
-  "freeTierNotes": "Basic plan Free: visual editor, GitHub integration, 50 workflow executions/month (cloud). OSS/framework also installable via pip/uv without cloud.",
+  "freeTierNotes": "50 workflow executions per month.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/crewAIInc/crewAI",
   "bestFor": [

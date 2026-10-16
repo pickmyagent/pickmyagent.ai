@@ -28,7 +28,10 @@
   "pricingUrl": "https://tavily.com/pricing",
   "docsUrl": "https://docs.tavily.com/",
   "freeTier": true,
-  "freeTierNotes": "Pricing crawl includes $0 and no-credit-card language.",
+  "freeTierNotes": "1,000 API credits per month.",
+  "startingPrice": 30,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

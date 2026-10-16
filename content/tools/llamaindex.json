@@ -4,8 +4,8 @@
   "name": "LlamaIndex",
   "websiteUrl": "https://www.llamaindex.ai/",
   "affiliateUrl": null,
-  "shortDescription": "Open-source framework for retrieval and agents over your own data. Cloud free tier unconfirmed.",
-  "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. We installed and imported llama-index-core. The pricing page loaded, but the crawl did not clearly show a free cloud tier, so that part stays unconfirmed.",
+  "shortDescription": "Open-source framework for retrieval and agents. The cloud free plan includes 10,000 credits.",
+  "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. We installed and imported llama-index-core. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
   "categories": [
     "agent-frameworks",
     "search-rag"
@@ -27,8 +27,11 @@
   "pricingNotes": "Confirm LlamaCloud tiers on official pricing page before publishing $ amounts.",
   "pricingUrl": "https://www.llamaindex.ai/pricing",
   "docsUrl": "https://docs.llamaindex.ai/en/stable/",
-  "freeTier": null,
-  "freeTierNotes": "OSS core is free to install. Pricing page HTTP 200 but crawl text did not clearly extract a free SaaS tier; treat cloud free tier as unconfirmed from this pass.",
+  "freeTier": true,
+  "freeTierNotes": "10,000 credits.",
+  "startingPrice": 50,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-16",
   "openSource": true,
   "repoUrl": "https://github.com/run-llama/llama_index",
   "bestFor": [

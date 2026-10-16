@@ -56,6 +56,12 @@ export type Tool = {
   pricingModel: PricingModel[];
   pricingNotes: string | null;
   pricingUrl: string | null;
+  /** Lowest paid plan, USD per month. Null when the official page did not show one. */
+  startingPrice: number | null;
+  /** Trial length as written on the official pricing page, such as "7 days". */
+  freeTrial: string | null;
+  /** YYYY-MM-DD when the official pricing page was fetched. */
+  pricingCheckedAt: string | null;
   docsUrl: string | null;
   freeTier: boolean | null;
   freeTierNotes: string | null;
