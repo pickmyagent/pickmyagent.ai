@@ -156,8 +156,7 @@ export default function HomePage() {
           </h2>
           <p className="mt-2 text-muted">
             Free editorial review while we grow the catalog. Fast-track and
-            featured options come later (prices TBA — don’t invent them on the
-            homepage).
+            featured options are coming soon.
           </p>
           <Link
             href="/submit"
