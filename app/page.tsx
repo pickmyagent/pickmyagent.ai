@@ -50,7 +50,9 @@ export default function HomePage() {
           find what AI tool is best suited to handle your use case. Tell us
           what you’re trying to do with AI, whether that’s creating clips for
           YouTube videos, automating personal tasks, or even generating your
-          own short film.
+          own short film. PickMyAgent searches, gathers, and organizes the
+          tools that can do the job, then helps you find the right AI tool and
+          compare costs.
         </p>
       </section>
 
