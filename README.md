@@ -59,7 +59,7 @@ Optional environment variables, all public because the forms run in the browser:
 
 | Variable | Effect |
 | --- | --- |
-| `NEXT_PUBLIC_NEWSLETTER_FORM_URL` | Beehiiv embed or subscribe URL. The home page and footer post the `email` field here. If unset, the signup is hidden. |
+| `NEXT_PUBLIC_NEWSLETTER_FORM_URL` | Optional Beehiiv publication base URL. When unset, signup uses `https://johnnys-newsletter-877787.beehiiv.com`. The form opens `/subscribe?email=` in a new tab. |
 | `NEXT_PUBLIC_SUBMIT_EMAIL` | Submit form opens a `mailto:` draft to this address |
 | `NEXT_PUBLIC_SUPABASE_URL` | Community board. If this or the anon key is unset, `/community` says Coming soon and the nav link is hidden. |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Public Supabase key for the community board. |
@@ -68,7 +68,7 @@ Optional environment variables, all public because the forms run in the browser:
 
 Community setup is in [SETUP.md](SETUP.md). Stay on the Supabase free plan.
 
-Until the newsletter URL is set, the signup is not rendered. The submit form copies the text to the clipboard when no inbox is set. Nothing is auto-published.
+The newsletter signup is on by default. The submit form copies the text to the clipboard when no inbox is set. Nothing is auto-published.
 
 Point `www.pickmyagent.ai` at the Vercel project after the domain is registered. Canonical URLs use `https://www.pickmyagent.ai`.
 

@@ -1,6 +1,19 @@
-export function getNewsletterFormUrl(): string | null {
-  const url = process.env.NEXT_PUBLIC_NEWSLETTER_FORM_URL?.trim();
-  return url || null;
+/** Public Beehiiv publication. Not a secret. Override with NEXT_PUBLIC_NEWSLETTER_FORM_URL. */
+export const BEEHIIV_PUBLICATION_URL =
+  "https://johnnys-newsletter-877787.beehiiv.com";
+
+export function getNewsletterPublicationUrl(): string {
+  const override = process.env.NEXT_PUBLIC_NEWSLETTER_FORM_URL?.trim().replace(
+    /\/+$/,
+    "",
+  );
+  return override || BEEHIIV_PUBLICATION_URL;
+}
+
+/** Hosted subscribe page. A GET with `email` opens it; Beehiiv does not prefill that field. */
+export function getNewsletterFormUrl(): string {
+  const base = getNewsletterPublicationUrl();
+  return base.endsWith("/subscribe") ? base : `${base}/subscribe`;
 }
 
 export function getSubmitEmail(): string | null {
