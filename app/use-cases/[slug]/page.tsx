@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
+import { RankingNote } from "@/components/ranking-note";
 import { ToolCard } from "@/components/tool-card";
 import { getSite, getTools, getUseCase, getUseCases } from "@/lib/catalog";
 import { absoluteUrl, breadcrumbLd, itemListLd } from "@/lib/jsonld";
@@ -86,6 +87,7 @@ export default async function UseCasePage({
         we read the official site on {site.catalogCheckedDate}.
       </p>
 
+      <RankingNote className="mt-6" />
       <h2 className="mt-10 text-xl font-semibold">Short list</h2>
       <ul className="mt-4 grid gap-3 lg:grid-cols-2">
         {groups.recommended.map(({ tool, why }) => (

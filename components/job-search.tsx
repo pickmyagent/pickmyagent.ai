@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { StatusBadge } from "@/components/badges";
+import { RankingNote } from "@/components/ranking-note";
 import { formatDate } from "@/lib/format";
 import { rankCatalogQuery } from "@/lib/search";
 import type { Category, Tool, UseCase } from "@/lib/types";
@@ -83,6 +84,8 @@ export function JobSearch({
           </Link>
         </div>
       </form>
+
+      <RankingNote className="mt-4" />
 
       <section id="use-cases" className="mt-14 scroll-mt-24">
         <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">

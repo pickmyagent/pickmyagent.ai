@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/tools",
     "/new",
     "/how-we-test",
+    "/how-we-rank",
     "/submit",
     "/about",
     "/advertise",

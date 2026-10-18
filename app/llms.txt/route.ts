@@ -21,6 +21,7 @@ export function GET() {
     `- [Use cases](${site.url}/use-cases)`,
     `- [Categories](${site.url}/categories)`,
     `- [How we test](${site.url}/how-we-test)`,
+    `- [How we rank tools](${site.url}/how-we-rank)`,
     `- [About](${site.url}/about)`,
     `- [Community](${site.url}/community)`,
     `- [New this week](${site.url}/new)`,
