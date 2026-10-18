@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
+import { RankingNote } from "@/components/ranking-note";
 import { ToolCard } from "@/components/tool-card";
 import { getCategories, getCategory, getSite, getTools } from "@/lib/catalog";
 import { absoluteUrl, breadcrumbLd, itemListLd } from "@/lib/jsonld";
@@ -69,6 +70,7 @@ export default async function CategoryPage({
         {category.title}
       </h1>
       <p className="mt-3 max-w-2xl text-lg text-muted">{category.summary}</p>
+      <RankingNote className="mt-4" />
       <ul className="mt-8 grid gap-3 sm:grid-cols-2">
         {tools.map((tool) => (
           <li key={tool.id}>

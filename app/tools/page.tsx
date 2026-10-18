@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { JsonLd } from "@/components/json-ld";
 import { PageHeader } from "@/components/page-header";
+import { RankingNote } from "@/components/ranking-note";
 import { ToolBrowser } from "@/components/tool-browser";
 import { getSite, getTools, getUseCases } from "@/lib/catalog";
 import { absoluteUrl, breadcrumbLd, itemListLd } from "@/lib/jsonld";
@@ -40,6 +41,7 @@ export default function ToolsPage() {
         title="Tools"
         lede="Filter by the job, the kind of product, and how far we actually checked it. Checked dates are from the catalog pass, not a user review."
       />
+      <RankingNote className="mb-4" />
       <Suspense fallback={<p className="text-muted">Loading filters…</p>}>
         <ToolBrowser
           tools={tools}

@@ -4,8 +4,9 @@ import { RobotMark } from "@/components/robot-mark";
 
 const LINKS = [
   { href: "/about", label: "About" },
-  { href: "/community", label: "Community" },
+  { href: "/how-we-rank", label: "How we rank" },
   { href: "/advertise", label: "Advertise with us" },
+  { href: "/community", label: "Community" },
   { href: "/categories", label: "Categories" },
   { href: "/how-we-test", label: "How we test" },
   { href: "/new", label: "New this week" },
