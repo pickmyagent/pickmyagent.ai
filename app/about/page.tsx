@@ -41,12 +41,6 @@ export default function AboutPage() {
           AI tools that don’t do what you need them to.
         </p>
         <p>
-          When we say we’ve reviewed every tool ourselves, we mean it. Founder
-          David W. Bortz, in partnership with his AI agent of choice (we’ll keep
-          that a secret), painstakingly reviewed every tool searchable on
-          PickMyAgent.
-        </p>
-        <p>
           No hype, no hour-long rabbit holes, no wasted subscriptions. Just the
           right AI tool for the job, so you can get back to creating.
         </p>
