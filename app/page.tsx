@@ -46,13 +46,15 @@ export default function HomePage() {
           Find the AI tool that fits the job.
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-muted">
-          PickMyAgent is an Agentic Tool directory where you can discover and
-          find what AI tool is best suited to handle your use case. Tell us
-          what you’re trying to do with AI, whether that’s creating clips for
-          YouTube videos, automating personal tasks, or even generating your
-          own short film. PickMyAgent searches, gathers, and organizes the
-          tools that can do the job, then helps you find the right AI tool and
-          compare costs.
+          PickMyAgent is the world’s only objective Agentic Tool directory where
+          you can discover, compare and select what AI tool is best suited to
+          handle your use case. Tell us what you’re trying to do with AI,
+          whether that’s creating clips for YouTube videos, making a ‘sizzle’
+          reel from your gaming stream, or even generating your own short film.
+          PickMyAgent searches, gathers, and organizes the agentic tools that
+          can do the job, helping you find the right AI tool the very first
+          time. Compare features, functionality, and even compare costs to know
+          which tool is right for you today!
         </p>
       </section>
 
