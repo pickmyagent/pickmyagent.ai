@@ -8,11 +8,15 @@ export function NewsletterSignup({
   className?: string;
 }) {
   const action = getNewsletterFormUrl();
-  if (!action) return null;
   const emailId = `${idPrefix}-email`;
 
   return (
-    <form action={action} method="post" className={className}>
+    <form
+      action={action}
+      method="get"
+      target="_blank"
+      className={className}
+    >
       <p className="text-base leading-relaxed">
         Get the best new AI tools every week. Free.
       </p>
