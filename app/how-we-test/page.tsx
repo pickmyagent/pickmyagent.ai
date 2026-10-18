@@ -132,9 +132,8 @@ export default function HowWeTestPage() {
           </li>
           <li>We do not sell the smoke-tested badge.</li>
           <li>
-            Paid “Featured” placement, when it exists, will be labeled Featured
-            (paid) and is separate from testing. None of the current listings
-            are paid placements.
+            Any sponsored or featured placement is labeled Sponsored and is
+            separate from testing. No tool can pay to change its ranking.
           </li>
           <li>There are no star ratings, testimonials, or user counts on this site.</li>
         </ul>

@@ -42,9 +42,10 @@ export default function AdvertisePage() {
       />
       <div className="space-y-4 text-base leading-relaxed text-muted">
         <p>
-          Sponsorships are marked when they run. They do not change smoke-test
-          badges, check dates, or which tools the editorial short list
-          recommends.
+          Any sponsored or featured placement is labeled Sponsored. Sponsorships
+          do not change smoke-test badges, check dates, rankings, or which
+          tools the editorial short list recommends. Ask us about featured and
+          sponsored placements.
         </p>
       </div>
       <section className="mt-8">
@@ -54,9 +55,6 @@ export default function AdvertisePage() {
             <li key={option.title} className="border border-line bg-panel p-4">
               <p className="font-semibold">{option.title}</p>
               <p className="mt-1 text-sm leading-relaxed text-muted">{option.detail}</p>
-              <p className="mt-3 font-mono text-xs tracking-[0.14em] text-gold uppercase">
-                Coming soon
-              </p>
             </li>
           ))}
         </ul>
