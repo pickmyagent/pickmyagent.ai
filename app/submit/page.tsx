@@ -24,7 +24,7 @@ export default function SubmitPage() {
       <PageHeader
         eyebrow="Catalog"
         title="List your AI or agent tool"
-        lede="Free editorial review while we grow the catalog. Fast-track and featured options are coming soon."
+        lede="Free editorial review while we grow the catalog. Ask us about featured and sponsored placements."
       />
       <SubmitForm submitEmail={getSubmitEmail()} />
     </div>

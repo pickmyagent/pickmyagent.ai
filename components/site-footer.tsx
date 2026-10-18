@@ -28,9 +28,9 @@ export function SiteFooter() {
               PickMyAgent
             </p>
             <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted">
-              PickMyAgent is an independent directory. We may use affiliate
-              links later; if we do, we’ll disclose them. Paid placements will
-              be marked.
+              PickMyAgent is an independent directory. Affiliate links are
+              disclosed, and commissions never affect rankings. Any sponsored
+              or featured placement is labeled Sponsored.
             </p>
             <NewsletterSignup idPrefix="footer-newsletter" className="mt-6 max-w-xl" />
           </div>

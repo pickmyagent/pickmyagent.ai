@@ -133,8 +133,8 @@ export default function HomePage() {
           ))}
         </ol>
         <p className="mt-4 max-w-3xl text-muted">
-          We do not sell the smoke-tested badge. Paid “Featured” placement (when
-          offered) is labeled as paid and is separate from testing.
+          We do not sell the smoke-tested badge. Paid “Featured” placement is
+          labeled Sponsored and is separate from testing.
         </p>
         <Link
           href="/how-we-test"
@@ -157,8 +157,8 @@ export default function HomePage() {
             List your AI or agent tool
           </h2>
           <p className="mt-2 text-muted">
-            Free editorial review while we grow the catalog. Fast-track and
-            featured options are coming soon.
+            Free editorial review while we grow the catalog. Ask us about
+            featured and sponsored placements.
           </p>
           <Link
             href="/submit"

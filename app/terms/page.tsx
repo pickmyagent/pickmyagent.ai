@@ -46,10 +46,10 @@ export default function TermsPage() {
           checked means we read public pages and did not run that install.
         </p>
         <p>
-          There is no paid placement in the current catalog. If we add featured
-          slots later, paid ones will be labeled Featured (paid) and will stay
-          separate from testing. Affiliate links, if added later, will be
-          disclosed.
+          No tool can pay to change its ranking, position, or strength and
+          weakness notes. Any sponsored or featured placement is labeled
+          Sponsored and stays separate from testing. Affiliate links are
+          disclosed, and commissions never affect rankings.
         </p>
         <p>
           The site is provided as-is, without a warranty that every link will

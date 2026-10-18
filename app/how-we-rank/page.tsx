@@ -27,9 +27,8 @@ export default function HowWeRankPage() {
       <div className="space-y-4 text-base leading-relaxed text-muted">
         <p>
           No tool can pay to change its ranking, its position on a list, or the
-          strength and weakness bullets we write. Sponsored or featured
-          placements are not for sale yet. When they are, each one will be
-          labeled{" "}
+          strength and weakness bullets we write. Any sponsored or featured
+          placement is always clearly labeled{" "}
           <strong className="font-semibold text-text">Sponsored</strong>. That
           label is separate from the editorial list.
         </p>

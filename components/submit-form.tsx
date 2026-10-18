@@ -140,7 +140,7 @@ export function SubmitForm({ submitEmail }: { submitEmail: string | null }) {
       </button>
       <p className="text-sm leading-relaxed text-muted">
         Free editorial review while we grow the catalog. Nothing is
-        auto-published. Fast-track and featured options are coming soon.
+        auto-published. Ask us about featured and sponsored placements.
       </p>
       {status ? (
         <p role="status" className="text-sm text-gold">
