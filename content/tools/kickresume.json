@@ -1,0 +1,52 @@
+{
+  "id": "kickresume",
+  "slug": "kickresume",
+  "name": "Kickresume",
+  "websiteUrl": "https://www.kickresume.com/en/",
+  "affiliateUrl": null,
+  "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try; no monthly price listed.",
+  "longDescription": "Kickresume's homepage says its AI resume writer generates work-experience bullets from a job title, and that you can score a resume and tailor it to a job description. The page says the builder is free to try. It did not list a monthly plan price. We did not create an account.",
+  "categories": ["hiring"],
+  "useCaseTags": ["write-resume"],
+  "toolTypes": ["other"],
+  "platforms": ["web"],
+  "pricingModel": ["freemium"],
+  "pricingNotes": "The homepage says the builder is free to try. It did not list a monthly plan price.",
+  "pricingUrl": "https://www.kickresume.com/en/",
+  "docsUrl": "https://www.kickresume.com/en/",
+  "freeTier": null,
+  "freeTierNotes": "The homepage says the builder is free to try and does not spell out a lasting free plan.",
+  "startingPrice": null,
+  "freeTrial": "Free to try",
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Drafting resume bullets from a job title",
+    "Scoring a resume and tailoring it to a posting"
+  ],
+  "notIdealFor": [
+    "Screening applicants as a recruiter",
+    "A confirmed monthly price from this listing"
+  ],
+  "strength": "Kickresume's homepage says its AI writes resume bullets from a job title and can score and tailor the resume.",
+  "weakness": "The homepage says the builder is free to try and does not list a monthly plan price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T22:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": ["https://www.kickresume.com/en/"],
+  "siteLoad": { "status": 200, "finalUrl": "https://www.kickresume.com/en/" },
+  "useCaseFit": {
+    "write-resume": "Writes resume bullets from a job title and can score the resume."
+  }
+}

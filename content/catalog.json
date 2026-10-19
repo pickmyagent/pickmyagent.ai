@@ -935,7 +935,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "creator-video-audio"
+        "video-clips"
       ],
       "toolTypes": [
         "creative"
@@ -1006,7 +1006,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "creator-video-audio"
+        "video-clips"
       ],
       "toolTypes": [
         "creative"
@@ -2245,7 +2245,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "creator-video-audio"
+        "video-clips"
       ],
       "toolTypes": [
         "creative"
@@ -2597,7 +2597,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "creator-video-audio"
+        "video-clips"
       ],
       "toolTypes": [
         "creative"
@@ -2672,7 +2672,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "creator-video-audio"
+        "voice"
       ],
       "toolTypes": [
         "creative"
@@ -2728,7 +2728,7 @@
         "finalUrl": "https://elevenlabs.io/"
       },
       "useCaseFit": {
-        "game-creative": "Generates voice and audio, which is a different job from cutting a video."
+        "voice-audio": "Generates voice and audio from a prompt."
       }
     },
     {
@@ -3720,9 +3720,7 @@
       "categories": [
         "creative-media"
       ],
-      "useCaseTags": [
-        "creator-video-audio"
-      ],
+      "useCaseTags": [],
       "toolTypes": [
         "creative"
       ],
@@ -3777,9 +3775,7 @@
         "status": 200,
         "finalUrl": "https://www.heygen.com/"
       },
-      "useCaseFit": {
-        "game-creative": "Makes avatar videos, and the free plan includes 3 videos of up to 1 minute."
-      }
+      "useCaseFit": {}
     },
     {
       "id": "higgsfield",
@@ -3793,8 +3789,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "game-creative",
-        "creator-video-audio"
+        "video-generation"
       ],
       "toolTypes": [
         "creative"
@@ -3849,7 +3844,7 @@
         "finalUrl": "https://higgsfield.ai/"
       },
       "useCaseFit": {
-        "game-creative": "Generates cinematic video with camera-motion presets such as POV and helicopter shots."
+        "video-generation": "Generates cinematic clips with camera presets such as a POV or a helicopter shot."
       }
     },
     {
@@ -4270,7 +4265,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "creator-video-audio"
+        "video-clips"
       ],
       "toolTypes": [
         "creative"
@@ -4468,6 +4463,75 @@
       },
       "useCaseFit": {
         "tutoring": "Tutor and teaching assistant that offers teachers a free sign-up."
+      }
+    },
+    {
+      "id": "kickresume",
+      "slug": "kickresume",
+      "name": "Kickresume",
+      "websiteUrl": "https://www.kickresume.com/en/",
+      "affiliateUrl": null,
+      "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try; no monthly price listed.",
+      "longDescription": "Kickresume's homepage says its AI resume writer generates work-experience bullets from a job title, and that you can score a resume and tailor it to a job description. The page says the builder is free to try. It did not list a monthly plan price. We did not create an account.",
+      "categories": [
+        "hiring"
+      ],
+      "useCaseTags": [
+        "write-resume"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "The homepage says the builder is free to try. It did not list a monthly plan price.",
+      "pricingUrl": "https://www.kickresume.com/en/",
+      "docsUrl": "https://www.kickresume.com/en/",
+      "freeTier": null,
+      "freeTierNotes": "The homepage says the builder is free to try and does not spell out a lasting free plan.",
+      "startingPrice": null,
+      "freeTrial": "Free to try",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Drafting resume bullets from a job title",
+        "Scoring a resume and tailoring it to a posting"
+      ],
+      "notIdealFor": [
+        "Screening applicants as a recruiter",
+        "A confirmed monthly price from this listing"
+      ],
+      "strength": "Kickresume's homepage says its AI writes resume bullets from a job title and can score and tailor the resume.",
+      "weakness": "The homepage says the builder is free to try and does not list a monthly plan price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T22:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.kickresume.com/en/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.kickresume.com/en/"
+      },
+      "useCaseFit": {
+        "write-resume": "Writes resume bullets from a job title and can score the resume."
       }
     },
     {
@@ -5089,7 +5153,6 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-land",
         "rank-property-deals"
       ],
       "toolTypes": [
@@ -5120,7 +5183,6 @@
         "finalUrl": "https://www.mashvisor.com/pricing"
       },
       "useCaseFit": {
-        "find-land": "Compares rental comps on a property, and Lite is $49.99 per month billed annually.",
         "rank-property-deals": "Compares rental comps and income estimates on a property."
       }
     },
@@ -5221,7 +5283,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "game-creative"
+        "image-3d"
       ],
       "toolTypes": [
         "creative"
@@ -5278,7 +5340,7 @@
         "finalUrl": "https://www.meshy.ai/"
       },
       "useCaseFit": {
-        "game-creative": "Turns text or an image into a 3D asset, and the pricing page shows a $0 plan."
+        "image-3d": "Turns text or a picture into a 3D asset."
       }
     },
     {
@@ -5361,7 +5423,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "game-creative"
+        "image-3d"
       ],
       "toolTypes": [
         "creative"
@@ -5421,7 +5483,7 @@
         "finalUrl": "https://www.midjourney.com/"
       },
       "useCaseFit": {
-        "game-creative": "Generates images on a paid plan, which is a different job from editing video."
+        "image-3d": "Draws images from a text prompt."
       }
     },
     {
@@ -5501,14 +5563,12 @@
       "name": "modl.ai",
       "websiteUrl": "https://modl.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Game AI tools. A public price was not confirmed.",
-      "longDescription": "modl.ai is a game AI product. A public price was not confirmed, and the free tier is unconfirmed. We did not create an account.",
+      "shortDescription": "AI agents that test an uploaded game build and report bugs.",
+      "longDescription": "modl.ai's homepage says its agents test a game from an uploaded build, with no engine integration, and write bug reports that include visuals and a severity score. The fetched page did not list a price. We did not upload a build.",
       "categories": [
         "game-ai"
       ],
-      "useCaseTags": [
-        "game-npcs"
-      ],
+      "useCaseTags": [],
       "toolTypes": [
         "other"
       ],
@@ -5518,30 +5578,30 @@
       "pricingModel": [
         "contact"
       ],
-      "pricingNotes": "No public pricing page found at /pricing.",
+      "pricingNotes": "The homepage did not list a price.",
       "pricingUrl": "https://modl.ai/",
       "docsUrl": "https://modl.ai/",
       "freeTier": null,
       "freeTierNotes": null,
       "startingPrice": null,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-19",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
-        "Game teams looking up modl.ai’s current product page"
+        "A QA team that wants agents to play through an uploaded game build"
       ],
       "notIdealFor": [
-        "A self-serve price comparison",
-        "A hands-on install in a game project"
+        "In-game character dialogue",
+        "A published monthly price"
       ],
-      "strength": "The homepage loaded and describes game AI tools for teams checking the current product.",
-      "weakness": "A public price was not confirmed, so this listing does not state a monthly price.",
+      "strength": "The modl homepage says its agents test an uploaded game build and write bug reports with visuals and a severity score.",
+      "weakness": "The homepage did not list a price, so this listing states no monthly plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
-      "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Homepage fetched on 2026-10-19. No build was uploaded and no account was created.",
       "handsOn": {
         "performed": false
       },
@@ -5553,7 +5613,7 @@
       "featuredPaid": false,
       "status": "published",
       "publishedAt": "2026-10-15",
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-19",
       "sources": [
         "https://modl.ai/"
       ],
@@ -5561,9 +5621,7 @@
         "status": 200,
         "finalUrl": "https://modl.ai/"
       },
-      "useCaseFit": {
-        "game-npcs": "Game AI tools for teams."
-      }
+      "useCaseFit": {}
     },
     {
       "id": "motion",
@@ -6077,7 +6135,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "creator-video-audio"
+        "video-clips"
       ],
       "toolTypes": [
         "creative"
@@ -6279,7 +6337,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "creator-video-audio"
+        "video-generation"
       ],
       "toolTypes": [
         "creative"
@@ -6342,7 +6400,7 @@
         "finalUrl": "https://pika.art/"
       },
       "useCaseFit": {
-        "game-creative": "Generates a short video from a prompt, and Starter is $10 per month."
+        "video-generation": "Creates a short video from a prompt, a photo, or keyframes."
       }
     },
     {
@@ -7038,6 +7096,74 @@
       }
     },
     {
+      "id": "rezi",
+      "slug": "rezi",
+      "name": "Rezi",
+      "websiteUrl": "https://www.rezi.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "AI resume builder that scores a resume and targets keywords. Pro is $29 a month.",
+      "longDescription": "Rezi's homepage says it builds a resume, scores it section by section, and pulls missing keywords from a pasted job description. The same page lists a Free plan at $0 a month for one resume, limited AI tools, and up to three PDF downloads, and Pro at $29 a month. We did not create an account.",
+      "categories": [
+        "hiring"
+      ],
+      "useCaseTags": [
+        "write-resume"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "The homepage lists Free at $0 a month for one resume and three PDF downloads, and Pro at $29 a month.",
+      "pricingUrl": "https://www.rezi.ai/",
+      "docsUrl": "https://www.rezi.ai/",
+      "freeTier": true,
+      "freeTierNotes": "One resume, limited AI tools, and up to three PDF downloads. No card required to begin.",
+      "startingPrice": 29,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Building a resume and scoring it against a job description"
+      ],
+      "notIdealFor": [
+        "Screening applicants as a recruiter"
+      ],
+      "strength": "Rezi's homepage says it builds a resume, scores it, and pulls missing keywords from a pasted job description.",
+      "weakness": "The Free plan allows one resume and three PDF downloads, and Pro is $29 a month.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T22:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.rezi.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.rezi.ai/"
+      },
+      "useCaseFit": {
+        "write-resume": "Builds a resume, scores the sections, and pulls keywords from a job description."
+      }
+    },
+    {
       "id": "rows",
       "slug": "rows",
       "name": "Rows",
@@ -7117,8 +7243,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "game-creative",
-        "creator-video-audio"
+        "video-generation"
       ],
       "toolTypes": [
         "creative"
@@ -7172,7 +7297,7 @@
         "finalUrl": "https://runway.com/"
       },
       "useCaseFit": {
-        "game-creative": "Generates and edits video, and the pricing page lists plans from $12 per month."
+        "video-generation": "Generates footage from a prompt and edits that video."
       }
     },
     {
@@ -7187,7 +7312,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "game-creative"
+        "image-3d"
       ],
       "toolTypes": [
         "creative"
@@ -7244,7 +7369,7 @@
         "finalUrl": "https://www.scenario.com/"
       },
       "useCaseFit": {
-        "game-creative": "Generates game art, and the free plan includes 50 credits per day."
+        "image-3d": "Draws game art from a prompt."
       }
     },
     {
@@ -7326,8 +7451,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "game-creative",
-        "creator-video-audio"
+        "video-generation"
       ],
       "toolTypes": [
         "creative",
@@ -7385,7 +7509,7 @@
         "finalUrl": "https://dreamina.capcut.com/documentation"
       },
       "useCaseFit": {
-        "game-creative": "Generates video from text, images, or a reference clip in Dreamina, with a documented ModelArk API."
+        "video-generation": "Renders video from text, an image, or a reference clip in Dreamina."
       }
     },
     {
@@ -7801,7 +7925,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "creator-video-audio"
+        "video-clips"
       ],
       "toolTypes": [
         "creative"
@@ -7869,8 +7993,8 @@
       "name": "Synthesis Tutor",
       "websiteUrl": "https://www.synthesis.com/tutor",
       "affiliateUrl": null,
-      "shortDescription": "Tutor product with a free trial. No plan price was confirmed.",
-      "longDescription": "Synthesis Tutor's page offers a free trial and describes a tutor for kids. A marketing line said less than $1 a day, which is not a plan price, so this listing does not convert it into a monthly price. We did not start the trial.",
+      "shortDescription": "Math tutor for ages 5 to 11 that adapts the lesson to the child.",
+      "longDescription": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11, covering K-5 math and adapting to the child. It offers a 7-day free trial. The same page lists several plan prices that do not agree, so this listing does not state one monthly price. We did not start the trial.",
       "categories": [
         "learning"
       ],
@@ -7886,7 +8010,7 @@
       "pricingModel": [
         "subscription"
       ],
-      "pricingNotes": "The tutor page offers a free trial. A 'less than $1 a day' line is marketing, not a plan price, so no starting price is set.",
+      "pricingNotes": "The tutor page offers a 7-day free trial and lists several plan prices that do not agree, so no single monthly price is set.",
       "pricingUrl": "https://www.synthesis.com/tutor",
       "docsUrl": "https://www.synthesis.com/tutor",
       "freeTier": false,
@@ -7897,18 +8021,18 @@
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
-        "Trying a kids' tutor that offers a free trial on the official page"
+        "A family looking for a math tutor for a child aged 5 to 11"
       ],
       "notIdealFor": [
         "An adult professional course"
       ],
-      "strength": "Synthesis Tutor's official page offers a free trial for its tutor.",
-      "weakness": "The fetched page did not state a plan price in dollars, only a marketing line about daily cost.",
+      "strength": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11 that adapts to the child.",
+      "weakness": "The tutor page lists several plan prices that do not agree, so this listing states no single monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official tutor page fetched on 2026-10-19. No trial was started.",
       "handsOn": {
         "performed": false
       },
@@ -7927,7 +8051,7 @@
         "finalUrl": "https://www.synthesis.com/tutor"
       },
       "useCaseFit": {
-        "tutoring": "Tutor with a free trial offered on the official tutor page."
+        "tutoring": "Teaches K-5 math and adapts each lesson to the child."
       }
     },
     {
@@ -8142,6 +8266,75 @@
       },
       "useCaseFit": {
         "do-taxes": "Offers guided online tax filing and says you can start for free."
+      }
+    },
+    {
+      "id": "teal",
+      "slug": "teal",
+      "name": "Teal",
+      "websiteUrl": "https://www.tealhq.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Resume builder that tailors a resume to a job description. No monthly price was listed.",
+      "longDescription": "Teal's homepage says you can create an ATS-friendly resume, tailor it with keywords from a job description, and track jobs saved from job boards with its Chrome extension. It also says you can create a free account. The fetched page did not list a monthly plan price. We did not create an account.",
+      "categories": [
+        "hiring"
+      ],
+      "useCaseTags": [
+        "write-resume"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "The homepage says you can create a free account. It did not list a monthly plan price.",
+      "pricingUrl": "https://www.tealhq.com/",
+      "docsUrl": "https://www.tealhq.com/",
+      "freeTier": null,
+      "freeTierNotes": "The homepage says you can create a free account. It did not spell out what stays free.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Tailoring a resume to keywords in a job description",
+        "Tracking jobs saved from job boards"
+      ],
+      "notIdealFor": [
+        "Screening someone else's resume as a recruiter",
+        "A confirmed monthly price from this listing"
+      ],
+      "strength": "Teal's homepage says its AI tailors a resume to keywords in a job description and that you can create a free account.",
+      "weakness": "The homepage did not list a monthly plan price, so this listing states no subscription price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T22:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.tealhq.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.tealhq.com/"
+      },
+      "useCaseFit": {
+        "write-resume": "Tailors a resume to keywords in a job description and tracks saved jobs."
       }
     },
     {
@@ -8805,10 +8998,6 @@
           "why": "Property search with an AI search box and a 7-day trial."
         },
         {
-          "toolId": "mashvisor",
-          "why": "Rental comps and property analysis on a paid plan."
-        },
-        {
           "toolId": "regrid",
           "why": "Nationwide parcel boundaries and owner fields. Pricing is a data store, not one monthly price."
         }
@@ -8856,36 +9045,35 @@
     },
     {
       "slug": "game-creative",
-      "title": "Create for games & streams",
-      "summary": "Art, 3D, voice, and video for makers and creators.",
+      "title": "Turn long videos into short clips",
+      "summary": "Find moments in a long video, reframe them, and add captions.",
       "audienceHints": [
         "gamers",
         "creators"
       ],
       "matchTags": [
-        "game-creative",
-        "creator-video-audio"
+        "video-clips"
       ],
       "recommended": [
         {
-          "toolId": "scenario",
-          "why": "Game art. The pricing page we checked mentions a free plan."
-        },
-        {
-          "toolId": "meshy",
-          "why": "3D assets from text or images. Pricing page showed a $0 option."
-        },
-        {
-          "toolId": "elevenlabs",
-          "why": "Voice. Pricing page loaded, but the extract was too thin to confirm a free tier."
-        },
-        {
-          "toolId": "runway",
-          "why": "Video generation and editing. Pricing page loaded; free tier unconfirmed."
-        },
-        {
           "toolId": "opus",
-          "why": "Short clips from a long video — the stream-VOD job. A lasting free plan was not clearly confirmed."
+          "why": "Cuts a long video into short clips, and the free plan includes 60 credits a month."
+        },
+        {
+          "toolId": "captions",
+          "why": "Trims a video and adds on-screen words for a social clip."
+        },
+        {
+          "toolId": "capcut",
+          "why": "Edits video for YouTube, TikTok, and Reels, including basic cuts."
+        },
+        {
+          "toolId": "eklipse",
+          "why": "Finds highlight clips from Twitch, YouTube, and Kick."
+        },
+        {
+          "toolId": "streamladder",
+          "why": "Reframes a horizontal stream clip into a vertical short."
         }
       ],
       "jobPhrase": "turning a long video into short clips",
@@ -8962,6 +9150,37 @@
         }
       ],
       "intro": "AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve."
+    },
+    {
+      "slug": "image-3d",
+      "title": "Make images and 3D assets",
+      "summary": "Describe an image or a 3D asset and generate it in an art app.",
+      "audienceHints": [
+        "creators",
+        "gamers"
+      ],
+      "matchTags": [
+        "image-3d"
+      ],
+      "recommended": [
+        {
+          "toolId": "midjourney",
+          "why": "Draws images from a text prompt."
+        },
+        {
+          "toolId": "scenario",
+          "why": "Draws game art from a prompt."
+        },
+        {
+          "toolId": "meshy",
+          "why": "Turns text or a picture into a 3D asset."
+        }
+      ],
+      "jobPhrase": "making images and 3D assets",
+      "assistantTask": "describe the image or 3D asset and list what to change",
+      "assistantContext": "making an image or a 3D asset",
+      "searchTopic": "the picture or model you want",
+      "intro": "AI agents can describe the image or 3D asset you want and list what to change, so you generate it and check it yourself."
     },
     {
       "slug": "it-helpdesk",
@@ -9474,6 +9693,62 @@
       "intro": "AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss."
     },
     {
+      "slug": "video-generation",
+      "title": "Generate a video from a prompt",
+      "summary": "Outline a shot, name the camera move, and generate the clip in a video app.",
+      "audienceHints": [
+        "creators"
+      ],
+      "matchTags": [
+        "video-generation"
+      ],
+      "recommended": [
+        {
+          "toolId": "higgsfield",
+          "why": "Generates cinematic clips with camera presets such as a POV or a helicopter shot."
+        },
+        {
+          "toolId": "seedance",
+          "why": "Renders video from text, an image, or a reference clip in Dreamina."
+        },
+        {
+          "toolId": "runway",
+          "why": "Generates footage from a prompt and edits that video."
+        },
+        {
+          "toolId": "pika",
+          "why": "Creates a short video from a prompt, a photo, or keyframes."
+        }
+      ],
+      "jobPhrase": "making a cinematic video",
+      "assistantTask": "outline a shot list, name the camera move, and draft the prompt",
+      "assistantContext": "generating a video from a prompt",
+      "searchTopic": "the shot and camera move you want",
+      "intro": "AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself."
+    },
+    {
+      "slug": "voice-audio",
+      "title": "Generate a voice track",
+      "summary": "Draft the words and generate the voice in an audio app.",
+      "audienceHints": [
+        "creators"
+      ],
+      "matchTags": [
+        "voice"
+      ],
+      "recommended": [
+        {
+          "toolId": "elevenlabs",
+          "why": "Generates voice and audio, and the free plan includes 10,000 credits a month."
+        }
+      ],
+      "jobPhrase": "generating a voice track",
+      "assistantTask": "draft a script and describe the voice",
+      "assistantContext": "generating a voice track",
+      "searchTopic": "the voice you want",
+      "intro": "AI agents can draft a script and describe the voice you want, so you generate the audio and check it yourself."
+    },
+    {
       "slug": "workflow-automation",
       "title": "Automate business workflows",
       "summary": "Agents and automations across the apps you already use.",
@@ -9502,6 +9777,36 @@
       "assistantContext": "automating a repeated personal task",
       "searchTopic": "how the apps in your task can connect",
       "intro": "AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual."
+    },
+    {
+      "slug": "write-resume",
+      "title": "Write a resume",
+      "summary": "Draft resume bullets and tailor them to a job description.",
+      "audienceHints": [
+        "job seekers"
+      ],
+      "matchTags": [
+        "write-resume"
+      ],
+      "recommended": [
+        {
+          "toolId": "teal",
+          "why": "Tailors a resume to keywords in a job description, and the homepage offers a free account."
+        },
+        {
+          "toolId": "rezi",
+          "why": "Builds a resume, scores it, and pulls keywords from a job description."
+        },
+        {
+          "toolId": "kickresume",
+          "why": "Writes resume bullets from a job title and can score the resume."
+        }
+      ],
+      "jobPhrase": "writing a resume",
+      "assistantTask": "draft resume bullets and match them to a job description",
+      "assistantContext": "writing a resume",
+      "searchTopic": "the role you are applying for",
+      "intro": "AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you."
     }
   ]
 }

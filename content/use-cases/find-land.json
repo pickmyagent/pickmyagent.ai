@@ -27,10 +27,6 @@
       "why": "Property search with an AI search box and a 7-day trial."
     },
     {
-      "toolId": "mashvisor",
-      "why": "Rental comps and property analysis on a paid plan."
-    },
-    {
       "toolId": "regrid",
       "why": "Nationwide parcel boundaries and owner fields. Pricing is a data store, not one monthly price."
     }

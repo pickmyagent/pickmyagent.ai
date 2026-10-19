@@ -1,35 +1,34 @@
 {
   "slug": "game-creative",
-  "title": "Create for games & streams",
-  "summary": "Art, 3D, voice, and video for makers and creators.",
+  "title": "Turn long videos into short clips",
+  "summary": "Find moments in a long video, reframe them, and add captions.",
   "audienceHints": [
     "gamers",
     "creators"
   ],
   "matchTags": [
-    "game-creative",
-    "creator-video-audio"
+    "video-clips"
   ],
   "recommended": [
     {
-      "toolId": "scenario",
-      "why": "Game art. The pricing page we checked mentions a free plan."
-    },
-    {
-      "toolId": "meshy",
-      "why": "3D assets from text or images. Pricing page showed a $0 option."
-    },
-    {
-      "toolId": "elevenlabs",
-      "why": "Voice. Pricing page loaded, but the extract was too thin to confirm a free tier."
-    },
-    {
-      "toolId": "runway",
-      "why": "Video generation and editing. Pricing page loaded; free tier unconfirmed."
-    },
-    {
       "toolId": "opus",
-      "why": "Short clips from a long video — the stream-VOD job. A lasting free plan was not clearly confirmed."
+      "why": "Cuts a long video into short clips, and the free plan includes 60 credits a month."
+    },
+    {
+      "toolId": "captions",
+      "why": "Trims a video and adds on-screen words for a social clip."
+    },
+    {
+      "toolId": "capcut",
+      "why": "Edits video for YouTube, TikTok, and Reels, including basic cuts."
+    },
+    {
+      "toolId": "eklipse",
+      "why": "Finds highlight clips from Twitch, YouTube, and Kick."
+    },
+    {
+      "toolId": "streamladder",
+      "why": "Reframes a horizontal stream clip into a vertical short."
     }
   ],
   "jobPhrase": "turning a long video into short clips",

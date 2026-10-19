@@ -4,7 +4,7 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "creator-video-audio"
+    "video-generation"
   ],
   "toolTypes": [
     "creative"
@@ -67,6 +67,6 @@
     "finalUrl": "https://pika.art/"
   },
   "useCaseFit": {
-    "game-creative": "Generates a short video from a prompt, and Starter is $10 per month."
+    "video-generation": "Creates a short video from a prompt, a photo, or keyframes."
   }
 }

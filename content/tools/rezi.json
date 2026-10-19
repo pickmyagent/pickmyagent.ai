@@ -1,0 +1,50 @@
+{
+  "id": "rezi",
+  "slug": "rezi",
+  "name": "Rezi",
+  "websiteUrl": "https://www.rezi.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "AI resume builder that scores a resume and targets keywords. Pro is $29 a month.",
+  "longDescription": "Rezi's homepage says it builds a resume, scores it section by section, and pulls missing keywords from a pasted job description. The same page lists a Free plan at $0 a month for one resume, limited AI tools, and up to three PDF downloads, and Pro at $29 a month. We did not create an account.",
+  "categories": ["hiring"],
+  "useCaseTags": ["write-resume"],
+  "toolTypes": ["agent"],
+  "platforms": ["web"],
+  "pricingModel": ["freemium", "subscription"],
+  "pricingNotes": "The homepage lists Free at $0 a month for one resume and three PDF downloads, and Pro at $29 a month.",
+  "pricingUrl": "https://www.rezi.ai/",
+  "docsUrl": "https://www.rezi.ai/",
+  "freeTier": true,
+  "freeTierNotes": "One resume, limited AI tools, and up to three PDF downloads. No card required to begin.",
+  "startingPrice": 29,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Building a resume and scoring it against a job description"
+  ],
+  "notIdealFor": [
+    "Screening applicants as a recruiter"
+  ],
+  "strength": "Rezi's homepage says it builds a resume, scores it, and pulls missing keywords from a pasted job description.",
+  "weakness": "The Free plan allows one resume and three PDF downloads, and Pro is $29 a month.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T22:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": ["https://www.rezi.ai/"],
+  "siteLoad": { "status": 200, "finalUrl": "https://www.rezi.ai/" },
+  "useCaseFit": {
+    "write-resume": "Builds a resume, scores the sections, and pulls keywords from a job description."
+  }
+}

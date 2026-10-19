@@ -27,9 +27,6 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
     "land-id": [
       "Land id looks up parcel boundaries and owner names on land across the country.",
     ],
-    mashvisor: [
-      "Mashvisor estimates rental income, a side number when a land deal also includes a house.",
-    ],
     propstream: [
       "PropStream searches parcel records with the same filters it uses on other land listings.",
     ],
@@ -63,7 +60,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "PortfolioPilot lines up accounts and reads the investment portfolio from them.",
     ],
     range: [
-      "Range includes an AI assistant inside an advisory membership aimed at the portfolio.",
+      "Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.",
     ],
   },
   "do-taxes": {
@@ -132,7 +129,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "create-content": {
     "copy-ai": [
-      "Copy.ai runs marketing content through a workflow instead of a blank page.",
+      "Copy.ai runs marketing content and go-to-market writing through a workflow.",
     ],
     jasper: [
       "Jasper drafts marketing content with agents in a workspace built for that writing.",
@@ -256,7 +253,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "Khanmigo teaches a concept and also helps a teacher plan that same lesson.",
     ],
     "synthesis-tutor": [
-      "Synthesis Tutor teaches a student, and its official page offers a trial.",
+      "Synthesis Tutor teaches K-5 math and adapts each lesson to the child.",
     ],
   },
   "game-creative": {
@@ -272,41 +269,55 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
     eklipse: [
       "Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.",
     ],
-    elevenlabs: [
-      "ElevenLabs records a voice track you can place under a video clip.",
-    ],
-    heygen: [
-      "HeyGen makes a short avatar video of a spokesperson.",
-    ],
-    higgsfield: [
-      "Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.",
-    ],
     kapwing: [
       "Kapwing trims, captions, and resizes a video into a social clip in the browser.",
     ],
-    meshy: [
-      "Meshy turns text or a picture into a 3D asset, a different job from cutting video clips.",
-    ],
-    midjourney: [
-      "Midjourney draws images you can use as concept art beside a video.",
-    ],
     opus: [
       "Opus Clip cuts a long video into short clips.",
+    ],
+    streamladder: [
+      "StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.",
+    ],
+  },
+  "video-generation": {
+    higgsfield: [
+      "Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.",
     ],
     pika: [
       "Pika creates a short video from a prompt, a photo, or keyframes.",
     ],
     runway: [
-      "Runway generates footage and then edits that video for a trailer or a stream.",
-    ],
-    scenario: [
-      "Scenario draws game art, which sits next to a video instead of cutting clips.",
+      "Runway generates footage from a prompt and then edits that video.",
     ],
     seedance: [
       "Seedance renders video from text, an image, or a reference clip in Dreamina.",
     ],
-    streamladder: [
-      "StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.",
+  },
+  "voice-audio": {
+    elevenlabs: [
+      "ElevenLabs generates voice and audio from a prompt.",
+    ],
+  },
+  "image-3d": {
+    meshy: [
+      "Meshy turns text or a picture into a 3D asset.",
+    ],
+    midjourney: [
+      "Midjourney draws images from a text prompt.",
+    ],
+    scenario: [
+      "Scenario draws game art from a prompt.",
+    ],
+  },
+  "write-resume": {
+    kickresume: [
+      "Kickresume writes resume bullets from a job title and scores the draft.",
+    ],
+    rezi: [
+      "Rezi builds a resume, scores the sections, and pulls keywords from a job description.",
+    ],
+    teal: [
+      "Teal writes a resume tailored to a job description and tracks the jobs you save.",
     ],
   },
   "coding-agents": {
@@ -393,9 +404,6 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
     ],
     mistscale: [
       "MistScale remembers what a game character should know about the player.",
-    ],
-    modl: [
-      "modl.ai offers game AI tools for a team that is adding a character.",
     ],
     "nvidia-ace": [
       "NVIDIA ACE for Games offers downloads and plugins for an in-game character.",

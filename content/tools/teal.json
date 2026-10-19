@@ -1,0 +1,52 @@
+{
+  "id": "teal",
+  "slug": "teal",
+  "name": "Teal",
+  "websiteUrl": "https://www.tealhq.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Resume builder that tailors a resume to a job description. No monthly price was listed.",
+  "longDescription": "Teal's homepage says you can create an ATS-friendly resume, tailor it with keywords from a job description, and track jobs saved from job boards with its Chrome extension. It also says you can create a free account. The fetched page did not list a monthly plan price. We did not create an account.",
+  "categories": ["hiring"],
+  "useCaseTags": ["write-resume"],
+  "toolTypes": ["other"],
+  "platforms": ["web"],
+  "pricingModel": ["freemium"],
+  "pricingNotes": "The homepage says you can create a free account. It did not list a monthly plan price.",
+  "pricingUrl": "https://www.tealhq.com/",
+  "docsUrl": "https://www.tealhq.com/",
+  "freeTier": null,
+  "freeTierNotes": "The homepage says you can create a free account. It did not spell out what stays free.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Tailoring a resume to keywords in a job description",
+    "Tracking jobs saved from job boards"
+  ],
+  "notIdealFor": [
+    "Screening someone else's resume as a recruiter",
+    "A confirmed monthly price from this listing"
+  ],
+  "strength": "Teal's homepage says its AI tailors a resume to keywords in a job description and that you can create a free account.",
+  "weakness": "The homepage did not list a monthly plan price, so this listing states no subscription price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T22:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": ["https://www.tealhq.com/"],
+  "siteLoad": { "status": 200, "finalUrl": "https://www.tealhq.com/" },
+  "useCaseFit": {
+    "write-resume": "Tailors a resume to keywords in a job description and tracks saved jobs."
+  }
+}

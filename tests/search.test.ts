@@ -586,12 +586,12 @@ const HEADER_CASES: { query: string; lead: string; intro: string | RegExp }[] = 
   {
     query: "AI for my small business",
     lead: "For help with your small business, here's how each tool can help:",
-    intro: /^AI assistants can help with your small business by turning it into a plan/,
+    intro: /^AI assistants can't run a small business for you/,
   },
   {
     query: "best AI tool for real estate",
     lead: "For help with real estate, here's how each tool can help:",
-    intro: /^AI assistants can help with real estate by turning it into a plan/,
+    intro: REAL_ESTATE_RANK_INTRO,
   },
   {
     query: "is there an AI that can plan my trip",
@@ -600,8 +600,23 @@ const HEADER_CASES: { query: string; lead: string; intro: string | RegExp }[] = 
   },
   {
     query: "Help me with my resume",
-    lead: "For help with your resume, here's how each tool can help:",
-    intro: /^AI assistants can help with your resume by turning it into a plan/,
+    lead: "For writing your resume, here's how each tool can help:",
+    intro: /draft resume bullets/,
+  },
+  {
+    query: "AI video with camera moves",
+    lead: "For making an AI video with camera moves, here's how each tool can help:",
+    intro: /cinematic shot/,
+  },
+  {
+    query: "text to speech",
+    lead: "For making speech from text, here's how each tool can help:",
+    intro: /voice/,
+  },
+  {
+    query: "text to image",
+    lead: "For making an image from text, here's how each tool can help:",
+    intro: /image or 3D/,
   },
   {
     query: "investment portfolio",
@@ -939,6 +954,43 @@ test("regression report for the pull request", () => {
   });
   writeFileSync("/tmp/search-regression-report.json", JSON.stringify(report, null, 2));
   assert.equal(report.length, JOBS.length);
+});
+
+test("specialists stay inside the query domain", () => {
+  const land = rankCatalogQuery("find land", catalog);
+  assert.equal(land.tools.some((tool) => tool.slug === "mashvisor"), false);
+  const cine = rankCatalogQuery("make a cinematic video", catalog);
+  const cineSlugs = cine.tools.map((tool) => tool.slug);
+  for (const banned of ["opus", "elevenlabs", "captions", "meshy", "midjourney", "scenario", "heygen"]) {
+    assert.equal(cineSlugs.includes(banned), false, banned);
+  }
+  assert.ok(cineSlugs.includes("higgsfield"));
+  assert.ok(cineSlugs.includes("seedance"));
+  assert.ok(cineSlugs.indexOf("seedance") < 5);
+  const claude = cine.tools.find((tool) => tool.slug === "claude");
+  assert.ok(claude);
+  assert.match(claude.whyItHelps, /shot list|camera move|prompt/i);
+  assert.equal(/short-clip moments/i.test(claude.whyItHelps), false);
+  for (const tool of cine.tools) {
+    if (!tool.generalPurpose) assert.equal(specialistWhyProblems(tool.name, tool.whyItHelps).length, 0);
+  }
+  const clips = rankCatalogQuery("highlight reel from a kick stream", catalog);
+  const clipSlugs = clips.tools.map((tool) => tool.slug);
+  for (const banned of ["meshy", "midjourney", "scenario", "elevenlabs", "higgsfield"]) {
+    assert.equal(clipSlugs.includes(banned), false, banned);
+  }
+  assert.equal(rankCatalogQuery("screen a resume", catalog).useCases[0]?.slug, "hire-candidates");
+  assert.equal(rankCatalogQuery("write my resume", catalog).useCases[0]?.slug, "write-resume");
+  assert.equal(rankCatalogQuery("text to video", catalog).tools.some((tool) => tool.slug === "seedance"), true);
+  assert.equal(rankCatalogQuery("image to video", catalog).tools.some((tool) => tool.slug === "opus"), false);
+  const deep = rankCatalogQuery("deepseek alternative", catalog);
+  assert.equal(deep.useCases[0]?.slug, "coding-agents");
+  assert.match(deep.intro, /coding models/);
+  const meal = rankCatalogQuery("meal prep for the week", catalog);
+  assert.match(meal.intro, /can't cook the week's meals/);
+  const grocery = rankCatalogQuery("grocery list", catalog);
+  assert.match(grocery.intro, /grocery list/);
+  assert.equal(grocery.intro === meal.intro, false);
 });
 
 test("twitch highlight query ranks stream clip tools", () => {

@@ -1,0 +1,30 @@
+{
+  "slug": "write-resume",
+  "title": "Write a resume",
+  "summary": "Draft resume bullets and tailor them to a job description.",
+  "audienceHints": [
+    "job seekers"
+  ],
+  "matchTags": [
+    "write-resume"
+  ],
+  "recommended": [
+    {
+      "toolId": "teal",
+      "why": "Tailors a resume to keywords in a job description, and the homepage offers a free account."
+    },
+    {
+      "toolId": "rezi",
+      "why": "Builds a resume, scores it, and pulls keywords from a job description."
+    },
+    {
+      "toolId": "kickresume",
+      "why": "Writes resume bullets from a job title and can score the resume."
+    }
+  ],
+  "jobPhrase": "writing a resume",
+  "assistantTask": "draft resume bullets and match them to a job description",
+  "assistantContext": "writing a resume",
+  "searchTopic": "the role you are applying for",
+  "intro": "AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you."
+}

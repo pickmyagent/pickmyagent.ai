@@ -1,6 +1,6 @@
 # Search QA report
 
-217 queries through the ranker and the header, intro, and why-line renderers.
+224 queries through the ranker and the header, intro, and why-line renderers.
 
 ## 1. find homes for sale by owner
 
@@ -113,7 +113,6 @@
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
   - PropStream — Specialist · Docs checked — PropStream searches parcel records with the same filters it uses on other land listings.
-  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income, a side number when a land deal also includes a house.
   - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn zoning and parcel questions into steps before you pursue a land deal.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a list of facts to confirm on a parcel, including access and zoning.
@@ -130,7 +129,6 @@
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
   - PropStream — Specialist · Docs checked — PropStream searches parcel records with the same filters it uses on other land listings.
-  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income, a side number when a land deal also includes a house.
   - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn zoning and parcel questions into steps before you pursue a land deal.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a list of facts to confirm on a parcel, including access and zoning.
@@ -148,7 +146,6 @@
   - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
   - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
   - PropStream — Specialist · Docs checked — PropStream searches parcel records with the same filters it uses on other land listings.
-  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income, a side number when a land deal also includes a house.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn zoning and parcel questions into steps before you pursue a land deal.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a list of facts to confirm on a parcel, including access and zoning.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks acreage, zoning, and which parcels you have already screened.
@@ -164,7 +161,6 @@
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
   - PropStream — Specialist · Docs checked — PropStream searches parcel records with the same filters it uses on other land listings.
-  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income, a side number when a land deal also includes a house.
   - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn zoning and parcel questions into steps before you pursue a land deal.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a list of facts to confirm on a parcel, including access and zoning.
@@ -181,7 +177,6 @@
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
   - PropStream — Specialist · Docs checked — PropStream searches parcel records with the same filters it uses on other land listings.
-  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income, a side number when a land deal also includes a house.
   - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn zoning and parcel questions into steps before you pursue a land deal.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a list of facts to confirm on a parcel, including access and zoning.
@@ -199,7 +194,6 @@
   - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
   - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
   - PropStream — Specialist · Docs checked — PropStream searches parcel records with the same filters it uses on other land listings.
-  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income, a side number when a land deal also includes a house.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn zoning and parcel questions into steps before you pursue a land deal.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a list of facts to confirm on a parcel, including access and zoning.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks acreage, zoning, and which parcels you have already screened.
@@ -306,7 +300,7 @@
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Range — Specialist · Docs checked — Range includes an AI assistant inside an advisory membership aimed at the portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a holdings checklist you can fill in before comparing allocation.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet with one row per account and a column for annual cost.
@@ -323,7 +317,7 @@
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Range — Specialist · Docs checked — Range includes an AI assistant inside an advisory membership aimed at the portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a holdings checklist you can fill in before comparing allocation.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet with one row per account and a column for annual cost.
@@ -340,7 +334,7 @@
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Range — Specialist · Docs checked — Range includes an AI assistant inside an advisory membership aimed at the portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a holdings checklist you can fill in before comparing allocation.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet with one row per account and a column for annual cost.
@@ -357,7 +351,7 @@
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Range — Specialist · Docs checked — Range includes an AI assistant inside an advisory membership aimed at the portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a holdings checklist you can fill in before comparing allocation.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet with one row per account and a column for annual cost.
@@ -373,7 +367,7 @@
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
   - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
-  - Range — Specialist · Docs checked — Range includes an AI assistant inside an advisory membership aimed at the portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a holdings checklist you can fill in before comparing allocation.
@@ -391,7 +385,7 @@
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Range — Specialist · Docs checked — Range includes an AI assistant inside an advisory membership aimed at the portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a holdings checklist you can fill in before comparing allocation.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet with one row per account and a column for annual cost.
@@ -826,7 +820,7 @@
 - Domain: create-content
 - Cards:
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
-  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content through a workflow instead of a blank page.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of headings, examples, and claims to verify in a draft.
@@ -841,7 +835,7 @@
 - Domain: create-content
 - Cards:
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
-  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content through a workflow instead of a blank page.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of headings, examples, and claims to verify in a draft.
@@ -855,7 +849,7 @@
 - Intro: AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit.
 - Domain: create-content
 - Cards:
-  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content through a workflow instead of a blank page.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
@@ -870,7 +864,7 @@
 - Intro: AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit.
 - Domain: create-content
 - Cards:
-  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content through a workflow instead of a blank page.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
@@ -885,7 +879,7 @@
 - Intro: AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit.
 - Domain: create-content
 - Cards:
-  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content through a workflow instead of a blank page.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
@@ -901,7 +895,7 @@
 - Domain: create-content
 - Cards:
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
-  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content through a workflow instead of a blank page.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of headings, examples, and claims to verify in a draft.
@@ -1675,7 +1669,7 @@
 - Domain: tutoring
 - Cards:
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches a student, and its official page offers a trial.
+  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
@@ -1691,7 +1685,7 @@
 - Cards:
   - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches a student, and its official page offers a trial.
+  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -1706,7 +1700,7 @@
 - Cards:
   - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches a student, and its official page offers a trial.
+  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -1719,8 +1713,8 @@
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches a student, and its official page offers a trial.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
+  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
@@ -1735,7 +1729,7 @@
 - Domain: tutoring
 - Cards:
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches a student, and its official page offers a trial.
+  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
@@ -1749,16 +1743,16 @@
 - Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
 - Domain: game-creative
 - Cards:
-  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
   - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
   - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
+  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
+  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of clip length, caption, and the shot you still need.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of timecodes, captions, and which clip is ready.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene description into a shot list with camera moves you can film or generate.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
 ## 115. highlight reel
 
@@ -1768,14 +1762,14 @@
 - Cards:
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
   - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
-  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
   - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
+  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
+  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of clip length, caption, and the shot you still need.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of timecodes, captions, and which clip is ready.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene description into a shot list with camera moves you can film or generate.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
 ## 116. youtube short
 
@@ -1787,12 +1781,12 @@
   - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
-  - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of clip length, caption, and the shot you still need.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of timecodes, captions, and which clip is ready.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene description into a shot list with camera moves you can film or generate.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
 ## 117. use an agent to clip my twitch stream
 
@@ -1803,13 +1797,13 @@
   - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
   - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
-  - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
   - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
+  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of clip length, caption, and the shot you still need.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of timecodes, captions, and which clip is ready.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene description into a shot list with camera moves you can film or generate.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
 ## 118. best tool for a highlight reel
 
@@ -1818,15 +1812,15 @@
 - Domain: game-creative
 - Cards:
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
-  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
   - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
+  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
+  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of clip length, caption, and the shot you still need.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of timecodes, captions, and which clip is ready.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene description into a shot list with camera moves you can film or generate.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
 ## 119. write code
 
@@ -2346,7 +2340,7 @@
 ## 152. AI for my small business
 
 - Header: For help with your small business, here's how each tool can help:
-- Intro: AI assistants can help with your small business by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Intro: AI assistants can't run a small business for you, but they can draft a customer reply, outline a week of posts, and list the bookkeeping you still check.
 - Cards:
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break your small business into a step-by-step plan.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for your small business.
@@ -2357,24 +2351,32 @@
 ## 153. best AI tool for real estate
 
 - Header: For help with real estate, here's how each tool can help:
-- Intro: AI assistants can help with real estate by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
+- Domain: rank-property-deals
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break real estate into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for real estate.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track real estate.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on real estate with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for real estate.
+  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
+  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a real estate deal into numbers you can compare before you rank it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of rental or flip figures to gather before you sort deals.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that lines up price, rent, and rehab so you can rank deals.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced explanations of cash-flow terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two deal writeups and say which figures are still missing.
 
 ## 154. Help me with my resume
 
-- Header: For help with your resume, here's how each tool can help:
-- Intro: AI assistants can help with your resume by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For writing your resume, here's how each tool can help:
+- Intro: AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you.
+- Domain: write-resume
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break your resume into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for your resume.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track your resume.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on your resume with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for your resume.
+  - Teal — Specialist · Docs checked — Teal writes a resume tailored to a job description and tracks the jobs you save.
+  - Rezi — Specialist · Docs checked — Rezi builds a resume, scores the sections, and pulls keywords from a job description.
+  - Kickresume — Specialist · Docs checked — Kickresume writes resume bullets from a job title and scores the draft.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft resume bullets from the job you did and the role you are applying for.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of experience, skills, and the job description you are matching.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of roles, bullets, and the keywords from the posting.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced examples of resume structure, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a bullet so it names the work and the result, and you keep the facts.
 
 ## 155. USE AI TO WRITE EMAILS
 
@@ -2445,7 +2447,7 @@
 ## 161. meal prep for the week
 
 - Header: For help with meal prep for the week, here's how each tool can help:
-- Intro: AI assistants can help with meal prep for the week by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Intro: AI assistants can't cook the week's meals for you, but they can plan the menu, list the ingredients, and write the prep steps.
 - Cards:
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break meal prep for the week into a step-by-step plan.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for meal prep for the week.
@@ -2489,7 +2491,7 @@
 ## 165. start a book club
 
 - Header: For starting a book club, here's how each tool can help:
-- Intro: AI assistants can help with starting a book club by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Intro: AI assistants can suggest the next book, draft discussion questions, and outline how the club meets.
 - Cards:
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break starting a book club into a step-by-step plan.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for starting a book club.
@@ -2522,7 +2524,7 @@
 ## 168. name a baby
 
 - Header: For naming a baby, here's how each tool can help:
-- Intro: AI assistants can help with naming a baby by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Intro: AI assistants can suggest baby names and say what each one means, and you make the choice.
 - Cards:
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break naming a baby into a step-by-step plan.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for naming a baby.
@@ -2533,7 +2535,7 @@
 ## 169. grocery list
 
 - Header: For help with a grocery list, here's how each tool can help:
-- Intro: AI assistants can help with a grocery list by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Intro: AI assistants can group a grocery list and note what you still buy at the store.
 - Cards:
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a grocery list into a step-by-step plan.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a grocery list.
@@ -2679,7 +2681,7 @@
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Range — Specialist · Docs checked — Range includes an AI assistant inside an advisory membership aimed at the portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a holdings checklist you can fill in before comparing allocation.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet with one row per account and a column for annual cost.
@@ -2786,7 +2788,7 @@
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Range — Specialist · Docs checked — Range includes an AI assistant inside an advisory membership aimed at the portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a holdings checklist you can fill in before comparing allocation.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet with one row per account and a column for annual cost.
@@ -2800,7 +2802,7 @@
 - Domain: create-content
 - Cards:
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
-  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content through a workflow instead of a blank page.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of headings, examples, and claims to verify in a draft.
@@ -2993,17 +2995,18 @@
 
 - Header: For clipping a YouTube short, here's how each tool can help:
 - Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
+- Domain: game-creative
 - Cards:
   - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
   - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
-  - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
+  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of clip length, caption, and the shot you still need.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of timecodes, captions, and which clip is ready.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene description into a shot list with camera moves you can film or generate.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
 ## 201. ?? taxes
 
@@ -3031,7 +3034,7 @@
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Range — Specialist · Docs checked — Range includes an AI assistant inside an advisory membership aimed at the portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a holdings checklist you can fill in before comparing allocation.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet with one row per account and a column for annual cost.
@@ -3165,8 +3168,8 @@
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches a student, and its official page offers a trial.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
+  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
@@ -3209,40 +3212,145 @@
 
 - Header: For making a cinematic video, here's how each tool can help:
 - Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
-- Domain: game-creative
+- Domain: video-generation
 - Cards:
   - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
-  - Runway — Specialist · Docs checked — Runway generates footage and then edits that video for a trailer or a stream.
-  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - ElevenLabs — Specialist · Docs checked — ElevenLabs records a voice track you can place under a video clip.
+  - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
+  - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
   - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of clip length, caption, and the shot you still need.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of timecodes, captions, and which clip is ready.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene description into a shot list with camera moves you can film or generate.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a shot list, name the camera move, and draft the prompt you paste into a video app.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of shot, camera move, and the prompt you still write.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of shots, camera moves, and the prompt for each one.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on camera moves and prompting for AI video, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene into a shot list with camera moves and a prompt you can edit.
 
 ## 215. AI video with camera moves
 
-- Header: For help with an AI video with camera moves, here's how each tool can help:
+- Header: For making an AI video with camera moves, here's how each tool can help:
 - Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
-- Domain: game-creative
+- Domain: video-generation
 - Cards:
   - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
-  - Runway — Specialist · Docs checked — Runway generates footage and then edits that video for a trailer or a stream.
+  - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
+  - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
+  - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a shot list, name the camera move, and draft the prompt you paste into a video app.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of shot, camera move, and the prompt you still write.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of shots, camera moves, and the prompt for each one.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on camera moves and prompting for AI video, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene into a shot list with camera moves and a prompt you can edit.
+
+## 216. text to video
+
+- Header: For making a video from text, here's how each tool can help:
+- Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
+- Domain: video-generation
+- Cards:
+  - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
+  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
+  - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
+  - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a shot list, name the camera move, and draft the prompt you paste into a video app.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of shot, camera move, and the prompt you still write.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of shots, camera moves, and the prompt for each one.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on camera moves and prompting for AI video, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene into a shot list with camera moves and a prompt you can edit.
+
+## 217. image to video
+
+- Header: For making a video from an image, here's how each tool can help:
+- Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
+- Domain: video-generation
+- Cards:
+  - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
+  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
+  - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
+  - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a shot list, name the camera move, and draft the prompt you paste into a video app.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of shot, camera move, and the prompt you still write.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of shots, camera moves, and the prompt for each one.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on camera moves and prompting for AI video, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene into a shot list with camera moves and a prompt you can edit.
+
+## 218. text to speech
+
+- Header: For making speech from text, here's how each tool can help:
+- Intro: AI agents can draft a script and describe the voice you want, so you generate the audio and check it yourself.
+- Domain: voice-audio
+- Cards:
+  - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of script, voice, and the take you still record or generate.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of lines, the voice, and whether the take is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on voice generation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a script so the line is short enough to read aloud.
+
+## 219. make a 3d model
+
+- Header: For making a 3d model, here's how each tool can help:
+- Intro: AI agents can describe the image or 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: image-3d
+- Cards:
+  - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image or 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of subject, style, and the detail you still want in the picture.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of prompts, the result, and what you would change.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on prompting for images or 3D, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to tighten a prompt so the subject, style, and framing are specific.
+
+## 220. edit listing videos for real estate
+
+- Header: For editing listing videos for real estate, here's how each tool can help:
+- Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
+- Domain: game-creative
+- Cards:
   - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - ElevenLabs — Specialist · Docs checked — ElevenLabs records a voice track you can place under a video clip.
   - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
+  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
+  - Descript — Specialist · Docs checked — Descript edits a video by changing the words in its transcript.
+  - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of clip length, caption, and the shot you still need.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of timecodes, captions, and which clip is ready.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene description into a shot list with camera moves you can film or generate.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
-## 216. cheap AI model for coding
+## 221. screen a resume
+
+- Header: For screening a resume, here's how each tool can help:
+- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
+- Domain: hire-candidates
+- Cards:
+  - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
+  - Paradox — Specialist · Docs checked — Paradox schedules candidates and takes applications in a conversation.
+  - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to screen a resume against a role and list gaps a person should confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for an interview checklist and the outreach points you might send a candidate.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of applicants, stage, and the next scheduling step.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a skill you are hiring for, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft candidate outreach that a recruiter can edit before it is sent.
+
+## 222. write my resume
+
+- Header: For writing your resume, here's how each tool can help:
+- Intro: AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you.
+- Domain: write-resume
+- Cards:
+  - Teal — Specialist · Docs checked — Teal writes a resume tailored to a job description and tracks the jobs you save.
+  - Rezi — Specialist · Docs checked — Rezi builds a resume, scores the sections, and pulls keywords from a job description.
+  - Kickresume — Specialist · Docs checked — Kickresume writes resume bullets from a job title and scores the draft.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft resume bullets from the job you did and the role you are applying for.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of experience, skills, and the job description you are matching.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of roles, bullets, and the keywords from the posting.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced examples of resume structure, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a bullet so it names the work and the result, and you keep the facts.
+
+## 223. cheap AI model for coding
 
 - Header: For help with a cheap AI model for coding, here's how each tool can help:
-- Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
+- Intro: AI agents can compare coding models by what the docs say each one does, so you pick one and still review the code it writes.
 - Domain: coding-agents
 - Cards:
   - Continue — Specialist · Docs checked — Continue installs an open-source coding agent in the editor you already use.
@@ -3255,13 +3363,18 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 217. deepseek alternative
+## 224. deepseek alternative
 
 - Header: For help with a DeepSeek alternative, here's how each tool can help:
-- Intro: AI assistants can help with a DeepSeek alternative by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Intro: AI agents can compare coding models by what the docs say each one does, so you pick one and still review the code it writes.
+- Domain: coding-agents
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a DeepSeek alternative into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a DeepSeek alternative.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a DeepSeek alternative.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a DeepSeek alternative with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a DeepSeek alternative.
+  - Cursor — Specialist · Docs checked — Cursor edits code in the repo from a desktop agent.
+  - Continue — Specialist · Docs checked — Continue installs an open-source coding agent in the editor you already use.
+  - GitHub Copilot — Specialist · Docs checked — GitHub Copilot writes code and can carry a change toward a merge.
+  - Replit — Specialist · Not fully checked — Replit runs a coding agent inside a browser editor.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to read a bug report and suggest a code edit plus a review note you can reject.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a debugging checklist before you change a repo.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a doc that tracks the failing test, the hypothesis, and the diff.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.

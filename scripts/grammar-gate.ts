@@ -179,7 +179,7 @@ export function grammarProblems(text: string, kind: "header" | "intro" | "why" =
 }
 
 const SPECIALIST_BANNED =
-  /\bis for\b|\bwe imported\b|\blocally\b|\bpriced on the site\b|\bpricing page\b|\bso you can\b/i;
+  /\bis for\b|\bwe imported\b|\blocally\b|\bpriced on the site\b|\bpricing page\b|\bso you can\b|\bdifferent job\b|\bnot a\b|\binstead of\b/i;
 
 /** Specialist why-lines must be "<Name> <verb> ...", with no template glue. */
 export function specialistWhyProblems(name: string, why: string): string[] {

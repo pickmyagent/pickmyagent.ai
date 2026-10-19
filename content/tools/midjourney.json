@@ -10,7 +10,7 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "game-creative"
+    "image-3d"
   ],
   "toolTypes": [
     "creative"
@@ -37,7 +37,7 @@
     "Game concept art exploration"
   ],
   "notIdealFor": [
-    "A free tier — the official comparison we read does not list one",
+    "A free tier \u2014 the official comparison we read does not list one",
     "3D models, voice, or video editing"
   ],
   "strength": "The plan comparison we read lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month.",
@@ -70,6 +70,6 @@
     "finalUrl": "https://www.midjourney.com/"
   },
   "useCaseFit": {
-    "game-creative": "Generates images on a paid plan, which is a different job from editing video."
+    "image-3d": "Draws images from a text prompt."
   }
 }

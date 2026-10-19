@@ -10,7 +10,7 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "creator-video-audio"
+    "voice"
   ],
   "toolTypes": [
     "creative"
@@ -66,6 +66,6 @@
     "finalUrl": "https://elevenlabs.io/"
   },
   "useCaseFit": {
-    "game-creative": "Generates voice and audio, which is a different job from cutting a video."
+    "voice-audio": "Generates voice and audio from a prompt."
   }
 }

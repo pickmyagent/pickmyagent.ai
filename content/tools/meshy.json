@@ -10,7 +10,7 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "game-creative"
+    "image-3d"
   ],
   "toolTypes": [
     "creative"
@@ -67,6 +67,6 @@
     "finalUrl": "https://www.meshy.ai/"
   },
   "useCaseFit": {
-    "game-creative": "Turns text or an image into a 3D asset, and the pricing page shows a $0 plan."
+    "image-3d": "Turns text or a picture into a 3D asset."
   }
 }

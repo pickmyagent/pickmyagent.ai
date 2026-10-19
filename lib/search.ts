@@ -171,7 +171,10 @@ export function mentionsLand(query: string): boolean {
 
 function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): number {
   if (concept.id === "land" && !mentionsLand(lower)) return 0;
+  if (concept.id === "video" && videoGenerationQuery(lower)) return 0;
+  if ((concept.id === "voice" || concept.id === "image-3d") && videoGenerationQuery(lower)) return 0;
   let score = 0;
+  if (concept.id === "video-generation" && videoGenerationQuery(lower)) score += 12;
   for (const phrase of concept.phrases) {
     if (lower.includes(phrase)) score += 12;
   }
@@ -306,6 +309,10 @@ const CANONICAL_JOB: Record<string, string> = {
   "deep-research": "doing deep research",
   tutoring: "getting tutoring help",
   "game-creative": "turning a long video into short clips",
+  "video-generation": "making a cinematic video",
+  "voice-audio": "generating a voice track",
+  "image-3d": "making images and 3D assets",
+  "write-resume": "writing a resume",
   "coding-agents": "writing and reviewing code",
   "workflow-automation": "automating repeated tasks",
   "multi-agent-workflows": "splitting one job across several agents",
@@ -426,6 +433,10 @@ function bareGerundPhrase(phrase: string): boolean {
 
 function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, wantsYour: boolean): string {
   if (!cleaned) return useCase ? personalize(CANONICAL_JOB[useCase.slug] ?? "help with this", wantsYour) : "help with this";
+  if (/\bimage[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from an image";
+  if (/\btext[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from text";
+  if (/\btext[\s-]to[\s-]speech\b/i.test(cleaned)) return "making speech from text";
+  if (/\btext[\s-]to[\s-]image\b/i.test(cleaned)) return "making an image from text";
   if (/^skip\s+trace\b/i.test(cleaned)) {
     return `skip-tracing ${cleaned.replace(/^skip\s+trace\s+/i, "")}`.replace(/\s+/g, " ").trim();
   }
@@ -435,6 +446,9 @@ function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, want
     const thin = bareGerundPhrase(gerunded) || /^[a-z]+ing\s+(?:from|about)\b/i.test(gerunded);
     if (thin && useCase) return canonicalHeader(useCase, key, wantsYour) ?? gerunded;
     return gerunded;
+  }
+  if (videoGenerationQuery(cleaned) && /\bwith\b/i.test(cleaned)) {
+    return `making ${lightArticle(cleaned)}`;
   }
   const key = categoryKey(cleaned);
   const short = contentWords(key).length <= 1;
@@ -490,21 +504,48 @@ function bareToken(token: string): string {
 const VIDEO_GENERATION_INTRO =
   "AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.";
 
+const MODEL_CHOICE_INTRO =
+  "AI agents can compare coding models by what the docs say each one does, so you pick one and still review the code it writes.";
+
 const PHYSICAL_VERBS = new Set(["fold", "water", "paint", "pack", "fix", "train", "bake", "cook", "clean", "wash", "mow", "repair", "organize"]);
 const WRITING_VERBS = new Set(["write", "draft", "edit"]);
 const PLANNING_VERBS = new Set(["plan", "schedule", "book"]);
 const LEARNING_VERBS = new Set(["learn", "study", "tutor", "practice"]);
 
 function videoGenerationQuery(query: string): boolean {
-  if (/\b(clip|clips|clipping|sizzle|highlight|highlights|short|shorts|caption|captions|twitch|vod|reel|reels|youtube)\b/i.test(query)) {
+  if (/\b(clip|clips|clipping|sizzle|highlight|highlights|short|shorts|caption|captions|twitch|vod|reel|reels|youtube|tiktok)\b/i.test(query)) {
     return false;
   }
-  return /\b(cinematic|camera|generate|generating|movie|movies|film)\b/i.test(query)
-    || (/\b(make|making)\b/i.test(query) && /\bvideo\b/i.test(query));
+  if (/\b(?:text|image)[\s-]to[\s-]video\b/i.test(query)) return true;
+  if (/\bcinematic\b/i.test(query)) return true;
+  if (/\bcamera\b/i.test(query) && /\b(?:video|videos|film|movie|movies|shot|shots)\b/i.test(query)) return true;
+  return /\b(?:generate|generating|make|making|create|creating)\b/i.test(query)
+    && /\b(?:video|videos|film|movie|movies)\b/i.test(query);
+}
+
+function modelChoiceQuery(query: string): boolean {
+  return /\bdeepseek\b/i.test(query)
+    || /\bai model\b/i.test(query)
+    || (/\bcheap\b/i.test(query) && /\bcod/i.test(query));
 }
 
 function openIntro(query: string, useCase?: UseCase | null): string {
   const topic = jobPhrase(query, useCase).replace(/^help with\s+/i, "");
+  if (/\bmeal prep\b/i.test(topic)) {
+    return "AI assistants can't cook the week's meals for you, but they can plan the menu, list the ingredients, and write the prep steps.";
+  }
+  if (/\bgrocery list\b/i.test(topic)) {
+    return "AI assistants can group a grocery list and note what you still buy at the store.";
+  }
+  if (/\b(?:naming a baby|baby names?)\b/i.test(topic)) {
+    return "AI assistants can suggest baby names and say what each one means, and you make the choice.";
+  }
+  if (/\bbook club\b/i.test(topic)) {
+    return "AI assistants can suggest the next book, draft discussion questions, and outline how the club meets.";
+  }
+  if (/\bsmall business\b/i.test(topic)) {
+    return "AI assistants can't run a small business for you, but they can draft a customer reply, outline a week of posts, and list the bookkeeping you still check.";
+  }
   const verb = introVerbs(query).find((item) => !GENERIC.has(item));
   if (verb && PHYSICAL_VERBS.has(verb)) {
     const act = infinitivePhrase(topic);
@@ -528,7 +569,8 @@ export function templatedIntro(query: string, useCase?: UseCase | null): string 
 }
 
 export function jobIntro(query: string, useCase: UseCase | undefined, concept: Concept | null): string {
-  if ((useCase?.slug === "game-creative" || concept?.id === "video") && videoGenerationQuery(query)) return VIDEO_GENERATION_INTRO;
+  if (videoGenerationQuery(query)) return VIDEO_GENERATION_INTRO;
+  if ((useCase?.slug === "coding-agents" || concept?.id === "code") && modelChoiceQuery(query)) return MODEL_CHOICE_INTRO;
   if (useCase?.intro) return useCase.intro;
   return openIntro(query, useCase);
 }

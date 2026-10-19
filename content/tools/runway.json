@@ -10,8 +10,7 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "game-creative",
-    "creator-video-audio"
+    "video-generation"
   ],
   "toolTypes": [
     "creative"
@@ -65,6 +64,6 @@
     "finalUrl": "https://runway.com/"
   },
   "useCaseFit": {
-    "game-creative": "Generates and edits video, and the pricing page lists plans from $12 per month."
+    "video-generation": "Generates footage from a prompt and edits that video."
   }
 }

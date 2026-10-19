@@ -6,11 +6,23 @@
   "affiliateUrl": null,
   "shortDescription": "ByteDance video model in Dreamina, with a ModelArk API documented by BytePlus.",
   "longDescription": "Seedance is ByteDance's video generation model. Dreamina's documentation names Seedance 2.0 for video and shows Seedance 2.5 examples, and it says the creator app includes free daily credits. BytePlus ModelArk's video generation tutorial says Seedance models generate clips from text, images, video, and audio, and it shows a Dreamina Seedance model id for the API. The model overview page did not include a readable API price.",
-  "categories": ["creative-media"],
-  "useCaseTags": ["game-creative", "creator-video-audio"],
-  "toolTypes": ["creative", "model_api"],
-  "platforms": ["web", "api"],
-  "pricingModel": ["usage"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "video-generation"
+  ],
+  "toolTypes": [
+    "creative",
+    "model_api"
+  ],
+  "platforms": [
+    "web",
+    "api"
+  ],
+  "pricingModel": [
+    "usage"
+  ],
   "pricingNotes": "Dreamina's documentation says the creator app includes free daily credits. An API price was not in the readable model page.",
   "pricingUrl": null,
   "docsUrl": "https://ai.byteplus.com/ark/region:ap-southeast-1/docs/video-generation-tutorial",
@@ -36,7 +48,9 @@
   "checkedAt": "2026-10-19T12:00:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Dreamina's documentation and the BytePlus video-generation tutorial were reviewed. A hands-on test was not done.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -49,8 +63,11 @@
     "https://ai.byteplus.com/ark/region:ap-southeast-1/docs/video-generation-tutorial",
     "https://docs.byteplus.com/en/docs/ModelArk/seedance"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://dreamina.capcut.com/documentation" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://dreamina.capcut.com/documentation"
+  },
   "useCaseFit": {
-    "game-creative": "Generates video from text, images, or a reference clip in Dreamina, with a documented ModelArk API."
+    "video-generation": "Renders video from text, an image, or a reference clip in Dreamina."
   }
 }

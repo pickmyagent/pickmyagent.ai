@@ -6,10 +6,18 @@
   "affiliateUrl": null,
   "shortDescription": "AI video app with Cinema Studio camera-motion presets for cinematic clips.",
   "longDescription": "Higgsfield is an AI video app. Its Cinema Studio help page describes cinematic video with camera-motion control, and the Cinema Studio 4.0 blog lists 30+ camera-movement presets, including POV, robot arm, pan, and helicopter shot, plus clips up to 30 seconds. The pricing page did not include a readable monthly plan, so this listing does not state a subscription price.",
-  "categories": ["creative-media"],
-  "useCaseTags": ["game-creative", "creator-video-audio"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "video-generation"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
   "pricingModel": [],
   "pricingNotes": "A monthly plan price was not in the readable pricing-page text. Confirm it on the official pricing page.",
   "pricingUrl": "https://higgsfield.ai/pricing",
@@ -36,7 +44,9 @@
   "checkedAt": "2026-10-19T12:00:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Official homepage, Cinema Studio help page, blog, and pricing URL were reviewed. A hands-on test was not done.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -50,8 +60,11 @@
     "https://higgsfield.ai/creator-hub/help-center/tools/how-do-i-use-cinema-studio",
     "https://higgsfield.ai/pricing"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://higgsfield.ai/" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://higgsfield.ai/"
+  },
   "useCaseFit": {
-    "game-creative": "Generates cinematic video with camera-motion presets such as POV and helicopter shots."
+    "video-generation": "Generates cinematic clips with camera presets such as a POV or a helicopter shot."
   }
 }
