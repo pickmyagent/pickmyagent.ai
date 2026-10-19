@@ -1,0 +1,68 @@
+{
+  "id": "spark-mail",
+  "slug": "spark-mail",
+  "name": "Spark",
+  "websiteUrl": "https://sparkmailapp.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Email app with an AI assistant, a smart inbox, and drafted replies.",
+  "longDescription": "Spark's site lists Spark +AI, an AI assistant, a smart inbox, gatekeeper, snooze, and send later, and the page leads with replies that are already drafted. The fetched text did not include a price. We did not install the app.",
+  "categories": [
+    "productivity"
+  ],
+  "useCaseTags": [
+    "manage-inbox"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "The site lists Spark +AI, an AI assistant, and a smart inbox. No dollar price was in the fetched text.",
+  "pricingUrl": "https://sparkmailapp.com/",
+  "docsUrl": "https://sparkmailapp.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "An email app that drafts replies and sorts the inbox"
+  ],
+  "notIdealFor": [
+    "Someone who needs a confirmed monthly price from this check"
+  ],
+  "strength": "Spark lists an AI assistant, a smart inbox, and replies that are already drafted.",
+  "weakness": "The fetched page did not include a dollar price or a stated trial length.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://sparkmailapp.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://sparkmailapp.com/"
+  },
+  "useCaseFit": {
+    "manage-inbox": "Lists an AI assistant and a smart inbox that drafts email replies."
+  }
+}

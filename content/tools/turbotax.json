@@ -1,0 +1,68 @@
+{
+  "id": "turbotax",
+  "slug": "turbotax",
+  "name": "TurboTax",
+  "websiteUrl": "https://turbotax.intuit.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Step-by-step filing. File-yourself pricing on the page runs from $0 to $139.",
+  "longDescription": "TurboTax's online pricing page lists file-yourself tools from $0 to $139, with state extra, expert help from $59 to $209, and a dedicated expert starting at $129. We did not start a return.",
+  "categories": [
+    "personal-finance"
+  ],
+  "useCaseTags": [
+    "do-taxes"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "File-yourself tools are listed from $0 to $139, with state extra. A dedicated expert starts at $129.",
+  "pricingUrl": "https://turbotax.intuit.com/personal-taxes/online/",
+  "docsUrl": "https://turbotax.intuit.com/personal-taxes/online/",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": 0,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Filing a personal return with step-by-step software"
+  ],
+  "notIdealFor": [
+    "A business that wants invoice capture rather than a personal return"
+  ],
+  "strength": "TurboTax lists file-yourself pricing from $0 to $139, and says state filing is an additional charge.",
+  "weakness": "The $0 end of that range is not the expert-file option, which the same page starts at $129.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://turbotax.intuit.com/personal-taxes/online/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://turbotax.intuit.com/"
+  },
+  "useCaseFit": {
+    "do-taxes": "Lists guided personal tax filing, with a file-yourself range that starts at $0."
+  }
+}

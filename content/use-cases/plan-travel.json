@@ -1,0 +1,26 @@
+{
+  "slug": "plan-travel",
+  "title": "Plan and book travel",
+  "summary": "Compare flights, hotels, and vacation itineraries.",
+  "audienceHints": [
+    "travelers"
+  ],
+  "matchTags": [
+    "plan-travel"
+  ],
+  "jobPhrase": "planning and booking travel",
+  "assistantTask": "compare flight and hotel options and draft an itinerary",
+  "assistantContext": "planning a trip",
+  "searchTopic": "the city and dates you named",
+  "recommended": [
+    {
+      "toolId": "guidegeek",
+      "why": "AI planner for flights, stays, and activities. Docs checked."
+    },
+    {
+      "toolId": "wonderplan",
+      "why": "AI itineraries with a free start. Docs checked."
+    }
+  ],
+  "intro": "AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself."
+}

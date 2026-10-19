@@ -24,6 +24,10 @@
     {
       "toolId": "tavily",
       "why": "Search API for agents. Pricing page showed a $0 option. We did not call the API."
+    },
+    {
+      "toolId": "skyvern",
+      "why": "Browser automation for websites. The pricing page lists a free plan and a $29 per month plan. Docs checked."
     }
   ],
   "jobPhrase": "automating steps in a web browser",

@@ -1,0 +1,68 @@
+{
+  "id": "moveworks",
+  "slug": "moveworks",
+  "name": "Moveworks",
+  "websiteUrl": "https://www.moveworks.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Employee AI for IT service management and self-service.",
+  "longDescription": "Moveworks' site describes ITSM automation, employee self-service, employee onboarding, and an AI agent marketplace, including ServiceNow workflows. The fetched text did not list a price. We did not request a demo.",
+  "categories": [
+    "it-support"
+  ],
+  "useCaseTags": [
+    "it-helpdesk"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "The site describes ITSM automation, employee self-service, and an AI agent marketplace. No price was in the fetch.",
+  "pricingUrl": "https://www.moveworks.com/",
+  "docsUrl": "https://www.moveworks.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Routing IT requests with an employee assistant"
+  ],
+  "notIdealFor": [
+    "A buyer who needs a public per-agent price"
+  ],
+  "strength": "Moveworks describes IT service-management automation, employee self-service, and an AI agent marketplace.",
+  "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.moveworks.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.moveworks.com/"
+  },
+  "useCaseFit": {
+    "it-helpdesk": "Employee assistant for IT service management and self-service requests."
+  }
+}

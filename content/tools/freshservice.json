@@ -1,0 +1,67 @@
+{
+  "id": "freshservice",
+  "slug": "freshservice",
+  "name": "Freshservice",
+  "websiteUrl": "https://www.freshworks.com/freshservice/",
+  "affiliateUrl": null,
+  "shortDescription": "IT service desk. Starter is $19 per agent per month billed annually.",
+  "longDescription": "Freshservice's pricing page is for IT teams and lists Starter at $19 per agent per month when billed annually. We did not start a trial, and we do not show that figure as a month-to-month price.",
+  "categories": [
+    "it-support"
+  ],
+  "useCaseTags": [
+    "it-helpdesk"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Starter is listed at $19 per agent per month billed annually for IT teams. startingPrice is empty because it is billed annually.",
+  "pricingUrl": "https://www.freshworks.com/freshservice/pricing/",
+  "docsUrl": "https://www.freshworks.com/freshservice/pricing/",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "An IT help desk with a published annual per-agent price"
+  ],
+  "notIdealFor": [
+    "A team that wants a confirmed month-to-month rate"
+  ],
+  "strength": "Freshservice lists an IT Starter plan at $19 per agent per month when billed annually.",
+  "weakness": "That price is billed annually, so this listing does not treat it as month-to-month.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.freshworks.com/freshservice/pricing/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.freshworks.com/freshservice/"
+  },
+  "useCaseFit": {
+    "it-helpdesk": "IT service desk with Starter at $19 per agent per month billed annually."
+  }
+}

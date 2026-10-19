@@ -1,0 +1,68 @@
+{
+  "id": "buffer",
+  "slug": "buffer",
+  "name": "Buffer",
+  "websiteUrl": "https://buffer.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Social scheduling. Essentials is $5 per month, with a 14-day trial.",
+  "longDescription": "Buffer's pricing page lists Essentials at $5 per month for one channel, or $60 billed yearly, and a 14-day free trial. A features page describes an AI assistant for creating and repurposing content, plus scheduling across social platforms. We did not start a trial.",
+  "categories": [
+    "content"
+  ],
+  "useCaseTags": [
+    "social-media"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Essentials is $5 per month for 1 channel, or $60 billed yearly, with a 14-day free trial. The features page describes an AI assistant.",
+  "pricingUrl": "https://buffer.com/pricing",
+  "docsUrl": "https://buffer.com/pricing",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": 5,
+  "freeTrial": "14 days",
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Scheduling social posts with a listed $5 plan and an AI writing assistant"
+  ],
+  "notIdealFor": [
+    "A team that needs many channels on the one-channel Essentials price"
+  ],
+  "strength": "Buffer lists Essentials at $5 per month for one channel, a 14-day trial, and an AI assistant for content.",
+  "weakness": "The $5 Essentials price is for one channel, and the yearly option is $60 billed yearly.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://buffer.com/pricing",
+    "https://buffer.com/ai-assistant"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://buffer.com/"
+  },
+  "useCaseFit": {
+    "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content."
+  }
+}

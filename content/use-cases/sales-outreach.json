@@ -1,0 +1,34 @@
+{
+  "slug": "sales-outreach",
+  "title": "Qualify leads and send sales outreach",
+  "summary": "Research accounts and draft outreach. You still approve what gets sent.",
+  "audienceHints": [
+    "sales teams"
+  ],
+  "matchTags": [
+    "sales-outreach"
+  ],
+  "jobPhrase": "qualifying leads and sending sales outreach",
+  "assistantTask": "research an account and draft a short outreach note",
+  "assistantContext": "researching a sales lead",
+  "searchTopic": "public pages about an account",
+  "recommended": [
+    {
+      "toolId": "instantly",
+      "why": "Outreach Growth is $47 per month. Docs checked."
+    },
+    {
+      "toolId": "apollo",
+      "why": "Contact data and an AI assistant. Docs checked."
+    },
+    {
+      "toolId": "clay",
+      "why": "Data marketplace and a free trial. Docs checked."
+    },
+    {
+      "toolId": "smartlead",
+      "why": "Cold-email assistant. Docs checked."
+    }
+  ],
+  "intro": "AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent."
+}

@@ -1,0 +1,67 @@
+{
+  "id": "shortwave",
+  "slug": "shortwave",
+  "name": "Shortwave",
+  "websiteUrl": "https://www.shortwave.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Email AI at $30 per seat per month, with a 14-day free trial.",
+  "longDescription": "Shortwave's pricing page lists Everyday AI productivity at $30 per seat per month and a 14-day free trial, with higher seat prices above that. It mentions AI search and filters. We did not start the trial.",
+  "categories": [
+    "productivity"
+  ],
+  "useCaseTags": [
+    "manage-inbox"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Everyday AI productivity is $30 per seat per month, with a 14-day free trial.",
+  "pricingUrl": "https://www.shortwave.com/pricing",
+  "docsUrl": "https://www.shortwave.com/pricing",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": 30,
+  "freeTrial": "14 days",
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Searching an inbox and drafting from an AI email client"
+  ],
+  "notIdealFor": [
+    "A team that wants a one-time price instead of per seat"
+  ],
+  "strength": "Shortwave lists Everyday AI productivity at $30 per seat per month and a 14-day free trial.",
+  "weakness": "The price is per seat, and higher tiers on the same page cost $45 and $120 per seat.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.shortwave.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.shortwave.com/"
+  },
+  "useCaseFit": {
+    "manage-inbox": "AI email client at $30 per seat per month with a 14-day trial."
+  }
+}

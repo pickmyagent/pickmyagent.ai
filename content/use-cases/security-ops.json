@@ -1,0 +1,30 @@
+{
+  "slug": "security-ops",
+  "title": "Monitor security threats",
+  "summary": "Triage alerts and phishing. Not a substitute for your security team.",
+  "audienceHints": [
+    "security teams"
+  ],
+  "matchTags": [
+    "security-ops"
+  ],
+  "jobPhrase": "monitoring security threats",
+  "assistantTask": "summarize an alert and list what a person should verify",
+  "assistantContext": "reviewing a security alert",
+  "searchTopic": "the alert type you named",
+  "recommended": [
+    {
+      "toolId": "charlotte-ai",
+      "why": "CrowdStrike's agentic security analyst. Docs checked."
+    },
+    {
+      "toolId": "abnormal",
+      "why": "Behavioral AI for email and identity security. Docs checked."
+    },
+    {
+      "toolId": "dropzone",
+      "why": "AI SOC analyst for alert triage. Docs checked."
+    }
+  ],
+  "intro": "AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts."
+}

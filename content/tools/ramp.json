@@ -1,0 +1,68 @@
+{
+  "id": "ramp",
+  "slug": "ramp",
+  "name": "Ramp",
+  "websiteUrl": "https://ramp.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Finance platform with a free plan at $0 and Plus at $15 per user.",
+  "longDescription": "Ramp's pricing page lists an AI-assisted Free plan at $0 per user per month and Plus at $15 per user per month plus a platform fee based on team size. We did not apply for an account.",
+  "categories": [
+    "finance-ops"
+  ],
+  "useCaseTags": [
+    "finance-ops"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Free is $0 per user per month. Plus is $15 per user per month plus a platform fee.",
+  "pricingUrl": "https://ramp.com/pricing",
+  "docsUrl": "https://ramp.com/pricing",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": 0,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Card, expense, and finance workflows on a listed free plan"
+  ],
+  "notIdealFor": [
+    "A company that wants Plus without reading the platform fee"
+  ],
+  "strength": "Ramp lists an AI-assisted free plan at $0 per user per month and Plus at $15 per user per month.",
+  "weakness": "Plus adds a platform fee based on team size, so $15 is not an all-in company price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://ramp.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://ramp.com/"
+  },
+  "useCaseFit": {
+    "finance-ops": "Finance platform with a free plan at $0 per user and Plus at $15 per user."
+  }
+}

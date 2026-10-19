@@ -1,0 +1,39 @@
+{
+  "slug": "find-off-market",
+  "title": "Find off-market or for-sale-by-owner deals",
+  "summary": "Look up homes that may not be listed with a realtor, then draft outreach to the owner.",
+  "audienceHints": [
+    "investors",
+    "buyers"
+  ],
+  "matchTags": [
+    "find-off-market"
+  ],
+  "jobPhrase": "finding off-market or for-sale-by-owner deals and contacting owners",
+  "assistantTask": "compare owner records and draft a first text or email",
+  "assistantContext": "look for off-market or for-sale-by-owner deals",
+  "searchTopic": "listing status and rules for contacting owners",
+  "recommended": [
+    {
+      "toolId": "propstream",
+      "why": "Property search with an AI search box. Essentials is $99 per month. Docs checked."
+    },
+    {
+      "toolId": "dealmachine",
+      "why": "Owner data and a driving app. Basic is $99 per seat per month. Docs checked."
+    },
+    {
+      "toolId": "batchleads",
+      "why": "Saved properties include owner phone numbers and emails. Growth is $119 per month. Docs checked."
+    },
+    {
+      "toolId": "resimpli",
+      "why": "Calling, texting, and email are listed on every plan, with a 14-day trial. Docs checked."
+    },
+    {
+      "toolId": "launch-control",
+      "why": "Texting for owner lists. The pricing page lists skip tracing at $0.13. Docs checked."
+    }
+  ],
+  "intro": "AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach."
+}

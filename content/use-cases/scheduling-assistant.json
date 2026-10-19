@@ -1,0 +1,30 @@
+{
+  "slug": "scheduling-assistant",
+  "title": "Schedule and handle admin",
+  "summary": "Calendar planning, scheduling links, and admin follow-ups.",
+  "audienceHints": [
+    "operators"
+  ],
+  "matchTags": [
+    "scheduling-assistant"
+  ],
+  "jobPhrase": "scheduling and admin",
+  "assistantTask": "propose times and draft a follow-up",
+  "assistantContext": "planning a calendar",
+  "searchTopic": "how a scheduling link works",
+  "recommended": [
+    {
+      "toolId": "motion",
+      "why": "$29 per seat per month for an AI calendar. Docs checked."
+    },
+    {
+      "toolId": "reclaim",
+      "why": "Smart meetings and scheduling links. Docs checked."
+    },
+    {
+      "toolId": "lindy",
+      "why": "Inbox and calendar jobs with free credits. Docs checked."
+    }
+  ],
+  "intro": "AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head."
+}

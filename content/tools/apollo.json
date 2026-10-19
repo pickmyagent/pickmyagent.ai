@@ -1,0 +1,68 @@
+{
+  "id": "apollo",
+  "slug": "apollo",
+  "name": "Apollo",
+  "websiteUrl": "https://www.apollo.io/",
+  "affiliateUrl": null,
+  "shortDescription": "Sales data and an AI assistant. The page cites 240 million contacts.",
+  "longDescription": "Apollo's pricing page describes data on 240 million contacts and 30 million companies, agents that run in the background, and an AI assistant. The text we fetched did not include a dollar price. We did not sign up.",
+  "categories": [
+    "sales"
+  ],
+  "useCaseTags": [
+    "sales-outreach"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "contact"
+  ],
+  "pricingNotes": "Pricing page says Apollo has 240 million contacts and 30 million companies, plus an AI assistant. No dollar amount was in the fetched text.",
+  "pricingUrl": "https://www.apollo.io/pricing",
+  "docsUrl": "https://www.apollo.io/pricing",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Looking up contacts and companies before writing outreach"
+  ],
+  "notIdealFor": [
+    "Someone who needs a confirmed monthly price from this check"
+  ],
+  "strength": "Apollo's pricing page cites 240 million contacts and 30 million companies, plus an AI assistant.",
+  "weakness": "That fetch did not include a dollar price, so this listing does not state one.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.apollo.io/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.apollo.io/"
+  },
+  "useCaseFit": {
+    "sales-outreach": "Offers a large contact database and an AI assistant for sales research."
+  }
+}

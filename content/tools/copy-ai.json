@@ -1,0 +1,68 @@
+{
+  "id": "copy-ai",
+  "slug": "copy-ai",
+  "name": "Copy.ai",
+  "websiteUrl": "https://www.copy.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Workflows for marketing content and go-to-market writing.",
+  "longDescription": "Copy.ai's prices page describes workflows, including content creation and account-based marketing, plus sales prospecting workflows. The fetched text did not include a dollar price. We did not sign up.",
+  "categories": [
+    "content"
+  ],
+  "useCaseTags": [
+    "create-content"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "contact"
+  ],
+  "pricingNotes": "The prices page describes workflows for content creation and marketing. No dollar amount was in the fetched text.",
+  "pricingUrl": "https://www.copy.ai/prices",
+  "docsUrl": "https://www.copy.ai/prices",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Drafting marketing content inside a workflow tool"
+  ],
+  "notIdealFor": [
+    "A buyer who needs a confirmed seat price"
+  ],
+  "strength": "The Copy AI prices page describes workflows for content creation and other go-to-market writing.",
+  "weakness": "That fetch did not include a dollar price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.copy.ai/prices"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.copy.ai/"
+  },
+  "useCaseFit": {
+    "create-content": "Describes content-creation workflows for marketing teams."
+  }
+}

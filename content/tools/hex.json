@@ -1,0 +1,69 @@
+{
+  "id": "hex",
+  "slug": "hex",
+  "name": "Hex",
+  "websiteUrl": "https://hex.tech/",
+  "affiliateUrl": null,
+  "shortDescription": "Collaborative data workspace. The page lists $36 per Editor each month.",
+  "longDescription": "Hex's pricing page lists $36 per Editor per month and says that price includes the Hex agent on top of Community. The homepage also describes AI analytics and dashboards. We did not start a workspace.",
+  "categories": [
+    "data-analysis"
+  ],
+  "useCaseTags": [
+    "analyze-data"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "freemium"
+  ],
+  "pricingNotes": "The pricing page lists $36 per Editor per month and a Hex agent on top of a Community plan.",
+  "pricingUrl": "https://hex.tech/pricing/",
+  "docsUrl": "https://hex.tech/pricing/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": 36,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "A team notebook that includes a Hex agent on the listed editor price"
+  ],
+  "notIdealFor": [
+    "A solo user who wants the cheapest consumer chat"
+  ],
+  "strength": "Hex lists $36 per Editor per month and includes a Hex agent above the Community plan.",
+  "weakness": "The price is per editor, and this check did not confirm that Community itself is free.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://hex.tech/pricing/",
+    "https://hex.tech/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://hex.tech/"
+  },
+  "useCaseFit": {
+    "analyze-data": "Data workspace with a Hex agent, listed at $36 per editor per month."
+  }
+}

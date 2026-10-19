@@ -1,0 +1,68 @@
+{
+  "id": "charlotte-ai",
+  "slug": "charlotte-ai",
+  "name": "Charlotte AI",
+  "websiteUrl": "https://www.crowdstrike.com/platform/charlotte-ai/",
+  "affiliateUrl": null,
+  "shortDescription": "CrowdStrike's agentic analyst for cybersecurity. No public price was listed.",
+  "longDescription": "CrowdStrike's page is titled Charlotte AI: Agentic Analyst for Cybersecurity, and the page says Charlotte AI accelerates work with autonomous intelligence for the security stack. We do not repeat outcome claims. The fetch did not list a price. We did not start a trial.",
+  "categories": [
+    "security"
+  ],
+  "useCaseTags": [
+    "security-ops"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "CrowdStrike titles the page Charlotte AI: Agentic Analyst for Cybersecurity. No price was in the fetch.",
+  "pricingUrl": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+  "docsUrl": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Security teams already in the CrowdStrike platform who want its analyst assistant"
+  ],
+  "notIdealFor": [
+    "A standalone inbox tool with a public monthly price"
+  ],
+  "strength": "CrowdStrike titles Charlotte AI an agentic analyst for cybersecurity on its official platform page.",
+  "weakness": "The fetched page did not list a public price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.crowdstrike.com/en-us/platform/charlotte-ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/"
+  },
+  "useCaseFit": {
+    "security-ops": "Agentic security analyst described on CrowdStrike's Charlotte AI page."
+  }
+}

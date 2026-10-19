@@ -1,0 +1,68 @@
+{
+  "id": "smartlead",
+  "slug": "smartlead",
+  "name": "Smartlead",
+  "websiteUrl": "https://www.smartlead.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Cold email platform whose SmartAssistant sets up and fixes outreach.",
+  "longDescription": "Smartlead's site describes SmartAssistant as a personal cold-email AI assistant to set up, run, and fix outreach, plus lead and deliverability products. The fetched text did not list a plan price. We did not sign up.",
+  "categories": [
+    "sales"
+  ],
+  "useCaseTags": [
+    "sales-outreach"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "contact"
+  ],
+  "pricingNotes": "The site describes SmartAssistant as a cold-email AI assistant. A customer story dollar figure is not a plan price.",
+  "pricingUrl": "https://www.smartlead.ai/",
+  "docsUrl": "https://www.smartlead.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Running cold email campaigns with an assistant that sets them up"
+  ],
+  "notIdealFor": [
+    "A buyer who needs a listed monthly price from this check"
+  ],
+  "strength": "Smartlead describes SmartAssistant as a cold-email AI assistant that sets up, runs, and fixes outreach.",
+  "weakness": "The fetched homepage did not list a plan price, so none is shown here.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.smartlead.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.smartlead.ai/"
+  },
+  "useCaseFit": {
+    "sales-outreach": "Describes an AI assistant for setting up and fixing cold email outreach."
+  }
+}

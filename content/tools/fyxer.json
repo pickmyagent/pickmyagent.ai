@@ -1,0 +1,68 @@
+{
+  "id": "fyxer",
+  "slug": "fyxer",
+  "name": "Fyxer",
+  "websiteUrl": "https://www.fyxer.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Inbox organizer and email draft writer with a 14-day free trial.",
+  "longDescription": "Fyxer's site lists an inbox organizer, an email draft writer, a meeting notetaker, and a scheduling assistant. It says you can start for free and offers a 14-day free trial with a work email. The fetched text did not include a dollar price.",
+  "categories": [
+    "productivity"
+  ],
+  "useCaseTags": [
+    "manage-inbox"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "The site lists an inbox organizer and email draft writer, a start-for-free option, and a 14-day trial. No dollar price was in the fetch.",
+  "pricingUrl": "https://www.fyxer.com/",
+  "docsUrl": "https://www.fyxer.com/",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": "14 days",
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Drafting replies and organizing an inbox from the tools Fyxer lists"
+  ],
+  "notIdealFor": [
+    "Someone comparing plans by a published monthly price"
+  ],
+  "strength": "Fyxer lists an inbox organizer and an email draft writer, with a 14-day free trial and a start-for-free option.",
+  "weakness": "The fetched page did not show a dollar price for the paid plan.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.fyxer.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.fyxer.com/"
+  },
+  "useCaseFit": {
+    "manage-inbox": "Organizes an inbox and drafts email, with a 14-day trial on the site."
+  }
+}

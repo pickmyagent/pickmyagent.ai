@@ -1,0 +1,67 @@
+{
+  "id": "khanmigo",
+  "slug": "khanmigo",
+  "name": "Khanmigo",
+  "websiteUrl": "https://www.khanmigo.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Khan Academy tutor and teaching assistant. Teachers can sign up for free.",
+  "longDescription": "Khanmigo's site describes a teaching assistant and tutor for learners and parents, plus a writing coach, and it says teachers can sign up for free. The fetched text did not include a dollar price for learners. We did not create an account.",
+  "categories": [
+    "learning"
+  ],
+  "useCaseTags": [
+    "tutoring"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium"
+  ],
+  "pricingNotes": "The site calls Khanmigo a teaching assistant and tutor and says teachers can sign up for free. No dollar price was in the fetch.",
+  "pricingUrl": "https://www.khanmigo.ai/",
+  "docsUrl": "https://www.khanmigo.ai/",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Tutoring and teacher help inside Khan Academy's assistant"
+  ],
+  "notIdealFor": [
+    "Someone who needs a published learner price from this check"
+  ],
+  "strength": "Khanmigo describes a tutor and teaching assistant, and it says teachers can sign up for free.",
+  "weakness": "The fetched page did not list a dollar price for learners.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.khanmigo.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.khanmigo.ai/"
+  },
+  "useCaseFit": {
+    "tutoring": "Tutor and teaching assistant that offers teachers a free sign-up."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "hootsuite",
+  "slug": "hootsuite",
+  "name": "Hootsuite",
+  "websiteUrl": "https://www.hootsuite.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Social planning and publishing. The plans page says it is connected by AI.",
+  "longDescription": "Hootsuite's plans page describes content creation, planning, and publishing for social, and says the suite is connected by AI. The fetched text did not include a dollar price. We did not start a trial.",
+  "categories": [
+    "content"
+  ],
+  "useCaseTags": [
+    "social-media"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "contact"
+  ],
+  "pricingNotes": "The plans page describes social content creation, planning, and publishing, and says the suite is connected by AI. No dollar amount was in the fetched text.",
+  "pricingUrl": "https://www.hootsuite.com/plans",
+  "docsUrl": "https://www.hootsuite.com/plans",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Planning and publishing social content in a suite that mentions AI"
+  ],
+  "notIdealFor": [
+    "Someone who needs a listed monthly price from this check"
+  ],
+  "strength": "Hootsuite's plans page describes social content creation, planning, and publishing, and says the suite is connected by AI.",
+  "weakness": "The fetched plans text did not include a dollar price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.hootsuite.com/plans"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.hootsuite.com/"
+  },
+  "useCaseFit": {
+    "social-media": "Plans and publishes social content, and the plans page says the suite is connected by AI."
+  }
+}

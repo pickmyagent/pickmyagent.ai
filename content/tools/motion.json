@@ -1,0 +1,67 @@
+{
+  "id": "motion",
+  "slug": "motion",
+  "name": "Motion",
+  "websiteUrl": "https://www.usemotion.com/",
+  "affiliateUrl": null,
+  "shortDescription": "AI calendar and tasks. The pricing page lists $29 per seat each month.",
+  "longDescription": "Motion's pricing page includes plan data listing $29 per seat on the monthly price and names AI Calendar and Meetings, an AI task planner, and AI docs. We did not start a subscription.",
+  "categories": [
+    "productivity"
+  ],
+  "useCaseTags": [
+    "scheduling-assistant"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Pricing data on the page lists $29 per seat monthly and names AI Calendar and Meetings.",
+  "pricingUrl": "https://www.usemotion.com/pricing",
+  "docsUrl": "https://www.usemotion.com/pricing",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": 29,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Auto-planning a calendar and task list in one app"
+  ],
+  "notIdealFor": [
+    "Someone who only wants a free calendar link"
+  ],
+  "strength": "Motion's pricing page lists $29 per seat each month and includes an AI calendar and meetings.",
+  "weakness": "That $29 figure is per seat on the monthly option, and the page also shows a lower annual per-seat figure.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.usemotion.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.usemotion.com/"
+  },
+  "useCaseFit": {
+    "scheduling-assistant": "Plans a calendar and tasks, with a listed price of $29 per seat each month."
+  }
+}

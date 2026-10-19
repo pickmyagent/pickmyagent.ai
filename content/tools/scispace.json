@@ -1,0 +1,67 @@
+{
+  "id": "scispace",
+  "slug": "scispace",
+  "name": "SciSpace",
+  "websiteUrl": "https://scispace.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Literature review and chat with PDF for scientific papers.",
+  "longDescription": "SciSpace's pricing page says it is an end-to-end platform for discovering, analyzing, and writing scientific literature, with literature review, chat with PDF, and a citation generator. The FAQ text we fetched did not include a dollar price. We did not subscribe.",
+  "categories": [
+    "research"
+  ],
+  "useCaseTags": [
+    "deep-research"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "The pricing FAQ says SciSpace is for discovering, analyzing, and writing scientific literature, including literature review and chat with PDF. No dollar price was in the FAQ text.",
+  "pricingUrl": "https://scispace.com/pricing",
+  "docsUrl": "https://scispace.com/pricing",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Reading papers with chat and a literature-review tool"
+  ],
+  "notIdealFor": [
+    "Someone who needs a listed monthly price from this check"
+  ],
+  "strength": "SciSpace says it supports literature review, chat with PDF, and citation tools for scientific literature.",
+  "weakness": "The pricing FAQ we fetched did not include a dollar amount.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://scispace.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://scispace.com/"
+  },
+  "useCaseFit": {
+    "deep-research": "Literature review and chat-with-PDF tools for research papers."
+  }
+}

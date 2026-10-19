@@ -1,0 +1,68 @@
+{
+  "id": "bill-com",
+  "slug": "bill-com",
+  "name": "BILL",
+  "websiteUrl": "https://www.bill.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Invoicing, AP controls, and spend tools, plus an AI API.",
+  "longDescription": "BILL's product page lists invoicing, AP controls, spend and expense, payments, and an AI API. The fetched text did not include a dollar price. We did not request a demo.",
+  "categories": [
+    "finance-ops"
+  ],
+  "useCaseTags": [
+    "finance-ops"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "contact"
+  ],
+  "pricingNotes": "The product page lists invoicing, AP controls, spend and expense, and an AI API. No dollar price was in the fetch.",
+  "pricingUrl": "https://www.bill.com/product",
+  "docsUrl": "https://www.bill.com/product",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Paying bills and sending invoices in one payables product"
+  ],
+  "notIdealFor": [
+    "A buyer who needs a public price from this check"
+  ],
+  "strength": "BILL's product page lists invoicing, AP controls, spend and expense, and an AI API.",
+  "weakness": "The fetched page did not include a dollar price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.bill.com/product"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.bill.com/"
+  },
+  "useCaseFit": {
+    "finance-ops": "Lists invoicing, accounts-payable controls, and spend and expense tools."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "wonderplan",
+  "slug": "wonderplan",
+  "name": "Wonderplan",
+  "websiteUrl": "https://wonderplan.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "AI trip planner that builds itineraries. The site says you can start free.",
+  "longDescription": "Wonderplan's site says it is an AI trip planner and travel curator that creates itineraries for your interests and budget, and that you can get started for free. The fetched text did not list a paid price. We did not create an account.",
+  "categories": [
+    "travel"
+  ],
+  "useCaseTags": [
+    "plan-travel"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium"
+  ],
+  "pricingNotes": "The site calls itself an AI trip planner and says get started, it's free. No paid dollar price was in the fetch.",
+  "pricingUrl": "https://wonderplan.ai/",
+  "docsUrl": "https://wonderplan.ai/",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Drafting a custom itinerary without a paid plan listed on the homepage"
+  ],
+  "notIdealFor": [
+    "Someone comparing paid tiers by price"
+  ],
+  "strength": "Wonderplan calls itself an AI trip planner that creates custom itineraries, and it says you can get started for free.",
+  "weakness": "The fetched page did not list a paid plan price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://wonderplan.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://wonderplan.ai/"
+  },
+  "useCaseFit": {
+    "plan-travel": "AI itinerary planner that says you can start for free."
+  }
+}

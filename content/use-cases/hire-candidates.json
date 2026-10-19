@@ -1,0 +1,30 @@
+{
+  "slug": "hire-candidates",
+  "title": "Screen and source candidates",
+  "summary": "Source profiles, review resumes, and schedule interviews.",
+  "audienceHints": [
+    "recruiters"
+  ],
+  "matchTags": [
+    "hire-candidates"
+  ],
+  "jobPhrase": "screening and sourcing candidates",
+  "assistantTask": "summarize a resume and draft an outreach note",
+  "assistantContext": "reviewing candidates",
+  "searchTopic": "the role you are hiring for",
+  "recommended": [
+    {
+      "toolId": "metaview",
+      "why": "Free plan and AI sourcing. Docs checked."
+    },
+    {
+      "toolId": "paradox",
+      "why": "Candidate agent and conversational scheduling. Docs checked."
+    },
+    {
+      "toolId": "gem",
+      "why": "Source, review, and report. Docs checked."
+    }
+  ],
+  "intro": "AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve."
+}

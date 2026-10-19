@@ -1,0 +1,68 @@
+{
+  "id": "vic-ai",
+  "slug": "vic-ai",
+  "name": "Vic.ai",
+  "websiteUrl": "https://www.vic.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "AI-first invoice processing and accounts payable software.",
+  "longDescription": "Vic.ai's site describes AI-first accounts payable and invoice processing, including an AP suite. The fetched text did not list a price. We did not request a demo.",
+  "categories": [
+    "finance-ops"
+  ],
+  "useCaseTags": [
+    "finance-ops"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "The site describes AI-first invoice processing and accounts payable. No price was in the fetch.",
+  "pricingUrl": "https://www.vic.ai/",
+  "docsUrl": "https://www.vic.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Accounts payable teams that want invoice processing software"
+  ],
+  "notIdealFor": [
+    "A buyer who needs a public monthly price"
+  ],
+  "strength": "Vic AI describes AI-first invoice processing and accounts payable software.",
+  "weakness": "The fetched site did not list a dollar price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.vic.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.vic.ai/"
+  },
+  "useCaseFit": {
+    "finance-ops": "Invoice and accounts-payable software described as AI-first."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "alexa-shopping",
+  "slug": "alexa-shopping",
+  "name": "Alexa for Shopping",
+  "websiteUrl": "https://www.amazon.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Amazon shopping assistant, renamed from Rufus on May 13, 2026.",
+  "longDescription": "Amazon's news article says that on May 13, 2026 Rufus was renamed Alexa for Shopping. The same article describes an assistant trained on Amazon's catalog and the web that answers shopping questions, compares products, makes recommendations, and helps discover products in the Amazon Shopping app. It does not list a separate subscription price. We did not shop with it.",
+  "categories": [
+    "shopping"
+  ],
+  "useCaseTags": [
+    "shop-products"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "free"
+  ],
+  "pricingNotes": "Amazon's news post says Rufus was renamed Alexa for Shopping on May 13, 2026. No separate subscription price is stated.",
+  "pricingUrl": "https://www.aboutamazon.com/news/retail/amazon-rufus",
+  "docsUrl": "https://www.aboutamazon.com/news/retail/amazon-rufus",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Product questions and comparisons inside Amazon shopping"
+  ],
+  "notIdealFor": [
+    "Shopping only at stores outside Amazon"
+  ],
+  "strength": "Amazon's article says Alexa for Shopping, formerly Rufus, answers product questions, compares items, and makes recommendations in the shopping app.",
+  "weakness": "The article does not list a separate price, and the assistant is described inside Amazon's own shopping experience.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.aboutamazon.com/news/retail/amazon-rufus"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.amazon.com/"
+  },
+  "useCaseFit": {
+    "shop-products": "Answers shopping questions, compares products, and recommends items in Amazon's app."
+  }
+}

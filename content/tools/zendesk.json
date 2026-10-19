@@ -1,0 +1,67 @@
+{
+  "id": "zendesk",
+  "slug": "zendesk",
+  "name": "Zendesk",
+  "websiteUrl": "https://www.zendesk.com/",
+  "affiliateUrl": null,
+  "shortDescription": "AI-first support platform. The pricing page says plans start at $19 per month.",
+  "longDescription": "Zendesk's pricing page is titled as plans starting from $19 per month and describes an AI-first service platform whose AI is meant to improve resolutions. We did not start a trial or confirm what the $19 plan includes beyond that title.",
+  "categories": [
+    "customer-support"
+  ],
+  "useCaseTags": [
+    "customer-support"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "The pricing page title says plans start from $19 per month and describes Zendesk AI.",
+  "pricingUrl": "https://www.zendesk.com/pricing/",
+  "docsUrl": "https://www.zendesk.com/pricing/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": 19,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Teams that already want a support suite with AI on the pricing page"
+  ],
+  "notIdealFor": [
+    "Someone who needs the $19 plan's feature list confirmed in this listing"
+  ],
+  "strength": "Zendesk's pricing page says plans start from $19 per month and describes Zendesk AI on its service platform.",
+  "weakness": "The fetched page did not spell out which AI features sit on the $19 plan versus higher tiers.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.zendesk.com/pricing/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.zendesk.com/"
+  },
+  "useCaseFit": {
+    "customer-support": "Prices a support platform from $19 per month and describes Zendesk AI for service teams."
+  }
+}

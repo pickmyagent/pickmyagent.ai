@@ -47,7 +47,72 @@
   {
     "slug": "real-estate",
     "title": "Land & real estate research",
-    "summary": "Parcel, ownership, and property research for land and real estate."
+    "summary": "Parcel research, plus off-market and for-sale-by-owner outreach."
+  },
+  {
+    "slug": "customer-support",
+    "title": "Customer support",
+    "summary": "AI agents that reply to tickets, refunds, and order questions."
+  },
+  {
+    "slug": "sales",
+    "title": "Sales outreach",
+    "summary": "Lead research, outreach sequences, and pipeline tools."
+  },
+  {
+    "slug": "productivity",
+    "title": "Email and scheduling",
+    "summary": "Inbox triage and calendar assistants."
+  },
+  {
+    "slug": "content",
+    "title": "Content and social",
+    "summary": "Drafting, SEO, and social scheduling tools."
+  },
+  {
+    "slug": "data-analysis",
+    "title": "Data analysis",
+    "summary": "Spreadsheet and dashboard analysis."
+  },
+  {
+    "slug": "hiring",
+    "title": "Hiring",
+    "summary": "Sourcing, resume review, and candidate scheduling."
+  },
+  {
+    "slug": "travel",
+    "title": "Travel planning",
+    "summary": "Itineraries, flights, and stays."
+  },
+  {
+    "slug": "shopping",
+    "title": "Shopping",
+    "summary": "Product search and recommendations."
+  },
+  {
+    "slug": "finance-ops",
+    "title": "Finance operations",
+    "summary": "Invoices, expenses, and accounts payable. Not tax or financial advice."
+  },
+  {
+    "slug": "security",
+    "title": "Security operations",
+    "summary": "Alert triage, phishing, and security analyst assistants."
+  },
+  {
+    "slug": "it-support",
+    "title": "IT help desk",
+    "summary": "IT service desk and employee support automation."
+  },
+  {
+    "slug": "learning",
+    "title": "Learning and tutoring",
+    "summary": "Tutors and study tools."
+  },
+  {
+    "slug": "research",
+    "title": "Deep research",
+    "summary": "Literature review and sourced research assistants."
   },
   {
     "slug": "general-assistants",

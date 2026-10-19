@@ -3,12 +3,19 @@ import { getNewsletterFormUrl } from "@/lib/newsletter";
 export function NewsletterSignup({
   idPrefix,
   className,
+  heading,
+  description,
+  compact = false,
 }: {
   idPrefix: string;
   className?: string;
+  heading?: string;
+  description?: string;
+  compact?: boolean;
 }) {
   const action = getNewsletterFormUrl();
   const emailId = `${idPrefix}-email`;
+  const copy = description ?? "Get the best new AI tools every week. Free.";
 
   return (
     <form
@@ -17,10 +24,19 @@ export function NewsletterSignup({
       target="_blank"
       className={className}
     >
-      <p className="text-base leading-relaxed">
-        Get the best new AI tools every week. Free.
+      {heading ? (
+        <h3 className="text-lg font-semibold tracking-tight text-text">{heading}</h3>
+      ) : null}
+      <p
+        className={
+          heading || description
+            ? "mt-1 text-sm leading-relaxed text-muted"
+            : "text-base leading-relaxed"
+        }
+      >
+        {copy}
       </p>
-      <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+      <div className={`${compact ? "mt-3" : "mt-4"} flex flex-col gap-3 sm:flex-row`}>
         <label htmlFor={emailId} className="sr-only">
           Email
         </label>

@@ -1,0 +1,68 @@
+{
+  "id": "julius",
+  "slug": "julius",
+  "name": "Julius",
+  "websiteUrl": "https://julius.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Data analysis chat. Plus is $20 per month and a Free plan is listed.",
+  "longDescription": "Julius's pricing page lists a Free plan and Plus for everyday analysis at $20 per month, or $16 per month when billed annually, with a monthly credit amount on Plus. We did not create an account.",
+  "categories": [
+    "data-analysis"
+  ],
+  "useCaseTags": [
+    "analyze-data"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Plus is $20 per month, or $16 per month on the annual price. A Free plan is listed.",
+  "pricingUrl": "https://julius.ai/pricing",
+  "docsUrl": "https://julius.ai/pricing",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": 20,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Asking questions about a spreadsheet in a chat priced on the site"
+  ],
+  "notIdealFor": [
+    "A team that needs a governed BI deployment"
+  ],
+  "strength": "Julius lists a Free plan and a Plus plan at $20 per month for everyday analysis.",
+  "weakness": "Plus is credit-capped, and the $16 figure is the annual per-month price rather than the monthly plan.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://julius.ai/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://julius.ai/"
+  },
+  "useCaseFit": {
+    "analyze-data": "Chat for data analysis, with Plus at $20 per month and a Free plan listed."
+  }
+}

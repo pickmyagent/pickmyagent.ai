@@ -1,0 +1,68 @@
+{
+  "id": "metaview",
+  "slug": "metaview",
+  "name": "Metaview",
+  "websiteUrl": "https://www.metaview.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Hiring agents for sourcing and interview notes. Free is $0 per user.",
+  "longDescription": "Metaview's pricing page lists a free plan at $0 per user per month, AI sourcing with the first 100 profiles free, and a notetaker. We did not create an account, and we did not pick a higher dollar figure from the page as the starting price because the free plan is the listed start.",
+  "categories": [
+    "hiring"
+  ],
+  "useCaseTags": [
+    "hire-candidates"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "A free plan is listed at $0 per user per month and includes AI sourcing with the first 100 profiles free. Other dollar amounts appeared but were not used as the starting paid price.",
+  "pricingUrl": "https://www.metaview.ai/pricing",
+  "docsUrl": "https://www.metaview.ai/pricing",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": 0,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Sourcing profiles and taking interview notes on a free plan"
+  ],
+  "notIdealFor": [
+    "A company that assumes the free plan covers unlimited sourcing"
+  ],
+  "strength": "Metaview lists a free plan at $0 per user per month and AI sourcing with the first 100 profiles free.",
+  "weakness": "The free sourcing offer stops at 100 profiles, and higher plans were not given a single public starting price here.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.metaview.ai/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.metaview.ai/"
+  },
+  "useCaseFit": {
+    "hire-candidates": "Free hiring plan with AI sourcing for the first 100 profiles and a notetaker."
+  }
+}

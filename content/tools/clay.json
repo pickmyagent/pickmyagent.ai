@@ -1,0 +1,68 @@
+{
+  "id": "clay",
+  "slug": "clay",
+  "name": "Clay",
+  "websiteUrl": "https://www.clay.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Sales data workspace with a marketplace of 200+ providers and a free trial.",
+  "longDescription": "Clay's pricing page describes centralizing data sources, buying data from 200+ providers, and tracking intent signals, and it offers a free trial. The fetched text did not include a dollar price or a trial length. We did not start a trial.",
+  "categories": [
+    "sales"
+  ],
+  "useCaseTags": [
+    "sales-outreach"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "usage"
+  ],
+  "pricingNotes": "The pricing page describes a data marketplace of 200+ providers and a free trial. No dollar amount or trial length was in the fetch.",
+  "pricingUrl": "https://www.clay.com/pricing",
+  "docsUrl": "https://www.clay.com/pricing",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Building lead lists from many data providers in one table"
+  ],
+  "notIdealFor": [
+    "Someone who needs a published seat price before a trial"
+  ],
+  "strength": "Clay describes a data marketplace of more than 200 providers and offers a free trial on the pricing page.",
+  "weakness": "The fetched pricing text did not state a dollar price or how many days the trial lasts.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.clay.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.clay.com/"
+  },
+  "useCaseFit": {
+    "sales-outreach": "Pulls sales data from a marketplace of more than 200 providers, with a free trial."
+  }
+}

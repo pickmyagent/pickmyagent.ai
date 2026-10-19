@@ -1,0 +1,67 @@
+{
+  "id": "synthesis-tutor",
+  "slug": "synthesis-tutor",
+  "name": "Synthesis Tutor",
+  "websiteUrl": "https://www.synthesis.com/tutor",
+  "affiliateUrl": null,
+  "shortDescription": "Tutor product with a free trial. No plan price was confirmed.",
+  "longDescription": "Synthesis Tutor's page offers a free trial and describes a tutor for kids. A marketing line said less than $1 a day, which is not a plan price, so this listing does not convert it into a monthly price. We did not start the trial.",
+  "categories": [
+    "learning"
+  ],
+  "useCaseTags": [
+    "tutoring"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "The tutor page offers a free trial. A 'less than $1 a day' line is marketing, not a plan price, so no starting price is set.",
+  "pricingUrl": "https://www.synthesis.com/tutor",
+  "docsUrl": "https://www.synthesis.com/tutor",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Trying a kids' tutor that offers a free trial on the official page"
+  ],
+  "notIdealFor": [
+    "An adult professional course"
+  ],
+  "strength": "Synthesis Tutor's official page offers a free trial for its tutor.",
+  "weakness": "The fetched page did not state a plan price in dollars, only a marketing line about daily cost.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.synthesis.com/tutor"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.synthesis.com/tutor"
+  },
+  "useCaseFit": {
+    "tutoring": "Tutor with a free trial offered on the official tutor page."
+  }
+}

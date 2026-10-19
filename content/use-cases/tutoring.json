@@ -1,0 +1,30 @@
+{
+  "slug": "tutoring",
+  "title": "Tutor and personalized learning",
+  "summary": "Explain a concept and make practice questions.",
+  "audienceHints": [
+    "learners"
+  ],
+  "matchTags": [
+    "tutoring"
+  ],
+  "jobPhrase": "tutoring and personalized learning",
+  "assistantTask": "explain one concept and write a practice question",
+  "assistantContext": "studying a topic",
+  "searchTopic": "the concept you want explained",
+  "recommended": [
+    {
+      "toolId": "khanmigo",
+      "why": "Tutor and teaching assistant with a free teacher sign-up. Docs checked."
+    },
+    {
+      "toolId": "synthesis-tutor",
+      "why": "Tutor with a free trial. Docs checked."
+    },
+    {
+      "toolId": "duolingo-max",
+      "why": "Duolingo's 2023 post introduces Max with GPT-4. Docs checked."
+    }
+  ],
+  "intro": "AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss."
+}

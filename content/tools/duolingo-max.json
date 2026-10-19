@@ -1,0 +1,67 @@
+{
+  "id": "duolingo-max",
+  "slug": "duolingo-max",
+  "name": "Duolingo Max",
+  "websiteUrl": "https://blog.duolingo.com/duolingo-max/",
+  "affiliateUrl": null,
+  "shortDescription": "Language practice. A 2023 Duolingo post introduces Max with GPT-4.",
+  "longDescription": "Duolingo's official post dated March 14, 2023 introduces Duolingo Max as a learning experience powered by GPT-4. This October 19, 2026 check did not find a current price on that post. We did not subscribe.",
+  "categories": [
+    "learning"
+  ],
+  "useCaseTags": [
+    "tutoring"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Duolingo's March 14, 2023 post introduces Max as a GPT-4 learning experience. This check did not find a current price.",
+  "pricingUrl": "https://blog.duolingo.com/duolingo-max/",
+  "docsUrl": "https://blog.duolingo.com/duolingo-max/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Language practice in the Max experience Duolingo introduced in that post"
+  ],
+  "notIdealFor": [
+    "Someone who needs a 2026 price confirmed from this check"
+  ],
+  "strength": "Duolingo's March 14, 2023 post introduces Max as a learning experience powered by GPT-4.",
+  "weakness": "That post does not show a current price, and it is the source for this listing.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://blog.duolingo.com/duolingo-max/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://blog.duolingo.com/duolingo-max/"
+  },
+  "useCaseFit": {
+    "tutoring": "Language-learning experience Duolingo introduced as GPT-4 powered Max."
+  }
+}

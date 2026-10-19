@@ -1,0 +1,26 @@
+{
+  "slug": "deep-research",
+  "title": "Do deep research",
+  "summary": "Literature review and sourced briefs.",
+  "audienceHints": [
+    "researchers"
+  ],
+  "matchTags": [
+    "deep-research"
+  ],
+  "jobPhrase": "doing deep research",
+  "assistantTask": "compare sources and draft a brief with links",
+  "assistantContext": "researching a question",
+  "searchTopic": "the question you want sourced",
+  "recommended": [
+    {
+      "toolId": "elicit",
+      "why": "AI research assistant. Plus is $11 per user per month billed annually. Docs checked."
+    },
+    {
+      "toolId": "scispace",
+      "why": "Literature review and chat with PDF. Docs checked."
+    }
+  ],
+  "intro": "AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check."
+}

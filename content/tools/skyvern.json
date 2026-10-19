@@ -1,0 +1,69 @@
+{
+  "id": "skyvern",
+  "slug": "skyvern",
+  "name": "Skyvern",
+  "websiteUrl": "https://www.skyvern.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Browser automation. Free is $0 per month and a paid plan is $29.",
+  "longDescription": "Skyvern's site describes AI browser automation for websites, and the pricing page lists a Free plan at $0 per month with 5,000 credits and a paid plan at $29 per month. We did not create an account. A sample JSON price on the marketing site was not used as the plan price.",
+  "categories": [
+    "tool-use"
+  ],
+  "useCaseTags": [
+    "tool-use-browser"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Pricing page lists Free at $0 per month with 5,000 credits and a paid plan at $29 per month.",
+  "pricingUrl": "https://www.skyvern.com/pricing",
+  "docsUrl": "https://www.skyvern.com/pricing",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": 29,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Automating clicks and form steps on websites"
+  ],
+  "notIdealFor": [
+    "A team that wants the higher plan's full price confirmed beyond $29"
+  ],
+  "strength": "Skyvern lists browser automation with a free plan at $0 per month and a paid plan at $29 per month.",
+  "weakness": "The free plan is credit-capped at 5,000 credits, and higher plans cost more than $29.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.skyvern.com/",
+    "https://www.skyvern.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.skyvern.com/"
+  },
+  "useCaseFit": {
+    "tool-use-browser": "Automates browser steps, with a free plan and a $29 per month plan."
+  }
+}

@@ -10,7 +10,8 @@
     "knowledge"
   ],
   "useCaseTags": [
-    "meetings-knowledge"
+    "meetings-knowledge",
+    "knowledge-qa"
   ],
   "toolTypes": [
     "other"
@@ -67,6 +68,7 @@
     "finalUrl": "https://www.notion.com/"
   },
   "useCaseFit": {
-    "meetings-knowledge": "Team workspace for docs and wikis, with a free plan that trials Notion AI."
+    "meetings-knowledge": "Team workspace for docs and wikis, with a free plan that trials Notion AI.",
+    "knowledge-qa": "The pricing page lists a trial of Notion AI and says you can capture and organize responses in the workspace."
   }
 }

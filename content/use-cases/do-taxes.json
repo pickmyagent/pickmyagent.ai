@@ -1,0 +1,35 @@
+{
+  "slug": "do-taxes",
+  "title": "Do my taxes",
+  "summary": "Sort records and prepare a return. PickMyAgent is not tax or financial advice.",
+  "audienceHints": [
+    "filers"
+  ],
+  "matchTags": [
+    "do-taxes"
+  ],
+  "jobPhrase": "doing your taxes",
+  "assistantTask": "list documents, sort deductions, and draft questions for a tax pro",
+  "assistantContext": "preparing a tax return",
+  "searchTopic": "which forms a filer might need",
+  "recommended": [
+    {
+      "toolId": "turbotax",
+      "why": "File-yourself pricing starts at $0. Docs checked."
+    },
+    {
+      "toolId": "taxact",
+      "why": "Guided filing and a free start. Docs checked."
+    },
+    {
+      "toolId": "keeper",
+      "why": "Expense tracking and filing, with a free start. Docs checked."
+    },
+    {
+      "toolId": "flyfin",
+      "why": "AI plus a CPA for self-employed returns. Docs checked."
+    }
+  ],
+  "intro": "AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.",
+  "disclaimer": "PickMyAgent is not tax or financial advice."
+}
