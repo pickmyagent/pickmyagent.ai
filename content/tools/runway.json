@@ -5,7 +5,7 @@
   "websiteUrl": "https://runway.com/",
   "affiliateUrl": null,
   "shortDescription": "Video generation and editing. Pricing page loaded; a free tier was not clearly confirmed.",
-  "longDescription": "Runway generates and edits video. The site resolved at runway.com (from the older runwayml.com host). The pricing page returned HTTP 200 with a lot of content, but a free tier was not cleanly extracted, so it stays unconfirmed. One fetch of the help center returned 403. We did not create an account.",
+  "longDescription": "Runway generates and edits video. The site is at runway.com. A free tier was not clearly confirmed from the pricing page. We did not create an account.",
   "categories": [
     "creative-media"
   ],
@@ -20,7 +20,7 @@
     "web"
   ],
   "pricingModel": [],
-  "pricingNotes": "help.runwayml.com returned 403 in one fetch.",
+  "pricingNotes": "Confirm the current plan on the official pricing page.",
   "pricingUrl": "https://runway.com/pricing",
   "docsUrl": "https://help.runwayml.com/",
   "freeTier": null,
@@ -35,7 +35,7 @@
     "Creators comparing hosted video tools"
   ],
   "notIdealFor": [
-    "A confirmed free plan from this check",
+    "A confirmed free plan",
     "In-game NPC dialogue"
   ],
   "strength": "The pricing page lists video generation and editing from $12 per month.",

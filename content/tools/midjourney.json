@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.midjourney.com/",
   "affiliateUrl": null,
   "shortDescription": "Image generation. Official plans we read are paid subscriptions, with no free tier on the comparison.",
-  "longDescription": "Midjourney generates images. The homepage often returns HTTP 403 to automated clients; the plan comparison we could read lists Basic $10, Standard $30, Pro $60, and Mega $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article, not a guess — re-check the article before you quote them. We did not subscribe.",
+  "longDescription": "Midjourney generates images. The plan comparison lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article. We did not subscribe.",
   "categories": [
     "creative-media"
   ],
@@ -22,7 +22,7 @@
   "pricingModel": [
     "subscription"
   ],
-  "pricingNotes": "CHANGED/NOTE: No free tier on official plan chart. Homepage midjourney.com HTTP 403 here.",
+  "pricingNotes": "No free tier on the official plan chart.",
   "pricingUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
   "docsUrl": "https://docs.midjourney.com/",
   "freeTier": null,
@@ -46,14 +46,14 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
   "handsOn": {
     "performed": false
   },
   "latestRelease": null,
   "problems": [
-    "No free tier on official Midjourney plans.",
-    "Homepage/docs often HTTP 403 to automated clients."
+    "No free tier on the official plan chart.",
+    null
   ],
   "featured": false,
   "featuredPaid": false,

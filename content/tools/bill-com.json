@@ -36,7 +36,7 @@
     "Paying bills and sending invoices in one payables product"
   ],
   "notIdealFor": [
-    "A buyer who needs a public price from this check"
+    "A buyer who needs a public price"
   ],
   "strength": "BILL's product page lists invoicing, AP controls, spend and expense, and an AI API.",
   "weakness": "The fetched page did not include a dollar price.",

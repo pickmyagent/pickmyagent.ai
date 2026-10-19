@@ -15,15 +15,15 @@
   "recommended": [
     {
       "toolId": "charlotte-ai",
-      "why": "CrowdStrike's agentic security analyst. Docs checked."
+      "why": "CrowdStrike's agentic security analyst."
     },
     {
       "toolId": "abnormal",
-      "why": "Behavioral AI for email and identity security. Docs checked."
+      "why": "Behavioral AI for email and identity security."
     },
     {
       "toolId": "dropzone",
-      "why": "AI SOC analyst for alert triage. Docs checked."
+      "why": "AI SOC analyst for alert triage."
     }
   ],
   "intro": "AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts."

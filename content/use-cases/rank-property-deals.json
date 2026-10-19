@@ -2,8 +2,13 @@
   "slug": "rank-property-deals",
   "title": "Rank property deals",
   "summary": "Search property records and compare rental, flip, or commercial numbers before you pick a deal.",
-  "audienceHints": ["investors", "buyers"],
-  "matchTags": ["rank-property-deals"],
+  "audienceHints": [
+    "investors",
+    "buyers"
+  ],
+  "matchTags": [
+    "rank-property-deals"
+  ],
   "jobPhrase": "finding and ranking real estate deals",
   "assistantTask": "compare price, rent, and repair figures and draft a ranking",
   "assistantContext": "rank real estate deals",
@@ -11,15 +16,15 @@
   "recommended": [
     {
       "toolId": "propstream",
-      "why": "Property search with filters and an AI search box. Docs checked."
+      "why": "Property search with filters and an AI search box."
     },
     {
       "toolId": "mashvisor",
-      "why": "Rental comps and income estimates for a property. Docs checked."
+      "why": "Rental comps and income estimates for a property."
     },
     {
       "toolId": "dealcheck",
-      "why": "Rental, flip, and commercial calculators with side-by-side comparison. Docs checked."
+      "why": "Rental, flip, and commercial calculators with side-by-side comparison."
     }
   ],
   "intro": "AI agents can compare property records and rental or flip numbers so you sort the deals yourself."

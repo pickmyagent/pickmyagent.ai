@@ -15,15 +15,15 @@
   "recommended": [
     {
       "toolId": "jasper",
-      "why": "Marketer workspace with agents. Docs checked."
+      "why": "Marketer workspace with agents."
     },
     {
       "toolId": "copy-ai",
-      "why": "Content workflows. Docs checked."
+      "why": "Workflows for marketing content and go-to-market writing."
     },
     {
       "toolId": "writesonic",
-      "why": "Starter is $79 per month billed annually. Docs checked."
+      "why": "Starter is $79 per month billed annually."
     }
   ],
   "intro": "AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit."

@@ -4,8 +4,8 @@
   "name": "Continue",
   "websiteUrl": "https://continue.dev/",
   "affiliateUrl": null,
-  "shortDescription": "Open-source coding agent and IDE extension. The /pricing URL returned 404 on our check.",
-  "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. We checked the homepage, docs, and GitHub releases. continue.dev/pricing returned HTTP 404, so there is no separate pricing page in this listing — the open-source extension is the free path we could confirm. We did not install the extension.",
+  "shortDescription": "Open-source coding agent and IDE extension.",
+  "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. There is no separate public price grid in this listing, and the open-source extension is the free path we could confirm.",
   "categories": [
     "coding-agents"
   ],
@@ -37,10 +37,10 @@
   ],
   "notIdealFor": [
     "A hosted IDE with a published price grid",
-    "A confirmed cloud plan — the pricing URL 404’d"
+    "A confirmed cloud plan with a public price grid"
   ],
   "strength": "Continue is an open-source coding agent you install in the IDE you already use.",
-  "weakness": "The Continue pricing page returned HTTP 404 on our check, so a public price grid was not confirmed.",
+  "weakness": "A public price grid was not confirmed, so this listing does not state a monthly price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -57,7 +57,7 @@
     "url": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
   },
   "problems": [
-    "continue.dev/pricing returned HTTP 404."
+    "No separate public price grid was confirmed."
   ],
   "featured": false,
   "featuredPaid": false,

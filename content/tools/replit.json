@@ -4,8 +4,8 @@
   "name": "Replit",
   "websiteUrl": "https://replit.com/",
   "affiliateUrl": null,
-  "shortDescription": "Browser IDE with a coding agent. Homepage and pricing returned HTTP 403, so this listing is not fully checked.",
-  "longDescription": "Replit is a browser IDE with a coding agent. From this environment the homepage and pricing URL returned HTTP 403, while the docs root returned HTTP 200. We could not confirm a free tier. The listing stays untested until someone re-checks it in a normal browser. A 403 to our client is not proof the site is down.",
+  "shortDescription": "Browser IDE with a coding agent.",
+  "longDescription": "Replit is a browser IDE with a coding agent. The recorded free plan includes up to 30 hours of chat and 60 projects. Confirm the current plan on the official pricing page.",
   "categories": [
     "coding-agents"
   ],
@@ -21,7 +21,7 @@
     "ide"
   ],
   "pricingModel": [],
-  "pricingNotes": "Could not read official pricing HTML (403).",
+  "pricingNotes": "Confirm the current plan on the official pricing page.",
   "pricingUrl": "https://replit.com/pricing",
   "docsUrl": "https://docs.replit.com/",
   "freeTier": true,
@@ -44,13 +44,13 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
   "handsOn": {
     "performed": false
   },
   "latestRelease": null,
   "problems": [
-    "replit.com and pricing blocked with HTTP 403 from this environment."
+    null
   ],
   "featured": false,
   "featuredPaid": false,

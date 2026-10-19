@@ -46,6 +46,19 @@ const HEADER_ONLY_GERUNDS: Record<string, string> = {
   support: "supporting",
 };
 
+/** Leading verbs that should gerund in a header, without counting as extra search intent. */
+const LEADING_GERUNDS: Record<string, string> = {
+  rebalance: "rebalancing",
+  update: "updating",
+  sort: "sorting",
+  review: "reviewing",
+  crawl: "crawling",
+  split: "splitting",
+  reset: "resetting",
+  tutor: "tutoring",
+  research: "researching",
+};
+
 const GERUNDS: Record<string, string> = {
   clip: "clipping", make: "making", edit: "editing", write: "writing", plan: "planning",
   train: "training", organize: "organizing", bake: "baking", reach: "reaching",
@@ -114,6 +127,7 @@ const DO_NOT_CORRECT = new Set([
   "deals", "deal", "house", "houses", "homes", "home", "rental", "rentals", "score",
   "rank", "flip", "commercial", "wedding", "cookbook", "garage", "property",
   "properties", "real", "estate", "cash", "flow", "reach", "realtor", "owner",
+  "thread", "threads",
   "owners", "seller", "sellers", "plan", "write", "bake", "train", "organize",
 ]);
 
@@ -191,25 +205,122 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   return score;
 }
 
-export function cleanUserPhrase(query: string): string {
-  let text = query.trim().replace(/\s+/g, " ").replace(/[.?!]+$/g, "");
+const PHRASE_NOISE = new Set([
+  "use", "using", "used", "best", "there", "can", "could", "ai", "tool", "tools",
+  "something", "someone", "just", "really", "please", "looking", "get",
+]);
+
+const PROPER_NOUNS = new Set([
+  "south", "carolina", "california", "texas", "florida", "york", "lisbon", "london",
+  "seo", "api", "crm", "gpt", "irs", "npc", "npcs", "pdf",
+]);
+
+/** Drop "use an agent for", "is there an AI that can", and the other tool-seeking openers. */
+export function stripWrappers(input: string): string {
+  let text = input.trim().replace(/\s+/g, " ").replace(/^[^A-Za-z0-9]+/, "").replace(/[.?!…]+$/g, "");
+  const patterns = [
+    /^(?:hey|hi|hello|ok|okay|so)\s+/i,
+    /^please\s+/i,
+    /^(?:i\s+was\s+wondering\s+if|i(?:'ve|\s+have)\s+been\s+trying\s+to(?:\s+figure\s+out)?)\s+/i,
+    /^(?:can|could)\s+you\s+(?:please\s+)?/i,
+    /^how\s+(?:do|can|should|could)\s+i\s+(?:use\s+(?:an?\s+)?(?:ai|agent|tool)s?\s+to\s+)?/i,
+    /^(?:what|which)\s+(?:kind\s+of\s+)?(?:ai|agents?|tools?)\s+(?:can|will|should|could)\s+/i,
+    /^which\s+(?:ai\s+)?tools?\s+(?:can|should|will|ranks?)\s+/i,
+    /^is\s+there\s+an?\s+(?:ai|agent|tool)s?\s+that\s+(?:can|will)\s+/i,
+    /^there\s+is\s+an?\s+(?:ai|agent|tool)s?\s+that\s+(?:can|will)\s+/i,
+    /^is\s+there\s+an?\s+(?:ai|agent|tool)s?\s+(?:to|for)\s+/i,
+    /^(?:i\s+)?just\s+need\s+something\s+that\s+(?:can|will)\s+(?:help\s+me\s+)?/i,
+    /^(?:i\s+)?(?:want|need)\s+(?:an?\s+)?ai\s+(?:that\s+(?:can|will)\s+|to\s+)/i,
+    /^(?:i\s+)?(?:want|need)\s+(?:to\s+)?(?:find\s+)?(?:me\s+)?(?:an?\s+)?(?:ai\s+)?(?:agents?|tools?)\s+(?:that\s+(?:will|can)\s+|to\s+(?:help\s+me\s+)?|for\s+)?/i,
+    /^(?:i\s+)?(?:want|need)\s+(?:to\s+)?(?:help\s+)?(?:with\s+)?/i,
+    /^(?:find|get|looking\s+for)\s+(?:me\s+)?(?:an?\s+)?(?:ai\s+)?(?:agents?|tools?)\s+(?:that\s+(?:will|can)\s+|to\s+(?:help\s+me\s+)?|for\s+)?/i,
+    /^use\s+(?:an?\s+)?(?:ai\s+)?(?:(?:agents?|tools?)\s+)?(?:for|to)\s+/i,
+    /^best\s+(?:ai\s+)?(?:agents?|tools?)\s+(?:for|to)\s+/i,
+    /^best\s+ai\s+for\s+/i,
+    /^(?:an?\s+)?(?:ai|agents?|tools?)\s+(?:for|to)\s+/i,
+    /^(?:an?\s+)?(?:ai\s+)?(?:agents?|tools?)\s+(?:that\s+(?:will|can)\s+|to\s+help\s+me\s+)/i,
+    /^help\s+me\s+(?:to\s+|with\s+)?/i,
+    /^agents?\s+to\s+help\s+me\s+/i,
+    /^help\s+/i,
+    /^(?:to|for|with)\s+(?!sale\b)/i,
+  ];
   let previous = "";
-  while (text !== previous) {
+  while (text && text !== previous) {
     previous = text;
-    text = text.replace(/^(please\s+)?/i, "");
-    text = text.replace(/^(i\s+)?(want|need)\s+(to\s+)?(help\s+)?(with\s+)?/i, "");
-    text = text.replace(/^(an?\s+)?(ai\s+)?(agents?|tools?)\s+(that\s+will\s+|to\s+help\s+me\s+)/i, "");
-    text = text.replace(/^(help\s+me\s+)/i, "");
-    text = text.replace(/^(agents?\s+to\s+help\s+me\s+)/i, "");
+    for (const pattern of patterns) text = text.replace(pattern, "");
+    text = text.replace(/\s+/g, " ").trim();
   }
-  text = text.replace(/\bmy\b/gi, "your");
-  text = text.replace(/^(help\s+)/i, "");
-  const headerGerunds = { ...GERUNDS, ...HEADER_ONLY_GERUNDS };
-  text = text.replace(/(^|,\s*(?:and\s+)?|\band\s+)([A-Za-z]+)\b/g, (full, prefix: string, word: string) => {
+  return text;
+}
+
+function applyHeaderGerunds(text: string): string {
+  const headerGerunds = { ...GERUNDS, ...HEADER_ONLY_GERUNDS, ...LEADING_GERUNDS };
+  return text.replace(/(^|,\s*(?:and\s+)?|\band\s+)([A-Za-z]+)\b/g, (full, prefix: string, word: string) => {
     const gerund = headerGerunds[word.toLowerCase()];
     return gerund ? `${prefix}${gerund}` : full;
   });
-  return text.replace(/\s+/g, " ").trim() || query.trim();
+}
+
+function lowercasePhrase(phrase: string, original: string): string {
+  const shouted = original === original.toUpperCase() && /[A-Z]/.test(original);
+  const proper = new Set(PROPER_NOUNS);
+  if (!shouted) {
+    for (const word of original.match(/[A-Za-z][A-Za-z'-]*/g) ?? []) {
+      const bare = word.toLowerCase();
+      if (word.length > 1 && word[0] === word[0].toUpperCase() && word.slice(1) !== word.slice(1).toUpperCase()) {
+        proper.add(bare);
+      }
+    }
+  }
+  return phrase.split(/\s+/).map((word) => {
+    const bare = word.toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (proper.has(bare) || PROPER_NOUNS.has(bare)) {
+      if (["seo", "api", "crm", "gpt", "irs", "npc", "npcs", "pdf", "ai"].includes(bare)) return bare.toUpperCase();
+      return word[0].toUpperCase() + word.slice(1).toLowerCase();
+    }
+    return word.toLowerCase();
+  }).join(" ");
+}
+
+function startsWithVerb(text: string): boolean {
+  const first = text.split(/\s+/)[0]?.toLowerCase().replace(/[^a-z]/g, "") ?? "";
+  return ACTION_VERBS.includes(first) || first in HEADER_ONLY_GERUNDS || first in INFINITIVES;
+}
+
+function nounPhraseWithVerb(remainder: string, useCase?: UseCase | null): string {
+  const rest = remainder.replace(/^(?:a|an|the)\s+/i, "").trim();
+  const job = useCase?.jobPhrase?.trim();
+  if (job) {
+    const restWords = new Set(words(rest));
+    const overlap = words(job).filter((word) => restWords.has(word) && word.length > 2);
+    if (overlap.length > 0 || restWords.size === 0) {
+      if (/\byour\b/i.test(rest)) {
+        return job.replace(/\b(?:a|an|the)\b/gi, "your").replace(/\byour\s+your\b/gi, "your");
+      }
+      return job;
+    }
+    const gerund = job.split(/\s+/)[0] ?? "";
+    if (/ing$/i.test(gerund) && rest) {
+      const object = /^(?:a|an|the|your)\b/i.test(rest) ? rest : `your ${rest}`;
+      return `${gerund} ${object}`;
+    }
+    if (job) return job;
+  }
+  if (!rest) return "working on this";
+  if (/^working\s+on\b/i.test(rest)) return rest;
+  if (/^work\s+on\b/i.test(rest)) return rest.replace(/^work\s+on\b/i, "working on");
+  return `working on ${rest}`;
+}
+
+export function jobPhrase(query: string, useCase?: UseCase | null): string {
+  const stripped = stripWrappers(query).replace(/\bmy\b/gi, "your");
+  const gerunded = applyHeaderGerunds(stripped).replace(/\s+/g, " ").trim();
+  const phrase = startsWithVerb(stripped) || startsWithVerb(gerunded) ? gerunded : nounPhraseWithVerb(gerunded, useCase);
+  return lowercasePhrase(phrase, query).replace(/\s+/g, " ").trim() || "working on this";
+}
+
+export function cleanUserPhrase(query: string): string {
+  return jobPhrase(query);
 }
 
 function extractPlace(query: string): string | null {
@@ -220,8 +331,8 @@ function extractPlace(query: string): string | null {
   return raw.replace(/\w\S*/g, (word) => word[0].toUpperCase() + word.slice(1).toLowerCase());
 }
 
-export function jobLead(query: string): string {
-  return `For ${cleanUserPhrase(query)}, here's how each tool can help:`;
+export function jobLead(query: string, useCase?: UseCase | null): string {
+  return `For ${jobPhrase(query, useCase)}, here's how each tool can help:`;
 }
 
 function extractVerbs(query: string): string[] {
@@ -267,12 +378,11 @@ function capabilityGerund(capability: string): string {
   return `${capability}ing`;
 }
 
-export function templatedIntro(query: string): string {
-  const phrase = cleanUserPhrase(query);
+export function templatedIntro(query: string, useCase?: UseCase | null): string {
   const verbs = extractVerbs(query);
   const specific = verbs.filter((verb) => !GENERIC.has(verb));
   if (specific.length === 0) {
-    return `AI agents can research, compare, summarize, draft, and automate parts of ${phrase}.`;
+    return `AI agents can help with ${jobPhrase(query, useCase)} by researching, comparing, and summarizing.`;
   }
   const shown = verbs.filter((verb) => specific.includes(verb) || verb === "find");
   const object = objectPhrase(query, shown);
@@ -285,7 +395,9 @@ function queryHasExtraIntent(query: string, concept: Concept): boolean {
   const place = extractPlace(query);
   const placeWords = new Set(place ? words(place) : []);
   const allowed = new Set(concept.covered);
-  return queryTokens(query).some((token) => !allowed.has(token) && !placeWords.has(token));
+  return queryTokens(query).some((token) =>
+    !allowed.has(token) && !placeWords.has(token) && !PHRASE_NOISE.has(token),
+  );
 }
 
 function introBorrowsLand(intro: string, query: string): boolean {
@@ -303,7 +415,7 @@ export function jobIntro(query: string, useCase: UseCase | undefined, concept: C
     !introBorrowsLand(useCase.intro, query),
   );
   if (storedOk && useCase?.intro) return useCase.intro;
-  return templatedIntro(query);
+  return templatedIntro(query, useCase);
 }
 
 function documentedLines(tool: Tool, useCaseSlug: string | null): string[] {
@@ -317,10 +429,15 @@ function documentedLines(tool: Tool, useCaseSlug: string | null): string[] {
 }
 
 function usableCapability(line: string): string {
-  const clauses = line
+  const sentences = line
     .replace(/\bdocs checked\b[^.]*\.?/gi, "")
     .replace(/\bwe did not sign up\b\.?/gi, "")
-    .split(/,\s*/);
+    .split(/(?<=[.!?])\s+/)
+    .filter((sentence) =>
+      sentence.trim().length > 0 &&
+      !/\$|\bper\s+(?:month|mo|seat|user|year)\b|\bbilled\b|\bwhen no specialist\b/i.test(sentence),
+    );
+  const clauses = sentences.join(" ").split(/,\s*/);
   const kept = clauses.filter((clause) =>
     clause.trim().length > 0 &&
     !/\$|\bper\s+(?:month|mo|seat|user|year)\b|\bbilled\b|\bdocs checked\b|\bwhen no specialist\b/i.test(clause),
@@ -355,38 +472,43 @@ const INFINITIVES: Record<string, string> = {};
 for (const [verb, gerund] of Object.entries({ ...GERUNDS, ...HEADER_ONLY_GERUNDS })) {
   INFINITIVES[gerund] = verb;
 }
+INFINITIVES.working = "work";
+for (const [verb, gerund] of Object.entries(LEADING_GERUNDS)) INFINITIVES[gerund] = verb;
 
 function toInfinitive(text: string): string {
-  return text.replace(/(^|,\s*(?:and\s+)?|\band\s+)([A-Za-z]+)\b/g, (full, prefix: string, word: string) => {
+  const converted = text.replace(/(^|,\s*(?:and\s+)?|\band\s+)([A-Za-z]+)\b/g, (full, prefix: string, word: string) => {
     const infinitive = INFINITIVES[word.toLowerCase()];
     return infinitive ? `${prefix}${infinitive}` : full;
   });
+  return converted.replace(/^([A-Za-z]{3,})ing\b/i, (full, stem: string) =>
+    INFINITIVES[full.toLowerCase()] ? full : stem.toLowerCase(),
+  );
 }
 
 /** Strip "find an agent that will" and similar wrappers. Leave the job underneath. */
 function unwrapJob(query: string): string {
-  let text = query.trim().replace(/\s+/g, " ").replace(/[.?!]+$/g, "");
-  let previous = "";
-  while (text !== previous) {
-    previous = text;
-    text = text.replace(/^(please\s+)/i, "");
-    text = text.replace(/^(i\s+)?(want|need)\s+(to\s+)?/i, "");
-    text = text.replace(
-      /^(?:find|get|looking\s+for)\s+(?:me\s+)?(?:an?\s+)?(?:ai\s+)?(?:agents?|tools?)\s+(?:that\s+(?:will|can)\s+|to\s+(?:help\s+me\s+)?)?/i,
-      "",
-    );
-    text = text.replace(/^(?:an?\s+)?(?:ai\s+)?(?:agents?|tools?)\s+(?:that\s+(?:will|can)\s+|to\s+help\s+me\s+)/i, "");
-    text = text.replace(/^help\s+me\s+(?:to\s+)?/i, "");
-    text = text.replace(/^help\s+/i, "");
-    text = text.replace(/^(?:agents?\s+)?to\s+help\s+me\s+/i, "");
-    text = text.replace(/^find\s+me\s+/i, "find ");
-  }
-  text = text.replace(/\bmy\b/gi, "your");
-  text = text.replace(/^(?:to\s+)/i, "");
+  const text = stripWrappers(query).replace(/\bmy\b/gi, "your").replace(/^(?:to|for|with)\s+/i, "");
   return toInfinitive(text).replace(/\s+/g, " ").trim();
 }
 
-function shortObject(text: string, verbs: string[]): string {
+function displayWord(raw: string, query: string): string {
+  const bare = raw.toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (!bare) return "";
+  if (bare === "your") return "your";
+  const shouted = query === query.toUpperCase() && /[A-Z]/.test(query);
+  if (!shouted) {
+    for (const word of query.match(/[A-Za-z][A-Za-z'-]*/g) ?? []) {
+      if (word.toLowerCase() !== bare || word.length < 2) continue;
+      if (word[0] === word[0].toUpperCase() && word.slice(1) !== word.slice(1).toUpperCase()) {
+        return word[0].toUpperCase() + bare.slice(1);
+      }
+    }
+  }
+  if (PROPER_NOUNS.has(bare)) return bare[0].toUpperCase() + bare.slice(1);
+  return bare;
+}
+
+function shortObject(text: string, verbs: string[], query: string): string {
   const verbSet = new Set(verbs);
   const drop = new Set([
     "and", "or", "them", "it", "a", "an", "the", "to", "that", "this", "when", "only",
@@ -398,35 +520,26 @@ function shortObject(text: string, verbs: string[]): string {
     const bare = raw.toLowerCase().replace(/[^a-z0-9]/g, "");
     if (!bare || verbSet.has(bare) || drop.has(bare) || GENERIC.has(bare)) continue;
     if (bare.length < 3) continue;
-    kept.push(bare === "your" ? "your" : raw.replace(/[^A-Za-z0-9-]/g, ""));
+    const shown = displayWord(raw, query);
+    if (!shown) continue;
+    kept.push(shown);
     if (bare !== "your") content += 1;
     if (content >= 4) break;
   }
   return kept.join(" ").replace(/\s+/g, " ").trim();
 }
 
-function infinitiveJob(query: string): string {
-  const unwrapped = unwrapJob(query);
-  const verbs = extractVerbs(unwrapped);
-  const specific = verbs.filter((verb) => !GENERIC.has(verb));
-  const shown = specific.length > 0 ? verbs.filter((verb) => specific.includes(verb) || verb === "find") : [];
-  if (shown.length === 0) {
-    const phrase = unwrapped
-      .replace(/\bfind an (?:ai )?(?:agent|tool) that will\b/gi, "")
-      .replace(/\bfind an (?:ai )?(?:agent|tool)\b/gi, "")
-      .replace(/\s+/g, " ")
-      .trim();
-    return tidyPhrase(phrase) || "work through this";
-  }
-  const object = shortObject(unwrapped, shown);
-  return tidyPhrase(`${humanJoin(shown)}${object ? ` ${object}` : ""}`);
+function infinitiveJob(query: string, useCase?: UseCase | null): string {
+  const phrase = toInfinitive(jobPhrase(query, useCase));
+  return tidyPhrase(phrase) || "work through this";
 }
 
-function jobEndings(query: string): string[] {
+function jobEndings(query: string, useCase?: UseCase | null): string[] {
   if (/\btaxes?\b/i.test(query)) {
     return ["file your taxes", "get your taxes done", "finish your taxes", "complete your taxes"];
   }
-  const base = infinitiveJob(query).replace(/\bfind an agent\b/gi, "").replace(/\s+/g, " ").trim();
+  const base = infinitiveJob(query, useCase).replace(/\bfind an agent\b/gi, "").replace(/\s+/g, " ").trim();
+  const gerund = jobPhrase(query, useCase);
   const endings = [base];
   const withoutFind = base.replace(/^find and\s+/i, "");
   if (withoutFind && withoutFind !== base) endings.push(withoutFind);
@@ -434,11 +547,18 @@ function jobEndings(query: string): string[] {
   if (swapped) endings.push(`${swapped[1]} ${swapped[3]} and ${swapped[2]} them`);
   if (/^manage\b/i.test(base)) endings.push(base.replace(/^manage\b/i, "clear"));
   if (base && !/\byourself\b/i.test(base)) endings.push(`${base} yourself`);
+  if (gerund && gerund !== base) {
+    endings.push(`start ${gerund}`, `keep ${gerund}`, `finish ${gerund}`);
+  }
   return [...new Set(endings.map((item) => tidyPhrase(item)).filter(Boolean))];
 }
 
 function lowerFirst(text: string): string {
-  return text ? text.charAt(0).toLowerCase() + text.slice(1) : text;
+  const match = /^([A-Za-z]+)([\s\S]*)$/.exec(text);
+  if (!match) return text;
+  const word = match[1];
+  if (word.length > 1 && word.length <= 5 && word === word.toUpperCase()) return text;
+  return word.charAt(0).toLowerCase() + word.slice(1) + match[2];
 }
 
 type TaskKind = "plan" | "compare" | "research" | "draft" | "analyze" | "schedule";
@@ -485,7 +605,7 @@ function withYour(object: string): string {
 
 function focusNoun(query: string): string {
   const unwrapped = unwrapJob(query);
-  const object = shortObject(unwrapped, extractVerbs(unwrapped));
+  const object = shortObject(unwrapped, extractVerbs(unwrapped), query);
   return withYour(object);
 }
 
@@ -499,7 +619,7 @@ function nounHasJobToken(query: string, noun: string): boolean {
 function isInboxJob(query: string): boolean {
   if (/\binbox\b/i.test(query)) return true;
   const unwrapped = unwrapJob(query);
-  const words = shortObject(unwrapped, extractVerbs(unwrapped))
+  const words = shortObject(unwrapped, extractVerbs(unwrapped), query)
     .toLowerCase()
     .split(/\s+/)
     .filter((word) => word && word !== "your");
@@ -565,10 +685,19 @@ function assistantWhy(tool: Tool, query: string): string {
 
 function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean, index: number): string {
   if (general) return assistantWhy(tool, query);
-  const capability = lowerFirst(bestCapability(tool, useCase?.slug ?? null, query));
-  const first = capability.split(/\s+/)[0]?.toLowerCase() ?? "";
-  const clause = INFINITIVES[first] ? `${tool.name} is for ${capability}` : `${tool.name} ${capability}`;
-  const endings = jobEndings(query);
+  let capability = lowerFirst(bestCapability(tool, useCase?.slug ?? null, query) || "helps with this job");
+  const nameTail = tool.name.split(/\s+/).at(-1)?.replace(/[^A-Za-z0-9]/g, "").toLowerCase() ?? "";
+  const capabilityHead = capability.split(/\s+/)[0]?.replace(/[^A-Za-z0-9]/g, "").toLowerCase() ?? "";
+  if (nameTail && capabilityHead === nameTail) {
+    capability = lowerFirst(capability.split(/\s+/).slice(1).join(" ") || "helps with this job");
+  } else if (capability.toLowerCase().startsWith(`${tool.name.toLowerCase()} `)) {
+    capability = lowerFirst(capability.slice(tool.name.length).trim());
+  }
+  const first = capability.split(/\s+/)[0]?.replace(/[^A-Za-z]/g, "").toLowerCase() ?? "";
+  const gerundStart = Boolean(INFINITIVES[first] || (first.length >= 5 && first.endsWith("ing")));
+  const nounStart = first === "a" || first === "an" || first === "the" || first === "your";
+  const clause = gerundStart || nounStart ? `${tool.name} is for ${capability}` : `${tool.name} ${capability}`;
+  const endings = jobEndings(query, useCase);
   const ending = endings[index % endings.length] ?? endings[0];
   return `${clause}, so you can ${ending}.`;
 }
@@ -790,15 +919,15 @@ export function rankCatalogQuery(
     tools: selected.map((tool, index) =>
       presentTool(
         tool,
-        whyItHelps(tool.source, primaryCase?.source ?? null, query, Boolean(tool.source.generalPurpose), index),
+        whyItHelps(tool.source, primaryCase?.source ?? null, corrected, Boolean(tool.source.generalPurpose), index),
         Boolean(tool.source.generalPurpose),
       ),
     ),
     useCases: primaryCase ? [presentCase(primaryCase)] : [],
     fallback: lowMatch,
     lowMatch,
-    lead: jobLead(query),
-    intro: jobIntro(query, primaryCase?.source, winner?.concept ?? null),
+    lead: jobLead(corrected, primaryCase?.source ?? null),
+    intro: jobIntro(corrected, primaryCase?.source, winner?.concept ?? null),
     disclaimer: primaryCase?.source.disclaimer ?? null,
   };
 }

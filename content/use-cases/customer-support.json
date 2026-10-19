@@ -15,19 +15,19 @@
   "recommended": [
     {
       "toolId": "intercom-fin",
-      "why": "Fin is $19 per seat per month plus per-outcome pricing. Docs checked."
+      "why": "Fin is $19 per seat per month plus per-outcome pricing."
     },
     {
       "toolId": "zendesk",
-      "why": "Support plans start at $19 per month on the pricing title. Docs checked."
+      "why": "Support plans start at $19 per month on the pricing title."
     },
     {
       "toolId": "decagon",
-      "why": "Chat, email, and voice concierge. Docs checked."
+      "why": "Chat, email, and voice concierge."
     },
     {
       "toolId": "sierra",
-      "why": "Customer-service agents. Docs checked."
+      "why": "Customer-service agents."
     }
   ],
   "intro": "AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle."

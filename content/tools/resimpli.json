@@ -6,11 +6,21 @@
   "affiliateUrl": null,
   "shortDescription": "Real estate CRM with calling, texting, and email on every plan, plus a 14-day trial.",
   "longDescription": "REsimpli is a real estate CRM. On October 19, 2026 the pricing page listed unlimited calling, SMS, and email on every plan, named Solo, Team, and Business by team size, with a 14-day trial. The page text we could read did not print a dollar amount. We did not start a trial.",
-  "categories": ["real-estate"],
-  "useCaseTags": ["find-off-market"],
-  "toolTypes": ["agent"],
-  "platforms": ["web"],
-  "pricingModel": ["subscription"],
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "find-off-market"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
   "pricingNotes": "Plans are Solo, Team, and Business. The page lists unlimited calling, SMS, and email, and a 14-day trial. No dollar amount was in the text we read.",
   "pricingUrl": "https://resimpli.com/pricing/",
   "docsUrl": "https://resimpli.com/pricing/",
@@ -21,8 +31,12 @@
   "pricingCheckedAt": "2026-10-19",
   "openSource": false,
   "repoUrl": null,
-  "bestFor": ["Calling and texting owner lists from one CRM"],
-  "notIdealFor": ["Someone who needs a published monthly price before talking to the vendor"],
+  "bestFor": [
+    "Calling and texting owner lists from one CRM"
+  ],
+  "notIdealFor": [
+    "Someone who needs a published monthly price before talking to the vendor"
+  ],
   "strength": "The pricing page lists unlimited calling, SMS, and email on every plan, with a 14-day trial.",
   "weakness": "The page we checked names plans by team size and does not print a dollar amount in the text.",
   "smokeStatus": "verified-docs-only",
@@ -30,7 +44,9 @@
   "checkedAt": "2026-10-19T12:00:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -38,8 +54,13 @@
   "status": "published",
   "publishedAt": "2026-10-19",
   "updatedAt": "2026-10-19",
-  "sources": ["https://resimpli.com/pricing/"],
-  "siteLoad": { "status": 200, "finalUrl": "https://resimpli.com/pricing/" },
+  "sources": [
+    "https://resimpli.com/pricing/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://resimpli.com/pricing/"
+  },
   "useCaseFit": {
     "find-off-market": "Includes calling, texting, and email on every plan, with a 14-day trial."
   }

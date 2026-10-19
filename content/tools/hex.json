@@ -39,7 +39,7 @@
     "A solo user who wants the cheapest consumer chat"
   ],
   "strength": "Hex lists $36 per Editor per month and includes a Hex agent above the Community plan.",
-  "weakness": "The price is per editor, and this check did not confirm that Community itself is free.",
+  "weakness": "The price is per editor, and the listing does not confirm that Community itself is free.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",

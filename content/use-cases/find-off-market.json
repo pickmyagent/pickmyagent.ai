@@ -16,23 +16,23 @@
   "recommended": [
     {
       "toolId": "propstream",
-      "why": "Property search with an AI search box. Essentials is $99 per month. Docs checked."
+      "why": "Property search with an AI search box. Essentials is $99 per month."
     },
     {
       "toolId": "dealmachine",
-      "why": "Owner data and a driving app. Basic is $99 per seat per month. Docs checked."
+      "why": "Owner data and a driving app. Basic is $99 per seat per month."
     },
     {
       "toolId": "batchleads",
-      "why": "Saved properties include owner phone numbers and emails. Growth is $119 per month. Docs checked."
+      "why": "Saved properties include owner phone numbers and emails. Growth is $119 per month."
     },
     {
       "toolId": "resimpli",
-      "why": "Calling, texting, and email are listed on every plan, with a 14-day trial. Docs checked."
+      "why": "Calling, texting, and email are listed on every plan, with a 14-day trial."
     },
     {
       "toolId": "launch-control",
-      "why": "Texting for owner lists. The pricing page lists skip tracing at $0.13. Docs checked."
+      "why": "Texting for owner lists. The pricing page lists skip tracing at $0.13."
     }
   ],
   "intro": "AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach."

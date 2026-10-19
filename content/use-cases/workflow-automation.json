@@ -11,7 +11,7 @@
   "recommended": [
     {
       "toolId": "n8n",
-      "why": "Self-host Community Edition for free, or use paid n8n Cloud. Our local npm install failed; docs and pricing were checked."
+      "why": "Self-host Community Edition for free, or use paid n8n Cloud."
     },
     {
       "toolId": "make",

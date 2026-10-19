@@ -15,19 +15,19 @@
   "recommended": [
     {
       "toolId": "instantly",
-      "why": "Outreach Growth is $47 per month. Docs checked."
+      "why": "Outreach Growth is $47 per month."
     },
     {
       "toolId": "apollo",
-      "why": "Contact data and an AI assistant. Docs checked."
+      "why": "Contact data and an AI assistant."
     },
     {
       "toolId": "clay",
-      "why": "Data marketplace and a free trial. Docs checked."
+      "why": "Data marketplace and a free trial."
     },
     {
       "toolId": "smartlead",
-      "why": "Cold-email assistant. Docs checked."
+      "why": "Cold-email assistant."
     }
   ],
   "intro": "AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent."

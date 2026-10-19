@@ -12,7 +12,7 @@
   "recommended": [
     {
       "toolId": "inworld",
-      "why": "Character AI for games. Pricing page included a $0 sample. Docs checked, not hands-on."
+      "why": "Character AI for games. Pricing page included a $0 sample."
     },
     {
       "toolId": "convai",
@@ -24,7 +24,7 @@
     },
     {
       "toolId": "mistscale",
-      "why": "Memory so NPCs can remember the player. Homepage checked; /docs returned 404 once."
+      "why": "Memory so NPCs can remember the player."
     },
     {
       "toolId": "tavernbard",

@@ -15,11 +15,11 @@
   "recommended": [
     {
       "toolId": "freshservice",
-      "why": "IT Starter is $19 per agent per month billed annually. Docs checked."
+      "why": "IT Starter is $19 per agent per month billed annually."
     },
     {
       "toolId": "moveworks",
-      "why": "ITSM automation and employee self-service. Docs checked."
+      "why": "ITSM automation and employee self-service."
     }
   ],
   "intro": "AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do."

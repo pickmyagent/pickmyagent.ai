@@ -5,7 +5,7 @@
   "websiteUrl": "https://browser-use.com/",
   "affiliateUrl": null,
   "shortDescription": "Open-source Python agent that controls a browser. We imported the package locally; no model call.",
-  "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. We did not sign up, pay, or call a model. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
+  "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
   "categories": [
     "tool-use"
   ],

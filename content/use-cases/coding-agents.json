@@ -11,11 +11,11 @@
   "recommended": [
     {
       "toolId": "cursor",
-      "why": "A desktop IDE whose agent edits and reviews code. Docs and pricing checked, including a $0 tier on the page. Not installed here."
+      "why": "A desktop IDE whose agent edits and reviews code, with a $0 tier on the pricing page."
     },
     {
       "toolId": "continue",
-      "why": "Open-source IDE extension. Homepage and docs checked. The dedicated pricing URL returned 404."
+      "why": "Open-source IDE extension for writing and reviewing code."
     },
     {
       "toolId": "claude",
@@ -23,7 +23,7 @@
     },
     {
       "toolId": "github-copilot",
-      "why": "GitHub calls Copilot an AI coding agent that writes code and can take an issue toward a merge. Docs checked."
+      "why": "GitHub calls Copilot an AI coding agent that writes code and can take an issue toward a merge."
     }
   ],
   "jobPhrase": "writing and reviewing code",

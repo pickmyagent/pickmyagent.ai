@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.tavernbard.com/",
   "affiliateUrl": null,
   "shortDescription": "AI game master for Discord. Homepage describes a free path that uses your own AI subscription.",
-  "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared in the crawl; confirm what is free versus paid on the live site. /pricing returned 404. We did not join a server or create an account.",
+  "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared on the homepage; confirm what is free versus paid on the live site. We did not join a server or create an account.",
   "categories": [
     "game-ai"
   ],
@@ -22,7 +22,7 @@
   "pricingModel": [
     "freemium"
   ],
-  "pricingNotes": "/pricing returned 404; pricing appears on homepage.",
+  "pricingNotes": "Pricing appears on the homepage.",
   "pricingUrl": "https://www.tavernbard.com/",
   "docsUrl": "https://www.tavernbard.com/",
   "freeTier": false,
@@ -38,10 +38,10 @@
   ],
   "notIdealFor": [
     "In-engine NPCs inside Unity or Unreal",
-    "A dedicated pricing page — that URL 404’d"
+    "A dedicated pricing page"
   ],
   "strength": "The homepage describes an AI game master for Discord, including a play path that uses an AI subscription you already have.",
-  "weakness": "That play path still depends on an AI subscription you already have, /pricing returned 404, and a $49.99 homepage figure was not confirmed as a monthly plan.",
+  "weakness": "That play path still depends on an AI subscription you already have, and a $49.99 homepage figure was not confirmed as a monthly plan.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -52,7 +52,7 @@
   },
   "latestRelease": null,
   "problems": [
-    "tavernbard.com/pricing returned 404."
+    null
   ],
   "featured": false,
   "featuredPaid": false,

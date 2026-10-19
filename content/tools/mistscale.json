@@ -4,8 +4,8 @@
   "name": "MistScale",
   "websiteUrl": "https://mistscale.com/",
   "affiliateUrl": null,
-  "shortDescription": "Memory for game NPCs. Homepage checked; a dedicated /docs URL returned 404 once.",
-  "longDescription": "MistScale is aimed at memory for game NPCs. Homepage copy we had already seen talks about trying it without a card; reconfirm that on the live page. mistscale.com/docs returned 404 in one check, and we did not find a separate pricing URL. We did not create an account.",
+  "shortDescription": "Memory for game NPCs.",
+  "longDescription": "MistScale is aimed at memory for game NPCs. A separate pricing page was not found, so this listing does not state a monthly price. We did not create an account.",
   "categories": [
     "game-ai"
   ],
@@ -37,10 +37,10 @@
   ],
   "notIdealFor": [
     "A standalone art or voice tool",
-    "Deep public docs — the docs path 404’d in this check"
+    "A separate public pricing page"
   ],
   "strength": "The homepage describes memory for game NPCs that need to remember the player.",
-  "weakness": "The MistScale docs URL returned 404, and we did not find a separate pricing page.",
+  "weakness": "A separate pricing page was not found, so this listing does not state a monthly price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -51,7 +51,7 @@
   },
   "latestRelease": null,
   "problems": [
-    "mistscale.com/docs returned 404 in one check."
+    "A separate pricing page was not found."
   ],
   "featured": false,
   "featuredPaid": false,

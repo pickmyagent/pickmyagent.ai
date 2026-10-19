@@ -15,19 +15,19 @@
   "recommended": [
     {
       "toolId": "buffer",
-      "why": "Essentials is $5 per month with an AI assistant. Docs checked."
+      "why": "Essentials is $5 per month with an AI assistant."
     },
     {
       "toolId": "ocoya",
-      "why": "Starter is $29 per month. Docs checked."
+      "why": "Starter is $29 per month."
     },
     {
       "toolId": "predis",
-      "why": "Generates social posts with AI. Docs checked."
+      "why": "Generates social posts with AI."
     },
     {
       "toolId": "hootsuite",
-      "why": "Planning and publishing, connected by AI. Docs checked."
+      "why": "Planning and publishing, connected by AI."
     }
   ],
   "intro": "AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send."

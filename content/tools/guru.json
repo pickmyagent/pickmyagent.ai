@@ -36,7 +36,7 @@
     "A company wiki with agents that answer from verified cards"
   ],
   "notIdealFor": [
-    "Someone who needs a listed per-user price from this check"
+    "Someone who needs a listed per-user price"
   ],
   "strength": "Guru's pricing page says its knowledge agents improve company information, not only find it.",
   "weakness": "The fetched pricing text did not include a dollar amount.",

@@ -15,15 +15,15 @@
   "recommended": [
     {
       "toolId": "metaview",
-      "why": "Free plan and AI sourcing. Docs checked."
+      "why": "Free plan and AI sourcing."
     },
     {
       "toolId": "paradox",
-      "why": "Candidate agent and conversational scheduling. Docs checked."
+      "why": "Candidate agent and conversational scheduling."
     },
     {
       "toolId": "gem",
-      "why": "Source, review, and report. Docs checked."
+      "why": "Source, review, and report."
     }
   ],
   "intro": "AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve."

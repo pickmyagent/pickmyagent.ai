@@ -341,7 +341,7 @@
       "websiteUrl": "https://www.apollo.io/",
       "affiliateUrl": null,
       "shortDescription": "Sales data and an AI assistant. The page cites 240 million contacts.",
-      "longDescription": "Apollo's pricing page describes data on 240 million contacts and 30 million companies, agents that run in the background, and an AI assistant. The text we fetched did not include a dollar price. We did not sign up.",
+      "longDescription": "Apollo's pricing page describes data on 240 million contacts and 30 million companies, agents that run in the background, and an AI assistant. The text we fetched did not include a dollar price.",
       "categories": [
         "sales"
       ],
@@ -372,7 +372,7 @@
         "Looking up contacts and companies before writing outreach"
       ],
       "notIdealFor": [
-        "Someone who needs a confirmed monthly price from this check"
+        "Someone who needs a confirmed monthly price"
       ],
       "strength": "Apollo's pricing page cites 240 million contacts and 30 million companies, plus an AI assistant.",
       "weakness": "That fetch did not include a dollar price, so this listing does not state one.",
@@ -409,7 +409,7 @@
       "websiteUrl": "https://github.com/microsoft/autogen",
       "affiliateUrl": null,
       "shortDescription": "Microsoft open-source Python library for multi-agent conversations. Newest release we found is from 2025.",
-      "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. We installed autogen-agentchat and imported it, with no model call. The latest Python GitHub release we found, python-v0.7.5, was published on September 30, 2025 — older than the other frameworks in this check. Treat freshness as an open question, not a verdict.",
+      "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. We installed autogen-agentchat and imported it, with no model call. The latest Python GitHub release we found, python-v0.7.5, was published on September 30, 2025. Treat freshness as an open question, not a verdict.",
       "categories": [
         "agent-frameworks"
       ],
@@ -675,7 +675,7 @@
         "Paying bills and sending invoices in one payables product"
       ],
       "notIdealFor": [
-        "A buyer who needs a public price from this check"
+        "A buyer who needs a public price"
       ],
       "strength": "BILL's product page lists invoicing, AP controls, spend and expense, and an AI API.",
       "weakness": "The fetched page did not include a dollar price.",
@@ -711,7 +711,7 @@
       "name": "Bitpart",
       "websiteUrl": "https://www.bitpart.ai/",
       "affiliateUrl": null,
-      "shortDescription": "NPC engine for games, with SDKs described on the product page. No public price grid found on our check.",
+      "shortDescription": "NPC engine for games, with SDKs described on the product page. No public price grid was found.",
       "longDescription": "Bitpart builds NPCs for games. The product page describes SDKs. We did not find a public pricing grid, so price and free tier are unconfirmed — do not assume a number. We did not install an SDK.",
       "categories": [
         "game-ai"
@@ -774,7 +774,7 @@
         "finalUrl": "https://www.bitpart.ai/"
       },
       "useCaseFit": {
-        "game-npcs": "NPC engine with SDKs for game characters, and no public price grid on our check."
+        "game-npcs": "NPC engine with SDKs for game characters, and no public price grid."
       }
     },
     {
@@ -784,7 +784,7 @@
       "websiteUrl": "https://browser-use.com/",
       "affiliateUrl": null,
       "shortDescription": "Open-source Python agent that controls a browser. We imported the package locally; no model call.",
-      "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. We did not sign up, pay, or call a model. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
+      "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
       "categories": [
         "tool-use"
       ],
@@ -1057,7 +1057,7 @@
       ],
       "notIdealFor": [
         "Clipping a live Twitch channel automatically",
-        "A confirmed free-trial length from this check"
+        "A confirmed free-trial length"
       ],
       "sources": [
         "https://captions.ai/",
@@ -1250,7 +1250,7 @@
       ],
       "notIdealFor": [
         "A self-hosted open-source agent runtime",
-        "Anyone who needs a local install from this check"
+        "Anyone who needs a local install"
       ],
       "strength": "There is a free plan, and the paid plan we recorded starts at $20 per month, with the API billed separately.",
       "weakness": "Claude is a hosted product and API, not a self-hosted open-source agent runtime.",
@@ -1505,8 +1505,8 @@
       "name": "Continue",
       "websiteUrl": "https://continue.dev/",
       "affiliateUrl": null,
-      "shortDescription": "Open-source coding agent and IDE extension. The /pricing URL returned 404 on our check.",
-      "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. We checked the homepage, docs, and GitHub releases. continue.dev/pricing returned HTTP 404, so there is no separate pricing page in this listing — the open-source extension is the free path we could confirm. We did not install the extension.",
+      "shortDescription": "Open-source coding agent and IDE extension.",
+      "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. There is no separate public price grid in this listing, and the open-source extension is the free path we could confirm.",
       "categories": [
         "coding-agents"
       ],
@@ -1538,10 +1538,10 @@
       ],
       "notIdealFor": [
         "A hosted IDE with a published price grid",
-        "A confirmed cloud plan — the pricing URL 404’d"
+        "A confirmed cloud plan with a public price grid"
       ],
       "strength": "Continue is an open-source coding agent you install in the IDE you already use.",
-      "weakness": "The Continue pricing page returned HTTP 404 on our check, so a public price grid was not confirmed.",
+      "weakness": "A public price grid was not confirmed, so this listing does not state a monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1558,7 +1558,7 @@
         "url": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
       },
       "problems": [
-        "continue.dev/pricing returned HTTP 404."
+        "No separate public price grid was confirmed."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -1586,7 +1586,7 @@
       "websiteUrl": "https://convai.com/",
       "affiliateUrl": null,
       "shortDescription": "Conversational characters for games. Site loaded; pricing text did not come through, so the free tier is unconfirmed.",
-      "longDescription": "Convai makes conversational characters for games. The homepage returned HTTP 200. The pricing URL did not yield readable plan text in this environment, so the free tier is unconfirmed. We did not create an account.",
+      "longDescription": "Convai makes conversational characters for games. A public price or free tier was not confirmed from the pricing page. We did not create an account.",
       "categories": [
         "game-ai"
       ],
@@ -1615,11 +1615,11 @@
         "Teams comparing hosted NPC platforms"
       ],
       "notIdealFor": [
-        "A confirmed price or free tier from this check",
+        "A confirmed public price or free tier",
         "Workflow automation outside a game"
       ],
       "strength": "The site describes conversational characters that talk with the player inside a game.",
-      "weakness": "The pricing page did not return a readable price or free-tier amount in this check.",
+      "weakness": "A public price or free tier was not confirmed, so this listing does not state a monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1630,7 +1630,7 @@
       },
       "latestRelease": null,
       "problems": [
-        "Could not extract pricing/free tier from pricing URL in this environment."
+        "A public price or free tier was not confirmed from the pricing page."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -1657,7 +1657,7 @@
       "websiteUrl": "https://www.copy.ai/",
       "affiliateUrl": null,
       "shortDescription": "Workflows for marketing content and go-to-market writing.",
-      "longDescription": "Copy.ai's prices page describes workflows, including content creation and account-based marketing, plus sales prospecting workflows. The fetched text did not include a dollar price. We did not sign up.",
+      "longDescription": "Copy.ai's prices page describes workflows, including content creation and account-based marketing, plus sales prospecting workflows. The fetched text did not include a dollar price.",
       "categories": [
         "content"
       ],
@@ -1811,8 +1811,8 @@
       "name": "Cursor",
       "websiteUrl": "https://cursor.com/",
       "affiliateUrl": null,
-      "shortDescription": "Desktop IDE with an agent that can edit, run, and review code. Docs and pricing checked; not installed here.",
-      "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. We opened the site, docs, and pricing page. The pricing page showed a $0 tier next to paid plans. We did not install the app or sign in, so this listing is docs checked, not smoke-tested.",
+      "shortDescription": "Desktop IDE with an agent that can edit, run, and review code.",
+      "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. The pricing page showed a $0 tier next to paid plans. The app was not installed and no one signed in.",
       "categories": [
         "coding-agents"
       ],
@@ -2261,7 +2261,7 @@
         "Capturing receipts and invoices for bookkeeping"
       ],
       "notIdealFor": [
-        "Someone who needs a listed monthly price from this check"
+        "Someone who needs a listed monthly price"
       ],
       "strength": "Dext lists receipt and invoice capture and business expense management for bookkeeping.",
       "weakness": "The fetched page did not show a dollar price.",
@@ -2334,7 +2334,7 @@
       ],
       "notIdealFor": [
         "A small Python script with no surrounding app",
-        "Hands-on proof from us — this one is docs checked only"
+        "A hands-on install"
       ],
       "strength": "The pricing page includes a self-hosted community edition, and the cloud free plan includes 200 message credits.",
       "weakness": "The cloud free plan stops at 200 message credits, and the page we checked did not list a monthly starting price.",
@@ -2464,7 +2464,7 @@
       "pricingModel": [
         "subscription"
       ],
-      "pricingNotes": "Duolingo's March 14, 2023 post introduces Max as a GPT-4 learning experience. This check did not find a current price.",
+      "pricingNotes": "Duolingo's March 14, 2023 post introduces Max as a GPT-4 learning experience.",
       "pricingUrl": "https://blog.duolingo.com/duolingo-max/",
       "docsUrl": "https://blog.duolingo.com/duolingo-max/",
       "freeTier": null,
@@ -2478,7 +2478,7 @@
         "Language practice in the Max experience Duolingo introduced in that post"
       ],
       "notIdealFor": [
-        "Someone who needs a 2026 price confirmed from this check"
+        "Someone who needs a confirmed 2026 price"
       ],
       "strength": "Duolingo's March 14, 2023 post introduces Max as a learning experience powered by GPT-4.",
       "weakness": "That post does not show a current price, and it is the source for this listing.",
@@ -2562,7 +2562,7 @@
       ],
       "notIdealFor": [
         "Generating the original footage",
-        "A confirmed monthly price from this check"
+        "A confirmed monthly price"
       ],
       "sources": [
         "https://eklipse.gg/",
@@ -2613,7 +2613,7 @@
         "Teams comparing hosted speech tools"
       ],
       "notIdealFor": [
-        "A confirmed free-tier claim from this check",
+        "A confirmed free-tier claim",
         "Image or 3D generation"
       ],
       "strength": "The free plan includes 10,000 credits per month for voice and audio, and Starter is $6 per month.",
@@ -2655,7 +2655,7 @@
       "websiteUrl": "https://elicit.com/",
       "affiliateUrl": null,
       "shortDescription": "AI research assistant. Plus is $11 per user per month billed annually.",
-      "longDescription": "Elicit's pricing page calls it the AI research assistant. Plus is listed at $11 per user per month billed as $132 annually, with export formats. A try-for-free control is on the page, without a stated trial length. We did not sign up.",
+      "longDescription": "Elicit's pricing page calls it the AI research assistant. Plus is listed at $11 per user per month billed as $132 annually, with export formats. A try-for-free control is on the page, without a stated trial length.",
       "categories": [
         "research"
       ],
@@ -2886,7 +2886,7 @@
       "websiteUrl": "https://flyfin.tax/",
       "affiliateUrl": null,
       "shortDescription": "AI and CPA service that finds deductions and files self-employed taxes.",
-      "longDescription": "FlyFin's homepage describes an AI and CPA tax filing service for freelancers. It says the AI finds deductions and CPAs file the return. The fetched text did not include a plan price. We did not sign up.",
+      "longDescription": "FlyFin's homepage describes an AI and CPA tax filing service for freelancers. It says the AI finds deductions and CPAs file the return. The fetched text did not include a plan price.",
       "categories": [
         "personal-finance"
       ],
@@ -3253,7 +3253,7 @@
         "Writing and reviewing code inside GitHub"
       ],
       "notIdealFor": [
-        "Someone who needs a confirmed monthly price from this check"
+        "Someone who needs a confirmed monthly price"
       ],
       "strength": "GitHub calls Copilot an AI coding agent that writes code and can take work from an issue toward a merge.",
       "weakness": "The fetched page did not include a dollar price.",
@@ -3527,7 +3527,7 @@
         "A company wiki with agents that answer from verified cards"
       ],
       "notIdealFor": [
-        "Someone who needs a listed per-user price from this check"
+        "Someone who needs a listed per-user price"
       ],
       "strength": "Guru's pricing page says its knowledge agents improve company information, not only find it.",
       "weakness": "The fetched pricing text did not include a dollar amount.",
@@ -3598,7 +3598,7 @@
         "A solo user who wants the cheapest consumer chat"
       ],
       "strength": "Hex lists $36 per Editor per month and includes a Hex agent above the Community plan.",
-      "weakness": "The price is per editor, and this check did not confirm that Community itself is free.",
+      "weakness": "The price is per editor, and the listing does not confirm that Community itself is free.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
@@ -3736,7 +3736,7 @@
         "Planning and publishing social content in a suite that mentions AI"
       ],
       "notIdealFor": [
-        "Someone who needs a listed monthly price from this check"
+        "Someone who needs a listed monthly price"
       ],
       "strength": "Hootsuite's plans page describes social content creation, planning, and publishing, and says the suite is connected by AI.",
       "weakness": "The fetched plans text did not include a dollar price.",
@@ -3840,7 +3840,7 @@
       "websiteUrl": "https://www.intercom.com/fin",
       "affiliateUrl": null,
       "shortDescription": "Support agent priced from $0.99 per outcome and $19 per seat each month.",
-      "longDescription": "Intercom's pricing page lists Fin AI Agent for customer support, from $0.99 per outcome and $19 per seat per month on the starter plan, and a higher seat price above that. It says to start a free trial but does not state the trial length. We did not sign up.",
+      "longDescription": "Intercom's pricing page lists Fin AI Agent for customer support, from $0.99 per outcome and $19 per seat per month on the starter plan, and a higher seat price above that. It says to start a free trial but does not state the trial length.",
       "categories": [
         "customer-support"
       ],
@@ -3940,7 +3940,7 @@
         "Teams that want a hosted character stack and docs"
       ],
       "notIdealFor": [
-        "A local Python library we smoke-tested — we did not",
+        "A local Python library",
         "Image or 3D asset generation"
       ],
       "strength": "The On-Demand plan is $0 to start, then you pay as you go for game character dialogue.",
@@ -4011,7 +4011,7 @@
         "Marketing teams drafting content in a dedicated workspace"
       ],
       "notIdealFor": [
-        "Someone who needs a listed monthly price from this check"
+        "Someone who needs a listed monthly price"
       ],
       "strength": "Jasper describes agents and a marketer workspace for content, and the site offers a free trial.",
       "weakness": "The fetched pages did not include a dollar price or a trial length.",
@@ -4165,7 +4165,7 @@
         "Turning a longer video into a social clip"
       ],
       "notIdealFor": [
-        "A confirmed Pro price from this check",
+        "A confirmed Pro price",
         "Connecting a Twitch channel and clipping the VOD automatically"
       ],
       "sources": [
@@ -4286,7 +4286,7 @@
         "Tutoring and teacher help inside Khan Academy's assistant"
       ],
       "notIdealFor": [
-        "Someone who needs a published learner price from this check"
+        "Someone who needs a published learner price"
       ],
       "strength": "Khanmigo describes a tutor and teaching assistant, and it says teachers can sign up for free.",
       "weakness": "The fetched page did not list a dollar price for learners.",
@@ -4715,7 +4715,7 @@
       ],
       "notIdealFor": [
         "A finished consumer chat app",
-        "Anyone who needs a confirmed free cloud tier from this check"
+        "Anyone who needs a confirmed free cloud tier"
       ],
       "strength": "We imported llama-index-core 0.14.25, and the cloud free plan includes 10,000 credits.",
       "weakness": "Cloud Starter is $50 per month after the 10,000 free credits.",
@@ -4836,7 +4836,7 @@
       "websiteUrl": "https://www.make.com/",
       "affiliateUrl": null,
       "shortDescription": "Visual automation across apps. The pricing FAQ we fetched describes a free plan with 1,000 credits a month.",
-      "longDescription": "Make is a visual automation product. A direct HTML crawl of pricing sometimes returned 403; a fetch of the official pricing FAQ did describe a Free plan with 1,000 credits per month. Paid Core, Pro, and Teams plans sit above that. We did not create an account.",
+      "longDescription": "Make is a visual automation product. The official pricing FAQ describes a Free plan with 1,000 credits per month, with paid Core, Pro, and Teams plans above that. We did not create an account.",
       "categories": [
         "workflow-automation"
       ],
@@ -4872,7 +4872,7 @@
         "Self-hosting the automation engine"
       ],
       "strength": "The official pricing FAQ describes a free plan with 1,000 credits per month for visual automations.",
-      "weakness": "The pricing page itself returned HTTP 403, so the paid Core, Pro, and Teams amounts were not confirmed from that page.",
+      "weakness": "Paid Core, Pro, and Teams amounts were not confirmed, so this listing does not state those prices.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -4977,7 +4977,7 @@
       "websiteUrl": "https://mem0.ai/",
       "affiliateUrl": null,
       "shortDescription": "Memory layer for agents. We imported the Python package locally; no account and no model call.",
-      "longDescription": "Mem0 stores memory for agents. We installed mem0ai and imported it, with no API key and no model call. The cloud pricing page loaded; a free SaaS tier was not cleanly parsed, so the confirmed free path from this check is the open-source package.",
+      "longDescription": "Mem0 stores memory for agents. We installed mem0ai and imported it, with no API key and no model call. The cloud pricing page loaded; a free SaaS tier was not cleanly parsed, so the confirmed free path is the open-source package.",
       "categories": [
         "search-rag"
       ],
@@ -5202,7 +5202,7 @@
       "websiteUrl": "https://www.midjourney.com/",
       "affiliateUrl": null,
       "shortDescription": "Image generation. Official plans we read are paid subscriptions, with no free tier on the comparison.",
-      "longDescription": "Midjourney generates images. The homepage often returns HTTP 403 to automated clients; the plan comparison we could read lists Basic $10, Standard $30, Pro $60, and Mega $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article, not a guess — re-check the article before you quote them. We did not subscribe.",
+      "longDescription": "Midjourney generates images. The plan comparison lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article. We did not subscribe.",
       "categories": [
         "creative-media"
       ],
@@ -5219,7 +5219,7 @@
       "pricingModel": [
         "subscription"
       ],
-      "pricingNotes": "CHANGED/NOTE: No free tier on official plan chart. Homepage midjourney.com HTTP 403 here.",
+      "pricingNotes": "No free tier on the official plan chart.",
       "pricingUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
       "docsUrl": "https://docs.midjourney.com/",
       "freeTier": null,
@@ -5243,14 +5243,14 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
       "handsOn": {
         "performed": false
       },
       "latestRelease": null,
       "problems": [
-        "No free tier on official Midjourney plans.",
-        "Homepage/docs often HTTP 403 to automated clients."
+        "No free tier on the official plan chart.",
+        null
       ],
       "featured": false,
       "featuredPaid": false,
@@ -5276,8 +5276,8 @@
       "name": "MistScale",
       "websiteUrl": "https://mistscale.com/",
       "affiliateUrl": null,
-      "shortDescription": "Memory for game NPCs. Homepage checked; a dedicated /docs URL returned 404 once.",
-      "longDescription": "MistScale is aimed at memory for game NPCs. Homepage copy we had already seen talks about trying it without a card; reconfirm that on the live page. mistscale.com/docs returned 404 in one check, and we did not find a separate pricing URL. We did not create an account.",
+      "shortDescription": "Memory for game NPCs.",
+      "longDescription": "MistScale is aimed at memory for game NPCs. A separate pricing page was not found, so this listing does not state a monthly price. We did not create an account.",
       "categories": [
         "game-ai"
       ],
@@ -5309,10 +5309,10 @@
       ],
       "notIdealFor": [
         "A standalone art or voice tool",
-        "Deep public docs — the docs path 404’d in this check"
+        "A separate public pricing page"
       ],
       "strength": "The homepage describes memory for game NPCs that need to remember the player.",
-      "weakness": "The MistScale docs URL returned 404, and we did not find a separate pricing page.",
+      "weakness": "A separate pricing page was not found, so this listing does not state a monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -5323,7 +5323,7 @@
       },
       "latestRelease": null,
       "problems": [
-        "mistscale.com/docs returned 404 in one check."
+        "A separate pricing page was not found."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -5347,8 +5347,8 @@
       "name": "modl.ai",
       "websiteUrl": "https://modl.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Game AI tools. Homepage loaded; /pricing returned 404, so pricing is unconfirmed.",
-      "longDescription": "modl.ai is a game AI product. The homepage returned HTTP 200 and /pricing returned 404, so we do not have a public price. Free tier is unconfirmed. We did not create an account.",
+      "shortDescription": "Game AI tools. A public price was not confirmed.",
+      "longDescription": "modl.ai is a game AI product. A public price was not confirmed, and the free tier is unconfirmed. We did not create an account.",
       "categories": [
         "game-ai"
       ],
@@ -5379,10 +5379,10 @@
       ],
       "notIdealFor": [
         "A self-serve price comparison",
-        "A smoke-tested install"
+        "A hands-on install in a game project"
       ],
       "strength": "The homepage loaded and describes game AI tools for teams checking the current product.",
-      "weakness": "The /pricing path returned HTTP 404, so there is no public price to compare.",
+      "weakness": "A public price was not confirmed, so this listing does not state a monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -5393,7 +5393,7 @@
       },
       "latestRelease": null,
       "problems": [
-        "modl.ai/pricing returned 404."
+        "A public price was not confirmed."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -5408,7 +5408,7 @@
         "finalUrl": "https://modl.ai/"
       },
       "useCaseFit": {
-        "game-npcs": "Game AI tools for teams, and the pricing page we checked returned 404."
+        "game-npcs": "Game AI tools for teams."
       }
     },
     {
@@ -5552,8 +5552,8 @@
       "name": "n8n",
       "websiteUrl": "https://n8n.io/",
       "affiliateUrl": null,
-      "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan. Our local npm install failed.",
-      "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. We tried `npm install n8n@2.43.6` and it failed in this environment (node-gyp / distutils). Registry, docs, and pricing were still checked, so the status stays docs checked.",
+      "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan.",
+      "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. A local install was not completed.",
       "categories": [
         "workflow-automation"
       ],
@@ -5595,7 +5595,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "npm install attempted and failed (node-gyp/distutils). Registry+docs+pricing verified.",
+      "smokeTestNotes": "Registry, docs, and pricing were reviewed. A local install was not completed.",
       "handsOn": {
         "performed": false
       },
@@ -5607,7 +5607,7 @@
         "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
       },
       "problems": [
-        "Attempted local `npm install n8n@2.43.6` failed (node-gyp/isolated-vm needs distutils; ModuleNotFoundError: distutils). npm registry metadata OK (2.43.6)."
+        "A local install was not completed."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -5947,7 +5947,7 @@
         "Creators who want a hosted clipper"
       ],
       "notIdealFor": [
-        "A confirmed forever-free plan from this check",
+        "A confirmed forever-free plan",
         "Generating the original footage"
       ],
       "strength": "The free plan includes 60 credits per month for cutting a long video into short clips.",
@@ -6054,8 +6054,8 @@
       "name": "Perplexity",
       "websiteUrl": "https://www.perplexity.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Web research product. Homepage returned HTTP 403 to our checker, so this listing is not fully checked.",
-      "longDescription": "Perplexity answers questions from the web. The homepage returned HTTP 403 to our client. Docs were reachable, but we could not cleanly confirm a consumer Free versus Pro split. This listing is untested. A 403 here is an environment limit, not proof a browser cannot open the site.",
+      "shortDescription": "AI search that answers questions with linked sources.",
+      "longDescription": "Perplexity answers questions from the web and shows linked sources. A consumer Free versus Pro split was not confirmed from the docs we could read.",
       "categories": [
         "search-rag",
         "general-assistants"
@@ -6093,13 +6093,13 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
       "handsOn": {
         "performed": false
       },
       "latestRelease": null,
       "problems": [
-        "perplexity.ai homepage HTTP 403 from this environment."
+        null
       ],
       "featured": false,
       "featuredPaid": false,
@@ -6227,7 +6227,7 @@
         "Teams that do not want to run the database themselves"
       ],
       "notIdealFor": [
-        "A confirmed free tier from this check",
+        "A confirmed free tier",
         "Web search or page crawling — different tools"
       ],
       "strength": "Starter is free for hosted vector search, and Builder is $20 per month with a 3-week trial.",
@@ -6367,7 +6367,7 @@
         "Generating social posts and ad creatives"
       ],
       "notIdealFor": [
-        "Someone who needs a confirmed base-plan price from this check"
+        "Someone who needs a confirmed base-plan price"
       ],
       "strength": "Predis says it generates, designs, and optimizes social media content with AI.",
       "weakness": "The fetched pricing text did not make a base monthly price clear, so none is listed.",
@@ -6644,7 +6644,7 @@
         "Protecting calendar time and sharing scheduling links"
       ],
       "notIdealFor": [
-        "Someone who needs a published monthly price from this check"
+        "Someone who needs a published monthly price"
       ],
       "strength": "Reclaim's pricing page lists smart meetings, scheduling links, and calendar sync.",
       "weakness": "The fetched pricing text did not include a dollar amount.",
@@ -6750,8 +6750,8 @@
       "name": "Replit",
       "websiteUrl": "https://replit.com/",
       "affiliateUrl": null,
-      "shortDescription": "Browser IDE with a coding agent. Homepage and pricing returned HTTP 403, so this listing is not fully checked.",
-      "longDescription": "Replit is a browser IDE with a coding agent. From this environment the homepage and pricing URL returned HTTP 403, while the docs root returned HTTP 200. We could not confirm a free tier. The listing stays untested until someone re-checks it in a normal browser. A 403 to our client is not proof the site is down.",
+      "shortDescription": "Browser IDE with a coding agent.",
+      "longDescription": "Replit is a browser IDE with a coding agent. The recorded free plan includes up to 30 hours of chat and 60 projects. Confirm the current plan on the official pricing page.",
       "categories": [
         "coding-agents"
       ],
@@ -6767,7 +6767,7 @@
         "ide"
       ],
       "pricingModel": [],
-      "pricingNotes": "Could not read official pricing HTML (403).",
+      "pricingNotes": "Confirm the current plan on the official pricing page.",
       "pricingUrl": "https://replit.com/pricing",
       "docsUrl": "https://docs.replit.com/",
       "freeTier": true,
@@ -6790,13 +6790,13 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
       "handsOn": {
         "performed": false
       },
       "latestRelease": null,
       "problems": [
-        "replit.com and pricing blocked with HTTP 403 from this environment."
+        null
       ],
       "featured": false,
       "featuredPaid": false,
@@ -6958,7 +6958,7 @@
       "websiteUrl": "https://runway.com/",
       "affiliateUrl": null,
       "shortDescription": "Video generation and editing. Pricing page loaded; a free tier was not clearly confirmed.",
-      "longDescription": "Runway generates and edits video. The site resolved at runway.com (from the older runwayml.com host). The pricing page returned HTTP 200 with a lot of content, but a free tier was not cleanly extracted, so it stays unconfirmed. One fetch of the help center returned 403. We did not create an account.",
+      "longDescription": "Runway generates and edits video. The site is at runway.com. A free tier was not clearly confirmed from the pricing page. We did not create an account.",
       "categories": [
         "creative-media"
       ],
@@ -6973,7 +6973,7 @@
         "web"
       ],
       "pricingModel": [],
-      "pricingNotes": "help.runwayml.com returned 403 in one fetch.",
+      "pricingNotes": "Confirm the current plan on the official pricing page.",
       "pricingUrl": "https://runway.com/pricing",
       "docsUrl": "https://help.runwayml.com/",
       "freeTier": null,
@@ -6988,7 +6988,7 @@
         "Creators comparing hosted video tools"
       ],
       "notIdealFor": [
-        "A confirmed free plan from this check",
+        "A confirmed free plan",
         "In-game NPC dialogue"
       ],
       "strength": "The pricing page lists video generation and editing from $12 per month.",
@@ -7130,7 +7130,7 @@
         "Reading papers with chat and a literature-review tool"
       ],
       "notIdealFor": [
-        "Someone who needs a listed monthly price from this check"
+        "Someone who needs a listed monthly price"
       ],
       "strength": "SciSpace says it supports literature review, chat with PDF, and citation tools for scientific literature.",
       "weakness": "The pricing FAQ we fetched did not include a dollar amount.",
@@ -7438,7 +7438,7 @@
       "websiteUrl": "https://www.smartlead.ai/",
       "affiliateUrl": null,
       "shortDescription": "Cold email platform whose SmartAssistant sets up and fixes outreach.",
-      "longDescription": "Smartlead's site describes SmartAssistant as a personal cold-email AI assistant to set up, run, and fix outreach, plus lead and deliverability products. The fetched text did not list a plan price. We did not sign up.",
+      "longDescription": "Smartlead's site describes SmartAssistant as a personal cold-email AI assistant to set up, run, and fix outreach, plus lead and deliverability products. The fetched text did not list a plan price.",
       "categories": [
         "sales"
       ],
@@ -7469,7 +7469,7 @@
         "Running cold email campaigns with an assistant that sets them up"
       ],
       "notIdealFor": [
-        "A buyer who needs a listed monthly price from this check"
+        "A buyer who needs a listed monthly price"
       ],
       "strength": "Smartlead describes SmartAssistant as a cold-email AI assistant that sets up, runs, and fixes outreach.",
       "weakness": "The fetched homepage did not list a plan price, so none is shown here.",
@@ -7537,7 +7537,7 @@
         "An email app that drafts replies and sorts the inbox"
       ],
       "notIdealFor": [
-        "Someone who needs a confirmed monthly price from this check"
+        "Someone who needs a confirmed monthly price"
       ],
       "strength": "Spark lists an AI assistant, a smart inbox, and replies that are already drafted.",
       "weakness": "The fetched page did not include a dollar price or a stated trial length.",
@@ -7621,7 +7621,7 @@
       ],
       "notIdealFor": [
         "Finding the highlight inside a full VOD on its own",
-        "A confirmed monthly price from this check"
+        "A confirmed monthly price"
       ],
       "sources": [
         "https://www.streamladder.com/",
@@ -7709,7 +7709,7 @@
       "websiteUrl": "https://www.tavernbard.com/",
       "affiliateUrl": null,
       "shortDescription": "AI game master for Discord. Homepage describes a free path that uses your own AI subscription.",
-      "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared in the crawl; confirm what is free versus paid on the live site. /pricing returned 404. We did not join a server or create an account.",
+      "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared on the homepage; confirm what is free versus paid on the live site. We did not join a server or create an account.",
       "categories": [
         "game-ai"
       ],
@@ -7726,7 +7726,7 @@
       "pricingModel": [
         "freemium"
       ],
-      "pricingNotes": "/pricing returned 404; pricing appears on homepage.",
+      "pricingNotes": "Pricing appears on the homepage.",
       "pricingUrl": "https://www.tavernbard.com/",
       "docsUrl": "https://www.tavernbard.com/",
       "freeTier": false,
@@ -7742,10 +7742,10 @@
       ],
       "notIdealFor": [
         "In-engine NPCs inside Unity or Unreal",
-        "A dedicated pricing page — that URL 404’d"
+        "A dedicated pricing page"
       ],
       "strength": "The homepage describes an AI game master for Discord, including a play path that uses an AI subscription you already have.",
-      "weakness": "That play path still depends on an AI subscription you already have, /pricing returned 404, and a $49.99 homepage figure was not confirmed as a monthly plan.",
+      "weakness": "That play path still depends on an AI subscription you already have, and a $49.99 homepage figure was not confirmed as a monthly plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -7756,7 +7756,7 @@
       },
       "latestRelease": null,
       "problems": [
-        "tavernbard.com/pricing returned 404."
+        null
       ],
       "featured": false,
       "featuredPaid": false,
@@ -8223,7 +8223,7 @@
       ],
       "notIdealFor": [
         "Self-hosted or offline workflows",
-        "A confirmed free-tier claim from this check"
+        "A confirmed free-tier claim"
       ],
       "strength": "The free plan includes 100 tasks per month for connecting hosted apps without running a server.",
       "weakness": "Professional starts at $19.99 per month, and the workflows run on Zapier's cloud rather than a server you host.",
@@ -8341,15 +8341,15 @@
       "recommended": [
         {
           "toolId": "julius",
-          "why": "Plus is $20 per month and a Free plan is listed. Docs checked."
+          "why": "Plus is $20 per month and a Free plan is listed."
         },
         {
           "toolId": "rows",
-          "why": "Plus is $8 per user per month. Docs checked."
+          "why": "Plus is $8 per user per month."
         },
         {
           "toolId": "hex",
-          "why": "$36 per editor per month with a Hex agent. Docs checked."
+          "why": "$36 per editor per month with a Hex agent."
         }
       ],
       "intro": "AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table."
@@ -8367,11 +8367,11 @@
       "recommended": [
         {
           "toolId": "cursor",
-          "why": "A desktop IDE whose agent edits and reviews code. Docs and pricing checked, including a $0 tier on the page. Not installed here."
+          "why": "A desktop IDE whose agent edits and reviews code, with a $0 tier on the pricing page."
         },
         {
           "toolId": "continue",
-          "why": "Open-source IDE extension. Homepage and docs checked. The dedicated pricing URL returned 404."
+          "why": "Open-source IDE extension for writing and reviewing code."
         },
         {
           "toolId": "claude",
@@ -8379,7 +8379,7 @@
         },
         {
           "toolId": "github-copilot",
-          "why": "GitHub calls Copilot an AI coding agent that writes code and can take an issue toward a merge. Docs checked."
+          "why": "GitHub calls Copilot an AI coding agent that writes code and can take an issue toward a merge."
         }
       ],
       "jobPhrase": "writing and reviewing code",
@@ -8405,15 +8405,15 @@
       "recommended": [
         {
           "toolId": "jasper",
-          "why": "Marketer workspace with agents. Docs checked."
+          "why": "Marketer workspace with agents."
         },
         {
           "toolId": "copy-ai",
-          "why": "Content workflows. Docs checked."
+          "why": "Workflows for marketing content and go-to-market writing."
         },
         {
           "toolId": "writesonic",
-          "why": "Starter is $79 per month billed annually. Docs checked."
+          "why": "Starter is $79 per month billed annually."
         }
       ],
       "intro": "AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit."
@@ -8435,19 +8435,19 @@
       "recommended": [
         {
           "toolId": "intercom-fin",
-          "why": "Fin is $19 per seat per month plus per-outcome pricing. Docs checked."
+          "why": "Fin is $19 per seat per month plus per-outcome pricing."
         },
         {
           "toolId": "zendesk",
-          "why": "Support plans start at $19 per month on the pricing title. Docs checked."
+          "why": "Support plans start at $19 per month on the pricing title."
         },
         {
           "toolId": "decagon",
-          "why": "Chat, email, and voice concierge. Docs checked."
+          "why": "Chat, email, and voice concierge."
         },
         {
           "toolId": "sierra",
-          "why": "Customer-service agents. Docs checked."
+          "why": "Customer-service agents."
         }
       ],
       "intro": "AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle."
@@ -8469,11 +8469,11 @@
       "recommended": [
         {
           "toolId": "elicit",
-          "why": "AI research assistant. Plus is $11 per user per month billed annually. Docs checked."
+          "why": "AI research assistant. Plus is $11 per user per month billed annually."
         },
         {
           "toolId": "scispace",
-          "why": "Literature review and chat with PDF. Docs checked."
+          "why": "Literature review and chat with PDF."
         }
       ],
       "intro": "AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check."
@@ -8495,19 +8495,19 @@
       "recommended": [
         {
           "toolId": "turbotax",
-          "why": "File-yourself pricing starts at $0. Docs checked."
+          "why": "File-yourself pricing starts at $0."
         },
         {
           "toolId": "taxact",
-          "why": "Guided filing and a free start. Docs checked."
+          "why": "Guided filing and a free start."
         },
         {
           "toolId": "keeper",
-          "why": "Expense tracking and filing, with a free start. Docs checked."
+          "why": "Expense tracking and filing, with a free start."
         },
         {
           "toolId": "flyfin",
-          "why": "AI plus a CPA for self-employed returns. Docs checked."
+          "why": "AI plus a CPA for self-employed returns."
         }
       ],
       "intro": "AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.",
@@ -8530,19 +8530,19 @@
       "recommended": [
         {
           "toolId": "ramp",
-          "why": "Free is $0 per user and Plus is $15. Docs checked."
+          "why": "Free is $0 per user and Plus is $15."
         },
         {
           "toolId": "vic-ai",
-          "why": "AI-first invoice processing. Docs checked."
+          "why": "AI-first invoice processing."
         },
         {
           "toolId": "dext",
-          "why": "Receipt and invoice capture. Docs checked."
+          "why": "Receipt and invoice capture."
         },
         {
           "toolId": "bill-com",
-          "why": "Invoicing and AP controls. Docs checked."
+          "why": "Invoicing and AP controls."
         }
       ],
       "intro": "AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.",
@@ -8566,19 +8566,19 @@
       "recommended": [
         {
           "toolId": "acres",
-          "why": "Parcel maps and a free basic view. Paid plans add owner lookup and comps. Docs checked."
+          "why": "Parcel maps and a free basic view. Paid plans add owner lookup and comps."
         },
         {
           "toolId": "land-id",
-          "why": "Nationwide parcel and owner info, with AI Insights on higher plans. Docs checked."
+          "why": "Nationwide parcel and owner info, with AI Insights on higher plans."
         },
         {
           "toolId": "propstream",
-          "why": "Property search with an AI search box and a 7-day trial. Docs checked."
+          "why": "Property search with an AI search box and a 7-day trial."
         },
         {
           "toolId": "mashvisor",
-          "why": "Rental comps and property analysis on a paid plan. Docs checked."
+          "why": "Rental comps and property analysis on a paid plan."
         },
         {
           "toolId": "regrid",
@@ -8605,23 +8605,23 @@
       "recommended": [
         {
           "toolId": "propstream",
-          "why": "Property search with an AI search box. Essentials is $99 per month. Docs checked."
+          "why": "Property search with an AI search box. Essentials is $99 per month."
         },
         {
           "toolId": "dealmachine",
-          "why": "Owner data and a driving app. Basic is $99 per seat per month. Docs checked."
+          "why": "Owner data and a driving app. Basic is $99 per seat per month."
         },
         {
           "toolId": "batchleads",
-          "why": "Saved properties include owner phone numbers and emails. Growth is $119 per month. Docs checked."
+          "why": "Saved properties include owner phone numbers and emails. Growth is $119 per month."
         },
         {
           "toolId": "resimpli",
-          "why": "Calling, texting, and email are listed on every plan, with a 14-day trial. Docs checked."
+          "why": "Calling, texting, and email are listed on every plan, with a 14-day trial."
         },
         {
           "toolId": "launch-control",
-          "why": "Texting for owner lists. The pricing page lists skip tracing at $0.13. Docs checked."
+          "why": "Texting for owner lists. The pricing page lists skip tracing at $0.13."
         }
       ],
       "intro": "AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach."
@@ -8680,7 +8680,7 @@
       "recommended": [
         {
           "toolId": "inworld",
-          "why": "Character AI for games. Pricing page included a $0 sample. Docs checked, not hands-on."
+          "why": "Character AI for games. Pricing page included a $0 sample."
         },
         {
           "toolId": "convai",
@@ -8692,7 +8692,7 @@
         },
         {
           "toolId": "mistscale",
-          "why": "Memory so NPCs can remember the player. Homepage checked; /docs returned 404 once."
+          "why": "Memory so NPCs can remember the player."
         },
         {
           "toolId": "tavernbard",
@@ -8722,15 +8722,15 @@
       "recommended": [
         {
           "toolId": "metaview",
-          "why": "Free plan and AI sourcing. Docs checked."
+          "why": "Free plan and AI sourcing."
         },
         {
           "toolId": "paradox",
-          "why": "Candidate agent and conversational scheduling. Docs checked."
+          "why": "Candidate agent and conversational scheduling."
         },
         {
           "toolId": "gem",
-          "why": "Source, review, and report. Docs checked."
+          "why": "Source, review, and report."
         }
       ],
       "intro": "AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve."
@@ -8752,11 +8752,11 @@
       "recommended": [
         {
           "toolId": "freshservice",
-          "why": "IT Starter is $19 per agent per month billed annually. Docs checked."
+          "why": "IT Starter is $19 per agent per month billed annually."
         },
         {
           "toolId": "moveworks",
-          "why": "ITSM automation and employee self-service. Docs checked."
+          "why": "ITSM automation and employee self-service."
         }
       ],
       "intro": "AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do."
@@ -8778,19 +8778,19 @@
       "recommended": [
         {
           "toolId": "glean",
-          "why": "Enterprise search and 250+ connectors. Docs checked."
+          "why": "Enterprise search and 250+ connectors."
         },
         {
           "toolId": "guru",
-          "why": "Knowledge agents. Docs checked."
+          "why": "Knowledge agents that find and improve company information."
         },
         {
           "toolId": "slite",
-          "why": "Ask is AI search, at $10 per user billed yearly. Docs checked."
+          "why": "Ask is AI search, at $10 per user billed yearly."
         },
         {
           "toolId": "notion",
-          "why": "Workspace with a Notion AI trial on the pricing page. Docs checked."
+          "why": "Workspace with a Notion AI trial on the pricing page."
         }
       ],
       "intro": "AI agents can search an internal knowledge base and answer a policy question with the document to check."
@@ -8812,15 +8812,15 @@
       "recommended": [
         {
           "toolId": "shortwave",
-          "why": "$30 per seat per month and a 14-day trial. Docs checked."
+          "why": "$30 per seat per month and a 14-day trial."
         },
         {
           "toolId": "fyxer",
-          "why": "Inbox organizer and drafts, with a 14-day trial. Docs checked."
+          "why": "Inbox organizer and drafts, with a 14-day trial."
         },
         {
           "toolId": "spark-mail",
-          "why": "AI assistant and smart inbox. Docs checked."
+          "why": "AI assistant and smart inbox."
         }
       ],
       "intro": "AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends."
@@ -8843,11 +8843,11 @@
       "recommended": [
         {
           "toolId": "portfolio-pilot",
-          "why": "Free plan tracks net worth and a portfolio assessment. Gold adds recommendations. Docs checked, not hands-on."
+          "why": "Free plan tracks net worth and a portfolio assessment. Gold adds recommendations."
         },
         {
           "toolId": "magnifi",
-          "why": "Links brokerage accounts on the free tier. Premium adds forecasting. Docs checked from the app listing."
+          "why": "Links brokerage accounts on the free tier. Premium adds forecasting."
         },
         {
           "toolId": "composer",
@@ -8855,11 +8855,11 @@
         },
         {
           "toolId": "kubera",
-          "why": "Flat annual fee for household tracking. Docs checked. There is no $0 plan."
+          "why": "Flat annual fee for household tracking. There is no $0 plan."
         },
         {
           "toolId": "range",
-          "why": "Advisory membership with an AI assistant and no AUM fee. Premium is an annual price. Docs checked."
+          "why": "Advisory membership with an AI assistant and no AUM fee. Premium is an annual price."
         }
       ],
       "intro": "AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk."
@@ -8945,11 +8945,11 @@
       "recommended": [
         {
           "toolId": "guidegeek",
-          "why": "AI planner for flights, stays, and activities. Docs checked."
+          "why": "AI planner for flights, stays, and activities."
         },
         {
           "toolId": "wonderplan",
-          "why": "AI itineraries with a free start. Docs checked."
+          "why": "AI itineraries with a free start."
         }
       ],
       "intro": "AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself."
@@ -8972,15 +8972,15 @@
       "recommended": [
         {
           "toolId": "propstream",
-          "why": "Property search with filters and an AI search box. Docs checked."
+          "why": "Property search with filters and an AI search box."
         },
         {
           "toolId": "mashvisor",
-          "why": "Rental comps and income estimates for a property. Docs checked."
+          "why": "Rental comps and income estimates for a property."
         },
         {
           "toolId": "dealcheck",
-          "why": "Rental, flip, and commercial calculators with side-by-side comparison. Docs checked."
+          "why": "Rental, flip, and commercial calculators with side-by-side comparison."
         }
       ],
       "intro": "AI agents can compare property records and rental or flip numbers so you sort the deals yourself."
@@ -9040,19 +9040,19 @@
       "recommended": [
         {
           "toolId": "instantly",
-          "why": "Outreach Growth is $47 per month. Docs checked."
+          "why": "Outreach Growth is $47 per month."
         },
         {
           "toolId": "apollo",
-          "why": "Contact data and an AI assistant. Docs checked."
+          "why": "Contact data and an AI assistant."
         },
         {
           "toolId": "clay",
-          "why": "Data marketplace and a free trial. Docs checked."
+          "why": "Data marketplace and a free trial."
         },
         {
           "toolId": "smartlead",
-          "why": "Cold-email assistant. Docs checked."
+          "why": "Cold-email assistant."
         }
       ],
       "intro": "AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent."
@@ -9074,15 +9074,15 @@
       "recommended": [
         {
           "toolId": "motion",
-          "why": "$29 per seat per month for an AI calendar. Docs checked."
+          "why": "$29 per seat per month for an AI calendar."
         },
         {
           "toolId": "reclaim",
-          "why": "Smart meetings and scheduling links. Docs checked."
+          "why": "Smart meetings and scheduling links."
         },
         {
           "toolId": "lindy",
-          "why": "Inbox and calendar jobs with free credits. Docs checked."
+          "why": "Inbox and calendar jobs with free credits."
         }
       ],
       "intro": "AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head."
@@ -9104,15 +9104,15 @@
       "recommended": [
         {
           "toolId": "charlotte-ai",
-          "why": "CrowdStrike's agentic security analyst. Docs checked."
+          "why": "CrowdStrike's agentic security analyst."
         },
         {
           "toolId": "abnormal",
-          "why": "Behavioral AI for email and identity security. Docs checked."
+          "why": "Behavioral AI for email and identity security."
         },
         {
           "toolId": "dropzone",
-          "why": "AI SOC analyst for alert triage. Docs checked."
+          "why": "AI SOC analyst for alert triage."
         }
       ],
       "intro": "AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts."
@@ -9134,11 +9134,11 @@
       "recommended": [
         {
           "toolId": "daydream",
-          "why": "AI fashion shopping across 10,000+ stores. Docs checked."
+          "why": "AI fashion shopping across 10,000+ stores."
         },
         {
           "toolId": "alexa-shopping",
-          "why": "Amazon's shopping assistant, formerly Rufus. Docs checked."
+          "why": "Amazon's shopping assistant, formerly Rufus."
         }
       ],
       "intro": "AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from."
@@ -9160,19 +9160,19 @@
       "recommended": [
         {
           "toolId": "buffer",
-          "why": "Essentials is $5 per month with an AI assistant. Docs checked."
+          "why": "Essentials is $5 per month with an AI assistant."
         },
         {
           "toolId": "ocoya",
-          "why": "Starter is $29 per month. Docs checked."
+          "why": "Starter is $29 per month."
         },
         {
           "toolId": "predis",
-          "why": "Generates social posts with AI. Docs checked."
+          "why": "Generates social posts with AI."
         },
         {
           "toolId": "hootsuite",
-          "why": "Planning and publishing, connected by AI. Docs checked."
+          "why": "Planning and publishing, connected by AI."
         }
       ],
       "intro": "AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send."
@@ -9206,7 +9206,7 @@
         },
         {
           "toolId": "skyvern",
-          "why": "Browser automation for websites. The pricing page lists a free plan and a $29 per month plan. Docs checked."
+          "why": "Browser automation for websites. The pricing page lists a free plan and a $29 per month plan."
         }
       ],
       "jobPhrase": "automating steps in a web browser",
@@ -9232,15 +9232,15 @@
       "recommended": [
         {
           "toolId": "khanmigo",
-          "why": "Tutor and teaching assistant with a free teacher sign-up. Docs checked."
+          "why": "Tutor and teaching assistant with a free teacher sign-up."
         },
         {
           "toolId": "synthesis-tutor",
-          "why": "Tutor with a free trial. Docs checked."
+          "why": "Tutor with a free trial."
         },
         {
           "toolId": "duolingo-max",
-          "why": "Duolingo's 2023 post introduces Max with GPT-4. Docs checked."
+          "why": "Duolingo's 2023 post introduces Max with GPT-4."
         }
       ],
       "intro": "AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss."
@@ -9258,7 +9258,7 @@
       "recommended": [
         {
           "toolId": "n8n",
-          "why": "Self-host Community Edition for free, or use paid n8n Cloud. Our local npm install failed; docs and pricing were checked."
+          "why": "Self-host Community Edition for free, or use paid n8n Cloud."
         },
         {
           "toolId": "make",

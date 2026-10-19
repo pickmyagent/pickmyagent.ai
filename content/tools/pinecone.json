@@ -34,7 +34,7 @@
     "Teams that do not want to run the database themselves"
   ],
   "notIdealFor": [
-    "A confirmed free tier from this check",
+    "A confirmed free tier",
     "Web search or page crawling — different tools"
   ],
   "strength": "Starter is free for hosted vector search, and Builder is $20 per month with a 3-week trial.",

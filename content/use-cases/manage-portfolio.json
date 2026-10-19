@@ -16,11 +16,11 @@
   "recommended": [
     {
       "toolId": "portfolio-pilot",
-      "why": "Free plan tracks net worth and a portfolio assessment. Gold adds recommendations. Docs checked, not hands-on."
+      "why": "Free plan tracks net worth and a portfolio assessment. Gold adds recommendations."
     },
     {
       "toolId": "magnifi",
-      "why": "Links brokerage accounts on the free tier. Premium adds forecasting. Docs checked from the app listing."
+      "why": "Links brokerage accounts on the free tier. Premium adds forecasting."
     },
     {
       "toolId": "composer",
@@ -28,11 +28,11 @@
     },
     {
       "toolId": "kubera",
-      "why": "Flat annual fee for household tracking. Docs checked. There is no $0 plan."
+      "why": "Flat annual fee for household tracking. There is no $0 plan."
     },
     {
       "toolId": "range",
-      "why": "Advisory membership with an AI assistant and no AUM fee. Premium is an annual price. Docs checked."
+      "why": "Advisory membership with an AI assistant and no AUM fee. Premium is an annual price."
     }
   ],
   "intro": "AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk."

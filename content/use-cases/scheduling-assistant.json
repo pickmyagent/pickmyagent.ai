@@ -15,15 +15,15 @@
   "recommended": [
     {
       "toolId": "motion",
-      "why": "$29 per seat per month for an AI calendar. Docs checked."
+      "why": "$29 per seat per month for an AI calendar."
     },
     {
       "toolId": "reclaim",
-      "why": "Smart meetings and scheduling links. Docs checked."
+      "why": "Smart meetings and scheduling links."
     },
     {
       "toolId": "lindy",
-      "why": "Inbox and calendar jobs with free credits. Docs checked."
+      "why": "Inbox and calendar jobs with free credits."
     }
   ],
   "intro": "AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head."

@@ -36,7 +36,7 @@
     "Capturing receipts and invoices for bookkeeping"
   ],
   "notIdealFor": [
-    "Someone who needs a listed monthly price from this check"
+    "Someone who needs a listed monthly price"
   ],
   "strength": "Dext lists receipt and invoice capture and business expense management for bookkeeping.",
   "weakness": "The fetched page did not show a dollar price.",

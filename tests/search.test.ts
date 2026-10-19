@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync, writeFileSync } from "node:fs";
 import test from "node:test";
 import { CONCEPTS } from "../lib/concepts.ts";
+import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport } from "../scripts/search-qa.ts";
 import {
   GENERIC_MATCH_WORDS,
   jobLead,
@@ -122,7 +123,8 @@ test("generic words do not select a specialist", () => {
   assert.equal(ranked.useCases.length, 0);
   assert.ok(ranked.tools.length > 0);
   assert.ok(ranked.tools.every((tool) => tool.generalPurpose));
-  assert.match(ranked.intro, /^AI agents can research, compare, summarize, draft, and automate/);
+  assert.match(ranked.intro, /^AI agents can help with .+ by researching, comparing, and summarizing\./);
+  assert.equal(/\bparts of\b/i.test(ranked.intro), false);
   for (const tool of ranked.tools) {
     assert.ok(tool.whyItHelps.trim().length > 0, tool.name);
   }
@@ -494,7 +496,8 @@ function assertNoBorrowedIntro(query: string, ranked: RankedSearch) {
 
 function assertJob(job: JobExpect) {
   const ranked = rankCatalogQuery(job.query, catalog);
-  assert.equal(ranked.lead, jobLead(job.query), job.query);
+  const matchedCase = catalog.useCases.find((item) => item.slug === ranked.useCases[0]?.slug) ?? null;
+  assert.equal(ranked.lead, jobLead(job.query, matchedCase), job.query);
   assert.match(ranked.intro, /^AI agents\b/, `${job.query} intro: ${ranked.intro}`);
   assert.match(ranked.intro, job.intro, `${job.query} intro: ${ranked.intro}`);
   if (job.exactIntro) assert.equal(ranked.intro, job.exactIntro);
@@ -552,6 +555,63 @@ for (const job of JOBS) {
     assertJob(job);
   });
 }
+
+const HEADER_CASES: { query: string; lead: string; intro: string | RegExp }[] = [
+  {
+    query: "Use an agent for my investment portfolio",
+    lead: "For managing your investment portfolio, here's how each tool can help:",
+    intro: "AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.",
+  },
+  {
+    query: "agent for taxes",
+    lead: "For doing your taxes, here's how each tool can help:",
+    intro: /tax/,
+  },
+  {
+    query: "AI for my small business",
+    lead: "For working on your small business, here's how each tool can help:",
+    intro: "AI agents can help with working on your small business by researching, comparing, and summarizing.",
+  },
+  {
+    query: "best AI tool for real estate",
+    lead: "For working on real estate, here's how each tool can help:",
+    intro: "AI agents can help with working on real estate by researching, comparing, and summarizing.",
+  },
+  {
+    query: "is there an AI that can plan my trip",
+    lead: "For planning your trip, here's how each tool can help:",
+    intro: /^AI agents\b/,
+  },
+  {
+    query: "Help me with my resume",
+    lead: "For working on your resume, here's how each tool can help:",
+    intro: "AI agents can help with working on your resume by researching, comparing, and summarizing.",
+  },
+  {
+    query: "investment portfolio",
+    lead: "For managing an investment portfolio, here's how each tool can help:",
+    intro: "AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.",
+  },
+  {
+    query: "USE AI TO WRITE EMAILS",
+    lead: "For writing emails, here's how each tool can help:",
+    intro: "AI agents can help you write emails by drafting.",
+  },
+];
+
+test("wrapped queries become a gerund job in the header and intro", () => {
+  const banned = /\b(use an agent|i want|find an agent|is there an ai|best ai|help me)\b/i;
+  for (const item of HEADER_CASES) {
+    const ranked = rankCatalogQuery(item.query, catalog);
+    assert.equal(ranked.lead, item.lead, item.query);
+    if (item.intro instanceof RegExp) assert.match(ranked.intro, item.intro, `${item.query}: ${ranked.intro}`);
+    else assert.equal(ranked.intro, item.intro, item.query);
+    assert.equal(/\bparts of\b/i.test(ranked.intro), false, ranked.intro);
+    assert.equal(banned.test(ranked.lead), false, ranked.lead);
+    assert.equal(banned.test(ranked.intro), false, ranked.intro);
+    assert.match(ranked.lead, /^For [a-z]/, ranked.lead);
+  }
+});
 
 test("real estate ranking header echoes the query and never the land header", () => {
   const query = "Find real estate deals and rank them";
@@ -672,6 +732,15 @@ test("newsletter prompt renders at most once on a results page", () => {
   assert.match(browser, /showSearchNewsletter && !showInlineNewsletter/);
   assert.equal((search.match(/<SearchNewsletterPrompt/g) ?? []).length, 2);
   assert.equal((browser.match(/<SearchNewsletterPrompt/g) ?? []).length, 2);
+});
+
+test("catalog prose and the search QA harness stay grammatical", () => {
+  const problems = [...catalogLeakProblems(catalog), ...qaProblems(catalog)];
+  assert.deepEqual(problems, [], problems.slice(0, 12).join("\n"));
+  const report = readFileSync(new URL("../qa/search-qa-report.md", import.meta.url), "utf8");
+  assert.equal(report, renderSearchQaReport(catalog));
+  assert.ok(QA_QUERIES.length >= 200);
+  assert.match(report, new RegExp(`${QA_QUERIES.length} queries`));
 });
 
 test("tax and wedding why-lines name the job instead of the search wrapper", () => {

@@ -36,7 +36,7 @@
     "Protecting calendar time and sharing scheduling links"
   ],
   "notIdealFor": [
-    "Someone who needs a published monthly price from this check"
+    "Someone who needs a published monthly price"
   ],
   "strength": "Reclaim's pricing page lists smart meetings, scheduling links, and calendar sync.",
   "weakness": "The fetched pricing text did not include a dollar amount.",

@@ -15,19 +15,19 @@
   "recommended": [
     {
       "toolId": "glean",
-      "why": "Enterprise search and 250+ connectors. Docs checked."
+      "why": "Enterprise search and 250+ connectors."
     },
     {
       "toolId": "guru",
-      "why": "Knowledge agents. Docs checked."
+      "why": "Knowledge agents that find and improve company information."
     },
     {
       "toolId": "slite",
-      "why": "Ask is AI search, at $10 per user billed yearly. Docs checked."
+      "why": "Ask is AI search, at $10 per user billed yearly."
     },
     {
       "toolId": "notion",
-      "why": "Workspace with a Notion AI trial on the pricing page. Docs checked."
+      "why": "Workspace with a Notion AI trial on the pricing page."
     }
   ],
   "intro": "AI agents can search an internal knowledge base and answer a policy question with the document to check."

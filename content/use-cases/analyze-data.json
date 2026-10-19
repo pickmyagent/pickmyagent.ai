@@ -15,15 +15,15 @@
   "recommended": [
     {
       "toolId": "julius",
-      "why": "Plus is $20 per month and a Free plan is listed. Docs checked."
+      "why": "Plus is $20 per month and a Free plan is listed."
     },
     {
       "toolId": "rows",
-      "why": "Plus is $8 per user per month. Docs checked."
+      "why": "Plus is $8 per user per month."
     },
     {
       "toolId": "hex",
-      "why": "$36 per editor per month with a Hex agent. Docs checked."
+      "why": "$36 per editor per month with a Hex agent."
     }
   ],
   "intro": "AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table."
