@@ -26,5 +26,5 @@
   "assistantTask": "turn a transcript into notes, decisions, and a task list you can edit",
   "assistantContext": "turning a meeting into notes and tasks",
   "searchTopic": "how to structure notes from a transcript",
-  "intro": "AI agents can turn a transcript into notes, decisions, and tasks so you can edit the list instead of replaying the call."
+  "intro": "AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call."
 }

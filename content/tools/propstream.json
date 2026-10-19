@@ -32,7 +32,9 @@
     "real-estate"
   ],
   "useCaseTags": [
-    "find-land"
+    "find-land",
+    "find-off-market",
+    "rank-property-deals"
   ],
   "toolTypes": [
     "agent"
@@ -63,6 +65,8 @@
     "finalUrl": "https://www.propstream.com/pricing"
   },
   "useCaseFit": {
-    "find-land": "Searches property records with an AI search box, and Essentials is $99 per month."
+    "find-land": "Searches property records with an AI search box, and Essentials is $99 per month.",
+    "find-off-market": "Filters property records, including off-market search, and Essentials is $99 per month.",
+    "rank-property-deals": "Filters property records, including off-market ones."
   }
 }

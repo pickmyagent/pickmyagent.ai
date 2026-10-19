@@ -1,0 +1,30 @@
+{
+  "slug": "analyze-data",
+  "title": "Analyze data and generate reports",
+  "summary": "Ask questions of spreadsheets and dashboards.",
+  "audienceHints": [
+    "operators"
+  ],
+  "matchTags": [
+    "analyze-data"
+  ],
+  "jobPhrase": "analyzing data and generating reports",
+  "assistantTask": "summarize a table and list questions the sheet cannot answer",
+  "assistantContext": "reading a spreadsheet",
+  "searchTopic": "what a column in the sheet means",
+  "recommended": [
+    {
+      "toolId": "julius",
+      "why": "Plus is $20 per month and a Free plan is listed. Docs checked."
+    },
+    {
+      "toolId": "rows",
+      "why": "Plus is $8 per user per month. Docs checked."
+    },
+    {
+      "toolId": "hex",
+      "why": "$36 per editor per month with a Hex agent. Docs checked."
+    }
+  ],
+  "intro": "AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table."
+}

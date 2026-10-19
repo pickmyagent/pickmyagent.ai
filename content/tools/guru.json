@@ -1,0 +1,68 @@
+{
+  "id": "guru",
+  "slug": "guru",
+  "name": "Guru",
+  "websiteUrl": "https://www.getguru.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Knowledge base whose agents find and improve company information.",
+  "longDescription": "Guru's pricing page says knowledge agents now improve your information, not just find it, and it describes knowledge management workflows. The fetched text did not include a dollar price. We did not start a workspace.",
+  "categories": [
+    "knowledge"
+  ],
+  "useCaseTags": [
+    "knowledge-qa"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "contact"
+  ],
+  "pricingNotes": "The pricing page describes knowledge agents that improve information, not only find it. No dollar amount was in the fetch.",
+  "pricingUrl": "https://www.getguru.com/pricing",
+  "docsUrl": "https://www.getguru.com/pricing",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "A company wiki with agents that answer from verified cards"
+  ],
+  "notIdealFor": [
+    "Someone who needs a listed per-user price from this check"
+  ],
+  "strength": "Guru's pricing page says its knowledge agents improve company information, not only find it.",
+  "weakness": "The fetched pricing text did not include a dollar amount.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.getguru.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.getguru.com/"
+  },
+  "useCaseFit": {
+    "knowledge-qa": "Company knowledge base with agents that find and improve information."
+  }
+}

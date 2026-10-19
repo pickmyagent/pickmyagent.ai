@@ -1,0 +1,68 @@
+{
+  "id": "gem",
+  "slug": "gem",
+  "name": "Gem",
+  "websiteUrl": "https://www.gem.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Recruiting platform to source, review, hire, and report with AI.",
+  "longDescription": "Gem's homepage says it gives talent teams AI and data to source, review, hire, and report in one place. The fetched text did not list a price. We did not book a demo.",
+  "categories": [
+    "hiring"
+  ],
+  "useCaseTags": [
+    "hire-candidates"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "The homepage says Gem uses AI to source, review, hire, and report. No price was in the fetch.",
+  "pricingUrl": "https://www.gem.com/",
+  "docsUrl": "https://www.gem.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Sourcing and reporting on candidates in one recruiting workspace"
+  ],
+  "notIdealFor": [
+    "A buyer who needs a public seat price"
+  ],
+  "strength": "Gem says teams can source, review, hire, and report with its AI and data.",
+  "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.gem.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.gem.com/"
+  },
+  "useCaseFit": {
+    "hire-candidates": "Recruiting workspace for sourcing, reviewing, and reporting on candidates."
+  }
+}

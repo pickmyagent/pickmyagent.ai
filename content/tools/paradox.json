@@ -1,0 +1,68 @@
+{
+  "id": "paradox",
+  "slug": "paradox",
+  "name": "Paradox",
+  "websiteUrl": "https://www.paradox.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Candidate experience agent with conversational scheduling and apply flows.",
+  "longDescription": "Paradox's site describes a candidate experience agent, conversational apply, conversational scheduling, and a conversational CRM. The fetched text did not list a price. We did not request a demo.",
+  "categories": [
+    "hiring"
+  ],
+  "useCaseTags": [
+    "hire-candidates"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "The site describes a candidate experience agent and conversational scheduling. No price was in the fetch.",
+  "pricingUrl": "https://www.paradox.ai/",
+  "docsUrl": "https://www.paradox.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "High-volume hiring that wants conversational scheduling"
+  ],
+  "notIdealFor": [
+    "A team that needs a self-serve monthly price"
+  ],
+  "strength": "Paradox describes a candidate experience agent with conversational scheduling and apply flows.",
+  "weakness": "The fetched site did not publish a dollar price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.paradox.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.paradox.ai/"
+  },
+  "useCaseFit": {
+    "hire-candidates": "Candidate agent that the site says can schedule and take applications conversationally."
+  }
+}

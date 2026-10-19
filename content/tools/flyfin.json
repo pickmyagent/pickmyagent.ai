@@ -1,0 +1,67 @@
+{
+  "id": "flyfin",
+  "slug": "flyfin",
+  "name": "FlyFin",
+  "websiteUrl": "https://flyfin.tax/",
+  "affiliateUrl": null,
+  "shortDescription": "AI and CPA service that finds deductions and files self-employed taxes.",
+  "longDescription": "FlyFin's homepage describes an AI and CPA tax filing service for freelancers. It says the AI finds deductions and CPAs file the return. The fetched text did not include a plan price. We did not sign up.",
+  "categories": [
+    "personal-finance"
+  ],
+  "useCaseTags": [
+    "do-taxes"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Homepage describes an AI and CPA filing service. No plan price was in the fetched text.",
+  "pricingUrl": "https://flyfin.tax/",
+  "docsUrl": "https://flyfin.tax/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Self-employed filers who want deduction sorting and a CPA to file"
+  ],
+  "notIdealFor": [
+    "Someone comparing plans by a published monthly price"
+  ],
+  "strength": "FlyFin's homepage describes an AI and CPA service that finds deductions and has CPAs file self-employed taxes.",
+  "weakness": "The homepage text we fetched did not list a plan price, so this listing leaves the monthly price blank.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://flyfin.tax/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://flyfin.tax/"
+  },
+  "useCaseFit": {
+    "do-taxes": "Describes an AI and CPA flow that finds deductions and files self-employed taxes."
+  }
+}

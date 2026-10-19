@@ -1,0 +1,67 @@
+{
+  "id": "ocoya",
+  "slug": "ocoya",
+  "name": "Ocoya",
+  "websiteUrl": "https://www.ocoya.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Social content plans from $29 per month, with a 7-day trial.",
+  "longDescription": "Ocoya's pricing page lists a Starter plan at $29 per month billed monthly for independent creators, and a 7-day free trial that requires a card. Higher plans were also listed. We did not start the trial.",
+  "categories": [
+    "content"
+  ],
+  "useCaseTags": [
+    "social-media"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Starter is $29 per month billed monthly, with a 7-day free trial that requires a card.",
+  "pricingUrl": "https://www.ocoya.com/pricing",
+  "docsUrl": "https://www.ocoya.com/pricing",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": 29,
+  "freeTrial": "7 days",
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Creating and scheduling social content on a listed monthly plan"
+  ],
+  "notIdealFor": [
+    "Someone who wants a trial without a card"
+  ],
+  "strength": "Ocoya lists a Starter plan at $29 per month and a 7-day free trial that requires a card.",
+  "weakness": "The trial requires a card, and higher plans on the page cost $79 and $199 per month.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.ocoya.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.ocoya.com/"
+  },
+  "useCaseFit": {
+    "social-media": "Social content tool with Starter at $29 per month and a 7-day trial."
+  }
+}

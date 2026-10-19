@@ -1,0 +1,67 @@
+{
+  "id": "guidegeek",
+  "slug": "guidegeek",
+  "name": "GuideGeek",
+  "websiteUrl": "https://guidegeek.com/",
+  "affiliateUrl": null,
+  "shortDescription": "AI trip planner for flights, stays, restaurants, and experiences.",
+  "longDescription": "GuideGeek's homepage says you can plan trips in minutes with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI. The fetched text did not list a price. We did not start a trip.",
+  "categories": [
+    "travel"
+  ],
+  "useCaseTags": [
+    "plan-travel"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "The homepage says it plans trips with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI. No price was in the fetch.",
+  "pricingUrl": "https://guidegeek.com/",
+  "docsUrl": "https://guidegeek.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Drafting a trip that needs flights, stays, and activities in one chat"
+  ],
+  "notIdealFor": [
+    "Someone who needs a published subscription price"
+  ],
+  "strength": "GuideGeek says it plans trips with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI.",
+  "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://guidegeek.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://guidegeek.com/"
+  },
+  "useCaseFit": {
+    "plan-travel": "Plans trips and says it covers flights, stays, restaurants, and experiences."
+  }
+}

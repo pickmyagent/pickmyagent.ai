@@ -1,0 +1,68 @@
+{
+  "id": "dropzone",
+  "slug": "dropzone",
+  "name": "Dropzone AI",
+  "websiteUrl": "https://www.dropzone.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "AI SOC analyst for alert triage and threat hunting.",
+  "longDescription": "Dropzone's site describes an AI SOC analyst that investigates alerts end to end and shows its reasoning, plus an AI threat hunter. The fetched text did not list a price. We did not request a demo.",
+  "categories": [
+    "security"
+  ],
+  "useCaseTags": [
+    "security-ops"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "The site describes an AI SOC analyst that investigates alerts and a threat hunter. No price was in the fetch.",
+  "pricingUrl": "https://www.dropzone.ai/",
+  "docsUrl": "https://www.dropzone.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "A security team that wants alert investigations with the reasoning shown"
+  ],
+  "notIdealFor": [
+    "Someone who needs a public monthly price"
+  ],
+  "strength": "Dropzone describes an AI SOC analyst that investigates alerts end to end and shows its reasoning.",
+  "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.dropzone.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.dropzone.ai/"
+  },
+  "useCaseFit": {
+    "security-ops": "SOC analyst agent for alert triage and threat hunting."
+  }
+}

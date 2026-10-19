@@ -1,0 +1,35 @@
+{
+  "slug": "finance-ops",
+  "title": "Process invoices and finance ops",
+  "summary": "Capture invoices and expenses. Not tax or financial advice.",
+  "audienceHints": [
+    "operators"
+  ],
+  "matchTags": [
+    "finance-ops"
+  ],
+  "jobPhrase": "processing invoices and finance ops",
+  "assistantTask": "list invoice fields to extract and what to flag",
+  "assistantContext": "processing an invoice",
+  "searchTopic": "the fields on the invoice",
+  "recommended": [
+    {
+      "toolId": "ramp",
+      "why": "Free is $0 per user and Plus is $15. Docs checked."
+    },
+    {
+      "toolId": "vic-ai",
+      "why": "AI-first invoice processing. Docs checked."
+    },
+    {
+      "toolId": "dext",
+      "why": "Receipt and invoice capture. Docs checked."
+    },
+    {
+      "toolId": "bill-com",
+      "why": "Invoicing and AP controls. Docs checked."
+    }
+  ],
+  "intro": "AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.",
+  "disclaimer": "PickMyAgent is not tax or financial advice."
+}

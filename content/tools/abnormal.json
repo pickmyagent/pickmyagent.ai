@@ -1,0 +1,68 @@
+{
+  "id": "abnormal",
+  "slug": "abnormal",
+  "name": "Abnormal",
+  "websiteUrl": "https://abnormal.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Behavioral AI for email, identity, and AI security.",
+  "longDescription": "Abnormal's homepage presents behavioral AI for email, identity, and AI security, including account takeover and misdirected email topics in the navigation. The fetched text did not list a price. We did not request a demo.",
+  "categories": [
+    "security"
+  ],
+  "useCaseTags": [
+    "security-ops"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "The homepage is titled behavioral AI for email, identity, and AI security. No price was in the fetch.",
+  "pricingUrl": "https://abnormal.ai/",
+  "docsUrl": "https://abnormal.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Email security teams looking at behavioral AI for phishing and account risk"
+  ],
+  "notIdealFor": [
+    "A buyer who needs a listed seat price"
+  ],
+  "strength": "Abnormal describes behavioral AI for email, identity, and AI security.",
+  "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://abnormal.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://abnormal.ai/"
+  },
+  "useCaseFit": {
+    "security-ops": "Email and identity security product described as behavioral AI."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "decagon",
+  "slug": "decagon",
+  "name": "Decagon",
+  "websiteUrl": "https://decagon.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "AI concierge for chat, email, and voice customer conversations.",
+  "longDescription": "Decagon's site describes an AI concierge with chat, email, and voice channels, plus workflows for agents. The fetched text did not list a public price. We did not request a demo.",
+  "categories": [
+    "customer-support"
+  ],
+  "useCaseTags": [
+    "customer-support"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "Product page describes chat, email, and voice concierge agents. No public dollar price was in the fetch.",
+  "pricingUrl": "https://decagon.ai/",
+  "docsUrl": "https://decagon.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Support teams that want chat, email, and voice in one agent"
+  ],
+  "notIdealFor": [
+    "A buyer who needs a self-serve monthly price"
+  ],
+  "strength": "Decagon describes an AI concierge that handles chat, email, and voice customer conversations.",
+  "weakness": "The fetched site did not publish a dollar price, so the plan cost is not listed here.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://decagon.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://decagon.ai/"
+  },
+  "useCaseFit": {
+    "customer-support": "Describes chat, email, and voice agents for customer conversations."
+  }
+}

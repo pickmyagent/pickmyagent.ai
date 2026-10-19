@@ -1,7 +1,7 @@
 {
   "slug": "find-land",
-  "title": "Find land or real estate",
-  "summary": "Look up parcels, owners, and property records before you call a seller.",
+  "title": "Find land",
+  "summary": "Look up parcels, acreage, and zoning before you call a seller.",
   "audienceHints": [
     "buyers",
     "investors"

@@ -1,0 +1,68 @@
+{
+  "id": "sierra",
+  "slug": "sierra",
+  "name": "Sierra",
+  "websiteUrl": "https://sierra.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "AI agents for customer service and customer experiences.",
+  "longDescription": "Sierra's site says it helps companies build AI agents for customer experiences and customer service, including voice. The fetched text did not list a price. We did not book a demo.",
+  "categories": [
+    "customer-support"
+  ],
+  "useCaseTags": [
+    "customer-support"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "The site describes AI agents for customer experiences and customer service. No price was in the fetch.",
+  "pricingUrl": "https://sierra.ai/",
+  "docsUrl": "https://sierra.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "A brand that wants a customer-service agent built with Sierra"
+  ],
+  "notIdealFor": [
+    "A small team looking for a published seat price"
+  ],
+  "strength": "Sierra says it builds AI agents for customer service and broader customer experiences.",
+  "weakness": "The fetched pages did not list a public dollar price or a self-serve trial length.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://sierra.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://sierra.ai/"
+  },
+  "useCaseFit": {
+    "customer-support": "Describes AI agents aimed at customer service and customer experiences."
+  }
+}

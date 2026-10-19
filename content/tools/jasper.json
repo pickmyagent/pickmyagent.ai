@@ -1,0 +1,69 @@
+{
+  "id": "jasper",
+  "slug": "jasper",
+  "name": "Jasper",
+  "websiteUrl": "https://www.jasper.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Marketing workspace with agents for content. A free trial is offered.",
+  "longDescription": "Jasper's site describes a platform for marketers with agents, a canvas, and AI optimization for search. The pricing navigation offers a free trial. The text we fetched did not include a dollar price. We did not start a trial.",
+  "categories": [
+    "content"
+  ],
+  "useCaseTags": [
+    "create-content"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "contact"
+  ],
+  "pricingNotes": "The product page describes agents and marketer tools, including a free trial link. No dollar price was in the fetched text.",
+  "pricingUrl": "https://www.jasper.ai/pricing",
+  "docsUrl": "https://www.jasper.ai/pricing",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Marketing teams drafting content in a dedicated workspace"
+  ],
+  "notIdealFor": [
+    "Someone who needs a listed monthly price from this check"
+  ],
+  "strength": "Jasper describes agents and a marketer workspace for content, and the site offers a free trial.",
+  "weakness": "The fetched pages did not include a dollar price or a trial length.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.jasper.ai/",
+    "https://www.jasper.ai/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.jasper.ai/"
+  },
+  "useCaseFit": {
+    "create-content": "Marketing content workspace with agents and a free-trial offer."
+  }
+}

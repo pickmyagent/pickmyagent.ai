@@ -1,0 +1,68 @@
+{
+  "id": "predis",
+  "slug": "predis",
+  "name": "Predis.ai",
+  "websiteUrl": "https://predis.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Generates and designs social posts and ads with AI.",
+  "longDescription": "Predis.ai's site says it generates, designs, and optimizes social media content with AI, including posts and ads. A $29 amount in the fetch was labeled extra credits, not a base plan, so this listing does not set a starting price. We did not subscribe.",
+  "categories": [
+    "content"
+  ],
+  "useCaseTags": [
+    "social-media"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "usage"
+  ],
+  "pricingNotes": "The site says it generates social content with AI. A $29 figure on the page was for extra credits, so it is not used as the starting plan price.",
+  "pricingUrl": "https://predis.ai/pricing",
+  "docsUrl": "https://predis.ai/pricing",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generating social posts and ad creatives"
+  ],
+  "notIdealFor": [
+    "Someone who needs a confirmed base-plan price from this check"
+  ],
+  "strength": "Predis says it generates, designs, and optimizes social media content with AI.",
+  "weakness": "The fetched pricing text did not make a base monthly price clear, so none is listed.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://predis.ai/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://predis.ai/"
+  },
+  "useCaseFit": {
+    "social-media": "Generates social posts and ads with AI, without a clear base price in the fetch."
+  }
+}

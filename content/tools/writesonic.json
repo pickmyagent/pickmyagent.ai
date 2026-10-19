@@ -1,0 +1,67 @@
+{
+  "id": "writesonic",
+  "slug": "writesonic",
+  "name": "Writesonic",
+  "websiteUrl": "https://writesonic.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Content and brand-tracking plans. Starter is $79 per month billed annually.",
+  "longDescription": "Writesonic's pricing page lists a Starter plan at $79 per month when billed annually, and says it tracks a brand across chat products and Google AI Overviews. We did not subscribe.",
+  "categories": [
+    "content"
+  ],
+  "useCaseTags": [
+    "create-content"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Starter is listed at $79 per month when billed annually. This listing leaves startingPrice empty so the UI does not drop the annual-billing condition.",
+  "pricingUrl": "https://writesonic.com/pricing",
+  "docsUrl": "https://writesonic.com/pricing",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Drafting content on a plan that also tracks brand mentions"
+  ],
+  "notIdealFor": [
+    "Someone who wants a month-to-month price confirmed on this listing"
+  ],
+  "strength": "Writesonic lists a Starter plan at $79 per month when that plan is billed annually.",
+  "weakness": "The figure we read is the annual-billing price, not a confirmed month-to-month rate.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://writesonic.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://writesonic.com/"
+  },
+  "useCaseFit": {
+    "create-content": "Content plans with Starter listed at $79 per month when billed annually."
+  }
+}

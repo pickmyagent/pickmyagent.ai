@@ -1,0 +1,34 @@
+{
+  "slug": "knowledge-qa",
+  "title": "Answer questions from internal docs",
+  "summary": "Search company docs and answer with the source attached.",
+  "audienceHints": [
+    "teams"
+  ],
+  "matchTags": [
+    "knowledge-qa"
+  ],
+  "jobPhrase": "answering questions from internal docs",
+  "assistantTask": "answer from a pasted policy and keep the citation",
+  "assistantContext": "looking up an internal policy",
+  "searchTopic": "the policy name you have",
+  "recommended": [
+    {
+      "toolId": "glean",
+      "why": "Enterprise search and 250+ connectors. Docs checked."
+    },
+    {
+      "toolId": "guru",
+      "why": "Knowledge agents. Docs checked."
+    },
+    {
+      "toolId": "slite",
+      "why": "Ask is AI search, at $10 per user billed yearly. Docs checked."
+    },
+    {
+      "toolId": "notion",
+      "why": "Workspace with a Notion AI trial on the pricing page. Docs checked."
+    }
+  ],
+  "intro": "AI agents can search an internal knowledge base and answer a policy question with the document to check."
+}

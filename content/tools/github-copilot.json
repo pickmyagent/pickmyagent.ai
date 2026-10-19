@@ -1,0 +1,67 @@
+{
+  "id": "github-copilot",
+  "slug": "github-copilot",
+  "name": "GitHub Copilot",
+  "websiteUrl": "https://github.com/features/copilot",
+  "affiliateUrl": null,
+  "shortDescription": "GitHub's AI coding agent for writing code and opening pull requests.",
+  "longDescription": "GitHub's Copilot page calls it your AI coding agent, says it writes code with AI, and says agents can be directed from issue to merge. The text we fetched did not include a dollar price. We did not subscribe.",
+  "categories": [
+    "coding-agents"
+  ],
+  "useCaseTags": [
+    "coding-agents"
+  ],
+  "toolTypes": [
+    "copilot"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "GitHub's page calls Copilot an AI coding agent that writes code and directs agents from issue to merge. No dollar price was in the text we fetched.",
+  "pricingUrl": "https://github.com/features/copilot",
+  "docsUrl": "https://github.com/features/copilot",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Writing and reviewing code inside GitHub"
+  ],
+  "notIdealFor": [
+    "Someone who needs a confirmed monthly price from this check"
+  ],
+  "strength": "GitHub calls Copilot an AI coding agent that writes code and can take work from an issue toward a merge.",
+  "weakness": "The fetched page did not include a dollar price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://github.com/features/copilot"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://github.com/features/copilot"
+  },
+  "useCaseFit": {
+    "coding-agents": "AI coding agent that GitHub says writes code and moves work toward a merge."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "glean",
+  "slug": "glean",
+  "name": "Glean",
+  "websiteUrl": "https://www.glean.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Enterprise search across company context, with 250+ connectors.",
+  "longDescription": "Glean's site describes enterprise search, grounding AI in company context, and more than 250 connectors, plus agents. The fetched text did not list a price. We did not request a demo.",
+  "categories": [
+    "knowledge"
+  ],
+  "useCaseTags": [
+    "knowledge-qa"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact",
+    "enterprise"
+  ],
+  "pricingNotes": "The site describes enterprise search, company context, and more than 250 connectors. No price was in the fetch.",
+  "pricingUrl": "https://www.glean.com/",
+  "docsUrl": "https://www.glean.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Asking questions across a company's connected documents"
+  ],
+  "notIdealFor": [
+    "A personal notes app with a public free plan"
+  ],
+  "strength": "Glean describes enterprise search over company context and says it offers more than 250 connectors.",
+  "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.glean.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.glean.com/"
+  },
+  "useCaseFit": {
+    "knowledge-qa": "Enterprise search with company context and more than 250 connectors."
+  }
+}

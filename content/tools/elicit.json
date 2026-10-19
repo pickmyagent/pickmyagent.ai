@@ -1,0 +1,68 @@
+{
+  "id": "elicit",
+  "slug": "elicit",
+  "name": "Elicit",
+  "websiteUrl": "https://elicit.com/",
+  "affiliateUrl": null,
+  "shortDescription": "AI research assistant. Plus is $11 per user per month billed annually.",
+  "longDescription": "Elicit's pricing page calls it the AI research assistant. Plus is listed at $11 per user per month billed as $132 annually, with export formats. A try-for-free control is on the page, without a stated trial length. We did not sign up.",
+  "categories": [
+    "research"
+  ],
+  "useCaseTags": [
+    "deep-research"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "The page titles Elicit the AI research assistant. Plus is $11 per user per month billed as $132 annually. startingPrice is empty because that price is annual billing.",
+  "pricingUrl": "https://elicit.com/pricing",
+  "docsUrl": "https://elicit.com/pricing",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Literature review in a research assistant with a published annual price"
+  ],
+  "notIdealFor": [
+    "Someone who wants a confirmed month-to-month rate"
+  ],
+  "strength": "Elicit calls itself the AI research assistant, and Plus is $11 per user per month billed as $132 annually.",
+  "weakness": "The $11 figure is annual billing, and the page did not state how long try-for-free lasts.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://elicit.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://elicit.com/"
+  },
+  "useCaseFit": {
+    "deep-research": "AI research assistant with Plus at $11 per user per month when billed annually."
+  }
+}

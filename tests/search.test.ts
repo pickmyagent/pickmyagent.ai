@@ -1,7 +1,15 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import test from "node:test";
-import { GENERIC_MATCH_WORDS, queryTokens, rankCatalogQuery, type RankedSearch } from "../lib/search.ts";
+import { CONCEPTS } from "../lib/concepts.ts";
+import {
+  GENERIC_MATCH_WORDS,
+  jobLead,
+  mentionsLand,
+  queryTokens,
+  rankCatalogQuery,
+  type RankedSearch,
+} from "../lib/search.ts";
 import type { Catalog } from "../lib/types.ts";
 
 const catalog = JSON.parse(
@@ -161,6 +169,604 @@ test("search results label general assistants and show the intro", () => {
   assert.match(source, /tool\.generalPurpose[\s\S]{0,240}General-purpose AI assistant/);
   assert.match(source, /ranked\.intro/);
   assert.match(source, /tool\.whyItHelps/);
+});
+
+const LAND_WORD = /\b(land|parcels?|acres?|acreage|lots?)\b/i;
+
+const STORED_INTROS = new Map(
+  catalog.useCases
+    .filter((useCase) => useCase.intro)
+    .map((useCase) => [useCase.slug, useCase.intro as string]),
+);
+
+type JobExpect = {
+  query: string;
+  useCase: string | null;
+  intro: RegExp;
+  exactIntro?: string;
+  disclaimer?: RegExp;
+};
+
+const REAL_ESTATE_RANK_INTRO =
+  "AI agents can help you find and rank real estate deals by researching, comparing, and analyzing.";
+
+const JOBS: JobExpect[] = [
+  {
+    query: "Find real estate deals that might not yet have a realtor, and reach them",
+    useCase: "find-off-market",
+    intro: /for-sale-by-owner|off-market|owner/i,
+  },
+  {
+    query: "find homes for sale by owner",
+    useCase: "find-off-market",
+    intro: /for-sale-by-owner|off-market|owner/i,
+  },
+  {
+    query: "find motivated sellers and text them",
+    useCase: "find-off-market",
+    intro: /for-sale-by-owner|off-market|owner|seller/i,
+  },
+  {
+    query: "find a realtor for my house",
+    useCase: null,
+    intro: /realtor/,
+  },
+  {
+    query: "I need an agent to help me find viable land deals",
+    useCase: "find-land",
+    intro: /land|parcel/,
+  },
+  {
+    query: "find an agent to help me find potentially viable land deals",
+    useCase: "find-land",
+    intro: /land|parcel/,
+  },
+  {
+    query: "help manage my investment portfolio",
+    useCase: "manage-portfolio",
+    intro: /portfolio|investment/,
+    disclaimer: /not financial advice/i,
+  },
+  { query: "plan a wedding", useCase: null, intro: /wedding/ },
+  { query: "write a cookbook", useCase: null, intro: /cookbook/ },
+  { query: "train my dog", useCase: null, intro: /dog/ },
+  { query: "organize my garage", useCase: null, intro: /garage/ },
+  { query: "bake a cake", useCase: null, intro: /cake/ },
+  {
+    query: "Find real estate deals and rank them",
+    useCase: "rank-property-deals",
+    intro: /find and rank real estate deals/,
+    exactIntro: REAL_ESTATE_RANK_INTRO,
+  },
+  {
+    query: "rank rental properties by cash flow",
+    useCase: "rank-property-deals",
+    intro: /rank rental properties by cash flow/,
+  },
+  {
+    query: "score houses to flip",
+    useCase: "rank-property-deals",
+    intro: /score houses to flip/,
+  },
+  {
+    query: "find commercial real estate deals",
+    useCase: "rank-property-deals",
+    intro: /commercial real estate deals/,
+  },
+  {
+    query: "I want to find an agent that will do my taxes",
+    useCase: "do-taxes",
+    intro: /tax/,
+    disclaimer: /not tax or financial advice/i,
+  },
+  {
+    query: "I want to find an ai tool that will find me the best deal on a vacation",
+    useCase: "plan-travel",
+    intro: /vacation|travel|flight|hotel/,
+  },
+  {
+    query: "Handle customer support tickets and resolve common issues autonomously (refunds, returns, FAQs, order status, escalation only when needed)",
+    useCase: "customer-support",
+    intro: /support|ticket|refund/,
+  },
+  {
+    query: "Handle customer support tickets and resolve common issues autonomously",
+    useCase: "customer-support",
+    intro: /support|ticket/,
+  },
+  {
+    query: "Write, debug, refactor, and ship code (full feature development, bug fixes, pull requests, legacy code upgrades, test generation)",
+    useCase: "coding-agents",
+    intro: /code/,
+  },
+  {
+    query: "Write, debug, refactor, and ship code",
+    useCase: "coding-agents",
+    intro: /code/,
+  },
+  {
+    query: "Do deep multi-step research and synthesize findings (competitive analysis, market research, literature reviews, cited reports from dozens of sources)",
+    useCase: "deep-research",
+    intro: /research/,
+  },
+  {
+    query: "Do deep multi-step research and synthesize findings",
+    useCase: "deep-research",
+    intro: /research/,
+  },
+  {
+    query: "Qualify leads, research accounts, and handle sales outreach (prospect research, personalized email sequences, CRM updates, pipeline management)",
+    useCase: "sales-outreach",
+    intro: /lead|sales|outreach/,
+  },
+  {
+    query: "Qualify leads, research accounts, and handle sales outreach",
+    useCase: "sales-outreach",
+    intro: /lead|sales|outreach/,
+  },
+  {
+    query: "Manage my email inbox (triage, prioritize, draft replies, summarize threads, auto-route or archive)",
+    useCase: "manage-inbox",
+    intro: /inbox|email/,
+  },
+  {
+    query: "Manage my email inbox",
+    useCase: "manage-inbox",
+    intro: /inbox|email/,
+  },
+  {
+    query: "Act as a personal assistant for scheduling and admin (calendar management, meeting prep, follow-ups, reminders, task orchestration across tools)",
+    useCase: "scheduling-assistant",
+    intro: /calendar|schedul/,
+  },
+  {
+    query: "Act as a personal assistant for scheduling and admin",
+    useCase: "scheduling-assistant",
+    intro: /calendar|schedul/,
+  },
+  {
+    query: "Create and optimize content (blog posts, social media, SEO articles, marketing copy, campaign assets at scale)",
+    useCase: "create-content",
+    intro: /content|blog|seo|copy/,
+  },
+  {
+    query: "Create and optimize content",
+    useCase: "create-content",
+    intro: /content/,
+  },
+  {
+    query: "Analyze data and generate reports (spreadsheets, dashboards, anomaly detection, financial or business insights from multiple sources)",
+    useCase: "analyze-data",
+    intro: /data|report|spreadsheet/,
+  },
+  {
+    query: "Analyze data and generate reports",
+    useCase: "analyze-data",
+    intro: /data|report/,
+  },
+  {
+    query: "Screen and source candidates for hiring (resume review, outreach, interview scheduling, candidate ranking)",
+    useCase: "hire-candidates",
+    intro: /candidate|hiring|resume/,
+  },
+  {
+    query: "Screen and source candidates for hiring",
+    useCase: "hire-candidates",
+    intro: /candidate|hiring/,
+  },
+  {
+    query: "Plan and book travel (itineraries, flights, hotels, activities, real-time adjustments based on preferences and constraints)",
+    useCase: "plan-travel",
+    intro: /travel|flight|hotel|itinerar/,
+  },
+  {
+    query: "Plan and book travel",
+    useCase: "plan-travel",
+    intro: /travel|flight|hotel/,
+  },
+  {
+    query: "Shop and recommend products (personalized recommendations, price comparison, guided purchasing, order tracking)",
+    useCase: "shop-products",
+    intro: /product|shop/,
+  },
+  {
+    query: "Shop and recommend products",
+    useCase: "shop-products",
+    intro: /product|shop/,
+  },
+  {
+    query: "Process invoices and handle finance ops (extract data, match to POs, flag exceptions, expense auditing)",
+    useCase: "finance-ops",
+    intro: /invoice|finance|expense/,
+    disclaimer: /not tax or financial advice/i,
+  },
+  {
+    query: "Process invoices and handle finance ops",
+    useCase: "finance-ops",
+    intro: /invoice|finance/,
+    disclaimer: /not tax or financial advice/i,
+  },
+  {
+    query: "Turn meeting notes into actions (transcribe, extract decisions/action items, assign tasks in project tools automatically)",
+    useCase: "meetings-knowledge",
+    intro: /meeting|action/,
+  },
+  {
+    query: "Turn meeting notes into actions",
+    useCase: "meetings-knowledge",
+    intro: /meeting|action/,
+  },
+  {
+    query: "Answer questions from internal knowledge bases (enterprise search, policy lookup, document Q&A with citations)",
+    useCase: "knowledge-qa",
+    intro: /knowledge|policy|document/,
+  },
+  {
+    query: "Answer questions from internal knowledge bases",
+    useCase: "knowledge-qa",
+    intro: /knowledge/,
+  },
+  {
+    query: "Run browser-based or computer-use tasks (fill forms, navigate websites, complete multi-step online workflows that require clicking and typing)",
+    useCase: "tool-use-browser",
+    intro: /browser/,
+  },
+  {
+    query: "Run browser-based or computer-use tasks",
+    useCase: "tool-use-browser",
+    intro: /browser/,
+  },
+  {
+    query: "Manage social media (content scheduling, engagement monitoring, trend analysis, response drafting)",
+    useCase: "social-media",
+    intro: /social/,
+  },
+  {
+    query: "Manage social media",
+    useCase: "social-media",
+    intro: /social/,
+  },
+  {
+    query: "Handle IT help desk requests (troubleshoot common issues, reset passwords, route tickets, basic system actions)",
+    useCase: "it-helpdesk",
+    intro: /help desk|password|IT/,
+  },
+  {
+    query: "Handle IT help desk requests",
+    useCase: "it-helpdesk",
+    intro: /help desk|IT/,
+  },
+  {
+    query: "Monitor and respond to threats or incidents (security triage, phishing analysis, anomaly detection with context)",
+    useCase: "security-ops",
+    intro: /threat|phish|security|incident/,
+  },
+  {
+    query: "Monitor and respond to threats or incidents",
+    useCase: "security-ops",
+    intro: /threat|phish|security|incident/,
+  },
+  {
+    query: "Orchestrate multi-tool workflows (connect CRM + email + calendar + docs for end-to-end processes like onboarding or quote-to-cash)",
+    useCase: "workflow-automation",
+    intro: /workflow/,
+  },
+  {
+    query: "Orchestrate multi-tool workflows",
+    useCase: "workflow-automation",
+    intro: /workflow/,
+  },
+  {
+    query: "Support personalized learning or tutoring (adaptive study plans, explain concepts, generate practice problems, track progress)",
+    useCase: "tutoring",
+    intro: /tutor|learning|study|practice/,
+  },
+  {
+    query: "Support personalized learning or tutoring",
+    useCase: "tutoring",
+    intro: /tutor|learning/,
+  },
+];
+
+function matchTagsFor(slug: string): string[] {
+  return catalog.useCases.find((useCase) => useCase.slug === slug)?.matchTags ?? [slug];
+}
+
+function assertWhyMentionsJob(query: string, ranked: RankedSearch) {
+  const tokens = queryTokens(query).filter((token) => token.length > 3);
+  for (const tool of ranked.tools) {
+    const why = tool.whyItHelps.toLowerCase();
+    assert.ok(tool.whyItHelps.trim().length > 0, `${query} / ${tool.name} is missing a why-line`);
+    assert.ok(
+      tokens.some((token) => why.includes(token)),
+      `${query} / ${tool.name} why-line is not about this job: ${tool.whyItHelps}`,
+    );
+  }
+}
+
+function assertNoBorrowedIntro(query: string, ranked: RankedSearch) {
+  const matched = ranked.useCases[0]?.slug ?? null;
+  for (const [slug, intro] of STORED_INTROS) {
+    if (slug === matched) continue;
+    assert.notEqual(ranked.intro, intro, `${query} borrowed the ${slug} intro`);
+  }
+}
+
+function assertJob(job: JobExpect) {
+  const ranked = rankCatalogQuery(job.query, catalog);
+  assert.equal(ranked.lead, jobLead(job.query), job.query);
+  assert.match(ranked.intro, /^AI agents\b/, `${job.query} intro: ${ranked.intro}`);
+  assert.match(ranked.intro, job.intro, `${job.query} intro: ${ranked.intro}`);
+  if (job.exactIntro) assert.equal(ranked.intro, job.exactIntro);
+  if (!mentionsLand(job.query)) {
+    assert.equal(LAND_WORD.test(ranked.lead), false, `${job.query} header mentions land: ${ranked.lead}`);
+    assert.equal(LAND_WORD.test(ranked.intro), false, `${job.query} intro mentions land: ${ranked.intro}`);
+  }
+  assertNoBorrowedIntro(job.query, ranked);
+  assertWhyMentionsJob(job.query, ranked);
+  assert.ok(ranked.tools.length >= 4, `${job.query} returned too few tools`);
+
+  if (job.disclaimer) {
+    assert.match(ranked.disclaimer ?? "", job.disclaimer, job.query);
+  }
+
+  if (!job.useCase) {
+    assert.equal(ranked.fallback, true, job.query);
+    assert.equal(ranked.useCases.length, 0, job.query);
+    assert.ok(
+      ranked.tools.every((tool) => tool.generalPurpose),
+      `${job.query} forced a specialist: ${ranked.tools.map((tool) => tool.name).join(", ")}`,
+    );
+    return;
+  }
+
+  assert.equal(ranked.fallback, false, job.query);
+  assert.equal(ranked.useCases[0]?.slug, job.useCase, job.query);
+  const concept = CONCEPTS.find((item) => item.useCase === job.useCase);
+  assert.ok(concept, job.useCase);
+  const allowed = new Set(concept.categories);
+  const tags = matchTagsFor(job.useCase);
+  const firstGeneral = ranked.tools.findIndex((tool) => tool.generalPurpose);
+  assert.ok(firstGeneral > 0, `${job.query} did not rank a specialist first`);
+  ranked.tools.forEach((rankedTool, index) => {
+    const tool = catalog.tools.find((item) => item.slug === rankedTool.slug);
+    assert.ok(tool, rankedTool.slug);
+    if (index < firstGeneral) {
+      assert.equal(rankedTool.generalPurpose, false, rankedTool.name);
+      assert.ok(
+        tool.useCaseTags.some((tag) => tags.includes(tag)),
+        `${job.query}: ${tool.name} is off-domain (${tool.useCaseTags.join(", ")})`,
+      );
+      assert.ok(
+        tool.categories.every((category) => allowed.has(category)),
+        `${job.query}: ${tool.name} category ${tool.categories.join(", ")} is outside ${job.useCase}`,
+      );
+    } else {
+      assert.equal(rankedTool.generalPurpose, true, `${job.query}: ${rankedTool.name}`);
+    }
+  });
+}
+
+for (const job of JOBS) {
+  test(`job search stays on the user's words: ${job.query}`, () => {
+    assertJob(job);
+  });
+}
+
+test("real estate ranking header echoes the query and never the land header", () => {
+  const query = "Find real estate deals and rank them";
+  const ranked = rankCatalogQuery(query, catalog);
+  assert.equal(
+    ranked.lead,
+    "For finding real estate deals and ranking them, here's how each tool can help:",
+  );
+  assert.equal(ranked.intro, REAL_ESTATE_RANK_INTRO);
+  assert.equal(ranked.lead.includes("potentially viable land"), false);
+  assert.equal(mentionsLand(query), false);
+  const landOnly = ["acres", "land-id", "regrid"];
+  const specialists = ranked.tools.filter((tool) => !tool.generalPurpose);
+  assert.ok(specialists.length >= 2, specialists.map((tool) => tool.slug).join(", "));
+  assert.ok(specialists.some((tool) => tool.slug === "propstream"));
+  assert.ok(specialists.some((tool) => tool.slug === "mashvisor"));
+  assert.equal(
+    specialists.some((tool) => landOnly.includes(tool.slug)),
+    false,
+    specialists.map((tool) => tool.slug).join(", "),
+  );
+});
+
+const DEAL_QUERIES = [
+  "Find real estate deals and rank them",
+  "rank rental properties by cash flow",
+  "score houses to flip",
+  "find commercial real estate deals",
+];
+
+test("deal queries rank real-estate specialists ahead of general assistants", () => {
+  for (const query of DEAL_QUERIES) {
+    const ranked = rankCatalogQuery(query, catalog);
+    const firstGeneral = ranked.tools.findIndex((tool) => tool.generalPurpose);
+    assert.ok(firstGeneral >= 2, `${query}: ${ranked.tools.map((tool) => tool.name).join(", ")}`);
+    for (const rankedTool of ranked.tools.slice(0, firstGeneral)) {
+      const tool = catalog.tools.find((item) => item.slug === rankedTool.slug);
+      assert.ok(tool, rankedTool.slug);
+      assert.ok(tool.categories.includes("real-estate"), tool.name);
+      assert.equal(
+        tool.useCaseTags.every((tag) => tag === "find-land"),
+        false,
+        `${query}: ${tool.name} is land-only`,
+      );
+    }
+  }
+});
+
+const BANNED_WHY = [
+  /that documented fit is for/i,
+  /its listing says:/i,
+  /when no specialist tool matches/i,
+  /docs checked;\s*we did not sign up/i,
+  /\$\d/,
+  /\bper month\b/i,
+  /\bper seat\b/i,
+];
+
+function distinctiveWhy(why: string): Set<string> {
+  const head = why.split(/\bwhile you\b|\bso you can\b/i)[0] ?? why;
+  const tokens = head.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/);
+  return new Set(tokens.filter((token) => token.length > 3));
+}
+
+function jaccard(left: Set<string>, right: Set<string>): number {
+  const union = new Set([...left, ...right]);
+  if (union.size === 0) return 1;
+  let shared = 0;
+  for (const token of left) if (right.has(token)) shared += 1;
+  return shared / union.size;
+}
+
+test("why-lines stay specific and do not leak internal notes", () => {
+  const queries = [
+    ...JOBS.map((job) => job.query),
+    ...QUERIES,
+    ...SAMPLE_QUERIES,
+    "find an agent to help me build and make what I need",
+  ];
+  for (const query of queries) {
+    const ranked = rankCatalogQuery(query, catalog);
+    const lines = ranked.tools.map((tool) => tool.whyItHelps);
+    for (const line of lines) {
+      for (const banned of BANNED_WHY) {
+        assert.equal(banned.test(line), false, `${query}: ${line}`);
+      }
+    }
+    for (let i = 0; i < lines.length; i++) {
+      for (let j = i + 1; j < lines.length; j++) {
+        const score = jaccard(distinctiveWhy(lines[i]), distinctiveWhy(lines[j]));
+        assert.ok(score < 0.72, `${query} why-lines are too similar (${score.toFixed(2)}): ${lines[i]} || ${lines[j]}`);
+      }
+    }
+  }
+});
+
+test("search newsletter prompt is wired into search and the tools page", () => {
+  const search = readFileSync(new URL("../components/job-search.tsx", import.meta.url), "utf8");
+  const browser = readFileSync(new URL("../components/tool-browser.tsx", import.meta.url), "utf8");
+  const prompt = readFileSync(new URL("../components/search-newsletter-prompt.tsx", import.meta.url), "utf8");
+  assert.match(prompt, /Get one new AI tool every Monday/);
+  assert.match(prompt, /pickmyagent-search-newsletter-dismissed/);
+  assert.match(prompt, /border-l-4 border-l-gold/);
+  assert.match(search, /showSearchNewsletter = Boolean\(trimmed\)/);
+  assert.match(search, /search-results-inline/);
+  assert.match(search, /search-results-end/);
+  assert.match(browser, /tools-search-inline/);
+  assert.match(browser, /tools-search-end/);
+  assert.match(browser, /searched && !dismissed/);
+});
+
+const HELD_OUT: { query: string; expect: string | null }[] = [
+  { query: "file my 1040", expect: "do-taxes" },
+  { query: "quarterly taxes for freelancers", expect: "do-taxes" },
+  { query: "is there an AI that can draft a cold email", expect: "sales-outreach" },
+  { query: "fsbo near me", expect: "find-off-market" },
+  { query: "motivated seller list", expect: "find-off-market" },
+  { query: "skip trace an owner", expect: "find-off-market" },
+  { query: "vacant lot in texas", expect: "find-land" },
+  { query: "zoning for this parcel", expect: "find-land" },
+  { query: "manage my 401k", expect: "manage-portfolio" },
+  { query: "stock portfolio rebalance", expect: "manage-portfolio" },
+  { query: "triage my gmail", expect: "manage-inbox" },
+  { query: "draft replies to email threads", expect: "manage-inbox" },
+  { query: "reset a password for an employee", expect: "it-helpdesk" },
+  { query: "help desk ticket", expect: "it-helpdesk" },
+  { query: "phishing report", expect: "security-ops" },
+  { query: "soc alert", expect: "security-ops" },
+  { query: "literature review of batteries", expect: "deep-research" },
+  { query: "competitive analysis of crm tools", expect: "deep-research" },
+  { query: "screen candidates for a role", expect: "hire-candidates" },
+  { query: "resume review for this applicant", expect: "hire-candidates" },
+  { query: "book a hotel in lisbon", expect: "plan-travel" },
+  { query: "build me an itinerary", expect: "plan-travel" },
+  { query: "price comparison for headphones", expect: "shop-products" },
+  { query: "shop for running shoes", expect: "shop-products" },
+  { query: "match this invoice to a purchase order", expect: "finance-ops" },
+  { query: "expense auditing", expect: "finance-ops" },
+  { query: "turn this transcript into action items", expect: "meetings-knowledge" },
+  { query: "meeting notes to tasks", expect: "meetings-knowledge" },
+  { query: "search our knowledge base", expect: "knowledge-qa" },
+  { query: "policy lookup for pto", expect: "knowledge-qa" },
+  { query: "fill forms in the browser", expect: "tool-use-browser" },
+  { query: "computer-use agent", expect: "tool-use-browser" },
+  { query: "schedule instagram posts", expect: "social-media" },
+  { query: "social media calendar", expect: "social-media" },
+  { query: "practice problems for calculus", expect: "tutoring" },
+  { query: "study plan for the bar exam", expect: "tutoring" },
+  { query: "debug a failing test in the repo", expect: "coding-agents" },
+  { query: "refactor this github pull request", expect: "coding-agents" },
+  { query: "connect these workflows across apps", expect: "workflow-automation" },
+  { query: "highlight reel from a kick stream", expect: "game-creative" },
+  { query: "customer support refund for order 123", expect: "customer-support" },
+  { query: "qualify leads in the crm", expect: "sales-outreach" },
+  { query: "calendar management for a founder", expect: "scheduling-assistant" },
+  { query: "analyze this spreadsheet", expect: "analyze-data" },
+  { query: "write an seo article", expect: "create-content" },
+  { query: "find real estate deals and score them", expect: "rank-property-deals" },
+  { query: "rank houses by cash flow", expect: "rank-property-deals" },
+  { query: "a lot of deals", expect: null },
+  { query: "wheres a good wedding venue", expect: null },
+];
+
+test("held-out paraphrases report precision at 3 without failing the build", () => {
+  assert.ok(HELD_OUT.length >= 40);
+  let hits = 0;
+  let slots = 0;
+  const misses: string[] = [];
+  for (const item of HELD_OUT) {
+    const ranked = rankCatalogQuery(item.query, catalog);
+    const top = ranked.tools.slice(0, 3);
+    let queryHits = 0;
+    for (const tool of top) {
+      slots += 1;
+      const relevant = item.expect
+        ? !tool.generalPurpose &&
+          (catalog.tools.find((entry) => entry.slug === tool.slug)?.useCaseTags ?? []).some((tag) =>
+            matchTagsFor(item.expect as string).includes(tag),
+          )
+        : tool.generalPurpose;
+      if (relevant) {
+        hits += 1;
+        queryHits += 1;
+      }
+    }
+    if (queryHits < top.length) {
+      misses.push(
+        `${item.query} → expected ${item.expect ?? "fallback"}, got ${ranked.useCases[0]?.slug ?? "fallback"} [${top.map((tool) => tool.name).join(", ")}]`,
+      );
+    }
+  }
+  const precision = hits / slots;
+  console.log(`held-out precision@3: ${precision.toFixed(3)} (${hits}/${slots})`);
+  for (const miss of misses) console.log(`held-out miss: ${miss}`);
+  assert.ok(precision >= 0);
+});
+
+test("regression report for the pull request", () => {
+  const report = JOBS.map((job) => {
+    const ranked = rankCatalogQuery(job.query, catalog);
+    return {
+      query: job.query,
+      useCase: ranked.useCases[0]?.slug ?? null,
+      lead: ranked.lead,
+      intro: ranked.intro,
+      disclaimer: ranked.disclaimer,
+      tools: ranked.tools.map((tool) => ({
+        name: tool.name,
+        generalPurpose: tool.generalPurpose,
+        why: tool.whyItHelps,
+      })),
+    };
+  });
+  writeFileSync("/tmp/search-regression-report.json", JSON.stringify(report, null, 2));
+  assert.equal(report.length, JOBS.length);
 });
 
 test("twitch highlight query ranks stream clip tools", () => {

@@ -1,0 +1,34 @@
+{
+  "slug": "customer-support",
+  "title": "Handle customer support tickets",
+  "summary": "Reply to common tickets and send the rest to a person.",
+  "audienceHints": [
+    "support teams"
+  ],
+  "matchTags": [
+    "customer-support"
+  ],
+  "jobPhrase": "handling customer support tickets",
+  "assistantTask": "draft a reply, cite the policy, and flag what should be escalated",
+  "assistantContext": "answering a support ticket",
+  "searchTopic": "the refund or order policy you would cite",
+  "recommended": [
+    {
+      "toolId": "intercom-fin",
+      "why": "Fin is $19 per seat per month plus per-outcome pricing. Docs checked."
+    },
+    {
+      "toolId": "zendesk",
+      "why": "Support plans start at $19 per month on the pricing title. Docs checked."
+    },
+    {
+      "toolId": "decagon",
+      "why": "Chat, email, and voice concierge. Docs checked."
+    },
+    {
+      "toolId": "sierra",
+      "why": "Customer-service agents. Docs checked."
+    }
+  ],
+  "intro": "AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle."
+}

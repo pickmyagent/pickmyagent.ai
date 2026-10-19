@@ -1,0 +1,67 @@
+{
+  "id": "taxact",
+  "slug": "taxact",
+  "name": "TaxAct",
+  "websiteUrl": "https://www.taxact.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Online filing with guided steps. The homepage says you can start filing for free.",
+  "longDescription": "TaxAct's homepage says people use it to file taxes online, with guided filing and expert help for more complex situations, and it says you can start filing for free. The fetched text did not include a dollar price. We did not start a return.",
+  "categories": [
+    "personal-finance"
+  ],
+  "useCaseTags": [
+    "do-taxes"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium"
+  ],
+  "pricingNotes": "The homepage says start filing for free and mentions guided filing plus expert help. No dollar amount was in the fetch.",
+  "pricingUrl": "https://www.taxact.com/",
+  "docsUrl": "https://www.taxact.com/",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Starting a personal return online with guided questions"
+  ],
+  "notIdealFor": [
+    "Someone who needs a listed monthly subscription price"
+  ],
+  "strength": "TaxAct's homepage offers guided online filing and says you can start filing for free.",
+  "weakness": "The fetched homepage did not print a dollar price for paid expert help.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.taxact.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.taxact.com/"
+  },
+  "useCaseFit": {
+    "do-taxes": "Offers guided online tax filing and says you can start for free."
+  }
+}

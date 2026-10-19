@@ -57,7 +57,72 @@
     {
       "slug": "real-estate",
       "title": "Land & real estate research",
-      "summary": "Parcel, ownership, and property research for land and real estate."
+      "summary": "Parcel research, plus off-market and for-sale-by-owner outreach."
+    },
+    {
+      "slug": "customer-support",
+      "title": "Customer support",
+      "summary": "AI agents that reply to tickets, refunds, and order questions."
+    },
+    {
+      "slug": "sales",
+      "title": "Sales outreach",
+      "summary": "Lead research, outreach sequences, and pipeline tools."
+    },
+    {
+      "slug": "productivity",
+      "title": "Email and scheduling",
+      "summary": "Inbox triage and calendar assistants."
+    },
+    {
+      "slug": "content",
+      "title": "Content and social",
+      "summary": "Drafting, SEO, and social scheduling tools."
+    },
+    {
+      "slug": "data-analysis",
+      "title": "Data analysis",
+      "summary": "Spreadsheet and dashboard analysis."
+    },
+    {
+      "slug": "hiring",
+      "title": "Hiring",
+      "summary": "Sourcing, resume review, and candidate scheduling."
+    },
+    {
+      "slug": "travel",
+      "title": "Travel planning",
+      "summary": "Itineraries, flights, and stays."
+    },
+    {
+      "slug": "shopping",
+      "title": "Shopping",
+      "summary": "Product search and recommendations."
+    },
+    {
+      "slug": "finance-ops",
+      "title": "Finance operations",
+      "summary": "Invoices, expenses, and accounts payable. Not tax or financial advice."
+    },
+    {
+      "slug": "security",
+      "title": "Security operations",
+      "summary": "Alert triage, phishing, and security analyst assistants."
+    },
+    {
+      "slug": "it-support",
+      "title": "IT help desk",
+      "summary": "IT service desk and employee support automation."
+    },
+    {
+      "slug": "learning",
+      "title": "Learning and tutoring",
+      "summary": "Tutors and study tools."
+    },
+    {
+      "slug": "research",
+      "title": "Deep research",
+      "summary": "Literature review and sourced research assistants."
     },
     {
       "slug": "general-assistants",
@@ -66,6 +131,74 @@
     }
   ],
   "tools": [
+    {
+      "id": "abnormal",
+      "slug": "abnormal",
+      "name": "Abnormal",
+      "websiteUrl": "https://abnormal.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Behavioral AI for email, identity, and AI security.",
+      "longDescription": "Abnormal's homepage presents behavioral AI for email, identity, and AI security, including account takeover and misdirected email topics in the navigation. The fetched text did not list a price. We did not request a demo.",
+      "categories": [
+        "security"
+      ],
+      "useCaseTags": [
+        "security-ops"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "The homepage is titled behavioral AI for email, identity, and AI security. No price was in the fetch.",
+      "pricingUrl": "https://abnormal.ai/",
+      "docsUrl": "https://abnormal.ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Email security teams looking at behavioral AI for phishing and account risk"
+      ],
+      "notIdealFor": [
+        "A buyer who needs a listed seat price"
+      ],
+      "strength": "Abnormal describes behavioral AI for email, identity, and AI security.",
+      "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://abnormal.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://abnormal.ai/"
+      },
+      "useCaseFit": {
+        "security-ops": "Email and identity security product described as behavioral AI."
+      }
+    },
     {
       "affiliateUrl": null,
       "platforms": [
@@ -132,6 +265,141 @@
       },
       "useCaseFit": {
         "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus."
+      }
+    },
+    {
+      "id": "alexa-shopping",
+      "slug": "alexa-shopping",
+      "name": "Alexa for Shopping",
+      "websiteUrl": "https://www.amazon.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Amazon shopping assistant, renamed from Rufus on May 13, 2026.",
+      "longDescription": "Amazon's news article says that on May 13, 2026 Rufus was renamed Alexa for Shopping. The same article describes an assistant trained on Amazon's catalog and the web that answers shopping questions, compares products, makes recommendations, and helps discover products in the Amazon Shopping app. It does not list a separate subscription price. We did not shop with it.",
+      "categories": [
+        "shopping"
+      ],
+      "useCaseTags": [
+        "shop-products"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "free"
+      ],
+      "pricingNotes": "Amazon's news post says Rufus was renamed Alexa for Shopping on May 13, 2026. No separate subscription price is stated.",
+      "pricingUrl": "https://www.aboutamazon.com/news/retail/amazon-rufus",
+      "docsUrl": "https://www.aboutamazon.com/news/retail/amazon-rufus",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Product questions and comparisons inside Amazon shopping"
+      ],
+      "notIdealFor": [
+        "Shopping only at stores outside Amazon"
+      ],
+      "strength": "Amazon's article says Alexa for Shopping, formerly Rufus, answers product questions, compares items, and makes recommendations in the shopping app.",
+      "weakness": "The article does not list a separate price, and the assistant is described inside Amazon's own shopping experience.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.aboutamazon.com/news/retail/amazon-rufus"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.amazon.com/"
+      },
+      "useCaseFit": {
+        "shop-products": "Answers shopping questions, compares products, and recommends items in Amazon's app."
+      }
+    },
+    {
+      "id": "apollo",
+      "slug": "apollo",
+      "name": "Apollo",
+      "websiteUrl": "https://www.apollo.io/",
+      "affiliateUrl": null,
+      "shortDescription": "Sales data and an AI assistant. The page cites 240 million contacts.",
+      "longDescription": "Apollo's pricing page describes data on 240 million contacts and 30 million companies, agents that run in the background, and an AI assistant. The text we fetched did not include a dollar price. We did not sign up.",
+      "categories": [
+        "sales"
+      ],
+      "useCaseTags": [
+        "sales-outreach"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "contact"
+      ],
+      "pricingNotes": "Pricing page says Apollo has 240 million contacts and 30 million companies, plus an AI assistant. No dollar amount was in the fetched text.",
+      "pricingUrl": "https://www.apollo.io/pricing",
+      "docsUrl": "https://www.apollo.io/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Looking up contacts and companies before writing outreach"
+      ],
+      "notIdealFor": [
+        "Someone who needs a confirmed monthly price from this check"
+      ],
+      "strength": "Apollo's pricing page cites 240 million contacts and 30 million companies, plus an AI assistant.",
+      "weakness": "That fetch did not include a dollar price, so this listing does not state one.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.apollo.io/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.apollo.io/"
+      },
+      "useCaseFit": {
+        "sales-outreach": "Offers a large contact database and an AI assistant for sales research."
       }
     },
     {
@@ -303,6 +571,141 @@
       }
     },
     {
+      "id": "batchleads",
+      "slug": "batchleads",
+      "name": "BatchLeads",
+      "websiteUrl": "https://batchleads.io/",
+      "affiliateUrl": null,
+      "shortDescription": "Property lists with owner phone numbers and emails. Growth is $119 per month.",
+      "longDescription": "BatchLeads searches property records and adds owner phone numbers and emails when a property is saved. On October 19, 2026 the pricing page listed Growth at $119 per month, Professional at $349, and Scale at $749, with a 7-day trial. SMS is an integration with a provider you bring. We did not start a trial.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "find-off-market"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Growth is $119 per month. Professional is $349. Scale is $749. 7-day trial. SMS uses an outside provider.",
+      "pricingUrl": "https://batchleads.io/pricing",
+      "docsUrl": "https://batchleads.io/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 119,
+      "freeTrial": "7 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Building a property list that includes owner phone numbers and emails"
+      ],
+      "notIdealFor": [
+        "Someone who wants texting included without a separate SMS provider"
+      ],
+      "strength": "Growth is $119 per month, and the pricing page says saved properties include owner phone numbers and emails.",
+      "weakness": "Texting uses an SMS provider you connect yourself, and the 7-day trial becomes a paid plan unless you cancel.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T12:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://batchleads.io/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://batchleads.io/pricing"
+      },
+      "useCaseFit": {
+        "find-off-market": "Saves properties with owner phone numbers and emails, and Growth is $119 per month."
+      }
+    },
+    {
+      "id": "bill-com",
+      "slug": "bill-com",
+      "name": "BILL",
+      "websiteUrl": "https://www.bill.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Invoicing, AP controls, and spend tools, plus an AI API.",
+      "longDescription": "BILL's product page lists invoicing, AP controls, spend and expense, payments, and an AI API. The fetched text did not include a dollar price. We did not request a demo.",
+      "categories": [
+        "finance-ops"
+      ],
+      "useCaseTags": [
+        "finance-ops"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "contact"
+      ],
+      "pricingNotes": "The product page lists invoicing, AP controls, spend and expense, and an AI API. No dollar price was in the fetch.",
+      "pricingUrl": "https://www.bill.com/product",
+      "docsUrl": "https://www.bill.com/product",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Paying bills and sending invoices in one payables product"
+      ],
+      "notIdealFor": [
+        "A buyer who needs a public price from this check"
+      ],
+      "strength": "BILL's product page lists invoicing, AP controls, spend and expense, and an AI API.",
+      "weakness": "The fetched page did not include a dollar price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.bill.com/product"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.bill.com/"
+      },
+      "useCaseFit": {
+        "finance-ops": "Lists invoicing, accounts-payable controls, and spend and expense tools."
+      }
+    },
+    {
       "id": "bitpart",
       "slug": "bitpart",
       "name": "Bitpart",
@@ -459,6 +862,74 @@
       }
     },
     {
+      "id": "buffer",
+      "slug": "buffer",
+      "name": "Buffer",
+      "websiteUrl": "https://buffer.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Social scheduling. Essentials is $5 per month, with a 14-day trial.",
+      "longDescription": "Buffer's pricing page lists Essentials at $5 per month for one channel, or $60 billed yearly, and a 14-day free trial. A features page describes an AI assistant for creating and repurposing content, plus scheduling across social platforms. We did not start a trial.",
+      "categories": [
+        "content"
+      ],
+      "useCaseTags": [
+        "social-media"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Essentials is $5 per month for 1 channel, or $60 billed yearly, with a 14-day free trial. The features page describes an AI assistant.",
+      "pricingUrl": "https://buffer.com/pricing",
+      "docsUrl": "https://buffer.com/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": 5,
+      "freeTrial": "14 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Scheduling social posts with a listed $5 plan and an AI writing assistant"
+      ],
+      "notIdealFor": [
+        "A team that needs many channels on the one-channel Essentials price"
+      ],
+      "strength": "Buffer lists Essentials at $5 per month for one channel, a 14-day trial, and an AI assistant for content.",
+      "weakness": "The $5 Essentials price is for one channel, and the yearly option is $60 billed yearly.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://buffer.com/pricing",
+        "https://buffer.com/ai-assistant"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://buffer.com/"
+      },
+      "useCaseFit": {
+        "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content."
+      }
+    },
+    {
       "affiliateUrl": null,
       "categories": [
         "creative-media"
@@ -601,6 +1072,74 @@
       }
     },
     {
+      "id": "charlotte-ai",
+      "slug": "charlotte-ai",
+      "name": "Charlotte AI",
+      "websiteUrl": "https://www.crowdstrike.com/platform/charlotte-ai/",
+      "affiliateUrl": null,
+      "shortDescription": "CrowdStrike's agentic analyst for cybersecurity. No public price was listed.",
+      "longDescription": "CrowdStrike's page is titled Charlotte AI: Agentic Analyst for Cybersecurity, and the page says Charlotte AI accelerates work with autonomous intelligence for the security stack. We do not repeat outcome claims. The fetch did not list a price. We did not start a trial.",
+      "categories": [
+        "security"
+      ],
+      "useCaseTags": [
+        "security-ops"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "CrowdStrike titles the page Charlotte AI: Agentic Analyst for Cybersecurity. No price was in the fetch.",
+      "pricingUrl": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+      "docsUrl": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Security teams already in the CrowdStrike platform who want its analyst assistant"
+      ],
+      "notIdealFor": [
+        "A standalone inbox tool with a public monthly price"
+      ],
+      "strength": "CrowdStrike titles Charlotte AI an agentic analyst for cybersecurity on its official platform page.",
+      "weakness": "The fetched page did not list a public price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.crowdstrike.com/en-us/platform/charlotte-ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/"
+      },
+      "useCaseFit": {
+        "security-ops": "Agentic security analyst described on CrowdStrike's Charlotte AI page."
+      }
+    },
+    {
       "affiliateUrl": null,
       "platforms": [
         "web"
@@ -648,7 +1187,7 @@
       "startingPrice": 8,
       "freeTrial": null,
       "bestFor": [
-        "Researching, comparing, and drafting when no specialist tool matches"
+        "Researching, comparing, and drafting in a general chat"
       ],
       "notIdealFor": [
         "A job that needs parcel records, a brokerage link, or a video timeline"
@@ -742,6 +1281,74 @@
       "generalPurpose": true,
       "assistantName": "Claude",
       "assistantKind": "draft"
+    },
+    {
+      "id": "clay",
+      "slug": "clay",
+      "name": "Clay",
+      "websiteUrl": "https://www.clay.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Sales data workspace with a marketplace of 200+ providers and a free trial.",
+      "longDescription": "Clay's pricing page describes centralizing data sources, buying data from 200+ providers, and tracking intent signals, and it offers a free trial. The fetched text did not include a dollar price or a trial length. We did not start a trial.",
+      "categories": [
+        "sales"
+      ],
+      "useCaseTags": [
+        "sales-outreach"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "usage"
+      ],
+      "pricingNotes": "The pricing page describes a data marketplace of 200+ providers and a free trial. No dollar amount or trial length was in the fetch.",
+      "pricingUrl": "https://www.clay.com/pricing",
+      "docsUrl": "https://www.clay.com/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Building lead lists from many data providers in one table"
+      ],
+      "notIdealFor": [
+        "Someone who needs a published seat price before a trial"
+      ],
+      "strength": "Clay describes a data marketplace of more than 200 providers and offers a free trial on the pricing page.",
+      "weakness": "The fetched pricing text did not state a dollar price or how many days the trial lasts.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.clay.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.clay.com/"
+      },
+      "useCaseFit": {
+        "sales-outreach": "Pulls sales data from a marketplace of more than 200 providers, with a free trial."
+      }
     },
     {
       "affiliateUrl": null,
@@ -1044,6 +1651,74 @@
       }
     },
     {
+      "id": "copy-ai",
+      "slug": "copy-ai",
+      "name": "Copy.ai",
+      "websiteUrl": "https://www.copy.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Workflows for marketing content and go-to-market writing.",
+      "longDescription": "Copy.ai's prices page describes workflows, including content creation and account-based marketing, plus sales prospecting workflows. The fetched text did not include a dollar price. We did not sign up.",
+      "categories": [
+        "content"
+      ],
+      "useCaseTags": [
+        "create-content"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "contact"
+      ],
+      "pricingNotes": "The prices page describes workflows for content creation and marketing. No dollar amount was in the fetched text.",
+      "pricingUrl": "https://www.copy.ai/prices",
+      "docsUrl": "https://www.copy.ai/prices",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Drafting marketing content inside a workflow tool"
+      ],
+      "notIdealFor": [
+        "A buyer who needs a confirmed seat price"
+      ],
+      "strength": "The Copy AI prices page describes workflows for content creation and other go-to-market writing.",
+      "weakness": "That fetch did not include a dollar price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.copy.ai/prices"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.copy.ai/"
+      },
+      "useCaseFit": {
+        "create-content": "Describes content-creation workflows for marketing teams."
+      }
+    },
+    {
       "id": "crewai",
       "slug": "crewai",
       "name": "CrewAI",
@@ -1205,6 +1880,277 @@
       }
     },
     {
+      "id": "daydream",
+      "slug": "daydream",
+      "name": "Daydream",
+      "websiteUrl": "https://daydream.ing/",
+      "affiliateUrl": null,
+      "shortDescription": "AI fashion agent to chat and shop across 10,000+ stores.",
+      "longDescription": "Daydream's homepage says it is a personal AI fashion agent, that you chat to shop, and that it covers 10,000+ stores. The fetched text did not list a price. We did not create an account.",
+      "categories": [
+        "shopping"
+      ],
+      "useCaseTags": [
+        "shop-products"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact"
+      ],
+      "pricingNotes": "The site says it is a personal AI fashion agent for chatting to shop across 10,000+ stores. No price was in the fetch.",
+      "pricingUrl": "https://daydream.ing/",
+      "docsUrl": "https://daydream.ing/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Chatting to find fashion products across many stores"
+      ],
+      "notIdealFor": [
+        "General grocery or electronics shopping"
+      ],
+      "strength": "Daydream describes a personal AI fashion agent for chatting to shop across more than 10,000 stores.",
+      "weakness": "The fetched page did not list a price, and the product is fashion-specific.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://daydream.ing/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://daydream.ing/"
+      },
+      "useCaseFit": {
+        "shop-products": "Chat shopping agent covering more than 10,000 fashion stores."
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": "Starter is $0 and does not require a credit card. Paid plans include a 14-day trial.",
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T12:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Pricing page checked on October 19, 2026. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "pricingCheckedAt": "2026-10-19",
+      "id": "dealcheck",
+      "slug": "dealcheck",
+      "name": "DealCheck",
+      "websiteUrl": "https://dealcheck.io/",
+      "shortDescription": "Deal calculator for rentals, flips, and commercial properties, with a free Starter plan.",
+      "longDescription": "DealCheck's pricing page, read October 19, 2026, lists Starter at $0, Plus at $10 per month, and Pro at $20 per month. Paid plans include a 14-day trial. The same page describes a rental cash flow calculator, a house flipping calculator, a multi-family and commercial calculator, and side-by-side property comparison. The plan bullets are repeated on every tier, so this listing does not claim which of those calculators are limited to Plus or Pro. The page does not call the product an AI agent.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "rank-property-deals"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Starter $0. Plus $10 per month. Pro $20 per month. Paid plans include a 14-day trial.",
+      "pricingUrl": "https://dealcheck.io/pricing/",
+      "docsUrl": "https://help.dealcheck.io/en/articles/4471054-how-much-does-dealcheck-cost-can-i-try-it-for-free",
+      "freeTier": true,
+      "startingPrice": 0,
+      "freeTrial": "14 days",
+      "bestFor": [
+        "Comparing rental cash flow, flip profit, and commercial property numbers side by side"
+      ],
+      "notIdealFor": [
+        "Someone who needs the product to be described as an AI agent on the official page"
+      ],
+      "strength": "The pricing page lists a free Starter plan, Plus at $10 per month, and Pro at $20 per month, with a rental, flip, and commercial calculator.",
+      "weakness": "The pricing page repeats the same feature bullets on every plan, so this listing does not say which calculator is free.",
+      "sources": [
+        "https://dealcheck.io/pricing/",
+        "https://help.dealcheck.io/en/articles/4471054-how-much-does-dealcheck-cost-can-i-try-it-for-free"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://dealcheck.io/pricing/"
+      },
+      "useCaseFit": {
+        "rank-property-deals": "Runs rental cash flow, house flipping, and commercial calculators and compares properties side by side."
+      }
+    },
+    {
+      "id": "dealmachine",
+      "slug": "dealmachine",
+      "name": "DealMachine",
+      "websiteUrl": "https://www.dealmachine.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Owner data and a driving app for property outreach. Basic is $99 per seat per month.",
+      "longDescription": "DealMachine lists nationwide property and owner data, saved searches, and a Driving for Dollars app. On October 19, 2026 the pricing page listed Basic at $99 per seat per month with 10,000 data credits, and Pro at $149 per seat per month. Postcards are priced per piece. We did not create an account.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "find-off-market"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Basic is $99 per seat per month. Pro is $149 per seat per month. Mail is priced per postcard.",
+      "pricingUrl": "https://www.dealmachine.com/pricing",
+      "docsUrl": "https://www.dealmachine.com/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 99,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Pulling owner records and tagging properties while driving"
+      ],
+      "notIdealFor": [
+        "Someone who wants postcards included in the seat price"
+      ],
+      "strength": "Basic is $99 per seat per month and includes nationwide owner data plus the Driving for Dollars app.",
+      "weakness": "Postcards are pay as you go, and the listed price is per seat rather than one flat workspace fee.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T12:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.dealmachine.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.dealmachine.com/pricing"
+      },
+      "useCaseFit": {
+        "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month."
+      }
+    },
+    {
+      "id": "decagon",
+      "slug": "decagon",
+      "name": "Decagon",
+      "websiteUrl": "https://decagon.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "AI concierge for chat, email, and voice customer conversations.",
+      "longDescription": "Decagon's site describes an AI concierge with chat, email, and voice channels, plus workflows for agents. The fetched text did not list a public price. We did not request a demo.",
+      "categories": [
+        "customer-support"
+      ],
+      "useCaseTags": [
+        "customer-support"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "Product page describes chat, email, and voice concierge agents. No public dollar price was in the fetch.",
+      "pricingUrl": "https://decagon.ai/",
+      "docsUrl": "https://decagon.ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Support teams that want chat, email, and voice in one agent"
+      ],
+      "notIdealFor": [
+        "A buyer who needs a self-serve monthly price"
+      ],
+      "strength": "Decagon describes an AI concierge that handles chat, email, and voice customer conversations.",
+      "weakness": "The fetched site did not publish a dollar price, so the plan cost is not listed here.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://decagon.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://decagon.ai/"
+      },
+      "useCaseFit": {
+        "customer-support": "Describes chat, email, and voice agents for customer conversations."
+      }
+    },
+    {
       "id": "descript",
       "slug": "descript",
       "name": "Descript",
@@ -1275,6 +2221,74 @@
       },
       "useCaseFit": {
         "game-creative": "Edits video by editing the transcript, with 60 free media minutes a month."
+      }
+    },
+    {
+      "id": "dext",
+      "slug": "dext",
+      "name": "Dext",
+      "websiteUrl": "https://dext.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Receipt and invoice capture for bookkeeping and expenses.",
+      "longDescription": "Dext's site describes bookkeeping software with receipt and invoice capture and business expense management, and it says AI is part of the product. The fetched text did not include a dollar price. We did not start a trial.",
+      "categories": [
+        "finance-ops"
+      ],
+      "useCaseTags": [
+        "finance-ops"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "contact"
+      ],
+      "pricingNotes": "The site lists receipt and invoice capture and business expense management. No dollar price was in the fetch.",
+      "pricingUrl": "https://dext.com/",
+      "docsUrl": "https://dext.com/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Capturing receipts and invoices for bookkeeping"
+      ],
+      "notIdealFor": [
+        "Someone who needs a listed monthly price from this check"
+      ],
+      "strength": "Dext lists receipt and invoice capture and business expense management for bookkeeping.",
+      "weakness": "The fetched page did not show a dollar price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://dext.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://dext.com/"
+      },
+      "useCaseFit": {
+        "finance-ops": "Captures receipts and invoices and manages business expenses."
       }
     },
     {
@@ -1357,6 +2371,141 @@
       },
       "useCaseFit": {
         "multi-agent-workflows": "Visual builder for agent workflows, with a self-hosted community edition."
+      }
+    },
+    {
+      "id": "dropzone",
+      "slug": "dropzone",
+      "name": "Dropzone AI",
+      "websiteUrl": "https://www.dropzone.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "AI SOC analyst for alert triage and threat hunting.",
+      "longDescription": "Dropzone's site describes an AI SOC analyst that investigates alerts end to end and shows its reasoning, plus an AI threat hunter. The fetched text did not list a price. We did not request a demo.",
+      "categories": [
+        "security"
+      ],
+      "useCaseTags": [
+        "security-ops"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "The site describes an AI SOC analyst that investigates alerts and a threat hunter. No price was in the fetch.",
+      "pricingUrl": "https://www.dropzone.ai/",
+      "docsUrl": "https://www.dropzone.ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A security team that wants alert investigations with the reasoning shown"
+      ],
+      "notIdealFor": [
+        "Someone who needs a public monthly price"
+      ],
+      "strength": "Dropzone describes an AI SOC analyst that investigates alerts end to end and shows its reasoning.",
+      "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.dropzone.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.dropzone.ai/"
+      },
+      "useCaseFit": {
+        "security-ops": "SOC analyst agent for alert triage and threat hunting."
+      }
+    },
+    {
+      "id": "duolingo-max",
+      "slug": "duolingo-max",
+      "name": "Duolingo Max",
+      "websiteUrl": "https://blog.duolingo.com/duolingo-max/",
+      "affiliateUrl": null,
+      "shortDescription": "Language practice. A 2023 Duolingo post introduces Max with GPT-4.",
+      "longDescription": "Duolingo's official post dated March 14, 2023 introduces Duolingo Max as a learning experience powered by GPT-4. This October 19, 2026 check did not find a current price on that post. We did not subscribe.",
+      "categories": [
+        "learning"
+      ],
+      "useCaseTags": [
+        "tutoring"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Duolingo's March 14, 2023 post introduces Max as a GPT-4 learning experience. This check did not find a current price.",
+      "pricingUrl": "https://blog.duolingo.com/duolingo-max/",
+      "docsUrl": "https://blog.duolingo.com/duolingo-max/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Language practice in the Max experience Duolingo introduced in that post"
+      ],
+      "notIdealFor": [
+        "Someone who needs a 2026 price confirmed from this check"
+      ],
+      "strength": "Duolingo's March 14, 2023 post introduces Max as a learning experience powered by GPT-4.",
+      "weakness": "That post does not show a current price, and it is the source for this listing.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://blog.duolingo.com/duolingo-max/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://blog.duolingo.com/duolingo-max/"
+      },
+      "useCaseFit": {
+        "tutoring": "Language-learning experience Duolingo introduced as GPT-4 powered Max."
       }
     },
     {
@@ -1497,6 +2646,74 @@
       },
       "useCaseFit": {
         "game-creative": "Generates voice and audio, which is a different job from cutting a video."
+      }
+    },
+    {
+      "id": "elicit",
+      "slug": "elicit",
+      "name": "Elicit",
+      "websiteUrl": "https://elicit.com/",
+      "affiliateUrl": null,
+      "shortDescription": "AI research assistant. Plus is $11 per user per month billed annually.",
+      "longDescription": "Elicit's pricing page calls it the AI research assistant. Plus is listed at $11 per user per month billed as $132 annually, with export formats. A try-for-free control is on the page, without a stated trial length. We did not sign up.",
+      "categories": [
+        "research"
+      ],
+      "useCaseTags": [
+        "deep-research"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "The page titles Elicit the AI research assistant. Plus is $11 per user per month billed as $132 annually. startingPrice is empty because that price is annual billing.",
+      "pricingUrl": "https://elicit.com/pricing",
+      "docsUrl": "https://elicit.com/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Literature review in a research assistant with a published annual price"
+      ],
+      "notIdealFor": [
+        "Someone who wants a confirmed month-to-month rate"
+      ],
+      "strength": "Elicit calls itself the AI research assistant, and Plus is $11 per user per month billed as $132 annually.",
+      "weakness": "The $11 figure is annual billing, and the page did not state how long try-for-free lasts.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://elicit.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://elicit.com/"
+      },
+      "useCaseFit": {
+        "deep-research": "AI research assistant with Plus at $11 per user per month when billed annually."
       }
     },
     {
@@ -1663,6 +2880,276 @@
       }
     },
     {
+      "id": "flyfin",
+      "slug": "flyfin",
+      "name": "FlyFin",
+      "websiteUrl": "https://flyfin.tax/",
+      "affiliateUrl": null,
+      "shortDescription": "AI and CPA service that finds deductions and files self-employed taxes.",
+      "longDescription": "FlyFin's homepage describes an AI and CPA tax filing service for freelancers. It says the AI finds deductions and CPAs file the return. The fetched text did not include a plan price. We did not sign up.",
+      "categories": [
+        "personal-finance"
+      ],
+      "useCaseTags": [
+        "do-taxes"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Homepage describes an AI and CPA filing service. No plan price was in the fetched text.",
+      "pricingUrl": "https://flyfin.tax/",
+      "docsUrl": "https://flyfin.tax/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Self-employed filers who want deduction sorting and a CPA to file"
+      ],
+      "notIdealFor": [
+        "Someone comparing plans by a published monthly price"
+      ],
+      "strength": "FlyFin's homepage describes an AI and CPA service that finds deductions and has CPAs file self-employed taxes.",
+      "weakness": "The homepage text we fetched did not list a plan price, so this listing leaves the monthly price blank.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://flyfin.tax/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://flyfin.tax/"
+      },
+      "useCaseFit": {
+        "do-taxes": "Describes an AI and CPA flow that finds deductions and files self-employed taxes."
+      }
+    },
+    {
+      "id": "freshservice",
+      "slug": "freshservice",
+      "name": "Freshservice",
+      "websiteUrl": "https://www.freshworks.com/freshservice/",
+      "affiliateUrl": null,
+      "shortDescription": "IT service desk. Starter is $19 per agent per month billed annually.",
+      "longDescription": "Freshservice's pricing page is for IT teams and lists Starter at $19 per agent per month when billed annually. We did not start a trial, and we do not show that figure as a month-to-month price.",
+      "categories": [
+        "it-support"
+      ],
+      "useCaseTags": [
+        "it-helpdesk"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Starter is listed at $19 per agent per month billed annually for IT teams. startingPrice is empty because it is billed annually.",
+      "pricingUrl": "https://www.freshworks.com/freshservice/pricing/",
+      "docsUrl": "https://www.freshworks.com/freshservice/pricing/",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "An IT help desk with a published annual per-agent price"
+      ],
+      "notIdealFor": [
+        "A team that wants a confirmed month-to-month rate"
+      ],
+      "strength": "Freshservice lists an IT Starter plan at $19 per agent per month when billed annually.",
+      "weakness": "That price is billed annually, so this listing does not treat it as month-to-month.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.freshworks.com/freshservice/pricing/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.freshworks.com/freshservice/"
+      },
+      "useCaseFit": {
+        "it-helpdesk": "IT service desk with Starter at $19 per agent per month billed annually."
+      }
+    },
+    {
+      "id": "fyxer",
+      "slug": "fyxer",
+      "name": "Fyxer",
+      "websiteUrl": "https://www.fyxer.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Inbox organizer and email draft writer with a 14-day free trial.",
+      "longDescription": "Fyxer's site lists an inbox organizer, an email draft writer, a meeting notetaker, and a scheduling assistant. It says you can start for free and offers a 14-day free trial with a work email. The fetched text did not include a dollar price.",
+      "categories": [
+        "productivity"
+      ],
+      "useCaseTags": [
+        "manage-inbox"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "The site lists an inbox organizer and email draft writer, a start-for-free option, and a 14-day trial. No dollar price was in the fetch.",
+      "pricingUrl": "https://www.fyxer.com/",
+      "docsUrl": "https://www.fyxer.com/",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": "14 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Drafting replies and organizing an inbox from the tools Fyxer lists"
+      ],
+      "notIdealFor": [
+        "Someone comparing plans by a published monthly price"
+      ],
+      "strength": "Fyxer lists an inbox organizer and an email draft writer, with a 14-day free trial and a start-for-free option.",
+      "weakness": "The fetched page did not show a dollar price for the paid plan.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.fyxer.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.fyxer.com/"
+      },
+      "useCaseFit": {
+        "manage-inbox": "Organizes an inbox and drafts email, with a 14-day trial on the site."
+      }
+    },
+    {
+      "id": "gem",
+      "slug": "gem",
+      "name": "Gem",
+      "websiteUrl": "https://www.gem.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Recruiting platform to source, review, hire, and report with AI.",
+      "longDescription": "Gem's homepage says it gives talent teams AI and data to source, review, hire, and report in one place. The fetched text did not list a price. We did not book a demo.",
+      "categories": [
+        "hiring"
+      ],
+      "useCaseTags": [
+        "hire-candidates"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "The homepage says Gem uses AI to source, review, hire, and report. No price was in the fetch.",
+      "pricingUrl": "https://www.gem.com/",
+      "docsUrl": "https://www.gem.com/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Sourcing and reporting on candidates in one recruiting workspace"
+      ],
+      "notIdealFor": [
+        "A buyer who needs a public seat price"
+      ],
+      "strength": "Gem says teams can source, review, hire, and report with its AI and data.",
+      "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.gem.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.gem.com/"
+      },
+      "useCaseFit": {
+        "hire-candidates": "Recruiting workspace for sourcing, reviewing, and reporting on candidates."
+      }
+    },
+    {
       "affiliateUrl": null,
       "platforms": [
         "web"
@@ -1728,6 +3215,141 @@
       "generalPurpose": true,
       "assistantName": "Gemini",
       "assistantKind": "draft"
+    },
+    {
+      "id": "github-copilot",
+      "slug": "github-copilot",
+      "name": "GitHub Copilot",
+      "websiteUrl": "https://github.com/features/copilot",
+      "affiliateUrl": null,
+      "shortDescription": "GitHub's AI coding agent for writing code and opening pull requests.",
+      "longDescription": "GitHub's Copilot page calls it your AI coding agent, says it writes code with AI, and says agents can be directed from issue to merge. The text we fetched did not include a dollar price. We did not subscribe.",
+      "categories": [
+        "coding-agents"
+      ],
+      "useCaseTags": [
+        "coding-agents"
+      ],
+      "toolTypes": [
+        "copilot"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "GitHub's page calls Copilot an AI coding agent that writes code and directs agents from issue to merge. No dollar price was in the text we fetched.",
+      "pricingUrl": "https://github.com/features/copilot",
+      "docsUrl": "https://github.com/features/copilot",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Writing and reviewing code inside GitHub"
+      ],
+      "notIdealFor": [
+        "Someone who needs a confirmed monthly price from this check"
+      ],
+      "strength": "GitHub calls Copilot an AI coding agent that writes code and can take work from an issue toward a merge.",
+      "weakness": "The fetched page did not include a dollar price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://github.com/features/copilot"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://github.com/features/copilot"
+      },
+      "useCaseFit": {
+        "coding-agents": "AI coding agent that GitHub says writes code and moves work toward a merge."
+      }
+    },
+    {
+      "id": "glean",
+      "slug": "glean",
+      "name": "Glean",
+      "websiteUrl": "https://www.glean.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Enterprise search across company context, with 250+ connectors.",
+      "longDescription": "Glean's site describes enterprise search, grounding AI in company context, and more than 250 connectors, plus agents. The fetched text did not list a price. We did not request a demo.",
+      "categories": [
+        "knowledge"
+      ],
+      "useCaseTags": [
+        "knowledge-qa"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "The site describes enterprise search, company context, and more than 250 connectors. No price was in the fetch.",
+      "pricingUrl": "https://www.glean.com/",
+      "docsUrl": "https://www.glean.com/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Asking questions across a company's connected documents"
+      ],
+      "notIdealFor": [
+        "A personal notes app with a public free plan"
+      ],
+      "strength": "Glean describes enterprise search over company context and says it offers more than 250 connectors.",
+      "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.glean.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.glean.com/"
+      },
+      "useCaseFit": {
+        "knowledge-qa": "Enterprise search with company context and more than 250 connectors."
+      }
     },
     {
       "id": "granola",
@@ -1798,6 +3420,210 @@
       },
       "useCaseFit": {
         "meetings-knowledge": "Takes meeting notes alongside your calls, and the free plan covers that."
+      }
+    },
+    {
+      "id": "guidegeek",
+      "slug": "guidegeek",
+      "name": "GuideGeek",
+      "websiteUrl": "https://guidegeek.com/",
+      "affiliateUrl": null,
+      "shortDescription": "AI trip planner for flights, stays, restaurants, and experiences.",
+      "longDescription": "GuideGeek's homepage says you can plan trips in minutes with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI. The fetched text did not list a price. We did not start a trip.",
+      "categories": [
+        "travel"
+      ],
+      "useCaseTags": [
+        "plan-travel"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact"
+      ],
+      "pricingNotes": "The homepage says it plans trips with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI. No price was in the fetch.",
+      "pricingUrl": "https://guidegeek.com/",
+      "docsUrl": "https://guidegeek.com/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Drafting a trip that needs flights, stays, and activities in one chat"
+      ],
+      "notIdealFor": [
+        "Someone who needs a published subscription price"
+      ],
+      "strength": "GuideGeek says it plans trips with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI.",
+      "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://guidegeek.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://guidegeek.com/"
+      },
+      "useCaseFit": {
+        "plan-travel": "Plans trips and says it covers flights, stays, restaurants, and experiences."
+      }
+    },
+    {
+      "id": "guru",
+      "slug": "guru",
+      "name": "Guru",
+      "websiteUrl": "https://www.getguru.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Knowledge base whose agents find and improve company information.",
+      "longDescription": "Guru's pricing page says knowledge agents now improve your information, not just find it, and it describes knowledge management workflows. The fetched text did not include a dollar price. We did not start a workspace.",
+      "categories": [
+        "knowledge"
+      ],
+      "useCaseTags": [
+        "knowledge-qa"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "contact"
+      ],
+      "pricingNotes": "The pricing page describes knowledge agents that improve information, not only find it. No dollar amount was in the fetch.",
+      "pricingUrl": "https://www.getguru.com/pricing",
+      "docsUrl": "https://www.getguru.com/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A company wiki with agents that answer from verified cards"
+      ],
+      "notIdealFor": [
+        "Someone who needs a listed per-user price from this check"
+      ],
+      "strength": "Guru's pricing page says its knowledge agents improve company information, not only find it.",
+      "weakness": "The fetched pricing text did not include a dollar amount.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.getguru.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.getguru.com/"
+      },
+      "useCaseFit": {
+        "knowledge-qa": "Company knowledge base with agents that find and improve information."
+      }
+    },
+    {
+      "id": "hex",
+      "slug": "hex",
+      "name": "Hex",
+      "websiteUrl": "https://hex.tech/",
+      "affiliateUrl": null,
+      "shortDescription": "Collaborative data workspace. The page lists $36 per Editor each month.",
+      "longDescription": "Hex's pricing page lists $36 per Editor per month and says that price includes the Hex agent on top of Community. The homepage also describes AI analytics and dashboards. We did not start a workspace.",
+      "categories": [
+        "data-analysis"
+      ],
+      "useCaseTags": [
+        "analyze-data"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "freemium"
+      ],
+      "pricingNotes": "The pricing page lists $36 per Editor per month and a Hex agent on top of a Community plan.",
+      "pricingUrl": "https://hex.tech/pricing/",
+      "docsUrl": "https://hex.tech/pricing/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": 36,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A team notebook that includes a Hex agent on the listed editor price"
+      ],
+      "notIdealFor": [
+        "A solo user who wants the cheapest consumer chat"
+      ],
+      "strength": "Hex lists $36 per Editor per month and includes a Hex agent above the Community plan.",
+      "weakness": "The price is per editor, and this check did not confirm that Community itself is free.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://hex.tech/pricing/",
+        "https://hex.tech/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://hex.tech/"
+      },
+      "useCaseFit": {
+        "analyze-data": "Data workspace with a Hex agent, listed at $36 per editor per month."
       }
     },
     {
@@ -1873,6 +3699,210 @@
       }
     },
     {
+      "id": "hootsuite",
+      "slug": "hootsuite",
+      "name": "Hootsuite",
+      "websiteUrl": "https://www.hootsuite.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Social planning and publishing. The plans page says it is connected by AI.",
+      "longDescription": "Hootsuite's plans page describes content creation, planning, and publishing for social, and says the suite is connected by AI. The fetched text did not include a dollar price. We did not start a trial.",
+      "categories": [
+        "content"
+      ],
+      "useCaseTags": [
+        "social-media"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "contact"
+      ],
+      "pricingNotes": "The plans page describes social content creation, planning, and publishing, and says the suite is connected by AI. No dollar amount was in the fetched text.",
+      "pricingUrl": "https://www.hootsuite.com/plans",
+      "docsUrl": "https://www.hootsuite.com/plans",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Planning and publishing social content in a suite that mentions AI"
+      ],
+      "notIdealFor": [
+        "Someone who needs a listed monthly price from this check"
+      ],
+      "strength": "Hootsuite's plans page describes social content creation, planning, and publishing, and says the suite is connected by AI.",
+      "weakness": "The fetched plans text did not include a dollar price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.hootsuite.com/plans"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.hootsuite.com/"
+      },
+      "useCaseFit": {
+        "social-media": "Plans and publishes social content, and the plans page says the suite is connected by AI."
+      }
+    },
+    {
+      "id": "instantly",
+      "slug": "instantly",
+      "name": "Instantly",
+      "websiteUrl": "https://instantly.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Cold email outreach. The Growth plan is listed at $47 per month.",
+      "longDescription": "Instantly's pricing page lists outreach plans, including a Growth plan at $47 per month with unlimited email accounts, and it describes an AI Sales Agent. A higher starter bundle was also listed. We did not create an account.",
+      "categories": [
+        "sales"
+      ],
+      "useCaseTags": [
+        "sales-outreach"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Pricing page lists an Outreach Growth plan at $47 per month and an AI Sales Agent.",
+      "pricingUrl": "https://instantly.ai/pricing",
+      "docsUrl": "https://instantly.ai/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 47,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Sending sales email sequences from more than one inbox"
+      ],
+      "notIdealFor": [
+        "A team that only needs a CRM and not outbound email"
+      ],
+      "strength": "Instantly lists an Outreach Growth plan at $47 per month and describes an AI Sales Agent.",
+      "weakness": "Higher bundles on the same page cost more, and the fetched text did not promise a free ongoing plan.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://instantly.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://instantly.ai/"
+      },
+      "useCaseFit": {
+        "sales-outreach": "Lists sales email outreach from $47 per month and an AI sales agent."
+      }
+    },
+    {
+      "id": "intercom-fin",
+      "slug": "intercom-fin",
+      "name": "Intercom Fin",
+      "websiteUrl": "https://www.intercom.com/fin",
+      "affiliateUrl": null,
+      "shortDescription": "Support agent priced from $0.99 per outcome and $19 per seat each month.",
+      "longDescription": "Intercom's pricing page lists Fin AI Agent for customer support, from $0.99 per outcome and $19 per seat per month on the starter plan, and a higher seat price above that. It says to start a free trial but does not state the trial length. We did not sign up.",
+      "categories": [
+        "customer-support"
+      ],
+      "useCaseTags": [
+        "customer-support"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "usage",
+        "subscription"
+      ],
+      "pricingNotes": "Pricing page: from $0.99 per Fin outcome and $19 per seat per month, with a free trial that has no stated length.",
+      "pricingUrl": "https://www.intercom.com/pricing",
+      "docsUrl": "https://www.intercom.com/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 19,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A support inbox that wants an AI agent on top of Intercom seats"
+      ],
+      "notIdealFor": [
+        "A team that wants one flat price with no per-outcome fee"
+      ],
+      "strength": "Intercom lists Fin from $0.99 per outcome and a seat price of $19 per month on the starter plan.",
+      "weakness": "The same page adds a per-outcome fee on top of the seat price, and it does not state how long the free trial lasts.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.intercom.com/pricing",
+        "https://www.intercom.com/fin"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.intercom.com/fin"
+      },
+      "useCaseFit": {
+        "customer-support": "Sells a customer-support AI agent at $19 per seat per month plus $0.99 per outcome."
+      }
+    },
+    {
       "id": "inworld",
       "slug": "inworld",
       "name": "Inworld",
@@ -1944,6 +3974,143 @@
       }
     },
     {
+      "id": "jasper",
+      "slug": "jasper",
+      "name": "Jasper",
+      "websiteUrl": "https://www.jasper.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Marketing workspace with agents for content. A free trial is offered.",
+      "longDescription": "Jasper's site describes a platform for marketers with agents, a canvas, and AI optimization for search. The pricing navigation offers a free trial. The text we fetched did not include a dollar price. We did not start a trial.",
+      "categories": [
+        "content"
+      ],
+      "useCaseTags": [
+        "create-content"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "contact"
+      ],
+      "pricingNotes": "The product page describes agents and marketer tools, including a free trial link. No dollar price was in the fetched text.",
+      "pricingUrl": "https://www.jasper.ai/pricing",
+      "docsUrl": "https://www.jasper.ai/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Marketing teams drafting content in a dedicated workspace"
+      ],
+      "notIdealFor": [
+        "Someone who needs a listed monthly price from this check"
+      ],
+      "strength": "Jasper describes agents and a marketer workspace for content, and the site offers a free trial.",
+      "weakness": "The fetched pages did not include a dollar price or a trial length.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.jasper.ai/",
+        "https://www.jasper.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.jasper.ai/"
+      },
+      "useCaseFit": {
+        "create-content": "Marketing content workspace with agents and a free-trial offer."
+      }
+    },
+    {
+      "id": "julius",
+      "slug": "julius",
+      "name": "Julius",
+      "websiteUrl": "https://julius.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Data analysis chat. Plus is $20 per month and a Free plan is listed.",
+      "longDescription": "Julius's pricing page lists a Free plan and Plus for everyday analysis at $20 per month, or $16 per month when billed annually, with a monthly credit amount on Plus. We did not create an account.",
+      "categories": [
+        "data-analysis"
+      ],
+      "useCaseTags": [
+        "analyze-data"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Plus is $20 per month, or $16 per month on the annual price. A Free plan is listed.",
+      "pricingUrl": "https://julius.ai/pricing",
+      "docsUrl": "https://julius.ai/pricing",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": 20,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Asking questions about a spreadsheet in a chat priced on the site"
+      ],
+      "notIdealFor": [
+        "A team that needs a governed BI deployment"
+      ],
+      "strength": "Julius lists a Free plan and a Plus plan at $20 per month for everyday analysis.",
+      "weakness": "Plus is credit-capped, and the $16 figure is the annual per-month price rather than the monthly plan.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://julius.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://julius.ai/"
+      },
+      "useCaseFit": {
+        "analyze-data": "Chat for data analysis, with Plus at $20 per month and a Free plan listed."
+      }
+    },
+    {
       "affiliateUrl": null,
       "categories": [
         "creative-media"
@@ -2011,6 +4178,142 @@
       },
       "useCaseFit": {
         "game-creative": "Browser editor for trimming, captions, and resizing video into social clips."
+      }
+    },
+    {
+      "id": "keeper",
+      "slug": "keeper",
+      "name": "Keeper",
+      "websiteUrl": "https://www.keepertax.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Tracks expenses and files federal and state taxes. The homepage says you can get started free.",
+      "longDescription": "Keeper's pricing page lists bookkeeping, federal and state filing, quarterly tax payments, and a tax pro consult. The homepage says you can get started free. We did not see a single monthly plan price in the text we fetched, and we did not create an account.",
+      "categories": [
+        "personal-finance"
+      ],
+      "useCaseTags": [
+        "do-taxes"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Homepage says get started free. Pricing page lists filing and quarterly taxes, not one monthly dollar price.",
+      "pricingUrl": "https://www.keepertax.com/pricing",
+      "docsUrl": "https://www.keepertax.com/pricing",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Filing self-employed taxes with expense tracking and quarterly payments"
+      ],
+      "notIdealFor": [
+        "Someone who needs a published monthly price before signing up"
+      ],
+      "strength": "Keeper's pricing page lists federal and state filing plus quarterly tax payments, and the homepage says you can get started free.",
+      "weakness": "The pages we fetched did not state one monthly dollar price, so this listing does not invent one.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.keepertax.com/",
+        "https://www.keepertax.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.keepertax.com/"
+      },
+      "useCaseFit": {
+        "do-taxes": "Lists federal and state tax filing, quarterly payments, and a free start on the homepage."
+      }
+    },
+    {
+      "id": "khanmigo",
+      "slug": "khanmigo",
+      "name": "Khanmigo",
+      "websiteUrl": "https://www.khanmigo.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Khan Academy tutor and teaching assistant. Teachers can sign up for free.",
+      "longDescription": "Khanmigo's site describes a teaching assistant and tutor for learners and parents, plus a writing coach, and it says teachers can sign up for free. The fetched text did not include a dollar price for learners. We did not create an account.",
+      "categories": [
+        "learning"
+      ],
+      "useCaseTags": [
+        "tutoring"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "The site calls Khanmigo a teaching assistant and tutor and says teachers can sign up for free. No dollar price was in the fetch.",
+      "pricingUrl": "https://www.khanmigo.ai/",
+      "docsUrl": "https://www.khanmigo.ai/",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Tutoring and teacher help inside Khan Academy's assistant"
+      ],
+      "notIdealFor": [
+        "Someone who needs a published learner price from this check"
+      ],
+      "strength": "Khanmigo describes a tutor and teaching assistant, and it says teachers can sign up for free.",
+      "weakness": "The fetched page did not list a dollar price for learners.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.khanmigo.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.khanmigo.ai/"
+      },
+      "useCaseFit": {
+        "tutoring": "Tutor and teaching assistant that offers teachers a free sign-up."
       }
     },
     {
@@ -2232,6 +4535,142 @@
       },
       "useCaseFit": {
         "multi-agent-workflows": "Open-source library for agents that call tools in code you write."
+      }
+    },
+    {
+      "id": "launch-control",
+      "slug": "launch-control",
+      "name": "Launch Control",
+      "websiteUrl": "https://launchcontrol.us/",
+      "affiliateUrl": null,
+      "shortDescription": "Texting for real estate owner lists. Skip tracing is listed at $0.13 on the pricing page.",
+      "longDescription": "Launch Control is a texting product for real estate investors. On October 19, 2026 the pricing page listed skip tracing at $0.13 and one plan as provider fees plus $22, with 12,500 monthly SMS. It did not show one all-in monthly price. We did not create an account.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "find-off-market"
+      ],
+      "toolTypes": [
+        "automation"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "usage"
+      ],
+      "pricingNotes": "One plan is listed as provider fees plus $22, with 12,500 monthly SMS. Skip tracing is listed at $0.13. No single all-in monthly price.",
+      "pricingUrl": "https://launchcontrol.us/pricing/",
+      "docsUrl": "https://launchcontrol.us/pricing/",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Sending texts to a list of property owners you already have"
+      ],
+      "notIdealFor": [
+        "Someone who wants one published price with provider fees included"
+      ],
+      "strength": "The pricing page lists skip tracing at $0.13 and a plan as provider fees plus $22 for 12,500 monthly texts.",
+      "weakness": "That $22 figure is not an all-in price, because the same page adds provider fees on top.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T12:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://launchcontrol.us/pricing/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://launchcontrol.us/pricing/"
+      },
+      "useCaseFit": {
+        "find-off-market": "Sends texts to owner lists, and the pricing page lists skip tracing at $0.13."
+      }
+    },
+    {
+      "id": "lindy",
+      "slug": "lindy",
+      "name": "Lindy",
+      "websiteUrl": "https://www.lindy.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Assistant for inbox and calendar jobs, with $50 in free credits.",
+      "longDescription": "Lindy's pricing page says you can start with $50 in free credits and lists jobs including inbox and calendar, scheduling, and lead outreach. It also lists credit packs from $29.99. We did not create an account, and we do not treat the credit pack as a flat monthly seat price.",
+      "categories": [
+        "productivity"
+      ],
+      "useCaseTags": [
+        "scheduling-assistant"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "usage",
+        "freemium"
+      ],
+      "pricingNotes": "The pricing page offers $50 in free credits and lists inbox and calendar among jobs. Credit packs are listed from $29.99, which is not a confirmed seat subscription.",
+      "pricingUrl": "https://www.lindy.ai/pricing",
+      "docsUrl": "https://www.lindy.ai/pricing",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Handing inbox and calendar chores to an assistant that bills in credits"
+      ],
+      "notIdealFor": [
+        "Someone who wants one flat seat price with credits included"
+      ],
+      "strength": "Lindy's pricing page offers $50 in free credits and lists inbox and calendar among the jobs it can take.",
+      "weakness": "Paid use is sold as credit packs, starting at $29.99 on that page, not as one flat seat subscription we could confirm.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.lindy.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.lindy.ai/"
+      },
+      "useCaseFit": {
+        "scheduling-assistant": "Lists inbox and calendar work and starts with $50 in free credits."
       }
     },
     {
@@ -2496,7 +4935,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-land"
+        "find-land",
+        "rank-property-deals"
       ],
       "toolTypes": [
         "other"
@@ -2526,7 +4966,8 @@
         "finalUrl": "https://www.mashvisor.com/pricing"
       },
       "useCaseFit": {
-        "find-land": "Compares rental comps on a property, and Lite is $49.99 per month billed annually."
+        "find-land": "Compares rental comps on a property, and Lite is $49.99 per month billed annually.",
+        "rank-property-deals": "Compares rental comps and income estimates on a property."
       }
     },
     {
@@ -2684,6 +5125,74 @@
       },
       "useCaseFit": {
         "game-creative": "Turns text or an image into a 3D asset, and the pricing page shows a $0 plan."
+      }
+    },
+    {
+      "id": "metaview",
+      "slug": "metaview",
+      "name": "Metaview",
+      "websiteUrl": "https://www.metaview.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Hiring agents for sourcing and interview notes. Free is $0 per user.",
+      "longDescription": "Metaview's pricing page lists a free plan at $0 per user per month, AI sourcing with the first 100 profiles free, and a notetaker. We did not create an account, and we did not pick a higher dollar figure from the page as the starting price because the free plan is the listed start.",
+      "categories": [
+        "hiring"
+      ],
+      "useCaseTags": [
+        "hire-candidates"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "A free plan is listed at $0 per user per month and includes AI sourcing with the first 100 profiles free. Other dollar amounts appeared but were not used as the starting paid price.",
+      "pricingUrl": "https://www.metaview.ai/pricing",
+      "docsUrl": "https://www.metaview.ai/pricing",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": 0,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Sourcing profiles and taking interview notes on a free plan"
+      ],
+      "notIdealFor": [
+        "A company that assumes the free plan covers unlimited sourcing"
+      ],
+      "strength": "Metaview lists a free plan at $0 per user per month and AI sourcing with the first 100 profiles free.",
+      "weakness": "The free sourcing offer stops at 100 profiles, and higher plans were not given a single public starting price here.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.metaview.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.metaview.ai/"
+      },
+      "useCaseFit": {
+        "hire-candidates": "Free hiring plan with AI sourcing for the first 100 profiles and a notetaker."
       }
     },
     {
@@ -2903,6 +5412,141 @@
       }
     },
     {
+      "id": "motion",
+      "slug": "motion",
+      "name": "Motion",
+      "websiteUrl": "https://www.usemotion.com/",
+      "affiliateUrl": null,
+      "shortDescription": "AI calendar and tasks. The pricing page lists $29 per seat each month.",
+      "longDescription": "Motion's pricing page includes plan data listing $29 per seat on the monthly price and names AI Calendar and Meetings, an AI task planner, and AI docs. We did not start a subscription.",
+      "categories": [
+        "productivity"
+      ],
+      "useCaseTags": [
+        "scheduling-assistant"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Pricing data on the page lists $29 per seat monthly and names AI Calendar and Meetings.",
+      "pricingUrl": "https://www.usemotion.com/pricing",
+      "docsUrl": "https://www.usemotion.com/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 29,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Auto-planning a calendar and task list in one app"
+      ],
+      "notIdealFor": [
+        "Someone who only wants a free calendar link"
+      ],
+      "strength": "Motion's pricing page lists $29 per seat each month and includes an AI calendar and meetings.",
+      "weakness": "That $29 figure is per seat on the monthly option, and the page also shows a lower annual per-seat figure.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.usemotion.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.usemotion.com/"
+      },
+      "useCaseFit": {
+        "scheduling-assistant": "Plans a calendar and tasks, with a listed price of $29 per seat each month."
+      }
+    },
+    {
+      "id": "moveworks",
+      "slug": "moveworks",
+      "name": "Moveworks",
+      "websiteUrl": "https://www.moveworks.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Employee AI for IT service management and self-service.",
+      "longDescription": "Moveworks' site describes ITSM automation, employee self-service, employee onboarding, and an AI agent marketplace, including ServiceNow workflows. The fetched text did not list a price. We did not request a demo.",
+      "categories": [
+        "it-support"
+      ],
+      "useCaseTags": [
+        "it-helpdesk"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "The site describes ITSM automation, employee self-service, and an AI agent marketplace. No price was in the fetch.",
+      "pricingUrl": "https://www.moveworks.com/",
+      "docsUrl": "https://www.moveworks.com/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Routing IT requests with an employee assistant"
+      ],
+      "notIdealFor": [
+        "A buyer who needs a public per-agent price"
+      ],
+      "strength": "Moveworks describes IT service-management automation, employee self-service, and an AI agent marketplace.",
+      "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.moveworks.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.moveworks.com/"
+      },
+      "useCaseFit": {
+        "it-helpdesk": "Employee assistant for IT service management and self-service requests."
+      }
+    },
+    {
       "id": "n8n",
       "slug": "n8n",
       "name": "n8n",
@@ -2996,7 +5640,8 @@
         "knowledge"
       ],
       "useCaseTags": [
-        "meetings-knowledge"
+        "meetings-knowledge",
+        "knowledge-qa"
       ],
       "toolTypes": [
         "other"
@@ -3053,7 +5698,8 @@
         "finalUrl": "https://www.notion.com/"
       },
       "useCaseFit": {
-        "meetings-knowledge": "Team workspace for docs and wikis, with a free plan that trials Notion AI."
+        "meetings-knowledge": "Team workspace for docs and wikis, with a free plan that trials Notion AI.",
+        "knowledge-qa": "The pricing page lists a trial of Notion AI and says you can capture and organize responses in the workspace."
       }
     },
     {
@@ -3199,6 +5845,73 @@
       }
     },
     {
+      "id": "ocoya",
+      "slug": "ocoya",
+      "name": "Ocoya",
+      "websiteUrl": "https://www.ocoya.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Social content plans from $29 per month, with a 7-day trial.",
+      "longDescription": "Ocoya's pricing page lists a Starter plan at $29 per month billed monthly for independent creators, and a 7-day free trial that requires a card. Higher plans were also listed. We did not start the trial.",
+      "categories": [
+        "content"
+      ],
+      "useCaseTags": [
+        "social-media"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Starter is $29 per month billed monthly, with a 7-day free trial that requires a card.",
+      "pricingUrl": "https://www.ocoya.com/pricing",
+      "docsUrl": "https://www.ocoya.com/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 29,
+      "freeTrial": "7 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Creating and scheduling social content on a listed monthly plan"
+      ],
+      "notIdealFor": [
+        "Someone who wants a trial without a card"
+      ],
+      "strength": "Ocoya lists a Starter plan at $29 per month and a 7-day free trial that requires a card.",
+      "weakness": "The trial requires a card, and higher plans on the page cost $79 and $199 per month.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.ocoya.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.ocoya.com/"
+      },
+      "useCaseFit": {
+        "social-media": "Social content tool with Starter at $29 per month and a 7-day trial."
+      }
+    },
+    {
       "id": "opus",
       "slug": "opus",
       "name": "Opus Clip",
@@ -3265,6 +5978,74 @@
       },
       "useCaseFit": {
         "game-creative": "Cuts a long video into short clips, and the free plan includes 60 credits a month."
+      }
+    },
+    {
+      "id": "paradox",
+      "slug": "paradox",
+      "name": "Paradox",
+      "websiteUrl": "https://www.paradox.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Candidate experience agent with conversational scheduling and apply flows.",
+      "longDescription": "Paradox's site describes a candidate experience agent, conversational apply, conversational scheduling, and a conversational CRM. The fetched text did not list a price. We did not request a demo.",
+      "categories": [
+        "hiring"
+      ],
+      "useCaseTags": [
+        "hire-candidates"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "The site describes a candidate experience agent and conversational scheduling. No price was in the fetch.",
+      "pricingUrl": "https://www.paradox.ai/",
+      "docsUrl": "https://www.paradox.ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "High-volume hiring that wants conversational scheduling"
+      ],
+      "notIdealFor": [
+        "A team that needs a self-serve monthly price"
+      ],
+      "strength": "Paradox describes a candidate experience agent with conversational scheduling and apply flows.",
+      "weakness": "The fetched site did not publish a dollar price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.paradox.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.paradox.ai/"
+      },
+      "useCaseFit": {
+        "hire-candidates": "Candidate agent that the site says can schedule and take applications conversationally."
       }
     },
     {
@@ -3549,6 +6330,74 @@
       }
     },
     {
+      "id": "predis",
+      "slug": "predis",
+      "name": "Predis.ai",
+      "websiteUrl": "https://predis.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Generates and designs social posts and ads with AI.",
+      "longDescription": "Predis.ai's site says it generates, designs, and optimizes social media content with AI, including posts and ads. A $29 amount in the fetch was labeled extra credits, not a base plan, so this listing does not set a starting price. We did not subscribe.",
+      "categories": [
+        "content"
+      ],
+      "useCaseTags": [
+        "social-media"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "usage"
+      ],
+      "pricingNotes": "The site says it generates social content with AI. A $29 figure on the page was for extra credits, so it is not used as the starting plan price.",
+      "pricingUrl": "https://predis.ai/pricing",
+      "docsUrl": "https://predis.ai/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Generating social posts and ad creatives"
+      ],
+      "notIdealFor": [
+        "Someone who needs a confirmed base-plan price from this check"
+      ],
+      "strength": "Predis says it generates, designs, and optimizes social media content with AI.",
+      "weakness": "The fetched pricing text did not make a base monthly price clear, so none is listed.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://predis.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://predis.ai/"
+      },
+      "useCaseFit": {
+        "social-media": "Generates social posts and ads with AI, without a clear base price in the fetch."
+      }
+    },
+    {
       "affiliateUrl": null,
       "platforms": [
         "web"
@@ -3582,7 +6431,9 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-land"
+        "find-land",
+        "find-off-market",
+        "rank-property-deals"
       ],
       "toolTypes": [
         "agent"
@@ -3613,7 +6464,77 @@
         "finalUrl": "https://www.propstream.com/pricing"
       },
       "useCaseFit": {
-        "find-land": "Searches property records with an AI search box, and Essentials is $99 per month."
+        "find-land": "Searches property records with an AI search box, and Essentials is $99 per month.",
+        "find-off-market": "Filters property records, including off-market search, and Essentials is $99 per month.",
+        "rank-property-deals": "Filters property records, including off-market ones."
+      }
+    },
+    {
+      "id": "ramp",
+      "slug": "ramp",
+      "name": "Ramp",
+      "websiteUrl": "https://ramp.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Finance platform with a free plan at $0 and Plus at $15 per user.",
+      "longDescription": "Ramp's pricing page lists an AI-assisted Free plan at $0 per user per month and Plus at $15 per user per month plus a platform fee based on team size. We did not apply for an account.",
+      "categories": [
+        "finance-ops"
+      ],
+      "useCaseTags": [
+        "finance-ops"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Free is $0 per user per month. Plus is $15 per user per month plus a platform fee.",
+      "pricingUrl": "https://ramp.com/pricing",
+      "docsUrl": "https://ramp.com/pricing",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": 0,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Card, expense, and finance workflows on a listed free plan"
+      ],
+      "notIdealFor": [
+        "A company that wants Plus without reading the platform fee"
+      ],
+      "strength": "Ramp lists an AI-assisted free plan at $0 per user per month and Plus at $15 per user per month.",
+      "weakness": "Plus adds a platform fee based on team size, so $15 is not an all-in company price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://ramp.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://ramp.com/"
+      },
+      "useCaseFit": {
+        "finance-ops": "Finance platform with a free plan at $0 per user and Plus at $15 per user."
       }
     },
     {
@@ -3683,6 +6604,74 @@
       },
       "useCaseFit": {
         "manage-portfolio": "Advisory membership with an AI assistant, listed at $3,950 per year for Premium."
+      }
+    },
+    {
+      "id": "reclaim",
+      "slug": "reclaim",
+      "name": "Reclaim",
+      "websiteUrl": "https://reclaim.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Scheduling links, smart meetings, and calendar sync.",
+      "longDescription": "Reclaim's pricing page lists habits, tasks, smart meetings, scheduling links, calendar sync, and buffer time. The text we fetched did not include a dollar price. We did not create an account.",
+      "categories": [
+        "productivity"
+      ],
+      "useCaseTags": [
+        "scheduling-assistant"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "contact"
+      ],
+      "pricingNotes": "The pricing page lists Smart Meetings, scheduling links, and calendar sync. No dollar amount was in the fetched text.",
+      "pricingUrl": "https://reclaim.ai/pricing",
+      "docsUrl": "https://reclaim.ai/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Protecting calendar time and sharing scheduling links"
+      ],
+      "notIdealFor": [
+        "Someone who needs a published monthly price from this check"
+      ],
+      "strength": "Reclaim's pricing page lists smart meetings, scheduling links, and calendar sync.",
+      "weakness": "The fetched pricing text did not include a dollar amount.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://reclaim.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://reclaim.ai/"
+      },
+      "useCaseFit": {
+        "scheduling-assistant": "Offers smart meetings, scheduling links, and calendar sync."
       }
     },
     {
@@ -3828,6 +6817,141 @@
       }
     },
     {
+      "id": "resimpli",
+      "slug": "resimpli",
+      "name": "REsimpli",
+      "websiteUrl": "https://resimpli.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Real estate CRM with calling, texting, and email on every plan, plus a 14-day trial.",
+      "longDescription": "REsimpli is a real estate CRM. On October 19, 2026 the pricing page listed unlimited calling, SMS, and email on every plan, named Solo, Team, and Business by team size, with a 14-day trial. The page text we could read did not print a dollar amount. We did not start a trial.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "find-off-market"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Plans are Solo, Team, and Business. The page lists unlimited calling, SMS, and email, and a 14-day trial. No dollar amount was in the text we read.",
+      "pricingUrl": "https://resimpli.com/pricing/",
+      "docsUrl": "https://resimpli.com/pricing/",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": "14 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Calling and texting owner lists from one CRM"
+      ],
+      "notIdealFor": [
+        "Someone who needs a published monthly price before talking to the vendor"
+      ],
+      "strength": "The pricing page lists unlimited calling, SMS, and email on every plan, with a 14-day trial.",
+      "weakness": "The page we checked names plans by team size and does not print a dollar amount in the text.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T12:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://resimpli.com/pricing/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://resimpli.com/pricing/"
+      },
+      "useCaseFit": {
+        "find-off-market": "Includes calling, texting, and email on every plan, with a 14-day trial."
+      }
+    },
+    {
+      "id": "rows",
+      "slug": "rows",
+      "name": "Rows",
+      "websiteUrl": "https://rows.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Spreadsheet with an AI analyst. Plus is $8 per user each month.",
+      "longDescription": "Rows' pricing page lists a Free plan at $0 and Plus at $8 per month per user for analysis and reporting with AI. The page also noted that Rows has joined Superhuman. We did not create a workspace.",
+      "categories": [
+        "data-analysis"
+      ],
+      "useCaseTags": [
+        "analyze-data"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Free is $0. Plus is $8 per month per user for analysis and reporting with AI.",
+      "pricingUrl": "https://rows.com/pricing",
+      "docsUrl": "https://rows.com/pricing",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": 8,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Analyzing a spreadsheet with an AI assistant on a listed free plan"
+      ],
+      "notIdealFor": [
+        "Someone who wants a BI warehouse rather than a sheet"
+      ],
+      "strength": "Rows lists a Free plan at $0 and Plus at $8 per user per month for analysis with AI.",
+      "weakness": "The Plus price is per user, and the page says Rows has joined Superhuman, so the brand may change.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://rows.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://rows.com/"
+      },
+      "useCaseFit": {
+        "analyze-data": "Spreadsheet analysis with a free plan and Plus at $8 per user per month."
+      }
+    },
+    {
       "id": "runway",
       "slug": "runway",
       "name": "Runway",
@@ -3970,6 +7094,480 @@
       }
     },
     {
+      "id": "scispace",
+      "slug": "scispace",
+      "name": "SciSpace",
+      "websiteUrl": "https://scispace.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Literature review and chat with PDF for scientific papers.",
+      "longDescription": "SciSpace's pricing page says it is an end-to-end platform for discovering, analyzing, and writing scientific literature, with literature review, chat with PDF, and a citation generator. The FAQ text we fetched did not include a dollar price. We did not subscribe.",
+      "categories": [
+        "research"
+      ],
+      "useCaseTags": [
+        "deep-research"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "The pricing FAQ says SciSpace is for discovering, analyzing, and writing scientific literature, including literature review and chat with PDF. No dollar price was in the FAQ text.",
+      "pricingUrl": "https://scispace.com/pricing",
+      "docsUrl": "https://scispace.com/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Reading papers with chat and a literature-review tool"
+      ],
+      "notIdealFor": [
+        "Someone who needs a listed monthly price from this check"
+      ],
+      "strength": "SciSpace says it supports literature review, chat with PDF, and citation tools for scientific literature.",
+      "weakness": "The pricing FAQ we fetched did not include a dollar amount.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://scispace.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://scispace.com/"
+      },
+      "useCaseFit": {
+        "deep-research": "Literature review and chat-with-PDF tools for research papers."
+      }
+    },
+    {
+      "id": "shortwave",
+      "slug": "shortwave",
+      "name": "Shortwave",
+      "websiteUrl": "https://www.shortwave.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Email AI at $30 per seat per month, with a 14-day free trial.",
+      "longDescription": "Shortwave's pricing page lists Everyday AI productivity at $30 per seat per month and a 14-day free trial, with higher seat prices above that. It mentions AI search and filters. We did not start the trial.",
+      "categories": [
+        "productivity"
+      ],
+      "useCaseTags": [
+        "manage-inbox"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Everyday AI productivity is $30 per seat per month, with a 14-day free trial.",
+      "pricingUrl": "https://www.shortwave.com/pricing",
+      "docsUrl": "https://www.shortwave.com/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 30,
+      "freeTrial": "14 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Searching an inbox and drafting from an AI email client"
+      ],
+      "notIdealFor": [
+        "A team that wants a one-time price instead of per seat"
+      ],
+      "strength": "Shortwave lists Everyday AI productivity at $30 per seat per month and a 14-day free trial.",
+      "weakness": "The price is per seat, and higher tiers on the same page cost $45 and $120 per seat.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.shortwave.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.shortwave.com/"
+      },
+      "useCaseFit": {
+        "manage-inbox": "AI email client at $30 per seat per month with a 14-day trial."
+      }
+    },
+    {
+      "id": "sierra",
+      "slug": "sierra",
+      "name": "Sierra",
+      "websiteUrl": "https://sierra.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "AI agents for customer service and customer experiences.",
+      "longDescription": "Sierra's site says it helps companies build AI agents for customer experiences and customer service, including voice. The fetched text did not list a price. We did not book a demo.",
+      "categories": [
+        "customer-support"
+      ],
+      "useCaseTags": [
+        "customer-support"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "The site describes AI agents for customer experiences and customer service. No price was in the fetch.",
+      "pricingUrl": "https://sierra.ai/",
+      "docsUrl": "https://sierra.ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A brand that wants a customer-service agent built with Sierra"
+      ],
+      "notIdealFor": [
+        "A small team looking for a published seat price"
+      ],
+      "strength": "Sierra says it builds AI agents for customer service and broader customer experiences.",
+      "weakness": "The fetched pages did not list a public dollar price or a self-serve trial length.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://sierra.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://sierra.ai/"
+      },
+      "useCaseFit": {
+        "customer-support": "Describes AI agents aimed at customer service and customer experiences."
+      }
+    },
+    {
+      "id": "skyvern",
+      "slug": "skyvern",
+      "name": "Skyvern",
+      "websiteUrl": "https://www.skyvern.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Browser automation. Free is $0 per month and a paid plan is $29.",
+      "longDescription": "Skyvern's site describes AI browser automation for websites, and the pricing page lists a Free plan at $0 per month with 5,000 credits and a paid plan at $29 per month. We did not create an account. A sample JSON price on the marketing site was not used as the plan price.",
+      "categories": [
+        "tool-use"
+      ],
+      "useCaseTags": [
+        "tool-use-browser"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Pricing page lists Free at $0 per month with 5,000 credits and a paid plan at $29 per month.",
+      "pricingUrl": "https://www.skyvern.com/pricing",
+      "docsUrl": "https://www.skyvern.com/pricing",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": 29,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Automating clicks and form steps on websites"
+      ],
+      "notIdealFor": [
+        "A team that wants the higher plan's full price confirmed beyond $29"
+      ],
+      "strength": "Skyvern lists browser automation with a free plan at $0 per month and a paid plan at $29 per month.",
+      "weakness": "The free plan is credit-capped at 5,000 credits, and higher plans cost more than $29.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.skyvern.com/",
+        "https://www.skyvern.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.skyvern.com/"
+      },
+      "useCaseFit": {
+        "tool-use-browser": "Automates browser steps, with a free plan and a $29 per month plan."
+      }
+    },
+    {
+      "id": "slite",
+      "slug": "slite",
+      "name": "Slite",
+      "websiteUrl": "https://slite.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Team docs with Ask, AI search and answers, at $10 per user billed yearly.",
+      "longDescription": "Slite's pricing page lists $10 per user per month billed yearly and describes Ask as AI search and answers, plus a doc verification workflow. We did not create a workspace, and we do not show $10 as a month-to-month price.",
+      "categories": [
+        "knowledge"
+      ],
+      "useCaseTags": [
+        "knowledge-qa"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "The pricing page lists $10 per user per month billed yearly and Ask, described as AI search and answers. startingPrice is empty because the price is billed yearly.",
+      "pricingUrl": "https://slite.com/pricing",
+      "docsUrl": "https://slite.com/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Asking questions over a team's docs"
+      ],
+      "notIdealFor": [
+        "Someone who wants to pay month to month at the yearly rate"
+      ],
+      "strength": "Slite lists Ask, its AI search and answers, at $10 per user per month when billed yearly.",
+      "weakness": "That $10 figure is billed yearly, so this listing does not call it a month-to-month price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://slite.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://slite.com/"
+      },
+      "useCaseFit": {
+        "knowledge-qa": "Docs with Ask, described as AI search and answers, priced at $10 per user billed yearly."
+      }
+    },
+    {
+      "id": "smartlead",
+      "slug": "smartlead",
+      "name": "Smartlead",
+      "websiteUrl": "https://www.smartlead.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "Cold email platform whose SmartAssistant sets up and fixes outreach.",
+      "longDescription": "Smartlead's site describes SmartAssistant as a personal cold-email AI assistant to set up, run, and fix outreach, plus lead and deliverability products. The fetched text did not list a plan price. We did not sign up.",
+      "categories": [
+        "sales"
+      ],
+      "useCaseTags": [
+        "sales-outreach"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription",
+        "contact"
+      ],
+      "pricingNotes": "The site describes SmartAssistant as a cold-email AI assistant. A customer story dollar figure is not a plan price.",
+      "pricingUrl": "https://www.smartlead.ai/",
+      "docsUrl": "https://www.smartlead.ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Running cold email campaigns with an assistant that sets them up"
+      ],
+      "notIdealFor": [
+        "A buyer who needs a listed monthly price from this check"
+      ],
+      "strength": "Smartlead describes SmartAssistant as a cold-email AI assistant that sets up, runs, and fixes outreach.",
+      "weakness": "The fetched homepage did not list a plan price, so none is shown here.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.smartlead.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.smartlead.ai/"
+      },
+      "useCaseFit": {
+        "sales-outreach": "Describes an AI assistant for setting up and fixing cold email outreach."
+      }
+    },
+    {
+      "id": "spark-mail",
+      "slug": "spark-mail",
+      "name": "Spark",
+      "websiteUrl": "https://sparkmailapp.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Email app with an AI assistant, a smart inbox, and drafted replies.",
+      "longDescription": "Spark's site lists Spark +AI, an AI assistant, a smart inbox, gatekeeper, snooze, and send later, and the page leads with replies that are already drafted. The fetched text did not include a price. We did not install the app.",
+      "categories": [
+        "productivity"
+      ],
+      "useCaseTags": [
+        "manage-inbox"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "The site lists Spark +AI, an AI assistant, and a smart inbox. No dollar price was in the fetched text.",
+      "pricingUrl": "https://sparkmailapp.com/",
+      "docsUrl": "https://sparkmailapp.com/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "An email app that drafts replies and sorts the inbox"
+      ],
+      "notIdealFor": [
+        "Someone who needs a confirmed monthly price from this check"
+      ],
+      "strength": "Spark lists an AI assistant, a smart inbox, and replies that are already drafted.",
+      "weakness": "The fetched page did not include a dollar price or a stated trial length.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://sparkmailapp.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://sparkmailapp.com/"
+      },
+      "useCaseFit": {
+        "manage-inbox": "Lists an AI assistant and a smart inbox that drafts email replies."
+      }
+    },
+    {
       "affiliateUrl": null,
       "categories": [
         "creative-media"
@@ -4035,6 +7633,73 @@
       },
       "useCaseFit": {
         "game-creative": "Reframes Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks."
+      }
+    },
+    {
+      "id": "synthesis-tutor",
+      "slug": "synthesis-tutor",
+      "name": "Synthesis Tutor",
+      "websiteUrl": "https://www.synthesis.com/tutor",
+      "affiliateUrl": null,
+      "shortDescription": "Tutor product with a free trial. No plan price was confirmed.",
+      "longDescription": "Synthesis Tutor's page offers a free trial and describes a tutor for kids. A marketing line said less than $1 a day, which is not a plan price, so this listing does not convert it into a monthly price. We did not start the trial.",
+      "categories": [
+        "learning"
+      ],
+      "useCaseTags": [
+        "tutoring"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "The tutor page offers a free trial. A 'less than $1 a day' line is marketing, not a plan price, so no starting price is set.",
+      "pricingUrl": "https://www.synthesis.com/tutor",
+      "docsUrl": "https://www.synthesis.com/tutor",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Trying a kids' tutor that offers a free trial on the official page"
+      ],
+      "notIdealFor": [
+        "An adult professional course"
+      ],
+      "strength": "Synthesis Tutor's official page offers a free trial for its tutor.",
+      "weakness": "The fetched page did not state a plan price in dollars, only a marketing line about daily cost.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.synthesis.com/tutor"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.synthesis.com/tutor"
+      },
+      "useCaseFit": {
+        "tutoring": "Tutor with a free trial offered on the official tutor page."
       }
     },
     {
@@ -4185,6 +7850,343 @@
       }
     },
     {
+      "id": "taxact",
+      "slug": "taxact",
+      "name": "TaxAct",
+      "websiteUrl": "https://www.taxact.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Online filing with guided steps. The homepage says you can start filing for free.",
+      "longDescription": "TaxAct's homepage says people use it to file taxes online, with guided filing and expert help for more complex situations, and it says you can start filing for free. The fetched text did not include a dollar price. We did not start a return.",
+      "categories": [
+        "personal-finance"
+      ],
+      "useCaseTags": [
+        "do-taxes"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "The homepage says start filing for free and mentions guided filing plus expert help. No dollar amount was in the fetch.",
+      "pricingUrl": "https://www.taxact.com/",
+      "docsUrl": "https://www.taxact.com/",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Starting a personal return online with guided questions"
+      ],
+      "notIdealFor": [
+        "Someone who needs a listed monthly subscription price"
+      ],
+      "strength": "TaxAct's homepage offers guided online filing and says you can start filing for free.",
+      "weakness": "The fetched homepage did not print a dollar price for paid expert help.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.taxact.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.taxact.com/"
+      },
+      "useCaseFit": {
+        "do-taxes": "Offers guided online tax filing and says you can start for free."
+      }
+    },
+    {
+      "id": "turbotax",
+      "slug": "turbotax",
+      "name": "TurboTax",
+      "websiteUrl": "https://turbotax.intuit.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Step-by-step filing. File-yourself pricing on the page runs from $0 to $139.",
+      "longDescription": "TurboTax's online pricing page lists file-yourself tools from $0 to $139, with state extra, expert help from $59 to $209, and a dedicated expert starting at $129. We did not start a return.",
+      "categories": [
+        "personal-finance"
+      ],
+      "useCaseTags": [
+        "do-taxes"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "File-yourself tools are listed from $0 to $139, with state extra. A dedicated expert starts at $129.",
+      "pricingUrl": "https://turbotax.intuit.com/personal-taxes/online/",
+      "docsUrl": "https://turbotax.intuit.com/personal-taxes/online/",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": 0,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Filing a personal return with step-by-step software"
+      ],
+      "notIdealFor": [
+        "A business that wants invoice capture rather than a personal return"
+      ],
+      "strength": "TurboTax lists file-yourself pricing from $0 to $139, and says state filing is an additional charge.",
+      "weakness": "The $0 end of that range is not the expert-file option, which the same page starts at $129.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://turbotax.intuit.com/personal-taxes/online/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://turbotax.intuit.com/"
+      },
+      "useCaseFit": {
+        "do-taxes": "Lists guided personal tax filing, with a file-yourself range that starts at $0."
+      }
+    },
+    {
+      "id": "vic-ai",
+      "slug": "vic-ai",
+      "name": "Vic.ai",
+      "websiteUrl": "https://www.vic.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "AI-first invoice processing and accounts payable software.",
+      "longDescription": "Vic.ai's site describes AI-first accounts payable and invoice processing, including an AP suite. The fetched text did not list a price. We did not request a demo.",
+      "categories": [
+        "finance-ops"
+      ],
+      "useCaseTags": [
+        "finance-ops"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact",
+        "enterprise"
+      ],
+      "pricingNotes": "The site describes AI-first invoice processing and accounts payable. No price was in the fetch.",
+      "pricingUrl": "https://www.vic.ai/",
+      "docsUrl": "https://www.vic.ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Accounts payable teams that want invoice processing software"
+      ],
+      "notIdealFor": [
+        "A buyer who needs a public monthly price"
+      ],
+      "strength": "Vic AI describes AI-first invoice processing and accounts payable software.",
+      "weakness": "The fetched site did not list a dollar price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.vic.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.vic.ai/"
+      },
+      "useCaseFit": {
+        "finance-ops": "Invoice and accounts-payable software described as AI-first."
+      }
+    },
+    {
+      "id": "wonderplan",
+      "slug": "wonderplan",
+      "name": "Wonderplan",
+      "websiteUrl": "https://wonderplan.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "AI trip planner that builds itineraries. The site says you can start free.",
+      "longDescription": "Wonderplan's site says it is an AI trip planner and travel curator that creates itineraries for your interests and budget, and that you can get started for free. The fetched text did not list a paid price. We did not create an account.",
+      "categories": [
+        "travel"
+      ],
+      "useCaseTags": [
+        "plan-travel"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "The site calls itself an AI trip planner and says get started, it's free. No paid dollar price was in the fetch.",
+      "pricingUrl": "https://wonderplan.ai/",
+      "docsUrl": "https://wonderplan.ai/",
+      "freeTier": true,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Drafting a custom itinerary without a paid plan listed on the homepage"
+      ],
+      "notIdealFor": [
+        "Someone comparing paid tiers by price"
+      ],
+      "strength": "Wonderplan calls itself an AI trip planner that creates custom itineraries, and it says you can get started for free.",
+      "weakness": "The fetched page did not list a paid plan price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://wonderplan.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://wonderplan.ai/"
+      },
+      "useCaseFit": {
+        "plan-travel": "AI itinerary planner that says you can start for free."
+      }
+    },
+    {
+      "id": "writesonic",
+      "slug": "writesonic",
+      "name": "Writesonic",
+      "websiteUrl": "https://writesonic.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Content and brand-tracking plans. Starter is $79 per month billed annually.",
+      "longDescription": "Writesonic's pricing page lists a Starter plan at $79 per month when billed annually, and says it tracks a brand across chat products and Google AI Overviews. We did not subscribe.",
+      "categories": [
+        "content"
+      ],
+      "useCaseTags": [
+        "create-content"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Starter is listed at $79 per month when billed annually. This listing leaves startingPrice empty so the UI does not drop the annual-billing condition.",
+      "pricingUrl": "https://writesonic.com/pricing",
+      "docsUrl": "https://writesonic.com/pricing",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Drafting content on a plan that also tracks brand mentions"
+      ],
+      "notIdealFor": [
+        "Someone who wants a month-to-month price confirmed on this listing"
+      ],
+      "strength": "Writesonic lists a Starter plan at $79 per month when that plan is billed annually.",
+      "weakness": "The figure we read is the annual-billing price, not a confirmed month-to-month rate.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://writesonic.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://writesonic.com/"
+      },
+      "useCaseFit": {
+        "create-content": "Content plans with Starter listed at $79 per month when billed annually."
+      }
+    },
+    {
       "id": "zapier",
       "slug": "zapier",
       "name": "Zapier",
@@ -4252,9 +8254,106 @@
       "useCaseFit": {
         "workflow-automation": "Connects hosted apps, and the free plan includes 100 tasks per month."
       }
+    },
+    {
+      "id": "zendesk",
+      "slug": "zendesk",
+      "name": "Zendesk",
+      "websiteUrl": "https://www.zendesk.com/",
+      "affiliateUrl": null,
+      "shortDescription": "AI-first support platform. The pricing page says plans start at $19 per month.",
+      "longDescription": "Zendesk's pricing page is titled as plans starting from $19 per month and describes an AI-first service platform whose AI is meant to improve resolutions. We did not start a trial or confirm what the $19 plan includes beyond that title.",
+      "categories": [
+        "customer-support"
+      ],
+      "useCaseTags": [
+        "customer-support"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "The pricing page title says plans start from $19 per month and describes Zendesk AI.",
+      "pricingUrl": "https://www.zendesk.com/pricing/",
+      "docsUrl": "https://www.zendesk.com/pricing/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": 19,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Teams that already want a support suite with AI on the pricing page"
+      ],
+      "notIdealFor": [
+        "Someone who needs the $19 plan's feature list confirmed in this listing"
+      ],
+      "strength": "Zendesk's pricing page says plans start from $19 per month and describes Zendesk AI on its service platform.",
+      "weakness": "The fetched page did not spell out which AI features sit on the $19 plan versus higher tiers.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T16:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.zendesk.com/pricing/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.zendesk.com/"
+      },
+      "useCaseFit": {
+        "customer-support": "Prices a support platform from $19 per month and describes Zendesk AI for service teams."
+      }
     }
   ],
   "useCases": [
+    {
+      "slug": "analyze-data",
+      "title": "Analyze data and generate reports",
+      "summary": "Ask questions of spreadsheets and dashboards.",
+      "audienceHints": [
+        "operators"
+      ],
+      "matchTags": [
+        "analyze-data"
+      ],
+      "jobPhrase": "analyzing data and generating reports",
+      "assistantTask": "summarize a table and list questions the sheet cannot answer",
+      "assistantContext": "reading a spreadsheet",
+      "searchTopic": "what a column in the sheet means",
+      "recommended": [
+        {
+          "toolId": "julius",
+          "why": "Plus is $20 per month and a Free plan is listed. Docs checked."
+        },
+        {
+          "toolId": "rows",
+          "why": "Plus is $8 per user per month. Docs checked."
+        },
+        {
+          "toolId": "hex",
+          "why": "$36 per editor per month with a Hex agent. Docs checked."
+        }
+      ],
+      "intro": "AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table."
+    },
     {
       "slug": "coding-agents",
       "title": "Code with an AI agent",
@@ -4277,18 +8376,182 @@
         {
           "toolId": "claude",
           "why": "Anthropic’s Claude product and API, including coding workflows. Docs checked; we did not sign up."
+        },
+        {
+          "toolId": "github-copilot",
+          "why": "GitHub calls Copilot an AI coding agent that writes code and can take an issue toward a merge. Docs checked."
         }
       ],
       "jobPhrase": "writing and reviewing code",
       "assistantTask": "explain a code change, compare approaches, and draft a review note",
       "assistantContext": "writing and reviewing code",
       "searchTopic": "the library or error you are working through",
-      "intro": "AI agents can read a repo, suggest an edit, and draft a review note so you can check the change before it lands."
+      "intro": "AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships."
+    },
+    {
+      "slug": "create-content",
+      "title": "Create and optimize content",
+      "summary": "Draft blog posts, SEO articles, and marketing copy.",
+      "audienceHints": [
+        "marketers"
+      ],
+      "matchTags": [
+        "create-content"
+      ],
+      "jobPhrase": "creating and optimizing content",
+      "assistantTask": "outline a post and draft a paragraph",
+      "assistantContext": "drafting marketing content",
+      "searchTopic": "the topic of the post",
+      "recommended": [
+        {
+          "toolId": "jasper",
+          "why": "Marketer workspace with agents. Docs checked."
+        },
+        {
+          "toolId": "copy-ai",
+          "why": "Content workflows. Docs checked."
+        },
+        {
+          "toolId": "writesonic",
+          "why": "Starter is $79 per month billed annually. Docs checked."
+        }
+      ],
+      "intro": "AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit."
+    },
+    {
+      "slug": "customer-support",
+      "title": "Handle customer support tickets",
+      "summary": "Reply to common tickets and send the rest to a person.",
+      "audienceHints": [
+        "support teams"
+      ],
+      "matchTags": [
+        "customer-support"
+      ],
+      "jobPhrase": "handling customer support tickets",
+      "assistantTask": "draft a reply, cite the policy, and flag what should be escalated",
+      "assistantContext": "answering a support ticket",
+      "searchTopic": "the refund or order policy you would cite",
+      "recommended": [
+        {
+          "toolId": "intercom-fin",
+          "why": "Fin is $19 per seat per month plus per-outcome pricing. Docs checked."
+        },
+        {
+          "toolId": "zendesk",
+          "why": "Support plans start at $19 per month on the pricing title. Docs checked."
+        },
+        {
+          "toolId": "decagon",
+          "why": "Chat, email, and voice concierge. Docs checked."
+        },
+        {
+          "toolId": "sierra",
+          "why": "Customer-service agents. Docs checked."
+        }
+      ],
+      "intro": "AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle."
+    },
+    {
+      "slug": "deep-research",
+      "title": "Do deep research",
+      "summary": "Literature review and sourced briefs.",
+      "audienceHints": [
+        "researchers"
+      ],
+      "matchTags": [
+        "deep-research"
+      ],
+      "jobPhrase": "doing deep research",
+      "assistantTask": "compare sources and draft a brief with links",
+      "assistantContext": "researching a question",
+      "searchTopic": "the question you want sourced",
+      "recommended": [
+        {
+          "toolId": "elicit",
+          "why": "AI research assistant. Plus is $11 per user per month billed annually. Docs checked."
+        },
+        {
+          "toolId": "scispace",
+          "why": "Literature review and chat with PDF. Docs checked."
+        }
+      ],
+      "intro": "AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check."
+    },
+    {
+      "slug": "do-taxes",
+      "title": "Do my taxes",
+      "summary": "Sort records and prepare a return. PickMyAgent is not tax or financial advice.",
+      "audienceHints": [
+        "filers"
+      ],
+      "matchTags": [
+        "do-taxes"
+      ],
+      "jobPhrase": "doing your taxes",
+      "assistantTask": "list documents, sort deductions, and draft questions for a tax pro",
+      "assistantContext": "preparing a tax return",
+      "searchTopic": "which forms a filer might need",
+      "recommended": [
+        {
+          "toolId": "turbotax",
+          "why": "File-yourself pricing starts at $0. Docs checked."
+        },
+        {
+          "toolId": "taxact",
+          "why": "Guided filing and a free start. Docs checked."
+        },
+        {
+          "toolId": "keeper",
+          "why": "Expense tracking and filing, with a free start. Docs checked."
+        },
+        {
+          "toolId": "flyfin",
+          "why": "AI plus a CPA for self-employed returns. Docs checked."
+        }
+      ],
+      "intro": "AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.",
+      "disclaimer": "PickMyAgent is not tax or financial advice."
+    },
+    {
+      "slug": "finance-ops",
+      "title": "Process invoices and finance ops",
+      "summary": "Capture invoices and expenses. Not tax or financial advice.",
+      "audienceHints": [
+        "operators"
+      ],
+      "matchTags": [
+        "finance-ops"
+      ],
+      "jobPhrase": "processing invoices and finance ops",
+      "assistantTask": "list invoice fields to extract and what to flag",
+      "assistantContext": "processing an invoice",
+      "searchTopic": "the fields on the invoice",
+      "recommended": [
+        {
+          "toolId": "ramp",
+          "why": "Free is $0 per user and Plus is $15. Docs checked."
+        },
+        {
+          "toolId": "vic-ai",
+          "why": "AI-first invoice processing. Docs checked."
+        },
+        {
+          "toolId": "dext",
+          "why": "Receipt and invoice capture. Docs checked."
+        },
+        {
+          "toolId": "bill-com",
+          "why": "Invoicing and AP controls. Docs checked."
+        }
+      ],
+      "intro": "AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.",
+      "disclaimer": "PickMyAgent is not tax or financial advice."
     },
     {
       "slug": "find-land",
-      "title": "Find land or real estate",
-      "summary": "Look up parcels, owners, and property records before you call a seller.",
+      "title": "Find land",
+      "summary": "Look up parcels, acreage, and zoning before you call a seller.",
       "audienceHints": [
         "buyers",
         "investors"
@@ -4323,6 +8586,45 @@
         }
       ],
       "intro": "AI agents can screen parcels, pull zoning and comps, and track listings so you spend time only on land deals worth pursuing."
+    },
+    {
+      "slug": "find-off-market",
+      "title": "Find off-market or for-sale-by-owner deals",
+      "summary": "Look up homes that may not be listed with a realtor, then draft outreach to the owner.",
+      "audienceHints": [
+        "investors",
+        "buyers"
+      ],
+      "matchTags": [
+        "find-off-market"
+      ],
+      "jobPhrase": "finding off-market or for-sale-by-owner deals and contacting owners",
+      "assistantTask": "compare owner records and draft a first text or email",
+      "assistantContext": "look for off-market or for-sale-by-owner deals",
+      "searchTopic": "listing status and rules for contacting owners",
+      "recommended": [
+        {
+          "toolId": "propstream",
+          "why": "Property search with an AI search box. Essentials is $99 per month. Docs checked."
+        },
+        {
+          "toolId": "dealmachine",
+          "why": "Owner data and a driving app. Basic is $99 per seat per month. Docs checked."
+        },
+        {
+          "toolId": "batchleads",
+          "why": "Saved properties include owner phone numbers and emails. Growth is $119 per month. Docs checked."
+        },
+        {
+          "toolId": "resimpli",
+          "why": "Calling, texting, and email are listed on every plan, with a 14-day trial. Docs checked."
+        },
+        {
+          "toolId": "launch-control",
+          "why": "Texting for owner lists. The pricing page lists skip tracing at $0.13. Docs checked."
+        }
+      ],
+      "intro": "AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach."
     },
     {
       "slug": "game-creative",
@@ -4404,6 +8706,126 @@
       "intro": "AI agents can draft what an in-game character says, while the game still decides which lines are allowed."
     },
     {
+      "slug": "hire-candidates",
+      "title": "Screen and source candidates",
+      "summary": "Source profiles, review resumes, and schedule interviews.",
+      "audienceHints": [
+        "recruiters"
+      ],
+      "matchTags": [
+        "hire-candidates"
+      ],
+      "jobPhrase": "screening and sourcing candidates",
+      "assistantTask": "summarize a resume and draft an outreach note",
+      "assistantContext": "reviewing candidates",
+      "searchTopic": "the role you are hiring for",
+      "recommended": [
+        {
+          "toolId": "metaview",
+          "why": "Free plan and AI sourcing. Docs checked."
+        },
+        {
+          "toolId": "paradox",
+          "why": "Candidate agent and conversational scheduling. Docs checked."
+        },
+        {
+          "toolId": "gem",
+          "why": "Source, review, and report. Docs checked."
+        }
+      ],
+      "intro": "AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve."
+    },
+    {
+      "slug": "it-helpdesk",
+      "title": "Handle IT help desk requests",
+      "summary": "Triage common IT requests and route the rest.",
+      "audienceHints": [
+        "it teams"
+      ],
+      "matchTags": [
+        "it-helpdesk"
+      ],
+      "jobPhrase": "handling IT help desk requests",
+      "assistantTask": "draft a password-reset checklist and what to escalate",
+      "assistantContext": "triaging an IT ticket",
+      "searchTopic": "the system named in the ticket",
+      "recommended": [
+        {
+          "toolId": "freshservice",
+          "why": "IT Starter is $19 per agent per month billed annually. Docs checked."
+        },
+        {
+          "toolId": "moveworks",
+          "why": "ITSM automation and employee self-service. Docs checked."
+        }
+      ],
+      "intro": "AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do."
+    },
+    {
+      "slug": "knowledge-qa",
+      "title": "Answer questions from internal docs",
+      "summary": "Search company docs and answer with the source attached.",
+      "audienceHints": [
+        "teams"
+      ],
+      "matchTags": [
+        "knowledge-qa"
+      ],
+      "jobPhrase": "answering questions from internal docs",
+      "assistantTask": "answer from a pasted policy and keep the citation",
+      "assistantContext": "looking up an internal policy",
+      "searchTopic": "the policy name you have",
+      "recommended": [
+        {
+          "toolId": "glean",
+          "why": "Enterprise search and 250+ connectors. Docs checked."
+        },
+        {
+          "toolId": "guru",
+          "why": "Knowledge agents. Docs checked."
+        },
+        {
+          "toolId": "slite",
+          "why": "Ask is AI search, at $10 per user billed yearly. Docs checked."
+        },
+        {
+          "toolId": "notion",
+          "why": "Workspace with a Notion AI trial on the pricing page. Docs checked."
+        }
+      ],
+      "intro": "AI agents can search an internal knowledge base and answer a policy question with the document to check."
+    },
+    {
+      "slug": "manage-inbox",
+      "title": "Manage an email inbox",
+      "summary": "Triage mail and draft replies you can edit.",
+      "audienceHints": [
+        "operators"
+      ],
+      "matchTags": [
+        "manage-inbox"
+      ],
+      "jobPhrase": "managing an email inbox",
+      "assistantTask": "triage a thread and draft a reply",
+      "assistantContext": "clearing an inbox",
+      "searchTopic": "how a mail client handles labels",
+      "recommended": [
+        {
+          "toolId": "shortwave",
+          "why": "$30 per seat per month and a 14-day trial. Docs checked."
+        },
+        {
+          "toolId": "fyxer",
+          "why": "Inbox organizer and drafts, with a 14-day trial. Docs checked."
+        },
+        {
+          "toolId": "spark-mail",
+          "why": "AI assistant and smart inbox. Docs checked."
+        }
+      ],
+      "intro": "AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends."
+    },
+    {
       "slug": "manage-portfolio",
       "title": "Manage an investment portfolio",
       "summary": "Track accounts and research investments. PickMyAgent is not financial advice.",
@@ -4440,7 +8862,7 @@
           "why": "Advisory membership with an AI assistant and no AUM fee. Premium is an annual price. Docs checked."
         }
       ],
-      "intro": "AI agents can line up accounts, compare fees, and draft questions about risk so you can review a portfolio without guessing what each holding costs."
+      "intro": "AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk."
     },
     {
       "slug": "meetings-knowledge",
@@ -4470,7 +8892,7 @@
       "assistantTask": "turn a transcript into notes, decisions, and a task list you can edit",
       "assistantContext": "turning a meeting into notes and tasks",
       "searchTopic": "how to structure notes from a transcript",
-      "intro": "AI agents can turn a transcript into notes, decisions, and tasks so you can edit the list instead of replaying the call."
+      "intro": "AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call."
     },
     {
       "slug": "multi-agent-workflows",
@@ -4505,6 +8927,63 @@
       "assistantContext": "splitting one job across several agents",
       "searchTopic": "how teams of agents hand work to each other",
       "intro": "AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent."
+    },
+    {
+      "slug": "plan-travel",
+      "title": "Plan and book travel",
+      "summary": "Compare flights, hotels, and vacation itineraries.",
+      "audienceHints": [
+        "travelers"
+      ],
+      "matchTags": [
+        "plan-travel"
+      ],
+      "jobPhrase": "planning and booking travel",
+      "assistantTask": "compare flight and hotel options and draft an itinerary",
+      "assistantContext": "planning a trip",
+      "searchTopic": "the city and dates you named",
+      "recommended": [
+        {
+          "toolId": "guidegeek",
+          "why": "AI planner for flights, stays, and activities. Docs checked."
+        },
+        {
+          "toolId": "wonderplan",
+          "why": "AI itineraries with a free start. Docs checked."
+        }
+      ],
+      "intro": "AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself."
+    },
+    {
+      "slug": "rank-property-deals",
+      "title": "Rank property deals",
+      "summary": "Search property records and compare rental, flip, or commercial numbers before you pick a deal.",
+      "audienceHints": [
+        "investors",
+        "buyers"
+      ],
+      "matchTags": [
+        "rank-property-deals"
+      ],
+      "jobPhrase": "finding and ranking real estate deals",
+      "assistantTask": "compare price, rent, and repair figures and draft a ranking",
+      "assistantContext": "rank real estate deals",
+      "searchTopic": "property records and deal calculators",
+      "recommended": [
+        {
+          "toolId": "propstream",
+          "why": "Property search with filters and an AI search box. Docs checked."
+        },
+        {
+          "toolId": "mashvisor",
+          "why": "Rental comps and income estimates for a property. Docs checked."
+        },
+        {
+          "toolId": "dealcheck",
+          "why": "Rental, flip, and commercial calculators with side-by-side comparison. Docs checked."
+        }
+      ],
+      "intro": "AI agents can compare property records and rental or flip numbers so you sort the deals yourself."
     },
     {
       "slug": "research-rag",
@@ -4545,6 +9024,160 @@
       "intro": "AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself."
     },
     {
+      "slug": "sales-outreach",
+      "title": "Qualify leads and send sales outreach",
+      "summary": "Research accounts and draft outreach. You still approve what gets sent.",
+      "audienceHints": [
+        "sales teams"
+      ],
+      "matchTags": [
+        "sales-outreach"
+      ],
+      "jobPhrase": "qualifying leads and sending sales outreach",
+      "assistantTask": "research an account and draft a short outreach note",
+      "assistantContext": "researching a sales lead",
+      "searchTopic": "public pages about an account",
+      "recommended": [
+        {
+          "toolId": "instantly",
+          "why": "Outreach Growth is $47 per month. Docs checked."
+        },
+        {
+          "toolId": "apollo",
+          "why": "Contact data and an AI assistant. Docs checked."
+        },
+        {
+          "toolId": "clay",
+          "why": "Data marketplace and a free trial. Docs checked."
+        },
+        {
+          "toolId": "smartlead",
+          "why": "Cold-email assistant. Docs checked."
+        }
+      ],
+      "intro": "AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent."
+    },
+    {
+      "slug": "scheduling-assistant",
+      "title": "Schedule and handle admin",
+      "summary": "Calendar planning, scheduling links, and admin follow-ups.",
+      "audienceHints": [
+        "operators"
+      ],
+      "matchTags": [
+        "scheduling-assistant"
+      ],
+      "jobPhrase": "scheduling and admin",
+      "assistantTask": "propose times and draft a follow-up",
+      "assistantContext": "planning a calendar",
+      "searchTopic": "how a scheduling link works",
+      "recommended": [
+        {
+          "toolId": "motion",
+          "why": "$29 per seat per month for an AI calendar. Docs checked."
+        },
+        {
+          "toolId": "reclaim",
+          "why": "Smart meetings and scheduling links. Docs checked."
+        },
+        {
+          "toolId": "lindy",
+          "why": "Inbox and calendar jobs with free credits. Docs checked."
+        }
+      ],
+      "intro": "AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head."
+    },
+    {
+      "slug": "security-ops",
+      "title": "Monitor security threats",
+      "summary": "Triage alerts and phishing. Not a substitute for your security team.",
+      "audienceHints": [
+        "security teams"
+      ],
+      "matchTags": [
+        "security-ops"
+      ],
+      "jobPhrase": "monitoring security threats",
+      "assistantTask": "summarize an alert and list what a person should verify",
+      "assistantContext": "reviewing a security alert",
+      "searchTopic": "the alert type you named",
+      "recommended": [
+        {
+          "toolId": "charlotte-ai",
+          "why": "CrowdStrike's agentic security analyst. Docs checked."
+        },
+        {
+          "toolId": "abnormal",
+          "why": "Behavioral AI for email and identity security. Docs checked."
+        },
+        {
+          "toolId": "dropzone",
+          "why": "AI SOC analyst for alert triage. Docs checked."
+        }
+      ],
+      "intro": "AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts."
+    },
+    {
+      "slug": "shop-products",
+      "title": "Shop and recommend products",
+      "summary": "Compare products and narrow a purchase.",
+      "audienceHints": [
+        "shoppers"
+      ],
+      "matchTags": [
+        "shop-products"
+      ],
+      "jobPhrase": "shopping and comparing products",
+      "assistantTask": "compare product options from the details you paste",
+      "assistantContext": "choosing a product",
+      "searchTopic": "the product category you named",
+      "recommended": [
+        {
+          "toolId": "daydream",
+          "why": "AI fashion shopping across 10,000+ stores. Docs checked."
+        },
+        {
+          "toolId": "alexa-shopping",
+          "why": "Amazon's shopping assistant, formerly Rufus. Docs checked."
+        }
+      ],
+      "intro": "AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from."
+    },
+    {
+      "slug": "social-media",
+      "title": "Manage social media",
+      "summary": "Draft, schedule, and review social posts.",
+      "audienceHints": [
+        "marketers"
+      ],
+      "matchTags": [
+        "social-media"
+      ],
+      "jobPhrase": "managing social media",
+      "assistantTask": "draft a post and a short reply",
+      "assistantContext": "scheduling social posts",
+      "searchTopic": "the network you post on",
+      "recommended": [
+        {
+          "toolId": "buffer",
+          "why": "Essentials is $5 per month with an AI assistant. Docs checked."
+        },
+        {
+          "toolId": "ocoya",
+          "why": "Starter is $29 per month. Docs checked."
+        },
+        {
+          "toolId": "predis",
+          "why": "Generates social posts with AI. Docs checked."
+        },
+        {
+          "toolId": "hootsuite",
+          "why": "Planning and publishing, connected by AI. Docs checked."
+        }
+      ],
+      "intro": "AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send."
+    },
+    {
       "slug": "tool-use-browser",
       "title": "Give agents tools & browsers",
       "summary": "Connect apps, MCP-style tool use, and browser control.",
@@ -4570,6 +9203,10 @@
         {
           "toolId": "tavily",
           "why": "Search API for agents. Pricing page showed a $0 option. We did not call the API."
+        },
+        {
+          "toolId": "skyvern",
+          "why": "Browser automation for websites. The pricing page lists a free plan and a $29 per month plan. Docs checked."
         }
       ],
       "jobPhrase": "automating steps in a web browser",
@@ -4577,6 +9214,36 @@
       "assistantContext": "automating steps in a web browser",
       "searchTopic": "what the site allows an automated browser to do",
       "intro": "AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path."
+    },
+    {
+      "slug": "tutoring",
+      "title": "Tutor and personalized learning",
+      "summary": "Explain a concept and make practice questions.",
+      "audienceHints": [
+        "learners"
+      ],
+      "matchTags": [
+        "tutoring"
+      ],
+      "jobPhrase": "tutoring and personalized learning",
+      "assistantTask": "explain one concept and write a practice question",
+      "assistantContext": "studying a topic",
+      "searchTopic": "the concept you want explained",
+      "recommended": [
+        {
+          "toolId": "khanmigo",
+          "why": "Tutor and teaching assistant with a free teacher sign-up. Docs checked."
+        },
+        {
+          "toolId": "synthesis-tutor",
+          "why": "Tutor with a free trial. Docs checked."
+        },
+        {
+          "toolId": "duolingo-max",
+          "why": "Duolingo's 2023 post introduces Max with GPT-4. Docs checked."
+        }
+      ],
+      "intro": "AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss."
     },
     {
       "slug": "workflow-automation",
@@ -4606,7 +9273,7 @@
       "assistantTask": "map the steps, draft the instructions, and list which apps each step touches",
       "assistantContext": "automating a repeated personal task",
       "searchTopic": "how the apps in your task can connect",
-      "intro": "AI agents can map a repeated task, connect the apps it touches, and run the steps you approve so the checklist does not stay manual."
+      "intro": "AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual."
     }
   ]
 }

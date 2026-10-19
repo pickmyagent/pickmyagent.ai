@@ -20,11 +20,15 @@
     {
       "toolId": "claude",
       "why": "Anthropic’s Claude product and API, including coding workflows. Docs checked; we did not sign up."
+    },
+    {
+      "toolId": "github-copilot",
+      "why": "GitHub calls Copilot an AI coding agent that writes code and can take an issue toward a merge. Docs checked."
     }
   ],
   "jobPhrase": "writing and reviewing code",
   "assistantTask": "explain a code change, compare approaches, and draft a review note",
   "assistantContext": "writing and reviewing code",
   "searchTopic": "the library or error you are working through",
-  "intro": "AI agents can read a repo, suggest an edit, and draft a review note so you can check the change before it lands."
+  "intro": "AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships."
 }

@@ -1,0 +1,416 @@
+/** Domain concepts for search. Anchors are whole tokens. Phrases are substrings. */
+export type Concept = {
+  id: string;
+  useCase: string;
+  /** Tool category slugs allowed to appear as specialists. */
+  categories: string[];
+  phrases: string[];
+  anchors: string[];
+  /** Verbs the stored intro already covers. Extra verbs use a templated intro. */
+  coveredVerbs: string[];
+  /** Content tokens that do not count as a second job. */
+  covered: string[];
+  /**
+   * A domain fallback. It supplies specialists only when no narrower concept matches.
+   * Extra verbs still change the intro, not whether these tools appear.
+   */
+  broad?: boolean;
+};
+
+export const CONCEPT_THRESHOLD = 8;
+
+export const CONCEPTS: Concept[] = [
+  {
+    id: "offmarket",
+    useCase: "find-off-market",
+    categories: ["real-estate"],
+    phrases: [
+      "for sale by owner",
+      "for-sale-by-owner",
+      "sale by owner",
+      "off-market",
+      "off market",
+      "motivated seller",
+      "motivated sellers",
+      "skip trace",
+      "skip tracing",
+      "absentee owner",
+      "not yet have a realtor",
+      "no realtor",
+      "without a realtor",
+      "pre-listing",
+      "pre listing",
+    ],
+    anchors: ["fsbo", "offmarket", "wholesaling", "wholesale"],
+    coveredVerbs: ["find", "reach", "contact", "text"],
+    covered: [
+      "real", "estate", "deal", "deals", "realtor", "realtors", "reach", "reaching",
+      "contact", "contacting", "text", "texting", "texts", "owner", "owners", "seller",
+      "sellers", "home", "homes", "house", "houses", "sale", "sold", "motivated", "off",
+      "market", "fsbo", "listing", "listings", "property", "properties", "skip", "tracing",
+      "wholesale", "wholesaling", "absentee", "prelisting",
+    ],
+  },
+  {
+    id: "land",
+    useCase: "find-land",
+    categories: ["real-estate"],
+    phrases: ["vacant lot"],
+    anchors: ["land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "lots"],
+    coveredVerbs: ["find"],
+    covered: [
+      "land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "lots", "lot",
+      "viable", "deal", "deals", "potentially", "south", "carolina",
+    ],
+  },
+  {
+    id: "deals",
+    useCase: "rank-property-deals",
+    categories: ["real-estate"],
+    broad: true,
+    phrases: [
+      "real estate deal",
+      "real estate deals",
+      "rental property",
+      "rental properties",
+      "cash flow",
+      "house to flip",
+      "houses to flip",
+      "fix and flip",
+      "commercial real estate",
+    ],
+    anchors: ["flip", "rental", "rentals", "cashflow"],
+    coveredVerbs: [],
+    covered: ["real", "estate", "deal", "deals"],
+  },
+  {
+    id: "invest",
+    useCase: "manage-portfolio",
+    categories: ["personal-finance"],
+    phrases: ["investment portfolio", "stock portfolio"],
+    anchors: [
+      "portfolio", "portfolios", "invest", "investment", "investments", "investing",
+      "stock", "stocks", "etf", "etfs", "brokerage", "401k", "retirement",
+    ],
+    coveredVerbs: ["manage"],
+    covered: [
+      "invest", "investment", "investments", "investing", "portfolio", "portfolios",
+      "stock", "stocks", "manage", "managing", "etf", "etfs", "retirement", "brokerage", "401k",
+    ],
+  },
+  {
+    id: "taxes",
+    useCase: "do-taxes",
+    categories: ["personal-finance"],
+    phrases: ["tax return", "do my taxes", "file taxes", "file my taxes"],
+    anchors: ["tax", "taxes", "taxation", "1040", "1099", "w2", "irs", "deduction", "deductions", "writeoff", "writeoffs"],
+    coveredVerbs: [],
+    covered: [
+      "tax", "taxes", "taxation", "1040", "1099", "w2", "irs", "deduction", "deductions",
+      "writeoff", "writeoffs", "return", "file", "filing", "do", "agent", "tool", "ai", "best",
+    ],
+  },
+  {
+    id: "support",
+    useCase: "customer-support",
+    categories: ["customer-support"],
+    phrases: ["customer support", "support ticket", "support tickets", "help center"],
+    anchors: ["refund", "refunds", "faq", "faqs"],
+    coveredVerbs: [],
+    covered: [
+      "customer", "support", "tickets", "ticket", "resolve", "common", "issues", "issue",
+      "autonomously", "refund", "refunds", "returns", "faq", "faqs", "order", "status",
+      "escalation", "only", "when", "needed",
+    ],
+  },
+  {
+    id: "sales",
+    useCase: "sales-outreach",
+    categories: ["sales"],
+    phrases: ["sales outreach", "cold email", "qualify leads"],
+    anchors: ["lead", "leads", "outreach", "crm", "pipeline", "prospect", "prospects", "sales"],
+    coveredVerbs: [],
+    covered: [
+      "qualify", "leads", "lead", "research", "accounts", "account", "handle", "sales",
+      "outreach", "prospect", "prospects", "personalized", "email", "sequences", "sequence",
+      "crm", "updates", "pipeline", "management",
+    ],
+  },
+  {
+    id: "email",
+    useCase: "manage-inbox",
+    categories: ["productivity"],
+    phrases: ["email inbox", "draft replies", "draft reply"],
+    anchors: ["inbox", "gmail", "triage"],
+    coveredVerbs: ["manage"],
+    covered: [
+      "manage", "email", "inbox", "triage", "prioritize", "draft", "replies", "reply",
+      "summarize", "threads", "thread", "auto", "route", "archive",
+    ],
+  },
+  {
+    id: "schedule",
+    useCase: "scheduling-assistant",
+    categories: ["productivity"],
+    phrases: ["personal assistant", "calendar management"],
+    anchors: ["calendar", "scheduling", "reminder", "reminders"],
+    coveredVerbs: [],
+    covered: [
+      "act", "personal", "assistant", "scheduling", "admin", "calendar", "management",
+      "meeting", "prep", "follow", "ups", "reminders", "reminder", "task", "orchestration",
+      "across", "tools",
+    ],
+  },
+  {
+    id: "content",
+    useCase: "create-content",
+    categories: ["content"],
+    phrases: ["marketing copy", "blog post", "blog posts", "optimize content", "seo article", "seo articles"],
+    anchors: ["seo", "blog", "copywriting"],
+    coveredVerbs: [],
+    covered: [
+      "create", "optimize", "content", "blog", "posts", "post", "social", "media", "seo",
+      "articles", "article", "marketing", "copy", "campaign", "assets", "scale",
+    ],
+  },
+  {
+    id: "data",
+    useCase: "analyze-data",
+    categories: ["data-analysis"],
+    phrases: ["analyze data", "data analysis", "generate reports"],
+    anchors: ["spreadsheet", "spreadsheets", "dashboard", "dashboards"],
+    coveredVerbs: ["analyze"],
+    covered: [
+      "analyze", "data", "generate", "reports", "report", "spreadsheets", "spreadsheet",
+      "dashboards", "dashboard", "anomaly", "detection", "financial", "business", "insights",
+      "insight", "multiple", "sources", "source",
+    ],
+  },
+  {
+    id: "hiring",
+    useCase: "hire-candidates",
+    categories: ["hiring"],
+    phrases: ["resume review", "screen candidates", "source candidates"],
+    anchors: ["hiring", "recruit", "recruiting", "recruiter", "candidate", "candidates"],
+    coveredVerbs: ["screen", "source"],
+    covered: [
+      "screen", "source", "candidates", "candidate", "hiring", "resume", "review", "outreach",
+      "interview", "scheduling", "ranking",
+    ],
+  },
+  {
+    id: "travel",
+    useCase: "plan-travel",
+    categories: ["travel"],
+    phrases: ["book travel", "plan a trip"],
+    anchors: [
+      "travel", "itinerary", "itineraries", "flight", "flights", "hotel", "hotels",
+      "vacation", "vacations", "trip", "trips",
+    ],
+    coveredVerbs: ["plan", "book", "find"],
+    covered: [
+      "plan", "book", "travel", "itineraries", "itinerary", "flights", "flight", "hotels",
+      "hotel", "activities", "activity", "real", "time", "adjustments", "adjustment",
+      "based", "preferences", "preference", "constraints", "constraint", "vacation",
+      "deal", "best", "tool", "ai", "me",
+    ],
+  },
+  {
+    id: "shopping",
+    useCase: "shop-products",
+    categories: ["shopping"],
+    phrases: ["price comparison", "recommend products", "product recommendations"],
+    anchors: ["shop", "shopping"],
+    coveredVerbs: ["shop"],
+    covered: [
+      "shop", "recommend", "products", "product", "personalized", "recommendations",
+      "recommendation", "price", "comparison", "guided", "purchasing", "order", "tracking",
+    ],
+  },
+  {
+    id: "invoices",
+    useCase: "finance-ops",
+    categories: ["finance-ops"],
+    phrases: ["accounts payable", "purchase order", "purchase orders", "finance ops"],
+    anchors: ["invoice", "invoices", "expense", "expenses", "bookkeeping", "receipt", "receipts"],
+    coveredVerbs: ["process"],
+    covered: [
+      "process", "invoices", "invoice", "handle", "finance", "ops", "extract", "data",
+      "match", "pos", "po", "flag", "exceptions", "exception", "expense", "auditing", "audit",
+    ],
+  },
+  {
+    id: "knowledge",
+    useCase: "knowledge-qa",
+    categories: ["knowledge"],
+    phrases: ["knowledge base", "knowledge bases", "enterprise search", "policy lookup", "document q&a"],
+    anchors: ["wiki"],
+    coveredVerbs: ["answer"],
+    covered: [
+      "answer", "questions", "question", "internal", "knowledge", "bases", "base",
+      "enterprise", "search", "policy", "lookup", "document", "qa", "citations", "citation",
+    ],
+  },
+  {
+    id: "social",
+    useCase: "social-media",
+    categories: ["content"],
+    phrases: ["social media"],
+    anchors: ["instagram", "linkedin"],
+    coveredVerbs: ["manage"],
+    covered: [
+      "manage", "social", "media", "content", "scheduling", "engagement", "monitoring",
+      "trend", "analysis", "response", "drafting",
+    ],
+  },
+  {
+    id: "helpdesk",
+    useCase: "it-helpdesk",
+    categories: ["it-support"],
+    phrases: ["help desk", "helpdesk", "it help", "password reset", "reset passwords"],
+    anchors: ["itsm", "passwords", "password"],
+    coveredVerbs: ["handle"],
+    covered: [
+      "handle", "it", "help", "desk", "requests", "request", "troubleshoot", "common",
+      "issues", "issue", "reset", "passwords", "password", "route", "tickets", "ticket",
+      "basic", "system", "actions", "action",
+    ],
+  },
+  {
+    id: "security",
+    useCase: "security-ops",
+    categories: ["security"],
+    phrases: ["threat hunting", "security triage"],
+    anchors: ["phishing", "phish", "malware", "ransomware", "soc", "threat", "threats", "incident", "incidents"],
+    coveredVerbs: ["monitor"],
+    covered: [
+      "monitor", "respond", "threats", "threat", "incidents", "incident", "security",
+      "triage", "phishing", "analysis", "anomaly", "detection", "context",
+    ],
+  },
+  {
+    id: "research",
+    useCase: "deep-research",
+    categories: ["research"],
+    phrases: ["literature review", "literature reviews", "competitive analysis", "market research", "deep research"],
+    anchors: ["research", "synthesize"],
+    coveredVerbs: [],
+    covered: [
+      "deep", "multi", "step", "research", "synthesize", "findings", "finding", "competitive",
+      "analysis", "market", "literature", "reviews", "review", "cited", "reports", "report",
+      "dozens", "sources", "source",
+    ],
+  },
+  {
+    id: "tutoring",
+    useCase: "tutoring",
+    categories: ["learning"],
+    phrases: ["personalized learning", "study plan", "study plans", "practice problems"],
+    anchors: ["tutor", "tutoring", "homework"],
+    coveredVerbs: [],
+    covered: [
+      "support", "personalized", "learning", "tutoring", "tutor", "adaptive", "study",
+      "plans", "plan", "explain", "concepts", "concept", "generate", "practice", "problems",
+      "problem", "track", "progress",
+    ],
+  },
+  {
+    id: "video",
+    useCase: "game-creative",
+    categories: ["creative-media"],
+    phrases: ["sizzle reel", "highlight reel", "youtube short"],
+    anchors: [
+      "video", "videos", "clip", "clips", "clipping", "youtube", "reel", "reels", "shorts",
+      "short", "highlight", "highlights", "twitch", "stream", "streams", "streaming", "vod",
+      "film", "movie", "movies", "tiktok", "caption", "captions",
+    ],
+    coveredVerbs: ["clip", "edit", "make", "generate", "create"],
+    covered: [
+      "video", "videos", "clip", "clips", "clipping", "youtube", "reel", "reels", "shorts",
+      "short", "highlight", "highlights", "twitch", "stream", "streams", "streaming", "vod",
+      "film", "movie", "movies", "tiktok", "caption", "captions", "edit", "editing", "listing",
+      "sizzle", "gaming",
+    ],
+  },
+  {
+    id: "code",
+    useCase: "coding-agents",
+    categories: ["coding-agents"],
+    phrases: ["pull request", "pull requests", "write code", "coding agent"],
+    anchors: ["code", "coding", "debug", "debugging", "refactor", "programming", "github", "ide", "repo", "repository"],
+    coveredVerbs: ["write"],
+    covered: [
+      "write", "debug", "refactor", "ship", "code", "full", "feature", "development", "bug",
+      "fixes", "fix", "pull", "requests", "request", "legacy", "upgrades", "upgrade", "test",
+      "generation",
+    ],
+  },
+  {
+    id: "workflow",
+    useCase: "workflow-automation",
+    categories: ["workflow-automation"],
+    phrases: ["personal tasks", "multi-tool"],
+    anchors: ["automate", "automation", "automated", "automating", "workflow", "workflows", "zap"],
+    coveredVerbs: ["automate", "orchestrate"],
+    covered: [
+      "orchestrate", "multi", "tool", "workflows", "workflow", "connect", "crm", "email",
+      "calendar", "docs", "end", "processes", "process", "onboarding", "quote", "cash",
+      "automate", "automation", "personal", "tasks", "task",
+    ],
+  },
+  {
+    id: "crew",
+    useCase: "multi-agent-workflows",
+    categories: ["agent-frameworks"],
+    phrases: ["multi-agent", "agent crew"],
+    anchors: ["crew", "crews"],
+    coveredVerbs: [],
+    covered: ["multi", "agent", "crew", "crews", "workflows", "workflow"],
+  },
+  {
+    id: "rag",
+    useCase: "research-rag",
+    categories: ["search-rag"],
+    phrases: ["vector database"],
+    anchors: ["rag", "vector", "crawler", "crawl", "retrieval"],
+    coveredVerbs: [],
+    covered: ["rag", "vector", "crawler", "crawl", "retrieval", "pdfs", "pdf"],
+  },
+  {
+    id: "meetings",
+    useCase: "meetings-knowledge",
+    categories: ["knowledge"],
+    phrases: ["meeting notes", "action items"],
+    anchors: ["meeting", "meetings", "transcript", "transcribe", "transcription"],
+    coveredVerbs: ["turn"],
+    covered: [
+      "turn", "meeting", "meetings", "notes", "note", "actions", "action", "transcribe",
+      "transcript", "extract", "decisions", "decision", "items", "item", "assign", "tasks",
+      "task", "project", "tools", "automatically",
+    ],
+  },
+  {
+    id: "browser",
+    useCase: "tool-use-browser",
+    categories: ["tool-use"],
+    phrases: ["computer use", "computer-use", "fill forms", "browser agent"],
+    anchors: ["browser", "mcp", "scrape", "scraping"],
+    coveredVerbs: ["run"],
+    covered: [
+      "run", "browser", "based", "computer", "use", "tasks", "task", "fill", "forms", "form",
+      "navigate", "websites", "website", "complete", "multi", "step", "online", "workflows",
+      "workflow", "require", "clicking", "typing",
+    ],
+  },
+  {
+    id: "npc",
+    useCase: "game-npcs",
+    categories: ["game-ai"],
+    phrases: ["game master", "in-game"],
+    anchors: ["npc", "npcs"],
+    coveredVerbs: [],
+    covered: ["npc", "npcs", "game", "discord", "character", "characters"],
+  },
+];
+
+export const CONCEPT_BY_ID = new Map(CONCEPTS.map((concept) => [concept.id, concept]));

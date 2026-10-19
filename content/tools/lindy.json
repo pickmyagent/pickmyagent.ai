@@ -1,0 +1,68 @@
+{
+  "id": "lindy",
+  "slug": "lindy",
+  "name": "Lindy",
+  "websiteUrl": "https://www.lindy.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Assistant for inbox and calendar jobs, with $50 in free credits.",
+  "longDescription": "Lindy's pricing page says you can start with $50 in free credits and lists jobs including inbox and calendar, scheduling, and lead outreach. It also lists credit packs from $29.99. We did not create an account, and we do not treat the credit pack as a flat monthly seat price.",
+  "categories": [
+    "productivity"
+  ],
+  "useCaseTags": [
+    "scheduling-assistant"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "usage",
+    "freemium"
+  ],
+  "pricingNotes": "The pricing page offers $50 in free credits and lists inbox and calendar among jobs. Credit packs are listed from $29.99, which is not a confirmed seat subscription.",
+  "pricingUrl": "https://www.lindy.ai/pricing",
+  "docsUrl": "https://www.lindy.ai/pricing",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Handing inbox and calendar chores to an assistant that bills in credits"
+  ],
+  "notIdealFor": [
+    "Someone who wants one flat seat price with credits included"
+  ],
+  "strength": "Lindy's pricing page offers $50 in free credits and lists inbox and calendar among the jobs it can take.",
+  "weakness": "Paid use is sold as credit packs, starting at $29.99 on that page, not as one flat seat subscription we could confirm.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.lindy.ai/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.lindy.ai/"
+  },
+  "useCaseFit": {
+    "scheduling-assistant": "Lists inbox and calendar work and starts with $50 in free credits."
+  }
+}

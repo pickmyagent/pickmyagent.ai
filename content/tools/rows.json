@@ -1,0 +1,68 @@
+{
+  "id": "rows",
+  "slug": "rows",
+  "name": "Rows",
+  "websiteUrl": "https://rows.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Spreadsheet with an AI analyst. Plus is $8 per user each month.",
+  "longDescription": "Rows' pricing page lists a Free plan at $0 and Plus at $8 per month per user for analysis and reporting with AI. The page also noted that Rows has joined Superhuman. We did not create a workspace.",
+  "categories": [
+    "data-analysis"
+  ],
+  "useCaseTags": [
+    "analyze-data"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Free is $0. Plus is $8 per month per user for analysis and reporting with AI.",
+  "pricingUrl": "https://rows.com/pricing",
+  "docsUrl": "https://rows.com/pricing",
+  "freeTier": true,
+  "freeTierNotes": null,
+  "startingPrice": 8,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Analyzing a spreadsheet with an AI assistant on a listed free plan"
+  ],
+  "notIdealFor": [
+    "Someone who wants a BI warehouse rather than a sheet"
+  ],
+  "strength": "Rows lists a Free plan at $0 and Plus at $8 per user per month for analysis with AI.",
+  "weakness": "The Plus price is per user, and the page says Rows has joined Superhuman, so the brand may change.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://rows.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://rows.com/"
+  },
+  "useCaseFit": {
+    "analyze-data": "Spreadsheet analysis with a free plan and Plus at $8 per user per month."
+  }
+}

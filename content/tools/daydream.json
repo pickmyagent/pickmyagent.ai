@@ -1,0 +1,67 @@
+{
+  "id": "daydream",
+  "slug": "daydream",
+  "name": "Daydream",
+  "websiteUrl": "https://daydream.ing/",
+  "affiliateUrl": null,
+  "shortDescription": "AI fashion agent to chat and shop across 10,000+ stores.",
+  "longDescription": "Daydream's homepage says it is a personal AI fashion agent, that you chat to shop, and that it covers 10,000+ stores. The fetched text did not list a price. We did not create an account.",
+  "categories": [
+    "shopping"
+  ],
+  "useCaseTags": [
+    "shop-products"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "The site says it is a personal AI fashion agent for chatting to shop across 10,000+ stores. No price was in the fetch.",
+  "pricingUrl": "https://daydream.ing/",
+  "docsUrl": "https://daydream.ing/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Chatting to find fashion products across many stores"
+  ],
+  "notIdealFor": [
+    "General grocery or electronics shopping"
+  ],
+  "strength": "Daydream describes a personal AI fashion agent for chatting to shop across more than 10,000 stores.",
+  "weakness": "The fetched page did not list a price, and the product is fashion-specific.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T16:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://daydream.ing/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://daydream.ing/"
+  },
+  "useCaseFit": {
+    "shop-products": "Chat shopping agent covering more than 10,000 fashion stores."
+  }
+}

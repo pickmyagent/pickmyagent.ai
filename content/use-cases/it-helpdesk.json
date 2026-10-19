@@ -1,0 +1,26 @@
+{
+  "slug": "it-helpdesk",
+  "title": "Handle IT help desk requests",
+  "summary": "Triage common IT requests and route the rest.",
+  "audienceHints": [
+    "it teams"
+  ],
+  "matchTags": [
+    "it-helpdesk"
+  ],
+  "jobPhrase": "handling IT help desk requests",
+  "assistantTask": "draft a password-reset checklist and what to escalate",
+  "assistantContext": "triaging an IT ticket",
+  "searchTopic": "the system named in the ticket",
+  "recommended": [
+    {
+      "toolId": "freshservice",
+      "why": "IT Starter is $19 per agent per month billed annually. Docs checked."
+    },
+    {
+      "toolId": "moveworks",
+      "why": "ITSM automation and employee self-service. Docs checked."
+    }
+  ],
+  "intro": "AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do."
+}

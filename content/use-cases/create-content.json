@@ -1,0 +1,30 @@
+{
+  "slug": "create-content",
+  "title": "Create and optimize content",
+  "summary": "Draft blog posts, SEO articles, and marketing copy.",
+  "audienceHints": [
+    "marketers"
+  ],
+  "matchTags": [
+    "create-content"
+  ],
+  "jobPhrase": "creating and optimizing content",
+  "assistantTask": "outline a post and draft a paragraph",
+  "assistantContext": "drafting marketing content",
+  "searchTopic": "the topic of the post",
+  "recommended": [
+    {
+      "toolId": "jasper",
+      "why": "Marketer workspace with agents. Docs checked."
+    },
+    {
+      "toolId": "copy-ai",
+      "why": "Content workflows. Docs checked."
+    },
+    {
+      "toolId": "writesonic",
+      "why": "Starter is $79 per month billed annually. Docs checked."
+    }
+  ],
+  "intro": "AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit."
+}

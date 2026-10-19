@@ -1,0 +1,26 @@
+{
+  "slug": "shop-products",
+  "title": "Shop and recommend products",
+  "summary": "Compare products and narrow a purchase.",
+  "audienceHints": [
+    "shoppers"
+  ],
+  "matchTags": [
+    "shop-products"
+  ],
+  "jobPhrase": "shopping and comparing products",
+  "assistantTask": "compare product options from the details you paste",
+  "assistantContext": "choosing a product",
+  "searchTopic": "the product category you named",
+  "recommended": [
+    {
+      "toolId": "daydream",
+      "why": "AI fashion shopping across 10,000+ stores. Docs checked."
+    },
+    {
+      "toolId": "alexa-shopping",
+      "why": "Amazon's shopping assistant, formerly Rufus. Docs checked."
+    }
+  ],
+  "intro": "AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from."
+}
