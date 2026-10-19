@@ -224,7 +224,7 @@ export function JobSearch({
             ))}
           </ul>
         )}
-        {showSearchNewsletter ? (
+        {showSearchNewsletter && !showInlineNewsletter ? (
           <SearchNewsletterPrompt
             idPrefix="search-results-end"
             className="mt-6"
