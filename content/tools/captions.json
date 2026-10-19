@@ -64,5 +64,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://captions.ai/"
+  },
+  "useCaseFit": {
+    "game-creative": "Trims video and adds captions, and the free plan includes some of those edits."
   }
 }

@@ -1,0 +1,39 @@
+{
+  "slug": "manage-portfolio",
+  "title": "Manage an investment portfolio",
+  "summary": "Track accounts and research investments. PickMyAgent is not financial advice.",
+  "audienceHints": [
+    "investors"
+  ],
+  "matchTags": [
+    "manage-portfolio"
+  ],
+  "jobPhrase": "managing an investment portfolio",
+  "assistantTask": "compare account fees, summarize holdings, and draft questions for an advisor",
+  "assistantContext": "review an investment portfolio",
+  "searchTopic": "fees and account types",
+  "disclaimer": "PickMyAgent is not financial advice.",
+  "recommended": [
+    {
+      "toolId": "portfolio-pilot",
+      "why": "Free plan tracks net worth and a portfolio assessment. Gold adds recommendations. Docs checked, not hands-on."
+    },
+    {
+      "toolId": "magnifi",
+      "why": "Links brokerage accounts on the free tier. Premium adds forecasting. Docs checked from the app listing."
+    },
+    {
+      "toolId": "composer",
+      "why": "Starter is $0 and can automate one strategy. Docs and the pricing page were checked."
+    },
+    {
+      "toolId": "kubera",
+      "why": "Flat annual fee for household tracking. Docs checked. There is no $0 plan."
+    },
+    {
+      "toolId": "range",
+      "why": "Advisory membership with an AI assistant and no AUM fee. Premium is an annual price. Docs checked."
+    }
+  ],
+  "intro": "AI agents can line up accounts, compare fees, and draft questions about risk so you can review a portfolio without guessing what each holding costs."
+}

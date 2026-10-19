@@ -185,6 +185,12 @@ for (const useCase of useCases) {
     if (!rec.why || rec.why.length < 20) {
       fail(`${useCase.slug} / ${rec.toolId} needs a why sentence`);
     }
+    if (!tool.generalPurpose && !tool.useCaseFit?.[useCase.slug]) {
+      fail(`${tool.id} needs a useCaseFit line for ${useCase.slug}`);
+    }
+  }
+  if (typeof useCase.intro !== "string" || !useCase.intro.startsWith("AI agents")) {
+    fail(`${useCase.slug} needs an intro sentence that starts with "AI agents"`);
   }
 }
 

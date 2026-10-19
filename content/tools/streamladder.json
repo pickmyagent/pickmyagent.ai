@@ -61,5 +61,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.streamladder.com/"
+  },
+  "useCaseFit": {
+    "game-creative": "Reframes Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks."
   }
 }

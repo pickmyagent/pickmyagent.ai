@@ -41,6 +41,9 @@ export function ToolCard({
         </p>
         {why ? (
           <p className="mt-3 border-l-2 border-gold pl-3 text-sm leading-relaxed text-text">
+            <span className="mb-1 block font-mono text-[11px] tracking-wide text-gold uppercase">
+              Why it helps
+            </span>
             {why}
           </p>
         ) : null}

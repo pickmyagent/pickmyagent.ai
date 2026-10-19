@@ -32,7 +32,7 @@
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
-    "Game teams looking up modl.ai\u2019s current product page"
+    "Game teams looking up modl.ai’s current product page"
   ],
   "notIdealFor": [
     "A self-serve price comparison",
@@ -63,5 +63,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://modl.ai/"
+  },
+  "useCaseFit": {
+    "game-npcs": "Game AI tools for teams, and the pricing page we checked returned 404."
   }
 }

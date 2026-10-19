@@ -40,7 +40,7 @@
   ],
   "notIdealFor": [
     "A tiny script where a smaller library is enough",
-    "A hands-on install \u2014 we did not run one"
+    "A hands-on install — we did not run one"
   ],
   "strength": "The open-source repo is the free path, and a platform beta release was published on October 14, 2026.",
   "weakness": "The hosted plan we checked starts at $50 per month after a 7-day trial, so it is not a free product.",
@@ -73,5 +73,9 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://github.com/Significant-Gravitas/AutoGPT"
+  },
+  "useCaseFit": {
+    "coding-agents": "Runs an open-source agent loop toward a coding goal, and you review the output.",
+    "multi-agent-workflows": "Open-source agent project that can try a multi-step goal you give it."
   }
 }

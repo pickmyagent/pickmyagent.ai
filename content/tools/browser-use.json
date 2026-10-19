@@ -77,5 +77,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://browser-use.com/"
+  },
+  "useCaseFit": {
+    "tool-use-browser": "Open-source Python agent that opens pages, clicks, and types in a browser."
   }
 }

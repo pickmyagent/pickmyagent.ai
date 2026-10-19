@@ -40,7 +40,7 @@
   ],
   "notIdealFor": [
     "A headless library you import from Python",
-    "A hands-on install check \u2014 we did not run one"
+    "A hands-on install check — we did not run one"
   ],
   "strength": "The free plan includes limited agent and chat requests in a desktop IDE that can edit the repo.",
   "weakness": "The free plan caps agent and chat requests, and the pricing page we fetched did not state a clear lowest monthly price.",
@@ -67,5 +67,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://cursor.com/"
+  },
+  "useCaseFit": {
+    "coding-agents": "Desktop IDE agent that can edit the repo, with a free plan of limited requests."
   }
 }

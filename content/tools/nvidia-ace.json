@@ -5,7 +5,7 @@
   "websiteUrl": "https://developer.nvidia.com/ace-for-games",
   "affiliateUrl": null,
   "shortDescription": "NVIDIA ACE toolkit for in-game characters, including developer downloads. Not a simple SaaS signup.",
-  "longDescription": "NVIDIA ACE for Games is a developer toolkit for in-game characters. The page we read describes downloads and plugins; Unreal plugins were noted as MIT-licensed in that earlier read. It is not a simple hosted free tier \u2014 it assumes NVIDIA developer access and hardware. We did not install the SDK. Open-source status for the whole product was not recorded as a yes or no.",
+  "longDescription": "NVIDIA ACE for Games is a developer toolkit for in-game characters. The page we read describes downloads and plugins; Unreal plugins were noted as MIT-licensed in that earlier read. It is not a simple hosted free tier — it assumes NVIDIA developer access and hardware. We did not install the SDK. Open-source status for the whole product was not recorded as a yes or no.",
   "categories": [
     "game-ai"
   ],
@@ -32,7 +32,7 @@
   "openSource": null,
   "repoUrl": null,
   "bestFor": [
-    "Game teams already on NVIDIA\u2019s developer stack",
+    "Game teams already on NVIDIA’s developer stack",
     "In-game characters where a local or OEM runtime matters"
   ],
   "notIdealFor": [
@@ -63,5 +63,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://developer.nvidia.com/ace-for-games"
+  },
+  "useCaseFit": {
+    "game-npcs": "Developer downloads and plugins for in-game characters on NVIDIA's stack."
   }
 }

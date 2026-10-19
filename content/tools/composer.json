@@ -1,0 +1,69 @@
+{
+  "affiliateUrl": null,
+  "platforms": [
+    "web"
+  ],
+  "freeTierNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T12:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "composer",
+  "slug": "composer",
+  "name": "Composer",
+  "websiteUrl": "https://www.composer.trade/",
+  "shortDescription": "Automates a trading strategy. Starter is $0. Advanced is $10 per month.",
+  "longDescription": "Composer lets you build and automate trading strategies. On October 16, 2026 the pricing page listed Starter at $0, including one automated strategy, and Advanced at $10 per month. Brokerage services are through a registered broker-dealer. We did not open an account. This is not financial advice.",
+  "categories": [
+    "personal-finance"
+  ],
+  "useCaseTags": [
+    "manage-portfolio"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Starter is $0. Advanced is $10 per month. Regulatory fees on sales are separate. Not financial advice.",
+  "pricingUrl": "https://www.composer.trade/pricing",
+  "docsUrl": "https://www.composer.trade/pricing",
+  "freeTier": true,
+  "startingPrice": 10,
+  "freeTrial": null,
+  "bestFor": [
+    "Automating one strategy on the $0 Starter plan"
+  ],
+  "notIdealFor": [
+    "Someone who does not want a brokerage account",
+    "Anyone treating this card as financial advice"
+  ],
+  "strength": "Starter is $0 and can automate one strategy, and Advanced is $10 per month.",
+  "weakness": "Automated trading can lose money, and sale fees are listed apart from the subscription.",
+  "sources": [
+    "https://www.composer.trade/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.composer.trade/pricing"
+  },
+  "useCaseFit": {
+    "manage-portfolio": "Automates one trading strategy on the $0 Starter plan, and Advanced is $10 a month."
+  }
+}

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/assemble-catalog.mjs && next dev",
-    "build": "node scripts/assemble-catalog.mjs && next build",
+    "build": "node scripts/assemble-catalog.mjs && node --experimental-strip-types --test tests/search.test.ts && next build",
     "start": "next start",
     "lint": "eslint",
     "test": "node scripts/assemble-catalog.mjs && node --experimental-strip-types --test tests/search.test.ts tests/seo.test.ts tests/community.test.ts",

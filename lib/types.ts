@@ -88,6 +88,14 @@ export type Tool = {
   updatedAt: string;
   sources: string[];
   siteLoad: { status: number; finalUrl: string };
+  /** One factual sentence per use case this tool can appear for. */
+  useCaseFit?: Record<string, string>;
+  /** Chat assistant shown only after specialist tools, with a fixed label. */
+  generalPurpose?: boolean;
+  /** Short name used in a fallback “Ask …” line. */
+  assistantName?: string;
+  /** draft: research and write. search: look up public sources. */
+  assistantKind?: "draft" | "search";
 };
 
 export type Recommendation = {
@@ -102,6 +110,18 @@ export type UseCase = {
   audienceHints: string[];
   matchTags: string[];
   recommended: Recommendation[];
+  /** Plain-language job used in the search header. */
+  jobPhrase?: string;
+  /** Tasks a chat assistant can be asked to do for this job. */
+  assistantTask?: string;
+  /** “as you …” ending for that assistant line. */
+  assistantContext?: string;
+  /** Topic a search assistant can look up for this job. */
+  searchTopic?: string;
+  /** Shown with this use case. Not a performance claim. */
+  disclaimer?: string;
+  /** One sentence on how AI agents help with this job. No outcome claim. */
+  intro?: string;
 };
 
 export type Category = {

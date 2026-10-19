@@ -63,5 +63,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://runway.com/"
+  },
+  "useCaseFit": {
+    "game-creative": "Generates and edits video, and the pricing page lists plans from $12 per month."
   }
 }

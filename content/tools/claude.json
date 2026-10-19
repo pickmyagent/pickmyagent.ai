@@ -5,9 +5,10 @@
   "websiteUrl": "https://www.anthropic.com/claude",
   "affiliateUrl": null,
   "shortDescription": "Anthropic Claude product and API for chat and coding. Docs checked; we did not sign up.",
-  "longDescription": "Claude is Anthropic\u2019s model product, used for chat and coding. The URL we checked redirected toward the Claude product overview. The pricing page included a $0 option in the text we could read; API billing is separate. We did not create an account.",
+  "longDescription": "Claude is Anthropic’s model product, used for chat and coding. The URL we checked redirected toward the Claude product overview. The pricing page included a $0 option in the text we could read; API billing is separate. We did not create an account.",
   "categories": [
-    "coding-agents"
+    "coding-agents",
+    "general-assistants"
   ],
   "useCaseTags": [
     "coding-agents"
@@ -35,7 +36,7 @@
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
-    "Chat and coding help through Claude\u2019s product or API",
+    "Chat and coding help through Claude’s product or API",
     "Teams already comparing model providers"
   ],
   "notIdealFor": [
@@ -67,5 +68,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://claude.com/product/overview"
-  }
+  },
+  "generalPurpose": true,
+  "assistantName": "Claude",
+  "assistantKind": "draft"
 }

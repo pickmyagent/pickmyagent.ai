@@ -63,5 +63,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.kapwing.com/"
+  },
+  "useCaseFit": {
+    "game-creative": "Browser editor for trimming, captions, and resizing video into social clips."
   }
 }

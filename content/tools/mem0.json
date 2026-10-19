@@ -39,7 +39,7 @@
   ],
   "notIdealFor": [
     "A full research chat product",
-    "A confirmed free cloud allotment \u2014 re-read the pricing page"
+    "A confirmed free cloud allotment — re-read the pricing page"
   ],
   "strength": "We imported mem0ai 2.2.1 locally, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
   "weakness": "The paid plan starts at $19 per month once you pass those monthly request limits.",
@@ -78,5 +78,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://mem0.ai/"
+  },
+  "useCaseFit": {
+    "research-rag": "Stores memory an agent can read later, and we imported the Python package locally."
   }
 }

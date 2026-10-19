@@ -65,5 +65,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://pika.art/"
+  },
+  "useCaseFit": {
+    "game-creative": "Generates a short video from a prompt, and Starter is $10 per month."
   }
 }

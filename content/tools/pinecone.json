@@ -35,7 +35,7 @@
   ],
   "notIdealFor": [
     "A confirmed free tier from this check",
-    "Web search or page crawling \u2014 different tools"
+    "Web search or page crawling — different tools"
   ],
   "strength": "Starter is free for hosted vector search, and Builder is $20 per month with a 3-week trial.",
   "weakness": "Builder is $20 per month after the trial, and the free Starter limits were not spelled out on the page we parsed.",
@@ -62,5 +62,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.pinecone.io/"
+  },
+  "useCaseFit": {
+    "research-rag": "Hosts vectors for search over your documents, with a free Starter plan."
   }
 }

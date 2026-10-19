@@ -65,5 +65,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.meshy.ai/"
+  },
+  "useCaseFit": {
+    "game-creative": "Turns text or an image into a 3D asset, and the pricing page shows a $0 plan."
   }
 }

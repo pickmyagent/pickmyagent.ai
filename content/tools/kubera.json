@@ -1,0 +1,69 @@
+{
+  "affiliateUrl": null,
+  "platforms": [
+    "web"
+  ],
+  "freeTierNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T12:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "kubera",
+  "slug": "kubera",
+  "name": "Kubera",
+  "websiteUrl": "https://www.kubera.com/",
+  "shortDescription": "Household balance sheet. Essentials is $250 per year, with a 14-day trial.",
+  "longDescription": "Kubera tracks a household balance sheet for a flat annual fee. On October 16, 2026 the wealth-tracker page listed Essentials at $250 per year and Black at $2,500 per year, with a 14-day trial and no fee based on assets. We did not start a trial. This is not financial advice.",
+  "categories": [
+    "personal-finance"
+  ],
+  "useCaseTags": [
+    "manage-portfolio"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Essentials is $250 per year. Black is $2,500 per year. 14-day trial. No monthly price was listed. Not financial advice.",
+  "pricingUrl": "https://www.kubera.com/wealth-tracker",
+  "docsUrl": "https://help.kubera.com/article/129-what-is-kubera-black",
+  "freeTier": false,
+  "startingPrice": null,
+  "freeTrial": "14 days",
+  "bestFor": [
+    "Tracking a household balance sheet for a flat annual fee"
+  ],
+  "notIdealFor": [
+    "Someone who wants a lasting $0 plan",
+    "Anyone treating this card as financial advice"
+  ],
+  "strength": "Kubera Essentials is a flat $250 per year for one household, with a 14-day trial and no asset-based fee.",
+  "weakness": "There is no lasting $0 plan, and the pages we checked do not place trades for you.",
+  "sources": [
+    "https://www.kubera.com/wealth-tracker",
+    "https://help.kubera.com/article/129-what-is-kubera-black"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.kubera.com/wealth-tracker"
+  },
+  "useCaseFit": {
+    "manage-portfolio": "Tracks a household balance sheet for $250 a year, with a 14-day trial."
+  }
+}

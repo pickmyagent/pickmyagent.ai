@@ -79,5 +79,9 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.llamaindex.ai/"
+  },
+  "useCaseFit": {
+    "multi-agent-workflows": "Open-source framework for agents that retrieve from documents you provide.",
+    "research-rag": "Retrieves passages from documents you provide and can hand them to an agent."
   }
 }

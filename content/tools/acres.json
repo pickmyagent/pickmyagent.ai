@@ -1,0 +1,68 @@
+{
+  "affiliateUrl": null,
+  "platforms": [
+    "web"
+  ],
+  "freeTierNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T12:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "acres",
+  "slug": "acres",
+  "name": "Acres",
+  "websiteUrl": "https://www.acres.com/",
+  "shortDescription": "Parcel maps for land. A free account exists. Plus is $9.99 per month.",
+  "longDescription": "Acres is a land-intelligence map. On October 16, 2026 the pricing page said you can start free for basic property insights, listed Plus at $9.99 per month (and $7.49 per month on the other figure), and said Acres+ can be tried free for 7 days. We did not create an account.",
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "find-land"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Plus is $9.99 per month, also shown at $7.49 per month. Free account for basic insights. Acres+ trial is 7 days.",
+  "pricingUrl": "https://www.acres.com/pricing",
+  "docsUrl": "https://www.acres.com/pricing",
+  "freeTier": true,
+  "startingPrice": 9.99,
+  "freeTrial": "7 days",
+  "bestFor": [
+    "Looking up parcels and basic property insights before a paid owner search"
+  ],
+  "notIdealFor": [
+    "Someone who needs comps on the free account"
+  ],
+  "strength": "A free account can view basic parcel insights, and Plus is listed at $9.99 per month.",
+  "weakness": "Owner mailing address and sold-land comps sit on the paid plans, not the free account.",
+  "sources": [
+    "https://www.acres.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.acres.com/pricing"
+  },
+  "useCaseFit": {
+    "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus."
+  }
+}

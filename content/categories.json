@@ -38,5 +38,20 @@
     "slug": "knowledge",
     "title": "Knowledge, notes & meetings",
     "summary": "Capture, summarize, and query team context."
+  },
+  {
+    "slug": "personal-finance",
+    "title": "Personal finance & investing",
+    "summary": "AI tools that track a portfolio or help you research investments."
+  },
+  {
+    "slug": "real-estate",
+    "title": "Land & real estate research",
+    "summary": "Parcel, ownership, and property research for land and real estate."
+  },
+  {
+    "slug": "general-assistants",
+    "title": "General-purpose AI assistants",
+    "summary": "Chat assistants you can ask to research or draft, not specialists for one job."
   }
 ]

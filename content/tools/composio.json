@@ -39,7 +39,7 @@
   ],
   "notIdealFor": [
     "A single API you already call directly",
-    "A local hands-on test \u2014 we did not run one"
+    "A local hands-on test — we did not run one"
   ],
   "strength": "The Hobby plan includes 100,000 tool calls per month for connecting agents to third-party apps.",
   "weakness": "The next plan starts at $29 per month once you need more than the Hobby tool-call allotment.",
@@ -73,5 +73,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://composio.dev/"
+  },
+  "useCaseFit": {
+    "tool-use-browser": "Connects agents to third-party apps, with a Hobby plan of tool calls."
   }
 }

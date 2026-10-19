@@ -65,5 +65,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.make.com/"
+  },
+  "useCaseFit": {
+    "workflow-automation": "Visual automations across apps, and the pricing FAQ describes 1,000 free credits a month."
   }
 }

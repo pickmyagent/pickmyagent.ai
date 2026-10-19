@@ -64,5 +64,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://convai.com/"
+  },
+  "useCaseFit": {
+    "game-npcs": "Conversational characters that talk with the player inside a game."
   }
 }

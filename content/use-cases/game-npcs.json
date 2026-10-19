@@ -30,5 +30,10 @@
       "toolId": "tavernbard",
       "why": "AI game master for Discord, with a free path that uses your own model subscription."
     }
-  ]
+  ],
+  "jobPhrase": "adding an in-game character that can talk",
+  "assistantTask": "draft character lines and list what the game still has to approve",
+  "assistantContext": "adding an in-game character that can talk",
+  "searchTopic": "how a game character can call a language model",
+  "intro": "AI agents can draft what an in-game character says, while the game still decides which lines are allowed."
 }

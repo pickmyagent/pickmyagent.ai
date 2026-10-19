@@ -31,7 +31,7 @@
   "repoUrl": null,
   "bestFor": [
     "Connecting hosted apps without running a server",
-    "Teams that already live in Zapier\u2019s app directory"
+    "Teams that already live in Zapier’s app directory"
   ],
   "notIdealFor": [
     "Self-hosted or offline workflows",
@@ -62,5 +62,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://zapier.com/"
+  },
+  "useCaseFit": {
+    "workflow-automation": "Connects hosted apps, and the free plan includes 100 tasks per month."
   }
 }

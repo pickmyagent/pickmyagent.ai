@@ -25,5 +25,10 @@
       "toolId": "tavily",
       "why": "Search API for agents. Pricing page showed a $0 option. We did not call the API."
     }
-  ]
+  ],
+  "jobPhrase": "automating steps in a web browser",
+  "assistantTask": "write the click-by-click steps and flag where a login or captcha can stop them",
+  "assistantContext": "automating steps in a web browser",
+  "searchTopic": "what the site allows an automated browser to do",
+  "intro": "AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path."
 }

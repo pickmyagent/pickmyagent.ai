@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.midjourney.com/",
   "affiliateUrl": null,
   "shortDescription": "Image generation. Official plans we read are paid subscriptions, with no free tier on the comparison.",
-  "longDescription": "Midjourney generates images. The homepage often returns HTTP 403 to automated clients; the plan comparison we could read lists Basic $10, Standard $30, Pro $60, and Mega $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article, not a guess \u2014 re-check the article before you quote them. We did not subscribe.",
+  "longDescription": "Midjourney generates images. The homepage often returns HTTP 403 to automated clients; the plan comparison we could read lists Basic $10, Standard $30, Pro $60, and Mega $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article, not a guess — re-check the article before you quote them. We did not subscribe.",
   "categories": [
     "creative-media"
   ],
@@ -37,7 +37,7 @@
     "Game concept art exploration"
   ],
   "notIdealFor": [
-    "A free tier \u2014 the official comparison we read does not list one",
+    "A free tier — the official comparison we read does not list one",
     "3D models, voice, or video editing"
   ],
   "strength": "The plan comparison we read lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month.",
@@ -68,5 +68,8 @@
   "siteLoad": {
     "status": 403,
     "finalUrl": "https://www.midjourney.com/"
+  },
+  "useCaseFit": {
+    "game-creative": "Generates images on a paid plan, which is a different job from editing video."
   }
 }

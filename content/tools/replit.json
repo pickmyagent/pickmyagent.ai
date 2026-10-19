@@ -65,5 +65,8 @@
   "siteLoad": {
     "status": 403,
     "finalUrl": "https://replit.com/"
+  },
+  "useCaseFit": {
+    "coding-agents": "Browser IDE with a coding agent, and a recorded free plan of 30 chat hours."
   }
 }

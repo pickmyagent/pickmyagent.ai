@@ -1,0 +1,39 @@
+{
+  "slug": "find-land",
+  "title": "Find land or real estate",
+  "summary": "Look up parcels, owners, and property records before you call a seller.",
+  "audienceHints": [
+    "buyers",
+    "investors"
+  ],
+  "matchTags": [
+    "find-land"
+  ],
+  "jobPhrase": "finding potentially viable land deals",
+  "assistantTask": "research zoning, compare parcels, and draft questions for sellers",
+  "assistantContext": "look for land deals",
+  "searchTopic": "zoning and parcels",
+  "recommended": [
+    {
+      "toolId": "acres",
+      "why": "Parcel maps and a free basic view. Paid plans add owner lookup and comps. Docs checked."
+    },
+    {
+      "toolId": "land-id",
+      "why": "Nationwide parcel and owner info, with AI Insights on higher plans. Docs checked."
+    },
+    {
+      "toolId": "propstream",
+      "why": "Property search with an AI search box and a 7-day trial. Docs checked."
+    },
+    {
+      "toolId": "mashvisor",
+      "why": "Rental comps and property analysis on a paid plan. Docs checked."
+    },
+    {
+      "toolId": "regrid",
+      "why": "Nationwide parcel boundaries and owner fields. Pricing is a data store, not one monthly price."
+    }
+  ],
+  "intro": "AI agents can screen parcels, pull zoning and comps, and track listings so you spend time only on land deals worth pursuing."
+}

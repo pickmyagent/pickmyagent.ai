@@ -65,5 +65,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://obsidian.md/"
+  },
+  "useCaseFit": {
+    "meetings-knowledge": "Local-first notes app that the official pricing page says is free without limits."
   }
 }

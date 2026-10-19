@@ -67,5 +67,9 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.tavily.com/"
+  },
+  "useCaseFit": {
+    "tool-use-browser": "Search API that gives an agent web results, with 1,000 free credits a month.",
+    "research-rag": "Search API for agents that need web results, with a free credit plan."
   }
 }

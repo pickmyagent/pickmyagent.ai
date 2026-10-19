@@ -5,7 +5,7 @@
   "websiteUrl": "https://github.com/microsoft/autogen",
   "affiliateUrl": null,
   "shortDescription": "Microsoft open-source Python library for multi-agent conversations. Newest release we found is from 2025.",
-  "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. We installed autogen-agentchat and imported it, with no model call. The latest Python GitHub release we found, python-v0.7.5, was published on September 30, 2025 \u2014 older than the other frameworks in this check. Treat freshness as an open question, not a verdict.",
+  "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. We installed autogen-agentchat and imported it, with no model call. The latest Python GitHub release we found, python-v0.7.5, was published on September 30, 2025 — older than the other frameworks in this check. Treat freshness as an open question, not a verdict.",
   "categories": [
     "agent-frameworks"
   ],
@@ -24,7 +24,7 @@
     "open_source",
     "free"
   ],
-  "pricingNotes": "No SaaS pricing page for the framework. Latest GitHub python release python-v0.7.5 dated 2025-09-30 \u2014 older than peers; industry notes mention Microsoft Agent Framework as successor \u2014 flag for catalog freshness.",
+  "pricingNotes": "No SaaS pricing page for the framework. Latest GitHub python release python-v0.7.5 dated 2025-09-30 — older than peers; industry notes mention Microsoft Agent Framework as successor — flag for catalog freshness.",
   "pricingUrl": "https://microsoft.github.io/autogen/stable/index.html",
   "docsUrl": "https://microsoft.github.io/autogen/stable/index.html",
   "freeTier": null,
@@ -40,7 +40,7 @@
   ],
   "notIdealFor": [
     "A frequently updated hosted product",
-    "Anyone who needs a 2026 release cadence \u2014 we did not find one"
+    "Anyone who needs a 2026 release cadence — we did not find one"
   ],
   "strength": "We imported autogen-agentchat 0.7.5 locally, and the library is open source with no product paywall.",
   "weakness": "The newest Python release we found is dated September 30, 2025, older than the peers we checked.",
@@ -80,5 +80,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://github.com/microsoft/autogen"
+  },
+  "useCaseFit": {
+    "multi-agent-workflows": "Open-source Python library for conversations between more than one agent."
   }
 }
