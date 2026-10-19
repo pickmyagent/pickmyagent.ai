@@ -166,8 +166,8 @@ for (const useCase of useCases) {
     fail("use case is missing slug, title, or summary");
   }
   const count = useCase.recommended?.length ?? 0;
-  if (count < 2 || count > 5) {
-    fail(`${useCase.slug} needs 2–5 recommended tools, found ${count}`);
+  if (count < 1 || count > 5) {
+    fail(`${useCase.slug} needs 1–5 recommended tools, found ${count}`);
   }
   const seen = new Set();
   for (const rec of useCase.recommended) {

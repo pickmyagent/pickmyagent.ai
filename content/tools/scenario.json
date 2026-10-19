@@ -5,12 +5,12 @@
   "websiteUrl": "https://www.scenario.com/",
   "affiliateUrl": null,
   "shortDescription": "Game art generation. The pricing page we checked mentions a free plan.",
-  "longDescription": "Scenario generates art aimed at games. The pricing crawl mentioned a free tier or free plan, plus starter language and no-credit-card wording. Paid samples in that crawl included $15, $45, and $75 per month — confirm them on the live page. We did not create an account.",
+  "longDescription": "Scenario generates art aimed at games. The pricing crawl mentioned a free tier or free plan, plus starter language and no-credit-card wording. Paid samples in that crawl included $15, $45, and $75 per month \u2014 confirm them on the live page. We did not create an account.",
   "categories": [
     "creative-media"
   ],
   "useCaseTags": [
-    "game-creative"
+    "image-3d"
   ],
   "toolTypes": [
     "creative"
@@ -37,8 +37,8 @@
     "Art pipelines that want a free plan to start"
   ],
   "notIdealFor": [
-    "3D mesh generation — see Meshy for that job",
-    "A hands-on generation test — we did not run one"
+    "3D mesh generation \u2014 see Meshy for that job",
+    "A hands-on generation test \u2014 we did not run one"
   ],
   "strength": "The free plan includes 50 credits per day for game art, and the paid plan starts at $15 per month.",
   "weakness": "It generates images and style sets, not 3D meshes.",
@@ -67,6 +67,6 @@
     "finalUrl": "https://www.scenario.com/"
   },
   "useCaseFit": {
-    "game-creative": "Generates game art, and the free plan includes 50 credits per day."
+    "image-3d": "Draws game art from a prompt."
   }
 }

@@ -2,6 +2,10 @@ import assert from "node:assert/strict";
 import { readFileSync, writeFileSync } from "node:fs";
 import test from "node:test";
 import { CONCEPTS } from "../lib/concepts.ts";
+import { domainAssistantLine } from "../lib/assistant-lines.ts";
+import { specialistLine, specialistLinePairs } from "../lib/specialist-lines.ts";
+import { BROKEN_ASSISTANT, BROKEN_HEADERS, grammarProblems, specialistWhyProblems } from "../scripts/grammar-gate.ts";
+import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport } from "../scripts/search-qa.ts";
 import {
   GENERIC_MATCH_WORDS,
   jobLead,
@@ -122,7 +126,8 @@ test("generic words do not select a specialist", () => {
   assert.equal(ranked.useCases.length, 0);
   assert.ok(ranked.tools.length > 0);
   assert.ok(ranked.tools.every((tool) => tool.generalPurpose));
-  assert.match(ranked.intro, /^AI agents can research, compare, summarize, draft, and automate/);
+  assert.match(ranked.intro, /^AI assistants can help with .+ by turning it into a plan/);
+  assert.equal(/\bparts of\b/i.test(ranked.intro), false);
   for (const tool of ranked.tools) {
     assert.ok(tool.whyItHelps.trim().length > 0, tool.name);
   }
@@ -144,7 +149,7 @@ for (const query of SAMPLE_QUERIES) {
     const ranked = rankCatalogQuery(query, catalog);
     assert.ok(ranked.tools.length > 0, query);
     assert.ok(ranked.intro.trim().length > 40, ranked.intro);
-    assert.match(ranked.intro, /AI agents/);
+    assert.match(ranked.intro, /AI (?:agents|assistants)/);
     for (const tool of ranked.tools) {
       assert.ok(tool.whyItHelps.trim().length > 0, `${query} / ${tool.name}`);
     }
@@ -188,7 +193,7 @@ type JobExpect = {
 };
 
 const REAL_ESTATE_RANK_INTRO =
-  "AI agents can help you find and rank real estate deals by researching, comparing, and analyzing.";
+  "AI agents can compare property records and rental or flip numbers so you sort the deals yourself.";
 
 const JOBS: JobExpect[] = [
   {
@@ -235,23 +240,23 @@ const JOBS: JobExpect[] = [
   {
     query: "Find real estate deals and rank them",
     useCase: "rank-property-deals",
-    intro: /find and rank real estate deals/,
+    intro: /property records|sort the deals/,
     exactIntro: REAL_ESTATE_RANK_INTRO,
   },
   {
     query: "rank rental properties by cash flow",
     useCase: "rank-property-deals",
-    intro: /rank rental properties by cash flow/,
+    intro: /property records|rental or flip/,
   },
   {
     query: "score houses to flip",
     useCase: "rank-property-deals",
-    intro: /score houses to flip/,
+    intro: /property records|flip/,
   },
   {
     query: "find commercial real estate deals",
     useCase: "rank-property-deals",
-    intro: /commercial real estate deals/,
+    intro: /property records|sort the deals/,
   },
   {
     query: "I want to find an agent that will do my taxes",
@@ -332,7 +337,7 @@ const JOBS: JobExpect[] = [
   {
     query: "Create and optimize content",
     useCase: "create-content",
-    intro: /content/,
+    intro: /blog|copy|SEO|heading/,
   },
   {
     query: "Analyze data and generate reports (spreadsheets, dashboards, anomaly detection, financial or business insights from multiple sources)",
@@ -474,11 +479,24 @@ function matchTagsFor(slug: string): string[] {
 
 function assertWhyMentionsJob(query: string, ranked: RankedSearch) {
   const tokens = queryTokens(query).filter((token) => token.length > 3);
+  const matched = catalog.useCases.find((item) => item.slug === ranked.useCases[0]?.slug);
+  const jobTokens = (matched?.jobPhrase ?? "").toLowerCase().match(/[a-z0-9]{4,}/g) ?? [];
   for (const tool of ranked.tools) {
     const why = tool.whyItHelps.toLowerCase();
     assert.ok(tool.whyItHelps.trim().length > 0, `${query} / ${tool.name} is missing a why-line`);
+    const mentionsQuery = tokens.some((token) => why.includes(token));
+    const mentionsJob = jobTokens.some((token) => why.includes(token));
+    if (tool.generalPurpose && matched) {
+      const written = domainAssistantLine(tool.slug, matched.slug);
+      assert.ok(
+        written === tool.whyItHelps || mentionsJob || mentionsQuery,
+        `${query} / ${tool.name} why-line is not about this job: ${tool.whyItHelps}`,
+      );
+      continue;
+    }
+    if (matched && specialistLine(matched.slug, tool.slug) === tool.whyItHelps) continue;
     assert.ok(
-      tokens.some((token) => why.includes(token)),
+      mentionsQuery || mentionsJob || tokens.length === 0,
       `${query} / ${tool.name} why-line is not about this job: ${tool.whyItHelps}`,
     );
   }
@@ -494,8 +512,9 @@ function assertNoBorrowedIntro(query: string, ranked: RankedSearch) {
 
 function assertJob(job: JobExpect) {
   const ranked = rankCatalogQuery(job.query, catalog);
-  assert.equal(ranked.lead, jobLead(job.query), job.query);
-  assert.match(ranked.intro, /^AI agents\b/, `${job.query} intro: ${ranked.intro}`);
+  const matchedCase = catalog.useCases.find((item) => item.slug === ranked.useCases[0]?.slug) ?? null;
+  assert.equal(ranked.lead, jobLead(job.query, matchedCase), job.query);
+  assert.match(ranked.intro, /^AI (?:agents|assistants)\b/, `${job.query} intro: ${ranked.intro}`);
   assert.match(ranked.intro, job.intro, `${job.query} intro: ${ranked.intro}`);
   if (job.exactIntro) assert.equal(ranked.intro, job.exactIntro);
   if (!mentionsLand(job.query)) {
@@ -552,6 +571,78 @@ for (const job of JOBS) {
     assertJob(job);
   });
 }
+
+const HEADER_CASES: { query: string; lead: string; intro: string | RegExp }[] = [
+  {
+    query: "Use an agent for my investment portfolio",
+    lead: "For managing your investment portfolio, here's how each tool can help:",
+    intro: "AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.",
+  },
+  {
+    query: "agent for taxes",
+    lead: "For doing your taxes, here's how each tool can help:",
+    intro: /tax/,
+  },
+  {
+    query: "AI for my small business",
+    lead: "For help with your small business, here's how each tool can help:",
+    intro: /^AI assistants can't run a small business for you/,
+  },
+  {
+    query: "best AI tool for real estate",
+    lead: "For help with real estate, here's how each tool can help:",
+    intro: REAL_ESTATE_RANK_INTRO,
+  },
+  {
+    query: "is there an AI that can plan my trip",
+    lead: "For planning your trip, here's how each tool can help:",
+    intro: /^AI agents\b/,
+  },
+  {
+    query: "Help me with my resume",
+    lead: "For writing your resume, here's how each tool can help:",
+    intro: /draft resume bullets/,
+  },
+  {
+    query: "AI video with camera moves",
+    lead: "For making an AI video with camera moves, here's how each tool can help:",
+    intro: /cinematic shot/,
+  },
+  {
+    query: "text to speech",
+    lead: "For making speech from text, here's how each tool can help:",
+    intro: /voice/,
+  },
+  {
+    query: "text to image",
+    lead: "For making an image from text, here's how each tool can help:",
+    intro: /image or 3D/,
+  },
+  {
+    query: "investment portfolio",
+    lead: "For managing an investment portfolio, here's how each tool can help:",
+    intro: "AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.",
+  },
+  {
+    query: "USE AI TO WRITE EMAILS",
+    lead: "For writing emails, here's how each tool can help:",
+    intro: /^AI assistants can help with writing emails by drafting a first version/,
+  },
+];
+
+test("wrapped queries become a gerund job in the header and intro", () => {
+  const banned = /\b(use an agent|i want|find an agent|is there an ai|best ai|help me)\b/i;
+  for (const item of HEADER_CASES) {
+    const ranked = rankCatalogQuery(item.query, catalog);
+    assert.equal(ranked.lead, item.lead, item.query);
+    if (item.intro instanceof RegExp) assert.match(ranked.intro, item.intro, `${item.query}: ${ranked.intro}`);
+    else assert.equal(ranked.intro, item.intro, item.query);
+    assert.equal(/\bparts of\b/i.test(ranked.intro), false, ranked.intro);
+    assert.equal(banned.test(ranked.lead), false, ranked.lead);
+    assert.equal(banned.test(ranked.intro), false, ranked.intro);
+    assert.match(ranked.lead, /^For [a-z]/, ranked.lead);
+  }
+});
 
 test("real estate ranking header echoes the query and never the land header", () => {
   const query = "Find real estate deals and rank them";
@@ -674,29 +765,88 @@ test("newsletter prompt renders at most once on a results page", () => {
   assert.equal((browser.match(/<SearchNewsletterPrompt/g) ?? []).length, 2);
 });
 
+test("grammar gate flags the broken header and assistant examples", () => {
+  for (const phrase of BROKEN_HEADERS) {
+    const problems = grammarProblems(`For ${phrase}, here's how each tool can help:`, "header");
+    assert.ok(problems.length > 0, phrase);
+  }
+  for (const phrase of BROKEN_ASSISTANT) {
+    assert.ok(grammarProblems(phrase, "why").length > 0, phrase);
+  }
+  const ranked = rankCatalogQuery("fix my car", catalog);
+  assert.equal(ranked.lead, "For fixing your car, here's how each tool can help:");
+  const sellers = rankCatalogQuery("use an agent for motivated sellers", catalog);
+  assert.equal(sellers.lead, "For finding motivated sellers, here's how each tool can help:");
+  const fsbo = rankCatalogQuery("fsbo near me", catalog);
+  assert.equal(fsbo.lead, "For help with FSBO near me, here's how each tool can help:");
+  const gmail = rankCatalogQuery("triage my gmail", catalog);
+  assert.equal(gmail.lead, "For triaging your Gmail, here's how each tool can help:");
+  const rag = rankCatalogQuery("rag", catalog);
+  assert.equal(rag.lead, "For building a RAG pipeline, here's how each tool can help:");
+  const tutor = rankCatalogQuery("I need AI to tutor me", catalog);
+  assert.equal(tutor.lead, "For getting tutoring help, here's how each tool can help:");
+});
+
+test("every specialist use-case pair has a hand-written why-line", () => {
+  const names = new Map(catalog.tools.map((tool) => [tool.slug, tool.name]));
+  const covered = new Set(specialistLinePairs().map((pair) => `${pair.useCaseSlug}:${pair.toolSlug}`));
+  for (const pair of specialistLinePairs()) {
+    const name = names.get(pair.toolSlug);
+    assert.ok(name, pair.toolSlug);
+    assert.ok(pair.line.startsWith(`${name} `), pair.line);
+    assert.deepEqual(specialistWhyProblems(name, pair.line), [], `${pair.toolSlug}: ${pair.line}`);
+  }
+  for (const concept of CONCEPTS) {
+    const useCase = catalog.useCases.find((item) => item.slug === concept.useCase);
+    assert.ok(useCase, concept.useCase);
+    const allowed = new Set(concept.categories);
+    const tags = useCase.matchTags ?? [concept.useCase];
+    for (const tool of catalog.tools) {
+      if (tool.generalPurpose || tool.status !== "published") continue;
+      if (!tool.useCaseTags.some((tag) => tags.includes(tag))) continue;
+      if (!tool.categories.every((category) => allowed.has(category))) continue;
+      assert.ok(covered.has(`${concept.useCase}:${tool.slug}`), `${tool.name} missing a line for ${concept.useCase}`);
+      assert.ok(specialistLine(concept.useCase, tool.slug), tool.slug);
+    }
+  }
+});
+
+test("catalog prose and the search QA harness stay grammatical", () => {
+  const problems = [...catalogLeakProblems(catalog), ...qaProblems(catalog)];
+  assert.deepEqual(problems, [], problems.slice(0, 12).join("\n"));
+  const report = readFileSync(new URL("../qa/search-qa-report.md", import.meta.url), "utf8");
+  assert.equal(report, renderSearchQaReport(catalog));
+  assert.ok(QA_QUERIES.length >= 200);
+  assert.match(report, new RegExp(`${QA_QUERIES.length} queries`));
+});
+
 test("tax and wedding why-lines name the job instead of the search wrapper", () => {
   const taxes = rankCatalogQuery("I want to find an agent that will do my taxes", catalog);
-  const specialistEndings = taxes.tools
-    .filter((tool) => !tool.generalPurpose)
-    .map((tool) => tool.whyItHelps.split(/so you can /i)[1] ?? "");
-  assert.ok(specialistEndings.length >= 2);
-  assert.ok(new Set(specialistEndings).size > 1, specialistEndings.join(" | "));
+  const specialists = taxes.tools.filter((tool) => !tool.generalPurpose);
+  assert.ok(specialists.length >= 2);
+  assert.equal(new Set(specialists.map((tool) => tool.whyItHelps)).size, specialists.length);
   for (const tool of taxes.tools) {
     assert.equal(/find an agent/i.test(tool.whyItHelps), false, tool.whyItHelps);
     assert.equal(/\bwhile you\b/i.test(tool.whyItHelps), false, tool.whyItHelps);
     if (!tool.generalPurpose) {
-      assert.match(tool.whyItHelps, /file your taxes|get your taxes done|finish your taxes|complete your taxes/);
+      assert.match(tool.whyItHelps, /tax/i);
+      assert.equal(/\bso you can\b/i.test(tool.whyItHelps), false, tool.whyItHelps);
+      assert.deepEqual(specialistWhyProblems(tool.name, tool.whyItHelps), []);
     }
   }
   const wedding = rankCatalogQuery("plan a wedding", catalog);
   const claude = wedding.tools.find((tool) => tool.slug === "claude");
+  const chatgpt = wedding.tools.find((tool) => tool.slug === "chatgpt");
+  const gemini = wedding.tools.find((tool) => tool.slug === "gemini");
   const perplexity = wedding.tools.find((tool) => tool.slug === "perplexity");
   assert.ok(claude);
+  assert.ok(chatgpt);
+  assert.ok(gemini);
   assert.ok(perplexity);
-  assert.match(claude.whyItHelps, /guest count and budget/i);
-  assert.match(claude.whyItHelps, /wedding vendor checklist/i);
-  assert.match(claude.whyItHelps, /timeline/i);
-  assert.match(perplexity.whyItHelps, /sourced summary/i);
+  assert.match(claude.whyItHelps, /break planning a wedding into a step-by-step plan/i);
+  assert.match(chatgpt.whyItHelps, /checklist for planning a wedding/i);
+  assert.match(gemini.whyItHelps, /shared doc or sheet to track planning a wedding/i);
+  assert.match(perplexity.whyItHelps, /sourced tips on planning a wedding/i);
   assert.equal(new Set(wedding.tools.map((tool) => tool.whyItHelps)).size, wedding.tools.length);
 });
 
@@ -804,6 +954,43 @@ test("regression report for the pull request", () => {
   });
   writeFileSync("/tmp/search-regression-report.json", JSON.stringify(report, null, 2));
   assert.equal(report.length, JOBS.length);
+});
+
+test("specialists stay inside the query domain", () => {
+  const land = rankCatalogQuery("find land", catalog);
+  assert.equal(land.tools.some((tool) => tool.slug === "mashvisor"), false);
+  const cine = rankCatalogQuery("make a cinematic video", catalog);
+  const cineSlugs = cine.tools.map((tool) => tool.slug);
+  for (const banned of ["opus", "elevenlabs", "captions", "meshy", "midjourney", "scenario", "heygen"]) {
+    assert.equal(cineSlugs.includes(banned), false, banned);
+  }
+  assert.ok(cineSlugs.includes("higgsfield"));
+  assert.ok(cineSlugs.includes("seedance"));
+  assert.ok(cineSlugs.indexOf("seedance") < 5);
+  const claude = cine.tools.find((tool) => tool.slug === "claude");
+  assert.ok(claude);
+  assert.match(claude.whyItHelps, /shot list|camera move|prompt/i);
+  assert.equal(/short-clip moments/i.test(claude.whyItHelps), false);
+  for (const tool of cine.tools) {
+    if (!tool.generalPurpose) assert.equal(specialistWhyProblems(tool.name, tool.whyItHelps).length, 0);
+  }
+  const clips = rankCatalogQuery("highlight reel from a kick stream", catalog);
+  const clipSlugs = clips.tools.map((tool) => tool.slug);
+  for (const banned of ["meshy", "midjourney", "scenario", "elevenlabs", "higgsfield"]) {
+    assert.equal(clipSlugs.includes(banned), false, banned);
+  }
+  assert.equal(rankCatalogQuery("screen a resume", catalog).useCases[0]?.slug, "hire-candidates");
+  assert.equal(rankCatalogQuery("write my resume", catalog).useCases[0]?.slug, "write-resume");
+  assert.equal(rankCatalogQuery("text to video", catalog).tools.some((tool) => tool.slug === "seedance"), true);
+  assert.equal(rankCatalogQuery("image to video", catalog).tools.some((tool) => tool.slug === "opus"), false);
+  const deep = rankCatalogQuery("deepseek alternative", catalog);
+  assert.equal(deep.useCases[0]?.slug, "coding-agents");
+  assert.match(deep.intro, /coding models/);
+  const meal = rankCatalogQuery("meal prep for the week", catalog);
+  assert.match(meal.intro, /can't cook the week's meals/);
+  const grocery = rankCatalogQuery("grocery list", catalog);
+  assert.match(grocery.intro, /grocery list/);
+  assert.equal(grocery.intro === meal.intro, false);
 });
 
 test("twitch highlight query ranks stream clip tools", () => {

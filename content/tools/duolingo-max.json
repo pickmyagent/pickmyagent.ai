@@ -21,7 +21,7 @@
   "pricingModel": [
     "subscription"
   ],
-  "pricingNotes": "Duolingo's March 14, 2023 post introduces Max as a GPT-4 learning experience. This check did not find a current price.",
+  "pricingNotes": "Duolingo's March 14, 2023 post introduces Max as a GPT-4 learning experience.",
   "pricingUrl": "https://blog.duolingo.com/duolingo-max/",
   "docsUrl": "https://blog.duolingo.com/duolingo-max/",
   "freeTier": null,
@@ -35,7 +35,7 @@
     "Language practice in the Max experience Duolingo introduced in that post"
   ],
   "notIdealFor": [
-    "Someone who needs a 2026 price confirmed from this check"
+    "Someone who needs a confirmed 2026 price"
   ],
   "strength": "Duolingo's March 14, 2023 post introduces Max as a learning experience powered by GPT-4.",
   "weakness": "That post does not show a current price, and it is the source for this listing.",

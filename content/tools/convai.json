@@ -5,7 +5,7 @@
   "websiteUrl": "https://convai.com/",
   "affiliateUrl": null,
   "shortDescription": "Conversational characters for games. Site loaded; pricing text did not come through, so the free tier is unconfirmed.",
-  "longDescription": "Convai makes conversational characters for games. The homepage returned HTTP 200. The pricing URL did not yield readable plan text in this environment, so the free tier is unconfirmed. We did not create an account.",
+  "longDescription": "Convai makes conversational characters for games. A public price or free tier was not confirmed from the pricing page. We did not create an account.",
   "categories": [
     "game-ai"
   ],
@@ -34,11 +34,11 @@
     "Teams comparing hosted NPC platforms"
   ],
   "notIdealFor": [
-    "A confirmed price or free tier from this check",
+    "A confirmed public price or free tier",
     "Workflow automation outside a game"
   ],
   "strength": "The site describes conversational characters that talk with the player inside a game.",
-  "weakness": "The pricing page did not return a readable price or free-tier amount in this check.",
+  "weakness": "A public price or free tier was not confirmed, so this listing does not state a monthly price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -49,7 +49,7 @@
   },
   "latestRelease": null,
   "problems": [
-    "Could not extract pricing/free tier from pricing URL in this environment."
+    "A public price or free tier was not confirmed from the pricing page."
   ],
   "featured": false,
   "featuredPaid": false,

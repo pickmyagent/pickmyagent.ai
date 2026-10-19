@@ -36,7 +36,7 @@
     "An email app that drafts replies and sorts the inbox"
   ],
   "notIdealFor": [
-    "Someone who needs a confirmed monthly price from this check"
+    "Someone who needs a confirmed monthly price"
   ],
   "strength": "Spark lists an AI assistant, a smart inbox, and replies that are already drafted.",
   "weakness": "The fetched page did not include a dollar price or a stated trial length.",

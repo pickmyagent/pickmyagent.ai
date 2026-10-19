@@ -15,15 +15,15 @@
   "recommended": [
     {
       "toolId": "shortwave",
-      "why": "$30 per seat per month and a 14-day trial. Docs checked."
+      "why": "$30 per seat per month and a 14-day trial."
     },
     {
       "toolId": "fyxer",
-      "why": "Inbox organizer and drafts, with a 14-day trial. Docs checked."
+      "why": "Inbox organizer and drafts, with a 14-day trial."
     },
     {
       "toolId": "spark-mail",
-      "why": "AI assistant and smart inbox. Docs checked."
+      "why": "AI assistant and smart inbox."
     }
   ],
   "intro": "AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends."

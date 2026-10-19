@@ -15,11 +15,11 @@
   "recommended": [
     {
       "toolId": "guidegeek",
-      "why": "AI planner for flights, stays, and activities. Docs checked."
+      "why": "AI planner for flights, stays, and activities."
     },
     {
       "toolId": "wonderplan",
-      "why": "AI itineraries with a free start. Docs checked."
+      "why": "AI itineraries with a free start."
     }
   ],
   "intro": "AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself."

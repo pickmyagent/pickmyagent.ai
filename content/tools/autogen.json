@@ -5,7 +5,7 @@
   "websiteUrl": "https://github.com/microsoft/autogen",
   "affiliateUrl": null,
   "shortDescription": "Microsoft open-source Python library for multi-agent conversations. Newest release we found is from 2025.",
-  "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. We installed autogen-agentchat and imported it, with no model call. The latest Python GitHub release we found, python-v0.7.5, was published on September 30, 2025 — older than the other frameworks in this check. Treat freshness as an open question, not a verdict.",
+  "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. We installed autogen-agentchat and imported it, with no model call. The latest Python GitHub release we found, python-v0.7.5, was published on September 30, 2025. Treat freshness as an open question, not a verdict.",
   "categories": [
     "agent-frameworks"
   ],

@@ -15,15 +15,15 @@
   "recommended": [
     {
       "toolId": "khanmigo",
-      "why": "Tutor and teaching assistant with a free teacher sign-up. Docs checked."
+      "why": "Tutor and teaching assistant with a free teacher sign-up."
     },
     {
       "toolId": "synthesis-tutor",
-      "why": "Tutor with a free trial. Docs checked."
+      "why": "Tutor with a free trial."
     },
     {
       "toolId": "duolingo-max",
-      "why": "Duolingo's 2023 post introduces Max with GPT-4. Docs checked."
+      "why": "Duolingo's 2023 post introduces Max with GPT-4."
     }
   ],
   "intro": "AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss."

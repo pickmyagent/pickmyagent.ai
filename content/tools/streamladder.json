@@ -4,7 +4,7 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "creator-video-audio"
+    "video-clips"
   ],
   "toolTypes": [
     "creative"
@@ -52,7 +52,7 @@
   ],
   "notIdealFor": [
     "Finding the highlight inside a full VOD on its own",
-    "A confirmed monthly price from this check"
+    "A confirmed monthly price"
   ],
   "sources": [
     "https://www.streamladder.com/",

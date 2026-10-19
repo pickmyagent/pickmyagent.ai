@@ -36,7 +36,7 @@
     "Teams that want a hosted character stack and docs"
   ],
   "notIdealFor": [
-    "A local Python library we smoke-tested — we did not",
+    "A local Python library",
     "Image or 3D asset generation"
   ],
   "strength": "The On-Demand plan is $0 to start, then you pay as you go for game character dialogue.",

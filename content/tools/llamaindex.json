@@ -40,7 +40,7 @@
   ],
   "notIdealFor": [
     "A finished consumer chat app",
-    "Anyone who needs a confirmed free cloud tier from this check"
+    "Anyone who needs a confirmed free cloud tier"
   ],
   "strength": "We imported llama-index-core 0.14.25, and the cloud free plan includes 10,000 credits.",
   "weakness": "Cloud Starter is $50 per month after the 10,000 free credits.",

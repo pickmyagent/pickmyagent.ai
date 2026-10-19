@@ -6,11 +6,22 @@
   "affiliateUrl": null,
   "shortDescription": "Texting for real estate owner lists. Skip tracing is listed at $0.13 on the pricing page.",
   "longDescription": "Launch Control is a texting product for real estate investors. On October 19, 2026 the pricing page listed skip tracing at $0.13 and one plan as provider fees plus $22, with 12,500 monthly SMS. It did not show one all-in monthly price. We did not create an account.",
-  "categories": ["real-estate"],
-  "useCaseTags": ["find-off-market"],
-  "toolTypes": ["automation"],
-  "platforms": ["web"],
-  "pricingModel": ["subscription", "usage"],
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "find-off-market"
+  ],
+  "toolTypes": [
+    "automation"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription",
+    "usage"
+  ],
   "pricingNotes": "One plan is listed as provider fees plus $22, with 12,500 monthly SMS. Skip tracing is listed at $0.13. No single all-in monthly price.",
   "pricingUrl": "https://launchcontrol.us/pricing/",
   "docsUrl": "https://launchcontrol.us/pricing/",
@@ -21,8 +32,12 @@
   "pricingCheckedAt": "2026-10-19",
   "openSource": false,
   "repoUrl": null,
-  "bestFor": ["Sending texts to a list of property owners you already have"],
-  "notIdealFor": ["Someone who wants one published price with provider fees included"],
+  "bestFor": [
+    "Sending texts to a list of property owners you already have"
+  ],
+  "notIdealFor": [
+    "Someone who wants one published price with provider fees included"
+  ],
   "strength": "The pricing page lists skip tracing at $0.13 and a plan as provider fees plus $22 for 12,500 monthly texts.",
   "weakness": "That $22 figure is not an all-in price, because the same page adds provider fees on top.",
   "smokeStatus": "verified-docs-only",
@@ -30,7 +45,9 @@
   "checkedAt": "2026-10-19T12:00:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -38,8 +55,13 @@
   "status": "published",
   "publishedAt": "2026-10-19",
   "updatedAt": "2026-10-19",
-  "sources": ["https://launchcontrol.us/pricing/"],
-  "siteLoad": { "status": 200, "finalUrl": "https://launchcontrol.us/pricing/" },
+  "sources": [
+    "https://launchcontrol.us/pricing/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://launchcontrol.us/pricing/"
+  },
   "useCaseFit": {
     "find-off-market": "Sends texts to owner lists, and the pricing page lists skip tracing at $0.13."
   }

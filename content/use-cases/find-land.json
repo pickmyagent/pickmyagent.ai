@@ -16,19 +16,15 @@
   "recommended": [
     {
       "toolId": "acres",
-      "why": "Parcel maps and a free basic view. Paid plans add owner lookup and comps. Docs checked."
+      "why": "Parcel maps and a free basic view. Paid plans add owner lookup and comps."
     },
     {
       "toolId": "land-id",
-      "why": "Nationwide parcel and owner info, with AI Insights on higher plans. Docs checked."
+      "why": "Nationwide parcel and owner info, with AI Insights on higher plans."
     },
     {
       "toolId": "propstream",
-      "why": "Property search with an AI search box and a 7-day trial. Docs checked."
-    },
-    {
-      "toolId": "mashvisor",
-      "why": "Rental comps and property analysis on a paid plan. Docs checked."
+      "why": "Property search with an AI search box and a 7-day trial."
     },
     {
       "toolId": "regrid",

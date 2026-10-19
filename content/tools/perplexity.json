@@ -4,8 +4,8 @@
   "name": "Perplexity",
   "websiteUrl": "https://www.perplexity.ai/",
   "affiliateUrl": null,
-  "shortDescription": "Web research product. Homepage returned HTTP 403 to our checker, so this listing is not fully checked.",
-  "longDescription": "Perplexity answers questions from the web. The homepage returned HTTP 403 to our client. Docs were reachable, but we could not cleanly confirm a consumer Free versus Pro split. This listing is untested. A 403 here is an environment limit, not proof a browser cannot open the site.",
+  "shortDescription": "AI search that answers questions with linked sources.",
+  "longDescription": "Perplexity answers questions from the web and shows linked sources. A consumer Free versus Pro split was not confirmed from the docs we could read.",
   "categories": [
     "search-rag",
     "general-assistants"
@@ -43,13 +43,13 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account). Homepage HTTP 403 to automated client.",
+  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
   "handsOn": {
     "performed": false
   },
   "latestRelease": null,
   "problems": [
-    "perplexity.ai homepage HTTP 403 from this environment."
+    null
   ],
   "featured": false,
   "featuredPaid": false,

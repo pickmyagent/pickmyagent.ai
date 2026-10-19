@@ -1,0 +1,34 @@
+{
+  "slug": "video-generation",
+  "title": "Generate a video from a prompt",
+  "summary": "Outline a shot, name the camera move, and generate the clip in a video app.",
+  "audienceHints": [
+    "creators"
+  ],
+  "matchTags": [
+    "video-generation"
+  ],
+  "recommended": [
+    {
+      "toolId": "higgsfield",
+      "why": "Generates cinematic clips with camera presets such as a POV or a helicopter shot."
+    },
+    {
+      "toolId": "seedance",
+      "why": "Renders video from text, an image, or a reference clip in Dreamina."
+    },
+    {
+      "toolId": "runway",
+      "why": "Generates footage from a prompt and edits that video."
+    },
+    {
+      "toolId": "pika",
+      "why": "Creates a short video from a prompt, a photo, or keyframes."
+    }
+  ],
+  "jobPhrase": "making a cinematic video",
+  "assistantTask": "outline a shot list, name the camera move, and draft the prompt",
+  "assistantContext": "generating a video from a prompt",
+  "searchTopic": "the shot and camera move you want",
+  "intro": "AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself."
+}

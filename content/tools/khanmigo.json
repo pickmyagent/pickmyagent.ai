@@ -35,7 +35,7 @@
     "Tutoring and teacher help inside Khan Academy's assistant"
   ],
   "notIdealFor": [
-    "Someone who needs a published learner price from this check"
+    "Someone who needs a published learner price"
   ],
   "strength": "Khanmigo describes a tutor and teaching assistant, and it says teachers can sign up for free.",
   "weakness": "The fetched page did not list a dollar price for learners.",

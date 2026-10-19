@@ -1,0 +1,22 @@
+{
+  "slug": "voice-audio",
+  "title": "Generate a voice track",
+  "summary": "Draft the words and generate the voice in an audio app.",
+  "audienceHints": [
+    "creators"
+  ],
+  "matchTags": [
+    "voice"
+  ],
+  "recommended": [
+    {
+      "toolId": "elevenlabs",
+      "why": "Generates voice and audio, and the free plan includes 10,000 credits a month."
+    }
+  ],
+  "jobPhrase": "generating a voice track",
+  "assistantTask": "draft a script and describe the voice",
+  "assistantContext": "generating a voice track",
+  "searchTopic": "the voice you want",
+  "intro": "AI agents can draft a script and describe the voice you want, so you generate the audio and check it yourself."
+}

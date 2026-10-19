@@ -35,7 +35,7 @@
   ],
   "notIdealFor": [
     "Self-hosted or offline workflows",
-    "A confirmed free-tier claim from this check"
+    "A confirmed free-tier claim"
   ],
   "strength": "The free plan includes 100 tasks per month for connecting hosted apps without running a server.",
   "weakness": "Professional starts at $19.99 per month, and the workflows run on Zapier's cloud rather than a server you host.",

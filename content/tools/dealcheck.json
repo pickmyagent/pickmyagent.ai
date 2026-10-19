@@ -1,6 +1,8 @@
 {
   "affiliateUrl": null,
-  "platforms": ["web"],
+  "platforms": [
+    "web"
+  ],
   "freeTierNotes": "Starter is $0 and does not require a credit card. Paid plans include a 14-day trial.",
   "openSource": false,
   "repoUrl": null,
@@ -9,7 +11,9 @@
   "checkedAt": "2026-10-19T12:00:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Pricing page checked on October 19, 2026. No account, payment, or hands-on run.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -24,10 +28,19 @@
   "websiteUrl": "https://dealcheck.io/",
   "shortDescription": "Deal calculator for rentals, flips, and commercial properties, with a free Starter plan.",
   "longDescription": "DealCheck's pricing page, read October 19, 2026, lists Starter at $0, Plus at $10 per month, and Pro at $20 per month. Paid plans include a 14-day trial. The same page describes a rental cash flow calculator, a house flipping calculator, a multi-family and commercial calculator, and side-by-side property comparison. The plan bullets are repeated on every tier, so this listing does not claim which of those calculators are limited to Plus or Pro. The page does not call the product an AI agent.",
-  "categories": ["real-estate"],
-  "useCaseTags": ["rank-property-deals"],
-  "toolTypes": ["other"],
-  "pricingModel": ["freemium", "subscription"],
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "rank-property-deals"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
   "pricingNotes": "Starter $0. Plus $10 per month. Pro $20 per month. Paid plans include a 14-day trial.",
   "pricingUrl": "https://dealcheck.io/pricing/",
   "docsUrl": "https://help.dealcheck.io/en/articles/4471054-how-much-does-dealcheck-cost-can-i-try-it-for-free",

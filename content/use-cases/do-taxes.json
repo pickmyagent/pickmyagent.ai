@@ -15,19 +15,19 @@
   "recommended": [
     {
       "toolId": "turbotax",
-      "why": "File-yourself pricing starts at $0. Docs checked."
+      "why": "File-yourself pricing starts at $0."
     },
     {
       "toolId": "taxact",
-      "why": "Guided filing and a free start. Docs checked."
+      "why": "Guided filing and a free start."
     },
     {
       "toolId": "keeper",
-      "why": "Expense tracking and filing, with a free start. Docs checked."
+      "why": "Expense tracking and filing, with a free start."
     },
     {
       "toolId": "flyfin",
-      "why": "AI plus a CPA for self-employed returns. Docs checked."
+      "why": "AI plus a CPA for self-employed returns."
     }
   ],
   "intro": "AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.",

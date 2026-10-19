@@ -15,11 +15,11 @@
   "recommended": [
     {
       "toolId": "elicit",
-      "why": "AI research assistant. Plus is $11 per user per month billed annually. Docs checked."
+      "why": "AI research assistant. Plus is $11 per user per month billed annually."
     },
     {
       "toolId": "scispace",
-      "why": "Literature review and chat with PDF. Docs checked."
+      "why": "Literature review and chat with PDF."
     }
   ],
   "intro": "AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check."

@@ -4,14 +4,12 @@
   "name": "modl.ai",
   "websiteUrl": "https://modl.ai/",
   "affiliateUrl": null,
-  "shortDescription": "Game AI tools. Homepage loaded; /pricing returned 404, so pricing is unconfirmed.",
-  "longDescription": "modl.ai is a game AI product. The homepage returned HTTP 200 and /pricing returned 404, so we do not have a public price. Free tier is unconfirmed. We did not create an account.",
+  "shortDescription": "AI agents that test an uploaded game build and report bugs.",
+  "longDescription": "modl.ai's homepage says its agents test a game from an uploaded build, with no engine integration, and write bug reports that include visuals and a severity score. The fetched page did not list a price. We did not upload a build.",
   "categories": [
     "game-ai"
   ],
-  "useCaseTags": [
-    "game-npcs"
-  ],
+  "useCaseTags": [],
   "toolTypes": [
     "other"
   ],
@@ -21,42 +19,42 @@
   "pricingModel": [
     "contact"
   ],
-  "pricingNotes": "No public pricing page found at /pricing.",
+  "pricingNotes": "The homepage did not list a price.",
   "pricingUrl": "https://modl.ai/",
   "docsUrl": "https://modl.ai/",
   "freeTier": null,
   "freeTierNotes": null,
   "startingPrice": null,
   "freeTrial": null,
-  "pricingCheckedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-19",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
-    "Game teams looking up modl.ai’s current product page"
+    "A QA team that wants agents to play through an uploaded game build"
   ],
   "notIdealFor": [
-    "A self-serve price comparison",
-    "A smoke-tested install"
+    "In-game character dialogue",
+    "A published monthly price"
   ],
-  "strength": "The homepage loaded and describes game AI tools for teams checking the current product.",
-  "weakness": "The /pricing path returned HTTP 404, so there is no public price to compare.",
+  "strength": "The modl homepage says its agents test an uploaded game build and write bug reports with visuals and a severity score.",
+  "weakness": "The homepage did not list a price, so this listing states no monthly plan.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
-  "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Homepage fetched on 2026-10-19. No build was uploaded and no account was created.",
   "handsOn": {
     "performed": false
   },
   "latestRelease": null,
   "problems": [
-    "modl.ai/pricing returned 404."
+    "A public price was not confirmed."
   ],
   "featured": false,
   "featuredPaid": false,
   "status": "published",
   "publishedAt": "2026-10-15",
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-19",
   "sources": [
     "https://modl.ai/"
   ],
@@ -64,7 +62,5 @@
     "status": 200,
     "finalUrl": "https://modl.ai/"
   },
-  "useCaseFit": {
-    "game-npcs": "Game AI tools for teams, and the pricing page we checked returned 404."
-  }
+  "useCaseFit": {}
 }

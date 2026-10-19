@@ -15,19 +15,19 @@
   "recommended": [
     {
       "toolId": "ramp",
-      "why": "Free is $0 per user and Plus is $15. Docs checked."
+      "why": "Free is $0 per user and Plus is $15."
     },
     {
       "toolId": "vic-ai",
-      "why": "AI-first invoice processing. Docs checked."
+      "why": "AI-first invoice processing."
     },
     {
       "toolId": "dext",
-      "why": "Receipt and invoice capture. Docs checked."
+      "why": "Receipt and invoice capture."
     },
     {
       "toolId": "bill-com",
-      "why": "Invoicing and AP controls. Docs checked."
+      "why": "Invoicing and AP controls."
     }
   ],
   "intro": "AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.",

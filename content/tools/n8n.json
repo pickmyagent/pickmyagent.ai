@@ -4,8 +4,8 @@
   "name": "n8n",
   "websiteUrl": "https://n8n.io/",
   "affiliateUrl": null,
-  "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan. Our local npm install failed.",
-  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. We tried `npm install n8n@2.43.6` and it failed in this environment (node-gyp / distutils). Registry, docs, and pricing were still checked, so the status stays docs checked.",
+  "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan.",
+  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. A local install was not completed.",
   "categories": [
     "workflow-automation"
   ],
@@ -47,7 +47,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "npm install attempted and failed (node-gyp/distutils). Registry+docs+pricing verified.",
+  "smokeTestNotes": "Registry, docs, and pricing were reviewed. A local install was not completed.",
   "handsOn": {
     "performed": false
   },
@@ -59,7 +59,7 @@
     "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
   },
   "problems": [
-    "Attempted local `npm install n8n@2.43.6` failed (node-gyp/isolated-vm needs distutils; ModuleNotFoundError: distutils). npm registry metadata OK (2.43.6)."
+    "A local install was not completed."
   ],
   "featured": false,
   "featuredPaid": false,

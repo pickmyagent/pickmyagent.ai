@@ -1,0 +1,73 @@
+{
+  "id": "seedance",
+  "slug": "seedance",
+  "name": "Seedance",
+  "websiteUrl": "https://dreamina.capcut.com/",
+  "affiliateUrl": null,
+  "shortDescription": "ByteDance video model in Dreamina, with a ModelArk API documented by BytePlus.",
+  "longDescription": "Seedance is ByteDance's video generation model. Dreamina's documentation names Seedance 2.0 for video and shows Seedance 2.5 examples, and it says the creator app includes free daily credits. BytePlus ModelArk's video generation tutorial says Seedance models generate clips from text, images, video, and audio, and it shows a Dreamina Seedance model id for the API. The model overview page did not include a readable API price.",
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "video-generation"
+  ],
+  "toolTypes": [
+    "creative",
+    "model_api"
+  ],
+  "platforms": [
+    "web",
+    "api"
+  ],
+  "pricingModel": [
+    "usage"
+  ],
+  "pricingNotes": "Dreamina's documentation says the creator app includes free daily credits. An API price was not in the readable model page.",
+  "pricingUrl": null,
+  "docsUrl": "https://ai.byteplus.com/ark/region:ap-southeast-1/docs/video-generation-tutorial",
+  "freeTier": null,
+  "freeTierNotes": "Dreamina's documentation says the creator app includes free daily credits for images and videos.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generating video from a prompt, an image, or a reference clip",
+    "Creators using Dreamina, or developers calling the ModelArk API"
+  ],
+  "notIdealFor": [
+    "A confirmed API price from this listing",
+    "In-game character dialogue"
+  ],
+  "strength": "Dreamina's documentation names Seedance for video and says the creator app includes free daily credits.",
+  "weakness": "The BytePlus model overview did not include a readable API price, so this listing does not state one.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T12:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Dreamina's documentation and the BytePlus video-generation tutorial were reviewed. A hands-on test was not done.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://dreamina.capcut.com/documentation",
+    "https://ai.byteplus.com/ark/region:ap-southeast-1/docs/video-generation-tutorial",
+    "https://docs.byteplus.com/en/docs/ModelArk/seedance"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://dreamina.capcut.com/documentation"
+  },
+  "useCaseFit": {
+    "video-generation": "Renders video from text, an image, or a reference clip in Dreamina."
+  }
+}

@@ -9,9 +9,7 @@
   "categories": [
     "creative-media"
   ],
-  "useCaseTags": [
-    "creator-video-audio"
-  ],
+  "useCaseTags": [],
   "toolTypes": [
     "creative"
   ],
@@ -66,7 +64,5 @@
     "status": 200,
     "finalUrl": "https://www.heygen.com/"
   },
-  "useCaseFit": {
-    "game-creative": "Makes avatar videos, and the free plan includes 3 videos of up to 1 minute."
-  }
+  "useCaseFit": {}
 }

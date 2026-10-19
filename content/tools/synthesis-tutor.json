@@ -4,8 +4,8 @@
   "name": "Synthesis Tutor",
   "websiteUrl": "https://www.synthesis.com/tutor",
   "affiliateUrl": null,
-  "shortDescription": "Tutor product with a free trial. No plan price was confirmed.",
-  "longDescription": "Synthesis Tutor's page offers a free trial and describes a tutor for kids. A marketing line said less than $1 a day, which is not a plan price, so this listing does not convert it into a monthly price. We did not start the trial.",
+  "shortDescription": "Math tutor for ages 5 to 11 that adapts the lesson to the child.",
+  "longDescription": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11, covering K-5 math and adapting to the child. It offers a 7-day free trial. The same page lists several plan prices that do not agree, so this listing does not state one monthly price. We did not start the trial.",
   "categories": [
     "learning"
   ],
@@ -21,7 +21,7 @@
   "pricingModel": [
     "subscription"
   ],
-  "pricingNotes": "The tutor page offers a free trial. A 'less than $1 a day' line is marketing, not a plan price, so no starting price is set.",
+  "pricingNotes": "The tutor page offers a 7-day free trial and lists several plan prices that do not agree, so no single monthly price is set.",
   "pricingUrl": "https://www.synthesis.com/tutor",
   "docsUrl": "https://www.synthesis.com/tutor",
   "freeTier": false,
@@ -32,18 +32,18 @@
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
-    "Trying a kids' tutor that offers a free trial on the official page"
+    "A family looking for a math tutor for a child aged 5 to 11"
   ],
   "notIdealFor": [
     "An adult professional course"
   ],
-  "strength": "Synthesis Tutor's official page offers a free trial for its tutor.",
-  "weakness": "The fetched page did not state a plan price in dollars, only a marketing line about daily cost.",
+  "strength": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11 that adapts to the child.",
+  "weakness": "The tutor page lists several plan prices that do not agree, so this listing states no single monthly price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official tutor page fetched on 2026-10-19. No trial was started.",
   "handsOn": {
     "performed": false
   },
@@ -62,6 +62,6 @@
     "finalUrl": "https://www.synthesis.com/tutor"
   },
   "useCaseFit": {
-    "tutoring": "Tutor with a free trial offered on the official tutor page."
+    "tutoring": "Teaches K-5 math and adapts each lesson to the child."
   }
 }
