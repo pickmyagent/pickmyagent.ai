@@ -81,6 +81,7 @@ export function ToolBrowser({
   const showSearchNewsletter = searched && !dismissed;
   const previewTools = filtered.slice(0, 4);
   const remainingTools = filtered.slice(4);
+  const showInlineNewsletter = showSearchNewsletter && remainingTools.length > 0;
 
   return (
     <div>
@@ -191,7 +192,7 @@ export function ToolBrowser({
 
       {filtered.length === 0 ? (
         <p className="mt-6 text-muted">Nothing matched those filters.</p>
-      ) : showSearchNewsletter && remainingTools.length > 0 ? (
+      ) : showInlineNewsletter ? (
         <>
           <ToolGrid
             tools={previewTools}
@@ -216,7 +217,7 @@ export function ToolBrowser({
           className="mt-4 grid gap-3 sm:grid-cols-2"
         />
       )}
-      {showSearchNewsletter ? (
+      {showSearchNewsletter && !showInlineNewsletter ? (
         <SearchNewsletterPrompt
           idPrefix="tools-search-end"
           className="mt-4"

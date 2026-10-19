@@ -347,39 +347,230 @@ function bestCapability(tool: Tool, useCaseSlug: string | null, query: string): 
   return best || usableCapability(tool.bestFor[0] || tool.shortDescription);
 }
 
-function jobAction(query: string): string {
-  const verbs = extractVerbs(query);
+function tidyPhrase(text: string): string {
+  return text.replace(/\s+,/g, ",").replace(/[,\s]+$/g, "").replace(/\s+/g, " ").trim();
+}
+
+const INFINITIVES: Record<string, string> = {};
+for (const [verb, gerund] of Object.entries({ ...GERUNDS, ...HEADER_ONLY_GERUNDS })) {
+  INFINITIVES[gerund] = verb;
+}
+
+function toInfinitive(text: string): string {
+  return text.replace(/(^|,\s*(?:and\s+)?|\band\s+)([A-Za-z]+)\b/g, (full, prefix: string, word: string) => {
+    const infinitive = INFINITIVES[word.toLowerCase()];
+    return infinitive ? `${prefix}${infinitive}` : full;
+  });
+}
+
+/** Strip "find an agent that will" and similar wrappers. Leave the job underneath. */
+function unwrapJob(query: string): string {
+  let text = query.trim().replace(/\s+/g, " ").replace(/[.?!]+$/g, "");
+  let previous = "";
+  while (text !== previous) {
+    previous = text;
+    text = text.replace(/^(please\s+)/i, "");
+    text = text.replace(/^(i\s+)?(want|need)\s+(to\s+)?/i, "");
+    text = text.replace(
+      /^(?:find|get|looking\s+for)\s+(?:me\s+)?(?:an?\s+)?(?:ai\s+)?(?:agents?|tools?)\s+(?:that\s+(?:will|can)\s+|to\s+(?:help\s+me\s+)?)?/i,
+      "",
+    );
+    text = text.replace(/^(?:an?\s+)?(?:ai\s+)?(?:agents?|tools?)\s+(?:that\s+(?:will|can)\s+|to\s+help\s+me\s+)/i, "");
+    text = text.replace(/^help\s+me\s+(?:to\s+)?/i, "");
+    text = text.replace(/^help\s+/i, "");
+    text = text.replace(/^(?:agents?\s+)?to\s+help\s+me\s+/i, "");
+    text = text.replace(/^find\s+me\s+/i, "find ");
+  }
+  text = text.replace(/\bmy\b/gi, "your");
+  text = text.replace(/^(?:to\s+)/i, "");
+  return toInfinitive(text).replace(/\s+/g, " ").trim();
+}
+
+function shortObject(text: string, verbs: string[]): string {
+  const verbSet = new Set(verbs);
+  const drop = new Set([
+    "and", "or", "them", "it", "a", "an", "the", "to", "that", "this", "when", "only",
+    "do", "act",
+  ]);
+  const kept: string[] = [];
+  let content = 0;
+  for (const raw of text.replace(/[()]/g, " ").split(/\s+/)) {
+    const bare = raw.toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (!bare || verbSet.has(bare) || drop.has(bare) || GENERIC.has(bare)) continue;
+    if (bare.length < 3) continue;
+    kept.push(bare === "your" ? "your" : raw.replace(/[^A-Za-z0-9-]/g, ""));
+    if (bare !== "your") content += 1;
+    if (content >= 4) break;
+  }
+  return kept.join(" ").replace(/\s+/g, " ").trim();
+}
+
+function infinitiveJob(query: string): string {
+  const unwrapped = unwrapJob(query);
+  const verbs = extractVerbs(unwrapped);
   const specific = verbs.filter((verb) => !GENERIC.has(verb));
   const shown = specific.length > 0 ? verbs.filter((verb) => specific.includes(verb) || verb === "find") : [];
-  const tidy = (text: string) => text.replace(/\s+,/g, ",").replace(/[,\s]+$/g, "").trim();
   if (shown.length === 0) {
-    const phrase = cleanUserPhrase(query).replace(/^finding\s+/i, "find ");
-    return tidy(phrase) || "work through this";
+    const phrase = unwrapped
+      .replace(/\bfind an (?:ai )?(?:agent|tool) that will\b/gi, "")
+      .replace(/\bfind an (?:ai )?(?:agent|tool)\b/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    return tidyPhrase(phrase) || "work through this";
   }
-  const object = objectPhrase(query, shown);
-  return tidy(`${humanJoin(shown)}${object ? ` ${object}` : ""}`);
+  const object = shortObject(unwrapped, shown);
+  return tidyPhrase(`${humanJoin(shown)}${object ? ` ${object}` : ""}`);
+}
+
+function jobEndings(query: string): string[] {
+  if (/\btaxes?\b/i.test(query)) {
+    return ["file your taxes", "get your taxes done", "finish your taxes", "complete your taxes"];
+  }
+  const base = infinitiveJob(query).replace(/\bfind an agent\b/gi, "").replace(/\s+/g, " ").trim();
+  const endings = [base];
+  const withoutFind = base.replace(/^find and\s+/i, "");
+  if (withoutFind && withoutFind !== base) endings.push(withoutFind);
+  const swapped = base.match(/^(\w+) and (\w+) (.+)$/);
+  if (swapped) endings.push(`${swapped[1]} ${swapped[3]} and ${swapped[2]} them`);
+  if (/^manage\b/i.test(base)) endings.push(base.replace(/^manage\b/i, "clear"));
+  if (base && !/\byourself\b/i.test(base)) endings.push(`${base} yourself`);
+  return [...new Set(endings.map((item) => tidyPhrase(item)).filter(Boolean))];
 }
 
 function lowerFirst(text: string): string {
   return text ? text.charAt(0).toLowerCase() + text.slice(1) : text;
 }
 
-const ASSISTANT_ASK: Record<string, (action: string) => string> = {
-  claude: (action) => `Ask Claude to compare the details you paste into chat while you ${action}.`,
-  chatgpt: (action) => `Ask ChatGPT to draft a written comparison while you ${action}.`,
-  gemini: (action) => `Ask Gemini to compare the options in Google apps while you ${action}.`,
-  perplexity: (action) => `Ask Perplexity to check public sources you can verify while you ${action}.`,
+type TaskKind = "plan" | "compare" | "research" | "draft" | "analyze" | "schedule";
+
+const KIND_FROM_VERB: Record<string, TaskKind> = {
+  plan: "plan", organize: "plan", manage: "plan", handle: "plan", automate: "plan",
+  orchestrate: "plan", run: "plan", train: "plan", bake: "plan", cook: "plan",
+  rank: "analyze", score: "analyze", analyze: "analyze", debug: "analyze",
+  refactor: "analyze", monitor: "analyze", process: "analyze", optimize: "analyze",
+  compare: "compare", shop: "compare", screen: "compare", recommend: "compare", qualify: "compare",
+  write: "draft", draft: "draft", contact: "draft", reach: "draft", text: "draft",
+  edit: "draft", generate: "draft", create: "draft", ship: "draft", turn: "draft",
+  call: "draft", design: "draft", clip: "draft", cut: "draft",
+  schedule: "schedule", book: "schedule",
+  find: "research", source: "research", answer: "research", summarize: "research", synthesize: "research",
 };
 
-function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean): string {
-  const action = jobAction(query);
-  if (general) {
-    const name = tool.assistantName ?? tool.name.split("(")[0].trim();
-    const ask = ASSISTANT_ASK[tool.slug];
-    return ask ? ask(action) : `Ask ${name} to help while you ${action}.`;
+function primaryKind(query: string): TaskKind {
+  for (const verb of extractVerbs(unwrapJob(query))) {
+    if (verb === "find") continue;
+    const kind = KIND_FROM_VERB[verb];
+    if (kind) return kind;
   }
+  return "plan";
+}
+
+function kindsFor(primary: TaskKind): Record<string, TaskKind> {
+  const claude: TaskKind = primary === "research" ? "plan" : primary;
+  const used = new Set<TaskKind>([claude, "research"]);
+  const open = (["draft", "compare", "analyze", "schedule", "plan"] as TaskKind[]).filter((kind) => !used.has(kind));
+  return {
+    claude,
+    chatgpt: open[0] ?? "draft",
+    gemini: open[1] ?? "compare",
+    perplexity: "research",
+  };
+}
+
+function withYour(object: string): string {
+  if (!object) return "this job";
+  if (/\byour\b/i.test(object)) return object;
+  return `your ${object}`;
+}
+
+function focusNoun(query: string): string {
+  const unwrapped = unwrapJob(query);
+  const object = shortObject(unwrapped, extractVerbs(unwrapped));
+  return withYour(object);
+}
+
+function nounHasJobToken(query: string, noun: string): boolean {
+  const tokens = queryTokens(query).filter((token) => token.length > 3);
+  if (tokens.length === 0) return true;
+  const lower = noun.toLowerCase();
+  return tokens.some((token) => lower.includes(token));
+}
+
+function isInboxJob(query: string): boolean {
+  if (/\binbox\b/i.test(query)) return true;
+  const unwrapped = unwrapJob(query);
+  const words = shortObject(unwrapped, extractVerbs(unwrapped))
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((word) => word && word !== "your");
+  return words.length > 0 && words.every((word) => word === "email" || word === "personal");
+}
+
+function specialTask(kind: TaskKind, query: string): string | null {
+  if (/\bwedding\b/i.test(query)) {
+    if (kind === "plan") return "turn your guest count and budget into a wedding vendor checklist with a timeline";
+    if (kind === "compare") return "compare wedding venues and vendors in a side-by-side table";
+    if (kind === "research") return "write a sourced summary of wedding venues from pages you can check";
+    if (kind === "draft") return "draft a wedding email to a vendor";
+    if (kind === "analyze") return "break the wedding budget into a spreadsheet";
+    if (kind === "schedule") return "lay the wedding out as a calendar plan";
+  }
+  if (/\btaxes?\b/i.test(query)) {
+    if (kind === "plan") return "turn your income and deductions into a checklist for your taxes";
+    if (kind === "compare") return "compare filing options for your taxes in a side-by-side table";
+    if (kind === "research") return "write a sourced summary of forms for your taxes from pages you can check";
+    if (kind === "draft") return "draft questions about your taxes for a tax pro";
+    if (kind === "analyze") return "break your taxes into a spreadsheet";
+    if (kind === "schedule") return "lay filing dates for your taxes out as a calendar plan";
+  }
+  if (isInboxJob(query)) {
+    if (kind === "plan") return "turn unread email threads into an inbox checklist with a timeline";
+    if (kind === "compare") return "compare email threads in a side-by-side table";
+    if (kind === "research") return "write a sourced summary of your email inbox from pages you can check";
+    if (kind === "draft") return "draft a reply to an email in your inbox";
+    if (kind === "analyze") return "break your email inbox into a spreadsheet of threads";
+    if (kind === "schedule") return "lay email follow-ups out as a calendar plan";
+  }
+  return null;
+}
+
+function taskFor(kind: TaskKind, query: string): string {
+  const special = specialTask(kind, query);
+  if (special) return special;
+  const noun = focusNoun(query);
+  const job = infinitiveJob(query);
+  if (nounHasJobToken(query, noun)) {
+    if (kind === "plan") return `turn ${noun} into a checklist with a timeline`;
+    if (kind === "compare") return `compare ${noun} in a side-by-side table`;
+    if (kind === "research") return `write a sourced summary of ${noun} from pages you can check`;
+    if (kind === "draft") return `draft an email about ${noun}`;
+    if (kind === "analyze") return `break ${noun} into a spreadsheet`;
+    return `lay ${noun} out as a calendar plan`;
+  }
+  if (kind === "plan") return `build a checklist with a timeline to ${job}`;
+  if (kind === "compare") return `make a side-by-side table to ${job}`;
+  if (kind === "research") return `write a sourced summary from pages you can check to ${job}`;
+  if (kind === "draft") return `draft an email to help you ${job}`;
+  if (kind === "analyze") return `make a spreadsheet breakdown to ${job}`;
+  return `make a calendar plan to ${job}`;
+}
+
+function assistantWhy(tool: Tool, query: string): string {
+  const name = tool.assistantName ?? tool.name.split("(")[0].trim();
+  const kind = kindsFor(primaryKind(query))[tool.slug] ?? "plan";
+  let task = taskFor(kind, query);
+  if (tool.slug === "gemini" && !/google apps/i.test(task)) task = `${task} in Google apps`;
+  return `Ask ${name} to ${task}.`;
+}
+
+function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean, index: number): string {
+  if (general) return assistantWhy(tool, query);
   const capability = lowerFirst(bestCapability(tool, useCase?.slug ?? null, query));
-  return `${tool.name} ${capability}, so you can ${action}.`;
+  const first = capability.split(/\s+/)[0]?.toLowerCase() ?? "";
+  const clause = INFINITIVES[first] ? `${tool.name} is for ${capability}` : `${tool.name} ${capability}`;
+  const endings = jobEndings(query);
+  const ending = endings[index % endings.length] ?? endings[0];
+  return `${clause}, so you can ${ending}.`;
 }
 
 export type RankedTool = {
@@ -596,10 +787,10 @@ export function rankCatalogQuery(
   const lowMatch = !winner;
 
   return {
-    tools: selected.map((tool) =>
+    tools: selected.map((tool, index) =>
       presentTool(
         tool,
-        whyItHelps(tool.source, primaryCase?.source ?? null, query, Boolean(tool.source.generalPurpose)),
+        whyItHelps(tool.source, primaryCase?.source ?? null, query, Boolean(tool.source.generalPurpose), index),
         Boolean(tool.source.generalPurpose),
       ),
     ),

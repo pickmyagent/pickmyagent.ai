@@ -145,7 +145,7 @@ const editorial = {
   },
   claude: {
     shortDescription:
-      "Anthropic Claude product and API for chat and coding. Docs checked; we did not sign up.",
+      "Anthropic Claude product and API for chat and coding.",
     longDescription:
       "Claude is Anthropic’s model product, used for chat and coding. The URL we checked redirected toward the Claude product overview. The pricing page included a $0 option in the text we could read; API billing is separate. We did not create an account.",
     categories: ["coding-agents"],
@@ -759,7 +759,7 @@ const useCases = [
       },
       {
         toolId: "claude",
-        why: "Anthropic’s Claude product and API, including coding workflows. Docs checked; we did not sign up.",
+        why: "Anthropic’s Claude product and API, including coding workflows.",
       },
     ],
   },

@@ -608,6 +608,8 @@ const BANNED_WHY = [
   /\$\d/,
   /\bper month\b/i,
   /\bper seat\b/i,
+  /\bwhile you\b/i,
+  /\bso you can find an agent\b/i,
 ];
 
 function distinctiveWhy(why: string): Set<string> {
@@ -661,6 +663,41 @@ test("search newsletter prompt is wired into search and the tools page", () => {
   assert.match(browser, /tools-search-inline/);
   assert.match(browser, /tools-search-end/);
   assert.match(browser, /searched && !dismissed/);
+});
+
+test("newsletter prompt renders at most once on a results page", () => {
+  const search = readFileSync(new URL("../components/job-search.tsx", import.meta.url), "utf8");
+  const browser = readFileSync(new URL("../components/tool-browser.tsx", import.meta.url), "utf8");
+  assert.match(search, /showSearchNewsletter && !showInlineNewsletter/);
+  assert.match(browser, /showSearchNewsletter && !showInlineNewsletter/);
+  assert.equal((search.match(/<SearchNewsletterPrompt/g) ?? []).length, 2);
+  assert.equal((browser.match(/<SearchNewsletterPrompt/g) ?? []).length, 2);
+});
+
+test("tax and wedding why-lines name the job instead of the search wrapper", () => {
+  const taxes = rankCatalogQuery("I want to find an agent that will do my taxes", catalog);
+  const specialistEndings = taxes.tools
+    .filter((tool) => !tool.generalPurpose)
+    .map((tool) => tool.whyItHelps.split(/so you can /i)[1] ?? "");
+  assert.ok(specialistEndings.length >= 2);
+  assert.ok(new Set(specialistEndings).size > 1, specialistEndings.join(" | "));
+  for (const tool of taxes.tools) {
+    assert.equal(/find an agent/i.test(tool.whyItHelps), false, tool.whyItHelps);
+    assert.equal(/\bwhile you\b/i.test(tool.whyItHelps), false, tool.whyItHelps);
+    if (!tool.generalPurpose) {
+      assert.match(tool.whyItHelps, /file your taxes|get your taxes done|finish your taxes|complete your taxes/);
+    }
+  }
+  const wedding = rankCatalogQuery("plan a wedding", catalog);
+  const claude = wedding.tools.find((tool) => tool.slug === "claude");
+  const perplexity = wedding.tools.find((tool) => tool.slug === "perplexity");
+  assert.ok(claude);
+  assert.ok(perplexity);
+  assert.match(claude.whyItHelps, /guest count and budget/i);
+  assert.match(claude.whyItHelps, /wedding vendor checklist/i);
+  assert.match(claude.whyItHelps, /timeline/i);
+  assert.match(perplexity.whyItHelps, /sourced summary/i);
+  assert.equal(new Set(wedding.tools.map((tool) => tool.whyItHelps)).size, wedding.tools.length);
 });
 
 const HELD_OUT: { query: string; expect: string | null }[] = [
