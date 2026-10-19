@@ -1,6 +1,6 @@
 /** Public Beehiiv publication. Not a secret. Override with NEXT_PUBLIC_NEWSLETTER_FORM_URL. */
 export const BEEHIIV_PUBLICATION_URL =
-  "https://johnnys-newsletter-877787.beehiiv.com";
+  "https://pickmyagent.beehiiv.com";
 
 export function getNewsletterPublicationUrl(): string {
   const override = process.env.NEXT_PUBLIC_NEWSLETTER_FORM_URL?.trim().replace(
