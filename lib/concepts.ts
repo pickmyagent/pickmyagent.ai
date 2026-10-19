@@ -10,6 +10,11 @@ export type Concept = {
   coveredVerbs: string[];
   /** Content tokens that do not count as a second job. */
   covered: string[];
+  /**
+   * A domain fallback. It supplies specialists only when no narrower concept matches.
+   * Extra verbs still change the intro, not whether these tools appear.
+   */
+  broad?: boolean;
 };
 
 export const CONCEPT_THRESHOLD = 8;
@@ -57,6 +62,26 @@ export const CONCEPTS: Concept[] = [
       "land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "lots", "lot",
       "viable", "deal", "deals", "potentially", "south", "carolina",
     ],
+  },
+  {
+    id: "deals",
+    useCase: "rank-property-deals",
+    categories: ["real-estate"],
+    broad: true,
+    phrases: [
+      "real estate deal",
+      "real estate deals",
+      "rental property",
+      "rental properties",
+      "cash flow",
+      "house to flip",
+      "houses to flip",
+      "fix and flip",
+      "commercial real estate",
+    ],
+    anchors: ["flip", "rental", "rentals", "cashflow"],
+    coveredVerbs: [],
+    covered: ["real", "estate", "deal", "deals"],
   },
   {
     id: "invest",

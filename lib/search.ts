@@ -316,37 +316,70 @@ function documentedLines(tool: Tool, useCaseSlug: string | null): string[] {
   return lines;
 }
 
+function usableCapability(line: string): string {
+  const clauses = line
+    .replace(/\bdocs checked\b[^.]*\.?/gi, "")
+    .replace(/\bwe did not sign up\b\.?/gi, "")
+    .split(/,\s*/);
+  const kept = clauses.filter((clause) =>
+    clause.trim().length > 0 &&
+    !/\$|\bper\s+(?:month|mo|seat|user|year)\b|\bbilled\b|\bdocs checked\b|\bwhen no specialist\b/i.test(clause),
+  );
+  return kept.join(", ").replace(/\s+/g, " ").replace(/^,\s*|,\s*$/g, "").replace(/\.$/, "").trim();
+}
+
 function bestCapability(tool: Tool, useCaseSlug: string | null, query: string): string {
   const lines = documentedLines(tool, useCaseSlug);
   const wanted = new Set(queryTokens(query));
-  let best = lines[0] ?? tool.shortDescription;
+  let best = "";
   let bestScore = -1;
   for (const line of lines) {
-    const tokens = new Set(words(line));
+    const capability = usableCapability(line);
+    if (capability.length < 12) continue;
+    const tokens = new Set(words(capability));
     let score = [...wanted].filter((token) => tokens.has(token)).length;
     if (useCaseSlug && line === tool.useCaseFit?.[useCaseSlug]) score += 2;
     if (score > bestScore) {
-      best = line;
+      best = capability;
       bestScore = score;
     }
   }
-  return best.endsWith(".") ? best : `${best}.`;
+  return best || usableCapability(tool.bestFor[0] || tool.shortDescription);
 }
 
-function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean): string {
-  const phrase = cleanUserPhrase(query);
-  if (!general && useCase) {
-    const capability = bestCapability(tool, useCase.slug, query).replace(/\.$/, "");
-    return `${capability}. That documented fit is for ${phrase}.`;
-  }
-  const name = tool.assistantName ?? tool.name.split("(")[0].trim();
+function jobAction(query: string): string {
   const verbs = extractVerbs(query);
   const specific = verbs.filter((verb) => !GENERIC.has(verb));
   const shown = specific.length > 0 ? verbs.filter((verb) => specific.includes(verb) || verb === "find") : [];
-  const action = shown.length > 0 ? humanJoin(shown) : "research, compare, and draft";
-  const object = objectPhrase(query, shown.length > 0 ? shown : verbs);
-  const listing = (tool.bestFor[0] || tool.shortDescription).replace(/\.$/, "");
-  return `Ask ${name} to ${action}${object ? ` ${object}` : ""} by researching, comparing, and drafting. Its listing says: ${listing}.`;
+  const tidy = (text: string) => text.replace(/\s+,/g, ",").replace(/[,\s]+$/g, "").trim();
+  if (shown.length === 0) {
+    const phrase = cleanUserPhrase(query).replace(/^finding\s+/i, "find ");
+    return tidy(phrase) || "work through this";
+  }
+  const object = objectPhrase(query, shown);
+  return tidy(`${humanJoin(shown)}${object ? ` ${object}` : ""}`);
+}
+
+function lowerFirst(text: string): string {
+  return text ? text.charAt(0).toLowerCase() + text.slice(1) : text;
+}
+
+const ASSISTANT_ASK: Record<string, (action: string) => string> = {
+  claude: (action) => `Ask Claude to compare the details you paste into chat while you ${action}.`,
+  chatgpt: (action) => `Ask ChatGPT to draft a written comparison while you ${action}.`,
+  gemini: (action) => `Ask Gemini to compare the options in Google apps while you ${action}.`,
+  perplexity: (action) => `Ask Perplexity to check public sources you can verify while you ${action}.`,
+};
+
+function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean): string {
+  const action = jobAction(query);
+  if (general) {
+    const name = tool.assistantName ?? tool.name.split("(")[0].trim();
+    const ask = ASSISTANT_ASK[tool.slug];
+    return ask ? ask(action) : `Ask ${name} to help while you ${action}.`;
+  }
+  const capability = lowerFirst(bestCapability(tool, useCase?.slug ?? null, query));
+  return `${tool.name} ${capability}, so you can ${action}.`;
 }
 
 export type RankedTool = {
@@ -505,8 +538,10 @@ export function rankCatalogQuery(
     .map((concept) => ({ concept, score: scoreConcept(concept, lower, tokens) }))
     .filter((item) => item.score >= CONCEPT_THRESHOLD)
     .sort((a, b) => b.score - a.score);
-  const top = rankedConcepts[0];
-  const tied = top ? rankedConcepts.filter((item) => item.score === top.score) : [];
+  const specificConcepts = rankedConcepts.filter((item) => !item.concept.broad);
+  const pool = specificConcepts.length > 0 ? specificConcepts : rankedConcepts;
+  const top = pool[0];
+  const tied = top ? pool.filter((item) => item.score === top.score) : [];
   const winner = tied.length === 1 ? top : null;
   if (winner?.concept.id === "video" && /\b(edit|editing|clip|clips|clipping|cut|make|making)\b/i.test(query)) {
     // Video editing is not a land search. Land is already gated on land words.

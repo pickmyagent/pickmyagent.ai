@@ -234,23 +234,23 @@ const JOBS: JobExpect[] = [
   { query: "bake a cake", useCase: null, intro: /cake/ },
   {
     query: "Find real estate deals and rank them",
-    useCase: null,
+    useCase: "rank-property-deals",
     intro: /find and rank real estate deals/,
     exactIntro: REAL_ESTATE_RANK_INTRO,
   },
   {
     query: "rank rental properties by cash flow",
-    useCase: null,
+    useCase: "rank-property-deals",
     intro: /rank rental properties by cash flow/,
   },
   {
     query: "score houses to flip",
-    useCase: null,
+    useCase: "rank-property-deals",
     intro: /score houses to flip/,
   },
   {
     query: "find commercial real estate deals",
-    useCase: null,
+    useCase: "rank-property-deals",
     intro: /commercial real estate deals/,
   },
   {
@@ -563,12 +563,89 @@ test("real estate ranking header echoes the query and never the land header", ()
   assert.equal(ranked.intro, REAL_ESTATE_RANK_INTRO);
   assert.equal(ranked.lead.includes("potentially viable land"), false);
   assert.equal(mentionsLand(query), false);
-  const landTools = ["acres", "land-id", "mashvisor", "regrid", "propstream"];
+  const landOnly = ["acres", "land-id", "regrid"];
+  const specialists = ranked.tools.filter((tool) => !tool.generalPurpose);
+  assert.ok(specialists.length >= 2, specialists.map((tool) => tool.slug).join(", "));
+  assert.ok(specialists.some((tool) => tool.slug === "propstream"));
+  assert.ok(specialists.some((tool) => tool.slug === "mashvisor"));
   assert.equal(
-    ranked.tools.some((tool) => landTools.includes(tool.slug)),
+    specialists.some((tool) => landOnly.includes(tool.slug)),
     false,
-    ranked.tools.map((tool) => tool.slug).join(", "),
+    specialists.map((tool) => tool.slug).join(", "),
   );
+});
+
+const DEAL_QUERIES = [
+  "Find real estate deals and rank them",
+  "rank rental properties by cash flow",
+  "score houses to flip",
+  "find commercial real estate deals",
+];
+
+test("deal queries rank real-estate specialists ahead of general assistants", () => {
+  for (const query of DEAL_QUERIES) {
+    const ranked = rankCatalogQuery(query, catalog);
+    const firstGeneral = ranked.tools.findIndex((tool) => tool.generalPurpose);
+    assert.ok(firstGeneral >= 2, `${query}: ${ranked.tools.map((tool) => tool.name).join(", ")}`);
+    for (const rankedTool of ranked.tools.slice(0, firstGeneral)) {
+      const tool = catalog.tools.find((item) => item.slug === rankedTool.slug);
+      assert.ok(tool, rankedTool.slug);
+      assert.ok(tool.categories.includes("real-estate"), tool.name);
+      assert.equal(
+        tool.useCaseTags.every((tag) => tag === "find-land"),
+        false,
+        `${query}: ${tool.name} is land-only`,
+      );
+    }
+  }
+});
+
+const BANNED_WHY = [
+  /that documented fit is for/i,
+  /its listing says:/i,
+  /when no specialist tool matches/i,
+  /docs checked;\s*we did not sign up/i,
+  /\$\d/,
+  /\bper month\b/i,
+  /\bper seat\b/i,
+];
+
+function distinctiveWhy(why: string): Set<string> {
+  const head = why.split(/\bwhile you\b|\bso you can\b/i)[0] ?? why;
+  const tokens = head.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/);
+  return new Set(tokens.filter((token) => token.length > 3));
+}
+
+function jaccard(left: Set<string>, right: Set<string>): number {
+  const union = new Set([...left, ...right]);
+  if (union.size === 0) return 1;
+  let shared = 0;
+  for (const token of left) if (right.has(token)) shared += 1;
+  return shared / union.size;
+}
+
+test("why-lines stay specific and do not leak internal notes", () => {
+  const queries = [
+    ...JOBS.map((job) => job.query),
+    ...QUERIES,
+    ...SAMPLE_QUERIES,
+    "find an agent to help me build and make what I need",
+  ];
+  for (const query of queries) {
+    const ranked = rankCatalogQuery(query, catalog);
+    const lines = ranked.tools.map((tool) => tool.whyItHelps);
+    for (const line of lines) {
+      for (const banned of BANNED_WHY) {
+        assert.equal(banned.test(line), false, `${query}: ${line}`);
+      }
+    }
+    for (let i = 0; i < lines.length; i++) {
+      for (let j = i + 1; j < lines.length; j++) {
+        const score = jaccard(distinctiveWhy(lines[i]), distinctiveWhy(lines[j]));
+        assert.ok(score < 0.72, `${query} why-lines are too similar (${score.toFixed(2)}): ${lines[i]} || ${lines[j]}`);
+      }
+    }
+  }
 });
 
 test("search newsletter prompt is wired into search and the tools page", () => {
@@ -632,8 +709,8 @@ const HELD_OUT: { query: string; expect: string | null }[] = [
   { query: "calendar management for a founder", expect: "scheduling-assistant" },
   { query: "analyze this spreadsheet", expect: "analyze-data" },
   { query: "write an seo article", expect: "create-content" },
-  { query: "find real estate deals and score them", expect: null },
-  { query: "rank houses by cash flow", expect: null },
+  { query: "find real estate deals and score them", expect: "rank-property-deals" },
+  { query: "rank houses by cash flow", expect: "rank-property-deals" },
   { query: "a lot of deals", expect: null },
   { query: "wheres a good wedding venue", expect: null },
 ];
