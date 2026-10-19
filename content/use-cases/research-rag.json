@@ -29,5 +29,10 @@
       "toolId": "pinecone",
       "why": "Managed vector database. Pricing page checked; a true $0 tier was not clearly confirmed."
     }
-  ]
+  ],
+  "jobPhrase": "researching a question from source pages",
+  "assistantTask": "compare what the sources say and draft a short brief with links",
+  "assistantContext": "researching a question from source pages",
+  "searchTopic": "the question you want sourced",
+  "intro": "AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself."
 }

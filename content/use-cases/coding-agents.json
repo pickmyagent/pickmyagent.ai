@@ -21,5 +21,10 @@
       "toolId": "claude",
       "why": "Anthropic’s Claude product and API, including coding workflows. Docs checked; we did not sign up."
     }
-  ]
+  ],
+  "jobPhrase": "writing and reviewing code",
+  "assistantTask": "explain a code change, compare approaches, and draft a review note",
+  "assistantContext": "writing and reviewing code",
+  "searchTopic": "the library or error you are working through",
+  "intro": "AI agents can read a repo, suggest an edit, and draft a review note so you can check the change before it lands."
 }

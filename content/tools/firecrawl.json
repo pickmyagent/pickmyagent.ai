@@ -42,7 +42,7 @@
   ],
   "notIdealFor": [
     "Interactive browser tasks such as clicking and login flows",
-    "A general web-search API \u2014 that is a different job"
+    "A general web-search API — that is a different job"
   ],
   "strength": "The free cloud plan includes 1,000 credits per month to turn pages into markdown, and the repo is open source.",
   "weakness": "Paid cloud samples on the page included about $16 and $75, and a monthly starting price was not confirmed.",
@@ -76,5 +76,9 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.firecrawl.dev/"
+  },
+  "useCaseFit": {
+    "tool-use-browser": "Turns website pages into markdown an agent can read, with a free cloud plan.",
+    "research-rag": "Turns source pages into markdown so an agent can quote the page it fetched."
   }
 }

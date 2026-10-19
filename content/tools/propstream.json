@@ -1,0 +1,68 @@
+{
+  "affiliateUrl": null,
+  "platforms": [
+    "web"
+  ],
+  "freeTierNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T12:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "propstream",
+  "slug": "propstream",
+  "name": "PropStream",
+  "websiteUrl": "https://www.propstream.com/",
+  "shortDescription": "Property search with an AI search box. Essentials is $99 per month.",
+  "longDescription": "PropStream searches property records and includes an AI search and a PropStream Intelligence Assistant. PropStream's own cost article, read October 16, 2026, lists Essentials at $99 per month, Pro at $199, and Elite at $699, with a 7-day trial and 50 leads. We did not start a trial.",
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "find-land"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Essentials $99 per month, Pro $199, Elite $699, from PropStream's cost article. 7-day trial.",
+  "pricingUrl": "https://www.propstream.com/pricing",
+  "docsUrl": "https://www.propstream.com/news/how-much-does-propstream-cost",
+  "freeTier": false,
+  "startingPrice": 99,
+  "freeTrial": "7 days",
+  "bestFor": [
+    "Searching properties with filters and an AI search box during a 7-day trial"
+  ],
+  "notIdealFor": [
+    "Someone who wants a free ongoing subscription"
+  ],
+  "strength": "PropStream's cost article lists Essentials at $99 per month, and the site offers a 7-day trial.",
+  "weakness": "The trial is 7 days, and skip tracing and mail are add-on costs beyond the subscription.",
+  "sources": [
+    "https://www.propstream.com/pricing",
+    "https://www.propstream.com/news/how-much-does-propstream-cost"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.propstream.com/pricing"
+  },
+  "useCaseFit": {
+    "find-land": "Searches property records with an AI search box, and Essentials is $99 per month."
+  }
+}

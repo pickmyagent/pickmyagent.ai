@@ -1,5 +1,6 @@
 "use client";
 
+import { track } from "@vercel/analytics";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { StatusBadge } from "@/components/badges";
@@ -7,6 +8,14 @@ import { RankingNote } from "@/components/ranking-note";
 import { formatDate } from "@/lib/format";
 import { rankCatalogQuery } from "@/lib/search";
 import type { Category, Tool, UseCase } from "@/lib/types";
+
+function analyticsQuery(query: string): string {
+  return query
+    .replace(/\S+@\S+/g, "")
+    .replace(/\d{7,}/g, "")
+    .trim()
+    .slice(0, 80);
+}
 
 const PLACEHOLDERS = [
   "Build a multi-agent research crew",
@@ -45,6 +54,16 @@ export function JobSearch({
   );
   const visibleCases = ranked.useCases;
   const visibleTools = ranked.tools;
+
+  useEffect(() => {
+    if (!trimmed || !ranked.lowMatch) return;
+    const logged = analyticsQuery(trimmed);
+    if (!logged) return;
+    const id = window.setTimeout(() => {
+      track("search_low_match", { query: logged });
+    }, 800);
+    return () => window.clearTimeout(id);
+  }, [trimmed, ranked.lowMatch]);
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -102,57 +121,52 @@ export function JobSearch({
 
         {trimmed ? (
           <div id="match-results" className="mb-8 scroll-mt-24">
-            <h3 className="font-mono text-xs tracking-[0.16em] text-gold uppercase">
-              {ranked.fallback ? "Closest matches" : "Tools that match"}
-            </h3>
-            {ranked.fallback ? (
-              <p className="mt-3 text-muted">
-                Nothing matched that wording closely. These are the closest tools in the catalog.{" "}
-                <Link href="/submit" className="text-gold underline">
-                  Suggest a tool
-                </Link>
-              </p>
+            <h3 className="text-xl font-semibold tracking-tight">{ranked.lead}</h3>
+            <p className="mt-3 max-w-3xl text-base leading-relaxed">{ranked.intro}</p>
+            {ranked.disclaimer ? (
+              <p className="mt-3 max-w-3xl text-sm text-muted">{ranked.disclaimer}</p>
             ) : null}
-            {visibleTools.length === 0 ? (
-              <p className="mt-3 text-muted">
-                <Link href="/submit" className="text-gold underline">
-                  Suggest a tool
-                </Link>
-              </p>
-            ) : (
-              <ul className="mt-3 divide-y divide-line border border-line bg-panel">
-                {visibleTools.map((tool) => (
-                  <li key={tool.slug}>
-                    <Link
-                      href={`/tools/${tool.slug}`}
-                      className="flex flex-col gap-2 px-4 py-3 hover:bg-panel-2 sm:flex-row sm:items-center sm:justify-between"
-                    >
-                      <span>
-                        <span className="font-semibold">{tool.name}</span>
-                        <span className="mt-1 block text-sm text-muted">
-                          {tool.shortDescription}
+            <ul className="mt-4 grid gap-3">
+              {visibleTools.map((tool) => (
+                <li key={tool.slug} className="border border-line bg-panel">
+                  <Link
+                    href={`/tools/${tool.slug}`}
+                    className="flex flex-col gap-2 px-4 py-4 hover:bg-panel-2"
+                  >
+                    <span className="flex flex-wrap items-center gap-2">
+                      <span className="font-semibold">{tool.name}</span>
+                      {tool.generalPurpose ? (
+                        <span className="border border-line px-2 py-0.5 font-mono text-[11px] tracking-wide text-muted uppercase">
+                          General-purpose AI assistant
                         </span>
+                      ) : null}
+                      <StatusBadge status={tool.smokeStatus} />
+                    </span>
+                    <span className="text-sm text-muted">{tool.shortDescription}</span>
+                    <span className="border-l-2 border-gold pl-3 text-sm leading-relaxed">
+                      <span className="mb-1 block font-mono text-[11px] tracking-wide text-gold uppercase">
+                        Why it helps
                       </span>
-                      <span className="flex flex-wrap items-center gap-2">
-                        <StatusBadge status={tool.smokeStatus} />
-                        <span className="font-mono text-xs text-muted">
-                          {formatDate(tool.checkedDate)}
-                        </span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+                      {tool.whyItHelps}
+                    </span>
+                    <span className="font-mono text-xs text-muted">
+                      {formatDate(tool.checkedDate)}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         ) : null}
 
         {visibleCases.length === 0 ? (
-          <p className="text-muted">
-            <Link href="/submit" className="text-gold underline">
-              Suggest a tool
-            </Link>
-          </p>
+          trimmed ? null : (
+            <p className="text-muted">
+              <Link href="/submit" className="text-gold underline">
+                Suggest a tool
+              </Link>
+            </p>
+          )
         ) : (
           <ul className="grid gap-3 sm:grid-cols-2">
             {visibleCases.map((useCase, index) => (

@@ -62,5 +62,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://eklipse.gg/"
+  },
+  "useCaseFit": {
+    "game-creative": "Finds highlight clips from Twitch, YouTube, and Kick and exports them vertical."
   }
 }

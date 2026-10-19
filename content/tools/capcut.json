@@ -64,5 +64,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.capcut.com/"
+  },
+  "useCaseFit": {
+    "game-creative": "Edits video for YouTube, TikTok, and Reels, and the free plan covers basic editing."
   }
 }

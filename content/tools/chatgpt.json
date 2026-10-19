@@ -1,0 +1,68 @@
+{
+  "affiliateUrl": null,
+  "platforms": [
+    "web"
+  ],
+  "freeTierNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T12:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "chatgpt",
+  "slug": "chatgpt",
+  "name": "ChatGPT",
+  "websiteUrl": "https://chatgpt.com/",
+  "shortDescription": "General-purpose chat assistant from OpenAI, with a free plan and paid Go and Plus plans.",
+  "longDescription": "ChatGPT is OpenAI's general chat assistant. The pricing page lists Free, Go, Plus, and Pro. OpenAI's Go announcement lists Go at $8 per month in the US, and the Plus help article lists Plus at $20 per month. We did not subscribe. It is not a specialist for one job.",
+  "categories": [
+    "general-assistants"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "agent"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "OpenAI lists Go at $8 per month in the US and Plus at $20 per month. A free plan is on the pricing page.",
+  "pricingUrl": "https://chatgpt.com/pricing",
+  "docsUrl": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+  "freeTier": true,
+  "startingPrice": 8,
+  "freeTrial": null,
+  "bestFor": [
+    "Researching, comparing, and drafting when no specialist tool matches"
+  ],
+  "notIdealFor": [
+    "A job that needs parcel records, a brokerage link, or a video timeline"
+  ],
+  "strength": "OpenAI lists a free ChatGPT plan, with Go at $8 per month and Plus at $20 per month.",
+  "weakness": "It is a general chat assistant, not a portfolio, parcel, or video editor built for one job.",
+  "sources": [
+    "https://chatgpt.com/pricing",
+    "https://openai.com/index/introducing-chatgpt-go/",
+    "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://chatgpt.com/pricing"
+  },
+  "generalPurpose": true,
+  "assistantName": "ChatGPT",
+  "assistantKind": "draft"
+}

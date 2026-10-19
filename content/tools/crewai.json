@@ -80,5 +80,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://crewai.com/"
+  },
+  "useCaseFit": {
+    "multi-agent-workflows": "Open-source framework that splits one job across role-based agents."
   }
 }

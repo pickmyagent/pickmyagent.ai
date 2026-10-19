@@ -31,5 +31,10 @@
       "toolId": "opus",
       "why": "Short clips from a long video — the stream-VOD job. A lasting free plan was not clearly confirmed."
     }
-  ]
+  ],
+  "jobPhrase": "turning a long video into short clips",
+  "assistantTask": "outline clip ideas, write captions, and compare which moments to cut",
+  "assistantContext": "turning a long video into short clips",
+  "searchTopic": "editing steps for the kind of video you described",
+  "intro": "AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again."
 }

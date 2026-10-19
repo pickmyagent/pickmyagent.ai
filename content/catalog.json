@@ -48,9 +48,92 @@
       "slug": "knowledge",
       "title": "Knowledge, notes & meetings",
       "summary": "Capture, summarize, and query team context."
+    },
+    {
+      "slug": "personal-finance",
+      "title": "Personal finance & investing",
+      "summary": "AI tools that track a portfolio or help you research investments."
+    },
+    {
+      "slug": "real-estate",
+      "title": "Land & real estate research",
+      "summary": "Parcel, ownership, and property research for land and real estate."
+    },
+    {
+      "slug": "general-assistants",
+      "title": "General-purpose AI assistants",
+      "summary": "Chat assistants you can ask to research or draft, not specialists for one job."
     }
   ],
   "tools": [
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "acres",
+      "slug": "acres",
+      "name": "Acres",
+      "websiteUrl": "https://www.acres.com/",
+      "shortDescription": "Parcel maps for land. A free account exists. Plus is $9.99 per month.",
+      "longDescription": "Acres is a land-intelligence map. On October 16, 2026 the pricing page said you can start free for basic property insights, listed Plus at $9.99 per month (and $7.49 per month on the other figure), and said Acres+ can be tried free for 7 days. We did not create an account.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "find-land"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Plus is $9.99 per month, also shown at $7.49 per month. Free account for basic insights. Acres+ trial is 7 days.",
+      "pricingUrl": "https://www.acres.com/pricing",
+      "docsUrl": "https://www.acres.com/pricing",
+      "freeTier": true,
+      "startingPrice": 9.99,
+      "freeTrial": "7 days",
+      "bestFor": [
+        "Looking up parcels and basic property insights before a paid owner search"
+      ],
+      "notIdealFor": [
+        "Someone who needs comps on the free account"
+      ],
+      "strength": "A free account can view basic parcel insights, and Plus is listed at $9.99 per month.",
+      "weakness": "Owner mailing address and sold-land comps sit on the paid plans, not the free account.",
+      "sources": [
+        "https://www.acres.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.acres.com/pricing"
+      },
+      "useCaseFit": {
+        "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus."
+      }
+    },
     {
       "id": "autogen",
       "slug": "autogen",
@@ -133,6 +216,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://github.com/microsoft/autogen"
+      },
+      "useCaseFit": {
+        "multi-agent-workflows": "Open-source Python library for conversations between more than one agent."
       }
     },
     {
@@ -210,6 +296,10 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://github.com/Significant-Gravitas/AutoGPT"
+      },
+      "useCaseFit": {
+        "coding-agents": "Runs an open-source agent loop toward a coding goal, and you review the output.",
+        "multi-agent-workflows": "Open-source agent project that can try a multi-step goal you give it."
       }
     },
     {
@@ -279,6 +369,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.bitpart.ai/"
+      },
+      "useCaseFit": {
+        "game-npcs": "NPC engine with SDKs for game characters, and no public price grid on our check."
       }
     },
     {
@@ -360,6 +453,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://browser-use.com/"
+      },
+      "useCaseFit": {
+        "tool-use-browser": "Open-source Python agent that opens pages, clicks, and types in a browser."
       }
     },
     {
@@ -428,6 +524,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.capcut.com/"
+      },
+      "useCaseFit": {
+        "game-creative": "Edits video for YouTube, TikTok, and Reels, and the free plan covers basic editing."
       }
     },
     {
@@ -496,7 +595,78 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://captions.ai/"
+      },
+      "useCaseFit": {
+        "game-creative": "Trims video and adds captions, and the free plan includes some of those edits."
       }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "chatgpt",
+      "slug": "chatgpt",
+      "name": "ChatGPT",
+      "websiteUrl": "https://chatgpt.com/",
+      "shortDescription": "General-purpose chat assistant from OpenAI, with a free plan and paid Go and Plus plans.",
+      "longDescription": "ChatGPT is OpenAI's general chat assistant. The pricing page lists Free, Go, Plus, and Pro. OpenAI's Go announcement lists Go at $8 per month in the US, and the Plus help article lists Plus at $20 per month. We did not subscribe. It is not a specialist for one job.",
+      "categories": [
+        "general-assistants"
+      ],
+      "useCaseTags": [],
+      "toolTypes": [
+        "agent"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "OpenAI lists Go at $8 per month in the US and Plus at $20 per month. A free plan is on the pricing page.",
+      "pricingUrl": "https://chatgpt.com/pricing",
+      "docsUrl": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "freeTier": true,
+      "startingPrice": 8,
+      "freeTrial": null,
+      "bestFor": [
+        "Researching, comparing, and drafting when no specialist tool matches"
+      ],
+      "notIdealFor": [
+        "A job that needs parcel records, a brokerage link, or a video timeline"
+      ],
+      "strength": "OpenAI lists a free ChatGPT plan, with Go at $8 per month and Plus at $20 per month.",
+      "weakness": "It is a general chat assistant, not a portfolio, parcel, or video editor built for one job.",
+      "sources": [
+        "https://chatgpt.com/pricing",
+        "https://openai.com/index/introducing-chatgpt-go/",
+        "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://chatgpt.com/pricing"
+      },
+      "generalPurpose": true,
+      "assistantName": "ChatGPT",
+      "assistantKind": "draft"
     },
     {
       "id": "claude",
@@ -507,7 +677,8 @@
       "shortDescription": "Anthropic Claude product and API for chat and coding. Docs checked; we did not sign up.",
       "longDescription": "Claude is Anthropic’s model product, used for chat and coding. The URL we checked redirected toward the Claude product overview. The pricing page included a $0 option in the text we could read; API billing is separate. We did not create an account.",
       "categories": [
-        "coding-agents"
+        "coding-agents",
+        "general-assistants"
       ],
       "useCaseTags": [
         "coding-agents"
@@ -567,6 +738,78 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://claude.com/product/overview"
+      },
+      "generalPurpose": true,
+      "assistantName": "Claude",
+      "assistantKind": "draft"
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "composer",
+      "slug": "composer",
+      "name": "Composer",
+      "websiteUrl": "https://www.composer.trade/",
+      "shortDescription": "Automates a trading strategy. Starter is $0. Advanced is $10 per month.",
+      "longDescription": "Composer lets you build and automate trading strategies. On October 16, 2026 the pricing page listed Starter at $0, including one automated strategy, and Advanced at $10 per month. Brokerage services are through a registered broker-dealer. We did not open an account. This is not financial advice.",
+      "categories": [
+        "personal-finance"
+      ],
+      "useCaseTags": [
+        "manage-portfolio"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Starter is $0. Advanced is $10 per month. Regulatory fees on sales are separate. Not financial advice.",
+      "pricingUrl": "https://www.composer.trade/pricing",
+      "docsUrl": "https://www.composer.trade/pricing",
+      "freeTier": true,
+      "startingPrice": 10,
+      "freeTrial": null,
+      "bestFor": [
+        "Automating one strategy on the $0 Starter plan"
+      ],
+      "notIdealFor": [
+        "Someone who does not want a brokerage account",
+        "Anyone treating this card as financial advice"
+      ],
+      "strength": "Starter is $0 and can automate one strategy, and Advanced is $10 per month.",
+      "weakness": "Automated trading can lose money, and sale fees are listed apart from the subscription.",
+      "sources": [
+        "https://www.composer.trade/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.composer.trade/pricing"
+      },
+      "useCaseFit": {
+        "manage-portfolio": "Automates one trading strategy on the $0 Starter plan, and Advanced is $10 a month."
       }
     },
     {
@@ -644,6 +887,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://composio.dev/"
+      },
+      "useCaseFit": {
+        "tool-use-browser": "Connects agents to third-party apps, with a Hobby plan of tool calls."
       }
     },
     {
@@ -721,6 +967,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://continue.dev/"
+      },
+      "useCaseFit": {
+        "coding-agents": "Open-source coding agent you install in the IDE you already use."
       }
     },
     {
@@ -789,6 +1038,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://convai.com/"
+      },
+      "useCaseFit": {
+        "game-npcs": "Conversational characters that talk with the player inside a game."
       }
     },
     {
@@ -873,6 +1125,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://crewai.com/"
+      },
+      "useCaseFit": {
+        "multi-agent-workflows": "Open-source framework that splits one job across role-based agents."
       }
     },
     {
@@ -944,6 +1199,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://cursor.com/"
+      },
+      "useCaseFit": {
+        "coding-agents": "Desktop IDE agent that can edit the repo, with a free plan of limited requests."
       }
     },
     {
@@ -1014,6 +1272,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.descript.com/"
+      },
+      "useCaseFit": {
+        "game-creative": "Edits video by editing the transcript, with 60 free media minutes a month."
       }
     },
     {
@@ -1093,6 +1354,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://dify.ai/"
+      },
+      "useCaseFit": {
+        "multi-agent-workflows": "Visual builder for agent workflows, with a self-hosted community edition."
       }
     },
     {
@@ -1159,6 +1423,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://eklipse.gg/"
+      },
+      "useCaseFit": {
+        "game-creative": "Finds highlight clips from Twitch, YouTube, and Kick and exports them vertical."
       }
     },
     {
@@ -1227,6 +1494,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://elevenlabs.io/"
+      },
+      "useCaseFit": {
+        "game-creative": "Generates voice and audio, which is a different job from cutting a video."
       }
     },
     {
@@ -1307,6 +1577,10 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.firecrawl.dev/"
+      },
+      "useCaseFit": {
+        "tool-use-browser": "Turns website pages into markdown an agent can read, with a free cloud plan.",
+        "research-rag": "Turns source pages into markdown so an agent can quote the page it fetched."
       }
     },
     {
@@ -1383,7 +1657,77 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://flowiseai.com/"
+      },
+      "useCaseFit": {
+        "multi-agent-workflows": "Open-source low-code builder for model flows you can self-host."
       }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "gemini",
+      "slug": "gemini",
+      "name": "Google Gemini",
+      "websiteUrl": "https://gemini.google.com/",
+      "shortDescription": "General-purpose assistant from Google, with a free plan and paid Google AI plans.",
+      "longDescription": "Gemini is Google's general assistant. The Google One AI plans page, read October 16, 2026, lists a free Gemini plan, Google AI Plus at $4.99 per month, and Google AI Pro at $19.99 per month in the United States. We did not subscribe. It is not a specialist for one job.",
+      "categories": [
+        "general-assistants"
+      ],
+      "useCaseTags": [],
+      "toolTypes": [
+        "agent"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Google AI Plus is $4.99 per month and Google AI Pro is $19.99 per month on the US Google One plans page. A free plan exists.",
+      "pricingUrl": "https://one.google.com/about/google-ai-plans/",
+      "docsUrl": "https://gemini.google/subscriptions/",
+      "freeTier": true,
+      "startingPrice": 4.99,
+      "freeTrial": null,
+      "bestFor": [
+        "Researching, comparing, and drafting inside Google's apps"
+      ],
+      "notIdealFor": [
+        "A job that needs parcel records, a brokerage link, or a video timeline"
+      ],
+      "strength": "Google lists a free Gemini plan, and Google AI Plus starts at $4.99 per month in the United States.",
+      "weakness": "It is a general assistant, not a specialist for parcels, portfolios, or video clipping.",
+      "sources": [
+        "https://one.google.com/about/google-ai-plans/",
+        "https://gemini.google/subscriptions/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://one.google.com/about/google-ai-plans/"
+      },
+      "generalPurpose": true,
+      "assistantName": "Gemini",
+      "assistantKind": "draft"
     },
     {
       "id": "granola",
@@ -1451,6 +1795,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.granola.ai/"
+      },
+      "useCaseFit": {
+        "meetings-knowledge": "Takes meeting notes alongside your calls, and the free plan covers that."
       }
     },
     {
@@ -1520,6 +1867,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.heygen.com/"
+      },
+      "useCaseFit": {
+        "game-creative": "Makes avatar videos, and the free plan includes 3 videos of up to 1 minute."
       }
     },
     {
@@ -1588,6 +1938,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://inworld.ai/"
+      },
+      "useCaseFit": {
+        "game-npcs": "Character dialogue for games, with an On-Demand plan that starts at $0."
       }
     },
     {
@@ -1655,6 +2008,145 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.kapwing.com/"
+      },
+      "useCaseFit": {
+        "game-creative": "Browser editor for trimming, captions, and resizing video into social clips."
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "kubera",
+      "slug": "kubera",
+      "name": "Kubera",
+      "websiteUrl": "https://www.kubera.com/",
+      "shortDescription": "Household balance sheet. Essentials is $250 per year, with a 14-day trial.",
+      "longDescription": "Kubera tracks a household balance sheet for a flat annual fee. On October 16, 2026 the wealth-tracker page listed Essentials at $250 per year and Black at $2,500 per year, with a 14-day trial and no fee based on assets. We did not start a trial. This is not financial advice.",
+      "categories": [
+        "personal-finance"
+      ],
+      "useCaseTags": [
+        "manage-portfolio"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Essentials is $250 per year. Black is $2,500 per year. 14-day trial. No monthly price was listed. Not financial advice.",
+      "pricingUrl": "https://www.kubera.com/wealth-tracker",
+      "docsUrl": "https://help.kubera.com/article/129-what-is-kubera-black",
+      "freeTier": false,
+      "startingPrice": null,
+      "freeTrial": "14 days",
+      "bestFor": [
+        "Tracking a household balance sheet for a flat annual fee"
+      ],
+      "notIdealFor": [
+        "Someone who wants a lasting $0 plan",
+        "Anyone treating this card as financial advice"
+      ],
+      "strength": "Kubera Essentials is a flat $250 per year for one household, with a 14-day trial and no asset-based fee.",
+      "weakness": "There is no lasting $0 plan, and the pages we checked do not place trades for you.",
+      "sources": [
+        "https://www.kubera.com/wealth-tracker",
+        "https://help.kubera.com/article/129-what-is-kubera-black"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.kubera.com/wealth-tracker"
+      },
+      "useCaseFit": {
+        "manage-portfolio": "Tracks a household balance sheet for $250 a year, with a 14-day trial."
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "land-id",
+      "slug": "land-id",
+      "name": "Land id",
+      "websiteUrl": "https://id.land/",
+      "shortDescription": "Nationwide parcel and owner info. From $15 per month, or $7 billed annually.",
+      "longDescription": "Land id maps parcels and owner info. On October 16, 2026 the pricing page listed the base plan at $7 per month per user billed annually, and the app listing also stated $15 per month billed monthly, plus a 7-day trial. Premium adds AI Insights. We did not start a trial.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "find-land"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Base plan is $15 per month billed monthly, or $7 per month billed annually. 7-day trial.",
+      "pricingUrl": "https://id.land/pricing",
+      "docsUrl": "https://id.land/pricing",
+      "freeTier": false,
+      "startingPrice": 15,
+      "freeTrial": "7 days",
+      "bestFor": [
+        "Looking up parcel boundaries and owner info across the United States"
+      ],
+      "notIdealFor": [
+        "Someone who wants a lasting $0 map"
+      ],
+      "strength": "The base plan is $15 per month billed monthly, or $7 per month billed annually, with a 7-day trial.",
+      "weakness": "There is no lasting free plan, and mailing lists on the pricing page can cost extra.",
+      "sources": [
+        "https://id.land/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://id.land/pricing"
+      },
+      "useCaseFit": {
+        "find-land": "Looks up parcel and owner info nationwide, with a 7-day trial on the paid plan."
       }
     },
     {
@@ -1737,6 +2229,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.langchain.com/"
+      },
+      "useCaseFit": {
+        "multi-agent-workflows": "Open-source library for agents that call tools in code you write."
       }
     },
     {
@@ -1820,6 +2315,79 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.llamaindex.ai/"
+      },
+      "useCaseFit": {
+        "multi-agent-workflows": "Open-source framework for agents that retrieve from documents you provide.",
+        "research-rag": "Retrieves passages from documents you provide and can hand them to an agent."
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "magnifi",
+      "slug": "magnifi",
+      "name": "Magnifi",
+      "websiteUrl": "https://magnifi.com/",
+      "shortDescription": "Links brokerage accounts on a $0 plan. Premium is $99 per year.",
+      "longDescription": "Magnifi is an investing app that links accounts and answers portfolio questions. On October 16, 2026 the pricing page listed a $0 plan with account overview and portfolio analysis, and Premium at $99 per year for forecasts and scenario tests. We did not link an account. This is not financial advice.",
+      "categories": [
+        "personal-finance"
+      ],
+      "useCaseTags": [
+        "manage-portfolio"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Premium is $99 per year on the pricing page. The page does not list a single monthly rate. Not financial advice.",
+      "pricingUrl": "https://magnifi.com/pricing",
+      "docsUrl": "https://magnifi.com/pricing",
+      "freeTier": true,
+      "startingPrice": null,
+      "freeTrial": null,
+      "bestFor": [
+        "Linking brokerage accounts and reading a portfolio summary on the free plan"
+      ],
+      "notIdealFor": [
+        "Someone who needs forecasts without paying for Premium",
+        "Anyone treating this card as financial advice"
+      ],
+      "strength": "The pricing page lists a $0 plan that can link accounts, and Premium at $99 per year for forecasts.",
+      "weakness": "Forecasts and scenario tests sit on the paid Premium plan, and fund fees can still apply.",
+      "sources": [
+        "https://magnifi.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://magnifi.com/pricing"
+      },
+      "useCaseFit": {
+        "manage-portfolio": "Links brokerage accounts on the $0 plan and adds forecasts on Premium."
       }
     },
     {
@@ -1889,6 +2457,76 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.make.com/"
+      },
+      "useCaseFit": {
+        "workflow-automation": "Visual automations across apps, and the pricing FAQ describes 1,000 free credits a month."
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "mashvisor",
+      "slug": "mashvisor",
+      "name": "Mashvisor",
+      "websiteUrl": "https://www.mashvisor.com/",
+      "shortDescription": "Rental comps and property analysis. Lite is $49.99 per month, billed annually.",
+      "longDescription": "Mashvisor analyzes traditional and short-term rental comps. On October 16, 2026 the investor pricing page listed Lite at $49.99 per month billed annually, Standard at $74.99, and Professional at $99.99. We did not subscribe.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "find-land"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Lite is $49.99 per month billed annually. Standard is $74.99. Professional is $99.99.",
+      "pricingUrl": "https://www.mashvisor.com/pricing",
+      "docsUrl": "https://www.mashvisor.com/pricing",
+      "freeTier": false,
+      "startingPrice": 49.99,
+      "freeTrial": null,
+      "bestFor": [
+        "Comparing rental income estimates on individual properties"
+      ],
+      "notIdealFor": [
+        "Someone researching raw land with no rental comps"
+      ],
+      "strength": "The investor pricing page lists Lite at $49.99 per month, billed annually, for rental comps.",
+      "weakness": "The pricing page we checked does not show a $0 plan, and raw land is outside the rental-comps job.",
+      "sources": [
+        "https://www.mashvisor.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.mashvisor.com/pricing"
+      },
+      "useCaseFit": {
+        "find-land": "Compares rental comps on a property, and Lite is $49.99 per month billed annually."
       }
     },
     {
@@ -1971,6 +2609,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://mem0.ai/"
+      },
+      "useCaseFit": {
+        "research-rag": "Stores memory an agent can read later, and we imported the Python package locally."
       }
     },
     {
@@ -2040,6 +2681,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.meshy.ai/"
+      },
+      "useCaseFit": {
+        "game-creative": "Turns text or an image into a 3D asset, and the pricing page shows a $0 plan."
       }
     },
     {
@@ -2112,6 +2756,9 @@
       "siteLoad": {
         "status": 403,
         "finalUrl": "https://www.midjourney.com/"
+      },
+      "useCaseFit": {
+        "game-creative": "Generates images on a paid plan, which is a different job from editing video."
       }
     },
     {
@@ -2180,6 +2827,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://mistscale.com/"
+      },
+      "useCaseFit": {
+        "game-npcs": "Memory for game NPCs that need to remember the player."
       }
     },
     {
@@ -2247,6 +2897,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://modl.ai/"
+      },
+      "useCaseFit": {
+        "game-npcs": "Game AI tools for teams, and the pricing page we checked returned 404."
       }
     },
     {
@@ -2326,6 +2979,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://n8n.io/"
+      },
+      "useCaseFit": {
+        "workflow-automation": "Self-hosted community edition for multi-step workflows across apps you already use."
       }
     },
     {
@@ -2395,6 +3051,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.notion.com/"
+      },
+      "useCaseFit": {
+        "meetings-knowledge": "Team workspace for docs and wikis, with a free plan that trials Notion AI."
       }
     },
     {
@@ -2462,6 +3121,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://developer.nvidia.com/ace-for-games"
+      },
+      "useCaseFit": {
+        "game-npcs": "Developer downloads and plugins for in-game characters on NVIDIA's stack."
       }
     },
     {
@@ -2531,6 +3193,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://obsidian.md/"
+      },
+      "useCaseFit": {
+        "meetings-knowledge": "Local-first notes app that the official pricing page says is free without limits."
       }
     },
     {
@@ -2597,6 +3262,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.opus.pro/"
+      },
+      "useCaseFit": {
+        "game-creative": "Cuts a long video into short clips, and the free plan includes 60 credits a month."
       }
     },
     {
@@ -2608,7 +3276,8 @@
       "shortDescription": "Web research product. Homepage returned HTTP 403 to our checker, so this listing is not fully checked.",
       "longDescription": "Perplexity answers questions from the web. The homepage returned HTTP 403 to our client. Docs were reachable, but we could not cleanly confirm a consumer Free versus Pro split. This listing is untested. A 403 here is an environment limit, not proof a browser cannot open the site.",
       "categories": [
-        "search-rag"
+        "search-rag",
+        "general-assistants"
       ],
       "useCaseTags": [
         "research-rag"
@@ -2664,7 +3333,10 @@
       "siteLoad": {
         "status": 403,
         "finalUrl": "https://www.perplexity.ai/"
-      }
+      },
+      "generalPurpose": true,
+      "assistantName": "Perplexity",
+      "assistantKind": "search"
     },
     {
       "affiliateUrl": null,
@@ -2733,6 +3405,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://pika.art/"
+      },
+      "useCaseFit": {
+        "game-creative": "Generates a short video from a prompt, and Starter is $10 per month."
       }
     },
     {
@@ -2799,6 +3474,285 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.pinecone.io/"
+      },
+      "useCaseFit": {
+        "research-rag": "Hosts vectors for search over your documents, with a free Starter plan."
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "portfolio-pilot",
+      "slug": "portfolio-pilot",
+      "name": "PortfolioPilot",
+      "websiteUrl": "https://portfoliopilot.com/",
+      "shortDescription": "Tracks net worth and a portfolio. Free plan is $0. Gold is $29 per month.",
+      "longDescription": "PortfolioPilot, from Global Predictions, tracks accounts and assesses a portfolio. On October 16, 2026 the pricing page listed a $0 plan with net-worth tracking and a portfolio assessment. Gold was listed at $29 per month, and also at $20 per month on the annual figure shown beside it. We did not create an account. This is not financial advice.",
+      "categories": [
+        "personal-finance"
+      ],
+      "useCaseTags": [
+        "manage-portfolio"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Gold listed at $29 per month, and at $20 per month on the annual figure. Not financial advice.",
+      "pricingUrl": "https://portfoliopilot.com/pricing",
+      "docsUrl": "https://portfoliopilot.com/pricing",
+      "freeTier": true,
+      "startingPrice": 29,
+      "freeTrial": null,
+      "bestFor": [
+        "Seeing accounts and a portfolio assessment on the free plan"
+      ],
+      "notIdealFor": [
+        "Someone who wants a trade placed for them",
+        "Anyone treating this card as financial advice"
+      ],
+      "strength": "The free plan tracks net worth, and Gold is listed at $29 per month, or $20 per month on the annual price.",
+      "weakness": "Investing recommendations start on paid Gold, and this card is not financial advice.",
+      "sources": [
+        "https://portfoliopilot.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://portfoliopilot.com/pricing"
+      },
+      "useCaseFit": {
+        "manage-portfolio": "Lines up accounts on a free plan and adds investing recommendations on paid Gold."
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "propstream",
+      "slug": "propstream",
+      "name": "PropStream",
+      "websiteUrl": "https://www.propstream.com/",
+      "shortDescription": "Property search with an AI search box. Essentials is $99 per month.",
+      "longDescription": "PropStream searches property records and includes an AI search and a PropStream Intelligence Assistant. PropStream's own cost article, read October 16, 2026, lists Essentials at $99 per month, Pro at $199, and Elite at $699, with a 7-day trial and 50 leads. We did not start a trial.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "find-land"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Essentials $99 per month, Pro $199, Elite $699, from PropStream's cost article. 7-day trial.",
+      "pricingUrl": "https://www.propstream.com/pricing",
+      "docsUrl": "https://www.propstream.com/news/how-much-does-propstream-cost",
+      "freeTier": false,
+      "startingPrice": 99,
+      "freeTrial": "7 days",
+      "bestFor": [
+        "Searching properties with filters and an AI search box during a 7-day trial"
+      ],
+      "notIdealFor": [
+        "Someone who wants a free ongoing subscription"
+      ],
+      "strength": "PropStream's cost article lists Essentials at $99 per month, and the site offers a 7-day trial.",
+      "weakness": "The trial is 7 days, and skip tracing and mail are add-on costs beyond the subscription.",
+      "sources": [
+        "https://www.propstream.com/pricing",
+        "https://www.propstream.com/news/how-much-does-propstream-cost"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.propstream.com/pricing"
+      },
+      "useCaseFit": {
+        "find-land": "Searches property records with an AI search box, and Essentials is $99 per month."
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "range",
+      "slug": "range",
+      "name": "Range",
+      "websiteUrl": "https://www.range.com/",
+      "shortDescription": "Advisory membership with an AI assistant. Premium is $3,950 per year.",
+      "longDescription": "Range is a flat-fee advisory membership that includes its AI assistant, Rai. The Form ADV on range.com, read October 16, 2026, lists Premium at $3,950 per year, Platinum at $5,950, and Titanium at $12,500, with no separate assets-under-management advisory fee. We did not become a member. This is not financial advice.",
+      "categories": [
+        "personal-finance"
+      ],
+      "useCaseTags": [
+        "manage-portfolio"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Form ADV lists Premium at $3,950 per year, Platinum at $5,950, and Titanium at $12,500. No single monthly price. Not financial advice.",
+      "pricingUrl": "https://www.range.com/pricing",
+      "docsUrl": "https://www.range.com/compliance/range-advisory-form-adv-part-2a.pdf",
+      "freeTier": false,
+      "startingPrice": null,
+      "freeTrial": null,
+      "bestFor": [
+        "A flat annual advisory membership that includes Range's AI assistant"
+      ],
+      "notIdealFor": [
+        "Someone looking for a free portfolio tracker",
+        "Anyone treating this card as financial advice"
+      ],
+      "strength": "Range's Form ADV lists Premium at $3,950 per year, with no separate assets-under-management advisory fee.",
+      "weakness": "This is a paid advisory membership, not a free tracker, and brokerage fees can still apply.",
+      "sources": [
+        "https://www.range.com/pricing",
+        "https://www.range.com/compliance/range-advisory-form-adv-part-2a.pdf"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.range.com/pricing"
+      },
+      "useCaseFit": {
+        "manage-portfolio": "Advisory membership with an AI assistant, listed at $3,950 per year for Premium."
+      }
+    },
+    {
+      "affiliateUrl": null,
+      "platforms": [
+        "web"
+      ],
+      "freeTierNotes": null,
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-16T12:00:00-04:00",
+      "checkedDate": "2026-10-16",
+      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-16",
+      "id": "regrid",
+      "slug": "regrid",
+      "name": "Regrid",
+      "websiteUrl": "https://regrid.com/",
+      "shortDescription": "Nationwide parcel boundaries and owner fields, sold by county or state.",
+      "longDescription": "Regrid sells standardized US parcel geometry and assessment fields. The data store prices files by county or state, and the docs also point to API and property-app plans. There is no single monthly price. We checked the store and docs on October 16, 2026 and did not buy a file.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "find-land"
+      ],
+      "toolTypes": [
+        "infra"
+      ],
+      "pricingModel": [
+        "usage",
+        "contact"
+      ],
+      "pricingNotes": "County and state files are priced in the data store. Nationwide licenses are quoted. No single monthly price.",
+      "pricingUrl": "https://app.regrid.com/store",
+      "docsUrl": "https://support.regrid.com/docs/general-faqs",
+      "freeTier": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "bestFor": [
+        "Buying parcel boundaries and owner fields for a county or state"
+      ],
+      "notIdealFor": [
+        "Someone who wants one click-through map subscription with a single monthly price"
+      ],
+      "strength": "Regrid sells parcel boundaries and owner fields by county or state, so there is no single monthly price.",
+      "weakness": "A data file or license is a different product from a map you click through for one parcel.",
+      "sources": [
+        "https://regrid.com/data-store",
+        "https://app.regrid.com/store",
+        "https://support.regrid.com/docs/general-faqs"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://regrid.com/data-store"
+      },
+      "useCaseFit": {
+        "find-land": "Sells parcel boundaries and owner fields by county or state, with no single monthly price."
       }
     },
     {
@@ -2868,6 +3822,9 @@
       "siteLoad": {
         "status": 403,
         "finalUrl": "https://replit.com/"
+      },
+      "useCaseFit": {
+        "coding-agents": "Browser IDE with a coding agent, and a recorded free plan of 30 chat hours."
       }
     },
     {
@@ -2935,6 +3892,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://runway.com/"
+      },
+      "useCaseFit": {
+        "game-creative": "Generates and edits video, and the pricing page lists plans from $12 per month."
       }
     },
     {
@@ -3004,6 +3964,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.scenario.com/"
+      },
+      "useCaseFit": {
+        "game-creative": "Generates game art, and the free plan includes 50 credits per day."
       }
     },
     {
@@ -3069,6 +4032,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.streamladder.com/"
+      },
+      "useCaseFit": {
+        "game-creative": "Reframes Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks."
       }
     },
     {
@@ -3138,6 +4104,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.tavernbard.com/"
+      },
+      "useCaseFit": {
+        "game-npcs": "AI game master for Discord that can use an AI subscription you already have."
       }
     },
     {
@@ -3209,6 +4178,10 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.tavily.com/"
+      },
+      "useCaseFit": {
+        "tool-use-browser": "Search API that gives an agent web results, with 1,000 free credits a month.",
+        "research-rag": "Search API for agents that need web results, with a free credit plan."
       }
     },
     {
@@ -3275,6 +4248,9 @@
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://zapier.com/"
+      },
+      "useCaseFit": {
+        "workflow-automation": "Connects hosted apps, and the free plan includes 100 tasks per month."
       }
     }
   ],
@@ -3302,7 +4278,51 @@
           "toolId": "claude",
           "why": "Anthropic’s Claude product and API, including coding workflows. Docs checked; we did not sign up."
         }
-      ]
+      ],
+      "jobPhrase": "writing and reviewing code",
+      "assistantTask": "explain a code change, compare approaches, and draft a review note",
+      "assistantContext": "writing and reviewing code",
+      "searchTopic": "the library or error you are working through",
+      "intro": "AI agents can read a repo, suggest an edit, and draft a review note so you can check the change before it lands."
+    },
+    {
+      "slug": "find-land",
+      "title": "Find land or real estate",
+      "summary": "Look up parcels, owners, and property records before you call a seller.",
+      "audienceHints": [
+        "buyers",
+        "investors"
+      ],
+      "matchTags": [
+        "find-land"
+      ],
+      "jobPhrase": "finding potentially viable land deals",
+      "assistantTask": "research zoning, compare parcels, and draft questions for sellers",
+      "assistantContext": "look for land deals",
+      "searchTopic": "zoning and parcels",
+      "recommended": [
+        {
+          "toolId": "acres",
+          "why": "Parcel maps and a free basic view. Paid plans add owner lookup and comps. Docs checked."
+        },
+        {
+          "toolId": "land-id",
+          "why": "Nationwide parcel and owner info, with AI Insights on higher plans. Docs checked."
+        },
+        {
+          "toolId": "propstream",
+          "why": "Property search with an AI search box and a 7-day trial. Docs checked."
+        },
+        {
+          "toolId": "mashvisor",
+          "why": "Rental comps and property analysis on a paid plan. Docs checked."
+        },
+        {
+          "toolId": "regrid",
+          "why": "Nationwide parcel boundaries and owner fields. Pricing is a data store, not one monthly price."
+        }
+      ],
+      "intro": "AI agents can screen parcels, pull zoning and comps, and track listings so you spend time only on land deals worth pursuing."
     },
     {
       "slug": "game-creative",
@@ -3337,7 +4357,12 @@
           "toolId": "opus",
           "why": "Short clips from a long video — the stream-VOD job. A lasting free plan was not clearly confirmed."
         }
-      ]
+      ],
+      "jobPhrase": "turning a long video into short clips",
+      "assistantTask": "outline clip ideas, write captions, and compare which moments to cut",
+      "assistantContext": "turning a long video into short clips",
+      "searchTopic": "editing steps for the kind of video you described",
+      "intro": "AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again."
     },
     {
       "slug": "game-npcs",
@@ -3371,7 +4396,51 @@
           "toolId": "tavernbard",
           "why": "AI game master for Discord, with a free path that uses your own model subscription."
         }
-      ]
+      ],
+      "jobPhrase": "adding an in-game character that can talk",
+      "assistantTask": "draft character lines and list what the game still has to approve",
+      "assistantContext": "adding an in-game character that can talk",
+      "searchTopic": "how a game character can call a language model",
+      "intro": "AI agents can draft what an in-game character says, while the game still decides which lines are allowed."
+    },
+    {
+      "slug": "manage-portfolio",
+      "title": "Manage an investment portfolio",
+      "summary": "Track accounts and research investments. PickMyAgent is not financial advice.",
+      "audienceHints": [
+        "investors"
+      ],
+      "matchTags": [
+        "manage-portfolio"
+      ],
+      "jobPhrase": "managing an investment portfolio",
+      "assistantTask": "compare account fees, summarize holdings, and draft questions for an advisor",
+      "assistantContext": "review an investment portfolio",
+      "searchTopic": "fees and account types",
+      "disclaimer": "PickMyAgent is not financial advice.",
+      "recommended": [
+        {
+          "toolId": "portfolio-pilot",
+          "why": "Free plan tracks net worth and a portfolio assessment. Gold adds recommendations. Docs checked, not hands-on."
+        },
+        {
+          "toolId": "magnifi",
+          "why": "Links brokerage accounts on the free tier. Premium adds forecasting. Docs checked from the app listing."
+        },
+        {
+          "toolId": "composer",
+          "why": "Starter is $0 and can automate one strategy. Docs and the pricing page were checked."
+        },
+        {
+          "toolId": "kubera",
+          "why": "Flat annual fee for household tracking. Docs checked. There is no $0 plan."
+        },
+        {
+          "toolId": "range",
+          "why": "Advisory membership with an AI assistant and no AUM fee. Premium is an annual price. Docs checked."
+        }
+      ],
+      "intro": "AI agents can line up accounts, compare fees, and draft questions about risk so you can review a portfolio without guessing what each holding costs."
     },
     {
       "slug": "meetings-knowledge",
@@ -3396,7 +4465,12 @@
           "toolId": "obsidian",
           "why": "Local-first notes. The app is free without limits on the official pricing page; Sync and Publish are paid."
         }
-      ]
+      ],
+      "jobPhrase": "turning a meeting into notes and tasks",
+      "assistantTask": "turn a transcript into notes, decisions, and a task list you can edit",
+      "assistantContext": "turning a meeting into notes and tasks",
+      "searchTopic": "how to structure notes from a transcript",
+      "intro": "AI agents can turn a transcript into notes, decisions, and tasks so you can edit the list instead of replaying the call."
     },
     {
       "slug": "multi-agent-workflows",
@@ -3425,7 +4499,12 @@
           "toolId": "dify",
           "why": "A visual builder with a self-hosted community edition. Site, docs, and pricing were checked; we did not install it."
         }
-      ]
+      ],
+      "jobPhrase": "splitting one job across several agents",
+      "assistantTask": "split the job into steps and draft what each step should hand off",
+      "assistantContext": "splitting one job across several agents",
+      "searchTopic": "how teams of agents hand work to each other",
+      "intro": "AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent."
     },
     {
       "slug": "research-rag",
@@ -3458,7 +4537,12 @@
           "toolId": "pinecone",
           "why": "Managed vector database. Pricing page checked; a true $0 tier was not clearly confirmed."
         }
-      ]
+      ],
+      "jobPhrase": "researching a question from source pages",
+      "assistantTask": "compare what the sources say and draft a short brief with links",
+      "assistantContext": "researching a question from source pages",
+      "searchTopic": "the question you want sourced",
+      "intro": "AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself."
     },
     {
       "slug": "tool-use-browser",
@@ -3487,7 +4571,12 @@
           "toolId": "tavily",
           "why": "Search API for agents. Pricing page showed a $0 option. We did not call the API."
         }
-      ]
+      ],
+      "jobPhrase": "automating steps in a web browser",
+      "assistantTask": "write the click-by-click steps and flag where a login or captcha can stop them",
+      "assistantContext": "automating steps in a web browser",
+      "searchTopic": "what the site allows an automated browser to do",
+      "intro": "AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path."
     },
     {
       "slug": "workflow-automation",
@@ -3512,7 +4601,12 @@
           "toolId": "zapier",
           "why": "Connects hosted apps. The pricing page loaded, but a free task tier was not clearly confirmed."
         }
-      ]
+      ],
+      "jobPhrase": "automating repeated personal tasks",
+      "assistantTask": "map the steps, draft the instructions, and list which apps each step touches",
+      "assistantContext": "automating a repeated personal task",
+      "searchTopic": "how the apps in your task can connect",
+      "intro": "AI agents can map a repeated task, connect the apps it touches, and run the steps you approve so the checklist does not stay manual."
     }
   ]
 }

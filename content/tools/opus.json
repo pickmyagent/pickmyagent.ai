@@ -62,5 +62,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.opus.pro/"
+  },
+  "useCaseFit": {
+    "game-creative": "Cuts a long video into short clips, and the free plan includes 60 credits a month."
   }
 }

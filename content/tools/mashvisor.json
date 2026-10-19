@@ -1,0 +1,67 @@
+{
+  "affiliateUrl": null,
+  "platforms": [
+    "web"
+  ],
+  "freeTierNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T12:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "mashvisor",
+  "slug": "mashvisor",
+  "name": "Mashvisor",
+  "websiteUrl": "https://www.mashvisor.com/",
+  "shortDescription": "Rental comps and property analysis. Lite is $49.99 per month, billed annually.",
+  "longDescription": "Mashvisor analyzes traditional and short-term rental comps. On October 16, 2026 the investor pricing page listed Lite at $49.99 per month billed annually, Standard at $74.99, and Professional at $99.99. We did not subscribe.",
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "find-land"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Lite is $49.99 per month billed annually. Standard is $74.99. Professional is $99.99.",
+  "pricingUrl": "https://www.mashvisor.com/pricing",
+  "docsUrl": "https://www.mashvisor.com/pricing",
+  "freeTier": false,
+  "startingPrice": 49.99,
+  "freeTrial": null,
+  "bestFor": [
+    "Comparing rental income estimates on individual properties"
+  ],
+  "notIdealFor": [
+    "Someone researching raw land with no rental comps"
+  ],
+  "strength": "The investor pricing page lists Lite at $49.99 per month, billed annually, for rental comps.",
+  "weakness": "The pricing page we checked does not show a $0 plan, and raw land is outside the rental-comps job.",
+  "sources": [
+    "https://www.mashvisor.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.mashvisor.com/pricing"
+  },
+  "useCaseFit": {
+    "find-land": "Compares rental comps on a property, and Lite is $49.99 per month billed annually."
+  }
+}

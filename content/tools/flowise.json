@@ -37,7 +37,7 @@
     "Teams already comfortable with a Node service"
   ],
   "notIdealFor": [
-    "A confirmed free hosted plan \u2014 we could not verify one",
+    "A confirmed free hosted plan — we could not verify one",
     "Code-first agent libraries, if that is all you need"
   ],
   "strength": "The open-source npm package flowise 3.1.4 is a low-code builder you can self-host.",
@@ -72,5 +72,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://flowiseai.com/"
+  },
+  "useCaseFit": {
+    "multi-agent-workflows": "Open-source low-code builder for model flows you can self-host."
   }
 }

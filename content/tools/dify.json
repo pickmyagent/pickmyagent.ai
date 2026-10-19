@@ -41,7 +41,7 @@
   ],
   "notIdealFor": [
     "A small Python script with no surrounding app",
-    "Hands-on proof from us \u2014 this one is docs checked only"
+    "Hands-on proof from us — this one is docs checked only"
   ],
   "strength": "The pricing page includes a self-hosted community edition, and the cloud free plan includes 200 message credits.",
   "weakness": "The cloud free plan stops at 200 message credits, and the page we checked did not list a monthly starting price.",
@@ -75,5 +75,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://dify.ai/"
+  },
+  "useCaseFit": {
+    "multi-agent-workflows": "Visual builder for agent workflows, with a self-hosted community edition."
   }
 }

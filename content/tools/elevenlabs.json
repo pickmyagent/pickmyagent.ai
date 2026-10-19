@@ -64,5 +64,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://elevenlabs.io/"
+  },
+  "useCaseFit": {
+    "game-creative": "Generates voice and audio, which is a different job from cutting a video."
   }
 }

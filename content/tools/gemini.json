@@ -1,0 +1,67 @@
+{
+  "affiliateUrl": null,
+  "platforms": [
+    "web"
+  ],
+  "freeTierNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T12:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "gemini",
+  "slug": "gemini",
+  "name": "Google Gemini",
+  "websiteUrl": "https://gemini.google.com/",
+  "shortDescription": "General-purpose assistant from Google, with a free plan and paid Google AI plans.",
+  "longDescription": "Gemini is Google's general assistant. The Google One AI plans page, read October 16, 2026, lists a free Gemini plan, Google AI Plus at $4.99 per month, and Google AI Pro at $19.99 per month in the United States. We did not subscribe. It is not a specialist for one job.",
+  "categories": [
+    "general-assistants"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "agent"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Google AI Plus is $4.99 per month and Google AI Pro is $19.99 per month on the US Google One plans page. A free plan exists.",
+  "pricingUrl": "https://one.google.com/about/google-ai-plans/",
+  "docsUrl": "https://gemini.google/subscriptions/",
+  "freeTier": true,
+  "startingPrice": 4.99,
+  "freeTrial": null,
+  "bestFor": [
+    "Researching, comparing, and drafting inside Google's apps"
+  ],
+  "notIdealFor": [
+    "A job that needs parcel records, a brokerage link, or a video timeline"
+  ],
+  "strength": "Google lists a free Gemini plan, and Google AI Plus starts at $4.99 per month in the United States.",
+  "weakness": "It is a general assistant, not a specialist for parcels, portfolios, or video clipping.",
+  "sources": [
+    "https://one.google.com/about/google-ai-plans/",
+    "https://gemini.google/subscriptions/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://one.google.com/about/google-ai-plans/"
+  },
+  "generalPurpose": true,
+  "assistantName": "Gemini",
+  "assistantKind": "draft"
+}

@@ -1,0 +1,70 @@
+{
+  "affiliateUrl": null,
+  "platforms": [
+    "web"
+  ],
+  "freeTierNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T12:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "regrid",
+  "slug": "regrid",
+  "name": "Regrid",
+  "websiteUrl": "https://regrid.com/",
+  "shortDescription": "Nationwide parcel boundaries and owner fields, sold by county or state.",
+  "longDescription": "Regrid sells standardized US parcel geometry and assessment fields. The data store prices files by county or state, and the docs also point to API and property-app plans. There is no single monthly price. We checked the store and docs on October 16, 2026 and did not buy a file.",
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "find-land"
+  ],
+  "toolTypes": [
+    "infra"
+  ],
+  "pricingModel": [
+    "usage",
+    "contact"
+  ],
+  "pricingNotes": "County and state files are priced in the data store. Nationwide licenses are quoted. No single monthly price.",
+  "pricingUrl": "https://app.regrid.com/store",
+  "docsUrl": "https://support.regrid.com/docs/general-faqs",
+  "freeTier": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "bestFor": [
+    "Buying parcel boundaries and owner fields for a county or state"
+  ],
+  "notIdealFor": [
+    "Someone who wants one click-through map subscription with a single monthly price"
+  ],
+  "strength": "Regrid sells parcel boundaries and owner fields by county or state, so there is no single monthly price.",
+  "weakness": "A data file or license is a different product from a map you click through for one parcel.",
+  "sources": [
+    "https://regrid.com/data-store",
+    "https://app.regrid.com/store",
+    "https://support.regrid.com/docs/general-faqs"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://regrid.com/data-store"
+  },
+  "useCaseFit": {
+    "find-land": "Sells parcel boundaries and owner fields by county or state, with no single monthly price."
+  }
+}

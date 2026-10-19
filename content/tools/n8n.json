@@ -5,7 +5,7 @@
   "websiteUrl": "https://n8n.io/",
   "affiliateUrl": null,
   "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan. Our local npm install failed.",
-  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud\u2019s Starter plan was listed at 20\u20ac/month on annual billing, with a card-free trial rather than a permanent free cloud tier. We tried `npm install n8n@2.43.6` and it failed in this environment (node-gyp / distutils). Registry, docs, and pricing were still checked, so the status stays docs checked.",
+  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. We tried `npm install n8n@2.43.6` and it failed in this environment (node-gyp / distutils). Registry, docs, and pricing were still checked, so the status stays docs checked.",
   "categories": [
     "workflow-automation"
   ],
@@ -39,7 +39,7 @@
   ],
   "notIdealFor": [
     "A one-import Python agent library",
-    "A permanent free cloud plan \u2014 we did not find one"
+    "A permanent free cloud plan — we did not find one"
   ],
   "strength": "Community Edition is a free self-host option for multi-step workflows across the apps you already use.",
   "weakness": "Cloud Starter was listed at 20 euros per month on annual billing, with a card-free trial rather than a permanent free cloud plan.",
@@ -75,5 +75,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://n8n.io/"
+  },
+  "useCaseFit": {
+    "workflow-automation": "Self-hosted community edition for multi-step workflows across apps you already use."
   }
 }

@@ -21,5 +21,10 @@
       "toolId": "obsidian",
       "why": "Local-first notes. The app is free without limits on the official pricing page; Sync and Publish are paid."
     }
-  ]
+  ],
+  "jobPhrase": "turning a meeting into notes and tasks",
+  "assistantTask": "turn a transcript into notes, decisions, and a task list you can edit",
+  "assistantContext": "turning a meeting into notes and tasks",
+  "searchTopic": "how to structure notes from a transcript",
+  "intro": "AI agents can turn a transcript into notes, decisions, and tasks so you can edit the list instead of replaying the call."
 }

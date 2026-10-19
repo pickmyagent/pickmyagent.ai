@@ -5,7 +5,7 @@
   "websiteUrl": "https://continue.dev/",
   "affiliateUrl": null,
   "shortDescription": "Open-source coding agent and IDE extension. The /pricing URL returned 404 on our check.",
-  "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. We checked the homepage, docs, and GitHub releases. continue.dev/pricing returned HTTP 404, so there is no separate pricing page in this listing \u2014 the open-source extension is the free path we could confirm. We did not install the extension.",
+  "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. We checked the homepage, docs, and GitHub releases. continue.dev/pricing returned HTTP 404, so there is no separate pricing page in this listing — the open-source extension is the free path we could confirm. We did not install the extension.",
   "categories": [
     "coding-agents"
   ],
@@ -37,7 +37,7 @@
   ],
   "notIdealFor": [
     "A hosted IDE with a published price grid",
-    "A confirmed cloud plan \u2014 the pricing URL 404\u2019d"
+    "A confirmed cloud plan — the pricing URL 404’d"
   ],
   "strength": "Continue is an open-source coding agent you install in the IDE you already use.",
   "weakness": "The Continue pricing page returned HTTP 404 on our check, so a public price grid was not confirmed.",
@@ -73,5 +73,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://continue.dev/"
+  },
+  "useCaseFit": {
+    "coding-agents": "Open-source coding agent you install in the IDE you already use."
   }
 }

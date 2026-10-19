@@ -7,7 +7,8 @@
   "shortDescription": "Web research product. Homepage returned HTTP 403 to our checker, so this listing is not fully checked.",
   "longDescription": "Perplexity answers questions from the web. The homepage returned HTTP 403 to our client. Docs were reachable, but we could not cleanly confirm a consumer Free versus Pro split. This listing is untested. A 403 here is an environment limit, not proof a browser cannot open the site.",
   "categories": [
-    "search-rag"
+    "search-rag",
+    "general-assistants"
   ],
   "useCaseTags": [
     "research-rag"
@@ -63,5 +64,8 @@
   "siteLoad": {
     "status": 403,
     "finalUrl": "https://www.perplexity.ai/"
-  }
+  },
+  "generalPurpose": true,
+  "assistantName": "Perplexity",
+  "assistantKind": "search"
 }

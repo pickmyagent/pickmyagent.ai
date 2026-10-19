@@ -64,5 +64,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.granola.ai/"
+  },
+  "useCaseFit": {
+    "meetings-knowledge": "Takes meeting notes alongside your calls, and the free plan covers that."
   }
 }

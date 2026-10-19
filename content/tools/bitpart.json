@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.bitpart.ai/",
   "affiliateUrl": null,
   "shortDescription": "NPC engine for games, with SDKs described on the product page. No public price grid found on our check.",
-  "longDescription": "Bitpart builds NPCs for games. The product page describes SDKs. We did not find a public pricing grid, so price and free tier are unconfirmed \u2014 do not assume a number. We did not install an SDK.",
+  "longDescription": "Bitpart builds NPCs for games. The product page describes SDKs. We did not find a public pricing grid, so price and free tier are unconfirmed — do not assume a number. We did not install an SDK.",
   "categories": [
     "game-ai"
   ],
@@ -37,7 +37,7 @@
   ],
   "notIdealFor": [
     "A published self-serve price",
-    "A docs-complete install guide \u2014 docs URL is the product site"
+    "A docs-complete install guide — docs URL is the product site"
   ],
   "strength": "The product page describes an NPC engine with SDKs for game characters.",
   "weakness": "No public price grid was on the pages we checked, so the cost has to be confirmed with the vendor.",
@@ -65,5 +65,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.bitpart.ai/"
+  },
+  "useCaseFit": {
+    "game-npcs": "NPC engine with SDKs for game characters, and no public price grid on our check."
   }
 }

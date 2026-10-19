@@ -38,7 +38,7 @@
   ],
   "notIdealFor": [
     "In-engine NPCs inside Unity or Unreal",
-    "A dedicated pricing page \u2014 that URL 404\u2019d"
+    "A dedicated pricing page — that URL 404’d"
   ],
   "strength": "The homepage describes an AI game master for Discord, including a play path that uses an AI subscription you already have.",
   "weakness": "That play path still depends on an AI subscription you already have, /pricing returned 404, and a $49.99 homepage figure was not confirmed as a monthly plan.",
@@ -65,5 +65,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.tavernbard.com/"
+  },
+  "useCaseFit": {
+    "game-npcs": "AI game master for Discord that can use an AI subscription you already have."
   }
 }

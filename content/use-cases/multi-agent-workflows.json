@@ -25,5 +25,10 @@
       "toolId": "dify",
       "why": "A visual builder with a self-hosted community edition. Site, docs, and pricing were checked; we did not install it."
     }
-  ]
+  ],
+  "jobPhrase": "splitting one job across several agents",
+  "assistantTask": "split the job into steps and draft what each step should hand off",
+  "assistantContext": "splitting one job across several agents",
+  "searchTopic": "how teams of agents hand work to each other",
+  "intro": "AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent."
 }

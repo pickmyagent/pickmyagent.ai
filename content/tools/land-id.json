@@ -1,0 +1,67 @@
+{
+  "affiliateUrl": null,
+  "platforms": [
+    "web"
+  ],
+  "freeTierNotes": null,
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-16T12:00:00-04:00",
+  "checkedDate": "2026-10-16",
+  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-16",
+  "id": "land-id",
+  "slug": "land-id",
+  "name": "Land id",
+  "websiteUrl": "https://id.land/",
+  "shortDescription": "Nationwide parcel and owner info. From $15 per month, or $7 billed annually.",
+  "longDescription": "Land id maps parcels and owner info. On October 16, 2026 the pricing page listed the base plan at $7 per month per user billed annually, and the app listing also stated $15 per month billed monthly, plus a 7-day trial. Premium adds AI Insights. We did not start a trial.",
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "find-land"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Base plan is $15 per month billed monthly, or $7 per month billed annually. 7-day trial.",
+  "pricingUrl": "https://id.land/pricing",
+  "docsUrl": "https://id.land/pricing",
+  "freeTier": false,
+  "startingPrice": 15,
+  "freeTrial": "7 days",
+  "bestFor": [
+    "Looking up parcel boundaries and owner info across the United States"
+  ],
+  "notIdealFor": [
+    "Someone who wants a lasting $0 map"
+  ],
+  "strength": "The base plan is $15 per month billed monthly, or $7 per month billed annually, with a 7-day trial.",
+  "weakness": "There is no lasting free plan, and mailing lists on the pricing page can cost extra.",
+  "sources": [
+    "https://id.land/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://id.land/pricing"
+  },
+  "useCaseFit": {
+    "find-land": "Looks up parcel and owner info nationwide, with a 7-day trial on the paid plan."
+  }
+}

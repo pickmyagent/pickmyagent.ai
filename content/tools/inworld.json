@@ -36,7 +36,7 @@
     "Teams that want a hosted character stack and docs"
   ],
   "notIdealFor": [
-    "A local Python library we smoke-tested \u2014 we did not",
+    "A local Python library we smoke-tested — we did not",
     "Image or 3D asset generation"
   ],
   "strength": "The On-Demand plan is $0 to start, then you pay as you go for game character dialogue.",
@@ -64,5 +64,8 @@
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://inworld.ai/"
+  },
+  "useCaseFit": {
+    "game-npcs": "Character dialogue for games, with an On-Demand plan that starts at $0."
   }
 }
