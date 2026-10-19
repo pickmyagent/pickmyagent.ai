@@ -2151,6 +2151,89 @@
       }
     },
     {
+      "id": "deepseek",
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "websiteUrl": "https://www.deepseek.com/",
+      "affiliateUrl": null,
+      "shortDescription": "DeepSeek chat app and API models for chat, coding, and web search.",
+      "longDescription": "DeepSeek publishes a chat app and an API. The app announcement says the app is free, with no ads or in-app purchases, and lists web search, a deep-think mode, and file upload. The download page calls it the official assistant for chat. The API docs list deepseek-flash and deepseek-v4-pro, with tool calls and a beta fill-in-the-middle completion used for code. API prices are per million tokens on the pricing page. The chat website did not open, so this listing does not describe the live chat screen.",
+      "categories": [
+        "general-assistants",
+        "coding-agents",
+        "research"
+      ],
+      "useCaseTags": [
+        "coding-agents",
+        "deep-research"
+      ],
+      "toolTypes": [
+        "model_api",
+        "agent"
+      ],
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "pricingModel": [
+        "free",
+        "usage"
+      ],
+      "pricingNotes": "The API docs price deepseek-flash input at $0.15 per million tokens off-peak on a cache miss and $0.30 at peak. Output is $0.60 off-peak and $1.20 at peak. deepseek-v4-pro is higher on the same table. The app announcement says the chat app is free.",
+      "pricingUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "docsUrl": "https://api-docs.deepseek.com/",
+      "freeTier": true,
+      "freeTierNotes": "The official app announcement says the chat app is free, with no ads and no in-app purchases. The API is billed per token.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Chat in the free DeepSeek app, including web search and deep-think mode",
+        "Coding through the API, including tool calls and fill-in-the-middle completion"
+      ],
+      "notIdealFor": [
+        "A reviewed look at the live chat screen",
+        "A self-hosted copy of the current API models"
+      ],
+      "strength": "The official app announcement says DeepSeek chat is free, with web search and no in-app purchases.",
+      "weakness": "The chat website did not open for this listing, so the live app screen was not reviewed.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T12:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "The app announcement, download page, and API docs were reviewed. The chat website did not open. A hands-on test was not done.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.deepseek.com/en/news/deepseek-app/",
+        "https://www.deepseek.com/en/download/",
+        "https://api-docs.deepseek.com/",
+        "https://api-docs.deepseek.com/quick_start/pricing/",
+        "https://api-docs.deepseek.com/guides/fim_completion"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.deepseek.com/"
+      },
+      "generalPurpose": true,
+      "assistantName": "DeepSeek",
+      "assistantKind": "draft",
+      "useCaseFit": {
+        "coding-agents": "API docs include tool calls and fill-in-the-middle completion for code.",
+        "deep-research": "The app announcement lists web search, and the API docs list a separate search API."
+      }
+    },
+    {
       "id": "descript",
       "slug": "descript",
       "name": "Descript",
@@ -3696,6 +3779,77 @@
       },
       "useCaseFit": {
         "game-creative": "Makes avatar videos, and the free plan includes 3 videos of up to 1 minute."
+      }
+    },
+    {
+      "id": "higgsfield",
+      "slug": "higgsfield",
+      "name": "Higgsfield",
+      "websiteUrl": "https://higgsfield.ai/",
+      "affiliateUrl": null,
+      "shortDescription": "AI video app with Cinema Studio camera-motion presets for cinematic clips.",
+      "longDescription": "Higgsfield is an AI video app. Its Cinema Studio help page describes cinematic video with camera-motion control, and the Cinema Studio 4.0 blog lists 30+ camera-movement presets, including POV, robot arm, pan, and helicopter shot, plus clips up to 30 seconds. The pricing page did not include a readable monthly plan, so this listing does not state a subscription price.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "game-creative",
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [],
+      "pricingNotes": "A monthly plan price was not in the readable pricing-page text. Confirm it on the official pricing page.",
+      "pricingUrl": "https://higgsfield.ai/pricing",
+      "docsUrl": "https://higgsfield.ai/creator-hub/help-center/tools/how-do-i-use-cinema-studio",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Cinematic video with camera-motion presets",
+        "Short clips for a game, a stream, or a sizzle reel"
+      ],
+      "notIdealFor": [
+        "A confirmed monthly price from this listing",
+        "In-game character dialogue"
+      ],
+      "strength": "Cinema Studio 4.0, described on the official blog, offers 30+ camera-movement presets and clips up to 30 seconds.",
+      "weakness": "The pricing page did not include a readable monthly plan, so this listing does not state a subscription price.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T12:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Official homepage, Cinema Studio help page, blog, and pricing URL were reviewed. A hands-on test was not done.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://higgsfield.ai/",
+        "https://higgsfield.ai/blog/cinema-studio-4-0",
+        "https://higgsfield.ai/creator-hub/help-center/tools/how-do-i-use-cinema-studio",
+        "https://higgsfield.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://higgsfield.ai/"
+      },
+      "useCaseFit": {
+        "game-creative": "Generates cinematic video with camera-motion presets such as POV and helicopter shots."
       }
     },
     {
@@ -7158,6 +7312,80 @@
       },
       "useCaseFit": {
         "deep-research": "Literature review and chat-with-PDF tools for research papers."
+      }
+    },
+    {
+      "id": "seedance",
+      "slug": "seedance",
+      "name": "Seedance",
+      "websiteUrl": "https://dreamina.capcut.com/",
+      "affiliateUrl": null,
+      "shortDescription": "ByteDance video model in Dreamina, with a ModelArk API documented by BytePlus.",
+      "longDescription": "Seedance is ByteDance's video generation model. Dreamina's documentation names Seedance 2.0 for video and shows Seedance 2.5 examples, and it says the creator app includes free daily credits. BytePlus ModelArk's video generation tutorial says Seedance models generate clips from text, images, video, and audio, and it shows a Dreamina Seedance model id for the API. The model overview page did not include a readable API price.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "game-creative",
+        "creator-video-audio"
+      ],
+      "toolTypes": [
+        "creative",
+        "model_api"
+      ],
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "pricingModel": [
+        "usage"
+      ],
+      "pricingNotes": "Dreamina's documentation says the creator app includes free daily credits. An API price was not in the readable model page.",
+      "pricingUrl": null,
+      "docsUrl": "https://ai.byteplus.com/ark/region:ap-southeast-1/docs/video-generation-tutorial",
+      "freeTier": null,
+      "freeTierNotes": "Dreamina's documentation says the creator app includes free daily credits for images and videos.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Generating video from a prompt, an image, or a reference clip",
+        "Creators using Dreamina, or developers calling the ModelArk API"
+      ],
+      "notIdealFor": [
+        "A confirmed API price from this listing",
+        "In-game character dialogue"
+      ],
+      "strength": "Dreamina's documentation names Seedance for video and says the creator app includes free daily credits.",
+      "weakness": "The BytePlus model overview did not include a readable API price, so this listing does not state one.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T12:00:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Dreamina's documentation and the BytePlus video-generation tutorial were reviewed. A hands-on test was not done.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://dreamina.capcut.com/documentation",
+        "https://ai.byteplus.com/ark/region:ap-southeast-1/docs/video-generation-tutorial",
+        "https://docs.byteplus.com/en/docs/ModelArk/seedance"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://dreamina.capcut.com/documentation"
+      },
+      "useCaseFit": {
+        "game-creative": "Generates video from text, images, or a reference clip in Dreamina, with a documented ModelArk API."
       }
     },
     {

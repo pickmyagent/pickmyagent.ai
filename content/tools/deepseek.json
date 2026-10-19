@@ -1,0 +1,62 @@
+{
+  "id": "deepseek",
+  "slug": "deepseek",
+  "name": "DeepSeek",
+  "websiteUrl": "https://www.deepseek.com/",
+  "affiliateUrl": null,
+  "shortDescription": "DeepSeek chat app and API models for chat, coding, and web search.",
+  "longDescription": "DeepSeek publishes a chat app and an API. The app announcement says the app is free, with no ads or in-app purchases, and lists web search, a deep-think mode, and file upload. The download page calls it the official assistant for chat. The API docs list deepseek-flash and deepseek-v4-pro, with tool calls and a beta fill-in-the-middle completion used for code. API prices are per million tokens on the pricing page. The chat website did not open, so this listing does not describe the live chat screen.",
+  "categories": ["general-assistants", "coding-agents", "research"],
+  "useCaseTags": ["coding-agents", "deep-research"],
+  "toolTypes": ["model_api", "agent"],
+  "platforms": ["web", "api"],
+  "pricingModel": ["free", "usage"],
+  "pricingNotes": "The API docs price deepseek-flash input at $0.15 per million tokens off-peak on a cache miss and $0.30 at peak. Output is $0.60 off-peak and $1.20 at peak. deepseek-v4-pro is higher on the same table. The app announcement says the chat app is free.",
+  "pricingUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "docsUrl": "https://api-docs.deepseek.com/",
+  "freeTier": true,
+  "freeTierNotes": "The official app announcement says the chat app is free, with no ads and no in-app purchases. The API is billed per token.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Chat in the free DeepSeek app, including web search and deep-think mode",
+    "Coding through the API, including tool calls and fill-in-the-middle completion"
+  ],
+  "notIdealFor": [
+    "A reviewed look at the live chat screen",
+    "A self-hosted copy of the current API models"
+  ],
+  "strength": "The official app announcement says DeepSeek chat is free, with web search and no in-app purchases.",
+  "weakness": "The chat website did not open for this listing, so the live app screen was not reviewed.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T12:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "The app announcement, download page, and API docs were reviewed. The chat website did not open. A hands-on test was not done.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://www.deepseek.com/en/news/deepseek-app/",
+    "https://www.deepseek.com/en/download/",
+    "https://api-docs.deepseek.com/",
+    "https://api-docs.deepseek.com/quick_start/pricing/",
+    "https://api-docs.deepseek.com/guides/fim_completion"
+  ],
+  "siteLoad": { "status": 200, "finalUrl": "https://www.deepseek.com/" },
+  "generalPurpose": true,
+  "assistantName": "DeepSeek",
+  "assistantKind": "draft",
+  "useCaseFit": {
+    "coding-agents": "API docs include tool calls and fill-in-the-middle completion for code.",
+    "deep-research": "The app announcement lists web search, and the API docs list a separate search API."
+  }
+}

@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import { readFileSync, writeFileSync } from "node:fs";
 import test from "node:test";
 import { CONCEPTS } from "../lib/concepts.ts";
+import { domainAssistantLine, SPECIALIST_ENDINGS } from "../lib/assistant-lines.ts";
+import { BROKEN_ASSISTANT, BROKEN_HEADERS, grammarProblems } from "../scripts/grammar-gate.ts";
 import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport } from "../scripts/search-qa.ts";
 import {
   GENERIC_MATCH_WORDS,
@@ -476,11 +478,25 @@ function matchTagsFor(slug: string): string[] {
 
 function assertWhyMentionsJob(query: string, ranked: RankedSearch) {
   const tokens = queryTokens(query).filter((token) => token.length > 3);
+  const matched = catalog.useCases.find((item) => item.slug === ranked.useCases[0]?.slug);
+  const jobTokens = (matched?.jobPhrase ?? "").toLowerCase().match(/[a-z0-9]{4,}/g) ?? [];
   for (const tool of ranked.tools) {
     const why = tool.whyItHelps.toLowerCase();
     assert.ok(tool.whyItHelps.trim().length > 0, `${query} / ${tool.name} is missing a why-line`);
+    const mentionsQuery = tokens.some((token) => why.includes(token));
+    const mentionsJob = jobTokens.some((token) => why.includes(token));
+    if (tool.generalPurpose && matched) {
+      const written = domainAssistantLine(tool.slug, matched.slug);
+      assert.ok(
+        written === tool.whyItHelps || mentionsJob || mentionsQuery,
+        `${query} / ${tool.name} why-line is not about this job: ${tool.whyItHelps}`,
+      );
+      continue;
+    }
+    const endings = matched ? SPECIALIST_ENDINGS[matched.slug] ?? [] : [];
+    const mentionsEnding = endings.some((ending) => why.includes(ending.toLowerCase()));
     assert.ok(
-      tokens.some((token) => why.includes(token)),
+      mentionsQuery || mentionsJob || mentionsEnding || tokens.length === 0,
       `${query} / ${tool.name} why-line is not about this job: ${tool.whyItHelps}`,
     );
   }
@@ -569,13 +585,13 @@ const HEADER_CASES: { query: string; lead: string; intro: string | RegExp }[] = 
   },
   {
     query: "AI for my small business",
-    lead: "For working on your small business, here's how each tool can help:",
-    intro: "AI agents can help with working on your small business by researching, comparing, and summarizing.",
+    lead: "For help with your small business, here's how each tool can help:",
+    intro: "AI agents can help with your small business by researching, comparing, and summarizing.",
   },
   {
     query: "best AI tool for real estate",
-    lead: "For working on real estate, here's how each tool can help:",
-    intro: "AI agents can help with working on real estate by researching, comparing, and summarizing.",
+    lead: "For help with real estate, here's how each tool can help:",
+    intro: "AI agents can help with real estate by researching, comparing, and summarizing.",
   },
   {
     query: "is there an AI that can plan my trip",
@@ -584,8 +600,8 @@ const HEADER_CASES: { query: string; lead: string; intro: string | RegExp }[] = 
   },
   {
     query: "Help me with my resume",
-    lead: "For working on your resume, here's how each tool can help:",
-    intro: "AI agents can help with working on your resume by researching, comparing, and summarizing.",
+    lead: "For help with your resume, here's how each tool can help:",
+    intro: "AI agents can help with your resume by researching, comparing, and summarizing.",
   },
   {
     query: "investment portfolio",
@@ -734,6 +750,28 @@ test("newsletter prompt renders at most once on a results page", () => {
   assert.equal((browser.match(/<SearchNewsletterPrompt/g) ?? []).length, 2);
 });
 
+test("grammar gate flags the broken header and assistant examples", () => {
+  for (const phrase of BROKEN_HEADERS) {
+    const problems = grammarProblems(`For ${phrase}, here's how each tool can help:`, "header");
+    assert.ok(problems.length > 0, phrase);
+  }
+  for (const phrase of BROKEN_ASSISTANT) {
+    assert.ok(grammarProblems(phrase, "why").length > 0, phrase);
+  }
+  const ranked = rankCatalogQuery("fix my car", catalog);
+  assert.equal(ranked.lead, "For fixing your car, here's how each tool can help:");
+  const sellers = rankCatalogQuery("use an agent for motivated sellers", catalog);
+  assert.equal(sellers.lead, "For finding motivated sellers, here's how each tool can help:");
+  const fsbo = rankCatalogQuery("fsbo near me", catalog);
+  assert.equal(fsbo.lead, "For help with FSBO near me, here's how each tool can help:");
+  const gmail = rankCatalogQuery("triage my gmail", catalog);
+  assert.equal(gmail.lead, "For triaging your Gmail, here's how each tool can help:");
+  const rag = rankCatalogQuery("rag", catalog);
+  assert.equal(rag.lead, "For building a RAG pipeline, here's how each tool can help:");
+  const tutor = rankCatalogQuery("I need AI to tutor me", catalog);
+  assert.equal(tutor.lead, "For getting tutoring help, here's how each tool can help:");
+});
+
 test("catalog prose and the search QA harness stay grammatical", () => {
   const problems = [...catalogLeakProblems(catalog), ...qaProblems(catalog)];
   assert.deepEqual(problems, [], problems.slice(0, 12).join("\n"));
@@ -759,13 +797,17 @@ test("tax and wedding why-lines name the job instead of the search wrapper", () 
   }
   const wedding = rankCatalogQuery("plan a wedding", catalog);
   const claude = wedding.tools.find((tool) => tool.slug === "claude");
+  const chatgpt = wedding.tools.find((tool) => tool.slug === "chatgpt");
+  const gemini = wedding.tools.find((tool) => tool.slug === "gemini");
   const perplexity = wedding.tools.find((tool) => tool.slug === "perplexity");
   assert.ok(claude);
+  assert.ok(chatgpt);
+  assert.ok(gemini);
   assert.ok(perplexity);
-  assert.match(claude.whyItHelps, /guest count and budget/i);
-  assert.match(claude.whyItHelps, /wedding vendor checklist/i);
-  assert.match(claude.whyItHelps, /timeline/i);
-  assert.match(perplexity.whyItHelps, /sourced summary/i);
+  assert.match(claude.whyItHelps, /break planning a wedding into a step-by-step plan/i);
+  assert.match(chatgpt.whyItHelps, /checklist for planning a wedding/i);
+  assert.match(gemini.whyItHelps, /shared doc or sheet to track planning a wedding/i);
+  assert.match(perplexity.whyItHelps, /sourced tips on planning a wedding/i);
   assert.equal(new Set(wedding.tools.map((tool) => tool.whyItHelps)).size, wedding.tools.length);
 });
 

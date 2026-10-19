@@ -1,0 +1,57 @@
+{
+  "id": "higgsfield",
+  "slug": "higgsfield",
+  "name": "Higgsfield",
+  "websiteUrl": "https://higgsfield.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "AI video app with Cinema Studio camera-motion presets for cinematic clips.",
+  "longDescription": "Higgsfield is an AI video app. Its Cinema Studio help page describes cinematic video with camera-motion control, and the Cinema Studio 4.0 blog lists 30+ camera-movement presets, including POV, robot arm, pan, and helicopter shot, plus clips up to 30 seconds. The pricing page did not include a readable monthly plan, so this listing does not state a subscription price.",
+  "categories": ["creative-media"],
+  "useCaseTags": ["game-creative", "creator-video-audio"],
+  "toolTypes": ["creative"],
+  "platforms": ["web"],
+  "pricingModel": [],
+  "pricingNotes": "A monthly plan price was not in the readable pricing-page text. Confirm it on the official pricing page.",
+  "pricingUrl": "https://higgsfield.ai/pricing",
+  "docsUrl": "https://higgsfield.ai/creator-hub/help-center/tools/how-do-i-use-cinema-studio",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-19",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Cinematic video with camera-motion presets",
+    "Short clips for a game, a stream, or a sizzle reel"
+  ],
+  "notIdealFor": [
+    "A confirmed monthly price from this listing",
+    "In-game character dialogue"
+  ],
+  "strength": "Cinema Studio 4.0, described on the official blog, offers 30+ camera-movement presets and clips up to 30 seconds.",
+  "weakness": "The pricing page did not include a readable monthly plan, so this listing does not state a subscription price.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-19T12:00:00-04:00",
+  "checkedDate": "2026-10-19",
+  "smokeTestNotes": "Official homepage, Cinema Studio help page, blog, and pricing URL were reviewed. A hands-on test was not done.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "sources": [
+    "https://higgsfield.ai/",
+    "https://higgsfield.ai/blog/cinema-studio-4-0",
+    "https://higgsfield.ai/creator-hub/help-center/tools/how-do-i-use-cinema-studio",
+    "https://higgsfield.ai/pricing"
+  ],
+  "siteLoad": { "status": 200, "finalUrl": "https://higgsfield.ai/" },
+  "useCaseFit": {
+    "game-creative": "Generates cinematic video with camera-motion presets such as POV and helicopter shots."
+  }
+}

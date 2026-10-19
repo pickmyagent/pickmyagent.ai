@@ -3,6 +3,7 @@ import { CONCEPTS } from "../lib/concepts.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { rankCatalogQuery } from "../lib/search.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
+import { BROKEN_ASSISTANT, grammarProblems, headerUsesBrokenPhrase } from "./grammar-gate.ts";
 
 export type QaQuery = {
   query: string;
@@ -190,9 +191,9 @@ export const QA_QUERIES: QaQuery[] = [
   { query: "how do I plan a trip", domain: "plan-travel" },
   { query: "which tool should screen candidates", domain: "hire-candidates" },
   { query: "investmnt portfolio", domain: "manage-portfolio" },
-  { query: "custmer support", domain: null },
-  { query: "litrature review", domain: null },
-  { query: "emial inbox", domain: null },
+  { query: "custmer support", domain: "customer-support" },
+  { query: "litrature review", domain: "deep-research" },
+  { query: "emial inbox", domain: "manage-inbox" },
   { query: "so I was wondering if there is an AI that can help me do my taxes this year please", domain: "do-taxes" },
   { query: "hey can you use an agent for my email inbox, I keep missing replies", domain: "manage-inbox" },
   { query: "ok I need AI to plan a trip to Lisbon and also compare hotels and maybe flights", domain: "plan-travel" },
@@ -224,11 +225,16 @@ export const QA_QUERIES: QaQuery[] = [
   { query: "tutor", domain: "tutoring" },
   { query: "calendar", domain: "scheduling-assistant" },
   { query: "wiki", domain: "knowledge-qa" },
+  { query: "make a cinematic video", domain: "game-creative" },
+  { query: "AI video with camera moves", domain: "game-creative" },
+  { query: "cheap AI model for coding", domain: "coding-agents" },
+  { query: "deepseek alternative", domain: null },
 ];
 
 const PROPER = new Set([
   "south", "carolina", "california", "texas", "florida", "york", "lisbon", "london",
-  "seo", "api", "crm", "gpt", "irs", "npc", "npcs", "pdf", "google", "anthropic",
+  "seo", "api", "crm", "gpt", "irs", "npc", "npcs", "pdf", "fsbo", "rag", "soc", "gmail",
+  "youtube", "google", "anthropic",
   "openai", "nvidia", "github", "discord", "youtube", "twitch", "amazon", "duolingo",
   "microsoft", "python", "hex", "notion", "slack",
 ]);
@@ -284,7 +290,7 @@ function capitalIssues(text: string, allowed: Set<string>): string[] {
   for (const sentence of text.split(/(?<=[.!?])\s+/)) {
     const tokens = sentence.match(/[A-Za-z][A-Za-z0-9'’-]*/g) ?? [];
     tokens.forEach((word, index) => {
-      if (index === 0) return;
+      if (index === 0 || word.length < 2) return;
       if (word[0] !== word[0].toUpperCase() || word[0] === word[0].toLowerCase()) return;
       if (/^[A-Z0-9]{2,5}$/.test(word)) return;
       if (/[A-Z]/.test(word.slice(1))) return;
@@ -343,6 +349,8 @@ export function qaProblems(catalog: Catalog): string[] {
       if (INTERNAL.test(text)) problems.push(`${item.query}: internal wording in "${text}"`);
       const caps = capitalIssues(text, allowed);
       if (caps.length > 0) problems.push(`${item.query}: mid-sentence capital ${caps.join(", ")} in "${text}"`);
+      const grammar = grammarProblems(text, text === header ? "header" : "intro");
+      if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in "${text}"`);
     }
     const whys = ranked.tools.map((tool) => tool.whyItHelps);
     if (new Set(whys).size !== whys.length) problems.push(`${item.query}: duplicate why-line`);
@@ -360,6 +368,15 @@ export function qaProblems(catalog: Catalog): string[] {
       const queryWords = new Set(item.query.toLowerCase().match(/[a-z0-9]+/g) ?? []);
       const leaked = capitalIssues(why, allowed).filter((word) => queryWords.has(word.toLowerCase()));
       if (leaked.length > 0) problems.push(`${item.query}: query capital ${leaked.join(", ")} in ${tool.name} why: ${why}`);
+      const grammar = grammarProblems(why, "why");
+      if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in ${tool.name} why: ${why}`);
+    }
+    const headerBody = header.replace(/^For\s+/i, "").replace(/,?\s*here'?s how each tool can help:\s*$/i, "");
+    const brokenHeader = headerUsesBrokenPhrase(headerBody);
+    if (brokenHeader) problems.push(`${item.query}: still renders header "${brokenHeader}"`);
+    const whyText = whys.join(" ").toLowerCase();
+    for (const banned of BROKEN_ASSISTANT) {
+      if (whyText.includes(banned)) problems.push(`${item.query}: still renders "${banned}"`);
     }
     if (item.domain) {
       const got = ranked.useCases[0]?.slug ?? "none";
