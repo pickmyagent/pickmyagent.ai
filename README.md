@@ -59,7 +59,7 @@ Optional environment variables, all public because the forms run in the browser:
 
 | Variable | Effect |
 | --- | --- |
-| `NEXT_PUBLIC_NEWSLETTER_FORM_URL` | Optional Beehiiv publication base URL. When unset, signup uses `https://johnnys-newsletter-877787.beehiiv.com`. The form opens `/subscribe?email=` in a new tab. |
+| `NEXT_PUBLIC_NEWSLETTER_FORM_URL` | Optional Beehiiv publication base URL. When unset, signup uses `https://pickmyagent.beehiiv.com`. The form opens `/subscribe?email=` in a new tab. |
 | `NEXT_PUBLIC_SUBMIT_EMAIL` | Submit form opens a `mailto:` draft to this address |
 | `NEXT_PUBLIC_SUPABASE_URL` | Community board. If this or the anon key is unset, `/community` says Coming soon and the nav link is hidden. |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Public Supabase key for the community board. |
