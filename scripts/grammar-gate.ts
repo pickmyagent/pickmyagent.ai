@@ -177,3 +177,22 @@ export function grammarProblems(text: string, kind: "header" | "intro" | "why" =
   if (/\bso you can\s+(?:start|keep|finish)\s+\w+ing\b/i.test(text)) problems.push("robotic gerund ending");
   return problems;
 }
+
+const SPECIALIST_BANNED =
+  /\bis for\b|\bwe imported\b|\blocally\b|\bpriced on the site\b|\bpricing page\b|\bso you can\b/i;
+
+/** Specialist why-lines must be "<Name> <verb> ...", with no template glue. */
+export function specialistWhyProblems(name: string, why: string): string[] {
+  const problems: string[] = [];
+  if (SPECIALIST_BANNED.test(why)) problems.push("specialist why has banned wording");
+  if (!why.startsWith(`${name} `)) {
+    problems.push("specialist why does not start with the tool name");
+    return problems;
+  }
+  const next = why.slice(name.length).trim().match(/^[A-Za-z]+/)?.[0] ?? "";
+  const sentence = nlp(next).json() as Array<{ terms?: Term[] }>;
+  const tags = sentence[0]?.terms?.[0]?.tags ?? [];
+  const verb = tags.includes("Verb") || tags.includes("PresentTense") || tags.includes("Infinitive");
+  if (!verb) problems.push(`specialist why does not follow the name with a verb (${next || "missing"})`);
+  return problems;
+}

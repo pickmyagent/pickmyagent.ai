@@ -3,7 +3,7 @@ import { CONCEPTS } from "../lib/concepts.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { rankCatalogQuery } from "../lib/search.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
-import { BROKEN_ASSISTANT, grammarProblems, headerUsesBrokenPhrase } from "./grammar-gate.ts";
+import { BROKEN_ASSISTANT, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems } from "./grammar-gate.ts";
 
 export type QaQuery = {
   query: string;
@@ -341,7 +341,7 @@ export function qaProblems(catalog: Catalog): string[] {
     const header = ranked.lead;
     const intro = ranked.intro;
     if (!/^For [a-z]/.test(header)) problems.push(`${item.query}: header does not start with a lowercase gerund: ${header}`);
-    if (!/^AI agents\b/.test(intro)) problems.push(`${item.query}: intro does not start with AI agents: ${intro}`);
+    if (!/^AI (?:agents|assistants)\b/.test(intro)) problems.push(`${item.query}: intro does not start with AI agents or AI assistants: ${intro}`);
     for (const text of [header, intro]) {
       if (WRAPPER.test(text)) problems.push(`${item.query}: wrapper text in "${text}"`);
       if (/\bparts of\b/i.test(text)) problems.push(`${item.query}: parts of in "${text}"`);
@@ -370,6 +370,10 @@ export function qaProblems(catalog: Catalog): string[] {
       if (leaked.length > 0) problems.push(`${item.query}: query capital ${leaked.join(", ")} in ${tool.name} why: ${why}`);
       const grammar = grammarProblems(why, "why");
       if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in ${tool.name} why: ${why}`);
+      if (!tool.generalPurpose) {
+        const specialist = specialistWhyProblems(tool.name, why);
+        if (specialist.length > 0) problems.push(`${item.query}: ${specialist.join("; ")} in ${tool.name} why: ${why}`);
+      }
     }
     const headerBody = header.replace(/^For\s+/i, "").replace(/,?\s*here'?s how each tool can help:\s*$/i, "");
     const brokenHeader = headerUsesBrokenPhrase(headerBody);
