@@ -4,8 +4,12 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { StatusBadge } from "@/components/badges";
 import { RankingNote } from "@/components/ranking-note";
+import {
+  SearchNewsletterPrompt,
+  useSearchNewsletterDismissed,
+} from "@/components/search-newsletter-prompt";
 import { formatDate } from "@/lib/format";
-import { rankCatalogQuery } from "@/lib/search";
+import { rankCatalogQuery, type RankedTool } from "@/lib/search";
 import type { Category, Tool, UseCase } from "@/lib/types";
 
 const PLACEHOLDERS = [
@@ -15,6 +19,35 @@ const PLACEHOLDERS = [
   "Automate Discord mods with an agent",
   "Code agent that uses the browser",
 ];
+
+function ToolMatchList({ tools }: { tools: RankedTool[] }) {
+  if (tools.length === 0) return null;
+  return (
+    <ul className="mt-3 divide-y divide-line border border-line bg-panel">
+      {tools.map((tool) => (
+        <li key={tool.slug}>
+          <Link
+            href={`/tools/${tool.slug}`}
+            className="flex flex-col gap-2 px-4 py-3 hover:bg-panel-2 sm:flex-row sm:items-center sm:justify-between"
+          >
+            <span>
+              <span className="font-semibold">{tool.name}</span>
+              <span className="mt-1 block text-sm text-muted">
+                {tool.shortDescription}
+              </span>
+            </span>
+            <span className="flex flex-wrap items-center gap-2">
+              <StatusBadge status={tool.smokeStatus} />
+              <span className="font-mono text-xs text-muted">
+                {formatDate(tool.checkedDate)}
+              </span>
+            </span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export function JobSearch({
   useCases,
@@ -28,6 +61,7 @@ export function JobSearch({
   const [query, setQuery] = useState("");
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const { dismissed, dismiss } = useSearchNewsletterDismissed();
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -45,6 +79,13 @@ export function JobSearch({
   );
   const visibleCases = ranked.useCases;
   const visibleTools = ranked.tools;
+  const showSearchNewsletter = Boolean(trimmed) && !dismissed;
+  const previewTools = visibleTools.slice(0, 3);
+  const remainingTools = visibleTools.slice(3);
+  const showInlineNewsletter =
+    showSearchNewsletter &&
+    visibleTools.length > 0 &&
+    (remainingTools.length > 0 || visibleCases.length > 0);
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -120,29 +161,19 @@ export function JobSearch({
                 </Link>
               </p>
             ) : (
-              <ul className="mt-3 divide-y divide-line border border-line bg-panel">
-                {visibleTools.map((tool) => (
-                  <li key={tool.slug}>
-                    <Link
-                      href={`/tools/${tool.slug}`}
-                      className="flex flex-col gap-2 px-4 py-3 hover:bg-panel-2 sm:flex-row sm:items-center sm:justify-between"
-                    >
-                      <span>
-                        <span className="font-semibold">{tool.name}</span>
-                        <span className="mt-1 block text-sm text-muted">
-                          {tool.shortDescription}
-                        </span>
-                      </span>
-                      <span className="flex flex-wrap items-center gap-2">
-                        <StatusBadge status={tool.smokeStatus} />
-                        <span className="font-mono text-xs text-muted">
-                          {formatDate(tool.checkedDate)}
-                        </span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <>
+                <ToolMatchList tools={showInlineNewsletter ? previewTools : visibleTools} />
+                {showInlineNewsletter ? (
+                  <SearchNewsletterPrompt
+                    idPrefix="search-results-inline"
+                    className="mt-3"
+                    onDismiss={dismiss}
+                  />
+                ) : null}
+                {showInlineNewsletter && remainingTools.length > 0 ? (
+                  <ToolMatchList tools={remainingTools} />
+                ) : null}
+              </>
             )}
           </div>
         ) : null}
@@ -181,6 +212,13 @@ export function JobSearch({
             ))}
           </ul>
         )}
+        {showSearchNewsletter ? (
+          <SearchNewsletterPrompt
+            idPrefix="search-results-end"
+            className="mt-6"
+            onDismiss={dismiss}
+          />
+        ) : null}
       </section>
     </div>
   );

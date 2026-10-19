@@ -2,11 +2,35 @@
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import {
+  SearchNewsletterPrompt,
+  useSearchNewsletterDismissed,
+} from "@/components/search-newsletter-prompt";
 import { ToolCard } from "@/components/tool-card";
 import { textMatchesQuery } from "@/lib/search";
 import { PRICING_LABELS, TOOL_TYPE_LABELS } from "@/lib/labels";
 import { toolHaystack } from "@/lib/query";
 import type { PricingModel, SmokeStatus, Tool, ToolType, UseCase } from "@/lib/types";
+
+function ToolGrid({
+  tools,
+  recentReleaseSince,
+  className,
+}: {
+  tools: Tool[];
+  recentReleaseSince: string;
+  className: string;
+}) {
+  return (
+    <ul className={className}>
+      {tools.map((tool) => (
+        <li key={tool.slug}>
+          <ToolCard tool={tool} recentReleaseSince={recentReleaseSince} />
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 const STATUS_OPTIONS: { value: "all" | SmokeStatus; label: string }[] = [
   { value: "all", label: "Any check" },
@@ -33,6 +57,7 @@ export function ToolBrowser({
   const [openSourceOnly, setOpenSourceOnly] = useState(
     searchParams.get("oss") === "1",
   );
+  const { dismissed, dismiss } = useSearchNewsletterDismissed();
 
   const filtered = useMemo(() => {
     const selected = useCases.find((item) => item.slug === useCase);
@@ -52,6 +77,10 @@ export function ToolBrowser({
   }, [tools, useCases, query, useCase, type, pricing, status, openSourceOnly]);
 
   const selectClass = "h-11 w-full border border-line bg-bg px-2 text-sm";
+  const searched = query.trim().length > 0;
+  const showSearchNewsletter = searched && !dismissed;
+  const previewTools = filtered.slice(0, 4);
+  const remainingTools = filtered.slice(4);
 
   return (
     <div>
@@ -162,15 +191,38 @@ export function ToolBrowser({
 
       {filtered.length === 0 ? (
         <p className="mt-6 text-muted">Nothing matched those filters.</p>
+      ) : showSearchNewsletter && remainingTools.length > 0 ? (
+        <>
+          <ToolGrid
+            tools={previewTools}
+            recentReleaseSince={recentReleaseSince}
+            className="mt-4 grid gap-3 sm:grid-cols-2"
+          />
+          <SearchNewsletterPrompt
+            idPrefix="tools-search-inline"
+            className="mt-3"
+            onDismiss={dismiss}
+          />
+          <ToolGrid
+            tools={remainingTools}
+            recentReleaseSince={recentReleaseSince}
+            className="mt-3 grid gap-3 sm:grid-cols-2"
+          />
+        </>
       ) : (
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-          {filtered.map((tool) => (
-            <li key={tool.slug}>
-              <ToolCard tool={tool} recentReleaseSince={recentReleaseSince} />
-            </li>
-          ))}
-        </ul>
+        <ToolGrid
+          tools={filtered}
+          recentReleaseSince={recentReleaseSince}
+          className="mt-4 grid gap-3 sm:grid-cols-2"
+        />
       )}
+      {showSearchNewsletter ? (
+        <SearchNewsletterPrompt
+          idPrefix="tools-search-end"
+          className="mt-4"
+          onDismiss={dismiss}
+        />
+      ) : null}
     </div>
   );
 }
