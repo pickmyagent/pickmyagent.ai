@@ -5,7 +5,7 @@
   "websiteUrl": "https://flowiseai.com/",
   "affiliateUrl": null,
   "shortDescription": "Open-source, low-code builder for LLM flows you can self-host.",
-  "longDescription": "Flowise is a low-code builder for LLM flows. The npm package and GitHub repo are the open-source path. A cloud free tier is not stated here.",
+  "longDescription": "Flowise is a low-code builder for LLM flows. The npm project and GitHub repo are the open-source path. A cloud free tier is not stated here.",
   "categories": [
     "agent-frameworks"
   ],
@@ -40,7 +40,7 @@
     "A free hosted plan with a published price",
     "Code-first agent libraries, if that is all you need"
   ],
-  "strength": "The open-source npm package flowise 3.1.4 is a low-code builder you can self-host.",
+  "strength": "The open-source npm project Flowise 3.1.4 is a low-code builder you can self-host.",
   "weakness": "The pricing page came back too thin to confirm a cloud free tier.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

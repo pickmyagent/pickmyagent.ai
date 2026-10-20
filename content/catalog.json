@@ -177,7 +177,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -314,7 +314,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -382,7 +382,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -411,7 +411,7 @@
       "websiteUrl": "https://github.com/microsoft/autogen",
       "affiliateUrl": null,
       "shortDescription": "Microsoft open-source Python library for multi-agent conversations. The newest recorded release is from 2025.",
-      "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. The autogen-agentchat package imports without a model call. The latest Python GitHub release on record, python-v0.7.5, was published on September 30, 2025. Treat freshness as an open question, not a verdict.",
+      "longDescription": "AutoGen is Microsoft's open-source Python library and framework for multi-agent conversations. You can have several agents work through a task together, and there is no product paywall.",
       "categories": [
         "agent-frameworks"
       ],
@@ -448,16 +448,16 @@
         "A frequently updated hosted product",
         "Anyone who needs a release newer than September 30, 2025"
       ],
-      "strength": "The autogen-agentchat 0.7.5 package is open source with no product paywall.",
+      "strength": "AutoGen 0.7.5 is open source with no product paywall.",
       "weakness": "The newest Python release on record is dated September 30, 2025.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import autogen_agentchat",
+        "detail": "We installed version 0.7.5 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "autogen-agentchat==0.7.5",
         "llmCall": false,
         "accountSignup": false,
@@ -471,7 +471,7 @@
         "url": "https://github.com/microsoft/autogen/releases/tag/python-v0.7.5"
       },
       "problems": [
-        "Latest Autogen python release on GitHub is 2025-09-30; may be maintenance-mode relative to newer Microsoft Agent Framework."
+        "The last release was September 30, 2025."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -621,7 +621,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage and FAQ reviewed on 2026-10-19.",
+      "smokeTestNotes": "Homepage and FAQ reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -759,7 +759,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -900,7 +900,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Virtual tour page and listing guide reviewed on 2026-10-19.",
+      "smokeTestNotes": "Virtual tour page and listing guide reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -929,8 +929,8 @@
       "name": "Browser Use",
       "websiteUrl": "https://browser-use.com/",
       "affiliateUrl": null,
-      "shortDescription": "Open-source Python agent that controls a browser. Install the package yourself.",
-      "longDescription": "Browser Use is a Python agent for driving a browser. The browser-use package imports Agent. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
+      "shortDescription": "Open-source Python agent that controls a browser. Install it yourself.",
+      "longDescription": "Browser Use is a Python agent for driving a browser. It can open pages, click, and type. Their hosted cloud browsers are billed separately, and you still bring your own browser and model.",
       "categories": [
         "tool-use"
       ],
@@ -966,16 +966,16 @@
         "Jobs that only need a web search API",
         "A no-code hosted agent with no local setup"
       ],
-      "strength": "The browser-use 0.13.11 package is built for agents that open pages, click, and type.",
-      "weakness": "You bring your own browser and model, and the docs bill cloud stealth browsers separately from the library.",
+      "strength": "Browser Use 0.13.11 is built for agents that open pages, click, and type.",
+      "weakness": "You bring your own browser and model, and their hosted cloud browsers are billed separately.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import browser_use; from browser_use import Agent",
+        "detail": "We installed version 0.13.11 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "browser-use==0.13.11",
         "llmCall": false,
         "accountSignup": false,
@@ -1052,7 +1052,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1081,7 +1081,7 @@
       "name": "Canva",
       "websiteUrl": "https://www.canva.com/",
       "affiliateUrl": null,
-      "shortDescription": "Real estate video templates and a video editor for listing clips. Free to start; paid plans on their site.",
+      "shortDescription": "Real estate video templates and a video editor for listing clips. Free to start. Paid plans are on their site.",
       "longDescription": "Canva's real estate video gallery says you can start from a listing template and customize it. The real estate solutions page says the video editor can create listing videos and walk-throughs and add music. Those pages do not list a monthly plan price.",
       "categories": [
         "creative-media"
@@ -1122,7 +1122,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Real estate video gallery and solutions page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Real estate video gallery and solutions page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1335,7 +1335,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1546,7 +1546,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1643,7 +1643,7 @@
       "name": "Composio",
       "websiteUrl": "https://composio.dev/",
       "affiliateUrl": null,
-      "shortDescription": "Connects agents to third-party apps and tools. Free to start; paid plans on their site.",
+      "shortDescription": "Connects agents to third-party apps and tools. Free to start. Paid plans are on their site.",
       "longDescription": "Composio is a tool-use layer between agents and third-party apps. The pricing page lists a $0 Hobby plan. The October 15, 2026 CLI release is public.",
       "categories": [
         "tool-use"
@@ -1914,7 +1914,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1943,7 +1943,7 @@
       "websiteUrl": "https://crewai.com/",
       "affiliateUrl": null,
       "shortDescription": "Open-source framework for crews of role-based agents that split a job into tasks.",
-      "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source package and the hosted product are separate. Pricing figures are from the pricing page on October 15, 2026.",
+      "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source framework and the hosted product are separate. Pricing figures are from the pricing page on October 15, 2026.",
       "categories": [
         "agent-frameworks"
       ],
@@ -1981,16 +1981,16 @@
         "A single chat box with no workflow",
         "Teams that only want a closed SaaS and will not touch Python"
       ],
-      "strength": "The crewai 1.15.28 package is an open-source framework that splits a job across role-based agents.",
+      "strength": "CrewAI 1.15.28 is an open-source framework that splits a job across role-based agents.",
       "weakness": "The cloud free plan includes 50 workflow executions per month, and paid use above that is custom Enterprise pricing.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import crewai",
+        "detail": "We installed version 1.15.28 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "crewai==1.15.28",
         "llmCall": false,
         "accountSignup": false,
@@ -2064,7 +2064,7 @@
         "Day-to-day coding where the agent should touch the repo"
       ],
       "notIdealFor": [
-        "A headless library you import from Python",
+        "A Python library you call from your own code",
         "Running it on your own computer, which is not described here"
       ],
       "strength": "The free plan includes limited agent and chat requests in a desktop IDE that can edit the repo.",
@@ -2144,7 +2144,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Studio, API, and help-center pages reviewed on 2026-10-19.",
+      "smokeTestNotes": "Studio, API, and help-center pages reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2214,7 +2214,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2422,7 +2422,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2533,7 +2533,7 @@
       "name": "Descript",
       "websiteUrl": "https://www.descript.com/",
       "affiliateUrl": null,
-      "shortDescription": "Edit video and audio by editing the transcript. Free to start; paid plans on their site.",
+      "shortDescription": "Edit video and audio by editing the transcript. Free to start. Paid plans are on their site.",
       "longDescription": "Descript edits audio and video from the transcript. The pricing page lists free or hobby language and a $0 figure, with paid samples in a roughly $16–$65 range.",
       "categories": [
         "creative-media"
@@ -2648,7 +2648,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2798,7 +2798,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2865,7 +2865,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3073,7 +3073,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3186,7 +3186,7 @@
       "websiteUrl": "https://flowiseai.com/",
       "affiliateUrl": null,
       "shortDescription": "Open-source, low-code builder for LLM flows you can self-host.",
-      "longDescription": "Flowise is a low-code builder for LLM flows. The npm package and GitHub repo are the open-source path. A cloud free tier is not stated here.",
+      "longDescription": "Flowise is a low-code builder for LLM flows. The npm project and GitHub repo are the open-source path. A cloud free tier is not stated here.",
       "categories": [
         "agent-frameworks"
       ],
@@ -3221,7 +3221,7 @@
         "A free hosted plan with a published price",
         "Code-first agent libraries, if that is all you need"
       ],
-      "strength": "The open-source npm package flowise 3.1.4 is a low-code builder you can self-host.",
+      "strength": "The open-source npm project Flowise 3.1.4 is a low-code builder you can self-host.",
       "weakness": "The pricing page came back too thin to confirm a cloud free tier.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
@@ -3303,7 +3303,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3370,7 +3370,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3438,7 +3438,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3506,7 +3506,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3640,7 +3640,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3708,7 +3708,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3736,7 +3736,7 @@
       "name": "Granola",
       "websiteUrl": "https://www.granola.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Meeting notes that sit alongside your calls. Free to start; paid plans on their site.",
+      "shortDescription": "Meeting notes that sit alongside your calls. Free to start. Paid plans are on their site.",
       "longDescription": "Granola takes meeting notes. The pricing page lists $0 alongside $14 and $35.",
       "categories": [
         "knowledge"
@@ -3846,7 +3846,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3914,7 +3914,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3982,7 +3982,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4011,7 +4011,7 @@
       "name": "HeyGen",
       "websiteUrl": "https://www.heygen.com/",
       "affiliateUrl": null,
-      "shortDescription": "Avatar and spokesperson video from a script. Free to start; paid plans on their site.",
+      "shortDescription": "Avatar and spokesperson video from a script. Free to start. Paid plans are on their site.",
       "longDescription": "HeyGen makes avatar and spokesperson videos. The pricing page lists $0 per month alongside $29 and $49 per month samples.",
       "categories": [
         "creative-media"
@@ -4193,7 +4193,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4260,7 +4260,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4328,7 +4328,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4468,7 +4468,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4537,7 +4537,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4677,7 +4677,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4745,7 +4745,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-20T00:00:00-04:00",
       "checkedDate": "2026-10-20",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4773,7 +4773,7 @@
       "name": "Kickresume",
       "websiteUrl": "https://www.kickresume.com/en/",
       "affiliateUrl": null,
-      "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try; paid plans on their site.",
+      "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try. Paid plans are on their site.",
       "longDescription": "Kickresume's homepage says its AI resume writer generates work-experience bullets from a job title, and that you can score a resume and tailor it to a job description. The page says the builder is free to try. It did not list a monthly plan price.",
       "categories": [
         "hiring"
@@ -4814,7 +4814,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T22:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage reviewed on 2026-10-19.",
+      "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -5015,16 +5015,16 @@
         "People who want only a visual builder",
         "A finished consumer chat product"
       ],
-      "strength": "The langchain 1.4.6 package includes create_agent for composing tool-calling workflows in code.",
+      "strength": "LangChain 1.4.6 includes composing tool-calling workflows in code.",
       "weakness": "LangSmith's developer plan includes 5,000 base traces per month before usage billing, and Plus is $39 per seat per month.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import langchain; from langchain.agents import create_agent",
+        "detail": "We installed version 1.4.6 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "langchain==1.4.6",
         "llmCall": false,
         "accountSignup": false,
@@ -5171,7 +5171,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -5200,7 +5200,7 @@
       "websiteUrl": "https://www.llamaindex.ai/",
       "affiliateUrl": null,
       "shortDescription": "Open-source framework for retrieval and agents. The cloud free plan includes 10,000 credits.",
-      "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. The llama-index-core package imports in Python. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
+      "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. You can use it in Python. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
       "categories": [
         "agent-frameworks",
         "search-rag"
@@ -5237,16 +5237,16 @@
         "A finished consumer chat app",
         "Anyone who needs a confirmed free cloud tier"
       ],
-      "strength": "The llama-index-core 0.14.25 package is the open-source library, and the cloud free plan includes 10,000 credits.",
+      "strength": "LlamaIndex 0.14.25 is the open-source library, and the cloud free plan includes 10,000 credits.",
       "weakness": "Cloud Starter is $50 per month after the 10,000 free credits.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import llama_index.core",
+        "detail": "We installed version 0.14.25 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "llama-index-core==0.14.25",
         "llmCall": false,
         "accountSignup": false,
@@ -5494,8 +5494,8 @@
       "name": "Mem0",
       "websiteUrl": "https://mem0.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Memory layer for agents. Open-source package you can install yourself.",
-      "longDescription": "Mem0 stores memory for agents. The open-source package is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
+      "shortDescription": "Memory layer for agents. Open-source, and you can install it yourself.",
+      "longDescription": "Mem0 stores memory for agents. The open-source library is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
       "categories": [
         "search-rag"
       ],
@@ -5525,22 +5525,22 @@
       "repoUrl": "https://github.com/mem0ai/mem0",
       "bestFor": [
         "Adding persistent memory to an agent you already run",
-        "Python projects that can install the open-source package"
+        "Python projects that can install the open-source library"
       ],
       "notIdealFor": [
         "A full research chat product",
         "A confirmed free cloud allotment — re-read the pricing page"
       ],
-      "strength": "The mem0ai 2.2.1 package is the open-source library, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
+      "strength": "Mem0 2.2.1 is the open-source library, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
       "weakness": "The paid plan starts at $19 per month once you pass those monthly request limits.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import mem0",
+        "detail": "We installed version 2.2.1 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "mem0ai==2.2.1",
         "llmCall": false,
         "accountSignup": false,
@@ -5579,7 +5579,7 @@
       "name": "Meshy",
       "websiteUrl": "https://www.meshy.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Text and image to 3D assets. Free to start; paid plans on their site.",
+      "shortDescription": "Text and image to 3D assets. Free to start. Paid plans are on their site.",
       "longDescription": "Meshy turns text and images into 3D assets. The pricing page lists $0 and no-credit-card language, with a paid sample around $20 per month.",
       "categories": [
         "creative-media"
@@ -5691,7 +5691,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -5903,7 +5903,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage reviewed on 2026-10-19.",
+      "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -5970,7 +5970,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -6038,7 +6038,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -6100,7 +6100,7 @@
         "Multi-step workflows across apps you already use"
       ],
       "notIdealFor": [
-        "A one-import Python agent library",
+        "A Python agent library",
         "A permanent free cloud plan, which is not listed"
       ],
       "strength": "Community Edition is a free self-host option for multi-step workflows across the apps you already use.",
@@ -6146,7 +6146,7 @@
       "name": "Notion",
       "websiteUrl": "https://www.notion.com/",
       "affiliateUrl": null,
-      "shortDescription": "Docs, wikis, and agents in a team workspace. Free to start; paid plans on their site.",
+      "shortDescription": "Docs, wikis, and agents in a team workspace. Free to start. Paid plans are on their site.",
       "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. The pricing page lists $0 alongside $10 and $20. AI features may sit on paid plans.",
       "categories": [
         "knowledge"
@@ -6290,7 +6290,7 @@
       "name": "Obsidian",
       "websiteUrl": "https://obsidian.md/",
       "affiliateUrl": null,
-      "shortDescription": "Local-first notes app. Official pricing says the app is free without limits; Sync and Publish are paid.",
+      "shortDescription": "Local-first notes app. Official pricing says the app is free without limits. Sync and Publish are paid.",
       "longDescription": "Obsidian is a local-first notes app. The official pricing page says the app is free without limits and does not require a sign-up. Sync and Publish are paid add-ons at $4 and $8 per month billed annually. Catalyst is a $25 one-time option, and a commercial license was listed at $50 per user per year.",
       "categories": [
         "knowledge"
@@ -6401,7 +6401,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -6538,7 +6538,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -6887,7 +6887,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -6989,7 +6989,7 @@
       "name": "Quizlet",
       "websiteUrl": "https://quizlet.com/features/ai-study-tools",
       "affiliateUrl": null,
-      "shortDescription": "Turns notes into practice tests and explains a homework step. Free to start; paid plans on their site.",
+      "shortDescription": "Turns notes into practice tests and explains a homework step. Free to start. Paid plans are on their site.",
       "longDescription": "Quizlet's AI study tools page says you can turn notes into practice tests, study guides, and flashcards, and that homework help explains a step and adds more practice. The practice-test help page says those tests are currently for science and humanities, with limited free access. Some AI features are free, and Quizlet Plus includes more.",
       "categories": [
         "learning"
@@ -7031,7 +7031,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-20T00:00:00-04:00",
       "checkedDate": "2026-10-20",
-      "smokeTestNotes": "AI study tools page and practice-test help page checked on 2026-10-20. No account was created.",
+      "smokeTestNotes": "AI study tools page and practice-test help page checked on October 20, 2026. No account was created.",
       "handsOn": {
         "performed": false
       },
@@ -7100,7 +7100,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7237,7 +7237,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7514,7 +7514,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T22:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage reviewed on 2026-10-19.",
+      "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7582,7 +7582,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7679,7 +7679,7 @@
       "name": "Scenario",
       "websiteUrl": "https://www.scenario.com/",
       "affiliateUrl": null,
-      "shortDescription": "Game art generation. Free to start; paid plans on their site.",
+      "shortDescription": "Game art generation. Free to start. Paid plans are on their site.",
       "longDescription": "Scenario generates art aimed at games. The pricing page mentioned a free tier or free plan, plus starter language and no-credit-card wording. Paid samples on that page included $15, $45, and $75 per month.",
       "categories": [
         "creative-media"
@@ -7790,7 +7790,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7930,7 +7930,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7998,7 +7998,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8066,7 +8066,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8134,7 +8134,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8202,7 +8202,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8270,7 +8270,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8366,7 +8366,7 @@
       "name": "StudyFetch",
       "websiteUrl": "https://www.studyfetch.com/",
       "affiliateUrl": null,
-      "shortDescription": "AI tutor that builds a study plan and practice from your materials. Free to start; paid plans on their site.",
+      "shortDescription": "AI tutor that builds a study plan and practice from your materials. Free to start. Paid plans are on their site.",
       "longDescription": "StudyFetch says you upload course materials and Sparky, its AI tutor, explains a concept and builds a study plan, flashcards, and practice from them. The FAQ says it can help with any subject, including professional exams, and that getting started is free. The same FAQ does not list one monthly price for premium.",
       "categories": [
         "learning"
@@ -8408,7 +8408,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-20T00:00:00-04:00",
       "checkedDate": "2026-10-20",
-      "smokeTestNotes": "Homepage and FAQ reviewed on 2026-10-20.",
+      "smokeTestNotes": "Homepage and FAQ reviewed on October 20, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8478,7 +8478,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage, pricing page, and avatar page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Homepage, pricing page, and avatar page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8547,7 +8547,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official tutor page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official tutor page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8647,7 +8647,7 @@
       "name": "Tavily",
       "websiteUrl": "https://www.tavily.com/",
       "affiliateUrl": null,
-      "shortDescription": "Search API for agents that need web results. Free to start; paid plans on their site.",
+      "shortDescription": "Search API for agents that need web results. Free to start. Paid plans are on their site.",
       "longDescription": "Tavily is a search API meant for agents. The pricing page lists $0 and no-credit-card language, plus paid usage samples.",
       "categories": [
         "tool-use",
@@ -8761,7 +8761,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8789,7 +8789,7 @@
       "name": "Teal",
       "websiteUrl": "https://www.tealhq.com/",
       "affiliateUrl": null,
-      "shortDescription": "Resume builder that tailors a resume to a job description. Free to try; paid plans on their site.",
+      "shortDescription": "Resume builder that tailors a resume to a job description. Free to try. Paid plans are on their site.",
       "longDescription": "Teal's homepage says you can create an ATS-friendly resume, tailor it with keywords from a job description, and track jobs saved from job boards with its Chrome extension. It also says you can create a free account. The page did not list a monthly plan price.",
       "categories": [
         "hiring"
@@ -8830,7 +8830,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T22:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage reviewed on 2026-10-19.",
+      "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8898,7 +8898,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8966,7 +8966,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -9033,7 +9033,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -9100,7 +9100,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -9236,7 +9236,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page reviewed on 2026-10-19.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },

@@ -5,7 +5,7 @@
   "websiteUrl": "https://crewai.com/",
   "affiliateUrl": null,
   "shortDescription": "Open-source framework for crews of role-based agents that split a job into tasks.",
-  "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source package and the hosted product are separate. Pricing figures are from the pricing page on October 15, 2026.",
+  "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source framework and the hosted product are separate. Pricing figures are from the pricing page on October 15, 2026.",
   "categories": [
     "agent-frameworks"
   ],
@@ -43,16 +43,16 @@
     "A single chat box with no workflow",
     "Teams that only want a closed SaaS and will not touch Python"
   ],
-  "strength": "The crewai 1.15.28 package is an open-source framework that splits a job across role-based agents.",
+  "strength": "CrewAI 1.15.28 is an open-source framework that splits a job across role-based agents.",
   "weakness": "The cloud free plan includes 50 workflow executions per month, and paid use above that is custom Enterprise pricing.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": true,
-    "detail": "pip install + import crewai",
+    "detail": "We installed version 1.15.28 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
     "package": "crewai==1.15.28",
     "llmCall": false,
     "accountSignup": false,

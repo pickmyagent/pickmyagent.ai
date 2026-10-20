@@ -821,6 +821,21 @@ test("grammar gate flags the broken header and assistant examples", () => {
     ),
     [],
   );
+  assert.ok(toolPageCopyProblems("pip install + import browser_use").length > 0);
+  assert.ok(toolPageCopyProblems("browser-use==0.13.11").length > 0);
+  assert.ok(toolPageCopyProblems("Free to start; paid plans on their site.").length > 0);
+  assert.ok(toolPageCopyProblems("No API key, no LLM invoke, no signup.").length > 0);
+  assert.ok(toolPageCopyProblems("Installed without a model call.").length > 0);
+  assert.ok(toolPageCopyProblems("The browser-use package imports Agent.").length > 0);
+  assert.ok(toolPageCopyProblems("Official page reviewed on 2026-10-19.").length > 0);
+  assert.deepEqual(toolPageCopyProblems("An important packaged result."), []);
+  assert.deepEqual(
+    toolPageCopyProblems(
+      "We installed version 0.13.11 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
+    ),
+    [],
+  );
+  assert.deepEqual(toolPageCopyProblems("Smoke-tested means we tried this tool ourselves."), []);
 });
 
 test("every specialist use-case pair has a hand-written why-line", () => {

@@ -266,8 +266,8 @@
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
 - Domain: rank-property-deals
 - Cards:
-  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
   - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - DealCheck — Specialist · Docs checked — DealCheck runs a rental, flip, or commercial calculator and lines the deals up together.
   - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a real estate deal into numbers you can compare before you rank it.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of rental or flip figures to gather before you sort deals.

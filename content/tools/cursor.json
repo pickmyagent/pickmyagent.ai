@@ -39,7 +39,7 @@
     "Day-to-day coding where the agent should touch the repo"
   ],
   "notIdealFor": [
-    "A headless library you import from Python",
+    "A Python library you call from your own code",
     "Running it on your own computer, which is not described here"
   ],
   "strength": "The free plan includes limited agent and chat requests in a desktop IDE that can edit the repo.",

@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.llamaindex.ai/",
   "affiliateUrl": null,
   "shortDescription": "Open-source framework for retrieval and agents. The cloud free plan includes 10,000 credits.",
-  "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. The llama-index-core package imports in Python. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
+  "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. You can use it in Python. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
   "categories": [
     "agent-frameworks",
     "search-rag"
@@ -42,16 +42,16 @@
     "A finished consumer chat app",
     "Anyone who needs a confirmed free cloud tier"
   ],
-  "strength": "The llama-index-core 0.14.25 package is the open-source library, and the cloud free plan includes 10,000 credits.",
+  "strength": "LlamaIndex 0.14.25 is the open-source library, and the cloud free plan includes 10,000 credits.",
   "weakness": "Cloud Starter is $50 per month after the 10,000 free credits.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": true,
-    "detail": "pip install + import llama_index.core",
+    "detail": "We installed version 0.14.25 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
     "package": "llama-index-core==0.14.25",
     "llmCall": false,
     "accountSignup": false,

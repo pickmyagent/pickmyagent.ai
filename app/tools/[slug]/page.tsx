@@ -28,7 +28,7 @@ import {
   RELEASE_TERM,
   REVIEW_HEADING,
   WEBSITE_TERM,
-  handsOnCopy,
+  releaseLabel,
   smokeStatusCopy,
   websiteHost,
 } from "@/lib/tool-page-copy";
@@ -180,7 +180,7 @@ export default async function ToolPage({
             </p>
             {tool.smokeStatus === "tested-hands-on" && tool.handsOn.detail ? (
               <p className="mt-3 max-w-2xl text-sm leading-relaxed">
-                {handsOnCopy(tool.handsOn.detail, tool.handsOn.package)}
+                {tool.handsOn.detail}
               </p>
             ) : null}
             {tool.smokeTestNotes ? (
@@ -248,7 +248,7 @@ export default async function ToolPage({
             {tool.latestRelease ? (
               <Fact term={RELEASE_TERM}>
                 <ExternalLink href={tool.latestRelease.url} className="underline">
-                  {tool.latestRelease.tag}
+                  {releaseLabel(tool.latestRelease.tag)}
                 </ExternalLink>
                 <span className="mt-1 block text-muted">
                   {formatDate(tool.latestRelease.publishedAt)} UTC

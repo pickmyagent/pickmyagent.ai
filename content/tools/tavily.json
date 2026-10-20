@@ -4,7 +4,7 @@
   "name": "Tavily",
   "websiteUrl": "https://www.tavily.com/",
   "affiliateUrl": null,
-  "shortDescription": "Search API for agents that need web results. Free to start; paid plans on their site.",
+  "shortDescription": "Search API for agents that need web results. Free to start. Paid plans are on their site.",
   "longDescription": "Tavily is a search API meant for agents. The pricing page lists $0 and no-credit-card language, plus paid usage samples.",
   "categories": [
     "tool-use",

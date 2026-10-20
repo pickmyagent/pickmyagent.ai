@@ -38,7 +38,7 @@
     "Multi-step workflows across apps you already use"
   ],
   "notIdealFor": [
-    "A one-import Python agent library",
+    "A Python agent library",
     "A permanent free cloud plan, which is not listed"
   ],
   "strength": "Community Edition is a free self-host option for multi-step workflows across the apps you already use.",

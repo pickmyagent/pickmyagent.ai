@@ -2,7 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { CONCEPTS } from "../lib/concepts.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { rankCatalogQuery } from "../lib/search.ts";
-import { toolPageChromeStrings } from "../lib/tool-page-copy.ts";
+import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageCopyProblems } from "./grammar-gate.ts";
 
@@ -464,6 +464,12 @@ export function catalogLeakProblems(catalog: Catalog): string[] {
     scanProse(tool, tool.slug, problems, true);
     if (tool.handsOn.detail && toolPageCopyProblems(tool.handsOn.detail).length > 0) {
       problems.push(`${tool.slug}.handsOn.detail: ${tool.handsOn.detail}`);
+    }
+    if (tool.latestRelease?.tag) {
+      const label = releaseLabel(tool.latestRelease.tag);
+      if (toolPageCopyProblems(label).length > 0) {
+        problems.push(`${tool.slug}.latestRelease: ${label}`);
+      }
     }
   });
   catalog.useCases.forEach((useCase) => scanProse(useCase, useCase.slug, problems, false));
