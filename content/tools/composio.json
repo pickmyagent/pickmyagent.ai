@@ -39,7 +39,7 @@
   ],
   "notIdealFor": [
     "A single API you already call directly",
-    "A local hands-on test — we did not run one"
+    "A local install, which is not described here"
   ],
   "strength": "The Hobby plan includes 100,000 tool calls per month for connecting agents to third-party apps.",
   "weakness": "The next plan starts at $29 per month once you need more than the Hobby tool-call allotment.",

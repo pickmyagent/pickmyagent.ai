@@ -5,7 +5,7 @@
   "websiteUrl": "https://turbotax.intuit.com/",
   "affiliateUrl": null,
   "shortDescription": "Step-by-step filing. File-yourself pricing on the page runs from $0 to $139.",
-  "longDescription": "TurboTax's online pricing page lists file-yourself tools from $0 to $139, with state extra, expert help from $59 to $209, and a dedicated expert starting at $129. We did not start a return.",
+  "longDescription": "TurboTax's online pricing page lists file-yourself tools from $0 to $139, with state extra, expert help from $59 to $209, and a dedicated expert starting at $129.",
   "categories": [
     "personal-finance"
   ],
@@ -44,7 +44,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

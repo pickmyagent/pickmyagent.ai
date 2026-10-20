@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.shortwave.com/",
   "affiliateUrl": null,
   "shortDescription": "Email AI at $30 per seat per month, with a 14-day free trial.",
-  "longDescription": "Shortwave's pricing page lists Everyday AI productivity at $30 per seat per month and a 14-day free trial, with higher seat prices above that. It mentions AI search and filters. We did not start the trial.",
+  "longDescription": "Shortwave's pricing page lists Everyday AI productivity at $30 per seat per month and a 14-day free trial, with higher seat prices above that. It mentions AI search and filters.",
   "categories": [
     "productivity"
   ],
@@ -43,7 +43,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

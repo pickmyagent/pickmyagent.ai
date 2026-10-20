@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.vic.ai/",
   "affiliateUrl": null,
   "shortDescription": "AI-first invoice processing and accounts payable software.",
-  "longDescription": "Vic.ai's site describes AI-first accounts payable and invoice processing, including an AP suite. The fetched text did not list a price. We did not request a demo.",
+  "longDescription": "Vic.ai's site describes AI-first accounts payable and invoice processing, including an AP suite. The page did not list a price.",
   "categories": [
     "finance-ops"
   ],
@@ -39,12 +39,12 @@
     "A buyer who needs a public monthly price"
   ],
   "strength": "Vic AI describes AI-first invoice processing and accounts payable software.",
-  "weakness": "The fetched site did not list a dollar price.",
+  "weakness": "The site did not list a dollar price for the product.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

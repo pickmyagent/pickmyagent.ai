@@ -5,7 +5,7 @@
   "websiteUrl": "https://sparkmailapp.com/",
   "affiliateUrl": null,
   "shortDescription": "Email app with an AI assistant, a smart inbox, and drafted replies.",
-  "longDescription": "Spark's site lists Spark +AI, an AI assistant, a smart inbox, gatekeeper, snooze, and send later, and the page leads with replies that are already drafted. The fetched text did not include a price. We did not install the app.",
+  "longDescription": "Spark's site lists Spark +AI, an AI assistant, a smart inbox, gatekeeper, snooze, and send later, and the page leads with replies that are already drafted. The page did not include a price.",
   "categories": [
     "productivity"
   ],
@@ -39,12 +39,12 @@
     "Someone who needs a confirmed monthly price"
   ],
   "strength": "Spark lists an AI assistant, a smart inbox, and replies that are already drafted.",
-  "weakness": "The fetched page did not include a dollar price or a stated trial length.",
+  "weakness": "The page did not include a dollar price or a stated trial length.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

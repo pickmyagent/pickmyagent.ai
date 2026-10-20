@@ -5,7 +5,7 @@
   "websiteUrl": "https://instantly.ai/",
   "affiliateUrl": null,
   "shortDescription": "Cold email outreach. The Growth plan is listed at $47 per month.",
-  "longDescription": "Instantly's pricing page lists outreach plans, including a Growth plan at $47 per month with unlimited email accounts, and it describes an AI Sales Agent. A higher starter bundle was also listed. We did not create an account.",
+  "longDescription": "Instantly's pricing page lists outreach plans, including a Growth plan at $47 per month with unlimited email accounts, and it describes an AI Sales Agent. A higher starter bundle was also listed.",
   "categories": [
     "sales"
   ],
@@ -38,12 +38,12 @@
     "A team that only needs a CRM and not outbound email"
   ],
   "strength": "Instantly lists an Outreach Growth plan at $47 per month and describes an AI Sales Agent.",
-  "weakness": "Higher bundles on the same page cost more, and the fetched text did not promise a free ongoing plan.",
+  "weakness": "Higher bundles on the same page cost more, and the page did not promise a free ongoing plan.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

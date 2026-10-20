@@ -41,7 +41,7 @@
     "People who want only a visual builder",
     "A finished consumer chat product"
   ],
-  "strength": "We imported langchain 1.4.6, including create_agent, for composing tool-calling workflows in code.",
+  "strength": "The langchain 1.4.6 package includes create_agent for composing tool-calling workflows in code.",
   "weakness": "LangSmith's developer plan includes 5,000 base traces per month before usage billing, and Plus is $39 per seat per month.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,

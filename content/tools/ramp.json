@@ -5,7 +5,7 @@
   "websiteUrl": "https://ramp.com/",
   "affiliateUrl": null,
   "shortDescription": "Finance platform with a free plan at $0 and Plus at $15 per user.",
-  "longDescription": "Ramp's pricing page lists an AI-assisted Free plan at $0 per user per month and Plus at $15 per user per month plus a platform fee based on team size. We did not apply for an account.",
+  "longDescription": "Ramp's pricing page lists an AI-assisted Free plan at $0 per user per month and Plus at $15 per user per month plus a platform fee based on team size.",
   "categories": [
     "finance-ops"
   ],
@@ -44,7 +44,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

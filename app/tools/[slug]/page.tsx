@@ -20,6 +20,19 @@ import {
 } from "@/lib/labels";
 import { findUseCaseForTag, relatedTools } from "@/lib/query";
 import { pageMetadata } from "@/lib/seo";
+import {
+  AFFILIATE_NOTE,
+  FACTS_HEADING,
+  HOMEPAGE_TERM,
+  NOTES_HEADING,
+  NO_RELEASE,
+  PRICING_MODEL_MISSING,
+  RELEASE_TERM,
+  REVIEW_HEADING,
+  handsOnCopy,
+  homepageResponseCopy,
+  smokeStatusCopy,
+} from "@/lib/tool-page-copy";
 
 export function generateStaticParams() {
   return getTools().map((tool) => ({ slug: tool.slug }));
@@ -64,12 +77,11 @@ export default async function ToolPage({
   const categories = getCategories();
   const related = relatedTools(tools, tool);
 
-  const statusCopy =
-    tool.smokeStatus === "tested-hands-on"
-      ? "Smoke-tested means we ran a local install or import in an isolated environment. We did not create an account, pay, or call a model."
-      : tool.smokeStatus === "verified-docs-only"
-        ? "Docs checked means we opened the official site and the pricing and docs URLs on this page. We did not run a successful local install, so this is not a smoke test."
-        : `Not fully checked. The homepage returned HTTP ${tool.siteLoad.status} to our client on ${formatDate(tool.checkedDate)}. That is an environment limit, not proof the site is down in a browser, and it is not a smoke test.`;
+  const statusCopy = smokeStatusCopy(
+    tool.smokeStatus,
+    tool.siteLoad.status,
+    formatDate(tool.checkedDate),
+  );
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -167,15 +179,13 @@ export default async function ToolPage({
           </div>
 
           <section className="mt-10">
-            <h2 className="text-xl font-semibold">What we checked</h2>
+            <h2 className="text-xl font-semibold">{REVIEW_HEADING}</h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
               {statusCopy}
             </p>
             {tool.smokeStatus === "tested-hands-on" && tool.handsOn.detail ? (
               <p className="mt-3 max-w-2xl text-sm leading-relaxed">
-                Hands-on: {tool.handsOn.detail}
-                {tool.handsOn.package ? ` (${tool.handsOn.package})` : ""}. No
-                account, no payment, no model call.
+                {handsOnCopy(tool.handsOn.detail, tool.handsOn.package)}
               </p>
             ) : null}
             {tool.smokeTestNotes ? (
@@ -185,7 +195,7 @@ export default async function ToolPage({
             ) : null}
             {tool.problems.length > 0 ? (
               <div className="mt-4 max-w-2xl border border-amber/40 bg-[#2a2112] p-4">
-                <h3 className="font-semibold text-amber">Notes from this check</h3>
+                <h3 className="font-semibold text-amber">{NOTES_HEADING}</h3>
                 <ul className="mt-2 list-disc space-y-2 pl-5 text-sm">
                   {tool.problems.map((problem) => (
                     <li key={problem}>{problem}</li>
@@ -214,12 +224,12 @@ export default async function ToolPage({
 
         <aside className="h-fit border border-line bg-panel p-4 lg:sticky lg:top-24">
           <h2 className="font-mono text-xs tracking-[0.16em] text-gold uppercase">
-            Facts from the check
+            {FACTS_HEADING}
           </h2>
           <dl className="mt-2">
             <Fact term="Pricing model">
               {tool.pricingModel.length === 0
-                ? "Not confirmed on this pass"
+                ? PRICING_MODEL_MISSING
                 : tool.pricingModel.map((model) => PRICING_LABELS[model]).join(", ")}
             </Fact>
             <Fact term="Open source">
@@ -235,12 +245,11 @@ export default async function ToolPage({
             <Fact term="Platforms">
               {tool.platforms.map(platformLabel).join(", ")}
             </Fact>
-            <Fact term="Homepage check">
-              HTTP {tool.siteLoad.status}
-              {tool.siteLoad.finalUrl ? ` → ${tool.siteLoad.finalUrl}` : ""}
+            <Fact term={HOMEPAGE_TERM}>
+              {homepageResponseCopy(tool.siteLoad.status, tool.siteLoad.finalUrl)}
             </Fact>
             {tool.latestRelease ? (
-              <Fact term="Latest release we logged">
+              <Fact term={RELEASE_TERM}>
                 <ExternalLink href={tool.latestRelease.url} className="underline">
                   {tool.latestRelease.tag}
                 </ExternalLink>
@@ -249,9 +258,7 @@ export default async function ToolPage({
                 </span>
               </Fact>
             ) : (
-              <Fact term="Latest release we logged">
-                No single public GitHub release was used for this check.
-              </Fact>
+              <Fact term={RELEASE_TERM}>{NO_RELEASE}</Fact>
             )}
             <Fact term="Use cases">
               <ul className="space-y-1">
@@ -288,7 +295,7 @@ export default async function ToolPage({
           </dl>
           {tool.affiliateUrl ? (
             <p className="mt-4 text-xs text-amber">
-              Affiliate link. We may earn a commission if you use it.
+              {AFFILIATE_NOTE}
             </p>
           ) : null}
         </aside>

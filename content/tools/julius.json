@@ -5,7 +5,7 @@
   "websiteUrl": "https://julius.ai/",
   "affiliateUrl": null,
   "shortDescription": "Data analysis chat. Plus is $20 per month and a Free plan is listed.",
-  "longDescription": "Julius's pricing page lists a Free plan and Plus for everyday analysis at $20 per month, or $16 per month when billed annually, with a monthly credit amount on Plus. We did not create an account.",
+  "longDescription": "Julius's pricing page lists a Free plan and Plus for everyday analysis at $20 per month, or $16 per month when billed annually, with a monthly credit amount on Plus.",
   "categories": [
     "data-analysis"
   ],
@@ -44,7 +44,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

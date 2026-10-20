@@ -5,7 +5,7 @@
   "websiteUrl": "https://abnormal.ai/",
   "affiliateUrl": null,
   "shortDescription": "Behavioral AI for email, identity, and AI security.",
-  "longDescription": "Abnormal's homepage presents behavioral AI for email, identity, and AI security, including account takeover and misdirected email topics in the navigation. The fetched text did not list a price. We did not request a demo.",
+  "longDescription": "Abnormal's homepage presents behavioral AI for email, identity, and AI security, including account takeover and misdirected email topics in the navigation. The page did not list a price.",
   "categories": [
     "security"
   ],
@@ -39,12 +39,12 @@
     "A buyer who needs a listed seat price"
   ],
   "strength": "Abnormal describes behavioral AI for email, identity, and AI security.",
-  "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+  "weakness": "The homepage did not list a dollar price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

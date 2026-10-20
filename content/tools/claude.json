@@ -43,7 +43,7 @@
     "A self-hosted open-source agent runtime",
     "Anyone who needs a local install"
   ],
-  "strength": "There is a free plan, and the paid plan we recorded starts at $20 per month, with the API billed separately.",
+  "strength": "There is a free plan, and the paid plan starts at $20 per month, with the API billed separately.",
   "weakness": "Claude is a hosted product and API, not a self-hosted open-source agent runtime.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

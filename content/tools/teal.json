@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.tealhq.com/",
   "affiliateUrl": null,
   "shortDescription": "Resume builder that tailors a resume to a job description. Free to try; paid plans on their site.",
-  "longDescription": "Teal's homepage says you can create an ATS-friendly resume, tailor it with keywords from a job description, and track jobs saved from job boards with its Chrome extension. It also says you can create a free account. The fetched page did not list a monthly plan price. We did not create an account.",
+  "longDescription": "Teal's homepage says you can create an ATS-friendly resume, tailor it with keywords from a job description, and track jobs saved from job boards with its Chrome extension. It also says you can create a free account. The page did not list a monthly plan price.",
   "categories": ["hiring"],
   "useCaseTags": ["write-resume"],
   "toolTypes": ["other"],
@@ -27,15 +27,15 @@
   ],
   "notIdealFor": [
     "Screening someone else's resume as a recruiter",
-    "A confirmed monthly price from this listing"
+    "A published monthly price"
   ],
   "strength": "Teal's homepage says its AI tailors a resume to keywords in a job description and that you can create a free account.",
-  "weakness": "The homepage did not list a monthly plan price, so this listing states no subscription price.",
+  "weakness": "The homepage did not list a monthly plan price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T22:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+  "smokeTestNotes": "Homepage reviewed on 2026-10-19.",
   "handsOn": { "performed": false },
   "latestRelease": null,
   "problems": [],

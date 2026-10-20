@@ -39,12 +39,12 @@
     "Someone who needs a confirmed monthly price"
   ],
   "strength": "Apollo's pricing page cites 240 million contacts and 30 million companies, plus an AI assistant.",
-  "weakness": "That fetch did not include a dollar price, so this listing does not state one.",
+  "weakness": "The page did not include a dollar price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

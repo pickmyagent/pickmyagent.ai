@@ -5,7 +5,7 @@
   "websiteUrl": "https://blog.duolingo.com/duolingo-max/",
   "affiliateUrl": null,
   "shortDescription": "Language practice. A 2023 Duolingo post introduces Max with GPT-4.",
-  "longDescription": "Duolingo's official post dated March 14, 2023 introduces Duolingo Max as a learning experience powered by GPT-4. This October 19, 2026 check did not find a current price on that post. We did not subscribe.",
+  "longDescription": "Duolingo's official post dated March 14, 2023 introduces Duolingo Max as a learning experience powered by GPT-4. That post did not show a current price on October 19, 2026.",
   "categories": [
     "learning"
   ],
@@ -38,12 +38,12 @@
     "Someone who needs a confirmed 2026 price"
   ],
   "strength": "Duolingo's March 14, 2023 post introduces Max as a learning experience powered by GPT-4.",
-  "weakness": "That post does not show a current price, and it is the source for this listing.",
+  "weakness": "That March 14, 2023 post does not show a current price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

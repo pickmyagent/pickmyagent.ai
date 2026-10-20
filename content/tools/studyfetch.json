@@ -27,7 +27,7 @@
   ],
   "notIdealFor": [
     "A language-only drill",
-    "A published monthly price from this listing"
+    "A published monthly price"
   ],
   "strength": "StudyFetch's Sparky tutors a subject from your materials and builds a study plan and practice from them.",
   "weakness": "Getting started is free, and the site does not list one monthly price for premium.",
@@ -35,7 +35,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-20T00:00:00-04:00",
   "checkedDate": "2026-10-20",
-  "smokeTestNotes": "Homepage and FAQ fetched on 2026-10-20. No account was created.",
+  "smokeTestNotes": "Homepage and FAQ reviewed on 2026-10-20.",
   "handsOn": { "performed": false },
   "latestRelease": null,
   "problems": [],

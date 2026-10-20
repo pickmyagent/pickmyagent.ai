@@ -5,7 +5,7 @@
   "websiteUrl": "https://mistscale.com/",
   "affiliateUrl": null,
   "shortDescription": "Memory for game NPCs.",
-  "longDescription": "MistScale is aimed at memory for game NPCs. A separate pricing page was not found, so this listing does not state a monthly price. We did not create an account.",
+  "longDescription": "MistScale is aimed at memory for game NPCs. A separate pricing page was not found.",
   "categories": [
     "game-ai"
   ],
@@ -40,7 +40,7 @@
     "A separate public pricing page"
   ],
   "strength": "The homepage describes memory for game NPCs that need to remember the player.",
-  "weakness": "A separate pricing page was not found, so this listing does not state a monthly price.",
+  "weakness": "A separate pricing page was not found, so no monthly price is listed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

@@ -38,16 +38,16 @@
     "Creators using Dreamina, or developers calling the ModelArk API"
   ],
   "notIdealFor": [
-    "A confirmed API price from this listing",
+    "A published API price",
     "In-game character dialogue"
   ],
   "strength": "Dreamina's documentation names Seedance for video and says the creator app includes free daily credits.",
-  "weakness": "The BytePlus model overview did not include a readable API price, so this listing does not state one.",
+  "weakness": "The BytePlus model overview did not include a readable API price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T12:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Dreamina's documentation and the BytePlus video-generation tutorial were reviewed. A hands-on test was not done.",
+  "smokeTestNotes": "Dreamina's documentation and the BytePlus video-generation tutorial were reviewed.",
   "handsOn": {
     "performed": false
   },

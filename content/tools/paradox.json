@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.paradox.ai/",
   "affiliateUrl": null,
   "shortDescription": "Candidate experience agent with conversational scheduling and apply flows.",
-  "longDescription": "Paradox's site describes a candidate experience agent, conversational apply, conversational scheduling, and a conversational CRM. The fetched text did not list a price. We did not request a demo.",
+  "longDescription": "Paradox's site describes a candidate experience agent, conversational apply, conversational scheduling, and a conversational CRM. The page did not list a price.",
   "categories": [
     "hiring"
   ],
@@ -39,12 +39,12 @@
     "A team that needs a self-serve monthly price"
   ],
   "strength": "Paradox describes a candidate experience agent with conversational scheduling and apply flows.",
-  "weakness": "The fetched site did not publish a dollar price.",
+  "weakness": "The site did not publish a dollar price for the product.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.amazon.com/",
   "affiliateUrl": null,
   "shortDescription": "Amazon shopping assistant, renamed from Rufus on May 13, 2026.",
-  "longDescription": "Amazon's news article says that on May 13, 2026 Rufus was renamed Alexa for Shopping. The same article describes an assistant trained on Amazon's catalog and the web that answers shopping questions, compares products, makes recommendations, and helps discover products in the Amazon Shopping app. It does not list a separate subscription price. We did not shop with it.",
+  "longDescription": "Amazon's news article says that on May 13, 2026 Rufus was renamed Alexa for Shopping. The same article describes an assistant trained on Amazon's catalog and the web that answers shopping questions, compares products, makes recommendations, and helps discover products in the Amazon Shopping app. It does not list a separate subscription price.",
   "categories": [
     "shopping"
   ],
@@ -43,7 +43,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

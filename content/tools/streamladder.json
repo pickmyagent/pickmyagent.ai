@@ -22,7 +22,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",
   "checkedDate": "2026-10-16",
-  "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+  "smokeTestNotes": "Official site and pricing page reviewed.",
   "handsOn": {
     "performed": false
   },
@@ -39,7 +39,7 @@
   "name": "StreamLadder",
   "websiteUrl": "https://www.streamladder.com/",
   "shortDescription": "Edits Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks.",
-  "longDescription": "StreamLadder's site says it imports clips from Twitch, YouTube, or Kick and turns horizontal stream footage into vertical short-form video, with layouts for gameplay and a facecam. The pricing page redirected to an app screen that did not list prices without JavaScript. We did not create an account.",
+  "longDescription": "StreamLadder's site says it imports clips from Twitch, YouTube, or Kick and turns horizontal stream footage into vertical short-form video, with layouts for gameplay and a facecam. The pricing page redirected to an app screen that did not list prices without JavaScript.",
   "pricingUrl": "https://www.streamladder.com/pricing",
   "docsUrl": null,
   "freeTier": null,

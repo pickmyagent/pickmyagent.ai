@@ -5,7 +5,7 @@
   "websiteUrl": "https://dify.ai/",
   "affiliateUrl": null,
   "shortDescription": "Open-source platform to build agent workflows visually, with a self-hosted community edition.",
-  "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page. Confirm cloud prices on the live pricing page before you rely on them.",
+  "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page.",
   "categories": [
     "agent-frameworks"
   ],
@@ -41,10 +41,10 @@
   ],
   "notIdealFor": [
     "A small Python script with no surrounding app",
-    "A hands-on install"
+    "A local install, which is not described here"
   ],
   "strength": "The pricing page includes a self-hosted community edition, and the cloud free plan includes 200 message credits.",
-  "weakness": "The cloud free plan stops at 200 message credits, and the page we checked did not list a monthly starting price.",
+  "weakness": "The cloud free plan stops at 200 message credits, and the pricing page did not list a monthly starting price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

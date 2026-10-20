@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.make.com/",
   "affiliateUrl": null,
   "shortDescription": "Visual automation across apps. The free plan includes 1,000 credits a month.",
-  "longDescription": "Make is a visual automation product. The official pricing FAQ describes a Free plan with 1,000 credits per month, with paid Core, Pro, and Teams plans above that. We did not create an account.",
+  "longDescription": "Make is a visual automation product. The official pricing FAQ describes a Free plan with 1,000 credits per month, with paid Core, Pro, and Teams plans above that.",
   "categories": [
     "workflow-automation"
   ],
@@ -41,7 +41,7 @@
     "Self-hosting the automation engine"
   ],
   "strength": "The official pricing FAQ describes a free plan with 1,000 credits per month for visual automations.",
-  "weakness": "Paid Core, Pro, and Teams amounts were not confirmed, so this listing does not state those prices.",
+  "weakness": "Dollar amounts for Core, Pro, and Teams are not listed here.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

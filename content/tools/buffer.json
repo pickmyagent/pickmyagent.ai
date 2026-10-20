@@ -5,7 +5,7 @@
   "websiteUrl": "https://buffer.com/",
   "affiliateUrl": null,
   "shortDescription": "Social scheduling. Essentials is $5 per month, with a 14-day trial.",
-  "longDescription": "Buffer's pricing page lists Essentials at $5 per month for one channel, or $60 billed yearly, and a 14-day free trial. A features page describes an AI assistant for creating and repurposing content, plus scheduling across social platforms. We did not start a trial.",
+  "longDescription": "Buffer's pricing page lists Essentials at $5 per month for one channel, or $60 billed yearly, and a 14-day free trial. A features page describes an AI assistant for creating and repurposing content, plus scheduling across social platforms.",
   "categories": [
     "content"
   ],
@@ -43,7 +43,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

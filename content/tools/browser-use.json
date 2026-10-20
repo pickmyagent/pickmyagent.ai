@@ -5,7 +5,7 @@
   "websiteUrl": "https://browser-use.com/",
   "affiliateUrl": null,
   "shortDescription": "Open-source Python agent that controls a browser. Install the package yourself.",
-  "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
+  "longDescription": "Browser Use is a Python agent for driving a browser. The browser-use package imports Agent. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
   "categories": [
     "tool-use"
   ],
@@ -41,7 +41,7 @@
     "Jobs that only need an HTTP search API",
     "A no-code hosted agent with no local setup"
   ],
-  "strength": "We imported browser-use 0.13.11, which is built for agents that open pages, click, and type.",
+  "strength": "The browser-use 0.13.11 package is built for agents that open pages, click, and type.",
   "weakness": "You bring your own browser and model, and the docs bill cloud stealth browsers separately from the library.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,

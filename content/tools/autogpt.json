@@ -40,10 +40,10 @@
   ],
   "notIdealFor": [
     "A tiny script where a smaller library is enough",
-    "A hands-on install — we did not run one"
+    "A local install, which is not described here"
   ],
   "strength": "The open-source repo is the free path, and a platform beta release was published on October 14, 2026.",
-  "weakness": "The hosted plan we checked starts at $50 per month after a 7-day trial, so it is not a free product.",
+  "weakness": "The hosted plan starts at $50 per month after a 7-day trial, so it is not a free product.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

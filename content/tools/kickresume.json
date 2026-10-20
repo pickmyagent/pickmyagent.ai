@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.kickresume.com/en/",
   "affiliateUrl": null,
   "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try; paid plans on their site.",
-  "longDescription": "Kickresume's homepage says its AI resume writer generates work-experience bullets from a job title, and that you can score a resume and tailor it to a job description. The page says the builder is free to try. It did not list a monthly plan price. We did not create an account.",
+  "longDescription": "Kickresume's homepage says its AI resume writer generates work-experience bullets from a job title, and that you can score a resume and tailor it to a job description. The page says the builder is free to try. It did not list a monthly plan price.",
   "categories": ["hiring"],
   "useCaseTags": ["write-resume"],
   "toolTypes": ["other"],
@@ -27,7 +27,7 @@
   ],
   "notIdealFor": [
     "Screening applicants as a recruiter",
-    "A confirmed monthly price from this listing"
+    "A published monthly price"
   ],
   "strength": "Kickresume's homepage says its AI writes resume bullets from a job title and can score and tailor the resume.",
   "weakness": "The homepage says the builder is free to try and does not list a monthly plan price.",
@@ -35,7 +35,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T22:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+  "smokeTestNotes": "Homepage reviewed on 2026-10-19.",
   "handsOn": { "performed": false },
   "latestRelease": null,
   "problems": [],

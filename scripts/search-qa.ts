@@ -2,8 +2,9 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { CONCEPTS } from "../lib/concepts.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { rankCatalogQuery } from "../lib/search.ts";
+import { toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
-import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems } from "./grammar-gate.ts";
+import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageCopyProblems } from "./grammar-gate.ts";
 
 export type QaQuery = {
   query: string;
@@ -277,6 +278,12 @@ const PROSE_KEYS = new Set([
   "why", "summary", "intro", "title", "disclaimer",
 ]);
 
+/** Fields and lists that render on a tool page. Why-lines and intros are not in this set. */
+const TOOL_PAGE_KEYS = new Set([
+  "shortDescription", "longDescription", "strength", "weakness", "freeTierNotes", "freeTrial",
+  "smokeTestNotes", "bestFor", "notIdealFor", "problems",
+]);
+
 export type QaCard = {
   name: string;
   label: string;
@@ -429,29 +436,40 @@ export function qaProblems(catalog: Catalog): string[] {
   return problems;
 }
 
-function scanProse(value: unknown, path: string, problems: string[]): void {
+function scanProse(value: unknown, path: string, problems: string[], toolPage: boolean): void {
   if (typeof value === "string") {
     if (INTERNAL.test(value)) problems.push(`${path}: ${value}`);
     if (/(?:shortDescription|longDescription)$/.test(path) && descriptionProblems(value).length > 0) {
       problems.push(`${path}: ${value}`);
     }
+    if (toolPage && toolPageCopyProblems(value).length > 0) {
+      problems.push(`${path}: ${value}`);
+    }
     return;
   }
   if (Array.isArray(value)) {
-    value.forEach((item, index) => scanProse(item, `${path}[${index}]`, problems));
+    value.forEach((item, index) => scanProse(item, `${path}[${index}]`, problems, toolPage));
     return;
   }
   if (!value || typeof value !== "object") return;
   for (const [key, item] of Object.entries(value)) {
-    if (!PROSE_KEYS.has(key)) continue;
-    scanProse(item, `${path}.${key}`, problems);
+    if (!PROSE_KEYS.has(key) && !(toolPage && TOOL_PAGE_KEYS.has(key))) continue;
+    scanProse(item, `${path}.${key}`, problems, toolPage && TOOL_PAGE_KEYS.has(key));
   }
 }
 
 export function catalogLeakProblems(catalog: Catalog): string[] {
   const problems: string[] = [];
-  catalog.tools.forEach((tool) => scanProse(tool, tool.slug, problems));
-  catalog.useCases.forEach((useCase) => scanProse(useCase, useCase.slug, problems));
+  catalog.tools.forEach((tool) => {
+    scanProse(tool, tool.slug, problems, true);
+    if (tool.handsOn.detail && toolPageCopyProblems(tool.handsOn.detail).length > 0) {
+      problems.push(`${tool.slug}.handsOn.detail: ${tool.handsOn.detail}`);
+    }
+  });
+  catalog.useCases.forEach((useCase) => scanProse(useCase, useCase.slug, problems, false));
+  for (const text of toolPageChromeStrings()) {
+    if (toolPageCopyProblems(text).length > 0) problems.push(`tool page chrome: ${text}`);
+  }
   return problems;
 }
 

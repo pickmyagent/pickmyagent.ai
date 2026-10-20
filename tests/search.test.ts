@@ -4,7 +4,7 @@ import test from "node:test";
 import { CONCEPTS } from "../lib/concepts.ts";
 import { domainAssistantLine } from "../lib/assistant-lines.ts";
 import { specialistLine, specialistLinePairs } from "../lib/specialist-lines.ts";
-import { BROKEN_ASSISTANT, BROKEN_HEADERS, descriptionProblems, grammarProblems, specialistWhyProblems } from "../scripts/grammar-gate.ts";
+import { BROKEN_ASSISTANT, BROKEN_HEADERS, descriptionProblems, grammarProblems, specialistWhyProblems, toolPageCopyProblems } from "../scripts/grammar-gate.ts";
 import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport } from "../scripts/search-qa.ts";
 import {
   GENERIC_MATCH_WORDS,
@@ -804,6 +804,14 @@ test("grammar gate flags the broken header and assistant examples", () => {
   assert.ok(descriptionProblems("Pricing page included a free-to-start option.").length > 0);
   assert.ok(descriptionProblems("The plans on the page we read are paid.").length > 0);
   assert.deepEqual(descriptionProblems("Free to start; paid plans on their site."), []);
+  assert.ok(toolPageCopyProblems("We imported the package locally.").length > 0);
+  assert.ok(toolPageCopyProblems("The page we read lists a price.").length > 0);
+  assert.ok(toolPageCopyProblems("Our checker fetched the homepage.").length > 0);
+  assert.ok(toolPageCopyProblems("We fetched the pricing page.").length > 0);
+  assert.ok(toolPageCopyProblems("The pricing crawl left the price unconfirmed.").length > 0);
+  assert.deepEqual(toolPageCopyProblems("The plan comparison lists Basic at $10 per month."), []);
+  assert.deepEqual(toolPageCopyProblems("We may earn a commission if you use it."), []);
+  assert.deepEqual(toolPageCopyProblems("Docs checked means the official site was opened."), []);
 });
 
 test("every specialist use-case pair has a hand-written why-line", () => {

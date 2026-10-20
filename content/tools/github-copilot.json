@@ -38,12 +38,12 @@
     "Someone who needs a confirmed monthly price"
   ],
   "strength": "GitHub calls Copilot an AI coding agent that writes code and can take work from an issue toward a merge.",
-  "weakness": "The fetched page did not include a dollar price.",
+  "weakness": "The page did not include a dollar price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

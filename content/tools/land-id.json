@@ -10,7 +10,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-16T12:00:00-04:00",
   "checkedDate": "2026-10-16",
-  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Docs and pricing pages reviewed.",
   "handsOn": {
     "performed": false
   },
@@ -27,7 +27,7 @@
   "name": "Land id",
   "websiteUrl": "https://id.land/",
   "shortDescription": "Nationwide parcel and owner info. From $15 per month, or $7 billed annually.",
-  "longDescription": "Land id maps parcels and owner info. On October 16, 2026 the pricing page listed the base plan at $7 per month per user billed annually, and the app listing also stated $15 per month billed monthly, plus a 7-day trial. Premium adds AI Insights. We did not start a trial.",
+  "longDescription": "Land id maps parcels and owner info. On October 16, 2026 the pricing page listed the base plan at $7 per month per user billed annually, and the app listing also stated $15 per month billed monthly, plus a 7-day trial. Premium adds AI Insights.",
   "categories": [
     "real-estate"
   ],

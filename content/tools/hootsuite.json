@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.hootsuite.com/",
   "affiliateUrl": null,
   "shortDescription": "Social planning and publishing. The plans page says it is connected by AI.",
-  "longDescription": "Hootsuite's plans page describes content creation, planning, and publishing for social, and says the suite is connected by AI. The fetched text did not include a dollar price. We did not start a trial.",
+  "longDescription": "Hootsuite's plans page describes content creation, planning, and publishing for social, and says the suite is connected by AI. The page did not include a dollar price.",
   "categories": [
     "content"
   ],
@@ -39,12 +39,12 @@
     "Someone who needs a listed monthly price"
   ],
   "strength": "Hootsuite's plans page describes social content creation, planning, and publishing, and says the suite is connected by AI.",
-  "weakness": "The fetched plans text did not include a dollar price.",
+  "weakness": "The plans page did not include a dollar price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

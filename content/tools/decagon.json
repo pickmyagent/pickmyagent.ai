@@ -5,7 +5,7 @@
   "websiteUrl": "https://decagon.ai/",
   "affiliateUrl": null,
   "shortDescription": "AI concierge for chat, email, and voice customer conversations.",
-  "longDescription": "Decagon's site describes an AI concierge with chat, email, and voice channels, plus workflows for agents. The fetched text did not list a public price. We did not request a demo.",
+  "longDescription": "Decagon's site describes an AI concierge with chat, email, and voice channels, plus workflows for agents. The page did not list a public price.",
   "categories": [
     "customer-support"
   ],
@@ -39,12 +39,12 @@
     "A buyer who needs a self-serve monthly price"
   ],
   "strength": "Decagon describes an AI concierge that handles chat, email, and voice customer conversations.",
-  "weakness": "The fetched site did not publish a dollar price, so the plan cost is not listed here.",
+  "weakness": "The site did not publish a dollar price, so the plan cost is not listed here.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

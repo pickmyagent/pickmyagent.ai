@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.copy.ai/",
   "affiliateUrl": null,
   "shortDescription": "Workflows for marketing content and go-to-market writing.",
-  "longDescription": "Copy.ai's prices page describes workflows, including content creation and account-based marketing, plus sales prospecting workflows. The fetched text did not include a dollar price.",
+  "longDescription": "Copy.ai's prices page describes workflows, including content creation and account-based marketing, plus sales prospecting workflows. The page did not include a dollar price.",
   "categories": [
     "content"
   ],
@@ -39,12 +39,12 @@
     "A buyer who needs a confirmed seat price"
   ],
   "strength": "The Copy AI prices page describes workflows for content creation and other go-to-market writing.",
-  "weakness": "That fetch did not include a dollar price.",
+  "weakness": "The page did not include a dollar price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

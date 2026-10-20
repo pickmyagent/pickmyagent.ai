@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.metaview.ai/",
   "affiliateUrl": null,
   "shortDescription": "Hiring agents for sourcing and interview notes. Free is $0 per user.",
-  "longDescription": "Metaview's pricing page lists a free plan at $0 per user per month, AI sourcing with the first 100 profiles free, and a notetaker. We did not create an account, and we did not pick a higher dollar figure from the page as the starting price because the free plan is the listed start.",
+  "longDescription": "Metaview's pricing page lists a free plan at $0 per user per month, AI sourcing with the first 100 profiles free, and a notetaker. The free plan is the listed start.",
   "categories": [
     "hiring"
   ],
@@ -44,7 +44,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

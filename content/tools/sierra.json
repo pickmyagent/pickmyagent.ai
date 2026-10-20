@@ -5,7 +5,7 @@
   "websiteUrl": "https://sierra.ai/",
   "affiliateUrl": null,
   "shortDescription": "AI agents for customer service and customer experiences.",
-  "longDescription": "Sierra's site says it helps companies build AI agents for customer experiences and customer service, including voice. The fetched text did not list a price. We did not book a demo.",
+  "longDescription": "Sierra's site says it helps companies build AI agents for customer experiences and customer service, including voice. The page did not list a price.",
   "categories": [
     "customer-support"
   ],
@@ -39,12 +39,12 @@
     "A small team looking for a published seat price"
   ],
   "strength": "Sierra says it builds AI agents for customer service and broader customer experiences.",
-  "weakness": "The fetched pages did not list a public dollar price or a self-serve trial length.",
+  "weakness": "The pages did not list a public dollar price or a self-serve trial length.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

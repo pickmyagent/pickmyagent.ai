@@ -5,7 +5,7 @@
   "websiteUrl": "https://slite.com/",
   "affiliateUrl": null,
   "shortDescription": "Team docs with Ask, AI search and answers, at $10 per user billed yearly.",
-  "longDescription": "Slite's pricing page lists $10 per user per month billed yearly and describes Ask as AI search and answers, plus a doc verification workflow. We did not create a workspace, and we do not show $10 as a month-to-month price.",
+  "longDescription": "Slite's pricing page lists $10 per user per month billed yearly and describes Ask as AI search and answers, plus a doc verification workflow. The $10 figure is not a month-to-month price.",
   "categories": [
     "knowledge"
   ],
@@ -38,12 +38,12 @@
     "Someone who wants to pay month to month at the yearly rate"
   ],
   "strength": "Slite lists Ask, its AI search and answers, at $10 per user per month when billed yearly.",
-  "weakness": "That $10 figure is billed yearly, so this listing does not call it a month-to-month price.",
+  "weakness": "That $10 figure is billed yearly, so it is not a month-to-month price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

@@ -5,7 +5,7 @@
   "websiteUrl": "https://rows.com/",
   "affiliateUrl": null,
   "shortDescription": "Spreadsheet with an AI analyst. Plus is $8 per user each month.",
-  "longDescription": "Rows' pricing page lists a Free plan at $0 and Plus at $8 per month per user for analysis and reporting with AI. The page also noted that Rows has joined Superhuman. We did not create a workspace.",
+  "longDescription": "Rows' pricing page lists a Free plan at $0 and Plus at $8 per month per user for analysis and reporting with AI. The page also noted that Rows has joined Superhuman.",
   "categories": [
     "data-analysis"
   ],
@@ -44,7 +44,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

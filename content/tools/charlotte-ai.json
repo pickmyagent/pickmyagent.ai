@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.crowdstrike.com/platform/charlotte-ai/",
   "affiliateUrl": null,
   "shortDescription": "CrowdStrike's agentic analyst for cybersecurity. No public price was listed.",
-  "longDescription": "CrowdStrike's page is titled Charlotte AI: Agentic Analyst for Cybersecurity, and the page says Charlotte AI accelerates work with autonomous intelligence for the security stack. We do not repeat outcome claims. The fetch did not list a price. We did not start a trial.",
+  "longDescription": "CrowdStrike's page is titled Charlotte AI: Agentic Analyst for Cybersecurity, and the page says Charlotte AI accelerates work with autonomous intelligence for the security stack. The page did not list a price.",
   "categories": [
     "security"
   ],
@@ -39,12 +39,12 @@
     "A standalone inbox tool with a public monthly price"
   ],
   "strength": "CrowdStrike titles Charlotte AI an agentic analyst for cybersecurity on its official platform page.",
-  "weakness": "The fetched page did not list a public price.",
+  "weakness": "The page did not list a public price for Charlotte AI.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

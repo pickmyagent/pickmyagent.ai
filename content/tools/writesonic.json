@@ -5,7 +5,7 @@
   "websiteUrl": "https://writesonic.com/",
   "affiliateUrl": null,
   "shortDescription": "Content and brand-tracking plans. Starter is $79 per month billed annually.",
-  "longDescription": "Writesonic's pricing page lists a Starter plan at $79 per month when billed annually, and says it tracks a brand across chat products and Google AI Overviews. We did not subscribe.",
+  "longDescription": "Writesonic's pricing page lists a Starter plan at $79 per month when billed annually, and says it tracks a brand across chat products and Google AI Overviews.",
   "categories": [
     "content"
   ],
@@ -35,15 +35,15 @@
     "Drafting content on a plan that also tracks brand mentions"
   ],
   "notIdealFor": [
-    "Someone who wants a month-to-month price confirmed on this listing"
+    "Someone who wants a published month-to-month price"
   ],
   "strength": "Writesonic lists a Starter plan at $79 per month when that plan is billed annually.",
-  "weakness": "The figure we read is the annual-billing price, not a confirmed month-to-month rate.",
+  "weakness": "The figure is the annual-billing price, not a month-to-month rate.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

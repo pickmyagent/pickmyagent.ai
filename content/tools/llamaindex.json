@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.llamaindex.ai/",
   "affiliateUrl": null,
   "shortDescription": "Open-source framework for retrieval and agents. The cloud free plan includes 10,000 credits.",
-  "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. We installed and imported llama-index-core. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
+  "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. The llama-index-core package imports in Python. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
   "categories": [
     "agent-frameworks",
     "search-rag"
@@ -42,7 +42,7 @@
     "A finished consumer chat app",
     "Anyone who needs a confirmed free cloud tier"
   ],
-  "strength": "We imported llama-index-core 0.14.25, and the cloud free plan includes 10,000 credits.",
+  "strength": "The llama-index-core 0.14.25 package is the open-source library, and the cloud free plan includes 10,000 credits.",
   "weakness": "Cloud Starter is $50 per month after the 10,000 free credits.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,

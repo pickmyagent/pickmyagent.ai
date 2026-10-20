@@ -38,12 +38,12 @@
     "Someone who needs a listed monthly price"
   ],
   "strength": "SciSpace says it supports literature review, chat with PDF, and citation tools for scientific literature.",
-  "weakness": "The pricing FAQ we fetched did not include a dollar amount.",
+  "weakness": "The pricing FAQ did not include a dollar amount.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

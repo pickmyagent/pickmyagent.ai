@@ -5,7 +5,7 @@
   "websiteUrl": "https://modl.ai/",
   "affiliateUrl": null,
   "shortDescription": "AI agents that test an uploaded game build and report bugs.",
-  "longDescription": "modl.ai's homepage says its agents test a game from an uploaded build, with no engine integration, and write bug reports that include visuals and a severity score. The fetched page did not list a price. We did not upload a build.",
+  "longDescription": "modl.ai's homepage says its agents test a game from an uploaded build, with no engine integration, and write bug reports that include visuals and a severity score. The page did not list a price.",
   "categories": [
     "game-ai"
   ],
@@ -37,18 +37,18 @@
     "A published monthly price"
   ],
   "strength": "The modl homepage says its agents test an uploaded game build and write bug reports with visuals and a severity score.",
-  "weakness": "The homepage did not list a price, so this listing states no monthly plan.",
+  "weakness": "The homepage did not list a price, so no monthly plan is listed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Homepage fetched on 2026-10-19. No build was uploaded and no account was created.",
+  "smokeTestNotes": "Homepage reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },
   "latestRelease": null,
   "problems": [
-    "A public price was not confirmed."
+    "A public price is not listed here."
   ],
   "featured": false,
   "featuredPaid": false,

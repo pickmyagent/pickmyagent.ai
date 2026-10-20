@@ -39,12 +39,12 @@
     "Someone who needs a listed monthly price"
   ],
   "strength": "Jasper describes agents and a marketer workspace for content, and the site offers a free trial.",
-  "weakness": "The fetched pages did not include a dollar price or a trial length.",
+  "weakness": "The pages did not include a dollar price or a trial length.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },

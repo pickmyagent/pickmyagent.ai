@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.smartlead.ai/",
   "affiliateUrl": null,
   "shortDescription": "Cold email platform whose SmartAssistant sets up and fixes outreach.",
-  "longDescription": "Smartlead's site describes SmartAssistant as a personal cold-email AI assistant to set up, run, and fix outreach, plus lead and deliverability products. The fetched text did not list a plan price.",
+  "longDescription": "Smartlead's site describes SmartAssistant as a personal cold-email AI assistant to set up, run, and fix outreach, plus lead and deliverability products. The page did not list a plan price.",
   "categories": [
     "sales"
   ],
@@ -39,12 +39,12 @@
     "A buyer who needs a listed monthly price"
   ],
   "strength": "Smartlead describes SmartAssistant as a cold-email AI assistant that sets up, runs, and fixes outreach.",
-  "weakness": "The fetched homepage did not list a plan price, so none is shown here.",
+  "weakness": "The homepage did not list a plan price for Smartlead.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on 2026-10-19.",
   "handsOn": {
     "performed": false
   },
