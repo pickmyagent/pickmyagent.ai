@@ -10,7 +10,7 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "image-3d"
+    "image-generation"
   ],
   "toolTypes": [
     "creative"
@@ -67,6 +67,6 @@
     "finalUrl": "https://www.scenario.com/"
   },
   "useCaseFit": {
-    "image-3d": "Draws game art from a prompt."
+    "make-images": "Draws game art from a prompt."
   }
 }

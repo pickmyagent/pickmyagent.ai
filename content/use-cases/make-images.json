@@ -1,0 +1,16 @@
+{
+  "slug": "make-images",
+  "title": "Make an image from a prompt",
+  "summary": "Describe an image and generate it in an art app.",
+  "audienceHints": ["creators", "gamers"],
+  "matchTags": ["image-generation"],
+  "recommended": [
+    { "toolId": "midjourney", "why": "Draws images from a text prompt." },
+    { "toolId": "scenario", "why": "Draws game art from a prompt." }
+  ],
+  "jobPhrase": "making an image",
+  "assistantTask": "describe the image and list what to change",
+  "assistantContext": "making an image",
+  "searchTopic": "the picture you want",
+  "intro": "AI agents can describe the image you want and list what to change, so you generate it and check it yourself."
+}

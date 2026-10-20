@@ -10,7 +10,7 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "image-3d"
+    "3d-assets"
   ],
   "toolTypes": [
     "creative"
@@ -67,6 +67,6 @@
     "finalUrl": "https://www.meshy.ai/"
   },
   "useCaseFit": {
-    "image-3d": "Turns text or a picture into a 3D asset."
+    "make-3d": "Turns text or a picture into a 3D asset."
   }
 }

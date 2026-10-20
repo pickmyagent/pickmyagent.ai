@@ -9,7 +9,7 @@
   "categories": [
     "creative-media"
   ],
-  "useCaseTags": [],
+  "useCaseTags": ["avatar-video"],
   "toolTypes": [
     "creative"
   ],
@@ -64,5 +64,7 @@
     "status": 200,
     "finalUrl": "https://www.heygen.com/"
   },
-  "useCaseFit": {}
+  "useCaseFit": {
+    "avatar-video": "Generates an avatar or spokesperson video from a script."
+  }
 }

@@ -10,7 +10,8 @@
     "real-estate"
   ],
   "useCaseTags": [
-    "find-off-market"
+    "find-off-market",
+    "real-estate-overview"
   ],
   "toolTypes": [
     "agent"
@@ -62,6 +63,7 @@
     "finalUrl": "https://www.dealmachine.com/pricing"
   },
   "useCaseFit": {
-    "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month."
+    "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month.",
+    "real-estate": "Pulls owner records and tags a property during a drive."
   }
 }

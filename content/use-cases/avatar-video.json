@@ -1,0 +1,17 @@
+{
+  "slug": "avatar-video",
+  "title": "Make an avatar or spokesperson video",
+  "summary": "Turn a script into a talking-head video without filming yourself.",
+  "audienceHints": ["creators", "marketers"],
+  "matchTags": ["avatar-video"],
+  "recommended": [
+    { "toolId": "heygen", "why": "Generates an avatar or spokesperson video from a script." },
+    { "toolId": "synthesia", "why": "Generates an avatar video from a script and a stock or custom avatar." },
+    { "toolId": "d-id", "why": "Turns a photo and a script into a talking-head video." }
+  ],
+  "jobPhrase": "making an avatar video",
+  "assistantTask": "draft the script an avatar will speak",
+  "assistantContext": "making a talking-head video",
+  "searchTopic": "the avatar and the script",
+  "intro": "AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself."
+}

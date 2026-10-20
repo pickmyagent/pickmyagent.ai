@@ -298,15 +298,65 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "ElevenLabs generates voice and audio from a prompt.",
     ],
   },
-  "image-3d": {
-    meshy: [
-      "Meshy turns text or a picture into a 3D asset.",
-    ],
+  "make-images": {
     midjourney: [
       "Midjourney draws images from a text prompt.",
     ],
     scenario: [
       "Scenario draws game art from a prompt.",
+    ],
+  },
+  "make-3d": {
+    meshy: [
+      "Meshy turns text or a picture into a 3D asset.",
+    ],
+  },
+  "avatar-video": {
+    "d-id": [
+      "D-ID turns a photo and a script into a talking-head video.",
+    ],
+    heygen: [
+      "HeyGen generates an avatar or spokesperson video from a script.",
+    ],
+    synthesia: [
+      "Synthesia generates an avatar video from a script and a stock or custom avatar.",
+    ],
+  },
+  "listing-videos": {
+    autoreel: [
+      "AutoReel turns listing photos into a property video with music and captions.",
+    ],
+    boxbrownie: [
+      "BoxBrownie builds a virtual tour of the home from 360 photos.",
+    ],
+    canva: [
+      "Canva turns listing photos into a video from a real estate template.",
+    ],
+    capcut: [
+      "CapCut turns listing photos into a vertical Instagram reel with captions and music.",
+    ],
+    descript: [
+      "Descript builds a listing tour from property photos, with room labels and music.",
+    ],
+    kapwing: [
+      "Kapwing turns listing photos into a walkthrough video with music and captions.",
+    ],
+  },
+  "real-estate": {
+    acres: [
+      "Acres shows parcel maps and basic land insights before an owner lookup.",
+    ],
+    autoreel: [
+      "AutoReel turns listing photos into a property video with music and captions.",
+    ],
+    dealcheck: [
+      "DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.",
+    ],
+    dealmachine: [
+      "DealMachine pulls owner records and tags a property during a drive.",
+    ],
+    propstream: [
+      "PropStream searches property records, including off-market listings, from one set of filters.",
     ],
   },
   "write-resume": {

@@ -4,7 +4,8 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "video-clips"
+    "video-clips",
+    "listing-videos"
   ],
   "toolTypes": [
     "creative"
@@ -65,6 +66,7 @@
     "finalUrl": "https://www.kapwing.com/"
   },
   "useCaseFit": {
-    "game-creative": "Browser editor for trimming, captions, and resizing video into social clips."
+    "game-creative": "Browser editor for trimming, captions, and resizing video into social clips.",
+    "listing-videos": "Turns listing photos into a walkthrough video with music and captions."
   }
 }

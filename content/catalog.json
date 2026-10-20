@@ -233,7 +233,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-land"
+        "find-land",
+        "real-estate-overview"
       ],
       "toolTypes": [
         "other"
@@ -264,7 +265,8 @@
         "finalUrl": "https://www.acres.com/pricing"
       },
       "useCaseFit": {
-        "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus."
+        "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus.",
+        "real-estate": "Shows parcel maps and basic land insights before an owner lookup."
       }
     },
     {
@@ -571,6 +573,80 @@
       }
     },
     {
+      "id": "autoreel",
+      "slug": "autoreel",
+      "name": "AutoReel",
+      "websiteUrl": "https://www.autoreelapp.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Turns listing photos into a property video. The free plan includes 2 videos a month.",
+      "longDescription": "AutoReel's homepage says it turns property photos into portrait or landscape listing videos, and that you can add captions, music, and branding. Its FAQ says the free plan includes 2 watermarked videos a month with no credit card, and that Essential is $124 per quarter. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "listing-videos",
+        "real-estate-overview"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "FAQ: free plan is 2 watermarked videos a month. Essential is $124 per quarter, not a monthly price.",
+      "pricingUrl": "https://www.autoreelapp.com/faq/cost-effective-realtor-tools/does-autoreel-offer-a-free-plan-or-free-trial",
+      "docsUrl": "https://www.autoreelapp.com/",
+      "freeTier": true,
+      "freeTierNotes": "2 watermarked listing videos a month. No credit card required.",
+      "startingPrice": null,
+      "freeTrial": "7 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A realtor turning listing photos into a video",
+        "A vertical reel for Instagram or TikTok"
+      ],
+      "notIdealFor": [
+        "A confirmed monthly price",
+        "Ranking a deal or skip tracing an owner"
+      ],
+      "strength": "AutoReel's homepage says it turns property photos into listing videos with captions and music, and the free plan includes 2 videos a month.",
+      "weakness": "Paid plans are billed quarterly, and the free videos are watermarked.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Homepage and FAQ fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.autoreelapp.com/",
+        "https://www.autoreelapp.com/faq/creating-listing-videos/how-do-i-create-my-first-autoreel-listing-video-as-a-new-user",
+        "https://www.autoreelapp.com/faq/cost-effective-realtor-tools/does-autoreel-offer-a-free-plan-or-free-trial"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.autoreelapp.com/"
+      },
+      "useCaseFit": {
+        "listing-videos": "Turns listing photos into a property video with music and captions.",
+        "real-estate": "Turns listing photos into a property video with music and captions."
+      }
+    },
+    {
       "id": "batchleads",
       "slug": "batchleads",
       "name": "BatchLeads",
@@ -778,6 +854,76 @@
       }
     },
     {
+      "id": "boxbrownie",
+      "slug": "boxbrownie",
+      "name": "BoxBrownie",
+      "websiteUrl": "https://www.boxbrownie.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Stitches 360 photos into a virtual tour of a property. No monthly price confirmed.",
+      "longDescription": "BoxBrownie's virtual tour page says a tour is a 360 degree view of a property that a buyer can pan through. Its guide says you upload 360 photos, label each room, and get a shareable tour link. The pages we read did not list a monthly plan price. We did not upload a photo.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "listing-videos"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact"
+      ],
+      "pricingNotes": "The virtual tour pages we read did not list a monthly plan price.",
+      "pricingUrl": "https://www.boxbrownie.com/360-virtual-tours",
+      "docsUrl": "https://www.boxbrownie.com/b/how-to-easily-create-a-virtual-tour-for-real-estate-listings",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A 360 virtual tour a buyer can pan through",
+        "A property walkthrough built from 360 photos"
+      ],
+      "notIdealFor": [
+        "A vertical Instagram reel from ordinary listing photos",
+        "A confirmed monthly price from this listing"
+      ],
+      "strength": "The BoxBrownie virtual tour page says it stitches 360 photos into a walkthrough a buyer can pan through.",
+      "weakness": "The pages we read did not list a monthly price, and the tour is a 360 viewer rather than a social reel.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Virtual tour page and listing guide fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.boxbrownie.com/360-virtual-tours",
+        "https://www.boxbrownie.com/b/how-to-easily-create-a-virtual-tour-for-real-estate-listings"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.boxbrownie.com/360-virtual-tours"
+      },
+      "useCaseFit": {
+        "listing-videos": "Builds a virtual tour of the home from 360 photos."
+      }
+    },
+    {
       "id": "browser_use",
       "slug": "browser-use",
       "name": "Browser Use",
@@ -930,12 +1076,83 @@
       }
     },
     {
+      "id": "canva",
+      "slug": "canva",
+      "name": "Canva",
+      "websiteUrl": "https://www.canva.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Real estate video templates that drop listing photos into a tour. No monthly price confirmed.",
+      "longDescription": "Canva's real estate video gallery says you can start from a listing template and customize it. The real estate solutions page says the video editor can create listing videos and walk-throughs and add music. The pages we read did not list a monthly plan price. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "listing-videos"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "The real estate video gallery is presented as free to start. No monthly plan price was on the pages we read.",
+      "pricingUrl": "https://www.canva.com/video-editor/templates/real-estate/",
+      "docsUrl": "https://www.canva.com/solutions/real-estate/",
+      "freeTier": true,
+      "freeTierNotes": "The template gallery says the real estate video templates are free to customize. A lasting free export limit was not spelled out.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A listing video started from a real estate template",
+        "Adding photos, captions, and music in one editor"
+      ],
+      "notIdealFor": [
+        "A confirmed monthly price from this listing",
+        "Skip tracing or deal ranking"
+      ],
+      "strength": "Canva's real estate pages say you can start a listing video or walk-through from a template and add music.",
+      "weakness": "The pages we read did not list a monthly plan price, so this listing states none.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Real estate video gallery and solutions page fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.canva.com/video-editor/templates/real-estate/",
+        "https://www.canva.com/solutions/real-estate/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.canva.com/video-editor/templates/real-estate/"
+      },
+      "useCaseFit": {
+        "listing-videos": "Turns listing photos into a video from a real estate template."
+      }
+    },
+    {
       "affiliateUrl": null,
       "categories": [
         "creative-media"
       ],
       "useCaseTags": [
-        "video-clips"
+        "video-clips",
+        "listing-videos"
       ],
       "toolTypes": [
         "creative"
@@ -997,7 +1214,8 @@
         "finalUrl": "https://www.capcut.com/"
       },
       "useCaseFit": {
-        "game-creative": "Edits video for YouTube, TikTok, and Reels, and the free plan covers basic editing."
+        "game-creative": "Edits video for YouTube, TikTok, and Reels, and the free plan covers basic editing.",
+        "listing-videos": "Turns listing photos into a vertical Instagram reel with captions and music."
       }
     },
     {
@@ -1880,6 +2098,78 @@
       }
     },
     {
+      "id": "d-id",
+      "slug": "d-id",
+      "name": "D-ID",
+      "websiteUrl": "https://www.d-id.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Talking-head video from a photo and a script. A 14-day trial is listed.",
+      "longDescription": "D-ID's docs say a photo and a script become a talking-head video, and the studio page says text, audio, or a still image can become an avatar video without a camera crew. The help center lists a 14-day free trial and paid Studio plans. The pricing page we read did not show one monthly dollar amount. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "avatar-video"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "The help center lists a 14-day trial and paid Studio plans. No single monthly price was readable on the page we fetched.",
+      "pricingUrl": "https://www.d-id.com/pricing/studio/",
+      "docsUrl": "https://docs.d-id.com/docs/v2-photo-avatar-quickstart",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": "14 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A talking-head video from a photo and a script",
+        "A spokesperson clip without filming"
+      ],
+      "notIdealFor": [
+        "A confirmed monthly price from this listing",
+        "Cutting gameplay into shorts"
+      ],
+      "strength": "The official talking-head docs say a photo and a script become a video, and the help center lists a 14-day trial.",
+      "weakness": "The studio pricing page we read named paid plans but did not show one monthly dollar amount.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Studio, API, and help-center pages fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.d-id.com/ai-videos/",
+        "https://docs.d-id.com/docs/v2-photo-avatar-quickstart",
+        "https://www.d-id.com/pricing/studio/",
+        "https://help.d-id.com/hc/en-us/articles/31234293852433-Understanding-subscriptions-key-information-you-should-know"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.d-id.com/ai-videos/"
+      },
+      "useCaseFit": {
+        "avatar-video": "Turns a photo and a script into a talking-head video."
+      }
+    },
+    {
       "id": "daydream",
       "slug": "daydream",
       "name": "Daydream",
@@ -1980,7 +2270,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "rank-property-deals"
+        "rank-property-deals",
+        "real-estate-overview"
       ],
       "toolTypes": [
         "other"
@@ -2012,7 +2303,8 @@
         "finalUrl": "https://dealcheck.io/pricing/"
       },
       "useCaseFit": {
-        "rank-property-deals": "Runs rental cash flow, house flipping, and commercial calculators and compares properties side by side."
+        "rank-property-deals": "Runs rental cash flow, house flipping, and commercial calculators and compares properties side by side.",
+        "real-estate": "Calculates rental cash flow, flip profit, and commercial numbers side by side."
       }
     },
     {
@@ -2027,7 +2319,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-off-market"
+        "find-off-market",
+        "real-estate-overview"
       ],
       "toolTypes": [
         "agent"
@@ -2079,7 +2372,8 @@
         "finalUrl": "https://www.dealmachine.com/pricing"
       },
       "useCaseFit": {
-        "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month."
+        "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month.",
+        "real-estate": "Pulls owner records and tags a property during a drive."
       }
     },
     {
@@ -2245,7 +2539,8 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "video-clips"
+        "video-clips",
+        "listing-videos"
       ],
       "toolTypes": [
         "creative"
@@ -2303,7 +2598,8 @@
         "finalUrl": "https://www.descript.com/"
       },
       "useCaseFit": {
-        "game-creative": "Edits video by editing the transcript, with 60 free media minutes a month."
+        "game-creative": "Edits video by editing the transcript, with 60 free media minutes a month.",
+        "listing-videos": "Builds a listing tour from property photos, with room labels and music."
       }
     },
     {
@@ -3720,7 +4016,9 @@
       "categories": [
         "creative-media"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "avatar-video"
+      ],
       "toolTypes": [
         "creative"
       ],
@@ -3775,7 +4073,9 @@
         "status": 200,
         "finalUrl": "https://www.heygen.com/"
       },
-      "useCaseFit": {}
+      "useCaseFit": {
+        "avatar-video": "Generates an avatar or spokesperson video from a script."
+      }
     },
     {
       "id": "higgsfield",
@@ -4265,7 +4565,8 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "video-clips"
+        "video-clips",
+        "listing-videos"
       ],
       "toolTypes": [
         "creative"
@@ -4326,7 +4627,8 @@
         "finalUrl": "https://www.kapwing.com/"
       },
       "useCaseFit": {
-        "game-creative": "Browser editor for trimming, captions, and resizing video into social clips."
+        "game-creative": "Browser editor for trimming, captions, and resizing video into social clips.",
+        "listing-videos": "Turns listing photos into a walkthrough video with music and captions."
       }
     },
     {
@@ -5283,7 +5585,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "image-3d"
+        "3d-assets"
       ],
       "toolTypes": [
         "creative"
@@ -5340,7 +5642,7 @@
         "finalUrl": "https://www.meshy.ai/"
       },
       "useCaseFit": {
-        "image-3d": "Turns text or a picture into a 3D asset."
+        "make-3d": "Turns text or a picture into a 3D asset."
       }
     },
     {
@@ -5423,7 +5725,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "image-3d"
+        "image-generation"
       ],
       "toolTypes": [
         "creative"
@@ -5483,7 +5785,7 @@
         "finalUrl": "https://www.midjourney.com/"
       },
       "useCaseFit": {
-        "image-3d": "Draws images from a text prompt."
+        "make-images": "Draws images from a text prompt."
       }
     },
     {
@@ -6645,7 +6947,8 @@
       "useCaseTags": [
         "find-land",
         "find-off-market",
-        "rank-property-deals"
+        "rank-property-deals",
+        "real-estate-overview"
       ],
       "toolTypes": [
         "agent"
@@ -6678,7 +6981,8 @@
       "useCaseFit": {
         "find-land": "Searches property records with an AI search box, and Essentials is $99 per month.",
         "find-off-market": "Filters property records, including off-market search, and Essentials is $99 per month.",
-        "rank-property-deals": "Filters property records, including off-market ones."
+        "rank-property-deals": "Filters property records, including off-market ones.",
+        "real-estate": "Searches property records, including off-market listings, from one set of filters."
       }
     },
     {
@@ -7312,7 +7616,7 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "image-3d"
+        "image-generation"
       ],
       "toolTypes": [
         "creative"
@@ -7369,7 +7673,7 @@
         "finalUrl": "https://www.scenario.com/"
       },
       "useCaseFit": {
-        "image-3d": "Draws game art from a prompt."
+        "make-images": "Draws game art from a prompt."
       }
     },
     {
@@ -7985,6 +8289,78 @@
       },
       "useCaseFit": {
         "game-creative": "Reframes Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks."
+      }
+    },
+    {
+      "id": "synthesia",
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "websiteUrl": "https://www.synthesia.io/",
+      "affiliateUrl": null,
+      "shortDescription": "AI avatar videos from a script. Basic is free, and Starter is $29 a month.",
+      "longDescription": "Synthesia's homepage says it creates studio videos with AI avatars and voiceovers. The pricing page lists Basic at $0 a month, with no credit card, and says those videos carry a watermark. Starter is $29 a month when billed monthly. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "avatar-video"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Basic is $0 a month. Starter is $29 a month when billed monthly, from the pricing page on 2026-10-19.",
+      "pricingUrl": "https://www.synthesia.io/pricing",
+      "docsUrl": "https://www.synthesia.io/features/avatars",
+      "freeTier": true,
+      "freeTierNotes": "Basic includes a free monthly video allowance and says no credit card is required. Those videos carry a watermark.",
+      "startingPrice": 29,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "An avatar video from a script without filming",
+        "A free Basic plan to try a stock avatar"
+      ],
+      "notIdealFor": [
+        "A cinematic camera-move clip",
+        "Cutting a long stream into shorts"
+      ],
+      "strength": "Synthesia's homepage says it creates videos with AI avatars from a script, and Basic is free with no credit card.",
+      "weakness": "Starter is $29 a month when billed monthly, and the free plan's videos carry a watermark.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Homepage, pricing page, and avatar page fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.synthesia.io/",
+        "https://www.synthesia.io/pricing",
+        "https://www.synthesia.io/features/avatars"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.synthesia.io/"
+      },
+      "useCaseFit": {
+        "avatar-video": "Generates an avatar video from a script and a stock or custom avatar."
       }
     },
     {
@@ -8776,6 +9152,37 @@
       "intro": "AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table."
     },
     {
+      "slug": "avatar-video",
+      "title": "Make an avatar or spokesperson video",
+      "summary": "Turn a script into a talking-head video without filming yourself.",
+      "audienceHints": [
+        "creators",
+        "marketers"
+      ],
+      "matchTags": [
+        "avatar-video"
+      ],
+      "recommended": [
+        {
+          "toolId": "heygen",
+          "why": "Generates an avatar or spokesperson video from a script."
+        },
+        {
+          "toolId": "synthesia",
+          "why": "Generates an avatar video from a script and a stock or custom avatar."
+        },
+        {
+          "toolId": "d-id",
+          "why": "Turns a photo and a script into a talking-head video."
+        }
+      ],
+      "jobPhrase": "making an avatar video",
+      "assistantTask": "draft the script an avatar will speak",
+      "assistantContext": "making a talking-head video",
+      "searchTopic": "the avatar and the script",
+      "intro": "AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself."
+    },
+    {
       "slug": "coding-agents",
       "title": "Code with an AI agent",
       "summary": "IDE agents and copilots that edit, run, and review code.",
@@ -9152,37 +9559,6 @@
       "intro": "AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve."
     },
     {
-      "slug": "image-3d",
-      "title": "Make images and 3D assets",
-      "summary": "Describe an image or a 3D asset and generate it in an art app.",
-      "audienceHints": [
-        "creators",
-        "gamers"
-      ],
-      "matchTags": [
-        "image-3d"
-      ],
-      "recommended": [
-        {
-          "toolId": "midjourney",
-          "why": "Draws images from a text prompt."
-        },
-        {
-          "toolId": "scenario",
-          "why": "Draws game art from a prompt."
-        },
-        {
-          "toolId": "meshy",
-          "why": "Turns text or a picture into a 3D asset."
-        }
-      ],
-      "jobPhrase": "making images and 3D assets",
-      "assistantTask": "describe the image or 3D asset and list what to change",
-      "assistantContext": "making an image or a 3D asset",
-      "searchTopic": "the picture or model you want",
-      "intro": "AI agents can describe the image or 3D asset you want and list what to change, so you generate it and check it yourself."
-    },
-    {
       "slug": "it-helpdesk",
       "title": "Handle IT help desk requests",
       "summary": "Triage common IT requests and route the rest.",
@@ -9241,6 +9617,95 @@
         }
       ],
       "intro": "AI agents can search an internal knowledge base and answer a policy question with the document to check."
+    },
+    {
+      "slug": "listing-videos",
+      "title": "Make a real estate listing video",
+      "summary": "Turn listing photos into a home tour with captions, music, and a vertical reel.",
+      "audienceHints": [
+        "realtors",
+        "investors"
+      ],
+      "matchTags": [
+        "listing-videos"
+      ],
+      "recommended": [
+        {
+          "toolId": "autoreel",
+          "why": "Turns listing photos into a property video with music and captions."
+        },
+        {
+          "toolId": "kapwing",
+          "why": "Turns listing photos into a walkthrough video with music and captions."
+        },
+        {
+          "toolId": "canva",
+          "why": "Turns listing photos into a video from a real estate template."
+        },
+        {
+          "toolId": "capcut",
+          "why": "Turns listing photos into a vertical Instagram reel with captions and music."
+        },
+        {
+          "toolId": "descript",
+          "why": "Builds a listing tour from property photos, with room labels and music."
+        }
+      ],
+      "jobPhrase": "making a real estate listing video",
+      "assistantTask": "order the rooms, draft captions, and note the music",
+      "assistantContext": "showing a home in a listing video",
+      "searchTopic": "the listing photos and the reel",
+      "intro": "AI agents can order the rooms in a home tour, draft the on-screen captions, and note music for the vertical reel a realtor still exports."
+    },
+    {
+      "slug": "make-3d",
+      "title": "Make a 3D model",
+      "summary": "Describe a 3D asset and generate it in a 3D app.",
+      "audienceHints": [
+        "creators",
+        "gamers"
+      ],
+      "matchTags": [
+        "3d-assets"
+      ],
+      "recommended": [
+        {
+          "toolId": "meshy",
+          "why": "Turns text or a picture into a 3D asset."
+        }
+      ],
+      "jobPhrase": "making a 3D model",
+      "assistantTask": "describe the 3D asset and list what to change",
+      "assistantContext": "making a 3D model",
+      "searchTopic": "the 3D model you want",
+      "intro": "AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself."
+    },
+    {
+      "slug": "make-images",
+      "title": "Make an image from a prompt",
+      "summary": "Describe an image and generate it in an art app.",
+      "audienceHints": [
+        "creators",
+        "gamers"
+      ],
+      "matchTags": [
+        "image-generation"
+      ],
+      "recommended": [
+        {
+          "toolId": "midjourney",
+          "why": "Draws images from a text prompt."
+        },
+        {
+          "toolId": "scenario",
+          "why": "Draws game art from a prompt."
+        }
+      ],
+      "jobPhrase": "making an image",
+      "assistantTask": "describe the image and list what to change",
+      "assistantContext": "making an image",
+      "searchTopic": "the picture you want",
+      "intro": "AI agents can describe the image you want and list what to change, so you generate it and check it yourself."
     },
     {
       "slug": "manage-inbox",
@@ -9431,6 +9896,45 @@
         }
       ],
       "intro": "AI agents can compare property records and rental or flip numbers so you sort the deals yourself."
+    },
+    {
+      "slug": "real-estate",
+      "title": "Find AI tools for real estate",
+      "summary": "Compare deal, listing-video, outreach, and land tools before you pick one.",
+      "audienceHints": [
+        "investors",
+        "realtors"
+      ],
+      "matchTags": [
+        "real-estate-overview"
+      ],
+      "recommended": [
+        {
+          "toolId": "dealcheck",
+          "why": "Calculates rental cash flow, flip profit, and commercial numbers side by side."
+        },
+        {
+          "toolId": "autoreel",
+          "why": "Turns listing photos into a property video with music and captions."
+        },
+        {
+          "toolId": "dealmachine",
+          "why": "Pulls owner records and tags a property during a drive."
+        },
+        {
+          "toolId": "acres",
+          "why": "Shows parcel maps and basic land insights before an owner lookup."
+        },
+        {
+          "toolId": "propstream",
+          "why": "Searches property records, including off-market listings, from one set of filters."
+        }
+      ],
+      "jobPhrase": "finding AI tools for real estate",
+      "assistantTask": "compare a deal, a listing video, and owner outreach",
+      "assistantContext": "choosing a real estate tool",
+      "searchTopic": "deals, listing videos, and owner outreach",
+      "intro": "AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue."
     },
     {
       "slug": "research-rag",

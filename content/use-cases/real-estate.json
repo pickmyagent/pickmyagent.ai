@@ -1,0 +1,19 @@
+{
+  "slug": "real-estate",
+  "title": "Find AI tools for real estate",
+  "summary": "Compare deal, listing-video, outreach, and land tools before you pick one.",
+  "audienceHints": ["investors", "realtors"],
+  "matchTags": ["real-estate-overview"],
+  "recommended": [
+    { "toolId": "dealcheck", "why": "Calculates rental cash flow, flip profit, and commercial numbers side by side." },
+    { "toolId": "autoreel", "why": "Turns listing photos into a property video with music and captions." },
+    { "toolId": "dealmachine", "why": "Pulls owner records and tags a property during a drive." },
+    { "toolId": "acres", "why": "Shows parcel maps and basic land insights before an owner lookup." },
+    { "toolId": "propstream", "why": "Searches property records, including off-market listings, from one set of filters." }
+  ],
+  "jobPhrase": "finding AI tools for real estate",
+  "assistantTask": "compare a deal, a listing video, and owner outreach",
+  "assistantContext": "choosing a real estate tool",
+  "searchTopic": "deals, listing videos, and owner outreach",
+  "intro": "AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue."
+}

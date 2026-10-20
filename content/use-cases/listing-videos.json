@@ -1,0 +1,19 @@
+{
+  "slug": "listing-videos",
+  "title": "Make a real estate listing video",
+  "summary": "Turn listing photos into a home tour with captions, music, and a vertical reel.",
+  "audienceHints": ["realtors", "investors"],
+  "matchTags": ["listing-videos"],
+  "recommended": [
+    { "toolId": "autoreel", "why": "Turns listing photos into a property video with music and captions." },
+    { "toolId": "kapwing", "why": "Turns listing photos into a walkthrough video with music and captions." },
+    { "toolId": "canva", "why": "Turns listing photos into a video from a real estate template." },
+    { "toolId": "capcut", "why": "Turns listing photos into a vertical Instagram reel with captions and music." },
+    { "toolId": "descript", "why": "Builds a listing tour from property photos, with room labels and music." }
+  ],
+  "jobPhrase": "making a real estate listing video",
+  "assistantTask": "order the rooms, draft captions, and note the music",
+  "assistantContext": "showing a home in a listing video",
+  "searchTopic": "the listing photos and the reel",
+  "intro": "AI agents can order the rooms in a home tour, draft the on-screen captions, and note music for the vertical reel a realtor still exports."
+}

@@ -10,7 +10,8 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "video-clips"
+    "video-clips",
+    "listing-videos"
   ],
   "toolTypes": [
     "creative"
@@ -68,6 +69,7 @@
     "finalUrl": "https://www.descript.com/"
   },
   "useCaseFit": {
-    "game-creative": "Edits video by editing the transcript, with 60 free media minutes a month."
+    "game-creative": "Edits video by editing the transcript, with 60 free media minutes a month.",
+    "listing-videos": "Builds a listing tour from property photos, with room labels and music."
   }
 }

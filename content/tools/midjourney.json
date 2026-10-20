@@ -10,7 +10,7 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "image-3d"
+    "image-generation"
   ],
   "toolTypes": [
     "creative"
@@ -70,6 +70,6 @@
     "finalUrl": "https://www.midjourney.com/"
   },
   "useCaseFit": {
-    "image-3d": "Draws images from a text prompt."
+    "make-images": "Draws images from a text prompt."
   }
 }

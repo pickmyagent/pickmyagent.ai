@@ -185,13 +185,6 @@ export const DOMAIN_LINES: Record<string, Record<string, string>> = {
     perplexity: "for sourced notes on voice generation, with links you can check.",
     deepseek: "to rewrite a script so the line is short enough to read aloud.",
   }),
-  "image-3d": lines({
-    claude: "to describe the image or 3D asset you want and list what to change after you generate it.",
-    chatgpt: "for a checklist of subject, style, and the detail you still want in the picture.",
-    gemini: "to build a sheet of prompts, the result, and what you would change.",
-    perplexity: "for sourced notes on prompting for images or 3D, with links you can check.",
-    deepseek: "to tighten a prompt so the subject, style, and framing are specific.",
-  }),
   "write-resume": lines({
     claude: "to draft resume bullets from the job you did and the role you are applying for.",
     chatgpt: "for a checklist of experience, skills, and the job description you are matching.",
@@ -248,6 +241,41 @@ export const DOMAIN_LINES: Record<string, Record<string, string>> = {
     perplexity: "for sourced notes on dialogue design, with links you can check.",
     deepseek: "to rewrite a character line so it stays in the voice you described.",
   }),
+  "make-images": lines({
+    claude: "to describe the image you want and list what to change after you generate it.",
+    chatgpt: "for a checklist of subject, style, and the detail you still want in the picture.",
+    gemini: "to build a sheet of image prompts, the result, and what you would change.",
+    perplexity: "for sourced notes on prompting for images, with links you can check.",
+    deepseek: "to tighten an image prompt so the subject, style, and framing are specific.",
+  }),
+  "make-3d": lines({
+    claude: "to describe the 3D asset you want and list what to change after you generate it.",
+    chatgpt: "for a checklist of subject, style, and the detail you still want in the 3D model.",
+    gemini: "to build a sheet of 3D prompts, the result, and what you would change.",
+    perplexity: "for sourced notes on prompting for 3D assets, with links you can check.",
+    deepseek: "to tighten a 3D prompt so the subject, scale, and style are specific.",
+  }),
+  "avatar-video": lines({
+    claude: "to draft the script an avatar will speak, and you record nothing on camera.",
+    chatgpt: "for a checklist of script, avatar, and the take you still approve.",
+    gemini: "to build a sheet of lines, the avatar, and whether the take is approved.",
+    perplexity: "for sourced notes on avatar video, with links you can check.",
+    deepseek: "to shorten a spokesperson script so the avatar can say it in one take.",
+  }),
+  "listing-videos": lines({
+    claude: "to order the rooms in a home tour and draft the captions a realtor puts on screen.",
+    chatgpt: "for a checklist of listing photos, a vertical Instagram reel, captions, and music.",
+    gemini: "to build a sheet of rooms, the caption for each, and whether the reel is vertical.",
+    perplexity: "for sourced notes on listing-video length and music, with links you can check.",
+    deepseek: "to turn a stack of listing photos into a shot order with captions and a music note.",
+  }),
+  "real-estate": lines({
+    claude: "to compare one deal, outline a listing video, and draft the owner note you still send.",
+    chatgpt: "for a checklist that covers the deal numbers, the listing video, and the outreach.",
+    gemini: "to build a sheet of properties, the deal figure, the listing video, and the next owner note.",
+    perplexity: "for sourced pages on deal terms, listing video, and owner outreach, with links you can check.",
+    deepseek: "to say which of the deal, the listing video, or the owner outreach is still unfinished.",
+  }),
 };
 
 export function domainAssistantLine(slug: string, useCaseSlug: string): string | null {
@@ -255,8 +283,74 @@ export function domainAssistantLine(slug: string, useCaseSlug: string): string |
 }
 
 /** No-domain frames. The slot is the full cleaned gerund, or the object after "help with". */
+const FRAME_LINES: Array<{ test: RegExp; lines: Record<string, string> }> = [
+  {
+    test: /meal prep/i,
+    lines: lines({
+      claude: "to plan a week of meals from what you already have, and list the prep steps.",
+      chatgpt: "for a grocery list grouped by the meals you will cook this week.",
+      gemini: "to build a sheet of meals, ingredients, and which day you prep them.",
+      perplexity: "for sourced prep times and storage notes for the meals you chose, with links you can check.",
+      deepseek: "to shrink a week of meals so the ingredients overlap and you cook less.",
+    }),
+  },
+  {
+    test: /grocery list/i,
+    lines: lines({
+      claude: "to group a grocery list by store section and mark what you might already have.",
+      chatgpt: "for a checklist of groceries split into produce, cold, and pantry.",
+      gemini: "to build a sheet of items, the aisle, and whether you still need to buy them.",
+      perplexity: "for sourced swaps when an item on the grocery list is out, with links you can check.",
+      deepseek: "to cut a grocery list down to what the meals actually require.",
+    }),
+  },
+  {
+    test: /(?:naming a baby|baby names?)/i,
+    lines: lines({
+      claude: "to suggest baby names that fit the style you describe and say what each one means.",
+      chatgpt: "for a short list of baby names with the meaning next to each one.",
+      gemini: "to build a sheet of baby names, meanings, and the ones you want to keep.",
+      perplexity: "for sourced notes on a baby name's origin, with links you can check.",
+      deepseek: "to compare two baby names and list what you still want to decide.",
+    }),
+  },
+  {
+    test: /book club/i,
+    lines: lines({
+      claude: "to suggest the next book and draft questions the club can discuss.",
+      chatgpt: "for a checklist for the next book club meeting, including the book and who hosts.",
+      gemini: "to build a sheet of books, meeting dates, and discussion questions.",
+      perplexity: "for sourced reading notes on the club's next book, with links you can check.",
+      deepseek: "to turn a book into five discussion questions the club can edit.",
+    }),
+  },
+  {
+    test: /alternative/i,
+    lines: lines({
+      claude: "to compare tools that do this job and name what you would give up by switching.",
+      chatgpt: "for a checklist of the job you still need and which other tools cover it.",
+      gemini: "to build a sheet of tools, the job each one does, and the one you want to try.",
+      perplexity: "for sourced pages on tools that do this job, with links you can check.",
+      deepseek: "to list what you use the tool for and which part another tool would still miss.",
+    }),
+  },
+  {
+    test: /small business/i,
+    lines: lines({
+      claude: "to draft a customer reply and a short list of bookkeeping you still check.",
+      chatgpt: "for a weekly checklist of posts, invoices, and customer replies for a small business.",
+      gemini: "to build a sheet of customers, the next reply, and the bookkeeping item still open.",
+      perplexity: "for sourced checklists for a small-business week, with links you can check.",
+      deepseek: "to outline one customer reply, one post, and the bookkeeping step you still do yourself.",
+    }),
+  },
+];
+
 export function openAssistantLine(slug: string, name: string, slot: string): string {
   const task = slot.trim();
+  for (const frame of FRAME_LINES) {
+    if (frame.test.test(task) && frame.lines[slug]) return frame.lines[slug];
+  }
   if (slug === "claude") return `Ask ${name} to break ${task} into a step-by-step plan.`;
   if (slug === "chatgpt") return `Ask ${name} for a checklist for ${task}.`;
   if (slug === "gemini") return `Ask ${name} to build a shared doc or sheet to track ${task}.`;

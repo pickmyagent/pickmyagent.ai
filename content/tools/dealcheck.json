@@ -32,7 +32,8 @@
     "real-estate"
   ],
   "useCaseTags": [
-    "rank-property-deals"
+    "rank-property-deals",
+    "real-estate-overview"
   ],
   "toolTypes": [
     "other"
@@ -64,6 +65,7 @@
     "finalUrl": "https://dealcheck.io/pricing/"
   },
   "useCaseFit": {
-    "rank-property-deals": "Runs rental cash flow, house flipping, and commercial calculators and compares properties side by side."
+    "rank-property-deals": "Runs rental cash flow, house flipping, and commercial calculators and compares properties side by side.",
+    "real-estate": "Calculates rental cash flow, flip profit, and commercial numbers side by side."
   }
 }
