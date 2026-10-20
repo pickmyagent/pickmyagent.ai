@@ -1,0 +1,57 @@
+{
+  "id": "studyfetch",
+  "slug": "studyfetch",
+  "name": "StudyFetch",
+  "websiteUrl": "https://www.studyfetch.com/",
+  "affiliateUrl": null,
+  "shortDescription": "AI tutor that builds a study plan and practice from your materials. Free to start; paid plans on their site.",
+  "longDescription": "StudyFetch says you upload course materials and Sparky, its AI tutor, explains a concept and builds a study plan, flashcards, and practice from them. The FAQ says it can help with any subject, including professional exams, and that getting started is free. The same FAQ does not list one monthly price for premium.",
+  "categories": ["learning"],
+  "useCaseTags": ["tutoring"],
+  "toolTypes": ["agent"],
+  "platforms": ["web"],
+  "pricingModel": ["freemium", "subscription"],
+  "pricingNotes": "Getting started is free. The FAQ does not list one monthly price for premium.",
+  "pricingUrl": "https://www.studyfetch.com/",
+  "docsUrl": "https://www.studyfetch.com/",
+  "freeTier": true,
+  "freeTierNotes": "Getting started is free. Premium is a paid plan.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-20",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "A study plan and practice built from your own materials",
+    "Tutoring help on a subject you name"
+  ],
+  "notIdealFor": [
+    "A language-only drill",
+    "A published monthly price from this listing"
+  ],
+  "strength": "StudyFetch's Sparky tutors a subject from your materials and builds a study plan and practice from them.",
+  "weakness": "Getting started is free, and the site does not list one monthly price for premium.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-20T00:00:00-04:00",
+  "checkedDate": "2026-10-20",
+  "smokeTestNotes": "Homepage and FAQ fetched on 2026-10-20. No account was created.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "sources": [
+    "https://www.studyfetch.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.studyfetch.com/"
+  },
+  "useCaseFit": {
+    "tutoring": "Explains a subject from your materials and builds practice from them."
+  }
+}

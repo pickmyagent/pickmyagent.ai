@@ -4,7 +4,8 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "video-clips"
+    "video-clips",
+    "listing-videos"
   ],
   "toolTypes": [
     "creative"
@@ -66,6 +67,7 @@
     "finalUrl": "https://www.capcut.com/"
   },
   "useCaseFit": {
-    "game-creative": "Edits video for YouTube, TikTok, and Reels, and the free plan covers basic editing."
+    "game-creative": "Edits video for YouTube, TikTok, and Reels, and the free plan covers basic editing.",
+    "listing-videos": "Trims walkthrough footage, adds captions, and resizes it for a vertical reel."
   }
 }

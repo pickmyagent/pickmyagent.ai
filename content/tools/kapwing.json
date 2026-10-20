@@ -4,7 +4,8 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "video-clips"
+    "video-clips",
+    "listing-videos"
   ],
   "toolTypes": [
     "creative"
@@ -41,7 +42,7 @@
   "name": "Kapwing",
   "websiteUrl": "https://www.kapwing.com/",
   "shortDescription": "Browser editor for trimming, captions, and resizing video into social clips.",
-  "longDescription": "Kapwing is an online video editor. Its pricing page lists a Free plan with 10 credits, a watermark, exports up to 4 minutes, 720p, and 5 GB of storage. A dollar amount for the lowest paid plan was not clearly tied to the Pro plan in the text we extracted, so the starting price stays unconfirmed. We did not create an account.",
+  "longDescription": "Kapwing is an online video editor. Its pricing page lists a Free plan with 10 credits, a watermark, exports up to 4 minutes, 720p, and 5 GB of storage. A dollar amount for the lowest paid plan was not listed next to the Pro plan name.",
   "pricingUrl": "https://www.kapwing.com/pricing",
   "docsUrl": "https://www.kapwing.com/help/add-captions/",
   "freeTier": true,
@@ -65,6 +66,7 @@
     "finalUrl": "https://www.kapwing.com/"
   },
   "useCaseFit": {
-    "game-creative": "Browser editor for trimming, captions, and resizing video into social clips."
+    "game-creative": "Browser editor for trimming, captions, and resizing video into social clips.",
+    "listing-videos": "Trims a walkthrough, adds captions, and resizes the video."
   }
 }

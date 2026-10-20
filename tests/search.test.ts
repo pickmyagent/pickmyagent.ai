@@ -4,7 +4,7 @@ import test from "node:test";
 import { CONCEPTS } from "../lib/concepts.ts";
 import { domainAssistantLine } from "../lib/assistant-lines.ts";
 import { specialistLine, specialistLinePairs } from "../lib/specialist-lines.ts";
-import { BROKEN_ASSISTANT, BROKEN_HEADERS, grammarProblems, specialistWhyProblems } from "../scripts/grammar-gate.ts";
+import { BROKEN_ASSISTANT, BROKEN_HEADERS, descriptionProblems, grammarProblems, specialistWhyProblems } from "../scripts/grammar-gate.ts";
 import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport } from "../scripts/search-qa.ts";
 import {
   GENERIC_MATCH_WORDS,
@@ -590,8 +590,8 @@ const HEADER_CASES: { query: string; lead: string; intro: string | RegExp }[] = 
   },
   {
     query: "best AI tool for real estate",
-    lead: "For help with real estate, here's how each tool can help:",
-    intro: REAL_ESTATE_RANK_INTRO,
+    lead: "For finding AI tools for real estate, here's how each tool can help:",
+    intro: "AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.",
   },
   {
     query: "is there an AI that can plan my trip",
@@ -616,7 +616,22 @@ const HEADER_CASES: { query: string; lead: string; intro: string | RegExp }[] = 
   {
     query: "text to image",
     lead: "For making an image from text, here's how each tool can help:",
-    intro: /image or 3D/,
+    intro: /describe the image you want/,
+  },
+  {
+    query: "make a 3d model",
+    lead: "For making a 3D model, here's how each tool can help:",
+    intro: /3D asset/,
+  },
+  {
+    query: "deepseek alternative",
+    lead: "For finding a DeepSeek alternative, here's how each tool can help:",
+    intro: /coding models/,
+  },
+  {
+    query: "resume review",
+    lead: "For reviewing a resume, here's how each tool can help:",
+    intro: /resume bullets/,
   },
   {
     query: "investment portfolio",
@@ -785,6 +800,10 @@ test("grammar gate flags the broken header and assistant examples", () => {
   assert.equal(rag.lead, "For building a RAG pipeline, here's how each tool can help:");
   const tutor = rankCatalogQuery("I need AI to tutor me", catalog);
   assert.equal(tutor.lead, "For getting tutoring help, here's how each tool can help:");
+  assert.ok(descriptionProblems("No monthly price confirmed.").length > 0);
+  assert.ok(descriptionProblems("Pricing page included a free-to-start option.").length > 0);
+  assert.ok(descriptionProblems("The plans on the page we read are paid.").length > 0);
+  assert.deepEqual(descriptionProblems("Free to start; paid plans on their site."), []);
 });
 
 test("every specialist use-case pair has a hand-written why-line", () => {
@@ -986,11 +1005,123 @@ test("specialists stay inside the query domain", () => {
   const deep = rankCatalogQuery("deepseek alternative", catalog);
   assert.equal(deep.useCases[0]?.slug, "coding-agents");
   assert.match(deep.intro, /coding models/);
+  assert.equal(deep.lead, "For finding a DeepSeek alternative, here's how each tool can help:");
+  assert.equal(deep.tools.some((tool) => tool.slug === "deepseek"), false);
+  assert.ok(deep.tools.some((tool) => !tool.generalPurpose));
+  const chatgptAlt = rankCatalogQuery("chatgpt alternative", catalog);
+  assert.equal(chatgptAlt.useCases[0]?.slug, undefined);
+  assert.equal(chatgptAlt.lead, "For finding a ChatGPT alternative, here's how each tool can help:");
+  assert.equal(chatgptAlt.tools.some((tool) => tool.slug === "chatgpt"), false);
+  assert.ok(chatgptAlt.tools.length >= 4);
+  assert.equal(chatgptAlt.tools.some((tool) => /step-by-step plan/i.test(tool.whyItHelps)), false);
+  assert.match(chatgptAlt.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "", /compare tools/i);
+  const model = rankCatalogQuery("make a 3d model", catalog);
+  assert.equal(model.useCases[0]?.slug, "make-3d");
+  assert.match(model.lead, /3D model/);
+  const modelSlugs = model.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+  assert.deepEqual(modelSlugs, ["meshy"]);
+  const picture = rankCatalogQuery("concept art", catalog);
+  const pictureSlugs = picture.tools.map((tool) => tool.slug);
+  assert.equal(picture.useCases[0]?.slug, "make-images");
+  assert.equal(pictureSlugs.includes("meshy"), false);
+  assert.ok(pictureSlugs.includes("midjourney"));
+  for (const generic of ["tutor me", "homework help", "practice problems"]) {
+    const ranked = rankCatalogQuery(generic, catalog);
+    assert.equal(ranked.useCases[0]?.slug, "tutoring", generic);
+    assert.equal(ranked.tools.some((tool) => tool.slug === "synthesis-tutor"), false, generic);
+    assert.equal(ranked.tools.some((tool) => tool.slug === "duolingo-max"), false, generic);
+    const specialists = ranked.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+    assert.deepEqual(specialists.slice(0, 3).sort(), ["khanmigo", "quizlet", "studyfetch"].sort(), generic);
+    const firstAssistant = ranked.tools.findIndex((tool) => tool.generalPurpose);
+    assert.ok(firstAssistant >= 3, generic);
+  }
+  for (const kids of ["k-5 math tutor", "math for kids", "3rd grade math"]) {
+    const ranked = rankCatalogQuery(kids, catalog);
+    assert.equal(ranked.useCases[0]?.slug, "tutoring", kids);
+    assert.ok(ranked.tools.some((tool) => tool.slug === "synthesis-tutor"), kids);
+    assert.equal(ranked.tools.some((tool) => tool.slug === "duolingo-max"), false, kids);
+  }
+  const spanish = rankCatalogQuery("learn spanish", catalog);
+  assert.equal(spanish.useCases[0]?.slug, "learn-language");
+  assert.ok(spanish.tools.some((tool) => tool.slug === "duolingo-max"));
+  assert.equal(spanish.tools.some((tool) => tool.slug === "synthesis-tutor"), false);
+  assert.equal(spanish.tools.some((tool) => tool.slug === "quizlet"), false);
+  for (const avatar of ["AI avatar video", "talking head video", "spokesperson video", "video of me talking without filming"]) {
+    const ranked = rankCatalogQuery(avatar, catalog);
+    assert.equal(ranked.useCases[0]?.slug, "avatar-video", avatar);
+    const slugs = ranked.tools.map((tool) => tool.slug);
+    for (const wanted of ["heygen", "synthesia", "d-id"]) assert.ok(slugs.includes(wanted), `${avatar} missing ${wanted}`);
+    for (const banned of ["opus", "higgsfield", "seedance", "midjourney"]) {
+      assert.equal(slugs.includes(banned), false, `${avatar} included ${banned}`);
+    }
+  }
+  for (const listing of [
+    "edit listing videos for real estate",
+    "make a video tour of a house",
+    "realtor video editing",
+    "property walkthrough video",
+  ]) {
+    const ranked = rankCatalogQuery(listing, catalog);
+    assert.equal(ranked.useCases[0]?.slug, "listing-videos", listing);
+    const specialists = ranked.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+    assert.deepEqual(specialists.slice(0, 4), ["capcut", "kapwing", "descript", "canva"], listing);
+    const descript = ranked.tools.find((tool) => tool.slug === "descript");
+    assert.match(descript?.whyItHelps ?? "", /transcript/i, listing);
+    assert.doesNotMatch(descript?.whyItHelps ?? "", /property photos/i, listing);
+    assert.match(ranked.intro, /trim your walkthrough footage/);
+    for (const banned of ["mashvisor", "acres", "propstream", "dealcheck", "midjourney", "higgsfield"]) {
+      assert.equal(specialists.includes(banned), false, `${listing} included ${banned}`);
+    }
+  }
+  const photos = rankCatalogQuery("turn listing photos into a video", catalog);
+  assert.equal(photos.useCases[0]?.slug, "listing-videos");
+  const photoSpecialists = photos.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+  assert.deepEqual(photoSpecialists.slice(0, 4), ["autoreel", "canva", "kapwing", "capcut"]);
+  assert.match(photos.intro, /turn listing photos into a home tour/);
+  const photoDescript = photos.tools.find((tool) => tool.slug === "descript");
+  if (photoDescript) assert.match(photoDescript.whyItHelps, /property photos or clips/);
+  const estate = rankCatalogQuery("best AI tool for real estate", catalog);
+  assert.equal(estate.useCases[0]?.slug, "real-estate");
+  assert.equal(estate.lead, "For finding AI tools for real estate, here's how each tool can help:");
+  assert.match(estate.intro, /deal/);
+  assert.match(estate.intro, /listing video/);
+  assert.match(estate.intro, /outreach/);
+  const estateSlugs = estate.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+  for (const wanted of ["dealcheck", "autoreel", "dealmachine", "acres", "propstream"]) {
+    assert.ok(estateSlugs.includes(wanted), wanted);
+  }
+  const review = rankCatalogQuery("resume review", catalog);
+  assert.equal(review.useCases[0]?.slug, "write-resume");
+  const reviewSlugs = review.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+  for (const wanted of ["teal", "rezi", "kickresume"]) assert.ok(reviewSlugs.includes(wanted));
+  for (const banned of ["metaview", "gem", "paradox"]) assert.equal(reviewSlugs.includes(banned), false);
+  assert.equal(rankCatalogQuery("resume review for this applicant", catalog).useCases[0]?.slug, "hire-candidates");
   const meal = rankCatalogQuery("meal prep for the week", catalog);
   assert.match(meal.intro, /can't cook the week's meals/);
   const grocery = rankCatalogQuery("grocery list", catalog);
   assert.match(grocery.intro, /grocery list/);
   assert.equal(grocery.intro === meal.intro, false);
+  const baby = rankCatalogQuery("name a baby", catalog);
+  const club = rankCatalogQuery("start a book club", catalog);
+  const business = rankCatalogQuery("AI for my small business", catalog);
+  const frames = [meal, grocery, baby, club, business];
+  for (const ranked of frames) {
+    const assistants = ranked.tools.filter((tool) => tool.generalPurpose);
+    assert.equal(assistants.length, 5);
+    assert.equal(new Set(assistants.map((tool) => tool.whyItHelps)).size, 5);
+  }
+  const mealClaude = meal.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "";
+  const groceryClaude = grocery.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "";
+  const babyClaude = baby.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "";
+  const clubClaude = club.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "";
+  const businessClaude = business.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "";
+  assert.match(mealClaude, /meals/);
+  assert.match(groceryClaude, /grocery list/);
+  assert.match(babyClaude, /baby names/);
+  assert.match(clubClaude, /book/);
+  assert.match(businessClaude, /customer reply|bookkeeping/);
+  assert.equal(/step-by-step plan/i.test([mealClaude, groceryClaude, babyClaude, clubClaude, businessClaude].join(" ")), false);
+  assert.equal(new Set([mealClaude, groceryClaude, babyClaude, clubClaude, businessClaude]).size, 5);
 });
 
 test("twitch highlight query ranks stream clip tools", () => {

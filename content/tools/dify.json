@@ -5,7 +5,7 @@
   "websiteUrl": "https://dify.ai/",
   "affiliateUrl": null,
   "shortDescription": "Open-source platform to build agent workflows visually, with a self-hosted community edition.",
-  "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page. We checked the site, docs, and pricing. We did not install it. Cloud price samples in the page text should be re-read on the live pricing page before you rely on them.",
+  "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page. Confirm cloud prices on the live pricing page before you rely on them.",
   "categories": [
     "agent-frameworks"
   ],

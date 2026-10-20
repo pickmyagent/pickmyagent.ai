@@ -3,7 +3,7 @@ import { CONCEPTS } from "../lib/concepts.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { rankCatalogQuery } from "../lib/search.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
-import { BROKEN_ASSISTANT, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems } from "./grammar-gate.ts";
+import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems } from "./grammar-gate.ts";
 
 export type QaQuery = {
   query: string;
@@ -75,10 +75,11 @@ export const QA_QUERIES: QaQuery[] = [
   { query: "best tool for data analysis", domain: "analyze-data" },
   { query: "I need AI to analyze my spreadsheet", domain: "analyze-data" },
   { query: "screen candidates", domain: "hire-candidates" },
-  { query: "resume review", domain: "hire-candidates" },
+  { query: "resume review", domain: "write-resume" },
   { query: "source candidates", domain: "hire-candidates" },
   { query: "use an agent for hiring", domain: "hire-candidates" },
-  { query: "best tool for resume review", domain: "hire-candidates" },
+  { query: "best tool for resume review", domain: "write-resume" },
+  { query: "resume review for this applicant", domain: "hire-candidates" },
   { query: "plan a trip", domain: "plan-travel" },
   { query: "book travel", domain: "plan-travel" },
   { query: "is there an AI that can plan my trip", domain: "plan-travel" },
@@ -164,7 +165,7 @@ export const QA_QUERIES: QaQuery[] = [
   { query: "best tool for game NPCs", domain: "game-npcs" },
   { query: "NPC", domain: "game-npcs" },
   { query: "AI for my small business", domain: null },
-  { query: "best AI tool for real estate", domain: "rank-property-deals" },
+  { query: "best AI tool for real estate", domain: "real-estate" },
   { query: "Help me with my resume", domain: "write-resume" },
   { query: "USE AI TO WRITE EMAILS", domain: null },
   { query: "plan a wedding", domain: null },
@@ -230,18 +231,34 @@ export const QA_QUERIES: QaQuery[] = [
   { query: "text to video", domain: "video-generation" },
   { query: "image to video", domain: "video-generation" },
   { query: "text to speech", domain: "voice-audio" },
-  { query: "make a 3d model", domain: "image-3d" },
-  { query: "edit listing videos for real estate", domain: "game-creative" },
+  { query: "make a 3d model", domain: "make-3d" },
+  { query: "text to image", domain: "make-images" },
+  { query: "concept art", domain: "make-images" },
+  { query: "edit listing videos for real estate", domain: "listing-videos" },
+  { query: "make a video tour of a house", domain: "listing-videos" },
+  { query: "realtor video editing", domain: "listing-videos" },
+  { query: "property walkthrough video", domain: "listing-videos" },
+  { query: "turn listing photos into a video", domain: "listing-videos" },
+  { query: "AI avatar video", domain: "avatar-video" },
+  { query: "talking head video", domain: "avatar-video" },
+  { query: "spokesperson video", domain: "avatar-video" },
+  { query: "video of me talking without filming", domain: "avatar-video" },
   { query: "screen a resume", domain: "hire-candidates" },
   { query: "write my resume", domain: "write-resume" },
+  { query: "k-5 math tutor", domain: "tutoring" },
+  { query: "math for kids", domain: "tutoring" },
+  { query: "3rd grade math", domain: "tutoring" },
   { query: "cheap AI model for coding", domain: "coding-agents" },
   { query: "deepseek alternative", domain: "coding-agents" },
+  { query: "chatgpt alternative", domain: null },
+  { query: "learn spanish", domain: "learn-language" },
+  { query: "language practice", domain: "learn-language" },
 ];
 
 const PROPER = new Set([
   "south", "carolina", "california", "texas", "florida", "york", "lisbon", "london",
   "seo", "api", "crm", "gpt", "irs", "npc", "npcs", "pdf", "fsbo", "rag", "soc", "gmail",
-  "youtube", "google", "anthropic",
+  "youtube", "google", "anthropic", "instagram", "k5",
   "openai", "nvidia", "github", "discord", "youtube", "twitch", "amazon", "duolingo",
   "microsoft", "python", "hex", "notion", "slack",
 ]);
@@ -415,6 +432,9 @@ export function qaProblems(catalog: Catalog): string[] {
 function scanProse(value: unknown, path: string, problems: string[]): void {
   if (typeof value === "string") {
     if (INTERNAL.test(value)) problems.push(`${path}: ${value}`);
+    if (/(?:shortDescription|longDescription)$/.test(path) && descriptionProblems(value).length > 0) {
+      problems.push(`${path}: ${value}`);
+    }
     return;
   }
   if (Array.isArray(value)) {

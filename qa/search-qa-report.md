@@ -1,6 +1,6 @@
 # Search QA report
 
-224 queries through the ranker and the header, intro, and why-line renderers.
+241 queries through the ranker and the header, intro, and why-line renderers.
 
 ## 1. find homes for sale by owner
 
@@ -879,8 +879,8 @@
 - Intro: AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit.
 - Domain: create-content
 - Cards:
-  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of headings, examples, and claims to verify in a draft.
@@ -995,18 +995,18 @@
 
 ## 64. resume review
 
-- Header: For screening and sourcing candidates, here's how each tool can help:
-- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
-- Domain: hire-candidates
+- Header: For reviewing a resume, here's how each tool can help:
+- Intro: AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you.
+- Domain: write-resume
 - Cards:
-  - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
-  - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
-  - Paradox — Specialist · Docs checked — Paradox schedules candidates and takes applications in a conversation.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to screen a resume against a role and list gaps a person should confirm.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for an interview checklist and the outreach points you might send a candidate.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of applicants, stage, and the next scheduling step.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a skill you are hiring for, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft candidate outreach that a recruiter can edit before it is sent.
+  - Teal — Specialist · Docs checked — Teal writes a resume tailored to a job description and tracks the jobs you save.
+  - Rezi — Specialist · Docs checked — Rezi builds a resume, scores the sections, and pulls keywords from a job description.
+  - Kickresume — Specialist · Docs checked — Kickresume writes resume bullets from a job title and scores the draft.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft resume bullets from the job you did and the role you are applying for.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of experience, skills, and the job description you are matching.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of roles, bullets, and the keywords from the posting.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced examples of resume structure, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a bullet so it names the work and the result, and you keep the facts.
 
 ## 65. source candidates
 
@@ -1040,7 +1040,22 @@
 
 ## 67. best tool for resume review
 
-- Header: For screening and sourcing candidates, here's how each tool can help:
+- Header: For reviewing a resume, here's how each tool can help:
+- Intro: AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you.
+- Domain: write-resume
+- Cards:
+  - Teal — Specialist · Docs checked — Teal writes a resume tailored to a job description and tracks the jobs you save.
+  - Rezi — Specialist · Docs checked — Rezi builds a resume, scores the sections, and pulls keywords from a job description.
+  - Kickresume — Specialist · Docs checked — Kickresume writes resume bullets from a job title and scores the draft.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft resume bullets from the job you did and the role you are applying for.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of experience, skills, and the job description you are matching.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of roles, bullets, and the keywords from the posting.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced examples of resume structure, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a bullet so it names the work and the result, and you keep the facts.
+
+## 68. resume review for this applicant
+
+- Header: For reviewing this applicant's resume, here's how each tool can help:
 - Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
 - Domain: hire-candidates
 - Cards:
@@ -1053,7 +1068,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a skill you are hiring for, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft candidate outreach that a recruiter can edit before it is sent.
 
-## 68. plan a trip
+## 69. plan a trip
 
 - Header: For planning a trip, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -1067,7 +1082,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 69. book travel
+## 70. book travel
 
 - Header: For booking travel, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -1081,7 +1096,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 70. is there an AI that can plan my trip
+## 71. is there an AI that can plan my trip
 
 - Header: For planning your trip, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -1095,7 +1110,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 71. BOOK MY TRIP
+## 72. BOOK MY TRIP
 
 - Header: For booking your trip, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -1109,7 +1124,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 72. book a hotel in lisbon
+## 73. book a hotel in lisbon
 
 - Header: For booking a hotel in Lisbon, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -1123,7 +1138,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 73. I need AI to build an itinerary
+## 74. I need AI to build an itinerary
 
 - Header: For building an itinerary, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -1137,7 +1152,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 74. price comparison
+## 75. price comparison
 
 - Header: For shopping and comparing products, here's how each tool can help:
 - Intro: AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
@@ -1151,7 +1166,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced reviews and spec pages, with links you can check before you buy.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to narrow a product list to three options and name the spec that separates them.
 
-## 75. recommend products
+## 76. recommend products
 
 - Header: For recommending products, here's how each tool can help:
 - Intro: AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
@@ -1165,7 +1180,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced reviews and spec pages, with links you can check before you buy.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to narrow a product list to three options and name the spec that separates them.
 
-## 76. shop for running shoes
+## 77. shop for running shoes
 
 - Header: For shopping for running shoes, here's how each tool can help:
 - Intro: AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
@@ -1179,7 +1194,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced reviews and spec pages, with links you can check before you buy.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to narrow a product list to three options and name the spec that separates them.
 
-## 77. best tool for product recommendations
+## 78. best tool for product recommendations
 
 - Header: For shopping and comparing products, here's how each tool can help:
 - Intro: AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
@@ -1193,7 +1208,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced reviews and spec pages, with links you can check before you buy.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to narrow a product list to three options and name the spec that separates them.
 
-## 78. I need AI to shop for headphones
+## 79. I need AI to shop for headphones
 
 - Header: For shopping for headphones, here's how each tool can help:
 - Intro: AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
@@ -1207,7 +1222,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced reviews and spec pages, with links you can check before you buy.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to narrow a product list to three options and name the spec that separates them.
 
-## 79. accounts payable
+## 80. accounts payable
 
 - Header: For processing invoices and finance ops, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
@@ -1223,7 +1238,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced explainers of purchase-order matching, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to state which invoice lines a person should reject or question.
 
-## 80. process invoices
+## 81. process invoices
 
 - Header: For processing invoices, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
@@ -1239,7 +1254,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced explainers of purchase-order matching, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to state which invoice lines a person should reject or question.
 
-## 81. purchase order
+## 82. purchase order
 
 - Header: For help with a purchase order, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
@@ -1255,7 +1270,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced explainers of purchase-order matching, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to state which invoice lines a person should reject or question.
 
-## 82. invoices
+## 83. invoices
 
 - Header: For processing invoices and finance ops, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
@@ -1271,7 +1286,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced explainers of purchase-order matching, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to state which invoice lines a person should reject or question.
 
-## 83. best tool for finance ops
+## 84. best tool for finance ops
 
 - Header: For processing invoices and finance ops, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
@@ -1287,7 +1302,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced explainers of purchase-order matching, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to state which invoice lines a person should reject or question.
 
-## 84. knowledge base
+## 85. knowledge base
 
 - Header: For answering questions from your company wiki, here's how each tool can help:
 - Intro: AI agents can search an internal knowledge base and answer a policy question with the document to check.
@@ -1303,7 +1318,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for public sources when the company wiki does not cover a term, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft an answer that quotes only the document text you paste in.
 
-## 85. enterprise search
+## 86. enterprise search
 
 - Header: For answering questions from your company wiki, here's how each tool can help:
 - Intro: AI agents can search an internal knowledge base and answer a policy question with the document to check.
@@ -1319,7 +1334,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for public sources when the company wiki does not cover a term, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft an answer that quotes only the document text you paste in.
 
-## 86. policy lookup
+## 87. policy lookup
 
 - Header: For answering questions from your company wiki, here's how each tool can help:
 - Intro: AI agents can search an internal knowledge base and answer a policy question with the document to check.
@@ -1335,7 +1350,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for public sources when the company wiki does not cover a term, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft an answer that quotes only the document text you paste in.
 
-## 87. is there an AI that can answer from our wiki
+## 88. is there an AI that can answer from our wiki
 
 - Header: For answering questions from your company wiki, here's how each tool can help:
 - Intro: AI agents can search an internal knowledge base and answer a policy question with the document to check.
@@ -1351,7 +1366,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for public sources when the company wiki does not cover a term, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft an answer that quotes only the document text you paste in.
 
-## 88. document q&a
+## 89. document q&a
 
 - Header: For answering questions from your company wiki, here's how each tool can help:
 - Intro: AI agents can search an internal knowledge base and answer a policy question with the document to check.
@@ -1367,7 +1382,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for public sources when the company wiki does not cover a term, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft an answer that quotes only the document text you paste in.
 
-## 89. social media
+## 90. social media
 
 - Header: For managing social media, here's how each tool can help:
 - Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
@@ -1383,7 +1398,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a topic you might post about, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a caption so it makes one point and does not invent a statistic.
 
-## 90. best tool for social media posts
+## 91. best tool for social media posts
 
 - Header: For help with social media posts, here's how each tool can help:
 - Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
@@ -1399,7 +1414,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a topic you might post about, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a caption so it makes one point and does not invent a statistic.
 
-## 91. I need AI to draft a social media post
+## 92. I need AI to draft a social media post
 
 - Header: For drafting a social media post, here's how each tool can help:
 - Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
@@ -1415,7 +1430,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a topic you might post about, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a caption so it makes one point and does not invent a statistic.
 
-## 92. use an agent for social media
+## 93. use an agent for social media
 
 - Header: For managing social media, here's how each tool can help:
 - Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
@@ -1431,7 +1446,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a topic you might post about, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a caption so it makes one point and does not invent a statistic.
 
-## 93. MANAGE SOCIAL MEDIA
+## 94. MANAGE SOCIAL MEDIA
 
 - Header: For managing social media, here's how each tool can help:
 - Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
@@ -1447,7 +1462,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a topic you might post about, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a caption so it makes one point and does not invent a statistic.
 
-## 94. help desk ticket
+## 95. help desk ticket
 
 - Header: For handling IT help desk requests, here's how each tool can help:
 - Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
@@ -1461,7 +1476,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced vendor docs about a common IT error, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a help desk reply that says what was tried and what is still blocked.
 
-## 95. password reset
+## 96. password reset
 
 - Header: For help with a password reset, here's how each tool can help:
 - Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
@@ -1475,7 +1490,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced vendor docs about a common IT error, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a help desk reply that says what was tried and what is still blocked.
 
-## 96. it help
+## 97. it help
 
 - Header: For handling IT help desk requests, here's how each tool can help:
 - Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
@@ -1489,7 +1504,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced vendor docs about a common IT error, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a help desk reply that says what was tried and what is still blocked.
 
-## 97. best tool for the help desk
+## 98. best tool for the help desk
 
 - Header: For handling IT help desk requests, here's how each tool can help:
 - Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
@@ -1503,7 +1518,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced vendor docs about a common IT error, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a help desk reply that says what was tried and what is still blocked.
 
-## 98. I need AI to reset a password
+## 99. I need AI to reset a password
 
 - Header: For resetting a password, here's how each tool can help:
 - Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
@@ -1517,7 +1532,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced vendor docs about a common IT error, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a help desk reply that says what was tried and what is still blocked.
 
-## 99. phishing report
+## 100. phishing report
 
 - Header: For monitoring security threats, here's how each tool can help:
 - Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
@@ -1532,7 +1547,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced writeups of a threat name, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say whether a pasted email header is enough to call something phishing.
 
-## 100. threat hunting
+## 101. threat hunting
 
 - Header: For monitoring security threats, here's how each tool can help:
 - Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
@@ -1547,7 +1562,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced writeups of a threat name, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say whether a pasted email header is enough to call something phishing.
 
-## 101. security triage
+## 102. security triage
 
 - Header: For help with a security triage, here's how each tool can help:
 - Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
@@ -1562,7 +1577,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced writeups of a threat name, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say whether a pasted email header is enough to call something phishing.
 
-## 102. is there an AI that can review a phishing email
+## 103. is there an AI that can review a phishing email
 
 - Header: For reviewing a phishing email, here's how each tool can help:
 - Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
@@ -1577,7 +1592,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced writeups of a threat name, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say whether a pasted email header is enough to call something phishing.
 
-## 103. soc alert
+## 104. soc alert
 
 - Header: For help with a SOC alert, here's how each tool can help:
 - Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
@@ -1592,7 +1607,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced writeups of a threat name, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say whether a pasted email header is enough to call something phishing.
 
-## 104. literature review
+## 105. literature review
 
 - Header: For doing deep research, here's how each tool can help:
 - Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
@@ -1606,7 +1621,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked papers and pages on the question, so you can read them yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two summaries and list claims that still have no citation.
 
-## 105. deep research
+## 106. deep research
 
 - Header: For doing deep research, here's how each tool can help:
 - Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
@@ -1620,7 +1635,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked papers and pages on the question, so you can read them yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two summaries and list claims that still have no citation.
 
-## 106. market research
+## 107. market research
 
 - Header: For doing deep research, here's how each tool can help:
 - Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
@@ -1634,7 +1649,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked papers and pages on the question, so you can read them yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two summaries and list claims that still have no citation.
 
-## 107. competitive analysis
+## 108. competitive analysis
 
 - Header: For doing deep research, here's how each tool can help:
 - Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
@@ -1648,7 +1663,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked papers and pages on the question, so you can read them yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two summaries and list claims that still have no citation.
 
-## 108. best tool for a literature review
+## 109. best tool for a literature review
 
 - Header: For doing deep research, here's how each tool can help:
 - Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
@@ -1662,82 +1677,82 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked papers and pages on the question, so you can read them yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two summaries and list claims that still have no citation.
 
-## 109. study plan
+## 110. study plan
 
 - Header: For help with a study plan, here's how each tool can help:
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
 
-## 110. practice problems
+## 111. practice problems
 
 - Header: For help with practice problems, here's how each tool can help:
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
 
-## 111. personalized learning
-
-- Header: For getting tutoring help, here's how each tool can help:
-- Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
-- Domain: tutoring
-- Cards:
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
-  - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
-
-## 112. I need AI to tutor me
+## 112. personalized learning
 
 - Header: For getting tutoring help, here's how each tool can help:
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
 
-## 113. best tool for homework
+## 113. I need AI to tutor me
 
 - Header: For getting tutoring help, here's how each tool can help:
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
 
-## 114. sizzle reel
+## 114. best tool for homework
+
+- Header: For getting tutoring help, here's how each tool can help:
+- Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
+- Domain: tutoring
+- Cards:
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
+
+## 115. sizzle reel
 
 - Header: For help with a sizzle reel, here's how each tool can help:
 - Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
@@ -1754,7 +1769,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
-## 115. highlight reel
+## 116. highlight reel
 
 - Header: For help with a highlight reel, here's how each tool can help:
 - Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
@@ -1771,7 +1786,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
-## 116. youtube short
+## 117. youtube short
 
 - Header: For help with a YouTube short, here's how each tool can help:
 - Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
@@ -1788,7 +1803,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
-## 117. use an agent to clip my twitch stream
+## 118. use an agent to clip my twitch stream
 
 - Header: For clipping your Twitch stream, here's how each tool can help:
 - Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
@@ -1805,7 +1820,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
-## 118. best tool for a highlight reel
+## 119. best tool for a highlight reel
 
 - Header: For help with a highlight reel, here's how each tool can help:
 - Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
@@ -1822,7 +1837,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
-## 119. write code
+## 120. write code
 
 - Header: For writing code, here's how each tool can help:
 - Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
@@ -1838,7 +1853,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 120. pull request
+## 121. pull request
 
 - Header: For help with a pull request, here's how each tool can help:
 - Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
@@ -1854,7 +1869,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 121. coding agent
+## 122. coding agent
 
 - Header: For writing and reviewing code, here's how each tool can help:
 - Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
@@ -1870,7 +1885,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 122. code
+## 123. code
 
 - Header: For writing and reviewing code, here's how each tool can help:
 - Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
@@ -1886,7 +1901,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 123. I need AI to debug this function
+## 124. I need AI to debug this function
 
 - Header: For debugging this function, here's how each tool can help:
 - Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
@@ -1902,7 +1917,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 124. USE AI TO WRITE CODE
+## 125. USE AI TO WRITE CODE
 
 - Header: For writing code, here's how each tool can help:
 - Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
@@ -1918,7 +1933,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 125. automate my workflow
+## 126. automate my workflow
 
 - Header: For automating your workflow, here's how each tool can help:
 - Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
@@ -1933,7 +1948,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
 
-## 126. workflow
+## 127. workflow
 
 - Header: For automating repeated tasks, here's how each tool can help:
 - Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
@@ -1948,7 +1963,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
 
-## 127. best tool for workflow automation
+## 128. best tool for workflow automation
 
 - Header: For automating repeated tasks, here's how each tool can help:
 - Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
@@ -1963,7 +1978,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
 
-## 128. I need AI to automate a repeated task
+## 129. I need AI to automate a repeated task
 
 - Header: For automating a repeated task, here's how each tool can help:
 - Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
@@ -1978,7 +1993,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
 
-## 129. multi-tool workflow
+## 130. multi-tool workflow
 
 - Header: For help with a multi-tool workflow, here's how each tool can help:
 - Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
@@ -1993,7 +2008,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
 
-## 130. multi-agent crew
+## 131. multi-agent crew
 
 - Header: For splitting one job across several agents, here's how each tool can help:
 - Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
@@ -2010,7 +2025,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on multi-agent patterns, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a crew plan so you still approve anything that gets sent.
 
-## 131. agent crew
+## 132. agent crew
 
 - Header: For splitting one job across several agents, here's how each tool can help:
 - Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
@@ -2027,7 +2042,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on multi-agent patterns, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a crew plan so you still approve anything that gets sent.
 
-## 132. best tool for a multi-agent workflow
+## 133. best tool for a multi-agent workflow
 
 - Header: For splitting one job across several agents, here's how each tool can help:
 - Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
@@ -2044,7 +2059,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on multi-agent patterns, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a crew plan so you still approve anything that gets sent.
 
-## 133. I need AI to run an agent crew
+## 134. I need AI to run an agent crew
 
 - Header: For running an agent crew, here's how each tool can help:
 - Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
@@ -2061,7 +2076,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on multi-agent patterns, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a crew plan so you still approve anything that gets sent.
 
-## 134. vector database
+## 135. vector database
 
 - Header: For building a RAG pipeline, here's how each tool can help:
 - Intro: AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself.
@@ -2075,7 +2090,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced intros to vector search, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say which part of a retrieval answer is not backed by the passages you paste in.
 
-## 135. rag
+## 136. rag
 
 - Header: For building a RAG pipeline, here's how each tool can help:
 - Intro: AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself.
@@ -2089,7 +2104,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced intros to vector search, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say which part of a retrieval answer is not backed by the passages you paste in.
 
-## 136. best tool for a vector database
+## 137. best tool for a vector database
 
 - Header: For building a RAG pipeline, here's how each tool can help:
 - Intro: AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself.
@@ -2103,7 +2118,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced intros to vector search, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say which part of a retrieval answer is not backed by the passages you paste in.
 
-## 137. I need AI to crawl source pages
+## 138. I need AI to crawl source pages
 
 - Header: For crawling source pages, here's how each tool can help:
 - Intro: AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself.
@@ -2117,7 +2132,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced intros to vector search, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say which part of a retrieval answer is not backed by the passages you paste in.
 
-## 138. meeting notes
+## 139. meeting notes
 
 - Header: For turning a meeting into notes and tasks, here's how each tool can help:
 - Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
@@ -2132,7 +2147,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on meeting notes, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to extract tasks from a transcript and drop anything that was only an aside.
 
-## 139. action items from the transcript
+## 140. action items from the transcript
 
 - Header: For help with action items from the transcript, here's how each tool can help:
 - Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
@@ -2147,7 +2162,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on meeting notes, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to extract tasks from a transcript and drop anything that was only an aside.
 
-## 140. transcribe my meeting
+## 141. transcribe my meeting
 
 - Header: For transcribing your meeting, here's how each tool can help:
 - Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
@@ -2162,7 +2177,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on meeting notes, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to extract tasks from a transcript and drop anything that was only an aside.
 
-## 141. best tool for meeting notes
+## 142. best tool for meeting notes
 
 - Header: For turning a meeting into notes and tasks, here's how each tool can help:
 - Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
@@ -2177,7 +2192,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on meeting notes, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to extract tasks from a transcript and drop anything that was only an aside.
 
-## 142. browser agent
+## 143. browser agent
 
 - Header: For automating steps in a web browser, here's how each tool can help:
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
@@ -2192,7 +2207,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on browser automation limits, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to review a click-path and name the step that should stop at a captcha.
 
-## 143. fill forms
+## 144. fill forms
 
 - Header: For filling forms, here's how each tool can help:
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
@@ -2207,7 +2222,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on browser automation limits, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to review a click-path and name the step that should stop at a captcha.
 
-## 144. computer use
+## 145. computer use
 
 - Header: For automating steps in a web browser, here's how each tool can help:
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
@@ -2222,7 +2237,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on browser automation limits, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to review a click-path and name the step that should stop at a captcha.
 
-## 145. I need AI to run a browser task
+## 146. I need AI to run a browser task
 
 - Header: For running a browser task, here's how each tool can help:
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
@@ -2237,7 +2252,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on browser automation limits, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to review a click-path and name the step that should stop at a captcha.
 
-## 146. browser
+## 147. browser
 
 - Header: For automating steps in a web browser, here's how each tool can help:
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
@@ -2252,7 +2267,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on browser automation limits, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to review a click-path and name the step that should stop at a captcha.
 
-## 147. game npcs
+## 148. game npcs
 
 - Header: For adding an in-game character that can talk, here's how each tool can help:
 - Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
@@ -2262,14 +2277,14 @@
   - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
   - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
   - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
-  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
+  - Bitpart — Specialist · Docs checked — Bitpart supplies an engine and SDKs for a character that talks in a game.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of character voice, forbidden topics, and sample lines.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of NPC lines, the trigger, and whether the game may say them.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on dialogue design, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a character line so it stays in the voice you described.
 
-## 148. npc dialogue
+## 149. npc dialogue
 
 - Header: For help with NPC dialogue, here's how each tool can help:
 - Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
@@ -2286,7 +2301,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on dialogue design, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a character line so it stays in the voice you described.
 
-## 149. in-game character
+## 150. in-game character
 
 - Header: For help with an in-game character, here's how each tool can help:
 - Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
@@ -2303,7 +2318,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on dialogue design, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a character line so it stays in the voice you described.
 
-## 150. best tool for game NPCs
+## 151. best tool for game NPCs
 
 - Header: For adding an in-game character that can talk, here's how each tool can help:
 - Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
@@ -2313,14 +2328,14 @@
   - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
   - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
   - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
-  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
+  - Bitpart — Specialist · Docs checked — Bitpart supplies an engine and SDKs for a character that talks in a game.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of character voice, forbidden topics, and sample lines.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of NPC lines, the trigger, and whether the game may say them.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on dialogue design, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a character line so it stays in the voice you described.
 
-## 151. NPC
+## 152. NPC
 
 - Header: For adding an in-game character that can talk, here's how each tool can help:
 - Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
@@ -2337,33 +2352,35 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on dialogue design, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a character line so it stays in the voice you described.
 
-## 152. AI for my small business
+## 153. AI for my small business
 
 - Header: For help with your small business, here's how each tool can help:
 - Intro: AI assistants can't run a small business for you, but they can draft a customer reply, outline a week of posts, and list the bookkeeping you still check.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break your small business into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for your small business.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track your small business.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on your small business with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for your small business.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a customer reply and a short list of bookkeeping you still check.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a weekly checklist of posts, invoices, and customer replies for a small business.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of customers, the next reply, and the bookkeeping item still open.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced checklists for a small-business week, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one customer reply, one post, and the bookkeeping step you still do yourself.
 
-## 153. best AI tool for real estate
+## 154. best AI tool for real estate
 
-- Header: For help with real estate, here's how each tool can help:
-- Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
-- Domain: rank-property-deals
+- Header: For finding AI tools for real estate, here's how each tool can help:
+- Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
+- Domain: real-estate
 - Cards:
-  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
-  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
   - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a real estate deal into numbers you can compare before you rank it.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of rental or flip figures to gather before you sort deals.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that lines up price, rent, and rehab so you can rank deals.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced explanations of cash-flow terms, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two deal writeups and say which figures are still missing.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers the deal numbers, the listing video, and the outreach.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of properties, the deal figure, the listing video, and the next owner note.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on deal terms, listing video, and owner outreach, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say which of the deal, the listing video, or the owner outreach is still unfinished.
 
-## 154. Help me with my resume
+## 155. Help me with my resume
 
 - Header: For writing your resume, here's how each tool can help:
 - Intro: AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you.
@@ -2378,7 +2395,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced examples of resume structure, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a bullet so it names the work and the result, and you keep the facts.
 
-## 155. USE AI TO WRITE EMAILS
+## 156. USE AI TO WRITE EMAILS
 
 - Header: For writing emails, here's how each tool can help:
 - Intro: AI assistants can help with writing emails by drafting a first version, listing what to change, and leaving the final wording to you.
@@ -2389,7 +2406,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on writing emails with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for writing emails.
 
-## 156. plan a wedding
+## 157. plan a wedding
 
 - Header: For planning a wedding, here's how each tool can help:
 - Intro: AI assistants can help with planning a wedding by laying out the steps, comparing options, and drafting the messages you still send yourself.
@@ -2400,7 +2417,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on planning a wedding with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for planning a wedding.
 
-## 157. write a cookbook
+## 158. write a cookbook
 
 - Header: For writing a cookbook, here's how each tool can help:
 - Intro: AI assistants can help with writing a cookbook by drafting a first version, listing what to change, and leaving the final wording to you.
@@ -2411,7 +2428,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on writing a cookbook with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for writing a cookbook.
 
-## 158. train my dog
+## 159. train my dog
 
 - Header: For training your dog, here's how each tool can help:
 - Intro: AI assistants can't train your dog for you, but they can build a checklist and remind you when each step is due.
@@ -2422,7 +2439,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on training your dog with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for training your dog.
 
-## 159. organize my garage
+## 160. organize my garage
 
 - Header: For organizing your garage, here's how each tool can help:
 - Intro: AI assistants can't organize your garage for you, but they can build a checklist and remind you when each step is due.
@@ -2433,7 +2450,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on organizing your garage with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for organizing your garage.
 
-## 160. bake a cake
+## 161. bake a cake
 
 - Header: For baking a cake, here's how each tool can help:
 - Intro: AI assistants can't bake a cake for you, but they can build a checklist and remind you when each step is due.
@@ -2444,18 +2461,18 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on baking a cake with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for baking a cake.
 
-## 161. meal prep for the week
+## 162. meal prep for the week
 
 - Header: For help with meal prep for the week, here's how each tool can help:
 - Intro: AI assistants can't cook the week's meals for you, but they can plan the menu, list the ingredients, and write the prep steps.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break meal prep for the week into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for meal prep for the week.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track meal prep for the week.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on meal prep for the week with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for meal prep for the week.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan a week of meals from what you already have, and list the prep steps.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a grocery list grouped by the meals you will cook this week.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of meals, ingredients, and which day you prep them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced prep times and storage notes for the meals you chose, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shrink a week of meals so the ingredients overlap and you cook less.
 
-## 162. fix my car
+## 163. fix my car
 
 - Header: For fixing your car, here's how each tool can help:
 - Intro: AI assistants can't fix your car for you, but they can build a checklist and remind you when each step is due.
@@ -2466,7 +2483,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on fixing your car with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for fixing your car.
 
-## 163. paint the bedroom
+## 164. paint the bedroom
 
 - Header: For painting the bedroom, here's how each tool can help:
 - Intro: AI assistants can't paint the bedroom for you, but they can build a checklist and remind you when each step is due.
@@ -2477,7 +2494,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on painting the bedroom with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for painting the bedroom.
 
-## 164. plan a birthday party
+## 165. plan a birthday party
 
 - Header: For planning a birthday party, here's how each tool can help:
 - Intro: AI assistants can help with planning a birthday party by laying out the steps, comparing options, and drafting the messages you still send yourself.
@@ -2488,18 +2505,18 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on planning a birthday party with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for planning a birthday party.
 
-## 165. start a book club
+## 166. start a book club
 
 - Header: For starting a book club, here's how each tool can help:
 - Intro: AI assistants can suggest the next book, draft discussion questions, and outline how the club meets.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break starting a book club into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for starting a book club.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track starting a book club.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on starting a book club with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for starting a book club.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to suggest the next book and draft questions the club can discuss.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for the next book club meeting, including the book and who hosts.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of books, meeting dates, and discussion questions.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced reading notes on the club's next book, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a book into five discussion questions the club can edit.
 
-## 166. learn piano
+## 167. learn piano
 
 - Header: For learning piano, here's how each tool can help:
 - Intro: AI assistants can help with learning piano by explaining the next idea, drafting a little practice, and keeping a list of what you still want to review.
@@ -2510,7 +2527,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on learning piano with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for learning piano.
 
-## 167. pack for a move
+## 168. pack for a move
 
 - Header: For packing for a move, here's how each tool can help:
 - Intro: AI assistants can't pack for a move, but they can build a checklist and remind you when each step is due.
@@ -2521,29 +2538,29 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on packing for a move with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for packing for a move.
 
-## 168. name a baby
+## 169. name a baby
 
 - Header: For naming a baby, here's how each tool can help:
 - Intro: AI assistants can suggest baby names and say what each one means, and you make the choice.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break naming a baby into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for naming a baby.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track naming a baby.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on naming a baby with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for naming a baby.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to suggest baby names that fit the style you describe and say what each one means.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a short list of baby names with the meaning next to each one.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of baby names, meanings, and the ones you want to keep.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a baby name's origin, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two baby names and list what you still want to decide.
 
-## 169. grocery list
+## 170. grocery list
 
 - Header: For help with a grocery list, here's how each tool can help:
 - Intro: AI assistants can group a grocery list and note what you still buy at the store.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a grocery list into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a grocery list.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a grocery list.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a grocery list with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a grocery list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to group a grocery list by store section and mark what you might already have.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of groceries split into produce, cold, and pantry.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of items, the aisle, and whether you still need to buy them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced swaps when an item on the grocery list is out, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to cut a grocery list down to what the meals actually require.
 
-## 170. water the garden
+## 171. water the garden
 
 - Header: For watering the garden, here's how each tool can help:
 - Intro: AI assistants can't water the garden for you, but they can build a checklist and remind you when each step is due.
@@ -2554,7 +2571,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on watering the garden with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for watering the garden.
 
-## 171. fold the laundry
+## 172. fold the laundry
 
 - Header: For folding the laundry, here's how each tool can help:
 - Intro: AI assistants can't fold the laundry for you, but they can build a checklist and remind you when each step is due.
@@ -2565,7 +2582,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on folding the laundry with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for folding the laundry.
 
-## 172. taxes?
+## 173. taxes?
 
 - Header: For doing your taxes, here's how each tool can help:
 - Intro: AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.
@@ -2581,7 +2598,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages about common deductions, with links you can check before you file.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft questions about credits and deductions for a tax pro to answer.
 
-## 173. plan a trip!
+## 174. plan a trip!
 
 - Header: For planning a trip, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -2595,7 +2612,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 174. my inbox...
+## 175. my inbox...
 
 - Header: For managing your email inbox, here's how each tool can help:
 - Intro: AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends.
@@ -2610,7 +2627,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on inbox triage habits, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a short reply to one thread and list what you should not promise.
 
-## 175. write code???
+## 176. write code???
 
 - Header: For writing code, here's how each tool can help:
 - Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
@@ -2626,7 +2643,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 176. what AI can file my taxes
+## 177. what AI can file my taxes
 
 - Header: For filing your taxes, here's how each tool can help:
 - Intro: AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.
@@ -2642,7 +2659,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages about common deductions, with links you can check before you file.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft questions about credits and deductions for a tax pro to answer.
 
-## 177. how do I plan a trip
+## 178. how do I plan a trip
 
 - Header: For planning a trip, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -2656,7 +2673,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 178. which tool should screen candidates
+## 179. which tool should screen candidates
 
 - Header: For screening candidates, here's how each tool can help:
 - Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
@@ -2671,7 +2688,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a skill you are hiring for, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft candidate outreach that a recruiter can edit before it is sent.
 
-## 179. investmnt portfolio
+## 180. investmnt portfolio
 
 - Header: For managing an investment portfolio, here's how each tool can help:
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
@@ -2688,7 +2705,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked explanations of index funds versus active funds you can read yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to spell out risk questions to ask before moving money between accounts.
 
-## 180. custmer support
+## 181. custmer support
 
 - Header: For handling customer support tickets, here's how each tool can help:
 - Intro: AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle.
@@ -2704,7 +2721,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced help-center pages about refunds and shipping, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a calm reply that states what is known and what a person must still decide.
 
-## 181. litrature review
+## 182. litrature review
 
 - Header: For doing deep research, here's how each tool can help:
 - Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
@@ -2718,7 +2735,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked papers and pages on the question, so you can read them yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two summaries and list claims that still have no citation.
 
-## 182. emial inbox
+## 183. emial inbox
 
 - Header: For managing an email inbox, here's how each tool can help:
 - Intro: AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends.
@@ -2733,7 +2750,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on inbox triage habits, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a short reply to one thread and list what you should not promise.
 
-## 183. so I was wondering if there is an AI that can help me do my taxes this year please
+## 184. so I was wondering if there is an AI that can help me do my taxes this year please
 
 - Header: For doing your taxes this year, here's how each tool can help:
 - Intro: AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.
@@ -2749,7 +2766,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages about common deductions, with links you can check before you file.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft questions about credits and deductions for a tax pro to answer.
 
-## 184. hey can you use an agent for my email inbox, I keep missing replies
+## 185. hey can you use an agent for my email inbox, I keep missing replies
 
 - Header: For managing your email inbox, here's how each tool can help:
 - Intro: AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends.
@@ -2764,7 +2781,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on inbox triage habits, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a short reply to one thread and list what you should not promise.
 
-## 185. ok I need AI to plan a trip to Lisbon and also compare hotels and maybe flights
+## 186. ok I need AI to plan a trip to Lisbon and also compare hotels and maybe flights
 
 - Header: For planning a trip to Lisbon and also comparing hotels and maybe flights, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -2778,7 +2795,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 186. I have been trying to figure out my investment portfolio and I just need something that can compare fees
+## 187. I have been trying to figure out my investment portfolio and I just need something that can compare fees
 
 - Header: For managing your investment portfolio, here's how each tool can help:
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
@@ -2795,7 +2812,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked explanations of index funds versus active funds you can read yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to spell out risk questions to ask before moving money between accounts.
 
-## 187. please find an agent that will write a blog post about sourdough
+## 188. please find an agent that will write a blog post about sourdough
 
 - Header: For writing a blog post about sourdough, here's how each tool can help:
 - Intro: AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit.
@@ -2810,7 +2827,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages you can cite while drafting, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to revise a paragraph so the claim is narrower and easier to check.
 
-## 188. can you help me with a password reset for a new hire
+## 189. can you help me with a password reset for a new hire
 
 - Header: For help with a password reset for a new hire, here's how each tool can help:
 - Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
@@ -2824,7 +2841,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced vendor docs about a common IT error, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a help desk reply that says what was tried and what is still blocked.
 
-## 189. is there an AI that can turn meeting notes into action items
+## 190. is there an AI that can turn meeting notes into action items
 
 - Header: For turning meeting notes into action items, here's how each tool can help:
 - Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
@@ -2839,7 +2856,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on meeting notes, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to extract tasks from a transcript and drop anything that was only an aside.
 
-## 190. best tool for invoices
+## 191. best tool for invoices
 
 - Header: For processing invoices and finance ops, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
@@ -2855,7 +2872,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced explainers of purchase-order matching, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to state which invoice lines a person should reject or question.
 
-## 191. use an agent to fill forms on a website
+## 192. use an agent to fill forms on a website
 
 - Header: For filling forms on a website, here's how each tool can help:
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
@@ -2870,7 +2887,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on browser automation limits, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to review a click-path and name the step that should stop at a captcha.
 
-## 192. I want an agent that will source candidates
+## 193. I want an agent that will source candidates
 
 - Header: For sourcing candidates, here's how each tool can help:
 - Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
@@ -2885,7 +2902,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a skill you are hiring for, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft candidate outreach that a recruiter can edit before it is sent.
 
-## 193. find me a tool for threat hunting
+## 194. find me a tool for threat hunting
 
 - Header: For monitoring security threats, here's how each tool can help:
 - Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
@@ -2900,7 +2917,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced writeups of a threat name, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say whether a pasted email header is enough to call something phishing.
 
-## 194. looking for an AI tool to book travel
+## 195. looking for an AI tool to book travel
 
 - Header: For booking travel, here's how each tool can help:
 - Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
@@ -2914,7 +2931,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on neighborhoods and transit, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two hotel descriptions and say what is still unconfirmed.
 
-## 195. help me draft a cold email
+## 196. help me draft a cold email
 
 - Header: For drafting a cold email, here's how each tool can help:
 - Intro: AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent.
@@ -2930,7 +2947,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a company you might email, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a cold email so the ask is specific and you still choose what gets sent.
 
-## 196. agent for my calendar
+## 197. agent for my calendar
 
 - Header: For scheduling and admin, here's how each tool can help:
 - Intro: AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head.
@@ -2945,7 +2962,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on scheduling across time zones, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a pile of constraints into two or three times you could offer.
 
-## 197. AI for NPCs
+## 198. AI for NPCs
 
 - Header: For adding an in-game character that can talk, here's how each tool can help:
 - Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
@@ -2962,7 +2979,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on dialogue design, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a character line so it stays in the voice you described.
 
-## 198. tool for a vector database
+## 199. tool for a vector database
 
 - Header: For building a RAG pipeline, here's how each tool can help:
 - Intro: AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself.
@@ -2976,7 +2993,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced intros to vector search, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say which part of a retrieval answer is not backed by the passages you paste in.
 
-## 199. something for workflow automation
+## 200. something for workflow automation
 
 - Header: For automating repeated tasks, here's how each tool can help:
 - Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
@@ -2991,7 +3008,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
 
-## 200. who can clip a youtube short
+## 201. who can clip a youtube short
 
 - Header: For clipping a YouTube short, here's how each tool can help:
 - Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
@@ -3008,7 +3025,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
 
-## 201. ?? taxes
+## 202. ?? taxes
 
 - Header: For doing your taxes, here's how each tool can help:
 - Intro: AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.
@@ -3024,7 +3041,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages about common deductions, with links you can check before you file.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft questions about credits and deductions for a tax pro to answer.
 
-## 202. portfolio!
+## 203. portfolio!
 
 - Header: For managing an investment portfolio, here's how each tool can help:
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
@@ -3041,7 +3058,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked explanations of index funds versus active funds you can read yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to spell out risk questions to ask before moving money between accounts.
 
-## 203. DEBUG MY CODE
+## 204. DEBUG MY CODE
 
 - Header: For debugging your code, here's how each tool can help:
 - Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
@@ -3057,7 +3074,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 204. workflow?
+## 205. workflow?
 
 - Header: For automating repeated tasks, here's how each tool can help:
 - Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
@@ -3072,7 +3089,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
 
-## 205. shop
+## 206. shop
 
 - Header: For shopping and comparing products, here's how each tool can help:
 - Intro: AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
@@ -3086,7 +3103,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced reviews and spec pages, with links you can check before you buy.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to narrow a product list to three options and name the spec that separates them.
 
-## 206. research
+## 207. research
 
 - Header: For doing deep research, here's how each tool can help:
 - Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
@@ -3100,7 +3117,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for linked papers and pages on the question, so you can read them yourself.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to compare two summaries and list claims that still have no citation.
 
-## 207. meeting
+## 208. meeting
 
 - Header: For turning a meeting into notes and tasks, here's how each tool can help:
 - Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
@@ -3115,7 +3132,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on meeting notes, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to extract tasks from a transcript and drop anything that was only an aside.
 
-## 208. invoice
+## 209. invoice
 
 - Header: For processing invoices and finance ops, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
@@ -3131,7 +3148,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced explainers of purchase-order matching, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to state which invoice lines a person should reject or question.
 
-## 209. refund
+## 210. refund
 
 - Header: For handling customer support tickets, here's how each tool can help:
 - Intro: AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle.
@@ -3147,7 +3164,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced help-center pages about refunds and shipping, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a calm reply that states what is known and what a person must still decide.
 
-## 210. phishing
+## 211. phishing
 
 - Header: For monitoring security threats, here's how each tool can help:
 - Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
@@ -3162,22 +3179,22 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced writeups of a threat name, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to say whether a pasted email header is enough to call something phishing.
 
-## 211. tutor
+## 212. tutor
 
 - Header: For getting tutoring help, here's how each tool can help:
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
 
-## 212. calendar
+## 213. calendar
 
 - Header: For scheduling and admin, here's how each tool can help:
 - Intro: AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head.
@@ -3192,7 +3209,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on scheduling across time zones, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a pile of constraints into two or three times you could offer.
 
-## 213. wiki
+## 214. wiki
 
 - Header: For answering questions from your company wiki, here's how each tool can help:
 - Intro: AI agents can search an internal knowledge base and answer a policy question with the document to check.
@@ -3208,7 +3225,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for public sources when the company wiki does not cover a term, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft an answer that quotes only the document text you paste in.
 
-## 214. make a cinematic video
+## 215. make a cinematic video
 
 - Header: For making a cinematic video, here's how each tool can help:
 - Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
@@ -3224,7 +3241,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on camera moves and prompting for AI video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene into a shot list with camera moves and a prompt you can edit.
 
-## 215. AI video with camera moves
+## 216. AI video with camera moves
 
 - Header: For making an AI video with camera moves, here's how each tool can help:
 - Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
@@ -3240,7 +3257,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on camera moves and prompting for AI video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene into a shot list with camera moves and a prompt you can edit.
 
-## 216. text to video
+## 217. text to video
 
 - Header: For making a video from text, here's how each tool can help:
 - Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
@@ -3248,15 +3265,15 @@
 - Cards:
   - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
   - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
-  - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
   - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a shot list, name the camera move, and draft the prompt you paste into a video app.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of shot, camera move, and the prompt you still write.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of shots, camera moves, and the prompt for each one.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on camera moves and prompting for AI video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene into a shot list with camera moves and a prompt you can edit.
 
-## 217. image to video
+## 218. image to video
 
 - Header: For making a video from an image, here's how each tool can help:
 - Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
@@ -3272,7 +3289,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on camera moves and prompting for AI video, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a scene into a shot list with camera moves and a prompt you can edit.
 
-## 218. text to speech
+## 219. text to speech
 
 - Header: For making speech from text, here's how each tool can help:
 - Intro: AI agents can draft a script and describe the voice you want, so you generate the audio and check it yourself.
@@ -3285,39 +3302,193 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on voice generation, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a script so the line is short enough to read aloud.
 
-## 219. make a 3d model
+## 220. make a 3d model
 
-- Header: For making a 3d model, here's how each tool can help:
-- Intro: AI agents can describe the image or 3D asset you want and list what to change, so you generate it and check it yourself.
-- Domain: image-3d
+- Header: For making a 3D model, here's how each tool can help:
+- Intro: AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: make-3d
 - Cards:
   - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of subject, style, and the detail you still want in the 3D model.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of 3D prompts, the result, and what you would change.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on prompting for 3D assets, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to tighten a 3D prompt so the subject, scale, and style are specific.
+
+## 221. text to image
+
+- Header: For making an image from text, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
   - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
   - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image or 3D asset you want and list what to change after you generate it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of subject, style, and the detail you still want in the picture.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of prompts, the result, and what you would change.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on prompting for images or 3D, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to tighten a prompt so the subject, style, and framing are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of image prompts, the result, and what you would change.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on prompting for images, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to tighten an image prompt so the subject, style, and framing are specific.
 
-## 220. edit listing videos for real estate
+## 222. concept art
+
+- Header: For making concept art, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of subject, style, and the detail you still want in the picture.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of image prompts, the result, and what you would change.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on prompting for images, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to tighten an image prompt so the subject, style, and framing are specific.
+
+## 223. edit listing videos for real estate
 
 - Header: For editing listing videos for real estate, here's how each tool can help:
-- Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
-- Domain: game-creative
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
 - Cards:
-  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
-  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
-  - Descript — Specialist · Docs checked — Descript edits a video by changing the words in its transcript.
-  - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of clip length, caption, and the shot you still need.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of timecodes, captions, and which clip is ready.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on framing and captions for short video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to pick which moments in a long video are worth cutting into a short clip.
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
 
-## 221. screen a resume
+## 224. make a video tour of a house
+
+- Header: For making a video tour of a house, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie builds a virtual tour of the home from 360 photos.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
+
+## 225. realtor video editing
+
+- Header: For editing a realtor video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
+
+## 226. property walkthrough video
+
+- Header: For making a property walkthrough video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
+
+## 227. turn listing photos into a video
+
+- Header: For turning listing photos into a video, here's how each tool can help:
+- Intro: AI agents can turn listing photos into a home tour, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Canva — Specialist · Docs checked — Canva turns listing photos into a video from a real estate template and can add music.
+  - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough-style video with music and text.
+  - CapCut — Specialist · Docs checked — CapCut turns property photos into a realtor slideshow with captions and music.
+  - Descript — Specialist · Docs checked — Descript turns property photos or clips into a listing video with room labels and music.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
+
+## 228. AI avatar video
+
+- Header: For making an AI avatar video, here's how each tool can help:
+- Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
+- Domain: avatar-video
+- Cards:
+  - HeyGen — Specialist · Docs checked — HeyGen generates an avatar or spokesperson video from a script.
+  - Synthesia — Specialist · Docs checked — Synthesia generates an avatar video from a script and a stock or custom avatar.
+  - D-ID — Specialist · Docs checked — D-ID turns a photo and a script into a talking-head video.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script an avatar will speak, and you record nothing on camera.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of script, avatar, and the take you still approve.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of lines, the avatar, and whether the take is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on avatar video, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a spokesperson script so the avatar can say it in one take.
+
+## 229. talking head video
+
+- Header: For making a talking-head video, here's how each tool can help:
+- Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
+- Domain: avatar-video
+- Cards:
+  - D-ID — Specialist · Docs checked — D-ID turns a photo and a script into a talking-head video.
+  - HeyGen — Specialist · Docs checked — HeyGen generates an avatar or spokesperson video from a script.
+  - Synthesia — Specialist · Docs checked — Synthesia generates an avatar video from a script and a stock or custom avatar.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script an avatar will speak, and you record nothing on camera.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of script, avatar, and the take you still approve.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of lines, the avatar, and whether the take is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on avatar video, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a spokesperson script so the avatar can say it in one take.
+
+## 230. spokesperson video
+
+- Header: For making a spokesperson video, here's how each tool can help:
+- Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
+- Domain: avatar-video
+- Cards:
+  - HeyGen — Specialist · Docs checked — HeyGen generates an avatar or spokesperson video from a script.
+  - D-ID — Specialist · Docs checked — D-ID turns a photo and a script into a talking-head video.
+  - Synthesia — Specialist · Docs checked — Synthesia generates an avatar video from a script and a stock or custom avatar.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script an avatar will speak, and you record nothing on camera.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of script, avatar, and the take you still approve.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of lines, the avatar, and whether the take is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on avatar video, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a spokesperson script so the avatar can say it in one take.
+
+## 231. video of me talking without filming
+
+- Header: For making a video of you talking without filming, here's how each tool can help:
+- Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
+- Domain: avatar-video
+- Cards:
+  - D-ID — Specialist · Docs checked — D-ID turns a photo and a script into a talking-head video.
+  - Synthesia — Specialist · Docs checked — Synthesia generates an avatar video from a script and a stock or custom avatar.
+  - HeyGen — Specialist · Docs checked — HeyGen generates an avatar or spokesperson video from a script.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script an avatar will speak, and you record nothing on camera.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of script, avatar, and the take you still approve.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of lines, the avatar, and whether the take is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on avatar video, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a spokesperson script so the avatar can say it in one take.
+
+## 232. screen a resume
 
 - Header: For screening a resume, here's how each tool can help:
 - Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
@@ -3332,7 +3503,7 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a skill you are hiring for, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft candidate outreach that a recruiter can edit before it is sent.
 
-## 222. write my resume
+## 233. write my resume
 
 - Header: For writing your resume, here's how each tool can help:
 - Intro: AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you.
@@ -3347,7 +3518,55 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced examples of resume structure, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a bullet so it names the work and the result, and you keep the facts.
 
-## 223. cheap AI model for coding
+## 234. k-5 math tutor
+
+- Header: For finding a K-5 math tutor, here's how each tool can help:
+- Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
+- Domain: tutoring
+- Cards:
+  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
+  - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
+
+## 235. math for kids
+
+- Header: For finding math help for kids, here's how each tool can help:
+- Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
+- Domain: tutoring
+- Cards:
+  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
+  - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
+
+## 236. 3rd grade math
+
+- Header: For tutoring 3rd grade math, here's how each tool can help:
+- Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
+- Domain: tutoring
+- Cards:
+  - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
+  - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced lessons on the topic, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to show a worked example and then a similar problem with the answer withheld.
+
+## 237. cheap AI model for coding
 
 - Header: For help with a cheap AI model for coding, here's how each tool can help:
 - Intro: AI agents can compare coding models by what the docs say each one does, so you pick one and still review the code it writes.
@@ -3363,9 +3582,9 @@
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
 
-## 224. deepseek alternative
+## 238. deepseek alternative
 
-- Header: For help with a DeepSeek alternative, here's how each tool can help:
+- Header: For finding a DeepSeek alternative, here's how each tool can help:
 - Intro: AI agents can compare coding models by what the docs say each one does, so you pick one and still review the code it writes.
 - Domain: coding-agents
 - Cards:
@@ -3377,4 +3596,39 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a debugging checklist before you change a repo.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a doc that tracks the failing test, the hypothesis, and the diff.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the error or library, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to fill in a function from the code before and after the gap, then explain the edit.
+
+## 239. chatgpt alternative
+
+- Header: For finding a ChatGPT alternative, here's how each tool can help:
+- Intro: AI assistants can compare other tools for the same job, and you still pick the one to try.
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare tools that do this job and name what you would give up by switching.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of tools, the job each one does, and the one you want to try.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on tools that do this job, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list what you use the tool for and which part another tool would still miss.
+
+## 240. learn spanish
+
+- Header: For learning spanish, here's how each tool can help:
+- Intro: AI agents can practice a language with you, explain a mistake, and suggest the next drill.
+- Domain: learn-language
+- Cards:
+  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to practice a short dialogue and explain the mistake in the last sentence.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of words to review and a few sentences to try aloud.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of phrases, the correction, and what to practice next.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on the language, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to correct one sentence and give a similar one to try.
+
+## 241. language practice
+
+- Header: For practicing a language, here's how each tool can help:
+- Intro: AI agents can practice a language with you, explain a mistake, and suggest the next drill.
+- Domain: learn-language
+- Cards:
+  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to practice a short dialogue and explain the mistake in the last sentence.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of words to review and a few sentences to try aloud.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of phrases, the correction, and what to practice next.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on the language, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to correct one sentence and give a similar one to try.

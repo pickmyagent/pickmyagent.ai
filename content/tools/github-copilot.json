@@ -5,7 +5,7 @@
   "websiteUrl": "https://github.com/features/copilot",
   "affiliateUrl": null,
   "shortDescription": "GitHub's AI coding agent for writing code and opening pull requests.",
-  "longDescription": "GitHub's Copilot page calls it your AI coding agent, says it writes code with AI, and says agents can be directed from issue to merge. The text we fetched did not include a dollar price. We did not subscribe.",
+  "longDescription": "GitHub's Copilot page calls it your AI coding agent, says it writes code with AI, and says agents can be directed from issue to merge. That page does not list a dollar price.",
   "categories": [
     "coding-agents"
   ],

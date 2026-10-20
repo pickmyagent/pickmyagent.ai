@@ -4,13 +4,13 @@
   "name": "Midjourney",
   "websiteUrl": "https://www.midjourney.com/",
   "affiliateUrl": null,
-  "shortDescription": "Image generation. Official plans we read are paid subscriptions, with no free tier on the comparison.",
+  "shortDescription": "Image generation from a text prompt. The plans on their site are paid subscriptions.",
   "longDescription": "Midjourney generates images. The plan comparison lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article. We did not subscribe.",
   "categories": [
     "creative-media"
   ],
   "useCaseTags": [
-    "image-3d"
+    "image-generation"
   ],
   "toolTypes": [
     "creative"
@@ -70,6 +70,6 @@
     "finalUrl": "https://www.midjourney.com/"
   },
   "useCaseFit": {
-    "image-3d": "Draws images from a text prompt."
+    "make-images": "Draws images from a text prompt."
   }
 }

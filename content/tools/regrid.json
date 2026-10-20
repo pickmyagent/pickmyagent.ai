@@ -27,7 +27,7 @@
   "name": "Regrid",
   "websiteUrl": "https://regrid.com/",
   "shortDescription": "Nationwide parcel boundaries and owner fields, sold by county or state.",
-  "longDescription": "Regrid sells standardized US parcel geometry and assessment fields. The data store prices files by county or state, and the docs also point to API and property-app plans. There is no single monthly price. We checked the store and docs on October 16, 2026 and did not buy a file.",
+  "longDescription": "Regrid sells standardized US parcel geometry and assessment fields. The data store prices files by county or state, and the docs also point to API and property-app plans. There is no single monthly price.",
   "categories": [
     "real-estate"
   ],

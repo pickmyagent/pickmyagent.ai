@@ -4,8 +4,8 @@
   "name": "Inworld",
   "websiteUrl": "https://inworld.ai/",
   "affiliateUrl": null,
-  "shortDescription": "Character AI for games and interactive agents. Pricing page included a $0 sample; not hands-on tested.",
-  "longDescription": "Inworld builds character AI for games and interactive experiences. The pricing crawl included a $0 sample among paid usage samples. Confirm the current free allotment on the pricing page. We checked docs and did not run a hands-on session.",
+  "shortDescription": "Character AI for games and interactive agents.",
+  "longDescription": "Inworld builds character AI for games and interactive experiences. A $0 sample appeared among paid usage samples. Confirm the current free allotment on the pricing page.",
   "categories": [
     "game-ai"
   ],

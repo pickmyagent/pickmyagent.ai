@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.langchain.com/",
   "affiliateUrl": null,
   "shortDescription": "Open-source libraries for agents, chains, and tool calling, plus optional LangSmith traces.",
-  "longDescription": "LangChain is a set of libraries for composing agent and tool-calling workflows. LangSmith, the tracing product on the same site, is separate: the pricing page we read listed a $0 developer plan and a paid Plus plan. We imported the Python package locally and did not call a model.",
+  "longDescription": "LangChain is a set of libraries for composing agent and tool-calling workflows. LangSmith, the tracing product on the same site, is separate, and its pricing page lists a $0 developer plan and a paid Plus plan.",
   "categories": [
     "agent-frameworks"
   ],

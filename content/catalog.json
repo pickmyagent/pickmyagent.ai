@@ -233,7 +233,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-land"
+        "find-land",
+        "real-estate-overview"
       ],
       "toolTypes": [
         "other"
@@ -264,7 +265,8 @@
         "finalUrl": "https://www.acres.com/pricing"
       },
       "useCaseFit": {
-        "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus."
+        "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus.",
+        "real-estate": "Shows parcel maps and basic land insights before an owner lookup."
       }
     },
     {
@@ -341,7 +343,7 @@
       "websiteUrl": "https://www.apollo.io/",
       "affiliateUrl": null,
       "shortDescription": "Sales data and an AI assistant. The page cites 240 million contacts.",
-      "longDescription": "Apollo's pricing page describes data on 240 million contacts and 30 million companies, agents that run in the background, and an AI assistant. The text we fetched did not include a dollar price.",
+      "longDescription": "Apollo's pricing page describes data on 240 million contacts and 30 million companies, agents that run in the background, and an AI assistant. That page does not list a dollar price.",
       "categories": [
         "sales"
       ],
@@ -496,7 +498,7 @@
       "websiteUrl": "https://github.com/Significant-Gravitas/AutoGPT",
       "affiliateUrl": null,
       "shortDescription": "Open-source agent project with a platform beta. Site and repo checked; local install not run.",
-      "longDescription": "AutoGPT is an open-source agent project. We checked the GitHub repo and agpt.co/pricing. A platform beta release was published on October 14, 2026. We did not install it locally. The repo is the free path; hosted plans may be paid.",
+      "longDescription": "AutoGPT is an open-source agent project. A platform beta release was published on October 14, 2026. The repo is the free path, and hosted plans may be paid.",
       "categories": [
         "agent-frameworks",
         "coding-agents"
@@ -568,6 +570,80 @@
       "useCaseFit": {
         "coding-agents": "Runs an open-source agent loop toward a coding goal, and you review the output.",
         "multi-agent-workflows": "Open-source agent project that can try a multi-step goal you give it."
+      }
+    },
+    {
+      "id": "autoreel",
+      "slug": "autoreel",
+      "name": "AutoReel",
+      "websiteUrl": "https://www.autoreelapp.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Turns listing photos into a property video. The free plan includes 2 videos a month.",
+      "longDescription": "AutoReel's homepage says it turns property photos into portrait or landscape listing videos, and that you can add captions, music, and branding. Its FAQ says the free plan includes 2 watermarked videos a month with no credit card, and that Essential is $124 per quarter. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "listing-videos",
+        "real-estate-overview"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "FAQ: free plan is 2 watermarked videos a month. Essential is $124 per quarter, not a monthly price.",
+      "pricingUrl": "https://www.autoreelapp.com/faq/cost-effective-realtor-tools/does-autoreel-offer-a-free-plan-or-free-trial",
+      "docsUrl": "https://www.autoreelapp.com/",
+      "freeTier": true,
+      "freeTierNotes": "2 watermarked listing videos a month. No credit card required.",
+      "startingPrice": null,
+      "freeTrial": "7 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A realtor turning listing photos into a video",
+        "A vertical reel for Instagram or TikTok"
+      ],
+      "notIdealFor": [
+        "A confirmed monthly price",
+        "Ranking a deal or skip tracing an owner"
+      ],
+      "strength": "AutoReel's homepage says it turns property photos into listing videos with captions and music, and the free plan includes 2 videos a month.",
+      "weakness": "Paid plans are billed quarterly, and the free videos are watermarked.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Homepage and FAQ fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.autoreelapp.com/",
+        "https://www.autoreelapp.com/faq/creating-listing-videos/how-do-i-create-my-first-autoreel-listing-video-as-a-new-user",
+        "https://www.autoreelapp.com/faq/cost-effective-realtor-tools/does-autoreel-offer-a-free-plan-or-free-trial"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.autoreelapp.com/"
+      },
+      "useCaseFit": {
+        "listing-videos": "Turns listing photos into a property video with music and captions.",
+        "real-estate": "Turns listing photos into a property video with music and captions."
       }
     },
     {
@@ -712,7 +788,7 @@
       "websiteUrl": "https://www.bitpart.ai/",
       "affiliateUrl": null,
       "shortDescription": "NPC engine for games, with SDKs described on the product page. No public price grid was found.",
-      "longDescription": "Bitpart builds NPCs for games. The product page describes SDKs. We did not find a public pricing grid, so price and free tier are unconfirmed — do not assume a number. We did not install an SDK.",
+      "longDescription": "Bitpart builds NPCs for games. The product page describes SDKs. No public pricing grid was on that page, so this listing states no price.",
       "categories": [
         "game-ai"
       ],
@@ -778,12 +854,82 @@
       }
     },
     {
+      "id": "boxbrownie",
+      "slug": "boxbrownie",
+      "name": "BoxBrownie",
+      "websiteUrl": "https://www.boxbrownie.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Stitches 360 photos into a virtual tour of a property.",
+      "longDescription": "BoxBrownie's virtual tour page says a tour is a 360 degree view of a property that a buyer can pan through. Its guide says you upload 360 photos, label each room, and get a shareable tour link. Those pages do not list a monthly plan price.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "listing-videos"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "contact"
+      ],
+      "pricingNotes": "The virtual tour pages we read did not list a monthly plan price.",
+      "pricingUrl": "https://www.boxbrownie.com/360-virtual-tours",
+      "docsUrl": "https://www.boxbrownie.com/b/how-to-easily-create-a-virtual-tour-for-real-estate-listings",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A 360 virtual tour a buyer can pan through",
+        "A property walkthrough built from 360 photos"
+      ],
+      "notIdealFor": [
+        "A vertical Instagram reel from ordinary listing photos",
+        "A confirmed monthly price from this listing"
+      ],
+      "strength": "The BoxBrownie virtual tour page says it stitches 360 photos into a walkthrough a buyer can pan through.",
+      "weakness": "The virtual tour pages do not list a monthly price, and the tour is a 360 viewer rather than a social reel.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Virtual tour page and listing guide fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.boxbrownie.com/360-virtual-tours",
+        "https://www.boxbrownie.com/b/how-to-easily-create-a-virtual-tour-for-real-estate-listings"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.boxbrownie.com/360-virtual-tours"
+      },
+      "useCaseFit": {
+        "listing-videos": "Builds a virtual tour of the home from 360 photos."
+      }
+    },
+    {
       "id": "browser_use",
       "slug": "browser-use",
       "name": "Browser Use",
       "websiteUrl": "https://browser-use.com/",
       "affiliateUrl": null,
-      "shortDescription": "Open-source Python agent that controls a browser. We imported the package locally; no model call.",
+      "shortDescription": "Open-source Python agent that controls a browser. Install the package yourself.",
       "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
       "categories": [
         "tool-use"
@@ -930,12 +1076,83 @@
       }
     },
     {
+      "id": "canva",
+      "slug": "canva",
+      "name": "Canva",
+      "websiteUrl": "https://www.canva.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Real estate video templates and a video editor for listing clips. Free to start; paid plans on their site.",
+      "longDescription": "Canva's real estate video gallery says you can start from a listing template and customize it. The real estate solutions page says the video editor can create listing videos and walk-throughs and add music. Those pages do not list a monthly plan price.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "listing-videos"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "The real estate video gallery is presented as free to start. No monthly plan price was on the pages we read.",
+      "pricingUrl": "https://www.canva.com/video-editor/templates/real-estate/",
+      "docsUrl": "https://www.canva.com/solutions/real-estate/",
+      "freeTier": true,
+      "freeTierNotes": "The template gallery says the real estate video templates are free to customize. A lasting free export limit was not spelled out.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A listing video started from a real estate template",
+        "Adding photos, captions, and music in one editor"
+      ],
+      "notIdealFor": [
+        "A confirmed monthly price from this listing",
+        "Skip tracing or deal ranking"
+      ],
+      "strength": "Canva's real estate pages say you can start a listing video or walk-through from a template and add music.",
+      "weakness": "The real estate pages do not list a monthly plan price, so this card states none.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Real estate video gallery and solutions page fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.canva.com/video-editor/templates/real-estate/",
+        "https://www.canva.com/solutions/real-estate/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.canva.com/video-editor/templates/real-estate/"
+      },
+      "useCaseFit": {
+        "listing-videos": "Trims listing clips, adds captions, and can add music."
+      }
+    },
+    {
       "affiliateUrl": null,
       "categories": [
         "creative-media"
       ],
       "useCaseTags": [
-        "video-clips"
+        "video-clips",
+        "listing-videos"
       ],
       "toolTypes": [
         "creative"
@@ -997,7 +1214,8 @@
         "finalUrl": "https://www.capcut.com/"
       },
       "useCaseFit": {
-        "game-creative": "Edits video for YouTube, TikTok, and Reels, and the free plan covers basic editing."
+        "game-creative": "Edits video for YouTube, TikTok, and Reels, and the free plan covers basic editing.",
+        "listing-videos": "Trims walkthrough footage, adds captions, and resizes it for a vertical reel."
       }
     },
     {
@@ -1214,7 +1432,7 @@
       "websiteUrl": "https://www.anthropic.com/claude",
       "affiliateUrl": null,
       "shortDescription": "Anthropic Claude product and API for chat and coding.",
-      "longDescription": "Claude is Anthropic’s model product, used for chat and coding. The URL we checked redirected toward the Claude product overview. The pricing page included a $0 option in the text we could read; API billing is separate. We did not create an account.",
+      "longDescription": "Claude is Anthropic's model product, used for chat and coding. The public page is the product overview, and the pricing page lists a $0 option. API billing is separate.",
       "categories": [
         "coding-agents",
         "general-assistants"
@@ -1425,8 +1643,8 @@
       "name": "Composio",
       "websiteUrl": "https://composio.dev/",
       "affiliateUrl": null,
-      "shortDescription": "Connects agents to third-party apps and tools. Docs and a $0 Hobby plan were checked; not installed here.",
-      "longDescription": "Composio is a tool-use layer between agents and third-party apps. The pricing page we crawled included Hobby / $0 / no-credit-card language. We checked docs and the October 15, 2026 CLI release, and we did not install it or create an account.",
+      "shortDescription": "Connects agents to third-party apps and tools. Free to start; paid plans on their site.",
+      "longDescription": "Composio is a tool-use layer between agents and third-party apps. The pricing page lists a $0 Hobby plan. The October 15, 2026 CLI release is public.",
       "categories": [
         "tool-use"
       ],
@@ -1585,7 +1803,7 @@
       "name": "Convai",
       "websiteUrl": "https://convai.com/",
       "affiliateUrl": null,
-      "shortDescription": "Conversational characters for games. Site loaded; pricing text did not come through, so the free tier is unconfirmed.",
+      "shortDescription": "Conversational characters for games.",
       "longDescription": "Convai makes conversational characters for games. A public price or free tier was not confirmed from the pricing page. We did not create an account.",
       "categories": [
         "game-ai"
@@ -1812,7 +2030,7 @@
       "websiteUrl": "https://cursor.com/",
       "affiliateUrl": null,
       "shortDescription": "Desktop IDE with an agent that can edit, run, and review code.",
-      "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. The pricing page showed a $0 tier next to paid plans. The app was not installed and no one signed in.",
+      "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. The pricing page lists a $0 tier next to paid plans.",
       "categories": [
         "coding-agents"
       ],
@@ -1877,6 +2095,78 @@
       },
       "useCaseFit": {
         "coding-agents": "Desktop IDE agent that can edit the repo, with a free plan of limited requests."
+      }
+    },
+    {
+      "id": "d-id",
+      "slug": "d-id",
+      "name": "D-ID",
+      "websiteUrl": "https://www.d-id.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Talking-head video from a photo and a script. A 14-day trial is listed.",
+      "longDescription": "D-ID's docs say a photo and a script become a talking-head video, and the studio page says text, audio, or a still image can become an avatar video without a camera crew. The help center lists a 14-day free trial and paid Studio plans. The pricing page does not show one monthly dollar amount.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "avatar-video"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "The help center lists a 14-day trial and paid Studio plans. No single monthly price was readable on the page we fetched.",
+      "pricingUrl": "https://www.d-id.com/pricing/studio/",
+      "docsUrl": "https://docs.d-id.com/docs/v2-photo-avatar-quickstart",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": "14 days",
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A talking-head video from a photo and a script",
+        "A spokesperson clip without filming"
+      ],
+      "notIdealFor": [
+        "A confirmed monthly price from this listing",
+        "Cutting gameplay into shorts"
+      ],
+      "strength": "The official talking-head docs say a photo and a script become a video, and the help center lists a 14-day trial.",
+      "weakness": "The studio pricing page names paid plans but does not show one monthly dollar amount.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Studio, API, and help-center pages fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.d-id.com/ai-videos/",
+        "https://docs.d-id.com/docs/v2-photo-avatar-quickstart",
+        "https://www.d-id.com/pricing/studio/",
+        "https://help.d-id.com/hc/en-us/articles/31234293852433-Understanding-subscriptions-key-information-you-should-know"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.d-id.com/ai-videos/"
+      },
+      "useCaseFit": {
+        "avatar-video": "Turns a photo and a script into a talking-head video."
       }
     },
     {
@@ -1980,7 +2270,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "rank-property-deals"
+        "rank-property-deals",
+        "real-estate-overview"
       ],
       "toolTypes": [
         "other"
@@ -2012,7 +2303,8 @@
         "finalUrl": "https://dealcheck.io/pricing/"
       },
       "useCaseFit": {
-        "rank-property-deals": "Runs rental cash flow, house flipping, and commercial calculators and compares properties side by side."
+        "rank-property-deals": "Runs rental cash flow, house flipping, and commercial calculators and compares properties side by side.",
+        "real-estate": "Calculates rental cash flow, flip profit, and commercial numbers side by side."
       }
     },
     {
@@ -2027,7 +2319,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-off-market"
+        "find-off-market",
+        "real-estate-overview"
       ],
       "toolTypes": [
         "agent"
@@ -2079,7 +2372,8 @@
         "finalUrl": "https://www.dealmachine.com/pricing"
       },
       "useCaseFit": {
-        "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month."
+        "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month.",
+        "real-estate": "Pulls owner records and tags a property during a drive."
       }
     },
     {
@@ -2239,13 +2533,14 @@
       "name": "Descript",
       "websiteUrl": "https://www.descript.com/",
       "affiliateUrl": null,
-      "shortDescription": "Edit video and audio by editing the transcript. Pricing page included a free-to-start option.",
+      "shortDescription": "Edit video and audio by editing the transcript. Free to start; paid plans on their site.",
       "longDescription": "Descript edits audio and video from the transcript. The pricing crawl included free-to-start or hobby and $0 language, with paid samples in a roughly $16–$65 range. Confirm current limits on the pricing page. We did not install the app.",
       "categories": [
         "creative-media"
       ],
       "useCaseTags": [
-        "video-clips"
+        "video-clips",
+        "listing-videos"
       ],
       "toolTypes": [
         "creative"
@@ -2303,7 +2598,8 @@
         "finalUrl": "https://www.descript.com/"
       },
       "useCaseFit": {
-        "game-creative": "Edits video by editing the transcript, with 60 free media minutes a month."
+        "game-creative": "Edits video by editing the transcript, with 60 free media minutes a month.",
+        "listing-videos": "Edits the video by editing the transcript and adds captions."
       }
     },
     {
@@ -2381,7 +2677,7 @@
       "websiteUrl": "https://dify.ai/",
       "affiliateUrl": null,
       "shortDescription": "Open-source platform to build agent workflows visually, with a self-hosted community edition.",
-      "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page. We checked the site, docs, and pricing. We did not install it. Cloud price samples in the page text should be re-read on the live pricing page before you rely on them.",
+      "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page. Confirm cloud prices on the live pricing page before you rely on them.",
       "categories": [
         "agent-frameworks"
       ],
@@ -2536,7 +2832,7 @@
         "learning"
       ],
       "useCaseTags": [
-        "tutoring"
+        "language-learning"
       ],
       "toolTypes": [
         "agent"
@@ -2588,7 +2884,7 @@
         "finalUrl": "https://blog.duolingo.com/duolingo-max/"
       },
       "useCaseFit": {
-        "tutoring": "Language-learning experience Duolingo introduced as GPT-4 powered Max."
+        "learn-language": "Practices a language with the GPT-4 features Duolingo added for Max."
       }
     },
     {
@@ -2806,7 +3102,7 @@
       "websiteUrl": "https://www.firecrawl.dev/",
       "affiliateUrl": null,
       "shortDescription": "Turns websites into markdown for LLMs. Open-source repo plus a cloud API with a free plan.",
-      "longDescription": "Firecrawl crawls pages into markdown for language models. We checked the site, pricing, docs, and the GitHub release. The pricing crawl mentioned a free or hobby plan and a $0 sample, with paid tiers above that. We did not run a local install.",
+      "longDescription": "Firecrawl crawls pages into markdown for language models. The pricing page mentions a free or hobby plan and a $0 sample, with paid tiers above that.",
       "categories": [
         "tool-use",
         "search-rag"
@@ -2889,7 +3185,7 @@
       "name": "Flowise",
       "websiteUrl": "https://flowiseai.com/",
       "affiliateUrl": null,
-      "shortDescription": "Open-source, low-code builder for LLM flows you can self-host. Cloud free tier was not clearly confirmed.",
+      "shortDescription": "Open-source, low-code builder for LLM flows you can self-host.",
       "longDescription": "Flowise is a low-code builder for LLM flows. The npm package and GitHub repo are the open-source path we could confirm. The pricing page came back thin in our crawl, so a cloud free tier is not confirmed. We did not install it.",
       "categories": [
         "agent-frameworks"
@@ -3306,7 +3602,7 @@
       "websiteUrl": "https://github.com/features/copilot",
       "affiliateUrl": null,
       "shortDescription": "GitHub's AI coding agent for writing code and opening pull requests.",
-      "longDescription": "GitHub's Copilot page calls it your AI coding agent, says it writes code with AI, and says agents can be directed from issue to merge. The text we fetched did not include a dollar price. We did not subscribe.",
+      "longDescription": "GitHub's Copilot page calls it your AI coding agent, says it writes code with AI, and says agents can be directed from issue to merge. That page does not list a dollar price.",
       "categories": [
         "coding-agents"
       ],
@@ -3440,7 +3736,7 @@
       "name": "Granola",
       "websiteUrl": "https://www.granola.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Meeting notes that sit alongside your calls. Pricing page included a $0 plan.",
+      "shortDescription": "Meeting notes that sit alongside your calls. Free to start; paid plans on their site.",
       "longDescription": "Granola takes meeting notes. The pricing crawl included $0 alongside $14 and $35. Confirm free-plan limits on the pricing page. We did not install the app or join a call.",
       "categories": [
         "knowledge"
@@ -3715,12 +4011,14 @@
       "name": "HeyGen",
       "websiteUrl": "https://www.heygen.com/",
       "affiliateUrl": null,
-      "shortDescription": "Avatar and spokesperson video. Pricing page showed a $0/mo option alongside paid plans.",
+      "shortDescription": "Avatar and spokesperson video from a script. Free to start; paid plans on their site.",
       "longDescription": "HeyGen makes avatar and spokesperson videos. The pricing crawl included $0/month alongside $29 and $49 per month samples. Confirm what the free plan includes. We did not create an account.",
       "categories": [
         "creative-media"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "avatar-video"
+      ],
       "toolTypes": [
         "creative"
       ],
@@ -3775,7 +4073,9 @@
         "status": 200,
         "finalUrl": "https://www.heygen.com/"
       },
-      "useCaseFit": {}
+      "useCaseFit": {
+        "avatar-video": "Generates an avatar or spokesperson video from a script."
+      }
     },
     {
       "id": "higgsfield",
@@ -4057,8 +4357,8 @@
       "name": "Inworld",
       "websiteUrl": "https://inworld.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Character AI for games and interactive agents. Pricing page included a $0 sample; not hands-on tested.",
-      "longDescription": "Inworld builds character AI for games and interactive experiences. The pricing crawl included a $0 sample among paid usage samples. Confirm the current free allotment on the pricing page. We checked docs and did not run a hands-on session.",
+      "shortDescription": "Character AI for games and interactive agents.",
+      "longDescription": "Inworld builds character AI for games and interactive experiences. A $0 sample appeared among paid usage samples. Confirm the current free allotment on the pricing page.",
       "categories": [
         "game-ai"
       ],
@@ -4129,7 +4429,7 @@
       "websiteUrl": "https://www.jasper.ai/",
       "affiliateUrl": null,
       "shortDescription": "Marketing workspace with agents for content. A free trial is offered.",
-      "longDescription": "Jasper's site describes a platform for marketers with agents, a canvas, and AI optimization for search. The pricing navigation offers a free trial. The text we fetched did not include a dollar price. We did not start a trial.",
+      "longDescription": "Jasper's site describes a platform for marketers with agents, a canvas, and AI optimization for search. The pricing navigation offers a free trial. That page does not list a dollar price.",
       "categories": [
         "content"
       ],
@@ -4265,7 +4565,8 @@
         "creative-media"
       ],
       "useCaseTags": [
-        "video-clips"
+        "video-clips",
+        "listing-videos"
       ],
       "toolTypes": [
         "creative"
@@ -4302,7 +4603,7 @@
       "name": "Kapwing",
       "websiteUrl": "https://www.kapwing.com/",
       "shortDescription": "Browser editor for trimming, captions, and resizing video into social clips.",
-      "longDescription": "Kapwing is an online video editor. Its pricing page lists a Free plan with 10 credits, a watermark, exports up to 4 minutes, 720p, and 5 GB of storage. A dollar amount for the lowest paid plan was not clearly tied to the Pro plan in the text we extracted, so the starting price stays unconfirmed. We did not create an account.",
+      "longDescription": "Kapwing is an online video editor. Its pricing page lists a Free plan with 10 credits, a watermark, exports up to 4 minutes, 720p, and 5 GB of storage. A dollar amount for the lowest paid plan was not listed next to the Pro plan name.",
       "pricingUrl": "https://www.kapwing.com/pricing",
       "docsUrl": "https://www.kapwing.com/help/add-captions/",
       "freeTier": true,
@@ -4326,7 +4627,8 @@
         "finalUrl": "https://www.kapwing.com/"
       },
       "useCaseFit": {
-        "game-creative": "Browser editor for trimming, captions, and resizing video into social clips."
+        "game-creative": "Browser editor for trimming, captions, and resizing video into social clips.",
+        "listing-videos": "Trims a walkthrough, adds captions, and resizes the video."
       }
     },
     {
@@ -4336,7 +4638,7 @@
       "websiteUrl": "https://www.keepertax.com/",
       "affiliateUrl": null,
       "shortDescription": "Tracks expenses and files federal and state taxes. The homepage says you can get started free.",
-      "longDescription": "Keeper's pricing page lists bookkeeping, federal and state filing, quarterly tax payments, and a tax pro consult. The homepage says you can get started free. We did not see a single monthly plan price in the text we fetched, and we did not create an account.",
+      "longDescription": "Keeper's pricing page lists bookkeeping, federal and state filing, quarterly tax payments, and a tax pro consult. The homepage says you can get started free. That page does not list one monthly plan price.",
       "categories": [
         "personal-finance"
       ],
@@ -4404,8 +4706,8 @@
       "name": "Khanmigo",
       "websiteUrl": "https://www.khanmigo.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Khan Academy tutor and teaching assistant. Teachers can sign up for free.",
-      "longDescription": "Khanmigo's site describes a teaching assistant and tutor for learners and parents, plus a writing coach, and it says teachers can sign up for free. The fetched text did not include a dollar price for learners. We did not create an account.",
+      "shortDescription": "Khan Academy tutor for almost any subject. Learners are $4 a month, and teachers can sign up free.",
+      "longDescription": "Khanmigo's learners page calls it an always-available tutor for almost any academic subject, from elementary school through college, including math, science, coding, history, and humanities. Learners and parents pay $4 a month or $44 a year. Teachers can sign up free in supported places.",
       "categories": [
         "learning"
       ],
@@ -4421,28 +4723,28 @@
       "pricingModel": [
         "freemium"
       ],
-      "pricingNotes": "The site calls Khanmigo a teaching assistant and tutor and says teachers can sign up for free. No dollar price was in the fetch.",
-      "pricingUrl": "https://www.khanmigo.ai/",
-      "docsUrl": "https://www.khanmigo.ai/",
+      "pricingNotes": "Learners and parents pay $4 a month or $44 a year. Teachers can sign up free in supported places.",
+      "pricingUrl": "https://www.khanmigo.ai/learners",
+      "docsUrl": "https://www.khanmigo.ai/learners",
       "freeTier": true,
-      "freeTierNotes": null,
-      "startingPrice": null,
+      "freeTierNotes": "Teachers can sign up free in supported places. Learners and parents pay.",
+      "startingPrice": 4,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-19",
+      "pricingCheckedAt": "2026-10-20",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
         "Tutoring and teacher help inside Khan Academy's assistant"
       ],
       "notIdealFor": [
-        "Someone who needs a published learner price"
+        "A family account without the learner subscription"
       ],
-      "strength": "Khanmigo describes a tutor and teaching assistant, and it says teachers can sign up for free.",
-      "weakness": "The fetched page did not list a dollar price for learners.",
+      "strength": "Khanmigo tutors almost any academic subject from elementary school through college, and learners are $4 a month.",
+      "weakness": "Parents and learners pay for access, and a teacher sign-up does not cover a family account.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
-      "checkedAt": "2026-10-19T16:00:00-04:00",
-      "checkedDate": "2026-10-19",
+      "checkedAt": "2026-10-20T00:00:00-04:00",
+      "checkedDate": "2026-10-20",
       "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
       "handsOn": {
         "performed": false
@@ -4453,16 +4755,16 @@
       "featuredPaid": false,
       "status": "published",
       "publishedAt": "2026-10-19",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-20",
       "sources": [
-        "https://www.khanmigo.ai/"
+        "https://www.khanmigo.ai/learners"
       ],
       "siteLoad": {
         "status": 200,
         "finalUrl": "https://www.khanmigo.ai/"
       },
       "useCaseFit": {
-        "tutoring": "Tutor and teaching assistant that offers teachers a free sign-up."
+        "tutoring": "Tutors almost any academic subject and helps a teacher plan a lesson."
       }
     },
     {
@@ -4471,7 +4773,7 @@
       "name": "Kickresume",
       "websiteUrl": "https://www.kickresume.com/en/",
       "affiliateUrl": null,
-      "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try; no monthly price listed.",
+      "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try; paid plans on their site.",
       "longDescription": "Kickresume's homepage says its AI resume writer generates work-experience bullets from a job title, and that you can score a resume and tailor it to a job description. The page says the builder is free to try. It did not list a monthly plan price. We did not create an account.",
       "categories": [
         "hiring"
@@ -4677,7 +4979,7 @@
       "websiteUrl": "https://www.langchain.com/",
       "affiliateUrl": null,
       "shortDescription": "Open-source libraries for agents, chains, and tool calling, plus optional LangSmith traces.",
-      "longDescription": "LangChain is a set of libraries for composing agent and tool-calling workflows. LangSmith, the tracing product on the same site, is separate: the pricing page we read listed a $0 developer plan and a paid Plus plan. We imported the Python package locally and did not call a model.",
+      "longDescription": "LangChain is a set of libraries for composing agent and tool-calling workflows. LangSmith, the tracing product on the same site, is separate, and its pricing page lists a $0 developer plan and a paid Plus plan.",
       "categories": [
         "agent-frameworks"
       ],
@@ -5053,7 +5355,7 @@
       "name": "Make",
       "websiteUrl": "https://www.make.com/",
       "affiliateUrl": null,
-      "shortDescription": "Visual automation across apps. The pricing FAQ we fetched describes a free plan with 1,000 credits a month.",
+      "shortDescription": "Visual automation across apps. The free plan includes 1,000 credits a month.",
       "longDescription": "Make is a visual automation product. The official pricing FAQ describes a Free plan with 1,000 credits per month, with paid Core, Pro, and Teams plans above that. We did not create an account.",
       "categories": [
         "workflow-automation"
@@ -5192,8 +5494,8 @@
       "name": "Mem0",
       "websiteUrl": "https://mem0.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Memory layer for agents. We imported the Python package locally; no account and no model call.",
-      "longDescription": "Mem0 stores memory for agents. We installed mem0ai and imported it, with no API key and no model call. The cloud pricing page loaded; a free SaaS tier was not cleanly parsed, so the confirmed free path is the open-source package.",
+      "shortDescription": "Memory layer for agents. Open-source package you can install yourself.",
+      "longDescription": "Mem0 stores memory for agents. The open-source package is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
       "categories": [
         "search-rag"
       ],
@@ -5277,13 +5579,13 @@
       "name": "Meshy",
       "websiteUrl": "https://www.meshy.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Text and image to 3D assets. Pricing page showed a $0 option and no-card language.",
+      "shortDescription": "Text and image to 3D assets. Free to start; paid plans on their site.",
       "longDescription": "Meshy turns text and images into 3D assets. The pricing crawl showed $0 and no-credit-card language, with a paid sample around $20 per month. Confirm inclusions on the pricing page. We did not create an account or generate a model.",
       "categories": [
         "creative-media"
       ],
       "useCaseTags": [
-        "image-3d"
+        "3d-assets"
       ],
       "toolTypes": [
         "creative"
@@ -5340,7 +5642,7 @@
         "finalUrl": "https://www.meshy.ai/"
       },
       "useCaseFit": {
-        "image-3d": "Turns text or a picture into a 3D asset."
+        "make-3d": "Turns text or a picture into a 3D asset."
       }
     },
     {
@@ -5417,13 +5719,13 @@
       "name": "Midjourney",
       "websiteUrl": "https://www.midjourney.com/",
       "affiliateUrl": null,
-      "shortDescription": "Image generation. Official plans we read are paid subscriptions, with no free tier on the comparison.",
+      "shortDescription": "Image generation from a text prompt. The plans on their site are paid subscriptions.",
       "longDescription": "Midjourney generates images. The plan comparison lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article. We did not subscribe.",
       "categories": [
         "creative-media"
       ],
       "useCaseTags": [
-        "image-3d"
+        "image-generation"
       ],
       "toolTypes": [
         "creative"
@@ -5483,7 +5785,7 @@
         "finalUrl": "https://www.midjourney.com/"
       },
       "useCaseFit": {
-        "image-3d": "Draws images from a text prompt."
+        "make-images": "Draws images from a text prompt."
       }
     },
     {
@@ -5846,7 +6148,7 @@
       "name": "Notion",
       "websiteUrl": "https://www.notion.com/",
       "affiliateUrl": null,
-      "shortDescription": "Docs, wikis, and agents in a team workspace. Pricing page included a $0 plan.",
+      "shortDescription": "Docs, wikis, and agents in a team workspace. Free to start; paid plans on their site.",
       "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. The pricing crawl included $0 alongside $10 and $20. AI features may sit on paid plans — confirm which agent features are on Free. We did not create a workspace.",
       "categories": [
         "knowledge"
@@ -5921,7 +6223,7 @@
       "websiteUrl": "https://developer.nvidia.com/ace-for-games",
       "affiliateUrl": null,
       "shortDescription": "NVIDIA ACE toolkit for in-game characters, including developer downloads. Not a simple SaaS signup.",
-      "longDescription": "NVIDIA ACE for Games is a developer toolkit for in-game characters. The page we read describes downloads and plugins; Unreal plugins were noted as MIT-licensed in that earlier read. It is not a simple hosted free tier — it assumes NVIDIA developer access and hardware. We did not install the SDK. Open-source status for the whole product was not recorded as a yes or no.",
+      "longDescription": "NVIDIA ACE for Games is a developer toolkit for in-game characters. The page describes downloads and plugins, and Unreal plugins were noted as MIT-licensed. It is not a simple hosted free tier, and it assumes NVIDIA developer access and hardware.",
       "categories": [
         "game-ai"
       ],
@@ -5991,7 +6293,7 @@
       "websiteUrl": "https://obsidian.md/",
       "affiliateUrl": null,
       "shortDescription": "Local-first notes app. Official pricing says the app is free without limits; Sync and Publish are paid.",
-      "longDescription": "Obsidian is a local-first notes app. The official pricing page says the app is free without limits and does not require a sign-up. Sync and Publish are paid add-ons ($4 and $8 per month billed annually on the page we read). Catalyst is a $25 one-time option, and a commercial license was listed at $50 per user per year. We did not install the app.",
+      "longDescription": "Obsidian is a local-first notes app. The official pricing page says the app is free without limits and does not require a sign-up. Sync and Publish are paid add-ons at $4 and $8 per month billed annually. Catalyst is a $25 one-time option, and a commercial license was listed at $50 per user per year.",
       "categories": [
         "knowledge"
       ],
@@ -6645,7 +6947,8 @@
       "useCaseTags": [
         "find-land",
         "find-off-market",
-        "rank-property-deals"
+        "rank-property-deals",
+        "real-estate-overview"
       ],
       "toolTypes": [
         "agent"
@@ -6678,7 +6981,79 @@
       "useCaseFit": {
         "find-land": "Searches property records with an AI search box, and Essentials is $99 per month.",
         "find-off-market": "Filters property records, including off-market search, and Essentials is $99 per month.",
-        "rank-property-deals": "Filters property records, including off-market ones."
+        "rank-property-deals": "Filters property records, including off-market ones.",
+        "real-estate": "Searches property records, including off-market listings, from one set of filters."
+      }
+    },
+    {
+      "id": "quizlet",
+      "slug": "quizlet",
+      "name": "Quizlet",
+      "websiteUrl": "https://quizlet.com/features/ai-study-tools",
+      "affiliateUrl": null,
+      "shortDescription": "Turns notes into practice tests and explains a homework step. Free to start; paid plans on their site.",
+      "longDescription": "Quizlet's AI study tools page says you can turn notes into practice tests, study guides, and flashcards, and that homework help explains a step and adds more practice. The practice-test help page says those tests are currently for science and humanities, with limited free access. Some AI features are free, and Quizlet Plus includes more.",
+      "categories": [
+        "learning"
+      ],
+      "useCaseTags": [
+        "tutoring"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Some AI features are free. Quizlet Plus includes more. No dollar amount was on the AI tools page.",
+      "pricingUrl": "https://quizlet.com/features/ai-study-tools",
+      "docsUrl": "https://help.quizlet.com/hc/en-au/articles/25946589648013-Studying-with-Practice-Tests",
+      "freeTier": true,
+      "freeTierNotes": "Some AI features are free. Practice tests have limited free access.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-20",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Practice tests from notes in science or humanities",
+        "Homework help that explains a step and adds practice"
+      ],
+      "notIdealFor": [
+        "A language-only tutor",
+        "Unlimited free practice tests"
+      ],
+      "strength": "Quizlet turns notes into a practice test and explains a homework step with more practice.",
+      "weakness": "Practice tests are documented for science and humanities, and free access to them is limited.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-20T00:00:00-04:00",
+      "checkedDate": "2026-10-20",
+      "smokeTestNotes": "AI study tools page and practice-test help page checked on 2026-10-20. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "sources": [
+        "https://quizlet.com/features/ai-study-tools",
+        "https://help.quizlet.com/hc/en-au/articles/25946589648013-Studying-with-Practice-Tests"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://quizlet.com/features/ai-study-tools"
+      },
+      "useCaseFit": {
+        "tutoring": "Turns notes into a practice test and explains a homework step with more practice."
       }
     },
     {
@@ -6825,7 +7200,7 @@
       "websiteUrl": "https://reclaim.ai/",
       "affiliateUrl": null,
       "shortDescription": "Scheduling links, smart meetings, and calendar sync.",
-      "longDescription": "Reclaim's pricing page lists habits, tasks, smart meetings, scheduling links, calendar sync, and buffer time. The text we fetched did not include a dollar price. We did not create an account.",
+      "longDescription": "Reclaim's pricing page lists habits, tasks, smart meetings, scheduling links, calendar sync, and buffer time. That page does not list a dollar price.",
       "categories": [
         "productivity"
       ],
@@ -6915,7 +7290,7 @@
       "name": "Regrid",
       "websiteUrl": "https://regrid.com/",
       "shortDescription": "Nationwide parcel boundaries and owner fields, sold by county or state.",
-      "longDescription": "Regrid sells standardized US parcel geometry and assessment fields. The data store prices files by county or state, and the docs also point to API and property-app plans. There is no single monthly price. We checked the store and docs on October 16, 2026 and did not buy a file.",
+      "longDescription": "Regrid sells standardized US parcel geometry and assessment fields. The data store prices files by county or state, and the docs also point to API and property-app plans. There is no single monthly price.",
       "categories": [
         "real-estate"
       ],
@@ -7237,8 +7612,8 @@
       "name": "Runway",
       "websiteUrl": "https://runway.com/",
       "affiliateUrl": null,
-      "shortDescription": "Video generation and editing. Pricing page loaded; a free tier was not clearly confirmed.",
-      "longDescription": "Runway generates and edits video. The site is at runway.com. A free tier was not clearly confirmed from the pricing page. We did not create an account.",
+      "shortDescription": "Video generation and editing.",
+      "longDescription": "Runway generates and edits video. The site is at runway.com. A free tier was not shown on the pricing page.",
       "categories": [
         "creative-media"
       ],
@@ -7306,13 +7681,13 @@
       "name": "Scenario",
       "websiteUrl": "https://www.scenario.com/",
       "affiliateUrl": null,
-      "shortDescription": "Game art generation. The pricing page we checked mentions a free plan.",
+      "shortDescription": "Game art generation. Free to start; paid plans on their site.",
       "longDescription": "Scenario generates art aimed at games. The pricing crawl mentioned a free tier or free plan, plus starter language and no-credit-card wording. Paid samples in that crawl included $15, $45, and $75 per month — confirm them on the live page. We did not create an account.",
       "categories": [
         "creative-media"
       ],
       "useCaseTags": [
-        "image-3d"
+        "image-generation"
       ],
       "toolTypes": [
         "creative"
@@ -7369,7 +7744,7 @@
         "finalUrl": "https://www.scenario.com/"
       },
       "useCaseFit": {
-        "image-3d": "Draws game art from a prompt."
+        "make-images": "Draws game art from a prompt."
       }
     },
     {
@@ -7379,7 +7754,7 @@
       "websiteUrl": "https://scispace.com/",
       "affiliateUrl": null,
       "shortDescription": "Literature review and chat with PDF for scientific papers.",
-      "longDescription": "SciSpace's pricing page says it is an end-to-end platform for discovering, analyzing, and writing scientific literature, with literature review, chat with PDF, and a citation generator. The FAQ text we fetched did not include a dollar price. We did not subscribe.",
+      "longDescription": "SciSpace's pricing page says it is an end-to-end platform for discovering, analyzing, and writing scientific literature, with literature review, chat with PDF, and a citation generator. The FAQ does not include a dollar price.",
       "categories": [
         "research"
       ],
@@ -7988,6 +8363,148 @@
       }
     },
     {
+      "id": "studyfetch",
+      "slug": "studyfetch",
+      "name": "StudyFetch",
+      "websiteUrl": "https://www.studyfetch.com/",
+      "affiliateUrl": null,
+      "shortDescription": "AI tutor that builds a study plan and practice from your materials. Free to start; paid plans on their site.",
+      "longDescription": "StudyFetch says you upload course materials and Sparky, its AI tutor, explains a concept and builds a study plan, flashcards, and practice from them. The FAQ says it can help with any subject, including professional exams, and that getting started is free. The same FAQ does not list one monthly price for premium.",
+      "categories": [
+        "learning"
+      ],
+      "useCaseTags": [
+        "tutoring"
+      ],
+      "toolTypes": [
+        "agent"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Getting started is free. The FAQ does not list one monthly price for premium.",
+      "pricingUrl": "https://www.studyfetch.com/",
+      "docsUrl": "https://www.studyfetch.com/",
+      "freeTier": true,
+      "freeTierNotes": "Getting started is free. Premium is a paid plan.",
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-20",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A study plan and practice built from your own materials",
+        "Tutoring help on a subject you name"
+      ],
+      "notIdealFor": [
+        "A language-only drill",
+        "A published monthly price from this listing"
+      ],
+      "strength": "StudyFetch's Sparky tutors a subject from your materials and builds a study plan and practice from them.",
+      "weakness": "Getting started is free, and the site does not list one monthly price for premium.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-20T00:00:00-04:00",
+      "checkedDate": "2026-10-20",
+      "smokeTestNotes": "Homepage and FAQ fetched on 2026-10-20. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "sources": [
+        "https://www.studyfetch.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.studyfetch.com/"
+      },
+      "useCaseFit": {
+        "tutoring": "Explains a subject from your materials and builds practice from them."
+      }
+    },
+    {
+      "id": "synthesia",
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "websiteUrl": "https://www.synthesia.io/",
+      "affiliateUrl": null,
+      "shortDescription": "AI avatar videos from a script. Basic is free, and Starter is $29 a month.",
+      "longDescription": "Synthesia's homepage says it creates studio videos with AI avatars and voiceovers. The pricing page lists Basic at $0 a month, with no credit card, and says those videos carry a watermark. Starter is $29 a month when billed monthly. We did not create an account.",
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "avatar-video"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Basic is $0 a month. Starter is $29 a month when billed monthly, from the pricing page on 2026-10-19.",
+      "pricingUrl": "https://www.synthesia.io/pricing",
+      "docsUrl": "https://www.synthesia.io/features/avatars",
+      "freeTier": true,
+      "freeTierNotes": "Basic includes a free monthly video allowance and says no credit card is required. Those videos carry a watermark.",
+      "startingPrice": 29,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-19",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "An avatar video from a script without filming",
+        "A free Basic plan to try a stock avatar"
+      ],
+      "notIdealFor": [
+        "A cinematic camera-move clip",
+        "Cutting a long stream into shorts"
+      ],
+      "strength": "Synthesia's homepage says it creates videos with AI avatars from a script, and Basic is free with no credit card.",
+      "weakness": "Starter is $29 a month when billed monthly, and the free plan's videos carry a watermark.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-19T23:40:00-04:00",
+      "checkedDate": "2026-10-19",
+      "smokeTestNotes": "Homepage, pricing page, and avatar page fetched on 2026-10-19. No account was created.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19",
+      "sources": [
+        "https://www.synthesia.io/",
+        "https://www.synthesia.io/pricing",
+        "https://www.synthesia.io/features/avatars"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.synthesia.io/"
+      },
+      "useCaseFit": {
+        "avatar-video": "Generates an avatar video from a script and a stock or custom avatar."
+      }
+    },
+    {
       "id": "synthesis-tutor",
       "slug": "synthesis-tutor",
       "name": "Synthesis Tutor",
@@ -8132,7 +8649,7 @@
       "name": "Tavily",
       "websiteUrl": "https://www.tavily.com/",
       "affiliateUrl": null,
-      "shortDescription": "Search API for agents that need web results. Pricing page showed a $0 option; not installed here.",
+      "shortDescription": "Search API for agents that need web results. Free to start; paid plans on their site.",
       "longDescription": "Tavily is a search API meant for agents. The pricing crawl included $0 and no-credit-card language, plus paid usage samples. Confirm the current free allotment on the pricing page. We did not call the API.",
       "categories": [
         "tool-use",
@@ -8274,7 +8791,7 @@
       "name": "Teal",
       "websiteUrl": "https://www.tealhq.com/",
       "affiliateUrl": null,
-      "shortDescription": "Resume builder that tailors a resume to a job description. No monthly price was listed.",
+      "shortDescription": "Resume builder that tailors a resume to a job description. Free to try; paid plans on their site.",
       "longDescription": "Teal's homepage says you can create an ATS-friendly resume, tailor it with keywords from a job description, and track jobs saved from job boards with its Chrome extension. It also says you can create a free account. The fetched page did not list a monthly plan price. We did not create an account.",
       "categories": [
         "hiring"
@@ -8776,6 +9293,37 @@
       "intro": "AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table."
     },
     {
+      "slug": "avatar-video",
+      "title": "Make an avatar or spokesperson video",
+      "summary": "Turn a script into a talking-head video without filming yourself.",
+      "audienceHints": [
+        "creators",
+        "marketers"
+      ],
+      "matchTags": [
+        "avatar-video"
+      ],
+      "recommended": [
+        {
+          "toolId": "heygen",
+          "why": "Generates an avatar or spokesperson video from a script."
+        },
+        {
+          "toolId": "synthesia",
+          "why": "Generates an avatar video from a script and a stock or custom avatar."
+        },
+        {
+          "toolId": "d-id",
+          "why": "Turns a photo and a script into a talking-head video."
+        }
+      ],
+      "jobPhrase": "making an avatar video",
+      "assistantTask": "draft the script an avatar will speak",
+      "assistantContext": "making a talking-head video",
+      "searchTopic": "the avatar and the script",
+      "intro": "AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself."
+    },
+    {
       "slug": "coding-agents",
       "title": "Code with an AI agent",
       "summary": "IDE agents and copilots that edit, run, and review code.",
@@ -9152,37 +9700,6 @@
       "intro": "AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve."
     },
     {
-      "slug": "image-3d",
-      "title": "Make images and 3D assets",
-      "summary": "Describe an image or a 3D asset and generate it in an art app.",
-      "audienceHints": [
-        "creators",
-        "gamers"
-      ],
-      "matchTags": [
-        "image-3d"
-      ],
-      "recommended": [
-        {
-          "toolId": "midjourney",
-          "why": "Draws images from a text prompt."
-        },
-        {
-          "toolId": "scenario",
-          "why": "Draws game art from a prompt."
-        },
-        {
-          "toolId": "meshy",
-          "why": "Turns text or a picture into a 3D asset."
-        }
-      ],
-      "jobPhrase": "making images and 3D assets",
-      "assistantTask": "describe the image or 3D asset and list what to change",
-      "assistantContext": "making an image or a 3D asset",
-      "searchTopic": "the picture or model you want",
-      "intro": "AI agents can describe the image or 3D asset you want and list what to change, so you generate it and check it yourself."
-    },
-    {
       "slug": "it-helpdesk",
       "title": "Handle IT help desk requests",
       "summary": "Triage common IT requests and route the rest.",
@@ -9241,6 +9758,117 @@
         }
       ],
       "intro": "AI agents can search an internal knowledge base and answer a policy question with the document to check."
+    },
+    {
+      "slug": "learn-language",
+      "title": "Practice a language",
+      "summary": "Practice a language and get the next drill.",
+      "audienceHints": [
+        "learners"
+      ],
+      "matchTags": [
+        "language-learning"
+      ],
+      "recommended": [
+        {
+          "toolId": "duolingo-max",
+          "why": "Practices a language with the GPT-4 features Duolingo added for Max."
+        }
+      ],
+      "jobPhrase": "practicing a language",
+      "assistantTask": "practice a short dialogue and explain a mistake",
+      "assistantContext": "learning a language",
+      "searchTopic": "the language you want to practice",
+      "intro": "AI agents can practice a language with you, explain a mistake, and suggest the next drill."
+    },
+    {
+      "slug": "listing-videos",
+      "title": "Make a real estate listing video",
+      "summary": "Trim a walkthrough or turn listing photos into a home tour with captions and music.",
+      "audienceHints": [
+        "realtors",
+        "investors"
+      ],
+      "matchTags": [
+        "listing-videos"
+      ],
+      "recommended": [
+        {
+          "toolId": "capcut",
+          "why": "Trims walkthrough footage, adds captions, and resizes it for a vertical reel."
+        },
+        {
+          "toolId": "kapwing",
+          "why": "Trims a walkthrough, adds captions, and resizes the video."
+        },
+        {
+          "toolId": "descript",
+          "why": "Edits the video by editing the transcript and adds captions."
+        },
+        {
+          "toolId": "canva",
+          "why": "Trims listing clips, adds captions, and can add music."
+        },
+        {
+          "toolId": "autoreel",
+          "why": "Turns listing photos into a property video with music and captions."
+        }
+      ],
+      "jobPhrase": "making a real estate listing video",
+      "assistantTask": "trim the walkthrough, draft captions, and note the music",
+      "assistantContext": "showing a home in a listing video",
+      "searchTopic": "the walkthrough and the reel",
+      "intro": "AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok."
+    },
+    {
+      "slug": "make-3d",
+      "title": "Make a 3D model",
+      "summary": "Describe a 3D asset and generate it in a 3D app.",
+      "audienceHints": [
+        "creators",
+        "gamers"
+      ],
+      "matchTags": [
+        "3d-assets"
+      ],
+      "recommended": [
+        {
+          "toolId": "meshy",
+          "why": "Turns text or a picture into a 3D asset."
+        }
+      ],
+      "jobPhrase": "making a 3D model",
+      "assistantTask": "describe the 3D asset and list what to change",
+      "assistantContext": "making a 3D model",
+      "searchTopic": "the 3D model you want",
+      "intro": "AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself."
+    },
+    {
+      "slug": "make-images",
+      "title": "Make an image from a prompt",
+      "summary": "Describe an image and generate it in an art app.",
+      "audienceHints": [
+        "creators",
+        "gamers"
+      ],
+      "matchTags": [
+        "image-generation"
+      ],
+      "recommended": [
+        {
+          "toolId": "midjourney",
+          "why": "Draws images from a text prompt."
+        },
+        {
+          "toolId": "scenario",
+          "why": "Draws game art from a prompt."
+        }
+      ],
+      "jobPhrase": "making an image",
+      "assistantTask": "describe the image and list what to change",
+      "assistantContext": "making an image",
+      "searchTopic": "the picture you want",
+      "intro": "AI agents can describe the image you want and list what to change, so you generate it and check it yourself."
     },
     {
       "slug": "manage-inbox",
@@ -9431,6 +10059,45 @@
         }
       ],
       "intro": "AI agents can compare property records and rental or flip numbers so you sort the deals yourself."
+    },
+    {
+      "slug": "real-estate",
+      "title": "Find AI tools for real estate",
+      "summary": "Compare deal, listing-video, outreach, and land tools before you pick one.",
+      "audienceHints": [
+        "investors",
+        "realtors"
+      ],
+      "matchTags": [
+        "real-estate-overview"
+      ],
+      "recommended": [
+        {
+          "toolId": "dealcheck",
+          "why": "Calculates rental cash flow, flip profit, and commercial numbers side by side."
+        },
+        {
+          "toolId": "autoreel",
+          "why": "Turns listing photos into a property video with music and captions."
+        },
+        {
+          "toolId": "dealmachine",
+          "why": "Pulls owner records and tags a property during a drive."
+        },
+        {
+          "toolId": "acres",
+          "why": "Shows parcel maps and basic land insights before an owner lookup."
+        },
+        {
+          "toolId": "propstream",
+          "why": "Searches property records, including off-market listings, from one set of filters."
+        }
+      ],
+      "jobPhrase": "finding AI tools for real estate",
+      "assistantTask": "compare a deal, a listing video, and owner outreach",
+      "assistantContext": "choosing a real estate tool",
+      "searchTopic": "deals, listing videos, and owner outreach",
+      "intro": "AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue."
     },
     {
       "slug": "research-rag",
@@ -9679,15 +10346,19 @@
       "recommended": [
         {
           "toolId": "khanmigo",
-          "why": "Tutor and teaching assistant with a free teacher sign-up."
+          "why": "Tutors almost any academic subject, and learners are $4 a month."
+        },
+        {
+          "toolId": "quizlet",
+          "why": "Turns notes into a practice test and explains a homework step."
+        },
+        {
+          "toolId": "studyfetch",
+          "why": "Explains a subject from your materials and builds practice from them."
         },
         {
           "toolId": "synthesis-tutor",
-          "why": "Tutor with a free trial."
-        },
-        {
-          "toolId": "duolingo-max",
-          "why": "Duolingo's 2023 post introduces Max with GPT-4."
+          "why": "Teaches K-5 math and adapts each lesson to the child."
         }
       ],
       "intro": "AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss."

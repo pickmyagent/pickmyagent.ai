@@ -32,7 +32,8 @@
     "real-estate"
   ],
   "useCaseTags": [
-    "find-land"
+    "find-land",
+    "real-estate-overview"
   ],
   "toolTypes": [
     "other"
@@ -63,6 +64,7 @@
     "finalUrl": "https://www.acres.com/pricing"
   },
   "useCaseFit": {
-    "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus."
+    "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus.",
+    "real-estate": "Shows parcel maps and basic land insights before an owner lookup."
   }
 }

@@ -1,0 +1,19 @@
+{
+  "slug": "listing-videos",
+  "title": "Make a real estate listing video",
+  "summary": "Trim a walkthrough or turn listing photos into a home tour with captions and music.",
+  "audienceHints": ["realtors", "investors"],
+  "matchTags": ["listing-videos"],
+  "recommended": [
+    { "toolId": "capcut", "why": "Trims walkthrough footage, adds captions, and resizes it for a vertical reel." },
+    { "toolId": "kapwing", "why": "Trims a walkthrough, adds captions, and resizes the video." },
+    { "toolId": "descript", "why": "Edits the video by editing the transcript and adds captions." },
+    { "toolId": "canva", "why": "Trims listing clips, adds captions, and can add music." },
+    { "toolId": "autoreel", "why": "Turns listing photos into a property video with music and captions." }
+  ],
+  "jobPhrase": "making a real estate listing video",
+  "assistantTask": "trim the walkthrough, draft captions, and note the music",
+  "assistantContext": "showing a home in a listing video",
+  "searchTopic": "the walkthrough and the reel",
+  "intro": "AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok."
+}

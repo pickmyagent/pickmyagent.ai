@@ -1,0 +1,15 @@
+{
+  "slug": "make-3d",
+  "title": "Make a 3D model",
+  "summary": "Describe a 3D asset and generate it in a 3D app.",
+  "audienceHints": ["creators", "gamers"],
+  "matchTags": ["3d-assets"],
+  "recommended": [
+    { "toolId": "meshy", "why": "Turns text or a picture into a 3D asset." }
+  ],
+  "jobPhrase": "making a 3D model",
+  "assistantTask": "describe the 3D asset and list what to change",
+  "assistantContext": "making a 3D model",
+  "searchTopic": "the 3D model you want",
+  "intro": "AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself."
+}
