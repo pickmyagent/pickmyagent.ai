@@ -329,6 +329,26 @@ export const CONCEPTS: Concept[] = [
     ],
   },
   {
+    id: "language",
+    useCase: "learn-language",
+    categories: ["learning"],
+    phrases: [
+      "learn a language",
+      "language practice",
+      "language learning",
+      "language tutor",
+      "learn spanish",
+      "learn french",
+      "learn german",
+      "learn japanese",
+    ],
+    anchors: ["spanish", "french", "german", "japanese", "duolingo"],
+    coveredVerbs: ["learn", "practice"],
+    covered: [
+      "language", "languages", "spanish", "french", "german", "japanese", "duolingo", "practice",
+    ],
+  },
+  {
     id: "video-generation",
     useCase: "video-generation",
     categories: ["creative-media"],

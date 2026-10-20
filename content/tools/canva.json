@@ -4,8 +4,8 @@
   "name": "Canva",
   "websiteUrl": "https://www.canva.com/",
   "affiliateUrl": null,
-  "shortDescription": "Real estate video templates that drop listing photos into a tour. No monthly price confirmed.",
-  "longDescription": "Canva's real estate video gallery says you can start from a listing template and customize it. The real estate solutions page says the video editor can create listing videos and walk-throughs and add music. The pages we read did not list a monthly plan price. We did not create an account.",
+  "shortDescription": "Real estate video templates and a video editor for listing clips. Free to start; paid plans on their site.",
+  "longDescription": "Canva's real estate video gallery says you can start from a listing template and customize it. The real estate solutions page says the video editor can create listing videos and walk-throughs and add music. Those pages do not list a monthly plan price.",
   "categories": ["creative-media"],
   "useCaseTags": ["listing-videos"],
   "toolTypes": ["creative"],
@@ -24,7 +24,7 @@
   "bestFor": ["A listing video started from a real estate template", "Adding photos, captions, and music in one editor"],
   "notIdealFor": ["A confirmed monthly price from this listing", "Skip tracing or deal ranking"],
   "strength": "Canva's real estate pages say you can start a listing video or walk-through from a template and add music.",
-  "weakness": "The pages we read did not list a monthly plan price, so this listing states none.",
+  "weakness": "The real estate pages do not list a monthly plan price, so this card states none.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T23:40:00-04:00",
@@ -44,6 +44,6 @@
   ],
   "siteLoad": { "status": 200, "finalUrl": "https://www.canva.com/video-editor/templates/real-estate/" },
   "useCaseFit": {
-    "listing-videos": "Turns listing photos into a video from a real estate template."
+    "listing-videos": "Trims listing clips, adds captions, and can add music."
   }
 }

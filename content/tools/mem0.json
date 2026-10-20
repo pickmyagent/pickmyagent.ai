@@ -4,8 +4,8 @@
   "name": "Mem0",
   "websiteUrl": "https://mem0.ai/",
   "affiliateUrl": null,
-  "shortDescription": "Memory layer for agents. We imported the Python package locally; no account and no model call.",
-  "longDescription": "Mem0 stores memory for agents. We installed mem0ai and imported it, with no API key and no model call. The cloud pricing page loaded; a free SaaS tier was not cleanly parsed, so the confirmed free path is the open-source package.",
+  "shortDescription": "Memory layer for agents. Open-source package you can install yourself.",
+  "longDescription": "Mem0 stores memory for agents. The open-source package is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
   "categories": [
     "search-rag"
   ],

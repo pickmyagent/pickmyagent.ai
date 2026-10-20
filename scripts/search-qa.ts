@@ -3,7 +3,7 @@ import { CONCEPTS } from "../lib/concepts.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { rankCatalogQuery } from "../lib/search.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
-import { BROKEN_ASSISTANT, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems } from "./grammar-gate.ts";
+import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems } from "./grammar-gate.ts";
 
 export type QaQuery = {
   query: string;
@@ -251,6 +251,8 @@ export const QA_QUERIES: QaQuery[] = [
   { query: "cheap AI model for coding", domain: "coding-agents" },
   { query: "deepseek alternative", domain: "coding-agents" },
   { query: "chatgpt alternative", domain: null },
+  { query: "learn spanish", domain: "learn-language" },
+  { query: "language practice", domain: "learn-language" },
 ];
 
 const PROPER = new Set([
@@ -430,6 +432,9 @@ export function qaProblems(catalog: Catalog): string[] {
 function scanProse(value: unknown, path: string, problems: string[]): void {
   if (typeof value === "string") {
     if (INTERNAL.test(value)) problems.push(`${path}: ${value}`);
+    if (/(?:shortDescription|longDescription)$/.test(path) && descriptionProblems(value).length > 0) {
+      problems.push(`${path}: ${value}`);
+    }
     return;
   }
   if (Array.isArray(value)) {

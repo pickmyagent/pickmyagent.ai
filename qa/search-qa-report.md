@@ -1,6 +1,6 @@
 # Search QA report
 
-239 queries through the ranker and the header, intro, and why-line renderers.
+241 queries through the ranker and the header, intro, and why-line renderers.
 
 ## 1. find homes for sale by owner
 
@@ -879,8 +879,8 @@
 - Intro: AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit.
 - Domain: create-content
 - Cards:
-  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of headings, examples, and claims to verify in a draft.
@@ -1683,8 +1683,9 @@
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -1697,7 +1698,8 @@
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
@@ -1711,8 +1713,9 @@
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -1726,7 +1729,8 @@
 - Domain: tutoring
 - Cards:
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -1739,8 +1743,9 @@
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -2272,7 +2277,7 @@
   - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
   - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
   - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
-  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
+  - Bitpart — Specialist · Docs checked — Bitpart supplies an engine and SDKs for a character that talks in a game.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of character voice, forbidden topics, and sample lines.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of NPC lines, the trigger, and whether the game may say them.
@@ -2323,7 +2328,7 @@
   - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
   - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
   - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
-  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
+  - Bitpart — Specialist · Docs checked — Bitpart supplies an engine and SDKs for a character that talks in a game.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of character voice, forbidden topics, and sample lines.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of NPC lines, the trigger, and whether the game may say them.
@@ -3181,7 +3186,8 @@
 - Domain: tutoring
 - Cards:
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -3340,87 +3346,87 @@
 ## 223. edit listing videos for real estate
 
 - Header: For editing listing videos for real estate, here's how each tool can help:
-- Intro: AI agents can order the rooms in a home tour, draft the on-screen captions, and note music for the vertical reel a realtor still exports.
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
 - Domain: listing-videos
 - Cards:
-  - Canva — Specialist · Docs checked — Canva turns listing photos into a video from a real estate template.
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
   - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
-  - Descript — Specialist · Docs checked — Descript builds a listing tour from property photos, with room labels and music.
-  - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough video with music and captions.
-  - CapCut — Specialist · Docs checked — CapCut turns listing photos into a vertical Instagram reel with captions and music.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of listing photos, a vertical Instagram reel, captions, and music.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a stack of listing photos into a shot order with captions and a music note.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
 
 ## 224. make a video tour of a house
 
 - Header: For making a video tour of a house, here's how each tool can help:
-- Intro: AI agents can order the rooms in a home tour, draft the on-screen captions, and note music for the vertical reel a realtor still exports.
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
 - Domain: listing-videos
 - Cards:
-  - Canva — Specialist · Docs checked — Canva turns listing photos into a video from a real estate template.
-  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
-  - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough video with music and captions.
-  - CapCut — Specialist · Docs checked — CapCut turns listing photos into a vertical Instagram reel with captions and music.
-  - Descript — Specialist · Docs checked — Descript builds a listing tour from property photos, with room labels and music.
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie builds a virtual tour of the home from 360 photos.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of listing photos, a vertical Instagram reel, captions, and music.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a stack of listing photos into a shot order with captions and a music note.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
 
 ## 225. realtor video editing
 
 - Header: For editing a realtor video, here's how each tool can help:
-- Intro: AI agents can order the rooms in a home tour, draft the on-screen captions, and note music for the vertical reel a realtor still exports.
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
 - Domain: listing-videos
 - Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
   - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
-  - CapCut — Specialist · Docs checked — CapCut turns listing photos into a vertical Instagram reel with captions and music.
-  - Descript — Specialist · Docs checked — Descript builds a listing tour from property photos, with room labels and music.
-  - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough video with music and captions.
-  - Canva — Specialist · Docs checked — Canva turns listing photos into a video from a real estate template.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of listing photos, a vertical Instagram reel, captions, and music.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a stack of listing photos into a shot order with captions and a music note.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
 
 ## 226. property walkthrough video
 
 - Header: For making a property walkthrough video, here's how each tool can help:
-- Intro: AI agents can order the rooms in a home tour, draft the on-screen captions, and note music for the vertical reel a realtor still exports.
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
 - Domain: listing-videos
 - Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
   - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
-  - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough video with music and captions.
-  - Canva — Specialist · Docs checked — Canva turns listing photos into a video from a real estate template.
-  - BoxBrownie — Specialist · Docs checked — BoxBrownie builds a virtual tour of the home from 360 photos.
-  - CapCut — Specialist · Docs checked — CapCut turns listing photos into a vertical Instagram reel with captions and music.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of listing photos, a vertical Instagram reel, captions, and music.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a stack of listing photos into a shot order with captions and a music note.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
 
 ## 227. turn listing photos into a video
 
 - Header: For turning listing photos into a video, here's how each tool can help:
-- Intro: AI agents can order the rooms in a home tour, draft the on-screen captions, and note music for the vertical reel a realtor still exports.
+- Intro: AI agents can turn listing photos into a home tour, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
 - Domain: listing-videos
 - Cards:
   - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
-  - Canva — Specialist · Docs checked — Canva turns listing photos into a video from a real estate template.
-  - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough video with music and captions.
-  - CapCut — Specialist · Docs checked — CapCut turns listing photos into a vertical Instagram reel with captions and music.
-  - Descript — Specialist · Docs checked — Descript builds a listing tour from property photos, with room labels and music.
+  - Canva — Specialist · Docs checked — Canva turns listing photos into a video from a real estate template and can add music.
+  - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough-style video with music and text.
+  - CapCut — Specialist · Docs checked — CapCut turns property photos into a realtor slideshow with captions and music.
+  - Descript — Specialist · Docs checked — Descript turns property photos or clips into a listing video with room labels and music.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of listing photos, a vertical Instagram reel, captions, and music.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the walkthrough, captions, music, and a vertical reel.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of rooms, the caption for each, and whether the reel is vertical.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on listing-video length and music, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a stack of listing photos into a shot order with captions and a music note.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to order the rooms in a walkthrough and draft the captions and a music note.
 
 ## 228. AI avatar video
 
@@ -3520,7 +3526,8 @@
 - Cards:
   - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -3535,7 +3542,8 @@
 - Cards:
   - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -3550,7 +3558,8 @@
 - Cards:
   - Synthesis Tutor — Specialist · Docs checked — Synthesis Tutor teaches K-5 math and adapts each lesson to the child.
   - Khanmigo — Specialist · Docs checked — Khanmigo teaches a concept and also helps a teacher plan that same lesson.
-  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a study checklist with what to review and which problems to retry.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks which practice problems you still miss.
@@ -3597,3 +3606,29 @@
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of tools, the job each one does, and the one you want to try.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on tools that do this job, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list what you use the tool for and which part another tool would still miss.
+
+## 240. learn spanish
+
+- Header: For learning spanish, here's how each tool can help:
+- Intro: AI agents can practice a language with you, explain a mistake, and suggest the next drill.
+- Domain: learn-language
+- Cards:
+  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to practice a short dialogue and explain the mistake in the last sentence.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of words to review and a few sentences to try aloud.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of phrases, the correction, and what to practice next.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on the language, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to correct one sentence and give a similar one to try.
+
+## 241. language practice
+
+- Header: For practicing a language, here's how each tool can help:
+- Intro: AI agents can practice a language with you, explain a mistake, and suggest the next drill.
+- Domain: learn-language
+- Cards:
+  - Duolingo Max — Specialist · Docs checked — Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to practice a short dialogue and explain the mistake in the last sentence.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of words to review and a few sentences to try aloud.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of phrases, the correction, and what to practice next.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on the language, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to correct one sentence and give a similar one to try.

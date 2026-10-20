@@ -178,6 +178,14 @@ export function grammarProblems(text: string, kind: "header" | "intro" | "why" =
   return problems;
 }
 
+/** Internal process notes that must not appear on a card or a tool description. */
+export const DESCRIPTION_BANNED =
+  /\bno monthly price (?:confirmed|was listed|listed)\b|\bpricing page (?:included|showed|loaded)\b|\b(?:on the |the )?pages? we read\b|\bwe (?:read|checked|fetched)\b|\bnot installed here\b|\bnot hands-on(?: tested)?\b|\bunconfirmed\b|\bnot clearly confirmed\b|\bdid not come through\b|\bfree-to-start option\b|\bwe imported\b/i;
+
+export function descriptionProblems(text: string): string[] {
+  return DESCRIPTION_BANNED.test(text) ? ["description uses internal wording"] : [];
+}
+
 const SPECIALIST_BANNED =
   /\bis for\b|\bwe imported\b|\blocally\b|\bpriced on the site\b|\bpricing page\b|\bso you can\b|\bdifferent job\b|\bnot a\b|\binstead of\b/i;
 

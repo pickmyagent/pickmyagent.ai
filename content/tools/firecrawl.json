@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.firecrawl.dev/",
   "affiliateUrl": null,
   "shortDescription": "Turns websites into markdown for LLMs. Open-source repo plus a cloud API with a free plan.",
-  "longDescription": "Firecrawl crawls pages into markdown for language models. We checked the site, pricing, docs, and the GitHub release. The pricing crawl mentioned a free or hobby plan and a $0 sample, with paid tiers above that. We did not run a local install.",
+  "longDescription": "Firecrawl crawls pages into markdown for language models. The pricing page mentions a free or hobby plan and a $0 sample, with paid tiers above that.",
   "categories": [
     "tool-use",
     "search-rag"

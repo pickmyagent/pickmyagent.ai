@@ -4,8 +4,8 @@
   "name": "Khanmigo",
   "websiteUrl": "https://www.khanmigo.ai/",
   "affiliateUrl": null,
-  "shortDescription": "Khan Academy tutor and teaching assistant. Teachers can sign up for free.",
-  "longDescription": "Khanmigo's site describes a teaching assistant and tutor for learners and parents, plus a writing coach, and it says teachers can sign up for free. The fetched text did not include a dollar price for learners. We did not create an account.",
+  "shortDescription": "Khan Academy tutor for almost any subject. Learners are $4 a month, and teachers can sign up free.",
+  "longDescription": "Khanmigo's learners page calls it an always-available tutor for almost any academic subject, from elementary school through college, including math, science, coding, history, and humanities. Learners and parents pay $4 a month or $44 a year. Teachers can sign up free in supported places.",
   "categories": [
     "learning"
   ],
@@ -21,28 +21,28 @@
   "pricingModel": [
     "freemium"
   ],
-  "pricingNotes": "The site calls Khanmigo a teaching assistant and tutor and says teachers can sign up for free. No dollar price was in the fetch.",
-  "pricingUrl": "https://www.khanmigo.ai/",
-  "docsUrl": "https://www.khanmigo.ai/",
+  "pricingNotes": "Learners and parents pay $4 a month or $44 a year. Teachers can sign up free in supported places.",
+  "pricingUrl": "https://www.khanmigo.ai/learners",
+  "docsUrl": "https://www.khanmigo.ai/learners",
   "freeTier": true,
-  "freeTierNotes": null,
-  "startingPrice": null,
+  "freeTierNotes": "Teachers can sign up free in supported places. Learners and parents pay.",
+  "startingPrice": 4,
   "freeTrial": null,
-  "pricingCheckedAt": "2026-10-19",
+  "pricingCheckedAt": "2026-10-20",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
     "Tutoring and teacher help inside Khan Academy's assistant"
   ],
   "notIdealFor": [
-    "Someone who needs a published learner price"
+    "A family account without the learner subscription"
   ],
-  "strength": "Khanmigo describes a tutor and teaching assistant, and it says teachers can sign up for free.",
-  "weakness": "The fetched page did not list a dollar price for learners.",
+  "strength": "Khanmigo tutors almost any academic subject from elementary school through college, and learners are $4 a month.",
+  "weakness": "Parents and learners pay for access, and a teacher sign-up does not cover a family account.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
-  "checkedAt": "2026-10-19T16:00:00-04:00",
-  "checkedDate": "2026-10-19",
+  "checkedAt": "2026-10-20T00:00:00-04:00",
+  "checkedDate": "2026-10-20",
   "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
   "handsOn": {
     "performed": false
@@ -53,15 +53,15 @@
   "featuredPaid": false,
   "status": "published",
   "publishedAt": "2026-10-19",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-20",
   "sources": [
-    "https://www.khanmigo.ai/"
+    "https://www.khanmigo.ai/learners"
   ],
   "siteLoad": {
     "status": 200,
     "finalUrl": "https://www.khanmigo.ai/"
   },
   "useCaseFit": {
-    "tutoring": "Tutor and teaching assistant that offers teachers a free sign-up."
+    "tutoring": "Tutors almost any academic subject and helps a teacher plan a lesson."
   }
 }

@@ -4,7 +4,7 @@ import test from "node:test";
 import { CONCEPTS } from "../lib/concepts.ts";
 import { domainAssistantLine } from "../lib/assistant-lines.ts";
 import { specialistLine, specialistLinePairs } from "../lib/specialist-lines.ts";
-import { BROKEN_ASSISTANT, BROKEN_HEADERS, grammarProblems, specialistWhyProblems } from "../scripts/grammar-gate.ts";
+import { BROKEN_ASSISTANT, BROKEN_HEADERS, descriptionProblems, grammarProblems, specialistWhyProblems } from "../scripts/grammar-gate.ts";
 import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport } from "../scripts/search-qa.ts";
 import {
   GENERIC_MATCH_WORDS,
@@ -800,6 +800,10 @@ test("grammar gate flags the broken header and assistant examples", () => {
   assert.equal(rag.lead, "For building a RAG pipeline, here's how each tool can help:");
   const tutor = rankCatalogQuery("I need AI to tutor me", catalog);
   assert.equal(tutor.lead, "For getting tutoring help, here's how each tool can help:");
+  assert.ok(descriptionProblems("No monthly price confirmed.").length > 0);
+  assert.ok(descriptionProblems("Pricing page included a free-to-start option.").length > 0);
+  assert.ok(descriptionProblems("The plans on the page we read are paid.").length > 0);
+  assert.deepEqual(descriptionProblems("Free to start; paid plans on their site."), []);
 });
 
 test("every specialist use-case pair has a hand-written why-line", () => {
@@ -1025,13 +1029,23 @@ test("specialists stay inside the query domain", () => {
     const ranked = rankCatalogQuery(generic, catalog);
     assert.equal(ranked.useCases[0]?.slug, "tutoring", generic);
     assert.equal(ranked.tools.some((tool) => tool.slug === "synthesis-tutor"), false, generic);
-    assert.ok(ranked.tools.some((tool) => tool.slug === "khanmigo"), generic);
+    assert.equal(ranked.tools.some((tool) => tool.slug === "duolingo-max"), false, generic);
+    const specialists = ranked.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+    assert.deepEqual(specialists.slice(0, 3).sort(), ["khanmigo", "quizlet", "studyfetch"].sort(), generic);
+    const firstAssistant = ranked.tools.findIndex((tool) => tool.generalPurpose);
+    assert.ok(firstAssistant >= 3, generic);
   }
   for (const kids of ["k-5 math tutor", "math for kids", "3rd grade math"]) {
     const ranked = rankCatalogQuery(kids, catalog);
     assert.equal(ranked.useCases[0]?.slug, "tutoring", kids);
     assert.ok(ranked.tools.some((tool) => tool.slug === "synthesis-tutor"), kids);
+    assert.equal(ranked.tools.some((tool) => tool.slug === "duolingo-max"), false, kids);
   }
+  const spanish = rankCatalogQuery("learn spanish", catalog);
+  assert.equal(spanish.useCases[0]?.slug, "learn-language");
+  assert.ok(spanish.tools.some((tool) => tool.slug === "duolingo-max"));
+  assert.equal(spanish.tools.some((tool) => tool.slug === "synthesis-tutor"), false);
+  assert.equal(spanish.tools.some((tool) => tool.slug === "quizlet"), false);
   for (const avatar of ["AI avatar video", "talking head video", "spokesperson video", "video of me talking without filming"]) {
     const ranked = rankCatalogQuery(avatar, catalog);
     assert.equal(ranked.useCases[0]?.slug, "avatar-video", avatar);
@@ -1046,23 +1060,26 @@ test("specialists stay inside the query domain", () => {
     "make a video tour of a house",
     "realtor video editing",
     "property walkthrough video",
-    "turn listing photos into a video",
   ]) {
     const ranked = rankCatalogQuery(listing, catalog);
     assert.equal(ranked.useCases[0]?.slug, "listing-videos", listing);
-    const slugs = ranked.tools.map((tool) => tool.slug);
-    const editors = listing === "property walkthrough video"
-      ? ["autoreel", "kapwing", "canva", "capcut", "boxbrownie"]
-      : ["autoreel", "kapwing", "canva", "capcut", "descript"];
-    for (const wanted of editors) {
-      assert.ok(slugs.includes(wanted), `${listing} missing ${wanted}`);
-    }
+    const specialists = ranked.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+    assert.deepEqual(specialists.slice(0, 4), ["capcut", "kapwing", "descript", "canva"], listing);
+    const descript = ranked.tools.find((tool) => tool.slug === "descript");
+    assert.match(descript?.whyItHelps ?? "", /transcript/i, listing);
+    assert.doesNotMatch(descript?.whyItHelps ?? "", /property photos/i, listing);
+    assert.match(ranked.intro, /trim your walkthrough footage/);
     for (const banned of ["mashvisor", "acres", "propstream", "dealcheck", "midjourney", "higgsfield"]) {
-      assert.equal(slugs.includes(banned), false, `${listing} included ${banned}`);
+      assert.equal(specialists.includes(banned), false, `${listing} included ${banned}`);
     }
-    const joined = ranked.tools.map((tool) => tool.whyItHelps).join(" ");
-    assert.match(joined, /caption|music|reel|home|listing|walkthrough|tour/i, listing);
   }
+  const photos = rankCatalogQuery("turn listing photos into a video", catalog);
+  assert.equal(photos.useCases[0]?.slug, "listing-videos");
+  const photoSpecialists = photos.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+  assert.deepEqual(photoSpecialists.slice(0, 4), ["autoreel", "canva", "kapwing", "capcut"]);
+  assert.match(photos.intro, /turn listing photos into a home tour/);
+  const photoDescript = photos.tools.find((tool) => tool.slug === "descript");
+  if (photoDescript) assert.match(photoDescript.whyItHelps, /property photos or clips/);
   const estate = rankCatalogQuery("best AI tool for real estate", catalog);
   assert.equal(estate.useCases[0]?.slug, "real-estate");
   assert.equal(estate.lead, "For finding AI tools for real estate, here's how each tool can help:");

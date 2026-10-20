@@ -164,6 +164,13 @@ export const DOMAIN_LINES: Record<string, Record<string, string>> = {
     perplexity: "for sourced lessons on the topic, with links you can check.",
     deepseek: "to show a worked example and then a similar problem with the answer withheld.",
   }),
+  "learn-language": lines({
+    claude: "to practice a short dialogue and explain the mistake in the last sentence.",
+    chatgpt: "for a checklist of words to review and a few sentences to try aloud.",
+    gemini: "to build a sheet of phrases, the correction, and what to practice next.",
+    perplexity: "for sourced notes on the language, with links you can check.",
+    deepseek: "to correct one sentence and give a similar one to try.",
+  }),
   "game-creative": lines({
     claude: "to outline short-clip moments from a long video and draft captions you can edit.",
     chatgpt: "for a checklist of clip length, caption, and the shot you still need.",
@@ -264,10 +271,10 @@ export const DOMAIN_LINES: Record<string, Record<string, string>> = {
   }),
   "listing-videos": lines({
     claude: "to order the rooms in a home tour and draft the captions a realtor puts on screen.",
-    chatgpt: "for a checklist of listing photos, a vertical Instagram reel, captions, and music.",
+    chatgpt: "for a checklist of the walkthrough, captions, music, and a vertical reel.",
     gemini: "to build a sheet of rooms, the caption for each, and whether the reel is vertical.",
     perplexity: "for sourced notes on listing-video length and music, with links you can check.",
-    deepseek: "to turn a stack of listing photos into a shot order with captions and a music note.",
+    deepseek: "to order the rooms in a walkthrough and draft the captions and a music note.",
   }),
   "real-estate": lines({
     claude: "to compare one deal, outline a listing video, and draft the owner note you still send.",

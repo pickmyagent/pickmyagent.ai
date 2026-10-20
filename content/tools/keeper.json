@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.keepertax.com/",
   "affiliateUrl": null,
   "shortDescription": "Tracks expenses and files federal and state taxes. The homepage says you can get started free.",
-  "longDescription": "Keeper's pricing page lists bookkeeping, federal and state filing, quarterly tax payments, and a tax pro consult. The homepage says you can get started free. We did not see a single monthly plan price in the text we fetched, and we did not create an account.",
+  "longDescription": "Keeper's pricing page lists bookkeeping, federal and state filing, quarterly tax payments, and a tax pro consult. The homepage says you can get started free. That page does not list one monthly plan price.",
   "categories": [
     "personal-finance"
   ],

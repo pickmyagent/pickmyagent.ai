@@ -10,7 +10,7 @@
     "learning"
   ],
   "useCaseTags": [
-    "tutoring"
+    "language-learning"
   ],
   "toolTypes": [
     "agent"
@@ -62,6 +62,6 @@
     "finalUrl": "https://blog.duolingo.com/duolingo-max/"
   },
   "useCaseFit": {
-    "tutoring": "Language-learning experience Duolingo introduced as GPT-4 powered Max."
+    "learn-language": "Practices a language with the GPT-4 features Duolingo added for Max."
   }
 }

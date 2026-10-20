@@ -5,7 +5,7 @@
   "websiteUrl": "https://cursor.com/",
   "affiliateUrl": null,
   "shortDescription": "Desktop IDE with an agent that can edit, run, and review code.",
-  "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. The pricing page showed a $0 tier next to paid plans. The app was not installed and no one signed in.",
+  "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. The pricing page lists a $0 tier next to paid plans.",
   "categories": [
     "coding-agents"
   ],

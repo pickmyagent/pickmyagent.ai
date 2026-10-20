@@ -1,0 +1,18 @@
+{
+  "slug": "learn-language",
+  "title": "Practice a language",
+  "summary": "Practice a language and get the next drill.",
+  "audienceHints": ["learners"],
+  "matchTags": ["language-learning"],
+  "recommended": [
+    {
+      "toolId": "duolingo-max",
+      "why": "Practices a language with the GPT-4 features Duolingo added for Max."
+    }
+  ],
+  "jobPhrase": "practicing a language",
+  "assistantTask": "practice a short dialogue and explain a mistake",
+  "assistantContext": "learning a language",
+  "searchTopic": "the language you want to practice",
+  "intro": "AI agents can practice a language with you, explain a mistake, and suggest the next drill."
+}

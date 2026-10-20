@@ -1,5 +1,5 @@
 import { domainAssistantLine, openAssistantLine } from "./assistant-lines.ts";
-import { specialistLine } from "./specialist-lines.ts";
+import { isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
 import type { Category, SmokeStatus, Tool, UseCase } from "./types";
 
@@ -180,6 +180,7 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   if (concept.id === "video-generation" && (listingVideoQuery(lower) || avatarQuery(lower))) return 0;
   if (concept.id === "avatar" && (videoGenerationQuery(lower) || listingVideoQuery(lower))) return 0;
   if (concept.id === "listing-video" && avatarQuery(lower)) return 0;
+  if (concept.id === "tutoring" && languageQuery(lower)) return 0;
   let score = 0;
   if (concept.id === "video-generation" && videoGenerationQuery(lower)) score += 12;
   for (const phrase of concept.phrases) {
@@ -390,6 +391,7 @@ const PHRASE_HEADER: Record<string, string> = {
   "spokesperson video": "making a spokesperson video",
   "ai avatar video": "making an AI avatar video",
   "property walkthrough video": "making a property walkthrough video",
+  "language practice": "practicing a language",
 };
 
 const NO_ARTICLE = new Set([
@@ -560,6 +562,23 @@ function listingVideoQuery(query: string): boolean {
   return /\b(realtor|listing)\b/i.test(query) && /\b(video|videos|tour|walkthrough)\b/i.test(query);
 }
 
+function languageQuery(query: string): boolean {
+  return /\b(duolingo|spanish|french|german|japanese|languages?)\b/i.test(query);
+}
+
+const LISTING_EDITOR_ORDER = ["capcut", "kapwing", "descript", "canva"];
+const LISTING_PHOTO_ORDER = ["autoreel", "canva", "kapwing", "capcut"];
+
+function roleBonus(conceptId: string, slug: string, query: string): number {
+  if (conceptId === "listing-video") {
+    const order = isListingPhotoQuery(query) ? LISTING_PHOTO_ORDER : LISTING_EDITOR_ORDER;
+    const index = order.indexOf(slug);
+    return index >= 0 ? 400 - index * 80 : 0;
+  }
+  if (conceptId === "tutoring" && slug === "synthesis-tutor" && kidsTutorQuery(query)) return 20;
+  return 0;
+}
+
 function kidsTutorQuery(query: string): boolean {
   if (/\b(kids?|children|child|elementary|kindergarten)\b/i.test(query)) return true;
   if (/\bk[\s-]?5\b/i.test(query)) return true;
@@ -627,9 +646,17 @@ export function templatedIntro(query: string, useCase?: UseCase | null): string 
   return openIntro(query, useCase);
 }
 
+const LISTING_EDIT_INTRO =
+  "AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.";
+const LISTING_PHOTO_INTRO =
+  "AI agents can turn listing photos into a home tour, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.";
+
 export function jobIntro(query: string, useCase: UseCase | undefined, concept: Concept | null): string {
   if (videoGenerationQuery(query)) return VIDEO_GENERATION_INTRO;
   if ((useCase?.slug === "coding-agents" || concept?.id === "code") && modelChoiceQuery(query)) return MODEL_CHOICE_INTRO;
+  if (useCase?.slug === "listing-videos" || concept?.id === "listing-video") {
+    return isListingPhotoQuery(query) ? LISTING_PHOTO_INTRO : LISTING_EDIT_INTRO;
+  }
   if (useCase?.intro) return useCase.intro;
   return openIntro(query, useCase);
 }
@@ -664,6 +691,10 @@ function assistantWhy(tool: Tool, query: string, useCase: UseCase | null): strin
 
 function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean, index: number): string {
   if (general) return assistantWhy(tool, query, useCase);
+  if (useCase?.slug === "listing-videos") {
+    const written = listingSpecialistLine(tool.slug, query);
+    if (written) return written;
+  }
   if (useCase) {
     const written = specialistLine(useCase.slug, tool.slug, index);
     if (written) return written;
@@ -889,7 +920,7 @@ export function rankCatalogQuery(
       const recIndex = winner ? indexedCases.find((item) => item.slug === winner.concept.useCase)
         ?.source.recommended.findIndex((item) => item.toolId === tool.source.id) ?? -1 : -1;
       const recBonus = recIndex >= 0 ? 8 - recIndex : 0;
-      tool.score = winner.score * 10 + overlap + recBonus;
+      tool.score = winner.score * 10 + overlap + recBonus + roleBonus(winner.concept.id, tool.slug, corrected);
       specialists.push(tool);
     }
   }

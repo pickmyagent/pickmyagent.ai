@@ -246,14 +246,22 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
     ],
   },
   "tutoring": {
-    "duolingo-max": [
-      "Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.",
-    ],
     khanmigo: [
       "Khanmigo teaches a concept and also helps a teacher plan that same lesson.",
     ],
+    quizlet: [
+      "Quizlet turns notes into a practice test and explains a homework step with more practice.",
+    ],
+    studyfetch: [
+      "StudyFetch explains a subject from your materials and builds practice from them.",
+    ],
     "synthesis-tutor": [
       "Synthesis Tutor teaches K-5 math and adapts each lesson to the child.",
+    ],
+  },
+  "learn-language": {
+    "duolingo-max": [
+      "Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.",
     ],
   },
   "game-creative": {
@@ -330,16 +338,16 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "BoxBrownie builds a virtual tour of the home from 360 photos.",
     ],
     canva: [
-      "Canva turns listing photos into a video from a real estate template.",
+      "Canva trims listing clips, adds captions, and can add music.",
     ],
     capcut: [
-      "CapCut turns listing photos into a vertical Instagram reel with captions and music.",
+      "CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.",
     ],
     descript: [
-      "Descript builds a listing tour from property photos, with room labels and music.",
+      "Descript edits the video by editing the transcript and adds captions.",
     ],
     kapwing: [
-      "Kapwing turns listing photos into a walkthrough video with music and captions.",
+      "Kapwing trims a walkthrough, adds captions, and resizes the video.",
     ],
   },
   "real-estate": {
@@ -464,6 +472,26 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
 };
 
+/** Photo-to-video listing queries. Edit, trim, and caption queries stay on the editor lines. */
+export function isListingPhotoQuery(query: string): boolean {
+  return /\b(photos?|pictures?|images?)\b/i.test(query)
+    && !/\b(edit|editing|trim|trimming|caption|captions)\b/i.test(query);
+}
+
+const LISTING_PHOTO_LINES: Record<string, string> = {
+  autoreel: "AutoReel turns listing photos into a property video with music and captions.",
+  boxbrownie: "BoxBrownie builds a virtual tour of the home from 360 photos.",
+  canva: "Canva turns listing photos into a video from a real estate template and can add music.",
+  capcut: "CapCut turns property photos into a realtor slideshow with captions and music.",
+  descript: "Descript turns property photos or clips into a listing video with room labels and music.",
+  kapwing: "Kapwing turns listing photos into a walkthrough-style video with music and text.",
+};
+
+export function listingSpecialistLine(toolSlug: string, query: string): string | null {
+  if (isListingPhotoQuery(query)) return LISTING_PHOTO_LINES[toolSlug] ?? null;
+  return specialistLine("listing-videos", toolSlug);
+}
+
 export function specialistLine(useCaseSlug: string, toolSlug: string, index = 0): string | null {
   const lines = LINES[useCaseSlug]?.[toolSlug];
   if (!lines || lines.length === 0) return null;
@@ -476,6 +504,9 @@ export function specialistLinePairs(): Array<{ useCaseSlug: string; toolSlug: st
     for (const [toolSlug, lines] of Object.entries(tools)) {
       for (const line of lines) pairs.push({ useCaseSlug, toolSlug, line });
     }
+  }
+  for (const [toolSlug, line] of Object.entries(LISTING_PHOTO_LINES)) {
+    pairs.push({ useCaseSlug: "listing-videos", toolSlug, line });
   }
   return pairs;
 }

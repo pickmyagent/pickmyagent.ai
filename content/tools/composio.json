@@ -4,8 +4,8 @@
   "name": "Composio",
   "websiteUrl": "https://composio.dev/",
   "affiliateUrl": null,
-  "shortDescription": "Connects agents to third-party apps and tools. Docs and a $0 Hobby plan were checked; not installed here.",
-  "longDescription": "Composio is a tool-use layer between agents and third-party apps. The pricing page we crawled included Hobby / $0 / no-credit-card language. We checked docs and the October 15, 2026 CLI release, and we did not install it or create an account.",
+  "shortDescription": "Connects agents to third-party apps and tools. Free to start; paid plans on their site.",
+  "longDescription": "Composio is a tool-use layer between agents and third-party apps. The pricing page lists a $0 Hobby plan. The October 15, 2026 CLI release is public.",
   "categories": [
     "tool-use"
   ],

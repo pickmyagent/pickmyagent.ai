@@ -5,7 +5,7 @@
   "websiteUrl": "https://github.com/Significant-Gravitas/AutoGPT",
   "affiliateUrl": null,
   "shortDescription": "Open-source agent project with a platform beta. Site and repo checked; local install not run.",
-  "longDescription": "AutoGPT is an open-source agent project. We checked the GitHub repo and agpt.co/pricing. A platform beta release was published on October 14, 2026. We did not install it locally. The repo is the free path; hosted plans may be paid.",
+  "longDescription": "AutoGPT is an open-source agent project. A platform beta release was published on October 14, 2026. The repo is the free path, and hosted plans may be paid.",
   "categories": [
     "agent-frameworks",
     "coding-agents"
