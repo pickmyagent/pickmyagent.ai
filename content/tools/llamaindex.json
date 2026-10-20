@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.llamaindex.ai/",
   "affiliateUrl": null,
   "shortDescription": "Open-source framework for retrieval and agents. The cloud free plan includes 10,000 credits.",
-  "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. You can use it in Python. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
+  "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. You can use it in Python. There is a $0 plan with 10,000 credits, and Starter is $50 per month.",
   "categories": [
     "agent-frameworks",
     "search-rag"

@@ -5,7 +5,7 @@
   "websiteUrl": "https://batchleads.io/",
   "affiliateUrl": null,
   "shortDescription": "Property lists with owner phone numbers and emails. Growth is $119 per month.",
-  "longDescription": "BatchLeads searches property records and adds owner phone numbers and emails when a property is saved. On October 19, 2026 the pricing page listed Growth at $119 per month, Professional at $349, and Scale at $749, with a 7-day trial. SMS is an integration with a provider you bring.",
+  "longDescription": "BatchLeads searches property records and adds owner phone numbers and emails when a property is saved. Growth is $119 per month, Professional is $349, and Scale is $749, with a 7-day trial. SMS is an integration with a provider you bring.",
   "categories": [
     "real-estate"
   ],
@@ -37,7 +37,7 @@
   "notIdealFor": [
     "Someone who wants texting included without a separate SMS provider"
   ],
-  "strength": "Growth is $119 per month, and the pricing page says saved properties include owner phone numbers and emails.",
+  "strength": "Growth is $119 per month, and saved properties include owner phone numbers and emails.",
   "weakness": "Texting uses an SMS provider you connect yourself, and the 7-day trial becomes a paid plan unless you cancel.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

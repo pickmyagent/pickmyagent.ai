@@ -4,7 +4,7 @@
   "name": "Zendesk",
   "websiteUrl": "https://www.zendesk.com/",
   "affiliateUrl": null,
-  "shortDescription": "AI-first support platform. The pricing page says plans start at $19 per month.",
+  "shortDescription": "AI-first support platform. Plans start at $19 per month.",
   "longDescription": "Zendesk's pricing page is titled as plans starting from $19 per month and describes an AI-first service platform whose AI is meant to improve resolutions.",
   "categories": [
     "customer-support"
@@ -32,7 +32,7 @@
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
-    "Teams that already want a support suite with AI on the pricing page"
+    "Teams that already want a support suite with AI"
   ],
   "notIdealFor": [
     "Someone who needs the $19 plan's feature list spelled out"

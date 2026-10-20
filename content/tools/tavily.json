@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.tavily.com/",
   "affiliateUrl": null,
   "shortDescription": "Search API for agents that need web results. Free to start. Paid plans are on their site.",
-  "longDescription": "Tavily is a search API meant for agents. The pricing page lists $0 and no-credit-card language, plus paid usage samples.",
+  "longDescription": "Tavily is a search API meant for agents. The free plan includes 1,000 API credits per month. Paid plans start at $30 per month.",
   "categories": [
     "tool-use",
     "search-rag"
@@ -36,7 +36,7 @@
   "repoUrl": null,
   "bestFor": [
     "Agent retrieval that starts with web search",
-    "Apps that want search results, not a full browser"
+    "Apps that want search results without a full browser"
   ],
   "notIdealFor": [
     "Crawling your own site into a corpus",

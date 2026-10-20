@@ -5,7 +5,7 @@
   "websiteUrl": "https://cursor.com/",
   "affiliateUrl": null,
   "shortDescription": "Desktop IDE with an agent that can edit, run, and review code.",
-  "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. The pricing page lists a $0 tier next to paid plans.",
+  "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. There is a $0 tier next to paid plans.",
   "categories": [
     "coding-agents"
   ],
@@ -43,7 +43,7 @@
     "Running it on your own computer, which is not described here"
   ],
   "strength": "The free plan includes limited agent and chat requests in a desktop IDE that can edit the repo.",
-  "weakness": "The free plan caps agent and chat requests, and the pricing page did not state a clear lowest monthly price.",
+  "weakness": "The free plan caps agent and chat requests, and paid pricing is on the Cursor site.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

@@ -188,7 +188,7 @@ export function descriptionProblems(text: string): string[] {
 
 /** Research-process phrasing that must not appear in any text rendered on a tool page. */
 export const TOOL_PAGE_RESEARCH =
-  /\bwe (?:read|fetched|imported|checked|crawled|extracted|opened|found|recorded|could|parsed|ran|logged)\b|\bwe do not\b|\bpages? we\b|\bour (?:checker|client|check|crawl)\b|\bthis (?:check|listing|environment|pass)\b|\bfetched\b|\bthe fetch\b|\bin the fetch\b|\bthat fetch\b|\bpricing crawl\b|\bnot installed here\b|\blocally\b|\bunconfirmed\b|\bnot confirmed\b|\bcould not verify\b|\bthis listing\b|\bour crawl\b|\bStatus\s+\d{3}\b|\bHTTP\b|\bsmoke test\b|\blocal install\b|→|\bpip\b|\bimport\b|==|;|\bLLM invoke\b|\bmodel call\b|\bpackage\b|\b\d{4}-\d{2}-\d{2}\b/i;
+  /\bwe (?:read|fetched|imported|checked|crawled|extracted|opened|found|recorded|could|parsed|ran|logged)\b|\bwe do not\b|\bpages? we\b|\bour (?:checker|client|check|crawl)\b|\bthis (?:check|listing|environment|pass)\b|\bfetched\b|\bthe fetch\b|\bin the fetch\b|\bthat fetch\b|\bpricing crawl\b|\bnot installed here\b|\blocally\b|\bunconfirmed\b|\bnot confirmed\b|\bcould not verify\b|\bthis listing\b|\bour crawl\b|\bStatus\s+\d{3}\b|\bHTTP\b|\bsmoke test\b|\blocal install\b|→|\bpip\b|\bimport\b|==|;|\bLLM invoke\b|\bmodel call\b|\bpackage\b|\b\d{4}-\d{2}-\d{2}\b|\bsample|\bon the page\b|\bnot listed here\b|\bcame back\b|\bredirected\b|\bre-read\b|\banimated\b|\bJSON\b|\bwithout JavaScript\b|—/i;
 
 export function toolPageCopyProblems(text: string): string[] {
   return TOOL_PAGE_RESEARCH.test(text) ? ["tool page uses internal wording"] : [];
@@ -196,6 +196,11 @@ export function toolPageCopyProblems(text: string): string[] {
 
 const SPECIALIST_BANNED =
   /\bis for\b|\bwe imported\b|\blocally\b|\bpriced on the site\b|\bpricing page\b|\bso you can\b|\bdifferent job\b|\bnot a\b|\binstead of\b/i;
+
+/** Best for / Not ideal for bullets on a tool page. */
+export function toolPageBulletProblems(text: string): string[] {
+  return SPECIALIST_BANNED.test(text) ? ["tool page bullet uses banned wording"] : [];
+}
 
 /** Specialist why-lines must be "<Name> <verb> ...", with no template glue. */
 export function specialistWhyProblems(name: string, why: string): string[] {

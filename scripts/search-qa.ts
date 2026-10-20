@@ -4,7 +4,7 @@ import { smokeLabel } from "../lib/labels.ts";
 import { rankCatalogQuery } from "../lib/search.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
-import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageCopyProblems } from "./grammar-gate.ts";
+import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
 
 export type QaQuery = {
   query: string;
@@ -443,6 +443,9 @@ function scanProse(value: unknown, path: string, problems: string[], toolPage: b
       problems.push(`${path}: ${value}`);
     }
     if (toolPage && toolPageCopyProblems(value).length > 0) {
+      problems.push(`${path}: ${value}`);
+    }
+    if (toolPage && /\.(?:bestFor|notIdealFor)(?:\[\d+\])?$/.test(path) && toolPageBulletProblems(value).length > 0) {
       problems.push(`${path}: ${value}`);
     }
     return;

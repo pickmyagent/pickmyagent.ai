@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.anthropic.com/claude",
   "affiliateUrl": null,
   "shortDescription": "Anthropic Claude product and API for chat and coding.",
-  "longDescription": "Claude is Anthropic's model product, used for chat and coding. The public page is the product overview, and the pricing page lists a $0 option. API billing is separate.",
+  "longDescription": "Claude is Anthropic's model product, used for chat and coding. There is a $0 option, and paid plans start at $20 per month. API billing is separate.",
   "categories": [
     "coding-agents",
     "general-assistants"

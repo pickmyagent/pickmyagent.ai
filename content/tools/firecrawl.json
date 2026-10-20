@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.firecrawl.dev/",
   "affiliateUrl": null,
   "shortDescription": "Turns websites into markdown for LLMs. Open-source repo plus a cloud API with a free plan.",
-  "longDescription": "Firecrawl crawls pages into markdown for language models. The pricing page mentions a free or hobby plan and a $0 sample, with paid tiers above that.",
+  "longDescription": "Firecrawl crawls pages into markdown for language models. The free plan includes 1,000 credits per month. Paid plans start at $19 per month, or $16 per month when billed annually.",
   "categories": [
     "tool-use",
     "search-rag"
@@ -31,9 +31,9 @@
   "docsUrl": "https://docs.firecrawl.dev/",
   "freeTier": true,
   "freeTierNotes": "1,000 credits per month.",
-  "startingPrice": null,
+  "startingPrice": 19,
   "freeTrial": null,
-  "pricingCheckedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-20",
   "openSource": true,
   "repoUrl": "https://github.com/mendableai/firecrawl",
   "bestFor": [
@@ -42,10 +42,10 @@
   ],
   "notIdealFor": [
     "Interactive browser tasks such as clicking and login flows",
-    "A general web-search API — that is a different job"
+    "A general web-search API (see Tavily)"
   ],
   "strength": "The free cloud plan includes 1,000 credits per month to turn pages into markdown, and the repo is open source.",
-  "weakness": "Paid cloud samples on the page included about $16 and $75, and a monthly starting price is not listed here.",
+  "weakness": "Paid plans start at $19 per month, or $16 per month when billed annually.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

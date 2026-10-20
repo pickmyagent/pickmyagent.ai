@@ -4,7 +4,7 @@ import test from "node:test";
 import { CONCEPTS } from "../lib/concepts.ts";
 import { domainAssistantLine } from "../lib/assistant-lines.ts";
 import { specialistLine, specialistLinePairs } from "../lib/specialist-lines.ts";
-import { BROKEN_ASSISTANT, BROKEN_HEADERS, descriptionProblems, grammarProblems, specialistWhyProblems, toolPageCopyProblems } from "../scripts/grammar-gate.ts";
+import { BROKEN_ASSISTANT, BROKEN_HEADERS, descriptionProblems, grammarProblems, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "../scripts/grammar-gate.ts";
 import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport } from "../scripts/search-qa.ts";
 import {
   GENERIC_MATCH_WORDS,
@@ -836,6 +836,24 @@ test("grammar gate flags the broken header and assistant examples", () => {
     [],
   );
   assert.deepEqual(toolPageCopyProblems("Smoke-tested means we tried this tool ourselves."), []);
+  assert.ok(toolPageCopyProblems("Paid samples on the page included about $16.").length > 0);
+  assert.ok(toolPageCopyProblems("A monthly starting price is not listed here.").length > 0);
+  assert.ok(toolPageCopyProblems("The pricing page came back too thin.").length > 0);
+  assert.ok(toolPageCopyProblems("The pricing path redirected to the homepage.").length > 0);
+  assert.ok(toolPageCopyProblems("Re-read the pricing page.").length > 0);
+  assert.ok(toolPageCopyProblems("The price was shown as animated digits.").length > 0);
+  assert.ok(toolPageCopyProblems("A sample JSON price was ignored.").length > 0);
+  assert.ok(toolPageCopyProblems("Prices did not load without JavaScript.").length > 0);
+  assert.ok(toolPageCopyProblems("Paid plans — see the site.").length > 0);
+  assert.deepEqual(toolPageCopyProblems("Free plan available. Paid plans start at $19 per month."), []);
+  assert.deepEqual(toolPageCopyProblems("See their site for current pricing."), []);
+  assert.ok(toolPageBulletProblems("A general web-search API, which is a different job").length > 0);
+  assert.ok(toolPageBulletProblems("A chat priced on the site").length > 0);
+  assert.ok(toolPageBulletProblems("A dedicated pricing page").length > 0);
+  assert.ok(toolPageBulletProblems("Search results, not a full browser").length > 0);
+  assert.ok(toolPageBulletProblems("A one-time price instead of per seat").length > 0);
+  assert.deepEqual(toolPageBulletProblems("A general web-search API (see Tavily)"), []);
+  assert.deepEqual(toolPageBulletProblems("A general web-search API"), []);
 });
 
 test("every specialist use-case pair has a hand-written why-line", () => {

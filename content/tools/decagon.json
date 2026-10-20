@@ -39,7 +39,7 @@
     "A buyer who needs a self-serve monthly price"
   ],
   "strength": "Decagon describes an AI concierge that handles chat, email, and voice customer conversations.",
-  "weakness": "The site did not publish a dollar price, so the plan cost is not listed here.",
+  "weakness": "See the Decagon site for current pricing.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",

@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.deepseek.com/",
   "affiliateUrl": null,
   "shortDescription": "DeepSeek chat app and API models for chat, coding, and web search.",
-  "longDescription": "DeepSeek publishes a chat app and an API. The app announcement says the app is free, with no ads or in-app purchases, and lists web search, a deep-think mode, and file upload. The download page calls it the official assistant for chat. The API docs list deepseek-flash and deepseek-v4-pro, with tool calls and a beta fill-in-the-middle completion used for code. API prices are per million tokens on the pricing page. The chat website did not open, so the live chat screen is not described.",
+  "longDescription": "DeepSeek publishes a chat app and an API. The app is free, with no ads or in-app purchases, and includes web search, a deep-think mode, and file upload. It is the official assistant for chat. The API docs list deepseek-flash and deepseek-v4-pro, with tool calls and a beta fill-in-the-middle completion used for code. API prices are per million tokens.",
   "categories": ["general-assistants", "coding-agents", "research"],
   "useCaseTags": ["coding-agents", "deep-research"],
   "toolTypes": ["model_api", "agent"],

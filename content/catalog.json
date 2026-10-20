@@ -228,7 +228,7 @@
       "name": "Acres",
       "websiteUrl": "https://www.acres.com/",
       "shortDescription": "Parcel maps for land. A free account exists. Plus is $9.99 per month.",
-      "longDescription": "Acres is a land-intelligence map. On October 16, 2026 the pricing page said you can start free for basic property insights, listed Plus at $9.99 per month (and $7.49 per month on the other figure), and said Acres+ can be tried free for 7 days.",
+      "longDescription": "Acres is a land-intelligence map. You can start free for basic property insights. Plus is $9.99 per month (or $7.49 per month on the other published figure), and Acres+ includes a 7-day free trial.",
       "categories": [
         "real-estate"
       ],
@@ -653,7 +653,7 @@
       "websiteUrl": "https://batchleads.io/",
       "affiliateUrl": null,
       "shortDescription": "Property lists with owner phone numbers and emails. Growth is $119 per month.",
-      "longDescription": "BatchLeads searches property records and adds owner phone numbers and emails when a property is saved. On October 19, 2026 the pricing page listed Growth at $119 per month, Professional at $349, and Scale at $749, with a 7-day trial. SMS is an integration with a provider you bring.",
+      "longDescription": "BatchLeads searches property records and adds owner phone numbers and emails when a property is saved. Growth is $119 per month, Professional is $349, and Scale is $749, with a 7-day trial. SMS is an integration with a provider you bring.",
       "categories": [
         "real-estate"
       ],
@@ -685,7 +685,7 @@
       "notIdealFor": [
         "Someone who wants texting included without a separate SMS provider"
       ],
-      "strength": "Growth is $119 per month, and the pricing page says saved properties include owner phone numbers and emails.",
+      "strength": "Growth is $119 per month, and saved properties include owner phone numbers and emails.",
       "weakness": "Texting uses an SMS provider you connect yourself, and the 7-day trial becomes a paid plan unless you cancel.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
@@ -820,10 +820,10 @@
       ],
       "notIdealFor": [
         "A published self-serve price",
-        "A docs-complete install guide — docs URL is the product site"
+        "A separate documentation site"
       ],
       "strength": "The product page describes an NPC engine with SDKs for game characters.",
-      "weakness": "No public price grid was on the product page, so the cost is not listed.",
+      "weakness": "See the Bitpart site for current pricing.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1190,7 +1190,7 @@
       "name": "CapCut",
       "websiteUrl": "https://www.capcut.com/",
       "shortDescription": "Video editor for YouTube, TikTok, and Reels. Pricing lists Free and Pro at $19.99/month.",
-      "longDescription": "CapCut is a video editor for short-form and social video. On October 16, 2026 the pricing page listed Free at $0, with free templates and basic editing tools, and Pro at $19.99 per month.",
+      "longDescription": "CapCut is a video editor for short-form and social video. Free includes templates and basic editing tools. Pro is $19.99 per month.",
       "pricingUrl": "https://www.capcut.com/pricing",
       "docsUrl": null,
       "freeTier": true,
@@ -1386,7 +1386,7 @@
       "name": "ChatGPT",
       "websiteUrl": "https://chatgpt.com/",
       "shortDescription": "General-purpose chat assistant from OpenAI, with a free plan and paid Go and Plus plans.",
-      "longDescription": "ChatGPT is OpenAI's general chat assistant. The pricing page lists Free, Go, Plus, and Pro. OpenAI's Go announcement lists Go at $8 per month in the US, and the Plus help article lists Plus at $20 per month. It is not a specialist for one job.",
+      "longDescription": "ChatGPT is OpenAI's general chat assistant. Plans are Free, Go, Plus, and Pro. Go is $8 per month in the US, and Plus is $20 per month. It is not a specialist for one job.",
       "categories": [
         "general-assistants"
       ],
@@ -1432,7 +1432,7 @@
       "websiteUrl": "https://www.anthropic.com/claude",
       "affiliateUrl": null,
       "shortDescription": "Anthropic Claude product and API for chat and coding.",
-      "longDescription": "Claude is Anthropic's model product, used for chat and coding. The public page is the product overview, and the pricing page lists a $0 option. API billing is separate.",
+      "longDescription": "Claude is Anthropic's model product, used for chat and coding. There is a $0 option, and paid plans start at $20 per month. API billing is separate.",
       "categories": [
         "coding-agents",
         "general-assistants"
@@ -1540,8 +1540,8 @@
       "notIdealFor": [
         "Someone who needs a published seat price before a trial"
       ],
-      "strength": "Clay describes a data marketplace of more than 200 providers and offers a free trial on the pricing page.",
-      "weakness": "The pricing page did not state a dollar price or how many days the trial lasts.",
+      "strength": "Clay describes a data marketplace of more than 200 providers and offers a free trial.",
+      "weakness": "See the Clay site for the current price and trial length.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
@@ -1597,7 +1597,7 @@
       "name": "Composer",
       "websiteUrl": "https://www.composer.trade/",
       "shortDescription": "Automates a trading strategy. Starter is $0. Advanced is $10 per month.",
-      "longDescription": "Composer lets you build and automate trading strategies. On October 16, 2026 the pricing page listed Starter at $0, including one automated strategy, and Advanced at $10 per month. Brokerage services are through a registered broker-dealer. This is not financial advice.",
+      "longDescription": "Composer lets you build and automate trading strategies. Starter is $0, including one automated strategy, and Advanced is $10 per month. Brokerage services are through a registered broker-dealer. This is not financial advice.",
       "categories": [
         "personal-finance"
       ],
@@ -1644,7 +1644,7 @@
       "websiteUrl": "https://composio.dev/",
       "affiliateUrl": null,
       "shortDescription": "Connects agents to third-party apps and tools. Free to start. Paid plans are on their site.",
-      "longDescription": "Composio is a tool-use layer between agents and third-party apps. The pricing page lists a $0 Hobby plan. The October 15, 2026 CLI release is public.",
+      "longDescription": "Composio is a tool-use layer between agents and third-party apps. The Hobby plan is $0, and paid plans start at $29 per month.",
       "categories": [
         "tool-use"
       ],
@@ -1804,7 +1804,7 @@
       "websiteUrl": "https://convai.com/",
       "affiliateUrl": null,
       "shortDescription": "Conversational characters for games.",
-      "longDescription": "Convai makes conversational characters for games. A public price or free tier is not listed here.",
+      "longDescription": "Convai makes conversational characters for games. See the Convai site for current pricing.",
       "categories": [
         "game-ai"
       ],
@@ -1837,7 +1837,7 @@
         "Workflow automation outside a game"
       ],
       "strength": "The site describes conversational characters that talk with the player inside a game.",
-      "weakness": "A public price or free tier is not listed here.",
+      "weakness": "See the Convai site for current pricing.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -1848,7 +1848,7 @@
       },
       "latestRelease": null,
       "problems": [
-        "A public price or free tier is not listed here."
+        "See the Convai site for current pricing."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -1943,7 +1943,7 @@
       "websiteUrl": "https://crewai.com/",
       "affiliateUrl": null,
       "shortDescription": "Open-source framework for crews of role-based agents that split a job into tasks.",
-      "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source framework and the hosted product are separate. Pricing figures are from the pricing page on October 15, 2026.",
+      "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source framework and the hosted product are separate. The free cloud plan includes 50 workflow executions per month.",
       "categories": [
         "agent-frameworks"
       ],
@@ -2030,7 +2030,7 @@
       "websiteUrl": "https://cursor.com/",
       "affiliateUrl": null,
       "shortDescription": "Desktop IDE with an agent that can edit, run, and review code.",
-      "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. The pricing page lists a $0 tier next to paid plans.",
+      "longDescription": "Cursor is a desktop IDE whose agent edits and reviews code. There is a $0 tier next to paid plans.",
       "categories": [
         "coding-agents"
       ],
@@ -2068,7 +2068,7 @@
         "Running it on your own computer, which is not described here"
       ],
       "strength": "The free plan includes limited agent and chat requests in a desktop IDE that can edit the repo.",
-      "weakness": "The free plan caps agent and chat requests, and the pricing page did not state a clear lowest monthly price.",
+      "weakness": "The free plan caps agent and chat requests, and paid pricing is on the Cursor site.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2104,7 +2104,7 @@
       "websiteUrl": "https://www.d-id.com/",
       "affiliateUrl": null,
       "shortDescription": "Talking-head video from a photo and a script. A 14-day trial is listed.",
-      "longDescription": "D-ID's docs say a photo and a script become a talking-head video, and the studio page says text, audio, or a still image can become an avatar video without a camera crew. The help center lists a 14-day free trial and paid Studio plans. The pricing page does not show one monthly dollar amount.",
+      "longDescription": "D-ID's docs say a photo and a script become a talking-head video, and the studio page says text, audio, or a still image can become an avatar video without a camera crew. There is a 14-day free trial and paid Studio plans. See the D-ID site for the monthly price.",
       "categories": [
         "creative-media"
       ],
@@ -2292,8 +2292,8 @@
       "notIdealFor": [
         "Someone who needs the product to be described as an AI agent on the official page"
       ],
-      "strength": "The pricing page lists a free Starter plan, Plus at $10 per month, and Pro at $20 per month, with a rental, flip, and commercial calculator.",
-      "weakness": "The pricing page repeats the same feature bullets on every plan, so it does not say which calculator is free.",
+      "strength": "There is a free Starter plan, Plus is $10 per month, and Pro is $20 per month, with a rental, flip, and commercial calculator.",
+      "weakness": "The same feature bullets appear on every plan, so it is unclear which calculator is free.",
       "sources": [
         "https://dealcheck.io/pricing/",
         "https://help.dealcheck.io/en/articles/4471054-how-much-does-dealcheck-cost-can-i-try-it-for-free"
@@ -2314,7 +2314,7 @@
       "websiteUrl": "https://www.dealmachine.com/",
       "affiliateUrl": null,
       "shortDescription": "Owner data and a driving app for property outreach. Basic is $99 per seat per month.",
-      "longDescription": "DealMachine lists nationwide property and owner data, saved searches, and a Driving for Dollars app. On October 19, 2026 the pricing page listed Basic at $99 per seat per month with 10,000 data credits, and Pro at $149 per seat per month. Postcards are priced per piece.",
+      "longDescription": "DealMachine lists nationwide property and owner data, saved searches, and a Driving for Dollars app. Basic is $99 per seat per month with 10,000 data credits, and Pro is $149 per seat per month. Postcards are priced per piece.",
       "categories": [
         "real-estate"
       ],
@@ -2417,7 +2417,7 @@
         "A buyer who needs a self-serve monthly price"
       ],
       "strength": "Decagon describes an AI concierge that handles chat, email, and voice customer conversations.",
-      "weakness": "The site did not publish a dollar price, so the plan cost is not listed here.",
+      "weakness": "See the Decagon site for current pricing.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
@@ -2451,7 +2451,7 @@
       "websiteUrl": "https://www.deepseek.com/",
       "affiliateUrl": null,
       "shortDescription": "DeepSeek chat app and API models for chat, coding, and web search.",
-      "longDescription": "DeepSeek publishes a chat app and an API. The app announcement says the app is free, with no ads or in-app purchases, and lists web search, a deep-think mode, and file upload. The download page calls it the official assistant for chat. The API docs list deepseek-flash and deepseek-v4-pro, with tool calls and a beta fill-in-the-middle completion used for code. API prices are per million tokens on the pricing page. The chat website did not open, so the live chat screen is not described.",
+      "longDescription": "DeepSeek publishes a chat app and an API. The app is free, with no ads or in-app purchases, and includes web search, a deep-think mode, and file upload. It is the official assistant for chat. The API docs list deepseek-flash and deepseek-v4-pro, with tool calls and a beta fill-in-the-middle completion used for code. API prices are per million tokens.",
       "categories": [
         "general-assistants",
         "coding-agents",
@@ -2534,7 +2534,7 @@
       "websiteUrl": "https://www.descript.com/",
       "affiliateUrl": null,
       "shortDescription": "Edit video and audio by editing the transcript. Free to start. Paid plans are on their site.",
-      "longDescription": "Descript edits audio and video from the transcript. The pricing page lists free or hobby language and a $0 figure, with paid samples in a roughly $16–$65 range.",
+      "longDescription": "Descript edits audio and video from the transcript. The free plan is $0 and includes 60 minutes of media per month. See their site for current paid pricing.",
       "categories": [
         "creative-media"
       ],
@@ -2560,7 +2560,7 @@
       "freeTierNotes": "60 minutes of media per month.",
       "startingPrice": null,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-20",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -2572,7 +2572,7 @@
         "In-game agents"
       ],
       "strength": "You edit video and audio by editing the transcript, and the free plan includes 60 minutes of media per month.",
-      "weakness": "Paid samples on the page ran from about $16 to $65, so a single monthly starting price was not clear.",
+      "weakness": "See the Descript site for current paid pricing.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2677,7 +2677,7 @@
       "websiteUrl": "https://dify.ai/",
       "affiliateUrl": null,
       "shortDescription": "Open-source platform to build agent workflows visually, with a self-hosted community edition.",
-      "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page.",
+      "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition. The cloud free plan includes 200 message credits.",
       "categories": [
         "agent-frameworks"
       ],
@@ -2715,8 +2715,8 @@
         "A small Python script with no surrounding app",
         "Running it on your own computer, which is not described here"
       ],
-      "strength": "The pricing page includes a self-hosted community edition, and the cloud free plan includes 200 message credits.",
-      "weakness": "The cloud free plan stops at 200 message credits, and the pricing page did not list a monthly starting price.",
+      "strength": "There is a self-hosted community edition, and the cloud free plan includes 200 message credits.",
+      "weakness": "The cloud free plan stops at 200 message credits, and paid pricing is on the Dify site.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -2906,7 +2906,7 @@
       "openSource": false,
       "repoUrl": null,
       "strength": "It connects a Twitch, YouTube, or Kick channel and returns vertical highlight clips for Shorts, Reels, and TikTok.",
-      "weakness": "The pricing path redirected to the homepage and did not list a monthly price.",
+      "weakness": "See the Eklipse site for current pricing.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
@@ -2928,7 +2928,7 @@
       "name": "Eklipse",
       "websiteUrl": "https://eklipse.gg/",
       "shortDescription": "Finds highlight clips from Twitch, YouTube, and Kick streams and exports them vertical.",
-      "longDescription": "Eklipse says it connects a Twitch, YouTube, or Kick channel, watches the saved VOD, and returns highlight clips sized for TikTok, Reels, and Shorts. The pricing path redirected to the homepage and did not list a monthly price.",
+      "longDescription": "Eklipse connects a Twitch, YouTube, or Kick channel, watches the saved VOD, and returns highlight clips sized for TikTok, Reels, and Shorts. See the Eklipse site for current pricing.",
       "pricingUrl": "https://eklipse.gg/pricing",
       "docsUrl": "https://eklipse.gg/help/clip-twitch-vod-after-stream/",
       "freeTier": null,
@@ -2963,7 +2963,7 @@
       "websiteUrl": "https://elevenlabs.io/",
       "affiliateUrl": null,
       "shortDescription": "Voice and audio generation. The free plan includes 10,000 credits per month.",
-      "longDescription": "ElevenLabs generates voice and audio. On October 16, 2026 the pricing page listed Free at $0 per month with 10,000 credits, and Starter at $6 per month.",
+      "longDescription": "ElevenLabs generates voice and audio. Free is $0 per month with 10,000 credits, and Starter is $6 per month.",
       "categories": [
         "creative-media"
       ],
@@ -3034,7 +3034,7 @@
       "websiteUrl": "https://elicit.com/",
       "affiliateUrl": null,
       "shortDescription": "AI research assistant. Plus is $11 per user per month billed annually.",
-      "longDescription": "Elicit's pricing page calls it the AI research assistant. Plus is listed at $11 per user per month billed as $132 annually, with export formats. A try-for-free control is on the page, without a stated trial length.",
+      "longDescription": "Elicit is an AI research assistant. Plus is $11 per user per month, billed as $132 annually, with export formats. You can try it free, and no trial length is stated.",
       "categories": [
         "research"
       ],
@@ -3102,7 +3102,7 @@
       "websiteUrl": "https://www.firecrawl.dev/",
       "affiliateUrl": null,
       "shortDescription": "Turns websites into markdown for LLMs. Open-source repo plus a cloud API with a free plan.",
-      "longDescription": "Firecrawl crawls pages into markdown for language models. The pricing page mentions a free or hobby plan and a $0 sample, with paid tiers above that.",
+      "longDescription": "Firecrawl crawls pages into markdown for language models. The free plan includes 1,000 credits per month. Paid plans start at $19 per month, or $16 per month when billed annually.",
       "categories": [
         "tool-use",
         "search-rag"
@@ -3128,9 +3128,9 @@
       "docsUrl": "https://docs.firecrawl.dev/",
       "freeTier": true,
       "freeTierNotes": "1,000 credits per month.",
-      "startingPrice": null,
+      "startingPrice": 19,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-20",
       "openSource": true,
       "repoUrl": "https://github.com/mendableai/firecrawl",
       "bestFor": [
@@ -3139,10 +3139,10 @@
       ],
       "notIdealFor": [
         "Interactive browser tasks such as clicking and login flows",
-        "A general web-search API — that is a different job"
+        "A general web-search API (see Tavily)"
       ],
       "strength": "The free cloud plan includes 1,000 credits per month to turn pages into markdown, and the repo is open source.",
-      "weakness": "Paid cloud samples on the page included about $16 and $75, and a monthly starting price is not listed here.",
+      "weakness": "Paid plans start at $19 per month, or $16 per month when billed annually.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -3210,7 +3210,7 @@
       "freeTierNotes": null,
       "startingPrice": null,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-20",
       "openSource": true,
       "repoUrl": "https://github.com/FlowiseAI/Flowise",
       "bestFor": [
@@ -3222,7 +3222,7 @@
         "Code-first agent libraries, if that is all you need"
       ],
       "strength": "The open-source npm project Flowise 3.1.4 is a low-code builder you can self-host.",
-      "weakness": "The pricing page came back too thin to confirm a cloud free tier.",
+      "weakness": "See the Flowise site for current cloud pricing.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -3737,7 +3737,7 @@
       "websiteUrl": "https://www.granola.ai/",
       "affiliateUrl": null,
       "shortDescription": "Meeting notes that sit alongside your calls. Free to start. Paid plans are on their site.",
-      "longDescription": "Granola takes meeting notes. The pricing page lists $0 alongside $14 and $35.",
+      "longDescription": "Granola takes meeting notes. There is a $0 plan, and paid plans are $14 and $35 per month.",
       "categories": [
         "knowledge"
       ],
@@ -3909,7 +3909,7 @@
         "Someone who needs a listed per-user price"
       ],
       "strength": "Guru's pricing page says its knowledge agents improve company information, not only find it.",
-      "weakness": "The pricing page did not include a dollar amount.",
+      "weakness": "See the Guru site for current pricing details.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
@@ -4012,7 +4012,7 @@
       "websiteUrl": "https://www.heygen.com/",
       "affiliateUrl": null,
       "shortDescription": "Avatar and spokesperson video from a script. Free to start. Paid plans are on their site.",
-      "longDescription": "HeyGen makes avatar and spokesperson videos. The pricing page lists $0 per month alongside $29 and $49 per month samples.",
+      "longDescription": "HeyGen makes avatar and spokesperson videos. The free plan includes 3 videos per month, up to 1 minute each. Paid plans start at $29 per month.",
       "categories": [
         "creative-media"
       ],
@@ -4041,7 +4041,7 @@
       "repoUrl": null,
       "bestFor": [
         "Spokesperson or avatar videos",
-        "Teams that want a hosted avatar tool with a $0 tier on the pricing page"
+        "Teams that want a hosted avatar tool with a free plan"
       ],
       "notIdealFor": [
         "Gameplay capture or VOD clipping",
@@ -4084,7 +4084,7 @@
       "websiteUrl": "https://higgsfield.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI video app with Cinema Studio camera-motion presets for cinematic clips.",
-      "longDescription": "Higgsfield is an AI video app. Its Cinema Studio help page describes cinematic video with camera-motion control, and the Cinema Studio 4.0 blog lists 30+ camera-movement presets, including POV, robot arm, pan, and helicopter shot, plus clips up to 30 seconds. The pricing page did not include a readable monthly plan.",
+      "longDescription": "Higgsfield is an AI video app. Its Cinema Studio help page describes cinematic video with camera-motion control, and the Cinema Studio 4.0 blog lists 30+ camera-movement presets, including POV, robot arm, pan, and helicopter shot, plus clips up to 30 seconds. See the Higgsfield site for current pricing.",
       "categories": [
         "creative-media"
       ],
@@ -4117,7 +4117,7 @@
         "In-game character dialogue"
       ],
       "strength": "Cinema Studio 4.0, described on the official blog, offers 30+ camera-movement presets and clips up to 30 seconds.",
-      "weakness": "The pricing page did not include a readable monthly plan, so no subscription price is listed.",
+      "weakness": "See the Higgsfield site for current pricing.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
@@ -4182,7 +4182,7 @@
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
-        "Planning and publishing social content in a suite that mentions AI"
+        "Planning and publishing social content"
       ],
       "notIdealFor": [
         "Someone who needs a listed monthly price"
@@ -4358,7 +4358,7 @@
       "websiteUrl": "https://inworld.ai/",
       "affiliateUrl": null,
       "shortDescription": "Character AI for games and interactive agents.",
-      "longDescription": "Inworld builds character AI for games and interactive experiences. A $0 sample appeared among paid usage samples.",
+      "longDescription": "Inworld builds character AI for games and interactive experiences. The On-Demand plan is $0, then you pay as you go. Paid plans start at $25 per month.",
       "categories": [
         "game-ai"
       ],
@@ -4379,9 +4379,9 @@
       "docsUrl": "https://docs.inworld.ai/",
       "freeTier": true,
       "freeTierNotes": "On-Demand plan is $0, then pay as you go.",
-      "startingPrice": null,
+      "startingPrice": 25,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-20",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -4526,7 +4526,7 @@
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
-        "Asking questions about a spreadsheet in a chat priced on the site"
+        "Asking questions about a spreadsheet in chat"
       ],
       "notIdealFor": [
         "A team that needs a governed BI deployment"
@@ -4934,7 +4934,7 @@
       "name": "Land id",
       "websiteUrl": "https://id.land/",
       "shortDescription": "Nationwide parcel and owner info. From $15 per month, or $7 billed annually.",
-      "longDescription": "Land id maps parcels and owner info. On October 16, 2026 the pricing page listed the base plan at $7 per month per user billed annually, and the app listing also stated $15 per month billed monthly, plus a 7-day trial. Premium adds AI Insights.",
+      "longDescription": "Land id maps parcels and owner info. The base plan is $7 per month per user when billed annually, or $15 per month when billed monthly, plus a 7-day trial. Premium adds AI Insights.",
       "categories": [
         "real-estate"
       ],
@@ -4960,7 +4960,7 @@
         "Someone who wants a lasting $0 map"
       ],
       "strength": "The base plan is $15 per month billed monthly, or $7 per month billed annually, with a 7-day trial.",
-      "weakness": "There is no lasting free plan, and mailing lists on the pricing page can cost extra.",
+      "weakness": "There is no lasting free plan, and mailing lists can cost extra.",
       "sources": [
         "https://id.land/pricing"
       ],
@@ -5063,8 +5063,8 @@
       "name": "Launch Control",
       "websiteUrl": "https://launchcontrol.us/",
       "affiliateUrl": null,
-      "shortDescription": "Texting for real estate owner lists. Skip tracing is listed at $0.13 on the pricing page.",
-      "longDescription": "Launch Control is a texting product for real estate investors. On October 19, 2026 the pricing page listed skip tracing at $0.13 and one plan as provider fees plus $22, with 12,500 monthly SMS. It did not show one all-in monthly price.",
+      "shortDescription": "Texting for real estate owner lists. Skip tracing is $0.13.",
+      "longDescription": "Launch Control is a texting product for real estate investors. Skip tracing is $0.13, and one plan is provider fees plus $22, with 12,500 monthly SMS. There is no single all-in monthly price.",
       "categories": [
         "real-estate"
       ],
@@ -5097,7 +5097,7 @@
       "notIdealFor": [
         "Someone who wants one published price with provider fees included"
       ],
-      "strength": "The pricing page lists skip tracing at $0.13 and a plan as provider fees plus $22 for 12,500 monthly texts.",
+      "strength": "Skip tracing is $0.13, and one plan is provider fees plus $22 for 12,500 monthly texts.",
       "weakness": "That $22 figure is not an all-in price, because the same page adds provider fees on top.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
@@ -5200,7 +5200,7 @@
       "websiteUrl": "https://www.llamaindex.ai/",
       "affiliateUrl": null,
       "shortDescription": "Open-source framework for retrieval and agents. The cloud free plan includes 10,000 credits.",
-      "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. You can use it in Python. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
+      "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. You can use it in Python. There is a $0 plan with 10,000 credits, and Starter is $50 per month.",
       "categories": [
         "agent-frameworks",
         "search-rag"
@@ -5309,7 +5309,7 @@
       "name": "Magnifi",
       "websiteUrl": "https://magnifi.com/",
       "shortDescription": "Links brokerage accounts on a $0 plan. Premium is $99 per year.",
-      "longDescription": "Magnifi is an investing app that links accounts and answers portfolio questions. On October 16, 2026 the pricing page listed a $0 plan with account overview and portfolio analysis, and Premium at $99 per year for forecasts and scenario tests. This is not financial advice.",
+      "longDescription": "Magnifi is an investing app that links accounts and answers portfolio questions. There is a $0 plan with account overview and portfolio analysis, and Premium is $99 per year for forecasts and scenario tests. This is not financial advice.",
       "categories": [
         "personal-finance"
       ],
@@ -5336,7 +5336,7 @@
         "Someone who needs forecasts without paying for Premium",
         "Anyone treating this card as financial advice"
       ],
-      "strength": "The pricing page lists a $0 plan that can link accounts, and Premium at $99 per year for forecasts.",
+      "strength": "There is a $0 plan that can link accounts, and Premium is $99 per year for forecasts.",
       "weakness": "Forecasts and scenario tests sit on the paid Premium plan, and fund fees can still apply.",
       "sources": [
         "https://magnifi.com/pricing"
@@ -5392,7 +5392,7 @@
         "Self-hosting the automation engine"
       ],
       "strength": "The official pricing FAQ describes a free plan with 1,000 credits per month for visual automations.",
-      "weakness": "Dollar amounts for Core, Pro, and Teams are not listed here.",
+      "weakness": "See the Make site for Core, Pro, and Teams pricing.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -5495,7 +5495,7 @@
       "websiteUrl": "https://mem0.ai/",
       "affiliateUrl": null,
       "shortDescription": "Memory layer for agents. Open-source, and you can install it yourself.",
-      "longDescription": "Mem0 stores memory for agents. The open-source library is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
+      "longDescription": "Mem0 stores memory for agents. The open-source library is free to install yourself. The Hobby cloud plan is free, with 10,000 add requests and 1,000 retrieval requests per month. Paid plans start at $19 per month.",
       "categories": [
         "search-rag"
       ],
@@ -5520,7 +5520,7 @@
       "freeTierNotes": "10,000 add requests and 1,000 retrieval requests per month.",
       "startingPrice": 19,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-20",
       "openSource": true,
       "repoUrl": "https://github.com/mem0ai/mem0",
       "bestFor": [
@@ -5529,7 +5529,7 @@
       ],
       "notIdealFor": [
         "A full research chat product",
-        "A confirmed free cloud allotment — re-read the pricing page"
+        "More than the free Hobby limits of 10,000 adds and 1,000 retrievals a month"
       ],
       "strength": "Mem0 2.2.1 is the open-source library, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
       "weakness": "The paid plan starts at $19 per month once you pass those monthly request limits.",
@@ -5580,7 +5580,7 @@
       "websiteUrl": "https://www.meshy.ai/",
       "affiliateUrl": null,
       "shortDescription": "Text and image to 3D assets. Free to start. Paid plans are on their site.",
-      "longDescription": "Meshy turns text and images into 3D assets. The pricing page lists $0 and no-credit-card language, with a paid sample around $20 per month.",
+      "longDescription": "Meshy turns text and images into 3D assets. The free plan includes 100 credits per month, and no credit card is needed. Paid plans start at $20 per month.",
       "categories": [
         "creative-media"
       ],
@@ -5601,10 +5601,10 @@
       "pricingUrl": "https://www.meshy.ai/pricing",
       "docsUrl": "https://docs.meshy.ai/",
       "freeTier": true,
-      "freeTierNotes": "No credit card needed.",
-      "startingPrice": null,
+      "freeTierNotes": "100 credits per month. No credit card needed.",
+      "startingPrice": 20,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-20",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -5615,8 +5615,8 @@
         "Final production modeling without an artist pass",
         "Voice, video, or NPC logic"
       ],
-      "strength": "The pricing page shows a $0 plan and says no credit card is needed to try text-to-3D and image-to-3D.",
-      "weakness": "The paid monthly price was shown as animated digits, so a starting price is not listed as text.",
+      "strength": "The free plan includes 100 credits per month, with no credit card needed to try text-to-3D and image-to-3D.",
+      "weakness": "Paid plans start at $20 per month and include 1,000 credits.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -5827,7 +5827,7 @@
       ],
       "notIdealFor": [
         "A standalone art or voice tool",
-        "A separate public pricing page"
+        "A separate public price list"
       ],
       "strength": "The homepage describes memory for game NPCs that need to remember the player.",
       "weakness": "A separate pricing page was not found, so no monthly price is listed.",
@@ -5909,7 +5909,7 @@
       },
       "latestRelease": null,
       "problems": [
-        "A public price is not listed here."
+        "See the Modl site for current pricing."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -5931,7 +5931,7 @@
       "name": "Motion",
       "websiteUrl": "https://www.usemotion.com/",
       "affiliateUrl": null,
-      "shortDescription": "AI calendar and tasks. The pricing page lists $29 per seat each month.",
+      "shortDescription": "AI calendar and tasks. Paid plans are $29 per seat each month.",
       "longDescription": "Motion's pricing page includes plan data listing $29 per seat on the monthly price and names AI Calendar and Meetings, an AI task planner, and AI docs.",
       "categories": [
         "productivity"
@@ -6101,7 +6101,7 @@
       ],
       "notIdealFor": [
         "A Python agent library",
-        "A permanent free cloud plan, which is not listed"
+        "A permanent free cloud plan"
       ],
       "strength": "Community Edition is a free self-host option for multi-step workflows across the apps you already use.",
       "weakness": "Cloud Starter was listed at 20 euros per month on annual billing, with a card-free trial rather than a permanent free cloud plan.",
@@ -6147,7 +6147,7 @@
       "websiteUrl": "https://www.notion.com/",
       "affiliateUrl": null,
       "shortDescription": "Docs, wikis, and agents in a team workspace. Free to start. Paid plans are on their site.",
-      "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. The pricing page lists $0 alongside $10 and $20. AI features may sit on paid plans.",
+      "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. There is a $0 plan, plus plans at $10 and $20. AI features may sit on paid plans.",
       "categories": [
         "knowledge"
       ],
@@ -6181,7 +6181,7 @@
       ],
       "notIdealFor": [
         "Local-only notes with no account",
-        "A dedicated meeting bot — see Granola for that job"
+        "A dedicated meeting bot (see Granola for that job)"
       ],
       "strength": "The free workspace plan includes a trial of Notion AI, and the next plan starts at $10 per month.",
       "weakness": "Notion AI on the free plan is a trial, not a confirmed ongoing allotment.",
@@ -6396,7 +6396,7 @@
         "Someone who wants a trial without a card"
       ],
       "strength": "Ocoya lists a Starter plan at $29 per month and a 7-day free trial that requires a card.",
-      "weakness": "The trial requires a card, and higher plans on the page cost $79 and $199 per month.",
+      "weakness": "The trial requires a card, and higher plans cost $79 and $199 per month.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
@@ -6430,7 +6430,7 @@
       "websiteUrl": "https://www.opus.pro/",
       "affiliateUrl": null,
       "shortDescription": "Cuts long videos into short clips. The free plan lists 60 credits per month.",
-      "longDescription": "Opus Clip turns long videos into short clips. On October 16, 2026 the pricing page listed a free plan at $0 with 60 credits per month, a watermark, and clips that stop being exportable after 3 days. Starter was $15 per month.",
+      "longDescription": "Opus Clip turns long videos into short clips. The free plan is $0 with 60 credits per month, a watermark, and clips that stop being exportable after 3 days. Starter is $15 per month.",
       "categories": [
         "creative-media"
       ],
@@ -6675,7 +6675,7 @@
       "name": "Pika",
       "websiteUrl": "https://pika.art/",
       "shortDescription": "Generates short videos from prompts, photos, or keyframes. Starter is $10/month.",
-      "longDescription": "Pika is a video generation product. Its site describes Video Studio for a short clip up to a 30-second multi-shot video. On October 16, 2026 the pricing page listed a Free plan with 0 credits per month (packs only, no commercial license) and Starter at $10 per month, billed monthly, with 900 credits.",
+      "longDescription": "Pika is a video generation product. Its site describes Video Studio for a short clip up to a 30-second multi-shot video. The Free plan has 0 credits per month (packs only, no commercial license), and Starter is $10 per month, billed monthly, with 900 credits.",
       "pricingUrl": "https://pika.art/pricing",
       "docsUrl": "https://pika.art/faq",
       "freeTier": true,
@@ -6710,7 +6710,7 @@
       "websiteUrl": "https://www.pinecone.io/",
       "affiliateUrl": null,
       "shortDescription": "Managed vector database. Starter is free, and Builder is $20 per month.",
-      "longDescription": "Pinecone is a managed vector database used in retrieval stacks. On October 16, 2026 the pricing page listed Starter as free and Builder at $20 per month.",
+      "longDescription": "Pinecone is a managed vector database used in retrieval stacks. Starter is free, and Builder is $20 per month.",
       "categories": [
         "search-rag"
       ],
@@ -6740,10 +6740,10 @@
       ],
       "notIdealFor": [
         "A confirmed free tier",
-        "Web search or page crawling — different tools"
+        "Web search or page crawling, which other tools cover"
       ],
       "strength": "Starter is free for hosted vector search, and Builder is $20 per month with a 3-week trial.",
-      "weakness": "Builder is $20 per month after the trial, and the free Starter limits were not spelled out on the pricing page.",
+      "weakness": "Builder is $20 per month after the 3-week trial.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
@@ -6801,7 +6801,7 @@
       "name": "PortfolioPilot",
       "websiteUrl": "https://portfoliopilot.com/",
       "shortDescription": "Tracks net worth and a portfolio. Free plan is $0. Gold is $29 per month.",
-      "longDescription": "PortfolioPilot, from Global Predictions, tracks accounts and assesses a portfolio. On October 16, 2026 the pricing page listed a $0 plan with net-worth tracking and a portfolio assessment. Gold was listed at $29 per month, and also at $20 per month on the annual figure shown beside it. This is not financial advice.",
+      "longDescription": "PortfolioPilot, from Global Predictions, tracks accounts and assesses a portfolio. There is a $0 plan with net-worth tracking and a portfolio assessment. Gold is $29 per month, or $20 per month on the annual figure. This is not financial advice.",
       "categories": [
         "personal-finance"
       ],
@@ -6848,7 +6848,7 @@
       "websiteUrl": "https://predis.ai/",
       "affiliateUrl": null,
       "shortDescription": "Generates and designs social posts and ads with AI.",
-      "longDescription": "Predis.ai's site says it generates, designs, and optimizes social media content with AI, including posts and ads. A $29 amount on the page was labeled extra credits, not a base plan, so no starting price is listed.",
+      "longDescription": "Predis.ai generates, designs, and optimizes social media content with AI, including posts and ads. See their site for current pricing.",
       "categories": [
         "content"
       ],
@@ -6882,7 +6882,7 @@
         "Someone who needs a confirmed base-plan price"
       ],
       "strength": "Predis says it generates, designs, and optimizes social media content with AI.",
-      "weakness": "The pricing page did not make a base monthly price clear, so none is listed.",
+      "weakness": "See the Predis site for the current base plan price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
@@ -7232,7 +7232,7 @@
         "Someone who needs a published monthly price"
       ],
       "strength": "Reclaim's pricing page lists smart meetings, scheduling links, and calendar sync.",
-      "weakness": "The pricing page did not include a dollar amount.",
+      "weakness": "See the Reclaim site for current pricing.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
@@ -7408,7 +7408,7 @@
       "websiteUrl": "https://resimpli.com/",
       "affiliateUrl": null,
       "shortDescription": "Real estate CRM with calling, texting, and email on every plan, plus a 14-day trial.",
-      "longDescription": "REsimpli is a real estate CRM. On October 19, 2026 the pricing page listed unlimited calling, SMS, and email on every plan, named Solo, Team, and Business by team size, with a 14-day trial. The page did not print a dollar amount.",
+      "longDescription": "REsimpli is a real estate CRM. Every plan includes unlimited calling, SMS, and email. Plans are named Solo, Team, and Business by team size, with a 14-day trial. See their site for the dollar price.",
       "categories": [
         "real-estate"
       ],
@@ -7440,8 +7440,8 @@
       "notIdealFor": [
         "Someone who needs a published monthly price before talking to the vendor"
       ],
-      "strength": "The pricing page lists unlimited calling, SMS, and email on every plan, with a 14-day trial.",
-      "weakness": "The pricing page names plans by team size and does not print a dollar amount in the text.",
+      "strength": "Every plan includes unlimited calling, SMS, and email, with a 14-day trial.",
+      "weakness": "Plans are named by team size, and the dollar price is on the REsimpli site.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
@@ -7611,7 +7611,7 @@
       "websiteUrl": "https://runway.com/",
       "affiliateUrl": null,
       "shortDescription": "Video generation and editing.",
-      "longDescription": "Runway generates and edits video. The site is at runway.com. A free tier was not shown on the pricing page.",
+      "longDescription": "Runway generates and edits video. Paid plans start at $12 per month. See their site for whether a free tier is offered.",
       "categories": [
         "creative-media"
       ],
@@ -7643,7 +7643,7 @@
         "A confirmed free plan",
         "In-game NPC dialogue"
       ],
-      "strength": "The pricing page lists video generation and editing from $12 per month.",
+      "strength": "Video generation and editing start at $12 per month.",
       "weakness": "A free tier was not clearly shown on that page.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
@@ -7680,7 +7680,7 @@
       "websiteUrl": "https://www.scenario.com/",
       "affiliateUrl": null,
       "shortDescription": "Game art generation. Free to start. Paid plans are on their site.",
-      "longDescription": "Scenario generates art aimed at games. The pricing page mentioned a free tier or free plan, plus starter language and no-credit-card wording. Paid samples on that page included $15, $45, and $75 per month.",
+      "longDescription": "Scenario generates art aimed at games. The free plan includes 50 daily credits. Paid plans start at $15 per month.",
       "categories": [
         "creative-media"
       ],
@@ -7712,7 +7712,7 @@
         "Art pipelines that want a free plan to start"
       ],
       "notIdealFor": [
-        "3D mesh generation — see Meshy for that job",
+        "3D mesh generation (see Meshy for that job)",
         "A generation test, which is not described here"
       ],
       "strength": "The free plan includes 50 credits per day for game art, and the paid plan starts at $15 per month.",
@@ -7819,7 +7819,7 @@
       "websiteUrl": "https://dreamina.capcut.com/",
       "affiliateUrl": null,
       "shortDescription": "ByteDance video model in Dreamina, with a ModelArk API documented by BytePlus.",
-      "longDescription": "Seedance is ByteDance's video generation model. Dreamina's documentation names Seedance 2.0 for video and shows Seedance 2.5 examples, and it says the creator app includes free daily credits. BytePlus ModelArk's video generation tutorial says Seedance models generate clips from text, images, video, and audio, and it shows a Dreamina Seedance model id for the API. The model overview page did not include a readable API price.",
+      "longDescription": "Seedance is ByteDance's video generation model. Dreamina's documentation names Seedance 2.0 for video and shows Seedance 2.5 examples, and it says the creator app includes free daily credits. BytePlus ModelArk's video generation tutorial says Seedance models generate clips from text, images, video, and audio, and it shows a Dreamina Seedance model id for the API. See the BytePlus site for the API price.",
       "categories": [
         "creative-media"
       ],
@@ -7856,7 +7856,7 @@
         "In-game character dialogue"
       ],
       "strength": "Dreamina's documentation names Seedance for video and says the creator app includes free daily credits.",
-      "weakness": "The BytePlus model overview did not include a readable API price.",
+      "weakness": "See the BytePlus site for the API price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
@@ -7892,7 +7892,7 @@
       "websiteUrl": "https://www.shortwave.com/",
       "affiliateUrl": null,
       "shortDescription": "Email AI at $30 per seat per month, with a 14-day free trial.",
-      "longDescription": "Shortwave's pricing page lists Everyday AI productivity at $30 per seat per month and a 14-day free trial, with higher seat prices above that. It mentions AI search and filters.",
+      "longDescription": "Shortwave offers Everyday AI productivity at $30 per seat per month and a 14-day free trial, with higher seat prices above that. It includes AI search and filters.",
       "categories": [
         "productivity"
       ],
@@ -7922,7 +7922,7 @@
         "Searching an inbox and drafting from an AI email client"
       ],
       "notIdealFor": [
-        "A team that wants a one-time price instead of per seat"
+        "A team that wants a one-time price"
       ],
       "strength": "Shortwave lists Everyday AI productivity at $30 per seat per month and a 14-day free trial.",
       "weakness": "The price is per seat, and higher tiers on the same page cost $45 and $120 per seat.",
@@ -8027,7 +8027,7 @@
       "websiteUrl": "https://www.skyvern.com/",
       "affiliateUrl": null,
       "shortDescription": "Browser automation. Free is $0 per month and a paid plan is $29.",
-      "longDescription": "Skyvern's site describes AI browser automation for websites, and the pricing page lists a Free plan at $0 per month with 5,000 credits and a paid plan at $29 per month. A sample JSON price on the marketing site was not used as the plan price.",
+      "longDescription": "Skyvern automates browsers on websites. The Free plan is $0 per month with 5,000 credits, and paid plans start at $29 per month.",
       "categories": [
         "tool-use"
       ],
@@ -8051,7 +8051,7 @@
       "freeTierNotes": null,
       "startingPrice": 29,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-19",
+      "pricingCheckedAt": "2026-10-20",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
@@ -8311,7 +8311,7 @@
       "openSource": false,
       "repoUrl": null,
       "strength": "It reframes Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks.",
-      "weakness": "It does not find the highlight inside a full VOD by itself, and the pricing page did not list a monthly price.",
+      "weakness": "It does not find the highlight inside a full VOD by itself, and paid pricing is on the StreamLadder site.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
@@ -8327,17 +8327,17 @@
       "status": "published",
       "publishedAt": "2026-10-16",
       "updatedAt": "2026-10-16",
-      "pricingCheckedAt": "2026-10-16",
+      "pricingCheckedAt": "2026-10-20",
       "id": "streamladder",
       "slug": "streamladder",
       "name": "StreamLadder",
       "websiteUrl": "https://www.streamladder.com/",
       "shortDescription": "Edits Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks.",
-      "longDescription": "StreamLadder's site says it imports clips from Twitch, YouTube, or Kick and turns horizontal stream footage into vertical short-form video, with layouts for gameplay and a facecam. The pricing page redirected to an app screen that did not list prices without JavaScript.",
+      "longDescription": "StreamLadder imports clips from Twitch, YouTube, or Kick and turns horizontal stream footage into vertical short-form video, with layouts for gameplay and a facecam. It is free to use. See their site for paid plan prices.",
       "pricingUrl": "https://www.streamladder.com/pricing",
       "docsUrl": null,
-      "freeTier": null,
-      "freeTierNotes": null,
+      "freeTier": true,
+      "freeTierNotes": "Free to use.",
       "startingPrice": null,
       "freeTrial": null,
       "bestFor": [
@@ -8437,7 +8437,7 @@
       "websiteUrl": "https://www.synthesia.io/",
       "affiliateUrl": null,
       "shortDescription": "AI avatar videos from a script. Basic is free, and Starter is $29 a month.",
-      "longDescription": "Synthesia's homepage says it creates studio videos with AI avatars and voiceovers. The pricing page lists Basic at $0 a month, with no credit card, and says those videos carry a watermark. Starter is $29 a month when billed monthly.",
+      "longDescription": "Synthesia creates studio videos with AI avatars and voiceovers. Basic is $0 a month, with no credit card, and those videos carry a watermark. Starter is $29 a month when billed monthly.",
       "categories": [
         "creative-media"
       ],
@@ -8576,7 +8576,7 @@
       "websiteUrl": "https://www.tavernbard.com/",
       "affiliateUrl": null,
       "shortDescription": "AI game master for Discord. Homepage describes a free path that uses your own AI subscription.",
-      "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared on the homepage.",
+      "longDescription": "Tavernbard is an AI game master aimed at Discord. You can play using your own AI subscription. See their site for current pricing.",
       "categories": [
         "game-ai"
       ],
@@ -8609,7 +8609,7 @@
       ],
       "notIdealFor": [
         "In-engine NPCs inside Unity or Unreal",
-        "A dedicated pricing page"
+        "A dedicated public price list"
       ],
       "strength": "The homepage describes an AI game master for Discord, including a play path that uses an AI subscription you already have.",
       "weakness": "That play path still depends on an AI subscription you already have, and a $49.99 homepage figure is not described as a monthly plan.",
@@ -8648,7 +8648,7 @@
       "websiteUrl": "https://www.tavily.com/",
       "affiliateUrl": null,
       "shortDescription": "Search API for agents that need web results. Free to start. Paid plans are on their site.",
-      "longDescription": "Tavily is a search API meant for agents. The pricing page lists $0 and no-credit-card language, plus paid usage samples.",
+      "longDescription": "Tavily is a search API meant for agents. The free plan includes 1,000 API credits per month. Paid plans start at $30 per month.",
       "categories": [
         "tool-use",
         "search-rag"
@@ -8679,7 +8679,7 @@
       "repoUrl": null,
       "bestFor": [
         "Agent retrieval that starts with web search",
-        "Apps that want search results, not a full browser"
+        "Apps that want search results without a full browser"
       ],
       "notIdealFor": [
         "Crawling your own site into a corpus",
@@ -8858,7 +8858,7 @@
       "name": "TurboTax",
       "websiteUrl": "https://turbotax.intuit.com/",
       "affiliateUrl": null,
-      "shortDescription": "Step-by-step filing. File-yourself pricing on the page runs from $0 to $139.",
+      "shortDescription": "Step-by-step filing. File-yourself prices run from $0 to $139.",
       "longDescription": "TurboTax's online pricing page lists file-yourself tools from $0 to $139, with state extra, expert help from $59 to $209, and a dedicated expert starting at $129.",
       "categories": [
         "personal-finance"
@@ -9129,7 +9129,7 @@
       "websiteUrl": "https://zapier.com/",
       "affiliateUrl": null,
       "shortDescription": "Connects the apps you already use. The free plan includes 100 tasks per month.",
-      "longDescription": "Zapier connects SaaS apps, including agent-style steps. On October 16, 2026 the pricing page listed Free at $0 with 100 tasks per month, and Professional starting from $19.99 per month.",
+      "longDescription": "Zapier connects SaaS apps, including agent-style steps. Free is $0 with 100 tasks per month, and Professional starts at $19.99 per month.",
       "categories": [
         "workflow-automation"
       ],
@@ -9197,7 +9197,7 @@
       "name": "Zendesk",
       "websiteUrl": "https://www.zendesk.com/",
       "affiliateUrl": null,
-      "shortDescription": "AI-first support platform. The pricing page says plans start at $19 per month.",
+      "shortDescription": "AI-first support platform. Plans start at $19 per month.",
       "longDescription": "Zendesk's pricing page is titled as plans starting from $19 per month and describes an AI-first service platform whose AI is meant to improve resolutions.",
       "categories": [
         "customer-support"
@@ -9225,7 +9225,7 @@
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
-        "Teams that already want a support suite with AI on the pricing page"
+        "Teams that already want a support suite with AI"
       ],
       "notIdealFor": [
         "Someone who needs the $19 plan's feature list spelled out"

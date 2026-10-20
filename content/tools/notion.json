@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.notion.com/",
   "affiliateUrl": null,
   "shortDescription": "Docs, wikis, and agents in a team workspace. Free to start. Paid plans are on their site.",
-  "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. The pricing page lists $0 alongside $10 and $20. AI features may sit on paid plans.",
+  "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. There is a $0 plan, plus plans at $10 and $20. AI features may sit on paid plans.",
   "categories": [
     "knowledge"
   ],
@@ -39,7 +39,7 @@
   ],
   "notIdealFor": [
     "Local-only notes with no account",
-    "A dedicated meeting bot — see Granola for that job"
+    "A dedicated meeting bot (see Granola for that job)"
   ],
   "strength": "The free workspace plan includes a trial of Notion AI, and the next plan starts at $10 per month.",
   "weakness": "Notion AI on the free plan is a trial, not a confirmed ongoing allotment.",

@@ -5,7 +5,7 @@
   "websiteUrl": "https://dreamina.capcut.com/",
   "affiliateUrl": null,
   "shortDescription": "ByteDance video model in Dreamina, with a ModelArk API documented by BytePlus.",
-  "longDescription": "Seedance is ByteDance's video generation model. Dreamina's documentation names Seedance 2.0 for video and shows Seedance 2.5 examples, and it says the creator app includes free daily credits. BytePlus ModelArk's video generation tutorial says Seedance models generate clips from text, images, video, and audio, and it shows a Dreamina Seedance model id for the API. The model overview page did not include a readable API price.",
+  "longDescription": "Seedance is ByteDance's video generation model. Dreamina's documentation names Seedance 2.0 for video and shows Seedance 2.5 examples, and it says the creator app includes free daily credits. BytePlus ModelArk's video generation tutorial says Seedance models generate clips from text, images, video, and audio, and it shows a Dreamina Seedance model id for the API. See the BytePlus site for the API price.",
   "categories": [
     "creative-media"
   ],
@@ -42,7 +42,7 @@
     "In-game character dialogue"
   ],
   "strength": "Dreamina's documentation names Seedance for video and says the creator app includes free daily credits.",
-  "weakness": "The BytePlus model overview did not include a readable API price.",
+  "weakness": "See the BytePlus site for the API price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T12:00:00-04:00",

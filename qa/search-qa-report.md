@@ -96,8 +96,8 @@
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
+  - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn for-sale-by-owner outreach into steps you can check before contacting an owner.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of what to verify on an off-market listing before you reach out.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks each owner, the property, and whether you already made contact.
@@ -1358,8 +1358,8 @@
 - Cards:
   - Guru — Specialist · Docs checked — Guru answers questions from company cards and lets its agents improve those cards.
   - Glean — Specialist · Docs checked — Glean searches internal company documents through a large set of connectors.
-  - Slite — Specialist · Docs checked — Slite answers questions over a team's docs with its Ask search.
   - Notion — Specialist · Docs checked — Notion searches the docs and wikis a team already keeps.
+  - Slite — Specialist · Docs checked — Slite answers questions over a team's docs with its Ask search.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to answer a policy question and name the wiki page a teammate should open.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of what an internal answer must cite before you trust it.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a doc that collects the policy excerpts people keep asking about.
@@ -2048,8 +2048,8 @@
 - Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
 - Domain: multi-agent-workflows
 - Cards:
-  - LangChain — Specialist · Smoke-tested — LangChain composes agents that call tools in code you write.
   - CrewAI — Specialist · Smoke-tested — CrewAI splits one job across agents that each have a role.
+  - LangChain — Specialist · Smoke-tested — LangChain composes agents that call tools in code you write.
   - AutoGen (Microsoft) — Specialist · Smoke-tested — AutoGen (Microsoft) runs conversations between several agents in Python.
   - Dify — Specialist · Docs checked — Dify lays out agent workflows on a visual canvas you can host.
   - Flowise — Specialist · Docs checked — Flowise assembles low-code model flows for agents on a server you run.
@@ -2848,8 +2848,8 @@
 - Domain: meetings-knowledge
 - Cards:
   - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
-  - Obsidian — Specialist · Docs checked — Obsidian stores meeting notes in files on your computer.
   - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
+  - Obsidian — Specialist · Docs checked — Obsidian stores meeting notes in files on your computer.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn meeting notes into decisions and action items you can edit.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that separates decisions, owners, and due dates.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a doc of action items with owner and date columns.

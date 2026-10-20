@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.tavernbard.com/",
   "affiliateUrl": null,
   "shortDescription": "AI game master for Discord. Homepage describes a free path that uses your own AI subscription.",
-  "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared on the homepage.",
+  "longDescription": "Tavernbard is an AI game master aimed at Discord. You can play using your own AI subscription. See their site for current pricing.",
   "categories": [
     "game-ai"
   ],
@@ -38,7 +38,7 @@
   ],
   "notIdealFor": [
     "In-engine NPCs inside Unity or Unreal",
-    "A dedicated pricing page"
+    "A dedicated public price list"
   ],
   "strength": "The homepage describes an AI game master for Discord, including a play path that uses an AI subscription you already have.",
   "weakness": "That play path still depends on an AI subscription you already have, and a $49.99 homepage figure is not described as a monthly plan.",
