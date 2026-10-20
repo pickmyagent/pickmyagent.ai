@@ -1,5 +1,6 @@
 import { ExternalLink } from "@/components/external-link";
 import { formatDate } from "@/lib/format";
+import { PRICING_UNKNOWN_LABEL, PRICING_UNKNOWN_LINK } from "@/lib/tool-page-copy";
 import type { Tool } from "@/lib/types";
 
 export function formatMonthlyPrice(amount: number): string {
@@ -7,38 +8,47 @@ export function formatMonthlyPrice(amount: number): string {
   return `$${text}/mo`;
 }
 
-function CheckPricing({ href }: { href: string | null }) {
-  if (!href) return <span>Check pricing</span>;
+function SeeTheirSite({ href }: { href: string }) {
   return (
-    <ExternalLink href={href} className="text-gold underline">
-      Check pricing
-    </ExternalLink>
+    <p>
+      <span className="text-muted">{PRICING_UNKNOWN_LABEL} </span>
+      <ExternalLink href={href} className="text-gold underline">
+        {PRICING_UNKNOWN_LINK}
+      </ExternalLink>
+    </p>
   );
 }
 
 export function ToolPricing({ tool }: { tool: Tool }) {
   const href = tool.pricingUrl ?? tool.websiteUrl;
-  const free =
-    tool.freeTier === null
-      ? null
-      : tool.freeTier
-        ? `Yes${tool.freeTierNotes ? ` · ${tool.freeTierNotes}` : ""}`
-        : "No";
+  const freeKnown = tool.freeTier !== null;
+  const price = tool.startingPrice;
+  const free = tool.freeTier
+    ? `Yes${tool.freeTierNotes ? ` · ${tool.freeTierNotes}` : ""}`
+    : "No";
 
   return (
     <div className="text-sm leading-relaxed">
-      <p>
-        <span className="text-muted">Free tier: </span>
-        {free ?? <CheckPricing href={href} />}
-      </p>
-      <p>
-        <span className="text-muted">From: </span>
-        {tool.startingPrice === null ? (
-          <CheckPricing href={href} />
-        ) : (
-          formatMonthlyPrice(tool.startingPrice)
-        )}
-      </p>
+      {freeKnown || price !== null ? (
+        <>
+          {freeKnown ? (
+            <p>
+              <span className="text-muted">Free tier: </span>
+              {free}
+            </p>
+          ) : null}
+          {price !== null ? (
+            <p>
+              <span className="text-muted">From: </span>
+              {formatMonthlyPrice(price)}
+            </p>
+          ) : (
+            <SeeTheirSite href={href} />
+          )}
+        </>
+      ) : (
+        <SeeTheirSite href={href} />
+      )}
       {tool.freeTrial ? (
         <p>
           <span className="text-muted">Trial: </span>

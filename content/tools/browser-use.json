@@ -38,7 +38,7 @@
     "Python projects that can bring their own browser and model"
   ],
   "notIdealFor": [
-    "Jobs that only need an HTTP search API",
+    "Jobs that only need a web search API",
     "A no-code hosted agent with no local setup"
   ],
   "strength": "The browser-use 0.13.11 package is built for agents that open pages, click, and type.",

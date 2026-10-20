@@ -188,7 +188,7 @@ export function descriptionProblems(text: string): string[] {
 
 /** Research-process phrasing that must not appear in any text rendered on a tool page. */
 export const TOOL_PAGE_RESEARCH =
-  /\bwe (?:read|fetched|imported|checked|crawled|extracted|installed|opened|found|recorded|could|parsed|ran|logged)\b|\bwe did not\b|\bwe do not\b|\bpages? we\b|\bour (?:checker|client|check|crawl)\b|\bthis (?:check|listing|environment|pass)\b|\bfetched\b|\bthe fetch\b|\bin the fetch\b|\bthat fetch\b|\bpricing crawl\b|\bnot installed here\b|\blocally\b|\bunconfirmed\b|\bnot confirmed\b|\bcould not verify\b|\bhands-on\b|\bthis listing\b|\bour crawl\b/i;
+  /\bwe (?:read|fetched|imported|checked|crawled|extracted|installed|opened|found|recorded|could|parsed|ran|logged)\b|\bwe did not\b|\bwe do not\b|\bpages? we\b|\bour (?:checker|client|check|crawl)\b|\bthis (?:check|listing|environment|pass)\b|\bfetched\b|\bthe fetch\b|\bin the fetch\b|\bthat fetch\b|\bpricing crawl\b|\bnot installed here\b|\blocally\b|\bunconfirmed\b|\bnot confirmed\b|\bcould not verify\b|\bthis listing\b|\bour crawl\b|\bStatus\s+\d{3}\b|\bHTTP\b|\bsmoke test\b|\blocal install\b|→/i;
 
 export function toolPageCopyProblems(text: string): string[] {
   return TOOL_PAGE_RESEARCH.test(text) ? ["tool page uses internal wording"] : [];

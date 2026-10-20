@@ -4,34 +4,38 @@ export const REVIEW_HEADING = "Review notes";
 export const NOTES_HEADING = "Notes";
 export const FACTS_HEADING = "Listing facts";
 export const PRICING_MODEL_MISSING = "Not listed";
-export const HOMEPAGE_TERM = "Homepage response";
+export const WEBSITE_TERM = "Website";
 export const RELEASE_TERM = "Latest public release";
-export const NO_RELEASE = "No single public GitHub release is listed.";
-export const LOCAL_RUN_LABEL = "Local run";
-export const LOCAL_RUN_SUFFIX = "No account, no payment, no model call.";
+export const TRIED_LABEL = "What we tried";
+export const TRIED_SUFFIX = "No account, no payment, no model call.";
+export const PRICING_UNKNOWN_LABEL = "Pricing:";
+export const PRICING_UNKNOWN_LINK = "see their site";
 export const AFFILIATE_NOTE = "Affiliate link. We may earn a commission if you use it.";
 
-export function smokeStatusCopy(
-  status: SmokeStatus,
-  homepageStatus: number,
-  checkedLabel: string,
-): string {
-  if (status === "tested-hands-on") {
-    return "Smoke-tested means a local install or import was run. No account was created, no payment was made, and no model was called.";
-  }
-  if (status === "verified-docs-only") {
-    return "Docs checked means the official site and the pricing and docs links on this page were opened. A local install was not run, so this is not a smoke test.";
-  }
-  return `Not fully checked. The homepage response on ${checkedLabel} was status ${homepageStatus}. That result is from an automated request, not proof the site is down in a browser, and it is not a smoke test.`;
+export const DOCS_CHECKED_COPY =
+  "Docs checked means we reviewed the official site, pricing, and docs. We have not tested this tool hands-on.";
+export const SMOKE_TESTED_COPY =
+  "Smoke-tested means we tried this tool ourselves, without an account, a payment, or a model call.";
+export const NOT_FULLY_CHECKED_COPY =
+  "Not fully checked means the official site was not fully reviewed. We have not tested this tool hands-on.";
+
+export function smokeStatusCopy(status: SmokeStatus): string {
+  if (status === "tested-hands-on") return SMOKE_TESTED_COPY;
+  if (status === "verified-docs-only") return DOCS_CHECKED_COPY;
+  return NOT_FULLY_CHECKED_COPY;
 }
 
-export function homepageResponseCopy(status: number, finalUrl: string | null): string {
-  return `Status ${status}${finalUrl ? ` → ${finalUrl}` : ""}`;
+export function websiteHost(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
 }
 
 export function handsOnCopy(detail: string, packageName?: string): string {
   const pkg = packageName ? ` (${packageName})` : "";
-  return `${LOCAL_RUN_LABEL}: ${detail}${pkg}. ${LOCAL_RUN_SUFFIX}`;
+  return `${TRIED_LABEL}: ${detail}${pkg}. ${TRIED_SUFFIX}`;
 }
 
 /** Every fixed sentence the tool page renders, so the copy gate can scan them. */
@@ -41,16 +45,16 @@ export function toolPageChromeStrings(): string[] {
     NOTES_HEADING,
     FACTS_HEADING,
     PRICING_MODEL_MISSING,
-    HOMEPAGE_TERM,
+    WEBSITE_TERM,
     RELEASE_TERM,
-    NO_RELEASE,
-    LOCAL_RUN_LABEL,
-    LOCAL_RUN_SUFFIX,
+    TRIED_LABEL,
+    TRIED_SUFFIX,
+    `${PRICING_UNKNOWN_LABEL} ${PRICING_UNKNOWN_LINK}`,
     AFFILIATE_NOTE,
-    smokeStatusCopy("tested-hands-on", 200, "October 19, 2026"),
-    smokeStatusCopy("verified-docs-only", 200, "October 19, 2026"),
-    smokeStatusCopy("untested", 403, "October 19, 2026"),
-    homepageResponseCopy(200, "https://example.com"),
+    DOCS_CHECKED_COPY,
+    SMOKE_TESTED_COPY,
+    NOT_FULLY_CHECKED_COPY,
+    websiteHost("https://abnormal.ai/"),
     handsOnCopy("pip install + import example", "example"),
   ];
 }

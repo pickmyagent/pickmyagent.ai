@@ -41,7 +41,7 @@
   ],
   "notIdealFor": [
     "A small Python script with no surrounding app",
-    "A local install, which is not described here"
+    "Running it on your own computer, which is not described here"
   ],
   "strength": "The pricing page includes a self-hosted community edition, and the cloud free plan includes 200 message credits.",
   "weakness": "The cloud free plan stops at 200 message credits, and the pricing page did not list a monthly starting price.",
@@ -49,7 +49,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

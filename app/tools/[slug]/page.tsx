@@ -23,15 +23,14 @@ import { pageMetadata } from "@/lib/seo";
 import {
   AFFILIATE_NOTE,
   FACTS_HEADING,
-  HOMEPAGE_TERM,
   NOTES_HEADING,
-  NO_RELEASE,
   PRICING_MODEL_MISSING,
   RELEASE_TERM,
   REVIEW_HEADING,
+  WEBSITE_TERM,
   handsOnCopy,
-  homepageResponseCopy,
   smokeStatusCopy,
+  websiteHost,
 } from "@/lib/tool-page-copy";
 
 export function generateStaticParams() {
@@ -77,11 +76,7 @@ export default async function ToolPage({
   const categories = getCategories();
   const related = relatedTools(tools, tool);
 
-  const statusCopy = smokeStatusCopy(
-    tool.smokeStatus,
-    tool.siteLoad.status,
-    formatDate(tool.checkedDate),
-  );
+  const statusCopy = smokeStatusCopy(tool.smokeStatus);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -245,8 +240,10 @@ export default async function ToolPage({
             <Fact term="Platforms">
               {tool.platforms.map(platformLabel).join(", ")}
             </Fact>
-            <Fact term={HOMEPAGE_TERM}>
-              {homepageResponseCopy(tool.siteLoad.status, tool.siteLoad.finalUrl)}
+            <Fact term={WEBSITE_TERM}>
+              <ExternalLink href={tool.websiteUrl} className="underline">
+                {websiteHost(tool.websiteUrl)}
+              </ExternalLink>
             </Fact>
             {tool.latestRelease ? (
               <Fact term={RELEASE_TERM}>
@@ -257,9 +254,7 @@ export default async function ToolPage({
                   {formatDate(tool.latestRelease.publishedAt)} UTC
                 </span>
               </Fact>
-            ) : (
-              <Fact term={RELEASE_TERM}>{NO_RELEASE}</Fact>
-            )}
+            ) : null}
             <Fact term="Use cases">
               <ul className="space-y-1">
                 {tool.useCaseTags.map((tag) => {

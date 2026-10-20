@@ -812,6 +812,15 @@ test("grammar gate flags the broken header and assistant examples", () => {
   assert.deepEqual(toolPageCopyProblems("The plan comparison lists Basic at $10 per month."), []);
   assert.deepEqual(toolPageCopyProblems("We may earn a commission if you use it."), []);
   assert.deepEqual(toolPageCopyProblems("Docs checked means the official site was opened."), []);
+  assert.ok(toolPageCopyProblems("Homepage response: Status 200 → https://abnormal.ai/").length > 0);
+  assert.ok(toolPageCopyProblems("The checker returned HTTP 403.").length > 0);
+  assert.ok(toolPageCopyProblems("A local install was not run, so this is not a smoke test.").length > 0);
+  assert.deepEqual(
+    toolPageCopyProblems(
+      "Docs checked means we reviewed the official site, pricing, and docs. We have not tested this tool hands-on.",
+    ),
+    [],
+  );
 });
 
 test("every specialist use-case pair has a hand-written why-line", () => {

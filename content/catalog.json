@@ -497,7 +497,7 @@
       "name": "AutoGPT",
       "websiteUrl": "https://github.com/Significant-Gravitas/AutoGPT",
       "affiliateUrl": null,
-      "shortDescription": "Open-source agent project with a platform beta. Site and repo checked; local install not run.",
+      "shortDescription": "Open-source agent project with a platform beta. The site and repo were reviewed.",
       "longDescription": "AutoGPT is an open-source agent project. A platform beta release was published on October 14, 2026. The repo is the free path, and hosted plans may be paid.",
       "categories": [
         "agent-frameworks",
@@ -533,7 +533,7 @@
       ],
       "notIdealFor": [
         "A tiny script where a smaller library is enough",
-        "A local install, which is not described here"
+        "Running it on your own computer, which is not described here"
       ],
       "strength": "The open-source repo is the free path, and a platform beta release was published on October 14, 2026.",
       "weakness": "The hosted plan starts at $50 per month after a 7-day trial, so it is not a free product.",
@@ -541,7 +541,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -828,7 +828,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -963,7 +963,7 @@
         "Python projects that can bring their own browser and model"
       ],
       "notIdealFor": [
-        "Jobs that only need an HTTP search API",
+        "Jobs that only need a web search API",
         "A no-code hosted agent with no local setup"
       ],
       "strength": "The browser-use 0.13.11 package is built for agents that open pages, click, and type.",
@@ -1468,7 +1468,7 @@
       ],
       "notIdealFor": [
         "A self-hosted open-source agent runtime",
-        "Anyone who needs a local install"
+        "Anyone who needs to run it on their own computer"
       ],
       "strength": "There is a free plan, and the paid plan starts at $20 per month, with the API billed separately.",
       "weakness": "Claude is a hosted product and API, not a self-hosted open-source agent runtime.",
@@ -1476,7 +1476,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -1678,7 +1678,7 @@
       ],
       "notIdealFor": [
         "A single API you already call directly",
-        "A local install, which is not described here"
+        "Running it on your own computer, which is not described here"
       ],
       "strength": "The Hobby plan includes 100,000 tool calls per month for connecting agents to third-party apps.",
       "weakness": "The next plan starts at $29 per month once you need more than the Hobby tool-call allotment.",
@@ -1686,7 +1686,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -1764,7 +1764,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -1842,7 +1842,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -2065,7 +2065,7 @@
       ],
       "notIdealFor": [
         "A headless library you import from Python",
-        "A local install, which is not described here"
+        "Running it on your own computer, which is not described here"
       ],
       "strength": "The free plan includes limited agent and chat requests in a desktop IDE that can edit the repo.",
       "weakness": "The free plan caps agent and chat requests, and the pricing page did not state a clear lowest monthly price.",
@@ -2073,7 +2073,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -2577,7 +2577,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -2713,7 +2713,7 @@
       ],
       "notIdealFor": [
         "A small Python script with no surrounding app",
-        "A local install, which is not described here"
+        "Running it on your own computer, which is not described here"
       ],
       "strength": "The pricing page includes a self-hosted community edition, and the cloud free plan includes 200 message credits.",
       "weakness": "The cloud free plan stops at 200 message credits, and the pricing page did not list a monthly starting price.",
@@ -2721,7 +2721,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -3001,7 +3001,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -3147,7 +3147,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -3227,7 +3227,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -3778,7 +3778,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -4053,7 +4053,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -4398,7 +4398,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -5397,7 +5397,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -5621,7 +5621,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -5761,7 +5761,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -5835,7 +5835,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6067,7 +6067,7 @@
       "websiteUrl": "https://n8n.io/",
       "affiliateUrl": null,
       "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan.",
-      "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. A local install was not completed.",
+      "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier.",
       "categories": [
         "workflow-automation"
       ],
@@ -6109,7 +6109,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Registry, docs, and pricing were reviewed. A local install was not completed.",
+      "smokeTestNotes": "Registry, docs, and pricing were reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -6120,9 +6120,7 @@
         "publishedAt": "2026-10-15T07:26:03Z",
         "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
       },
-      "problems": [
-        "A local install was not completed."
-      ],
+      "problems": [],
       "featured": false,
       "featuredPaid": false,
       "status": "published",
@@ -6191,7 +6189,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6263,7 +6261,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6334,7 +6332,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6470,7 +6468,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6607,7 +6605,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6750,7 +6748,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -7377,7 +7375,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -7651,7 +7649,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -7723,7 +7721,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -8619,7 +8617,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -8693,7 +8691,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -9169,7 +9167,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },

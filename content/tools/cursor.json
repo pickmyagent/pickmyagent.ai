@@ -40,7 +40,7 @@
   ],
   "notIdealFor": [
     "A headless library you import from Python",
-    "A local install, which is not described here"
+    "Running it on your own computer, which is not described here"
   ],
   "strength": "The free plan includes limited agent and chat requests in a desktop IDE that can edit the repo.",
   "weakness": "The free plan caps agent and chat requests, and the pricing page did not state a clear lowest monthly price.",
@@ -48,7 +48,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

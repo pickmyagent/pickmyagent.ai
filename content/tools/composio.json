@@ -39,7 +39,7 @@
   ],
   "notIdealFor": [
     "A single API you already call directly",
-    "A local install, which is not described here"
+    "Running it on your own computer, which is not described here"
   ],
   "strength": "The Hobby plan includes 100,000 tool calls per month for connecting agents to third-party apps.",
   "weakness": "The next plan starts at $29 per month once you need more than the Hobby tool-call allotment.",
@@ -47,7 +47,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },
