@@ -5,7 +5,7 @@
   "websiteUrl": "https://resimpli.com/",
   "affiliateUrl": null,
   "shortDescription": "Real estate CRM with calling, texting, and email on every plan, plus a 14-day trial.",
-  "longDescription": "REsimpli is a real estate CRM. On October 19, 2026 the pricing page listed unlimited calling, SMS, and email on every plan, named Solo, Team, and Business by team size, with a 14-day trial. The page text we could read did not print a dollar amount. We did not start a trial.",
+  "longDescription": "REsimpli is a real estate CRM. On October 19, 2026 the pricing page listed unlimited calling, SMS, and email on every plan, named Solo, Team, and Business by team size, with a 14-day trial. The page did not print a dollar amount.",
   "categories": [
     "real-estate"
   ],
@@ -38,12 +38,12 @@
     "Someone who needs a published monthly price before talking to the vendor"
   ],
   "strength": "The pricing page lists unlimited calling, SMS, and email on every plan, with a 14-day trial.",
-  "weakness": "The page we checked names plans by team size and does not print a dollar amount in the text.",
+  "weakness": "The pricing page names plans by team size and does not print a dollar amount in the text.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T12:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Pricing page reviewed.",
   "handsOn": {
     "performed": false
   },

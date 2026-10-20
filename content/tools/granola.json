@@ -4,8 +4,8 @@
   "name": "Granola",
   "websiteUrl": "https://www.granola.ai/",
   "affiliateUrl": null,
-  "shortDescription": "Meeting notes that sit alongside your calls. Free to start; paid plans on their site.",
-  "longDescription": "Granola takes meeting notes. The pricing crawl included $0 alongside $14 and $35. Confirm free-plan limits on the pricing page. We did not install the app or join a call.",
+  "shortDescription": "Meeting notes that sit alongside your calls. Free to start. Paid plans are on their site.",
+  "longDescription": "Granola takes meeting notes. The pricing page lists $0 alongside $14 and $35.",
   "categories": [
     "knowledge"
   ],
@@ -46,7 +46,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

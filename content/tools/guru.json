@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.getguru.com/",
   "affiliateUrl": null,
   "shortDescription": "Knowledge base whose agents find and improve company information.",
-  "longDescription": "Guru's pricing page says knowledge agents now improve your information, not just find it, and it describes knowledge management workflows. The fetched text did not include a dollar price. We did not start a workspace.",
+  "longDescription": "Guru's pricing page says knowledge agents now improve your information, not just find it, and it describes knowledge management workflows. The page did not include a dollar price.",
   "categories": [
     "knowledge"
   ],
@@ -39,12 +39,12 @@
     "Someone who needs a listed per-user price"
   ],
   "strength": "Guru's pricing page says its knowledge agents improve company information, not only find it.",
-  "weakness": "The fetched pricing text did not include a dollar amount.",
+  "weakness": "The pricing page did not include a dollar amount.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

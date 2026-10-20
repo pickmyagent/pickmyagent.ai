@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.taxact.com/",
   "affiliateUrl": null,
   "shortDescription": "Online filing with guided steps. The homepage says you can start filing for free.",
-  "longDescription": "TaxAct's homepage says people use it to file taxes online, with guided filing and expert help for more complex situations, and it says you can start filing for free. The fetched text did not include a dollar price. We did not start a return.",
+  "longDescription": "TaxAct's homepage says people use it to file taxes online, with guided filing and expert help for more complex situations, and it says you can start filing for free. The page did not include a dollar price.",
   "categories": [
     "personal-finance"
   ],
@@ -38,12 +38,12 @@
     "Someone who needs a listed monthly subscription price"
   ],
   "strength": "TaxAct's homepage offers guided online filing and says you can start filing for free.",
-  "weakness": "The fetched homepage did not print a dollar price for paid expert help.",
+  "weakness": "The homepage did not print a dollar price for paid expert help.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

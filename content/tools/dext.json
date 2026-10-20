@@ -5,7 +5,7 @@
   "websiteUrl": "https://dext.com/",
   "affiliateUrl": null,
   "shortDescription": "Receipt and invoice capture for bookkeeping and expenses.",
-  "longDescription": "Dext's site describes bookkeeping software with receipt and invoice capture and business expense management, and it says AI is part of the product. The fetched text did not include a dollar price. We did not start a trial.",
+  "longDescription": "Dext's site describes bookkeeping software with receipt and invoice capture and business expense management, and it says AI is part of the product. The page did not include a dollar price.",
   "categories": [
     "finance-ops"
   ],
@@ -39,12 +39,12 @@
     "Someone who needs a listed monthly price"
   ],
   "strength": "Dext lists receipt and invoice capture and business expense management for bookkeeping.",
-  "weakness": "The fetched page did not show a dollar price.",
+  "weakness": "The page did not show a dollar price for Dext.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

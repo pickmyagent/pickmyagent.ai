@@ -5,7 +5,7 @@
   "websiteUrl": "https://higgsfield.ai/",
   "affiliateUrl": null,
   "shortDescription": "AI video app with Cinema Studio camera-motion presets for cinematic clips.",
-  "longDescription": "Higgsfield is an AI video app. Its Cinema Studio help page describes cinematic video with camera-motion control, and the Cinema Studio 4.0 blog lists 30+ camera-movement presets, including POV, robot arm, pan, and helicopter shot, plus clips up to 30 seconds. The pricing page did not include a readable monthly plan, so this listing does not state a subscription price.",
+  "longDescription": "Higgsfield is an AI video app. Its Cinema Studio help page describes cinematic video with camera-motion control, and the Cinema Studio 4.0 blog lists 30+ camera-movement presets, including POV, robot arm, pan, and helicopter shot, plus clips up to 30 seconds. The pricing page did not include a readable monthly plan.",
   "categories": [
     "creative-media"
   ],
@@ -34,16 +34,16 @@
     "Short clips for a game, a stream, or a sizzle reel"
   ],
   "notIdealFor": [
-    "A confirmed monthly price from this listing",
+    "A published monthly price",
     "In-game character dialogue"
   ],
   "strength": "Cinema Studio 4.0, described on the official blog, offers 30+ camera-movement presets and clips up to 30 seconds.",
-  "weakness": "The pricing page did not include a readable monthly plan, so this listing does not state a subscription price.",
+  "weakness": "The pricing page did not include a readable monthly plan, so no subscription price is listed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T12:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official homepage, Cinema Studio help page, blog, and pricing URL were reviewed. A hands-on test was not done.",
+  "smokeTestNotes": "Official homepage, Cinema Studio help page, blog, and pricing URL were reviewed.",
   "handsOn": {
     "performed": false
   },

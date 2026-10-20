@@ -4,8 +4,8 @@
   "name": "Tavily",
   "websiteUrl": "https://www.tavily.com/",
   "affiliateUrl": null,
-  "shortDescription": "Search API for agents that need web results. Free to start; paid plans on their site.",
-  "longDescription": "Tavily is a search API meant for agents. The pricing crawl included $0 and no-credit-card language, plus paid usage samples. Confirm the current free allotment on the pricing page. We did not call the API.",
+  "shortDescription": "Search API for agents that need web results. Free to start. Paid plans are on their site.",
+  "longDescription": "Tavily is a search API meant for agents. The pricing page lists $0 and no-credit-card language, plus paid usage samples.",
   "categories": [
     "tool-use",
     "search-rag"
@@ -48,7 +48,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.clay.com/",
   "affiliateUrl": null,
   "shortDescription": "Sales data workspace with a marketplace of 200+ providers and a free trial.",
-  "longDescription": "Clay's pricing page describes centralizing data sources, buying data from 200+ providers, and tracking intent signals, and it offers a free trial. The fetched text did not include a dollar price or a trial length. We did not start a trial.",
+  "longDescription": "Clay's pricing page describes centralizing data sources, buying data from 200+ providers, and tracking intent signals, and it offers a free trial. The page did not include a dollar price or a trial length.",
   "categories": [
     "sales"
   ],
@@ -39,12 +39,12 @@
     "Someone who needs a published seat price before a trial"
   ],
   "strength": "Clay describes a data marketplace of more than 200 providers and offers a free trial on the pricing page.",
-  "weakness": "The fetched pricing text did not state a dollar price or how many days the trial lasts.",
+  "weakness": "The pricing page did not state a dollar price or how many days the trial lasts.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

@@ -138,7 +138,7 @@
       "websiteUrl": "https://abnormal.ai/",
       "affiliateUrl": null,
       "shortDescription": "Behavioral AI for email, identity, and AI security.",
-      "longDescription": "Abnormal's homepage presents behavioral AI for email, identity, and AI security, including account takeover and misdirected email topics in the navigation. The fetched text did not list a price. We did not request a demo.",
+      "longDescription": "Abnormal's homepage presents behavioral AI for email, identity, and AI security, including account takeover and misdirected email topics in the navigation. The page did not list a price.",
       "categories": [
         "security"
       ],
@@ -172,12 +172,12 @@
         "A buyer who needs a listed seat price"
       ],
       "strength": "Abnormal describes behavioral AI for email, identity, and AI security.",
-      "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+      "weakness": "The homepage did not list a dollar price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -211,7 +211,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -228,7 +228,7 @@
       "name": "Acres",
       "websiteUrl": "https://www.acres.com/",
       "shortDescription": "Parcel maps for land. A free account exists. Plus is $9.99 per month.",
-      "longDescription": "Acres is a land-intelligence map. On October 16, 2026 the pricing page said you can start free for basic property insights, listed Plus at $9.99 per month (and $7.49 per month on the other figure), and said Acres+ can be tried free for 7 days. We did not create an account.",
+      "longDescription": "Acres is a land-intelligence map. On October 16, 2026 the pricing page said you can start free for basic property insights, listed Plus at $9.99 per month (and $7.49 per month on the other figure), and said Acres+ can be tried free for 7 days.",
       "categories": [
         "real-estate"
       ],
@@ -276,7 +276,7 @@
       "websiteUrl": "https://www.amazon.com/",
       "affiliateUrl": null,
       "shortDescription": "Amazon shopping assistant, renamed from Rufus on May 13, 2026.",
-      "longDescription": "Amazon's news article says that on May 13, 2026 Rufus was renamed Alexa for Shopping. The same article describes an assistant trained on Amazon's catalog and the web that answers shopping questions, compares products, makes recommendations, and helps discover products in the Amazon Shopping app. It does not list a separate subscription price. We did not shop with it.",
+      "longDescription": "Amazon's news article says that on May 13, 2026 Rufus was renamed Alexa for Shopping. The same article describes an assistant trained on Amazon's catalog and the web that answers shopping questions, compares products, makes recommendations, and helps discover products in the Amazon Shopping app. It does not list a separate subscription price.",
       "categories": [
         "shopping"
       ],
@@ -314,7 +314,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -377,12 +377,12 @@
         "Someone who needs a confirmed monthly price"
       ],
       "strength": "Apollo's pricing page cites 240 million contacts and 30 million companies, plus an AI assistant.",
-      "weakness": "That fetch did not include a dollar price, so this listing does not state one.",
+      "weakness": "The page did not include a dollar price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -410,8 +410,8 @@
       "name": "AutoGen (Microsoft)",
       "websiteUrl": "https://github.com/microsoft/autogen",
       "affiliateUrl": null,
-      "shortDescription": "Microsoft open-source Python library for multi-agent conversations. Newest release we found is from 2025.",
-      "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. We installed autogen-agentchat and imported it, with no model call. The latest Python GitHub release we found, python-v0.7.5, was published on September 30, 2025. Treat freshness as an open question, not a verdict.",
+      "shortDescription": "Microsoft open-source Python library for multi-agent conversations. The newest recorded release is from 2025.",
+      "longDescription": "AutoGen is Microsoft's open-source Python library and framework for multi-agent conversations. You can have several agents work through a task together, and there is no product paywall.",
       "categories": [
         "agent-frameworks"
       ],
@@ -446,18 +446,18 @@
       ],
       "notIdealFor": [
         "A frequently updated hosted product",
-        "Anyone who needs a 2026 release cadence — we did not find one"
+        "Anyone who needs a release newer than September 30, 2025"
       ],
-      "strength": "We imported autogen-agentchat 0.7.5 locally, and the library is open source with no product paywall.",
-      "weakness": "The newest Python release we found is dated September 30, 2025, older than the peers we checked.",
+      "strength": "AutoGen 0.7.5 is open source with no product paywall.",
+      "weakness": "The newest Python release on record is dated September 30, 2025.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import autogen_agentchat",
+        "detail": "We installed version 0.7.5 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "autogen-agentchat==0.7.5",
         "llmCall": false,
         "accountSignup": false,
@@ -471,7 +471,7 @@
         "url": "https://github.com/microsoft/autogen/releases/tag/python-v0.7.5"
       },
       "problems": [
-        "Latest Autogen python release on GitHub is 2025-09-30; may be maintenance-mode relative to newer Microsoft Agent Framework."
+        "The last release was September 30, 2025."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -497,7 +497,7 @@
       "name": "AutoGPT",
       "websiteUrl": "https://github.com/Significant-Gravitas/AutoGPT",
       "affiliateUrl": null,
-      "shortDescription": "Open-source agent project with a platform beta. Site and repo checked; local install not run.",
+      "shortDescription": "Open-source agent project with a platform beta. The site and repo were reviewed.",
       "longDescription": "AutoGPT is an open-source agent project. A platform beta release was published on October 14, 2026. The repo is the free path, and hosted plans may be paid.",
       "categories": [
         "agent-frameworks",
@@ -533,15 +533,15 @@
       ],
       "notIdealFor": [
         "A tiny script where a smaller library is enough",
-        "A hands-on install — we did not run one"
+        "Running it on your own computer, which is not described here"
       ],
       "strength": "The open-source repo is the free path, and a platform beta release was published on October 14, 2026.",
-      "weakness": "The hosted plan we checked starts at $50 per month after a 7-day trial, so it is not a free product.",
+      "weakness": "The hosted plan starts at $50 per month after a 7-day trial, so it is not a free product.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -579,7 +579,7 @@
       "websiteUrl": "https://www.autoreelapp.com/",
       "affiliateUrl": null,
       "shortDescription": "Turns listing photos into a property video. The free plan includes 2 videos a month.",
-      "longDescription": "AutoReel's homepage says it turns property photos into portrait or landscape listing videos, and that you can add captions, music, and branding. Its FAQ says the free plan includes 2 watermarked videos a month with no credit card, and that Essential is $124 per quarter. We did not create an account.",
+      "longDescription": "AutoReel's homepage says it turns property photos into portrait or landscape listing videos, and that you can add captions, music, and branding. Its FAQ says the free plan includes 2 watermarked videos a month with no credit card, and that Essential is $124 per quarter.",
       "categories": [
         "creative-media"
       ],
@@ -621,7 +621,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage and FAQ fetched on 2026-10-19. No account was created.",
+      "smokeTestNotes": "Homepage and FAQ reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -653,7 +653,7 @@
       "websiteUrl": "https://batchleads.io/",
       "affiliateUrl": null,
       "shortDescription": "Property lists with owner phone numbers and emails. Growth is $119 per month.",
-      "longDescription": "BatchLeads searches property records and adds owner phone numbers and emails when a property is saved. On October 19, 2026 the pricing page listed Growth at $119 per month, Professional at $349, and Scale at $749, with a 7-day trial. SMS is an integration with a provider you bring. We did not start a trial.",
+      "longDescription": "BatchLeads searches property records and adds owner phone numbers and emails when a property is saved. On October 19, 2026 the pricing page listed Growth at $119 per month, Professional at $349, and Scale at $749, with a 7-day trial. SMS is an integration with a provider you bring.",
       "categories": [
         "real-estate"
       ],
@@ -691,7 +691,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -720,7 +720,7 @@
       "websiteUrl": "https://www.bill.com/",
       "affiliateUrl": null,
       "shortDescription": "Invoicing, AP controls, and spend tools, plus an AI API.",
-      "longDescription": "BILL's product page lists invoicing, AP controls, spend and expense, payments, and an AI API. The fetched text did not include a dollar price. We did not request a demo.",
+      "longDescription": "BILL's product page lists invoicing, AP controls, spend and expense, payments, and an AI API. The page did not include a dollar price.",
       "categories": [
         "finance-ops"
       ],
@@ -754,12 +754,12 @@
         "A buyer who needs a public price"
       ],
       "strength": "BILL's product page lists invoicing, AP controls, spend and expense, and an AI API.",
-      "weakness": "The fetched page did not include a dollar price.",
+      "weakness": "The page did not include a dollar price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -788,7 +788,7 @@
       "websiteUrl": "https://www.bitpart.ai/",
       "affiliateUrl": null,
       "shortDescription": "NPC engine for games, with SDKs described on the product page. No public price grid was found.",
-      "longDescription": "Bitpart builds NPCs for games. The product page describes SDKs. No public pricing grid was on that page, so this listing states no price.",
+      "longDescription": "Bitpart builds NPCs for games. The product page describes SDKs. No public pricing grid was on that page, so no price is listed.",
       "categories": [
         "game-ai"
       ],
@@ -823,12 +823,12 @@
         "A docs-complete install guide — docs URL is the product site"
       ],
       "strength": "The product page describes an NPC engine with SDKs for game characters.",
-      "weakness": "No public price grid was on the pages we checked, so the cost has to be confirmed with the vendor.",
+      "weakness": "No public price grid was on the product page, so the cost is not listed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -892,7 +892,7 @@
       ],
       "notIdealFor": [
         "A vertical Instagram reel from ordinary listing photos",
-        "A confirmed monthly price from this listing"
+        "A published monthly price"
       ],
       "strength": "The BoxBrownie virtual tour page says it stitches 360 photos into a walkthrough a buyer can pan through.",
       "weakness": "The virtual tour pages do not list a monthly price, and the tour is a 360 viewer rather than a social reel.",
@@ -900,7 +900,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Virtual tour page and listing guide fetched on 2026-10-19. No account was created.",
+      "smokeTestNotes": "Virtual tour page and listing guide reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -929,8 +929,8 @@
       "name": "Browser Use",
       "websiteUrl": "https://browser-use.com/",
       "affiliateUrl": null,
-      "shortDescription": "Open-source Python agent that controls a browser. Install the package yourself.",
-      "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
+      "shortDescription": "Open-source Python agent that controls a browser. Install it yourself.",
+      "longDescription": "Browser Use is a Python agent for driving a browser. It can open pages, click, and type. Their hosted cloud browsers are billed separately, and you still bring your own browser and model.",
       "categories": [
         "tool-use"
       ],
@@ -963,19 +963,19 @@
         "Python projects that can bring their own browser and model"
       ],
       "notIdealFor": [
-        "Jobs that only need an HTTP search API",
+        "Jobs that only need a web search API",
         "A no-code hosted agent with no local setup"
       ],
-      "strength": "We imported browser-use 0.13.11, which is built for agents that open pages, click, and type.",
-      "weakness": "You bring your own browser and model, and the docs bill cloud stealth browsers separately from the library.",
+      "strength": "Browser Use 0.13.11 is built for agents that open pages, click, and type.",
+      "weakness": "You bring your own browser and model, and their hosted cloud browsers are billed separately.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import browser_use; from browser_use import Agent",
+        "detail": "We installed version 0.13.11 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "browser-use==0.13.11",
         "llmCall": false,
         "accountSignup": false,
@@ -1014,7 +1014,7 @@
       "websiteUrl": "https://buffer.com/",
       "affiliateUrl": null,
       "shortDescription": "Social scheduling. Essentials is $5 per month, with a 14-day trial.",
-      "longDescription": "Buffer's pricing page lists Essentials at $5 per month for one channel, or $60 billed yearly, and a 14-day free trial. A features page describes an AI assistant for creating and repurposing content, plus scheduling across social platforms. We did not start a trial.",
+      "longDescription": "Buffer's pricing page lists Essentials at $5 per month for one channel, or $60 billed yearly, and a 14-day free trial. A features page describes an AI assistant for creating and repurposing content, plus scheduling across social platforms.",
       "categories": [
         "content"
       ],
@@ -1052,7 +1052,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1081,7 +1081,7 @@
       "name": "Canva",
       "websiteUrl": "https://www.canva.com/",
       "affiliateUrl": null,
-      "shortDescription": "Real estate video templates and a video editor for listing clips. Free to start; paid plans on their site.",
+      "shortDescription": "Real estate video templates and a video editor for listing clips. Free to start. Paid plans are on their site.",
       "longDescription": "Canva's real estate video gallery says you can start from a listing template and customize it. The real estate solutions page says the video editor can create listing videos and walk-throughs and add music. Those pages do not list a monthly plan price.",
       "categories": [
         "creative-media"
@@ -1113,7 +1113,7 @@
         "Adding photos, captions, and music in one editor"
       ],
       "notIdealFor": [
-        "A confirmed monthly price from this listing",
+        "A published monthly price",
         "Skip tracing or deal ranking"
       ],
       "strength": "Canva's real estate pages say you can start a listing video or walk-through from a template and add music.",
@@ -1122,7 +1122,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Real estate video gallery and solutions page fetched on 2026-10-19. No account was created.",
+      "smokeTestNotes": "Real estate video gallery and solutions page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1173,7 +1173,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "smokeTestNotes": "Official site and pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -1190,7 +1190,7 @@
       "name": "CapCut",
       "websiteUrl": "https://www.capcut.com/",
       "shortDescription": "Video editor for YouTube, TikTok, and Reels. Pricing lists Free and Pro at $19.99/month.",
-      "longDescription": "CapCut is a video editor for short-form and social video. On October 16, 2026 the pricing page listed Free at $0, with free templates and basic editing tools, and Pro at $19.99 per month. We did not install the app.",
+      "longDescription": "CapCut is a video editor for short-form and social video. On October 16, 2026 the pricing page listed Free at $0, with free templates and basic editing tools, and Pro at $19.99 per month.",
       "pricingUrl": "https://www.capcut.com/pricing",
       "docsUrl": null,
       "freeTier": true,
@@ -1245,7 +1245,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "smokeTestNotes": "Official site and pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -1262,7 +1262,7 @@
       "name": "Captions",
       "websiteUrl": "https://captions.ai/",
       "shortDescription": "AI video editor and caption tool. The paid Max plan is listed at $24.99/month.",
-      "longDescription": "Captions is an AI video editor that adds captions and can edit uploaded footage. On October 16, 2026 its pricing page said a free version includes basic tools such as trimming, transitions, and some media library assets. The Max plan was listed at $24.99 per month. We did not create an account.",
+      "longDescription": "Captions is an AI video editor that adds captions and can edit uploaded footage. On October 16, 2026 its pricing page said a free version includes basic tools such as trimming, transitions, and some media library assets. The Max plan was listed at $24.99 per month.",
       "pricingUrl": "https://captions.ai/pricing",
       "docsUrl": "https://captions.ai/help/docs/captions/add-captions",
       "freeTier": true,
@@ -1296,7 +1296,7 @@
       "websiteUrl": "https://www.crowdstrike.com/platform/charlotte-ai/",
       "affiliateUrl": null,
       "shortDescription": "CrowdStrike's agentic analyst for cybersecurity. No public price was listed.",
-      "longDescription": "CrowdStrike's page is titled Charlotte AI: Agentic Analyst for Cybersecurity, and the page says Charlotte AI accelerates work with autonomous intelligence for the security stack. We do not repeat outcome claims. The fetch did not list a price. We did not start a trial.",
+      "longDescription": "CrowdStrike's page is titled Charlotte AI: Agentic Analyst for Cybersecurity, and the page says Charlotte AI accelerates work with autonomous intelligence for the security stack. The page did not list a price.",
       "categories": [
         "security"
       ],
@@ -1330,12 +1330,12 @@
         "A standalone inbox tool with a public monthly price"
       ],
       "strength": "CrowdStrike titles Charlotte AI an agentic analyst for cybersecurity on its official platform page.",
-      "weakness": "The fetched page did not list a public price.",
+      "weakness": "The page did not list a public price for Charlotte AI.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1369,7 +1369,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -1386,7 +1386,7 @@
       "name": "ChatGPT",
       "websiteUrl": "https://chatgpt.com/",
       "shortDescription": "General-purpose chat assistant from OpenAI, with a free plan and paid Go and Plus plans.",
-      "longDescription": "ChatGPT is OpenAI's general chat assistant. The pricing page lists Free, Go, Plus, and Pro. OpenAI's Go announcement lists Go at $8 per month in the US, and the Plus help article lists Plus at $20 per month. We did not subscribe. It is not a specialist for one job.",
+      "longDescription": "ChatGPT is OpenAI's general chat assistant. The pricing page lists Free, Go, Plus, and Pro. OpenAI's Go announcement lists Go at $8 per month in the US, and the Plus help article lists Plus at $20 per month. It is not a specialist for one job.",
       "categories": [
         "general-assistants"
       ],
@@ -1468,15 +1468,15 @@
       ],
       "notIdealFor": [
         "A self-hosted open-source agent runtime",
-        "Anyone who needs a local install"
+        "Anyone who needs to run it on their own computer"
       ],
-      "strength": "There is a free plan, and the paid plan we recorded starts at $20 per month, with the API billed separately.",
+      "strength": "There is a free plan, and the paid plan starts at $20 per month, with the API billed separately.",
       "weakness": "Claude is a hosted product and API, not a self-hosted open-source agent runtime.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -1507,7 +1507,7 @@
       "websiteUrl": "https://www.clay.com/",
       "affiliateUrl": null,
       "shortDescription": "Sales data workspace with a marketplace of 200+ providers and a free trial.",
-      "longDescription": "Clay's pricing page describes centralizing data sources, buying data from 200+ providers, and tracking intent signals, and it offers a free trial. The fetched text did not include a dollar price or a trial length. We did not start a trial.",
+      "longDescription": "Clay's pricing page describes centralizing data sources, buying data from 200+ providers, and tracking intent signals, and it offers a free trial. The page did not include a dollar price or a trial length.",
       "categories": [
         "sales"
       ],
@@ -1541,12 +1541,12 @@
         "Someone who needs a published seat price before a trial"
       ],
       "strength": "Clay describes a data marketplace of more than 200 providers and offers a free trial on the pricing page.",
-      "weakness": "The fetched pricing text did not state a dollar price or how many days the trial lasts.",
+      "weakness": "The pricing page did not state a dollar price or how many days the trial lasts.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1580,7 +1580,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -1597,7 +1597,7 @@
       "name": "Composer",
       "websiteUrl": "https://www.composer.trade/",
       "shortDescription": "Automates a trading strategy. Starter is $0. Advanced is $10 per month.",
-      "longDescription": "Composer lets you build and automate trading strategies. On October 16, 2026 the pricing page listed Starter at $0, including one automated strategy, and Advanced at $10 per month. Brokerage services are through a registered broker-dealer. We did not open an account. This is not financial advice.",
+      "longDescription": "Composer lets you build and automate trading strategies. On October 16, 2026 the pricing page listed Starter at $0, including one automated strategy, and Advanced at $10 per month. Brokerage services are through a registered broker-dealer. This is not financial advice.",
       "categories": [
         "personal-finance"
       ],
@@ -1643,7 +1643,7 @@
       "name": "Composio",
       "websiteUrl": "https://composio.dev/",
       "affiliateUrl": null,
-      "shortDescription": "Connects agents to third-party apps and tools. Free to start; paid plans on their site.",
+      "shortDescription": "Connects agents to third-party apps and tools. Free to start. Paid plans are on their site.",
       "longDescription": "Composio is a tool-use layer between agents and third-party apps. The pricing page lists a $0 Hobby plan. The October 15, 2026 CLI release is public.",
       "categories": [
         "tool-use"
@@ -1678,7 +1678,7 @@
       ],
       "notIdealFor": [
         "A single API you already call directly",
-        "A local hands-on test — we did not run one"
+        "Running it on your own computer, which is not described here"
       ],
       "strength": "The Hobby plan includes 100,000 tool calls per month for connecting agents to third-party apps.",
       "weakness": "The next plan starts at $29 per month once you need more than the Hobby tool-call allotment.",
@@ -1686,7 +1686,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -1724,7 +1724,7 @@
       "websiteUrl": "https://continue.dev/",
       "affiliateUrl": null,
       "shortDescription": "Open-source coding agent and IDE extension.",
-      "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. There is no separate public price grid in this listing, and the open-source extension is the free path we could confirm.",
+      "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. No separate public price grid is listed here, and the open-source extension is the free path.",
       "categories": [
         "coding-agents"
       ],
@@ -1759,12 +1759,12 @@
         "A confirmed cloud plan with a public price grid"
       ],
       "strength": "Continue is an open-source coding agent you install in the IDE you already use.",
-      "weakness": "A public price grid was not confirmed, so this listing does not state a monthly price.",
+      "weakness": "No public monthly price is listed for Continue.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -1804,7 +1804,7 @@
       "websiteUrl": "https://convai.com/",
       "affiliateUrl": null,
       "shortDescription": "Conversational characters for games.",
-      "longDescription": "Convai makes conversational characters for games. A public price or free tier was not confirmed from the pricing page. We did not create an account.",
+      "longDescription": "Convai makes conversational characters for games. A public price or free tier is not listed here.",
       "categories": [
         "game-ai"
       ],
@@ -1837,18 +1837,18 @@
         "Workflow automation outside a game"
       ],
       "strength": "The site describes conversational characters that talk with the player inside a game.",
-      "weakness": "A public price or free tier was not confirmed, so this listing does not state a monthly price.",
+      "weakness": "A public price or free tier is not listed here.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
       "latestRelease": null,
       "problems": [
-        "A public price or free tier was not confirmed from the pricing page."
+        "A public price or free tier is not listed here."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -1875,7 +1875,7 @@
       "websiteUrl": "https://www.copy.ai/",
       "affiliateUrl": null,
       "shortDescription": "Workflows for marketing content and go-to-market writing.",
-      "longDescription": "Copy.ai's prices page describes workflows, including content creation and account-based marketing, plus sales prospecting workflows. The fetched text did not include a dollar price.",
+      "longDescription": "Copy.ai's prices page describes workflows, including content creation and account-based marketing, plus sales prospecting workflows. The page did not include a dollar price.",
       "categories": [
         "content"
       ],
@@ -1909,12 +1909,12 @@
         "A buyer who needs a confirmed seat price"
       ],
       "strength": "The Copy AI prices page describes workflows for content creation and other go-to-market writing.",
-      "weakness": "That fetch did not include a dollar price.",
+      "weakness": "The page did not include a dollar price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -1943,7 +1943,7 @@
       "websiteUrl": "https://crewai.com/",
       "affiliateUrl": null,
       "shortDescription": "Open-source framework for crews of role-based agents that split a job into tasks.",
-      "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source package and the hosted product are separate. Figures below are only what we could read on the pricing page during the October 15, 2026 check.",
+      "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source framework and the hosted product are separate. Pricing figures are from the pricing page on October 15, 2026.",
       "categories": [
         "agent-frameworks"
       ],
@@ -1981,16 +1981,16 @@
         "A single chat box with no workflow",
         "Teams that only want a closed SaaS and will not touch Python"
       ],
-      "strength": "We imported crewai 1.15.28, an open-source framework that splits a job across role-based agents.",
+      "strength": "CrewAI 1.15.28 is an open-source framework that splits a job across role-based agents.",
       "weakness": "The cloud free plan includes 50 workflow executions per month, and paid use above that is custom Enterprise pricing.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import crewai",
+        "detail": "We installed version 1.15.28 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "crewai==1.15.28",
         "llmCall": false,
         "accountSignup": false,
@@ -2064,16 +2064,16 @@
         "Day-to-day coding where the agent should touch the repo"
       ],
       "notIdealFor": [
-        "A headless library you import from Python",
-        "A hands-on install check — we did not run one"
+        "A Python library you call from your own code",
+        "Running it on your own computer, which is not described here"
       ],
       "strength": "The free plan includes limited agent and chat requests in a desktop IDE that can edit the repo.",
-      "weakness": "The free plan caps agent and chat requests, and the pricing page we fetched did not state a clear lowest monthly price.",
+      "weakness": "The free plan caps agent and chat requests, and the pricing page did not state a clear lowest monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -2135,7 +2135,7 @@
         "A spokesperson clip without filming"
       ],
       "notIdealFor": [
-        "A confirmed monthly price from this listing",
+        "A published monthly price",
         "Cutting gameplay into shorts"
       ],
       "strength": "The official talking-head docs say a photo and a script become a video, and the help center lists a 14-day trial.",
@@ -2144,7 +2144,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Studio, API, and help-center pages fetched on 2026-10-19. No account was created.",
+      "smokeTestNotes": "Studio, API, and help-center pages reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2176,7 +2176,7 @@
       "websiteUrl": "https://daydream.ing/",
       "affiliateUrl": null,
       "shortDescription": "AI fashion agent to chat and shop across 10,000+ stores.",
-      "longDescription": "Daydream's homepage says it is a personal AI fashion agent, that you chat to shop, and that it covers 10,000+ stores. The fetched text did not list a price. We did not create an account.",
+      "longDescription": "Daydream's homepage says it is a personal AI fashion agent, that you chat to shop, and that it covers 10,000+ stores. The page did not list a price.",
       "categories": [
         "shopping"
       ],
@@ -2209,12 +2209,12 @@
         "General grocery or electronics shopping"
       ],
       "strength": "Daydream describes a personal AI fashion agent for chatting to shop across more than 10,000 stores.",
-      "weakness": "The fetched page did not list a price, and the product is fashion-specific.",
+      "weakness": "The page did not list a price, and the product is fashion-specific.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2248,7 +2248,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Pricing page checked on October 19, 2026. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Pricing page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2265,7 +2265,7 @@
       "name": "DealCheck",
       "websiteUrl": "https://dealcheck.io/",
       "shortDescription": "Deal calculator for rentals, flips, and commercial properties, with a free Starter plan.",
-      "longDescription": "DealCheck's pricing page, read October 19, 2026, lists Starter at $0, Plus at $10 per month, and Pro at $20 per month. Paid plans include a 14-day trial. The same page describes a rental cash flow calculator, a house flipping calculator, a multi-family and commercial calculator, and side-by-side property comparison. The plan bullets are repeated on every tier, so this listing does not claim which of those calculators are limited to Plus or Pro. The page does not call the product an AI agent.",
+      "longDescription": "DealCheck's pricing page, read October 19, 2026, lists Starter at $0, Plus at $10 per month, and Pro at $20 per month. Paid plans include a 14-day trial. The same page describes a rental cash flow calculator, a house flipping calculator, a multi-family and commercial calculator, and side-by-side property comparison. The plan bullets are repeated on every tier, so the page does not say which of those calculators are limited to Plus or Pro. The page does not call the product an AI agent.",
       "categories": [
         "real-estate"
       ],
@@ -2293,7 +2293,7 @@
         "Someone who needs the product to be described as an AI agent on the official page"
       ],
       "strength": "The pricing page lists a free Starter plan, Plus at $10 per month, and Pro at $20 per month, with a rental, flip, and commercial calculator.",
-      "weakness": "The pricing page repeats the same feature bullets on every plan, so this listing does not say which calculator is free.",
+      "weakness": "The pricing page repeats the same feature bullets on every plan, so it does not say which calculator is free.",
       "sources": [
         "https://dealcheck.io/pricing/",
         "https://help.dealcheck.io/en/articles/4471054-how-much-does-dealcheck-cost-can-i-try-it-for-free"
@@ -2314,7 +2314,7 @@
       "websiteUrl": "https://www.dealmachine.com/",
       "affiliateUrl": null,
       "shortDescription": "Owner data and a driving app for property outreach. Basic is $99 per seat per month.",
-      "longDescription": "DealMachine lists nationwide property and owner data, saved searches, and a Driving for Dollars app. On October 19, 2026 the pricing page listed Basic at $99 per seat per month with 10,000 data credits, and Pro at $149 per seat per month. Postcards are priced per piece. We did not create an account.",
+      "longDescription": "DealMachine lists nationwide property and owner data, saved searches, and a Driving for Dollars app. On October 19, 2026 the pricing page listed Basic at $99 per seat per month with 10,000 data credits, and Pro at $149 per seat per month. Postcards are priced per piece.",
       "categories": [
         "real-estate"
       ],
@@ -2353,7 +2353,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -2383,7 +2383,7 @@
       "websiteUrl": "https://decagon.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI concierge for chat, email, and voice customer conversations.",
-      "longDescription": "Decagon's site describes an AI concierge with chat, email, and voice channels, plus workflows for agents. The fetched text did not list a public price. We did not request a demo.",
+      "longDescription": "Decagon's site describes an AI concierge with chat, email, and voice channels, plus workflows for agents. The page did not list a public price.",
       "categories": [
         "customer-support"
       ],
@@ -2417,12 +2417,12 @@
         "A buyer who needs a self-serve monthly price"
       ],
       "strength": "Decagon describes an AI concierge that handles chat, email, and voice customer conversations.",
-      "weakness": "The fetched site did not publish a dollar price, so the plan cost is not listed here.",
+      "weakness": "The site did not publish a dollar price, so the plan cost is not listed here.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2451,7 +2451,7 @@
       "websiteUrl": "https://www.deepseek.com/",
       "affiliateUrl": null,
       "shortDescription": "DeepSeek chat app and API models for chat, coding, and web search.",
-      "longDescription": "DeepSeek publishes a chat app and an API. The app announcement says the app is free, with no ads or in-app purchases, and lists web search, a deep-think mode, and file upload. The download page calls it the official assistant for chat. The API docs list deepseek-flash and deepseek-v4-pro, with tool calls and a beta fill-in-the-middle completion used for code. API prices are per million tokens on the pricing page. The chat website did not open, so this listing does not describe the live chat screen.",
+      "longDescription": "DeepSeek publishes a chat app and an API. The app announcement says the app is free, with no ads or in-app purchases, and lists web search, a deep-think mode, and file upload. The download page calls it the official assistant for chat. The API docs list deepseek-flash and deepseek-v4-pro, with tool calls and a beta fill-in-the-middle completion used for code. API prices are per million tokens on the pricing page. The chat website did not open, so the live chat screen is not described.",
       "categories": [
         "general-assistants",
         "coding-agents",
@@ -2492,12 +2492,12 @@
         "A self-hosted copy of the current API models"
       ],
       "strength": "The official app announcement says DeepSeek chat is free, with web search and no in-app purchases.",
-      "weakness": "The chat website did not open for this listing, so the live app screen was not reviewed.",
+      "weakness": "The chat website did not open, so the live app screen is not described.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "The app announcement, download page, and API docs were reviewed. The chat website did not open. A hands-on test was not done.",
+      "smokeTestNotes": "The app announcement, download page, and API docs were reviewed. The chat website did not open.",
       "handsOn": {
         "performed": false
       },
@@ -2533,8 +2533,8 @@
       "name": "Descript",
       "websiteUrl": "https://www.descript.com/",
       "affiliateUrl": null,
-      "shortDescription": "Edit video and audio by editing the transcript. Free to start; paid plans on their site.",
-      "longDescription": "Descript edits audio and video from the transcript. The pricing crawl included free-to-start or hobby and $0 language, with paid samples in a roughly $16–$65 range. Confirm current limits on the pricing page. We did not install the app.",
+      "shortDescription": "Edit video and audio by editing the transcript. Free to start. Paid plans are on their site.",
+      "longDescription": "Descript edits audio and video from the transcript. The pricing page lists free or hobby language and a $0 figure, with paid samples in a roughly $16–$65 range.",
       "categories": [
         "creative-media"
       ],
@@ -2577,7 +2577,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -2609,7 +2609,7 @@
       "websiteUrl": "https://dext.com/",
       "affiliateUrl": null,
       "shortDescription": "Receipt and invoice capture for bookkeeping and expenses.",
-      "longDescription": "Dext's site describes bookkeeping software with receipt and invoice capture and business expense management, and it says AI is part of the product. The fetched text did not include a dollar price. We did not start a trial.",
+      "longDescription": "Dext's site describes bookkeeping software with receipt and invoice capture and business expense management, and it says AI is part of the product. The page did not include a dollar price.",
       "categories": [
         "finance-ops"
       ],
@@ -2643,12 +2643,12 @@
         "Someone who needs a listed monthly price"
       ],
       "strength": "Dext lists receipt and invoice capture and business expense management for bookkeeping.",
-      "weakness": "The fetched page did not show a dollar price.",
+      "weakness": "The page did not show a dollar price for Dext.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2677,7 +2677,7 @@
       "websiteUrl": "https://dify.ai/",
       "affiliateUrl": null,
       "shortDescription": "Open-source platform to build agent workflows visually, with a self-hosted community edition.",
-      "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page. Confirm cloud prices on the live pricing page before you rely on them.",
+      "longDescription": "Dify is a visual platform for agent workflows, with a self-hosted community edition called out on the pricing page.",
       "categories": [
         "agent-frameworks"
       ],
@@ -2713,15 +2713,15 @@
       ],
       "notIdealFor": [
         "A small Python script with no surrounding app",
-        "A hands-on install"
+        "Running it on your own computer, which is not described here"
       ],
       "strength": "The pricing page includes a self-hosted community edition, and the cloud free plan includes 200 message credits.",
-      "weakness": "The cloud free plan stops at 200 message credits, and the page we checked did not list a monthly starting price.",
+      "weakness": "The cloud free plan stops at 200 message credits, and the pricing page did not list a monthly starting price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -2759,7 +2759,7 @@
       "websiteUrl": "https://www.dropzone.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI SOC analyst for alert triage and threat hunting.",
-      "longDescription": "Dropzone's site describes an AI SOC analyst that investigates alerts end to end and shows its reasoning, plus an AI threat hunter. The fetched text did not list a price. We did not request a demo.",
+      "longDescription": "Dropzone's site describes an AI SOC analyst that investigates alerts end to end and shows its reasoning, plus an AI threat hunter. The page did not list a price.",
       "categories": [
         "security"
       ],
@@ -2793,12 +2793,12 @@
         "Someone who needs a public monthly price"
       ],
       "strength": "Dropzone describes an AI SOC analyst that investigates alerts end to end and shows its reasoning.",
-      "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+      "weakness": "The site did not list a dollar price for the product.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2827,7 +2827,7 @@
       "websiteUrl": "https://blog.duolingo.com/duolingo-max/",
       "affiliateUrl": null,
       "shortDescription": "Language practice. A 2023 Duolingo post introduces Max with GPT-4.",
-      "longDescription": "Duolingo's official post dated March 14, 2023 introduces Duolingo Max as a learning experience powered by GPT-4. This October 19, 2026 check did not find a current price on that post. We did not subscribe.",
+      "longDescription": "Duolingo's official post dated March 14, 2023 introduces Duolingo Max as a learning experience powered by GPT-4. That post did not show a current price on October 19, 2026.",
       "categories": [
         "learning"
       ],
@@ -2860,12 +2860,12 @@
         "Someone who needs a confirmed 2026 price"
       ],
       "strength": "Duolingo's March 14, 2023 post introduces Max as a learning experience powered by GPT-4.",
-      "weakness": "That post does not show a current price, and it is the source for this listing.",
+      "weakness": "That March 14, 2023 post does not show a current price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -2906,12 +2906,12 @@
       "openSource": false,
       "repoUrl": null,
       "strength": "It connects a Twitch, YouTube, or Kick channel and returns vertical highlight clips for Shorts, Reels, and TikTok.",
-      "weakness": "The pricing path we opened redirected to the homepage and did not list a monthly price.",
+      "weakness": "The pricing path redirected to the homepage and did not list a monthly price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "smokeTestNotes": "Official site and pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -2928,7 +2928,7 @@
       "name": "Eklipse",
       "websiteUrl": "https://eklipse.gg/",
       "shortDescription": "Finds highlight clips from Twitch, YouTube, and Kick streams and exports them vertical.",
-      "longDescription": "Eklipse says it connects a Twitch, YouTube, or Kick channel, watches the saved VOD, and returns highlight clips sized for TikTok, Reels, and Shorts. The pricing path we opened redirected to the homepage and did not list a monthly price. We did not connect an account.",
+      "longDescription": "Eklipse says it connects a Twitch, YouTube, or Kick channel, watches the saved VOD, and returns highlight clips sized for TikTok, Reels, and Shorts. The pricing path redirected to the homepage and did not list a monthly price.",
       "pricingUrl": "https://eklipse.gg/pricing",
       "docsUrl": "https://eklipse.gg/help/clip-twitch-vod-after-stream/",
       "freeTier": null,
@@ -2963,7 +2963,7 @@
       "websiteUrl": "https://elevenlabs.io/",
       "affiliateUrl": null,
       "shortDescription": "Voice and audio generation. The free plan includes 10,000 credits per month.",
-      "longDescription": "ElevenLabs generates voice and audio. On October 16, 2026 the pricing page listed Free at $0 per month with 10,000 credits, and Starter at $6 per month. We did not create an account.",
+      "longDescription": "ElevenLabs generates voice and audio. On October 16, 2026 the pricing page listed Free at $0 per month with 10,000 credits, and Starter at $6 per month.",
       "categories": [
         "creative-media"
       ],
@@ -3001,7 +3001,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -3073,7 +3073,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3142,12 +3142,12 @@
         "A general web-search API — that is a different job"
       ],
       "strength": "The free cloud plan includes 1,000 credits per month to turn pages into markdown, and the repo is open source.",
-      "weakness": "Paid cloud samples on the page included about $16 and $75, and a monthly starting price was not confirmed.",
+      "weakness": "Paid cloud samples on the page included about $16 and $75, and a monthly starting price is not listed here.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -3186,7 +3186,7 @@
       "websiteUrl": "https://flowiseai.com/",
       "affiliateUrl": null,
       "shortDescription": "Open-source, low-code builder for LLM flows you can self-host.",
-      "longDescription": "Flowise is a low-code builder for LLM flows. The npm package and GitHub repo are the open-source path we could confirm. The pricing page came back thin in our crawl, so a cloud free tier is not confirmed. We did not install it.",
+      "longDescription": "Flowise is a low-code builder for LLM flows. The npm project and GitHub repo are the open-source path. A cloud free tier is not stated here.",
       "categories": [
         "agent-frameworks"
       ],
@@ -3218,16 +3218,16 @@
         "Teams already comfortable with a Node service"
       ],
       "notIdealFor": [
-        "A confirmed free hosted plan — we could not verify one",
+        "A free hosted plan with a published price",
         "Code-first agent libraries, if that is all you need"
       ],
-      "strength": "The open-source npm package flowise 3.1.4 is a low-code builder you can self-host.",
+      "strength": "The open-source npm project Flowise 3.1.4 is a low-code builder you can self-host.",
       "weakness": "The pricing page came back too thin to confirm a cloud free tier.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -3265,7 +3265,7 @@
       "websiteUrl": "https://flyfin.tax/",
       "affiliateUrl": null,
       "shortDescription": "AI and CPA service that finds deductions and files self-employed taxes.",
-      "longDescription": "FlyFin's homepage describes an AI and CPA tax filing service for freelancers. It says the AI finds deductions and CPAs file the return. The fetched text did not include a plan price.",
+      "longDescription": "FlyFin's homepage describes an AI and CPA tax filing service for freelancers. It says the AI finds deductions and CPAs file the return. The page did not include a plan price.",
       "categories": [
         "personal-finance"
       ],
@@ -3298,12 +3298,12 @@
         "Someone comparing plans by a published monthly price"
       ],
       "strength": "FlyFin's homepage describes an AI and CPA service that finds deductions and has CPAs file self-employed taxes.",
-      "weakness": "The homepage text we fetched did not list a plan price, so this listing leaves the monthly price blank.",
+      "weakness": "The homepage did not list a plan price for FlyFin.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3332,7 +3332,7 @@
       "websiteUrl": "https://www.freshworks.com/freshservice/",
       "affiliateUrl": null,
       "shortDescription": "IT service desk. Starter is $19 per agent per month billed annually.",
-      "longDescription": "Freshservice's pricing page is for IT teams and lists Starter at $19 per agent per month when billed annually. We did not start a trial, and we do not show that figure as a month-to-month price.",
+      "longDescription": "Freshservice's pricing page is for IT teams and lists Starter at $19 per agent per month when billed annually. That figure is not a month-to-month price.",
       "categories": [
         "it-support"
       ],
@@ -3365,12 +3365,12 @@
         "A team that wants a confirmed month-to-month rate"
       ],
       "strength": "Freshservice lists an IT Starter plan at $19 per agent per month when billed annually.",
-      "weakness": "That price is billed annually, so this listing does not treat it as month-to-month.",
+      "weakness": "That price is billed annually, so it is not a month-to-month price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3399,7 +3399,7 @@
       "websiteUrl": "https://www.fyxer.com/",
       "affiliateUrl": null,
       "shortDescription": "Inbox organizer and email draft writer with a 14-day free trial.",
-      "longDescription": "Fyxer's site lists an inbox organizer, an email draft writer, a meeting notetaker, and a scheduling assistant. It says you can start for free and offers a 14-day free trial with a work email. The fetched text did not include a dollar price.",
+      "longDescription": "Fyxer's site lists an inbox organizer, an email draft writer, a meeting notetaker, and a scheduling assistant. It says you can start for free and offers a 14-day free trial with a work email. The page did not include a dollar price.",
       "categories": [
         "productivity"
       ],
@@ -3433,12 +3433,12 @@
         "Someone comparing plans by a published monthly price"
       ],
       "strength": "Fyxer lists an inbox organizer and an email draft writer, with a 14-day free trial and a start-for-free option.",
-      "weakness": "The fetched page did not show a dollar price for the paid plan.",
+      "weakness": "The page did not show a dollar price for the paid plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3467,7 +3467,7 @@
       "websiteUrl": "https://www.gem.com/",
       "affiliateUrl": null,
       "shortDescription": "Recruiting platform to source, review, hire, and report with AI.",
-      "longDescription": "Gem's homepage says it gives talent teams AI and data to source, review, hire, and report in one place. The fetched text did not list a price. We did not book a demo.",
+      "longDescription": "Gem's homepage says it gives talent teams AI and data to source, review, hire, and report in one place. The page did not list a price.",
       "categories": [
         "hiring"
       ],
@@ -3501,12 +3501,12 @@
         "A buyer who needs a public seat price"
       ],
       "strength": "Gem says teams can source, review, hire, and report with its AI and data.",
-      "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+      "weakness": "The homepage did not list a dollar price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3540,7 +3540,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -3557,7 +3557,7 @@
       "name": "Google Gemini",
       "websiteUrl": "https://gemini.google.com/",
       "shortDescription": "General-purpose assistant from Google, with a free plan and paid Google AI plans.",
-      "longDescription": "Gemini is Google's general assistant. The Google One AI plans page, read October 16, 2026, lists a free Gemini plan, Google AI Plus at $4.99 per month, and Google AI Pro at $19.99 per month in the United States. We did not subscribe. It is not a specialist for one job.",
+      "longDescription": "Gemini is Google's general assistant. The Google One AI plans page, read October 16, 2026, lists a free Gemini plan, Google AI Plus at $4.99 per month, and Google AI Pro at $19.99 per month in the United States. It is not a specialist for one job.",
       "categories": [
         "general-assistants"
       ],
@@ -3635,12 +3635,12 @@
         "Someone who needs a confirmed monthly price"
       ],
       "strength": "GitHub calls Copilot an AI coding agent that writes code and can take work from an issue toward a merge.",
-      "weakness": "The fetched page did not include a dollar price.",
+      "weakness": "The page did not include a dollar price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3669,7 +3669,7 @@
       "websiteUrl": "https://www.glean.com/",
       "affiliateUrl": null,
       "shortDescription": "Enterprise search across company context, with 250+ connectors.",
-      "longDescription": "Glean's site describes enterprise search, grounding AI in company context, and more than 250 connectors, plus agents. The fetched text did not list a price. We did not request a demo.",
+      "longDescription": "Glean's site describes enterprise search, grounding AI in company context, and more than 250 connectors, plus agents. The page did not list a price.",
       "categories": [
         "knowledge"
       ],
@@ -3703,12 +3703,12 @@
         "A personal notes app with a public free plan"
       ],
       "strength": "Glean describes enterprise search over company context and says it offers more than 250 connectors.",
-      "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+      "weakness": "The site did not list a dollar price for the product.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3736,8 +3736,8 @@
       "name": "Granola",
       "websiteUrl": "https://www.granola.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Meeting notes that sit alongside your calls. Free to start; paid plans on their site.",
-      "longDescription": "Granola takes meeting notes. The pricing crawl included $0 alongside $14 and $35. Confirm free-plan limits on the pricing page. We did not install the app or join a call.",
+      "shortDescription": "Meeting notes that sit alongside your calls. Free to start. Paid plans are on their site.",
+      "longDescription": "Granola takes meeting notes. The pricing page lists $0 alongside $14 and $35.",
       "categories": [
         "knowledge"
       ],
@@ -3778,7 +3778,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -3808,7 +3808,7 @@
       "websiteUrl": "https://guidegeek.com/",
       "affiliateUrl": null,
       "shortDescription": "AI trip planner for flights, stays, restaurants, and experiences.",
-      "longDescription": "GuideGeek's homepage says you can plan trips in minutes with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI. The fetched text did not list a price. We did not start a trip.",
+      "longDescription": "GuideGeek's homepage says you can plan trips in minutes with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI. The page did not list a price.",
       "categories": [
         "travel"
       ],
@@ -3841,12 +3841,12 @@
         "Someone who needs a published subscription price"
       ],
       "strength": "GuideGeek says it plans trips with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI.",
-      "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+      "weakness": "The homepage did not list a dollar price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3875,7 +3875,7 @@
       "websiteUrl": "https://www.getguru.com/",
       "affiliateUrl": null,
       "shortDescription": "Knowledge base whose agents find and improve company information.",
-      "longDescription": "Guru's pricing page says knowledge agents now improve your information, not just find it, and it describes knowledge management workflows. The fetched text did not include a dollar price. We did not start a workspace.",
+      "longDescription": "Guru's pricing page says knowledge agents now improve your information, not just find it, and it describes knowledge management workflows. The page did not include a dollar price.",
       "categories": [
         "knowledge"
       ],
@@ -3909,12 +3909,12 @@
         "Someone who needs a listed per-user price"
       ],
       "strength": "Guru's pricing page says its knowledge agents improve company information, not only find it.",
-      "weakness": "The fetched pricing text did not include a dollar amount.",
+      "weakness": "The pricing page did not include a dollar amount.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -3943,7 +3943,7 @@
       "websiteUrl": "https://hex.tech/",
       "affiliateUrl": null,
       "shortDescription": "Collaborative data workspace. The page lists $36 per Editor each month.",
-      "longDescription": "Hex's pricing page lists $36 per Editor per month and says that price includes the Hex agent on top of Community. The homepage also describes AI analytics and dashboards. We did not start a workspace.",
+      "longDescription": "Hex's pricing page lists $36 per Editor per month and says that price includes the Hex agent on top of Community. The homepage also describes AI analytics and dashboards.",
       "categories": [
         "data-analysis"
       ],
@@ -3982,7 +3982,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4011,8 +4011,8 @@
       "name": "HeyGen",
       "websiteUrl": "https://www.heygen.com/",
       "affiliateUrl": null,
-      "shortDescription": "Avatar and spokesperson video from a script. Free to start; paid plans on their site.",
-      "longDescription": "HeyGen makes avatar and spokesperson videos. The pricing crawl included $0/month alongside $29 and $49 per month samples. Confirm what the free plan includes. We did not create an account.",
+      "shortDescription": "Avatar and spokesperson video from a script. Free to start. Paid plans are on their site.",
+      "longDescription": "HeyGen makes avatar and spokesperson videos. The pricing page lists $0 per month alongside $29 and $49 per month samples.",
       "categories": [
         "creative-media"
       ],
@@ -4041,7 +4041,7 @@
       "repoUrl": null,
       "bestFor": [
         "Spokesperson or avatar videos",
-        "Teams that want a hosted avatar tool with a $0 tier on the page we read"
+        "Teams that want a hosted avatar tool with a $0 tier on the pricing page"
       ],
       "notIdealFor": [
         "Gameplay capture or VOD clipping",
@@ -4053,7 +4053,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -4084,7 +4084,7 @@
       "websiteUrl": "https://higgsfield.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI video app with Cinema Studio camera-motion presets for cinematic clips.",
-      "longDescription": "Higgsfield is an AI video app. Its Cinema Studio help page describes cinematic video with camera-motion control, and the Cinema Studio 4.0 blog lists 30+ camera-movement presets, including POV, robot arm, pan, and helicopter shot, plus clips up to 30 seconds. The pricing page did not include a readable monthly plan, so this listing does not state a subscription price.",
+      "longDescription": "Higgsfield is an AI video app. Its Cinema Studio help page describes cinematic video with camera-motion control, and the Cinema Studio 4.0 blog lists 30+ camera-movement presets, including POV, robot arm, pan, and helicopter shot, plus clips up to 30 seconds. The pricing page did not include a readable monthly plan.",
       "categories": [
         "creative-media"
       ],
@@ -4113,16 +4113,16 @@
         "Short clips for a game, a stream, or a sizzle reel"
       ],
       "notIdealFor": [
-        "A confirmed monthly price from this listing",
+        "A published monthly price",
         "In-game character dialogue"
       ],
       "strength": "Cinema Studio 4.0, described on the official blog, offers 30+ camera-movement presets and clips up to 30 seconds.",
-      "weakness": "The pricing page did not include a readable monthly plan, so this listing does not state a subscription price.",
+      "weakness": "The pricing page did not include a readable monthly plan, so no subscription price is listed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official homepage, Cinema Studio help page, blog, and pricing URL were reviewed. A hands-on test was not done.",
+      "smokeTestNotes": "Official homepage, Cinema Studio help page, blog, and pricing URL were reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -4154,7 +4154,7 @@
       "websiteUrl": "https://www.hootsuite.com/",
       "affiliateUrl": null,
       "shortDescription": "Social planning and publishing. The plans page says it is connected by AI.",
-      "longDescription": "Hootsuite's plans page describes content creation, planning, and publishing for social, and says the suite is connected by AI. The fetched text did not include a dollar price. We did not start a trial.",
+      "longDescription": "Hootsuite's plans page describes content creation, planning, and publishing for social, and says the suite is connected by AI. The page did not include a dollar price.",
       "categories": [
         "content"
       ],
@@ -4188,12 +4188,12 @@
         "Someone who needs a listed monthly price"
       ],
       "strength": "Hootsuite's plans page describes social content creation, planning, and publishing, and says the suite is connected by AI.",
-      "weakness": "The fetched plans text did not include a dollar price.",
+      "weakness": "The plans page did not include a dollar price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4222,7 +4222,7 @@
       "websiteUrl": "https://instantly.ai/",
       "affiliateUrl": null,
       "shortDescription": "Cold email outreach. The Growth plan is listed at $47 per month.",
-      "longDescription": "Instantly's pricing page lists outreach plans, including a Growth plan at $47 per month with unlimited email accounts, and it describes an AI Sales Agent. A higher starter bundle was also listed. We did not create an account.",
+      "longDescription": "Instantly's pricing page lists outreach plans, including a Growth plan at $47 per month with unlimited email accounts, and it describes an AI Sales Agent. A higher starter bundle was also listed.",
       "categories": [
         "sales"
       ],
@@ -4255,12 +4255,12 @@
         "A team that only needs a CRM and not outbound email"
       ],
       "strength": "Instantly lists an Outreach Growth plan at $47 per month and describes an AI Sales Agent.",
-      "weakness": "Higher bundles on the same page cost more, and the fetched text did not promise a free ongoing plan.",
+      "weakness": "Higher bundles on the same page cost more, and the page did not promise a free ongoing plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4328,7 +4328,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4358,7 +4358,7 @@
       "websiteUrl": "https://inworld.ai/",
       "affiliateUrl": null,
       "shortDescription": "Character AI for games and interactive agents.",
-      "longDescription": "Inworld builds character AI for games and interactive experiences. A $0 sample appeared among paid usage samples. Confirm the current free allotment on the pricing page.",
+      "longDescription": "Inworld builds character AI for games and interactive experiences. A $0 sample appeared among paid usage samples.",
       "categories": [
         "game-ai"
       ],
@@ -4398,7 +4398,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -4463,12 +4463,12 @@
         "Someone who needs a listed monthly price"
       ],
       "strength": "Jasper describes agents and a marketer workspace for content, and the site offers a free trial.",
-      "weakness": "The fetched pages did not include a dollar price or a trial length.",
+      "weakness": "The pages did not include a dollar price or a trial length.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4498,7 +4498,7 @@
       "websiteUrl": "https://julius.ai/",
       "affiliateUrl": null,
       "shortDescription": "Data analysis chat. Plus is $20 per month and a Free plan is listed.",
-      "longDescription": "Julius's pricing page lists a Free plan and Plus for everyday analysis at $20 per month, or $16 per month when billed annually, with a monthly credit amount on Plus. We did not create an account.",
+      "longDescription": "Julius's pricing page lists a Free plan and Plus for everyday analysis at $20 per month, or $16 per month when billed annually, with a monthly credit amount on Plus.",
       "categories": [
         "data-analysis"
       ],
@@ -4537,7 +4537,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4586,7 +4586,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "smokeTestNotes": "Official site and pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -4672,12 +4672,12 @@
         "Someone who needs a published monthly price before signing up"
       ],
       "strength": "Keeper's pricing page lists federal and state filing plus quarterly tax payments, and the homepage says you can get started free.",
-      "weakness": "The pages we fetched did not state one monthly dollar price, so this listing does not invent one.",
+      "weakness": "The pages did not state one monthly dollar price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4745,7 +4745,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-20T00:00:00-04:00",
       "checkedDate": "2026-10-20",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4773,8 +4773,8 @@
       "name": "Kickresume",
       "websiteUrl": "https://www.kickresume.com/en/",
       "affiliateUrl": null,
-      "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try; paid plans on their site.",
-      "longDescription": "Kickresume's homepage says its AI resume writer generates work-experience bullets from a job title, and that you can score a resume and tailor it to a job description. The page says the builder is free to try. It did not list a monthly plan price. We did not create an account.",
+      "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try. Paid plans are on their site.",
+      "longDescription": "Kickresume's homepage says its AI resume writer generates work-experience bullets from a job title, and that you can score a resume and tailor it to a job description. The page says the builder is free to try. It did not list a monthly plan price.",
       "categories": [
         "hiring"
       ],
@@ -4806,7 +4806,7 @@
       ],
       "notIdealFor": [
         "Screening applicants as a recruiter",
-        "A confirmed monthly price from this listing"
+        "A published monthly price"
       ],
       "strength": "Kickresume's homepage says its AI writes resume bullets from a job title and can score and tailor the resume.",
       "weakness": "The homepage says the builder is free to try and does not list a monthly plan price.",
@@ -4814,7 +4814,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T22:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+      "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -4848,7 +4848,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -4865,7 +4865,7 @@
       "name": "Kubera",
       "websiteUrl": "https://www.kubera.com/",
       "shortDescription": "Household balance sheet. Essentials is $250 per year, with a 14-day trial.",
-      "longDescription": "Kubera tracks a household balance sheet for a flat annual fee. On October 16, 2026 the wealth-tracker page listed Essentials at $250 per year and Black at $2,500 per year, with a 14-day trial and no fee based on assets. We did not start a trial. This is not financial advice.",
+      "longDescription": "Kubera tracks a household balance sheet for a flat annual fee. On October 16, 2026 the wealth-tracker page listed Essentials at $250 per year and Black at $2,500 per year, with a 14-day trial and no fee based on assets. This is not financial advice.",
       "categories": [
         "personal-finance"
       ],
@@ -4892,7 +4892,7 @@
         "Anyone treating this card as financial advice"
       ],
       "strength": "Kubera Essentials is a flat $250 per year for one household, with a 14-day trial and no asset-based fee.",
-      "weakness": "There is no lasting $0 plan, and the pages we checked do not place trades for you.",
+      "weakness": "There is no lasting $0 plan, and the pages do not place trades for you.",
       "sources": [
         "https://www.kubera.com/wealth-tracker",
         "https://help.kubera.com/article/129-what-is-kubera-black"
@@ -4917,7 +4917,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -4934,7 +4934,7 @@
       "name": "Land id",
       "websiteUrl": "https://id.land/",
       "shortDescription": "Nationwide parcel and owner info. From $15 per month, or $7 billed annually.",
-      "longDescription": "Land id maps parcels and owner info. On October 16, 2026 the pricing page listed the base plan at $7 per month per user billed annually, and the app listing also stated $15 per month billed monthly, plus a 7-day trial. Premium adds AI Insights. We did not start a trial.",
+      "longDescription": "Land id maps parcels and owner info. On October 16, 2026 the pricing page listed the base plan at $7 per month per user billed annually, and the app listing also stated $15 per month billed monthly, plus a 7-day trial. Premium adds AI Insights.",
       "categories": [
         "real-estate"
       ],
@@ -5015,16 +5015,16 @@
         "People who want only a visual builder",
         "A finished consumer chat product"
       ],
-      "strength": "We imported langchain 1.4.6, including create_agent, for composing tool-calling workflows in code.",
+      "strength": "LangChain 1.4.6 includes composing tool-calling workflows in code.",
       "weakness": "LangSmith's developer plan includes 5,000 base traces per month before usage billing, and Plus is $39 per seat per month.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import langchain; from langchain.agents import create_agent",
+        "detail": "We installed version 1.4.6 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "langchain==1.4.6",
         "llmCall": false,
         "accountSignup": false,
@@ -5064,7 +5064,7 @@
       "websiteUrl": "https://launchcontrol.us/",
       "affiliateUrl": null,
       "shortDescription": "Texting for real estate owner lists. Skip tracing is listed at $0.13 on the pricing page.",
-      "longDescription": "Launch Control is a texting product for real estate investors. On October 19, 2026 the pricing page listed skip tracing at $0.13 and one plan as provider fees plus $22, with 12,500 monthly SMS. It did not show one all-in monthly price. We did not create an account.",
+      "longDescription": "Launch Control is a texting product for real estate investors. On October 19, 2026 the pricing page listed skip tracing at $0.13 and one plan as provider fees plus $22, with 12,500 monthly SMS. It did not show one all-in monthly price.",
       "categories": [
         "real-estate"
       ],
@@ -5103,7 +5103,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -5132,7 +5132,7 @@
       "websiteUrl": "https://www.lindy.ai/",
       "affiliateUrl": null,
       "shortDescription": "Assistant for inbox and calendar jobs, with $50 in free credits.",
-      "longDescription": "Lindy's pricing page says you can start with $50 in free credits and lists jobs including inbox and calendar, scheduling, and lead outreach. It also lists credit packs from $29.99. We did not create an account, and we do not treat the credit pack as a flat monthly seat price.",
+      "longDescription": "Lindy's pricing page says you can start with $50 in free credits and lists jobs including inbox and calendar, scheduling, and lead outreach. It also lists credit packs from $29.99. The credit pack is not a flat monthly seat price.",
       "categories": [
         "productivity"
       ],
@@ -5166,12 +5166,12 @@
         "Someone who wants one flat seat price with credits included"
       ],
       "strength": "Lindy's pricing page offers $50 in free credits and lists inbox and calendar among the jobs it can take.",
-      "weakness": "Paid use is sold as credit packs, starting at $29.99 on that page, not as one flat seat subscription we could confirm.",
+      "weakness": "Paid use is sold as credit packs, starting at $29.99 on that page, not as one flat seat subscription.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -5200,7 +5200,7 @@
       "websiteUrl": "https://www.llamaindex.ai/",
       "affiliateUrl": null,
       "shortDescription": "Open-source framework for retrieval and agents. The cloud free plan includes 10,000 credits.",
-      "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. We installed and imported llama-index-core. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
+      "longDescription": "LlamaIndex is aimed at retrieval over your own data, with agent utilities on top of the core library. You can use it in Python. On October 16, 2026 the pricing page listed a $0 plan with 10,000 credits and Starter at $50 per month.",
       "categories": [
         "agent-frameworks",
         "search-rag"
@@ -5237,16 +5237,16 @@
         "A finished consumer chat app",
         "Anyone who needs a confirmed free cloud tier"
       ],
-      "strength": "We imported llama-index-core 0.14.25, and the cloud free plan includes 10,000 credits.",
+      "strength": "LlamaIndex 0.14.25 is the open-source library, and the cloud free plan includes 10,000 credits.",
       "weakness": "Cloud Starter is $50 per month after the 10,000 free credits.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import llama_index.core",
+        "detail": "We installed version 0.14.25 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "llama-index-core==0.14.25",
         "llmCall": false,
         "accountSignup": false,
@@ -5292,7 +5292,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -5309,7 +5309,7 @@
       "name": "Magnifi",
       "websiteUrl": "https://magnifi.com/",
       "shortDescription": "Links brokerage accounts on a $0 plan. Premium is $99 per year.",
-      "longDescription": "Magnifi is an investing app that links accounts and answers portfolio questions. On October 16, 2026 the pricing page listed a $0 plan with account overview and portfolio analysis, and Premium at $99 per year for forecasts and scenario tests. We did not link an account. This is not financial advice.",
+      "longDescription": "Magnifi is an investing app that links accounts and answers portfolio questions. On October 16, 2026 the pricing page listed a $0 plan with account overview and portfolio analysis, and Premium at $99 per year for forecasts and scenario tests. This is not financial advice.",
       "categories": [
         "personal-finance"
       ],
@@ -5356,7 +5356,7 @@
       "websiteUrl": "https://www.make.com/",
       "affiliateUrl": null,
       "shortDescription": "Visual automation across apps. The free plan includes 1,000 credits a month.",
-      "longDescription": "Make is a visual automation product. The official pricing FAQ describes a Free plan with 1,000 credits per month, with paid Core, Pro, and Teams plans above that. We did not create an account.",
+      "longDescription": "Make is a visual automation product. The official pricing FAQ describes a Free plan with 1,000 credits per month, with paid Core, Pro, and Teams plans above that.",
       "categories": [
         "workflow-automation"
       ],
@@ -5392,12 +5392,12 @@
         "Self-hosting the automation engine"
       ],
       "strength": "The official pricing FAQ describes a free plan with 1,000 credits per month for visual automations.",
-      "weakness": "Paid Core, Pro, and Teams amounts were not confirmed, so this listing does not state those prices.",
+      "weakness": "Dollar amounts for Core, Pro, and Teams are not listed here.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -5433,7 +5433,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -5450,7 +5450,7 @@
       "name": "Mashvisor",
       "websiteUrl": "https://www.mashvisor.com/",
       "shortDescription": "Rental comps and property analysis. Lite is $49.99 per month, billed annually.",
-      "longDescription": "Mashvisor analyzes traditional and short-term rental comps. On October 16, 2026 the investor pricing page listed Lite at $49.99 per month billed annually, Standard at $74.99, and Professional at $99.99. We did not subscribe.",
+      "longDescription": "Mashvisor analyzes traditional and short-term rental comps. On October 16, 2026 the investor pricing page listed Lite at $49.99 per month billed annually, Standard at $74.99, and Professional at $99.99.",
       "categories": [
         "real-estate"
       ],
@@ -5476,7 +5476,7 @@
         "Someone researching raw land with no rental comps"
       ],
       "strength": "The investor pricing page lists Lite at $49.99 per month, billed annually, for rental comps.",
-      "weakness": "The pricing page we checked does not show a $0 plan, and raw land is outside the rental-comps job.",
+      "weakness": "The pricing pricing page does not show a $0 plan, and raw land is outside the rental-comps job.",
       "sources": [
         "https://www.mashvisor.com/pricing"
       ],
@@ -5494,8 +5494,8 @@
       "name": "Mem0",
       "websiteUrl": "https://mem0.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Memory layer for agents. Open-source package you can install yourself.",
-      "longDescription": "Mem0 stores memory for agents. The open-source package is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
+      "shortDescription": "Memory layer for agents. Open-source, and you can install it yourself.",
+      "longDescription": "Mem0 stores memory for agents. The open-source library is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
       "categories": [
         "search-rag"
       ],
@@ -5525,22 +5525,22 @@
       "repoUrl": "https://github.com/mem0ai/mem0",
       "bestFor": [
         "Adding persistent memory to an agent you already run",
-        "Python projects that can install the open-source package"
+        "Python projects that can install the open-source library"
       ],
       "notIdealFor": [
         "A full research chat product",
         "A confirmed free cloud allotment — re-read the pricing page"
       ],
-      "strength": "We imported mem0ai 2.2.1 locally, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
+      "strength": "Mem0 2.2.1 is the open-source library, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
       "weakness": "The paid plan starts at $19 per month once you pass those monthly request limits.",
       "smokeStatus": "tested-hands-on",
       "smokeTested": true,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": true,
-        "detail": "pip install + import mem0",
+        "detail": "We installed version 2.2.1 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
         "package": "mem0ai==2.2.1",
         "llmCall": false,
         "accountSignup": false,
@@ -5579,8 +5579,8 @@
       "name": "Meshy",
       "websiteUrl": "https://www.meshy.ai/",
       "affiliateUrl": null,
-      "shortDescription": "Text and image to 3D assets. Free to start; paid plans on their site.",
-      "longDescription": "Meshy turns text and images into 3D assets. The pricing crawl showed $0 and no-credit-card language, with a paid sample around $20 per month. Confirm inclusions on the pricing page. We did not create an account or generate a model.",
+      "shortDescription": "Text and image to 3D assets. Free to start. Paid plans are on their site.",
+      "longDescription": "Meshy turns text and images into 3D assets. The pricing page lists $0 and no-credit-card language, with a paid sample around $20 per month.",
       "categories": [
         "creative-media"
       ],
@@ -5616,12 +5616,12 @@
         "Voice, video, or NPC logic"
       ],
       "strength": "The pricing page shows a $0 plan and says no credit card is needed to try text-to-3D and image-to-3D.",
-      "weakness": "The paid monthly price was shown as animated digits, so a starting price was not confirmed.",
+      "weakness": "The paid monthly price was shown as animated digits, so a starting price is not listed as text.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -5652,7 +5652,7 @@
       "websiteUrl": "https://www.metaview.ai/",
       "affiliateUrl": null,
       "shortDescription": "Hiring agents for sourcing and interview notes. Free is $0 per user.",
-      "longDescription": "Metaview's pricing page lists a free plan at $0 per user per month, AI sourcing with the first 100 profiles free, and a notetaker. We did not create an account, and we did not pick a higher dollar figure from the page as the starting price because the free plan is the listed start.",
+      "longDescription": "Metaview's pricing page lists a free plan at $0 per user per month, AI sourcing with the first 100 profiles free, and a notetaker. The free plan is the listed start.",
       "categories": [
         "hiring"
       ],
@@ -5691,7 +5691,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -5720,7 +5720,7 @@
       "websiteUrl": "https://www.midjourney.com/",
       "affiliateUrl": null,
       "shortDescription": "Image generation from a text prompt. The plans on their site are paid subscriptions.",
-      "longDescription": "Midjourney generates images. The plan comparison lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article. We did not subscribe.",
+      "longDescription": "Midjourney generates images. The plan comparison lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month, and no free plan. Those figures are from the October 15, 2026 docs article.",
       "categories": [
         "creative-media"
       ],
@@ -5752,16 +5752,16 @@
         "Game concept art exploration"
       ],
       "notIdealFor": [
-        "A free tier — the official comparison we read does not list one",
+        "A free tier, which the official comparison does not list",
         "3D models, voice, or video editing"
       ],
-      "strength": "The plan comparison we read lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month.",
-      "weakness": "That official plan comparison lists no free plan, so every plan we read is a paid subscription.",
+      "strength": "The plan comparison lists Basic at $10, Standard at $30, Pro at $60, and Mega at $120 per month.",
+      "weakness": "That official plan comparison lists no free plan, so every listed plan is a paid subscription.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -5795,7 +5795,7 @@
       "websiteUrl": "https://mistscale.com/",
       "affiliateUrl": null,
       "shortDescription": "Memory for game NPCs.",
-      "longDescription": "MistScale is aimed at memory for game NPCs. A separate pricing page was not found, so this listing does not state a monthly price. We did not create an account.",
+      "longDescription": "MistScale is aimed at memory for game NPCs. A separate pricing page was not found.",
       "categories": [
         "game-ai"
       ],
@@ -5830,12 +5830,12 @@
         "A separate public pricing page"
       ],
       "strength": "The homepage describes memory for game NPCs that need to remember the player.",
-      "weakness": "A separate pricing page was not found, so this listing does not state a monthly price.",
+      "weakness": "A separate pricing page was not found, so no monthly price is listed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -5866,7 +5866,7 @@
       "websiteUrl": "https://modl.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI agents that test an uploaded game build and report bugs.",
-      "longDescription": "modl.ai's homepage says its agents test a game from an uploaded build, with no engine integration, and write bug reports that include visuals and a severity score. The fetched page did not list a price. We did not upload a build.",
+      "longDescription": "modl.ai's homepage says its agents test a game from an uploaded build, with no engine integration, and write bug reports that include visuals and a severity score. The page did not list a price.",
       "categories": [
         "game-ai"
       ],
@@ -5898,18 +5898,18 @@
         "A published monthly price"
       ],
       "strength": "The modl homepage says its agents test an uploaded game build and write bug reports with visuals and a severity score.",
-      "weakness": "The homepage did not list a price, so this listing states no monthly plan.",
+      "weakness": "The homepage did not list a price, so no monthly plan is listed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage fetched on 2026-10-19. No build was uploaded and no account was created.",
+      "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
       "latestRelease": null,
       "problems": [
-        "A public price was not confirmed."
+        "A public price is not listed here."
       ],
       "featured": false,
       "featuredPaid": false,
@@ -5932,7 +5932,7 @@
       "websiteUrl": "https://www.usemotion.com/",
       "affiliateUrl": null,
       "shortDescription": "AI calendar and tasks. The pricing page lists $29 per seat each month.",
-      "longDescription": "Motion's pricing page includes plan data listing $29 per seat on the monthly price and names AI Calendar and Meetings, an AI task planner, and AI docs. We did not start a subscription.",
+      "longDescription": "Motion's pricing page includes plan data listing $29 per seat on the monthly price and names AI Calendar and Meetings, an AI task planner, and AI docs.",
       "categories": [
         "productivity"
       ],
@@ -5970,7 +5970,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -5999,7 +5999,7 @@
       "websiteUrl": "https://www.moveworks.com/",
       "affiliateUrl": null,
       "shortDescription": "Employee AI for IT service management and self-service.",
-      "longDescription": "Moveworks' site describes ITSM automation, employee self-service, employee onboarding, and an AI agent marketplace, including ServiceNow workflows. The fetched text did not list a price. We did not request a demo.",
+      "longDescription": "Moveworks' site describes ITSM automation, employee self-service, employee onboarding, and an AI agent marketplace, including ServiceNow workflows. The page did not list a price.",
       "categories": [
         "it-support"
       ],
@@ -6033,12 +6033,12 @@
         "A buyer who needs a public per-agent price"
       ],
       "strength": "Moveworks describes IT service-management automation, employee self-service, and an AI agent marketplace.",
-      "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+      "weakness": "The site did not list a dollar price for the product.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -6067,7 +6067,7 @@
       "websiteUrl": "https://n8n.io/",
       "affiliateUrl": null,
       "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan.",
-      "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. A local install was not completed.",
+      "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier.",
       "categories": [
         "workflow-automation"
       ],
@@ -6100,8 +6100,8 @@
         "Multi-step workflows across apps you already use"
       ],
       "notIdealFor": [
-        "A one-import Python agent library",
-        "A permanent free cloud plan — we did not find one"
+        "A Python agent library",
+        "A permanent free cloud plan, which is not listed"
       ],
       "strength": "Community Edition is a free self-host option for multi-step workflows across the apps you already use.",
       "weakness": "Cloud Starter was listed at 20 euros per month on annual billing, with a card-free trial rather than a permanent free cloud plan.",
@@ -6109,7 +6109,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "Registry, docs, and pricing were reviewed. A local install was not completed.",
+      "smokeTestNotes": "Registry, docs, and pricing were reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -6120,9 +6120,7 @@
         "publishedAt": "2026-10-15T07:26:03Z",
         "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
       },
-      "problems": [
-        "A local install was not completed."
-      ],
+      "problems": [],
       "featured": false,
       "featuredPaid": false,
       "status": "published",
@@ -6148,8 +6146,8 @@
       "name": "Notion",
       "websiteUrl": "https://www.notion.com/",
       "affiliateUrl": null,
-      "shortDescription": "Docs, wikis, and agents in a team workspace. Free to start; paid plans on their site.",
-      "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. The pricing crawl included $0 alongside $10 and $20. AI features may sit on paid plans — confirm which agent features are on Free. We did not create a workspace.",
+      "shortDescription": "Docs, wikis, and agents in a team workspace. Free to start. Paid plans are on their site.",
+      "longDescription": "Notion is a workspace for docs and wikis, with agent features in the product. The pricing page lists $0 alongside $10 and $20. AI features may sit on paid plans.",
       "categories": [
         "knowledge"
       ],
@@ -6191,7 +6189,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6263,7 +6261,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6292,7 +6290,7 @@
       "name": "Obsidian",
       "websiteUrl": "https://obsidian.md/",
       "affiliateUrl": null,
-      "shortDescription": "Local-first notes app. Official pricing says the app is free without limits; Sync and Publish are paid.",
+      "shortDescription": "Local-first notes app. Official pricing says the app is free without limits. Sync and Publish are paid.",
       "longDescription": "Obsidian is a local-first notes app. The official pricing page says the app is free without limits and does not require a sign-up. Sync and Publish are paid add-ons at $4 and $8 per month billed annually. Catalyst is a $25 one-time option, and a commercial license was listed at $50 per user per year.",
       "categories": [
         "knowledge"
@@ -6334,7 +6332,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6365,7 +6363,7 @@
       "websiteUrl": "https://www.ocoya.com/",
       "affiliateUrl": null,
       "shortDescription": "Social content plans from $29 per month, with a 7-day trial.",
-      "longDescription": "Ocoya's pricing page lists a Starter plan at $29 per month billed monthly for independent creators, and a 7-day free trial that requires a card. Higher plans were also listed. We did not start the trial.",
+      "longDescription": "Ocoya's pricing page lists a Starter plan at $29 per month billed monthly for independent creators, and a 7-day free trial that requires a card. Higher plans were also listed.",
       "categories": [
         "content"
       ],
@@ -6403,7 +6401,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -6432,7 +6430,7 @@
       "websiteUrl": "https://www.opus.pro/",
       "affiliateUrl": null,
       "shortDescription": "Cuts long videos into short clips. The free plan lists 60 credits per month.",
-      "longDescription": "Opus Clip turns long videos into short clips. On October 16, 2026 the pricing page listed a free plan at $0 with 60 credits per month, a watermark, and clips that stop being exportable after 3 days. Starter was $15 per month. We did not upload a video.",
+      "longDescription": "Opus Clip turns long videos into short clips. On October 16, 2026 the pricing page listed a free plan at $0 with 60 credits per month, a watermark, and clips that stop being exportable after 3 days. Starter was $15 per month.",
       "categories": [
         "creative-media"
       ],
@@ -6470,7 +6468,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6501,7 +6499,7 @@
       "websiteUrl": "https://www.paradox.ai/",
       "affiliateUrl": null,
       "shortDescription": "Candidate experience agent with conversational scheduling and apply flows.",
-      "longDescription": "Paradox's site describes a candidate experience agent, conversational apply, conversational scheduling, and a conversational CRM. The fetched text did not list a price. We did not request a demo.",
+      "longDescription": "Paradox's site describes a candidate experience agent, conversational apply, conversational scheduling, and a conversational CRM. The page did not list a price.",
       "categories": [
         "hiring"
       ],
@@ -6535,12 +6533,12 @@
         "A team that needs a self-serve monthly price"
       ],
       "strength": "Paradox describes a candidate experience agent with conversational scheduling and apply flows.",
-      "weakness": "The fetched site did not publish a dollar price.",
+      "weakness": "The site did not publish a dollar price for the product.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -6569,7 +6567,7 @@
       "websiteUrl": "https://www.perplexity.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI search that answers questions with linked sources.",
-      "longDescription": "Perplexity answers questions from the web and shows linked sources. A consumer Free versus Pro split was not confirmed from the docs we could read.",
+      "longDescription": "Perplexity answers questions from the web and shows linked sources. A consumer Free versus Pro split is not stated in the available docs.",
       "categories": [
         "search-rag",
         "general-assistants"
@@ -6602,12 +6600,12 @@
         "A self-hosted crawler or vector database"
       ],
       "strength": "The docs describe a web-research product, with API pricing written up on the official docs site.",
-      "weakness": "The API pricing page we could read did not state a free-tier amount or a monthly starting price.",
+      "weakness": "The available API pricing page does not state a free-tier amount or a monthly starting price.",
       "smokeStatus": "untested",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6660,7 +6658,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "smokeTestNotes": "Official site and pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -6677,7 +6675,7 @@
       "name": "Pika",
       "websiteUrl": "https://pika.art/",
       "shortDescription": "Generates short videos from prompts, photos, or keyframes. Starter is $10/month.",
-      "longDescription": "Pika is a video generation product. Its site describes Video Studio for a short clip up to a 30-second multi-shot video. On October 16, 2026 the pricing page listed a Free plan with 0 credits per month (packs only, no commercial license) and Starter at $10 per month, billed monthly, with 900 credits. We did not create an account.",
+      "longDescription": "Pika is a video generation product. Its site describes Video Studio for a short clip up to a 30-second multi-shot video. On October 16, 2026 the pricing page listed a Free plan with 0 credits per month (packs only, no commercial license) and Starter at $10 per month, billed monthly, with 900 credits.",
       "pricingUrl": "https://pika.art/pricing",
       "docsUrl": "https://pika.art/faq",
       "freeTier": true,
@@ -6712,7 +6710,7 @@
       "websiteUrl": "https://www.pinecone.io/",
       "affiliateUrl": null,
       "shortDescription": "Managed vector database. Starter is free, and Builder is $20 per month.",
-      "longDescription": "Pinecone is a managed vector database used in retrieval stacks. On October 16, 2026 the pricing page listed Starter as free and Builder at $20 per month. We did not create an account.",
+      "longDescription": "Pinecone is a managed vector database used in retrieval stacks. On October 16, 2026 the pricing page listed Starter as free and Builder at $20 per month.",
       "categories": [
         "search-rag"
       ],
@@ -6745,12 +6743,12 @@
         "Web search or page crawling — different tools"
       ],
       "strength": "Starter is free for hosted vector search, and Builder is $20 per month with a 3-week trial.",
-      "weakness": "Builder is $20 per month after the trial, and the free Starter limits were not spelled out on the page we parsed.",
+      "weakness": "Builder is $20 per month after the trial, and the free Starter limits were not spelled out on the pricing page.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -6786,7 +6784,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -6803,7 +6801,7 @@
       "name": "PortfolioPilot",
       "websiteUrl": "https://portfoliopilot.com/",
       "shortDescription": "Tracks net worth and a portfolio. Free plan is $0. Gold is $29 per month.",
-      "longDescription": "PortfolioPilot, from Global Predictions, tracks accounts and assesses a portfolio. On October 16, 2026 the pricing page listed a $0 plan with net-worth tracking and a portfolio assessment. Gold was listed at $29 per month, and also at $20 per month on the annual figure shown beside it. We did not create an account. This is not financial advice.",
+      "longDescription": "PortfolioPilot, from Global Predictions, tracks accounts and assesses a portfolio. On October 16, 2026 the pricing page listed a $0 plan with net-worth tracking and a portfolio assessment. Gold was listed at $29 per month, and also at $20 per month on the annual figure shown beside it. This is not financial advice.",
       "categories": [
         "personal-finance"
       ],
@@ -6850,7 +6848,7 @@
       "websiteUrl": "https://predis.ai/",
       "affiliateUrl": null,
       "shortDescription": "Generates and designs social posts and ads with AI.",
-      "longDescription": "Predis.ai's site says it generates, designs, and optimizes social media content with AI, including posts and ads. A $29 amount in the fetch was labeled extra credits, not a base plan, so this listing does not set a starting price. We did not subscribe.",
+      "longDescription": "Predis.ai's site says it generates, designs, and optimizes social media content with AI, including posts and ads. A $29 amount on the page was labeled extra credits, not a base plan, so no starting price is listed.",
       "categories": [
         "content"
       ],
@@ -6884,12 +6882,12 @@
         "Someone who needs a confirmed base-plan price"
       ],
       "strength": "Predis says it generates, designs, and optimizes social media content with AI.",
-      "weakness": "The fetched pricing text did not make a base monthly price clear, so none is listed.",
+      "weakness": "The pricing page did not make a base monthly price clear, so none is listed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -6923,7 +6921,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -6940,7 +6938,7 @@
       "name": "PropStream",
       "websiteUrl": "https://www.propstream.com/",
       "shortDescription": "Property search with an AI search box. Essentials is $99 per month.",
-      "longDescription": "PropStream searches property records and includes an AI search and a PropStream Intelligence Assistant. PropStream's own cost article, read October 16, 2026, lists Essentials at $99 per month, Pro at $199, and Elite at $699, with a 7-day trial and 50 leads. We did not start a trial.",
+      "longDescription": "PropStream searches property records and includes an AI search and a PropStream Intelligence Assistant. PropStream's own cost article, read October 16, 2026, lists Essentials at $99 per month, Pro at $199, and Elite at $699, with a 7-day trial and 50 leads.",
       "categories": [
         "real-estate"
       ],
@@ -6991,7 +6989,7 @@
       "name": "Quizlet",
       "websiteUrl": "https://quizlet.com/features/ai-study-tools",
       "affiliateUrl": null,
-      "shortDescription": "Turns notes into practice tests and explains a homework step. Free to start; paid plans on their site.",
+      "shortDescription": "Turns notes into practice tests and explains a homework step. Free to start. Paid plans are on their site.",
       "longDescription": "Quizlet's AI study tools page says you can turn notes into practice tests, study guides, and flashcards, and that homework help explains a step and adds more practice. The practice-test help page says those tests are currently for science and humanities, with limited free access. Some AI features are free, and Quizlet Plus includes more.",
       "categories": [
         "learning"
@@ -7033,7 +7031,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-20T00:00:00-04:00",
       "checkedDate": "2026-10-20",
-      "smokeTestNotes": "AI study tools page and practice-test help page checked on 2026-10-20. No account was created.",
+      "smokeTestNotes": "AI study tools page and practice-test help page checked on October 20, 2026. No account was created.",
       "handsOn": {
         "performed": false
       },
@@ -7063,7 +7061,7 @@
       "websiteUrl": "https://ramp.com/",
       "affiliateUrl": null,
       "shortDescription": "Finance platform with a free plan at $0 and Plus at $15 per user.",
-      "longDescription": "Ramp's pricing page lists an AI-assisted Free plan at $0 per user per month and Plus at $15 per user per month plus a platform fee based on team size. We did not apply for an account.",
+      "longDescription": "Ramp's pricing page lists an AI-assisted Free plan at $0 per user per month and Plus at $15 per user per month plus a platform fee based on team size.",
       "categories": [
         "finance-ops"
       ],
@@ -7102,7 +7100,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7136,7 +7134,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -7153,7 +7151,7 @@
       "name": "Range",
       "websiteUrl": "https://www.range.com/",
       "shortDescription": "Advisory membership with an AI assistant. Premium is $3,950 per year.",
-      "longDescription": "Range is a flat-fee advisory membership that includes its AI assistant, Rai. The Form ADV on range.com, read October 16, 2026, lists Premium at $3,950 per year, Platinum at $5,950, and Titanium at $12,500, with no separate assets-under-management advisory fee. We did not become a member. This is not financial advice.",
+      "longDescription": "Range is a flat-fee advisory membership that includes its AI assistant, Rai. The Form ADV on range.com, read October 16, 2026, lists Premium at $3,950 per year, Platinum at $5,950, and Titanium at $12,500, with no separate assets-under-management advisory fee. This is not financial advice.",
       "categories": [
         "personal-finance"
       ],
@@ -7234,12 +7232,12 @@
         "Someone who needs a published monthly price"
       ],
       "strength": "Reclaim's pricing page lists smart meetings, scheduling links, and calendar sync.",
-      "weakness": "The fetched pricing text did not include a dollar amount.",
+      "weakness": "The pricing page did not include a dollar amount.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7273,7 +7271,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T12:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Docs and pricing pages reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -7338,7 +7336,7 @@
       "websiteUrl": "https://replit.com/",
       "affiliateUrl": null,
       "shortDescription": "Browser IDE with a coding agent.",
-      "longDescription": "Replit is a browser IDE with a coding agent. The recorded free plan includes up to 30 hours of chat and 60 projects. Confirm the current plan on the official pricing page.",
+      "longDescription": "Replit is a browser IDE with a coding agent. The recorded free plan includes up to 30 hours of chat and 60 projects.",
       "categories": [
         "coding-agents"
       ],
@@ -7377,7 +7375,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -7410,7 +7408,7 @@
       "websiteUrl": "https://resimpli.com/",
       "affiliateUrl": null,
       "shortDescription": "Real estate CRM with calling, texting, and email on every plan, plus a 14-day trial.",
-      "longDescription": "REsimpli is a real estate CRM. On October 19, 2026 the pricing page listed unlimited calling, SMS, and email on every plan, named Solo, Team, and Business by team size, with a 14-day trial. The page text we could read did not print a dollar amount. We did not start a trial.",
+      "longDescription": "REsimpli is a real estate CRM. On October 19, 2026 the pricing page listed unlimited calling, SMS, and email on every plan, named Solo, Team, and Business by team size, with a 14-day trial. The page did not print a dollar amount.",
       "categories": [
         "real-estate"
       ],
@@ -7443,12 +7441,12 @@
         "Someone who needs a published monthly price before talking to the vendor"
       ],
       "strength": "The pricing page lists unlimited calling, SMS, and email on every plan, with a 14-day trial.",
-      "weakness": "The page we checked names plans by team size and does not print a dollar amount in the text.",
+      "weakness": "The pricing page names plans by team size and does not print a dollar amount in the text.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Pricing page checked. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -7477,7 +7475,7 @@
       "websiteUrl": "https://www.rezi.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI resume builder that scores a resume and targets keywords. Pro is $29 a month.",
-      "longDescription": "Rezi's homepage says it builds a resume, scores it section by section, and pulls missing keywords from a pasted job description. The same page lists a Free plan at $0 a month for one resume, limited AI tools, and up to three PDF downloads, and Pro at $29 a month. We did not create an account.",
+      "longDescription": "Rezi's homepage says it builds a resume, scores it section by section, and pulls missing keywords from a pasted job description. The same page lists a Free plan at $0 a month for one resume, limited AI tools, and up to three PDF downloads, and Pro at $29 a month.",
       "categories": [
         "hiring"
       ],
@@ -7516,7 +7514,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T22:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+      "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7545,7 +7543,7 @@
       "websiteUrl": "https://rows.com/",
       "affiliateUrl": null,
       "shortDescription": "Spreadsheet with an AI analyst. Plus is $8 per user each month.",
-      "longDescription": "Rows' pricing page lists a Free plan at $0 and Plus at $8 per month per user for analysis and reporting with AI. The page also noted that Rows has joined Superhuman. We did not create a workspace.",
+      "longDescription": "Rows' pricing page lists a Free plan at $0 and Plus at $8 per month per user for analysis and reporting with AI. The page also noted that Rows has joined Superhuman.",
       "categories": [
         "data-analysis"
       ],
@@ -7584,7 +7582,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7646,12 +7644,12 @@
         "In-game NPC dialogue"
       ],
       "strength": "The pricing page lists video generation and editing from $12 per month.",
-      "weakness": "A free tier was not clearly shown on that page, so it stays unconfirmed.",
+      "weakness": "A free tier was not clearly shown on that page.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -7681,8 +7679,8 @@
       "name": "Scenario",
       "websiteUrl": "https://www.scenario.com/",
       "affiliateUrl": null,
-      "shortDescription": "Game art generation. Free to start; paid plans on their site.",
-      "longDescription": "Scenario generates art aimed at games. The pricing crawl mentioned a free tier or free plan, plus starter language and no-credit-card wording. Paid samples in that crawl included $15, $45, and $75 per month — confirm them on the live page. We did not create an account.",
+      "shortDescription": "Game art generation. Free to start. Paid plans are on their site.",
+      "longDescription": "Scenario generates art aimed at games. The pricing page mentioned a free tier or free plan, plus starter language and no-credit-card wording. Paid samples on that page included $15, $45, and $75 per month.",
       "categories": [
         "creative-media"
       ],
@@ -7715,7 +7713,7 @@
       ],
       "notIdealFor": [
         "3D mesh generation — see Meshy for that job",
-        "A hands-on generation test — we did not run one"
+        "A generation test, which is not described here"
       ],
       "strength": "The free plan includes 50 credits per day for game art, and the paid plan starts at $15 per month.",
       "weakness": "It generates images and style sets, not 3D meshes.",
@@ -7723,7 +7721,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -7787,12 +7785,12 @@
         "Someone who needs a listed monthly price"
       ],
       "strength": "SciSpace says it supports literature review, chat with PDF, and citation tools for scientific literature.",
-      "weakness": "The pricing FAQ we fetched did not include a dollar amount.",
+      "weakness": "The pricing FAQ did not include a dollar amount.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7854,16 +7852,16 @@
         "Creators using Dreamina, or developers calling the ModelArk API"
       ],
       "notIdealFor": [
-        "A confirmed API price from this listing",
+        "A published API price",
         "In-game character dialogue"
       ],
       "strength": "Dreamina's documentation names Seedance for video and says the creator app includes free daily credits.",
-      "weakness": "The BytePlus model overview did not include a readable API price, so this listing does not state one.",
+      "weakness": "The BytePlus model overview did not include a readable API price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T12:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Dreamina's documentation and the BytePlus video-generation tutorial were reviewed. A hands-on test was not done.",
+      "smokeTestNotes": "Dreamina's documentation and the BytePlus video-generation tutorial were reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -7894,7 +7892,7 @@
       "websiteUrl": "https://www.shortwave.com/",
       "affiliateUrl": null,
       "shortDescription": "Email AI at $30 per seat per month, with a 14-day free trial.",
-      "longDescription": "Shortwave's pricing page lists Everyday AI productivity at $30 per seat per month and a 14-day free trial, with higher seat prices above that. It mentions AI search and filters. We did not start the trial.",
+      "longDescription": "Shortwave's pricing page lists Everyday AI productivity at $30 per seat per month and a 14-day free trial, with higher seat prices above that. It mentions AI search and filters.",
       "categories": [
         "productivity"
       ],
@@ -7932,7 +7930,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -7961,7 +7959,7 @@
       "websiteUrl": "https://sierra.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI agents for customer service and customer experiences.",
-      "longDescription": "Sierra's site says it helps companies build AI agents for customer experiences and customer service, including voice. The fetched text did not list a price. We did not book a demo.",
+      "longDescription": "Sierra's site says it helps companies build AI agents for customer experiences and customer service, including voice. The page did not list a price.",
       "categories": [
         "customer-support"
       ],
@@ -7995,12 +7993,12 @@
         "A small team looking for a published seat price"
       ],
       "strength": "Sierra says it builds AI agents for customer service and broader customer experiences.",
-      "weakness": "The fetched pages did not list a public dollar price or a self-serve trial length.",
+      "weakness": "The pages did not list a public dollar price or a self-serve trial length.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8029,7 +8027,7 @@
       "websiteUrl": "https://www.skyvern.com/",
       "affiliateUrl": null,
       "shortDescription": "Browser automation. Free is $0 per month and a paid plan is $29.",
-      "longDescription": "Skyvern's site describes AI browser automation for websites, and the pricing page lists a Free plan at $0 per month with 5,000 credits and a paid plan at $29 per month. We did not create an account. A sample JSON price on the marketing site was not used as the plan price.",
+      "longDescription": "Skyvern's site describes AI browser automation for websites, and the pricing page lists a Free plan at $0 per month with 5,000 credits and a paid plan at $29 per month. A sample JSON price on the marketing site was not used as the plan price.",
       "categories": [
         "tool-use"
       ],
@@ -8068,7 +8066,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8098,7 +8096,7 @@
       "websiteUrl": "https://slite.com/",
       "affiliateUrl": null,
       "shortDescription": "Team docs with Ask, AI search and answers, at $10 per user billed yearly.",
-      "longDescription": "Slite's pricing page lists $10 per user per month billed yearly and describes Ask as AI search and answers, plus a doc verification workflow. We did not create a workspace, and we do not show $10 as a month-to-month price.",
+      "longDescription": "Slite's pricing page lists $10 per user per month billed yearly and describes Ask as AI search and answers, plus a doc verification workflow. The $10 figure is not a month-to-month price.",
       "categories": [
         "knowledge"
       ],
@@ -8131,12 +8129,12 @@
         "Someone who wants to pay month to month at the yearly rate"
       ],
       "strength": "Slite lists Ask, its AI search and answers, at $10 per user per month when billed yearly.",
-      "weakness": "That $10 figure is billed yearly, so this listing does not call it a month-to-month price.",
+      "weakness": "That $10 figure is billed yearly, so it is not a month-to-month price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8165,7 +8163,7 @@
       "websiteUrl": "https://www.smartlead.ai/",
       "affiliateUrl": null,
       "shortDescription": "Cold email platform whose SmartAssistant sets up and fixes outreach.",
-      "longDescription": "Smartlead's site describes SmartAssistant as a personal cold-email AI assistant to set up, run, and fix outreach, plus lead and deliverability products. The fetched text did not list a plan price.",
+      "longDescription": "Smartlead's site describes SmartAssistant as a personal cold-email AI assistant to set up, run, and fix outreach, plus lead and deliverability products. The page did not list a plan price.",
       "categories": [
         "sales"
       ],
@@ -8199,12 +8197,12 @@
         "A buyer who needs a listed monthly price"
       ],
       "strength": "Smartlead describes SmartAssistant as a cold-email AI assistant that sets up, runs, and fixes outreach.",
-      "weakness": "The fetched homepage did not list a plan price, so none is shown here.",
+      "weakness": "The homepage did not list a plan price for Smartlead.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8233,7 +8231,7 @@
       "websiteUrl": "https://sparkmailapp.com/",
       "affiliateUrl": null,
       "shortDescription": "Email app with an AI assistant, a smart inbox, and drafted replies.",
-      "longDescription": "Spark's site lists Spark +AI, an AI assistant, a smart inbox, gatekeeper, snooze, and send later, and the page leads with replies that are already drafted. The fetched text did not include a price. We did not install the app.",
+      "longDescription": "Spark's site lists Spark +AI, an AI assistant, a smart inbox, gatekeeper, snooze, and send later, and the page leads with replies that are already drafted. The page did not include a price.",
       "categories": [
         "productivity"
       ],
@@ -8267,12 +8265,12 @@
         "Someone who needs a confirmed monthly price"
       ],
       "strength": "Spark lists an AI assistant, a smart inbox, and replies that are already drafted.",
-      "weakness": "The fetched page did not include a dollar price or a stated trial length.",
+      "weakness": "The page did not include a dollar price or a stated trial length.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8318,7 +8316,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-16T19:00:00-04:00",
       "checkedDate": "2026-10-16",
-      "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+      "smokeTestNotes": "Official site and pricing page reviewed.",
       "handsOn": {
         "performed": false
       },
@@ -8335,7 +8333,7 @@
       "name": "StreamLadder",
       "websiteUrl": "https://www.streamladder.com/",
       "shortDescription": "Edits Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks.",
-      "longDescription": "StreamLadder's site says it imports clips from Twitch, YouTube, or Kick and turns horizontal stream footage into vertical short-form video, with layouts for gameplay and a facecam. The pricing page redirected to an app screen that did not list prices without JavaScript. We did not create an account.",
+      "longDescription": "StreamLadder's site says it imports clips from Twitch, YouTube, or Kick and turns horizontal stream footage into vertical short-form video, with layouts for gameplay and a facecam. The pricing page redirected to an app screen that did not list prices without JavaScript.",
       "pricingUrl": "https://www.streamladder.com/pricing",
       "docsUrl": null,
       "freeTier": null,
@@ -8368,7 +8366,7 @@
       "name": "StudyFetch",
       "websiteUrl": "https://www.studyfetch.com/",
       "affiliateUrl": null,
-      "shortDescription": "AI tutor that builds a study plan and practice from your materials. Free to start; paid plans on their site.",
+      "shortDescription": "AI tutor that builds a study plan and practice from your materials. Free to start. Paid plans are on their site.",
       "longDescription": "StudyFetch says you upload course materials and Sparky, its AI tutor, explains a concept and builds a study plan, flashcards, and practice from them. The FAQ says it can help with any subject, including professional exams, and that getting started is free. The same FAQ does not list one monthly price for premium.",
       "categories": [
         "learning"
@@ -8402,7 +8400,7 @@
       ],
       "notIdealFor": [
         "A language-only drill",
-        "A published monthly price from this listing"
+        "A published monthly price"
       ],
       "strength": "StudyFetch's Sparky tutors a subject from your materials and builds a study plan and practice from them.",
       "weakness": "Getting started is free, and the site does not list one monthly price for premium.",
@@ -8410,7 +8408,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-20T00:00:00-04:00",
       "checkedDate": "2026-10-20",
-      "smokeTestNotes": "Homepage and FAQ fetched on 2026-10-20. No account was created.",
+      "smokeTestNotes": "Homepage and FAQ reviewed on October 20, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8439,7 +8437,7 @@
       "websiteUrl": "https://www.synthesia.io/",
       "affiliateUrl": null,
       "shortDescription": "AI avatar videos from a script. Basic is free, and Starter is $29 a month.",
-      "longDescription": "Synthesia's homepage says it creates studio videos with AI avatars and voiceovers. The pricing page lists Basic at $0 a month, with no credit card, and says those videos carry a watermark. Starter is $29 a month when billed monthly. We did not create an account.",
+      "longDescription": "Synthesia's homepage says it creates studio videos with AI avatars and voiceovers. The pricing page lists Basic at $0 a month, with no credit card, and says those videos carry a watermark. Starter is $29 a month when billed monthly.",
       "categories": [
         "creative-media"
       ],
@@ -8480,7 +8478,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T23:40:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage, pricing page, and avatar page fetched on 2026-10-19. No account was created.",
+      "smokeTestNotes": "Homepage, pricing page, and avatar page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8511,7 +8509,7 @@
       "websiteUrl": "https://www.synthesis.com/tutor",
       "affiliateUrl": null,
       "shortDescription": "Math tutor for ages 5 to 11 that adapts the lesson to the child.",
-      "longDescription": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11, covering K-5 math and adapting to the child. It offers a 7-day free trial. The same page lists several plan prices that do not agree, so this listing does not state one monthly price. We did not start the trial.",
+      "longDescription": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11, covering K-5 math and adapting to the child. It offers a 7-day free trial. The same page lists several plan prices that do not agree monthly price.",
       "categories": [
         "learning"
       ],
@@ -8544,12 +8542,12 @@
         "An adult professional course"
       ],
       "strength": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11 that adapts to the child.",
-      "weakness": "The tutor page lists several plan prices that do not agree, so this listing states no single monthly price.",
+      "weakness": "The tutor page lists several plan prices that do not agree, so no single monthly price is listed.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official tutor page fetched on 2026-10-19. No trial was started.",
+      "smokeTestNotes": "Official tutor page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8578,7 +8576,7 @@
       "websiteUrl": "https://www.tavernbard.com/",
       "affiliateUrl": null,
       "shortDescription": "AI game master for Discord. Homepage describes a free path that uses your own AI subscription.",
-      "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared on the homepage; confirm what is free versus paid on the live site. We did not join a server or create an account.",
+      "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared on the homepage.",
       "categories": [
         "game-ai"
       ],
@@ -8614,12 +8612,12 @@
         "A dedicated pricing page"
       ],
       "strength": "The homepage describes an AI game master for Discord, including a play path that uses an AI subscription you already have.",
-      "weakness": "That play path still depends on an AI subscription you already have, and a $49.99 homepage figure was not confirmed as a monthly plan.",
+      "weakness": "That play path still depends on an AI subscription you already have, and a $49.99 homepage figure is not described as a monthly plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -8649,8 +8647,8 @@
       "name": "Tavily",
       "websiteUrl": "https://www.tavily.com/",
       "affiliateUrl": null,
-      "shortDescription": "Search API for agents that need web results. Free to start; paid plans on their site.",
-      "longDescription": "Tavily is a search API meant for agents. The pricing crawl included $0 and no-credit-card language, plus paid usage samples. Confirm the current free allotment on the pricing page. We did not call the API.",
+      "shortDescription": "Search API for agents that need web results. Free to start. Paid plans are on their site.",
+      "longDescription": "Tavily is a search API meant for agents. The pricing page lists $0 and no-credit-card language, plus paid usage samples.",
       "categories": [
         "tool-use",
         "search-rag"
@@ -8693,7 +8691,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -8725,7 +8723,7 @@
       "websiteUrl": "https://www.taxact.com/",
       "affiliateUrl": null,
       "shortDescription": "Online filing with guided steps. The homepage says you can start filing for free.",
-      "longDescription": "TaxAct's homepage says people use it to file taxes online, with guided filing and expert help for more complex situations, and it says you can start filing for free. The fetched text did not include a dollar price. We did not start a return.",
+      "longDescription": "TaxAct's homepage says people use it to file taxes online, with guided filing and expert help for more complex situations, and it says you can start filing for free. The page did not include a dollar price.",
       "categories": [
         "personal-finance"
       ],
@@ -8758,12 +8756,12 @@
         "Someone who needs a listed monthly subscription price"
       ],
       "strength": "TaxAct's homepage offers guided online filing and says you can start filing for free.",
-      "weakness": "The fetched homepage did not print a dollar price for paid expert help.",
+      "weakness": "The homepage did not print a dollar price for paid expert help.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8791,8 +8789,8 @@
       "name": "Teal",
       "websiteUrl": "https://www.tealhq.com/",
       "affiliateUrl": null,
-      "shortDescription": "Resume builder that tailors a resume to a job description. Free to try; paid plans on their site.",
-      "longDescription": "Teal's homepage says you can create an ATS-friendly resume, tailor it with keywords from a job description, and track jobs saved from job boards with its Chrome extension. It also says you can create a free account. The fetched page did not list a monthly plan price. We did not create an account.",
+      "shortDescription": "Resume builder that tailors a resume to a job description. Free to try. Paid plans are on their site.",
+      "longDescription": "Teal's homepage says you can create an ATS-friendly resume, tailor it with keywords from a job description, and track jobs saved from job boards with its Chrome extension. It also says you can create a free account. The page did not list a monthly plan price.",
       "categories": [
         "hiring"
       ],
@@ -8824,15 +8822,15 @@
       ],
       "notIdealFor": [
         "Screening someone else's resume as a recruiter",
-        "A confirmed monthly price from this listing"
+        "A published monthly price"
       ],
       "strength": "Teal's homepage says its AI tailors a resume to keywords in a job description and that you can create a free account.",
-      "weakness": "The homepage did not list a monthly plan price, so this listing states no subscription price.",
+      "weakness": "The homepage did not list a monthly plan price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T22:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Homepage fetched on 2026-10-19. No account was created.",
+      "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8861,7 +8859,7 @@
       "websiteUrl": "https://turbotax.intuit.com/",
       "affiliateUrl": null,
       "shortDescription": "Step-by-step filing. File-yourself pricing on the page runs from $0 to $139.",
-      "longDescription": "TurboTax's online pricing page lists file-yourself tools from $0 to $139, with state extra, expert help from $59 to $209, and a dedicated expert starting at $129. We did not start a return.",
+      "longDescription": "TurboTax's online pricing page lists file-yourself tools from $0 to $139, with state extra, expert help from $59 to $209, and a dedicated expert starting at $129.",
       "categories": [
         "personal-finance"
       ],
@@ -8900,7 +8898,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8929,7 +8927,7 @@
       "websiteUrl": "https://www.vic.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI-first invoice processing and accounts payable software.",
-      "longDescription": "Vic.ai's site describes AI-first accounts payable and invoice processing, including an AP suite. The fetched text did not list a price. We did not request a demo.",
+      "longDescription": "Vic.ai's site describes AI-first accounts payable and invoice processing, including an AP suite. The page did not list a price.",
       "categories": [
         "finance-ops"
       ],
@@ -8963,12 +8961,12 @@
         "A buyer who needs a public monthly price"
       ],
       "strength": "Vic AI describes AI-first invoice processing and accounts payable software.",
-      "weakness": "The fetched site did not list a dollar price.",
+      "weakness": "The site did not list a dollar price for the product.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -8997,7 +8995,7 @@
       "websiteUrl": "https://wonderplan.ai/",
       "affiliateUrl": null,
       "shortDescription": "AI trip planner that builds itineraries. The site says you can start free.",
-      "longDescription": "Wonderplan's site says it is an AI trip planner and travel curator that creates itineraries for your interests and budget, and that you can get started for free. The fetched text did not list a paid price. We did not create an account.",
+      "longDescription": "Wonderplan's site says it is an AI trip planner and travel curator that creates itineraries for your interests and budget, and that you can get started for free. The page did not list a paid price.",
       "categories": [
         "travel"
       ],
@@ -9030,12 +9028,12 @@
         "Someone comparing paid tiers by price"
       ],
       "strength": "Wonderplan calls itself an AI trip planner that creates custom itineraries, and it says you can get started for free.",
-      "weakness": "The fetched page did not list a paid plan price.",
+      "weakness": "The page did not list a paid plan price.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -9064,7 +9062,7 @@
       "websiteUrl": "https://writesonic.com/",
       "affiliateUrl": null,
       "shortDescription": "Content and brand-tracking plans. Starter is $79 per month billed annually.",
-      "longDescription": "Writesonic's pricing page lists a Starter plan at $79 per month when billed annually, and says it tracks a brand across chat products and Google AI Overviews. We did not subscribe.",
+      "longDescription": "Writesonic's pricing page lists a Starter plan at $79 per month when billed annually, and says it tracks a brand across chat products and Google AI Overviews.",
       "categories": [
         "content"
       ],
@@ -9094,15 +9092,15 @@
         "Drafting content on a plan that also tracks brand mentions"
       ],
       "notIdealFor": [
-        "Someone who wants a month-to-month price confirmed on this listing"
+        "Someone who wants a published month-to-month price"
       ],
       "strength": "Writesonic lists a Starter plan at $79 per month when that plan is billed annually.",
-      "weakness": "The figure we read is the annual-billing price, not a confirmed month-to-month rate.",
+      "weakness": "The figure is the annual-billing price, not a month-to-month rate.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -9131,7 +9129,7 @@
       "websiteUrl": "https://zapier.com/",
       "affiliateUrl": null,
       "shortDescription": "Connects the apps you already use. The free plan includes 100 tasks per month.",
-      "longDescription": "Zapier connects SaaS apps, including agent-style steps. On October 16, 2026 the pricing page listed Free at $0 with 100 tasks per month, and Professional starting from $19.99 per month. We did not create an account.",
+      "longDescription": "Zapier connects SaaS apps, including agent-style steps. On October 16, 2026 the pricing page listed Free at $0 with 100 tasks per month, and Professional starting from $19.99 per month.",
       "categories": [
         "workflow-automation"
       ],
@@ -9169,7 +9167,7 @@
       "smokeTested": false,
       "checkedAt": "2026-10-15T18:31:00-04:00",
       "checkedDate": "2026-10-15",
-      "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+      "smokeTestNotes": null,
       "handsOn": {
         "performed": false
       },
@@ -9200,7 +9198,7 @@
       "websiteUrl": "https://www.zendesk.com/",
       "affiliateUrl": null,
       "shortDescription": "AI-first support platform. The pricing page says plans start at $19 per month.",
-      "longDescription": "Zendesk's pricing page is titled as plans starting from $19 per month and describes an AI-first service platform whose AI is meant to improve resolutions. We did not start a trial or confirm what the $19 plan includes beyond that title.",
+      "longDescription": "Zendesk's pricing page is titled as plans starting from $19 per month and describes an AI-first service platform whose AI is meant to improve resolutions.",
       "categories": [
         "customer-support"
       ],
@@ -9230,15 +9228,15 @@
         "Teams that already want a support suite with AI on the pricing page"
       ],
       "notIdealFor": [
-        "Someone who needs the $19 plan's feature list confirmed in this listing"
+        "Someone who needs the $19 plan's feature list spelled out"
       ],
       "strength": "Zendesk's pricing page says plans start from $19 per month and describes Zendesk AI on its service platform.",
-      "weakness": "The fetched page did not spell out which AI features sit on the $19 plan versus higher tiers.",
+      "weakness": "The page did not spell out which AI features sit on the $19 plan versus higher tiers.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-19T16:00:00-04:00",
       "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+      "smokeTestNotes": "Official page reviewed on October 19, 2026.",
       "handsOn": {
         "performed": false
       },

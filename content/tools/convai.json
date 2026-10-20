@@ -5,7 +5,7 @@
   "websiteUrl": "https://convai.com/",
   "affiliateUrl": null,
   "shortDescription": "Conversational characters for games.",
-  "longDescription": "Convai makes conversational characters for games. A public price or free tier was not confirmed from the pricing page. We did not create an account.",
+  "longDescription": "Convai makes conversational characters for games. A public price or free tier is not listed here.",
   "categories": [
     "game-ai"
   ],
@@ -38,18 +38,18 @@
     "Workflow automation outside a game"
   ],
   "strength": "The site describes conversational characters that talk with the player inside a game.",
-  "weakness": "A public price or free tier was not confirmed, so this listing does not state a monthly price.",
+  "weakness": "A public price or free tier is not listed here.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },
   "latestRelease": null,
   "problems": [
-    "A public price or free tier was not confirmed from the pricing page."
+    "A public price or free tier is not listed here."
   ],
   "featured": false,
   "featuredPaid": false,

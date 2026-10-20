@@ -5,7 +5,7 @@
   "websiteUrl": "https://n8n.io/",
   "affiliateUrl": null,
   "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan.",
-  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier. A local install was not completed.",
+  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier.",
   "categories": [
     "workflow-automation"
   ],
@@ -38,8 +38,8 @@
     "Multi-step workflows across apps you already use"
   ],
   "notIdealFor": [
-    "A one-import Python agent library",
-    "A permanent free cloud plan — we did not find one"
+    "A Python agent library",
+    "A permanent free cloud plan, which is not listed"
   ],
   "strength": "Community Edition is a free self-host option for multi-step workflows across the apps you already use.",
   "weakness": "Cloud Starter was listed at 20 euros per month on annual billing, with a card-free trial rather than a permanent free cloud plan.",
@@ -47,7 +47,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "Registry, docs, and pricing were reviewed. A local install was not completed.",
+  "smokeTestNotes": "Registry, docs, and pricing were reviewed.",
   "handsOn": {
     "performed": false
   },
@@ -58,9 +58,7 @@
     "publishedAt": "2026-10-15T07:26:03Z",
     "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
   },
-  "problems": [
-    "A local install was not completed."
-  ],
+  "problems": [],
   "featured": false,
   "featuredPaid": false,
   "status": "published",

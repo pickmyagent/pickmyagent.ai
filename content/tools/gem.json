@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.gem.com/",
   "affiliateUrl": null,
   "shortDescription": "Recruiting platform to source, review, hire, and report with AI.",
-  "longDescription": "Gem's homepage says it gives talent teams AI and data to source, review, hire, and report in one place. The fetched text did not list a price. We did not book a demo.",
+  "longDescription": "Gem's homepage says it gives talent teams AI and data to source, review, hire, and report in one place. The page did not list a price.",
   "categories": [
     "hiring"
   ],
@@ -39,12 +39,12 @@
     "A buyer who needs a public seat price"
   ],
   "strength": "Gem says teams can source, review, hire, and report with its AI and data.",
-  "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+  "weakness": "The homepage did not list a dollar price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

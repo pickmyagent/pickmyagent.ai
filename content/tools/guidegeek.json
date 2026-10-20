@@ -5,7 +5,7 @@
   "websiteUrl": "https://guidegeek.com/",
   "affiliateUrl": null,
   "shortDescription": "AI trip planner for flights, stays, restaurants, and experiences.",
-  "longDescription": "GuideGeek's homepage says you can plan trips in minutes with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI. The fetched text did not list a price. We did not start a trip.",
+  "longDescription": "GuideGeek's homepage says you can plan trips in minutes with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI. The page did not list a price.",
   "categories": [
     "travel"
   ],
@@ -38,12 +38,12 @@
     "Someone who needs a published subscription price"
   ],
   "strength": "GuideGeek says it plans trips with real-time info for flights, stays, restaurants, and experiences, and that it is built with AI.",
-  "weakness": "The fetched homepage did not list a dollar price, so this listing does not invent one.",
+  "weakness": "The homepage did not list a dollar price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

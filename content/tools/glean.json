@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.glean.com/",
   "affiliateUrl": null,
   "shortDescription": "Enterprise search across company context, with 250+ connectors.",
-  "longDescription": "Glean's site describes enterprise search, grounding AI in company context, and more than 250 connectors, plus agents. The fetched text did not list a price. We did not request a demo.",
+  "longDescription": "Glean's site describes enterprise search, grounding AI in company context, and more than 250 connectors, plus agents. The page did not list a price.",
   "categories": [
     "knowledge"
   ],
@@ -39,12 +39,12 @@
     "A personal notes app with a public free plan"
   ],
   "strength": "Glean describes enterprise search over company context and says it offers more than 250 connectors.",
-  "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+  "weakness": "The site did not list a dollar price for the product.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

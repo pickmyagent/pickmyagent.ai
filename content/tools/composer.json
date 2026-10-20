@@ -10,7 +10,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-16T12:00:00-04:00",
   "checkedDate": "2026-10-16",
-  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Docs and pricing pages reviewed.",
   "handsOn": {
     "performed": false
   },
@@ -27,7 +27,7 @@
   "name": "Composer",
   "websiteUrl": "https://www.composer.trade/",
   "shortDescription": "Automates a trading strategy. Starter is $0. Advanced is $10 per month.",
-  "longDescription": "Composer lets you build and automate trading strategies. On October 16, 2026 the pricing page listed Starter at $0, including one automated strategy, and Advanced at $10 per month. Brokerage services are through a registered broker-dealer. We did not open an account. This is not financial advice.",
+  "longDescription": "Composer lets you build and automate trading strategies. On October 16, 2026 the pricing page listed Starter at $0, including one automated strategy, and Advanced at $10 per month. Brokerage services are through a registered broker-dealer. This is not financial advice.",
   "categories": [
     "personal-finance"
   ],

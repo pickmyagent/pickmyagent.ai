@@ -17,12 +17,12 @@
   "openSource": false,
   "repoUrl": null,
   "strength": "It connects a Twitch, YouTube, or Kick channel and returns vertical highlight clips for Shorts, Reels, and TikTok.",
-  "weakness": "The pricing path we opened redirected to the homepage and did not list a monthly price.",
+  "weakness": "The pricing path redirected to the homepage and did not list a monthly price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",
   "checkedDate": "2026-10-16",
-  "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+  "smokeTestNotes": "Official site and pricing page reviewed.",
   "handsOn": {
     "performed": false
   },
@@ -39,7 +39,7 @@
   "name": "Eklipse",
   "websiteUrl": "https://eklipse.gg/",
   "shortDescription": "Finds highlight clips from Twitch, YouTube, and Kick streams and exports them vertical.",
-  "longDescription": "Eklipse says it connects a Twitch, YouTube, or Kick channel, watches the saved VOD, and returns highlight clips sized for TikTok, Reels, and Shorts. The pricing path we opened redirected to the homepage and did not list a monthly price. We did not connect an account.",
+  "longDescription": "Eklipse says it connects a Twitch, YouTube, or Kick channel, watches the saved VOD, and returns highlight clips sized for TikTok, Reels, and Shorts. The pricing path redirected to the homepage and did not list a monthly price.",
   "pricingUrl": "https://eklipse.gg/pricing",
   "docsUrl": "https://eklipse.gg/help/clip-twitch-vod-after-stream/",
   "freeTier": null,

@@ -5,7 +5,7 @@
   "websiteUrl": "https://continue.dev/",
   "affiliateUrl": null,
   "shortDescription": "Open-source coding agent and IDE extension.",
-  "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. There is no separate public price grid in this listing, and the open-source extension is the free path we could confirm.",
+  "longDescription": "Continue is an open-source coding agent that runs as an IDE extension. No separate public price grid is listed here, and the open-source extension is the free path.",
   "categories": [
     "coding-agents"
   ],
@@ -40,12 +40,12 @@
     "A confirmed cloud plan with a public price grid"
   ],
   "strength": "Continue is an open-source coding agent you install in the IDE you already use.",
-  "weakness": "A public price grid was not confirmed, so this listing does not state a monthly price.",
+  "weakness": "No public monthly price is listed for Continue.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

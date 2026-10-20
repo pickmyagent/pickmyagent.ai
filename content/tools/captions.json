@@ -25,7 +25,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",
   "checkedDate": "2026-10-16",
-  "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+  "smokeTestNotes": "Official site and pricing page reviewed.",
   "handsOn": {
     "performed": false
   },
@@ -42,7 +42,7 @@
   "name": "Captions",
   "websiteUrl": "https://captions.ai/",
   "shortDescription": "AI video editor and caption tool. The paid Max plan is listed at $24.99/month.",
-  "longDescription": "Captions is an AI video editor that adds captions and can edit uploaded footage. On October 16, 2026 its pricing page said a free version includes basic tools such as trimming, transitions, and some media library assets. The Max plan was listed at $24.99 per month. We did not create an account.",
+  "longDescription": "Captions is an AI video editor that adds captions and can edit uploaded footage. On October 16, 2026 its pricing page said a free version includes basic tools such as trimming, transitions, and some media library assets. The Max plan was listed at $24.99 per month.",
   "pricingUrl": "https://captions.ai/pricing",
   "docsUrl": "https://captions.ai/help/docs/captions/add-captions",
   "freeTier": true,

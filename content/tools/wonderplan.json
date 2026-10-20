@@ -5,7 +5,7 @@
   "websiteUrl": "https://wonderplan.ai/",
   "affiliateUrl": null,
   "shortDescription": "AI trip planner that builds itineraries. The site says you can start free.",
-  "longDescription": "Wonderplan's site says it is an AI trip planner and travel curator that creates itineraries for your interests and budget, and that you can get started for free. The fetched text did not list a paid price. We did not create an account.",
+  "longDescription": "Wonderplan's site says it is an AI trip planner and travel curator that creates itineraries for your interests and budget, and that you can get started for free. The page did not list a paid price.",
   "categories": [
     "travel"
   ],
@@ -38,12 +38,12 @@
     "Someone comparing paid tiers by price"
   ],
   "strength": "Wonderplan calls itself an AI trip planner that creates custom itineraries, and it says you can get started for free.",
-  "weakness": "The fetched page did not list a paid plan price.",
+  "weakness": "The page did not list a paid plan price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

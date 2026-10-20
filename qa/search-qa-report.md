@@ -496,8 +496,8 @@
 - Cards:
   - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
   - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
-  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
   - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a support ticket about a refund or an order into a reply a person still approves.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of order facts to confirm before answering a customer.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks ticket status, the order, and who replies next.
@@ -560,8 +560,8 @@
 - Cards:
   - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
   - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
-  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
   - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a support ticket about a refund or an order into a reply a person still approves.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of order facts to confirm before answering a customer.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks ticket status, the order, and who replies next.
@@ -2277,7 +2277,7 @@
   - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
   - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
   - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
-  - Bitpart — Specialist · Docs checked — Bitpart supplies an engine and SDKs for a character that talks in a game.
+  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of character voice, forbidden topics, and sample lines.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of NPC lines, the trigger, and whether the game may say them.
@@ -2328,7 +2328,7 @@
   - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
   - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
   - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
-  - Bitpart — Specialist · Docs checked — Bitpart supplies an engine and SDKs for a character that talks in a game.
+  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of character voice, forbidden topics, and sample lines.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of NPC lines, the trigger, and whether the game may say them.
@@ -2713,8 +2713,8 @@
 - Cards:
   - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
   - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
-  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
   - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a support ticket about a refund or an order into a reply a person still approves.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of order facts to confirm before answering a customer.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks ticket status, the order, and who replies next.
@@ -3264,8 +3264,8 @@
 - Domain: video-generation
 - Cards:
   - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
-  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
   - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
   - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a shot list, name the camera move, and draft the prompt you paste into a video app.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of shot, camera move, and the prompt you still write.

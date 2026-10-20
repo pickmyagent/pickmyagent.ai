@@ -4,8 +4,8 @@
   "name": "Mem0",
   "websiteUrl": "https://mem0.ai/",
   "affiliateUrl": null,
-  "shortDescription": "Memory layer for agents. Open-source package you can install yourself.",
-  "longDescription": "Mem0 stores memory for agents. The open-source package is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
+  "shortDescription": "Memory layer for agents. Open-source, and you can install it yourself.",
+  "longDescription": "Mem0 stores memory for agents. The open-source library is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
   "categories": [
     "search-rag"
   ],
@@ -35,22 +35,22 @@
   "repoUrl": "https://github.com/mem0ai/mem0",
   "bestFor": [
     "Adding persistent memory to an agent you already run",
-    "Python projects that can install the open-source package"
+    "Python projects that can install the open-source library"
   ],
   "notIdealFor": [
     "A full research chat product",
     "A confirmed free cloud allotment — re-read the pricing page"
   ],
-  "strength": "We imported mem0ai 2.2.1 locally, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
+  "strength": "Mem0 2.2.1 is the open-source library, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
   "weakness": "The paid plan starts at $19 per month once you pass those monthly request limits.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": true,
-    "detail": "pip install + import mem0",
+    "detail": "We installed version 2.2.1 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
     "package": "mem0ai==2.2.1",
     "llmCall": false,
     "accountSignup": false,

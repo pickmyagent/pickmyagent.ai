@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.moveworks.com/",
   "affiliateUrl": null,
   "shortDescription": "Employee AI for IT service management and self-service.",
-  "longDescription": "Moveworks' site describes ITSM automation, employee self-service, employee onboarding, and an AI agent marketplace, including ServiceNow workflows. The fetched text did not list a price. We did not request a demo.",
+  "longDescription": "Moveworks' site describes ITSM automation, employee self-service, employee onboarding, and an AI agent marketplace, including ServiceNow workflows. The page did not list a price.",
   "categories": [
     "it-support"
   ],
@@ -39,12 +39,12 @@
     "A buyer who needs a public per-agent price"
   ],
   "strength": "Moveworks describes IT service-management automation, employee self-service, and an AI agent marketplace.",
-  "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+  "weakness": "The site did not list a dollar price for the product.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

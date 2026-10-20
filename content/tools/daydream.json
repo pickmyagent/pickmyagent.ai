@@ -5,7 +5,7 @@
   "websiteUrl": "https://daydream.ing/",
   "affiliateUrl": null,
   "shortDescription": "AI fashion agent to chat and shop across 10,000+ stores.",
-  "longDescription": "Daydream's homepage says it is a personal AI fashion agent, that you chat to shop, and that it covers 10,000+ stores. The fetched text did not list a price. We did not create an account.",
+  "longDescription": "Daydream's homepage says it is a personal AI fashion agent, that you chat to shop, and that it covers 10,000+ stores. The page did not list a price.",
   "categories": [
     "shopping"
   ],
@@ -38,12 +38,12 @@
     "General grocery or electronics shopping"
   ],
   "strength": "Daydream describes a personal AI fashion agent for chatting to shop across more than 10,000 stores.",
-  "weakness": "The fetched page did not list a price, and the product is fashion-specific.",
+  "weakness": "The page did not list a price, and the product is fashion-specific.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

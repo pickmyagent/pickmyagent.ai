@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.bill.com/",
   "affiliateUrl": null,
   "shortDescription": "Invoicing, AP controls, and spend tools, plus an AI API.",
-  "longDescription": "BILL's product page lists invoicing, AP controls, spend and expense, payments, and an AI API. The fetched text did not include a dollar price. We did not request a demo.",
+  "longDescription": "BILL's product page lists invoicing, AP controls, spend and expense, payments, and an AI API. The page did not include a dollar price.",
   "categories": [
     "finance-ops"
   ],
@@ -39,12 +39,12 @@
     "A buyer who needs a public price"
   ],
   "strength": "BILL's product page lists invoicing, AP controls, spend and expense, and an AI API.",
-  "weakness": "The fetched page did not include a dollar price.",
+  "weakness": "The page did not include a dollar price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

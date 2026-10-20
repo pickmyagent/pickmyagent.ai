@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.opus.pro/",
   "affiliateUrl": null,
   "shortDescription": "Cuts long videos into short clips. The free plan lists 60 credits per month.",
-  "longDescription": "Opus Clip turns long videos into short clips. On October 16, 2026 the pricing page listed a free plan at $0 with 60 credits per month, a watermark, and clips that stop being exportable after 3 days. Starter was $15 per month. We did not upload a video.",
+  "longDescription": "Opus Clip turns long videos into short clips. On October 16, 2026 the pricing page listed a free plan at $0 with 60 credits per month, a watermark, and clips that stop being exportable after 3 days. Starter was $15 per month.",
   "categories": [
     "creative-media"
   ],
@@ -43,7 +43,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

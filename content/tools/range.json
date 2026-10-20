@@ -10,7 +10,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-16T12:00:00-04:00",
   "checkedDate": "2026-10-16",
-  "smokeTestNotes": "Docs and pricing pages checked. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Docs and pricing pages reviewed.",
   "handsOn": {
     "performed": false
   },
@@ -27,7 +27,7 @@
   "name": "Range",
   "websiteUrl": "https://www.range.com/",
   "shortDescription": "Advisory membership with an AI assistant. Premium is $3,950 per year.",
-  "longDescription": "Range is a flat-fee advisory membership that includes its AI assistant, Rai. The Form ADV on range.com, read October 16, 2026, lists Premium at $3,950 per year, Platinum at $5,950, and Titanium at $12,500, with no separate assets-under-management advisory fee. We did not become a member. This is not financial advice.",
+  "longDescription": "Range is a flat-fee advisory membership that includes its AI assistant, Rai. The Form ADV on range.com, read October 16, 2026, lists Premium at $3,950 per year, Platinum at $5,950, and Titanium at $12,500, with no separate assets-under-management advisory fee. This is not financial advice.",
   "categories": [
     "personal-finance"
   ],

@@ -5,7 +5,7 @@
   "websiteUrl": "https://hex.tech/",
   "affiliateUrl": null,
   "shortDescription": "Collaborative data workspace. The page lists $36 per Editor each month.",
-  "longDescription": "Hex's pricing page lists $36 per Editor per month and says that price includes the Hex agent on top of Community. The homepage also describes AI analytics and dashboards. We did not start a workspace.",
+  "longDescription": "Hex's pricing page lists $36 per Editor per month and says that price includes the Hex agent on top of Community. The homepage also describes AI analytics and dashboards.",
   "categories": [
     "data-analysis"
   ],
@@ -44,7 +44,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.perplexity.ai/",
   "affiliateUrl": null,
   "shortDescription": "AI search that answers questions with linked sources.",
-  "longDescription": "Perplexity answers questions from the web and shows linked sources. A consumer Free versus Pro split was not confirmed from the docs we could read.",
+  "longDescription": "Perplexity answers questions from the web and shows linked sources. A consumer Free versus Pro split is not stated in the available docs.",
   "categories": [
     "search-rag",
     "general-assistants"
@@ -38,12 +38,12 @@
     "A self-hosted crawler or vector database"
   ],
   "strength": "The docs describe a web-research product, with API pricing written up on the official docs site.",
-  "weakness": "The API pricing page we could read did not state a free-tier amount or a monthly starting price.",
+  "weakness": "The available API pricing page does not state a free-tier amount or a monthly starting price.",
   "smokeStatus": "untested",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

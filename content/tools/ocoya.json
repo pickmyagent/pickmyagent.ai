@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.ocoya.com/",
   "affiliateUrl": null,
   "shortDescription": "Social content plans from $29 per month, with a 7-day trial.",
-  "longDescription": "Ocoya's pricing page lists a Starter plan at $29 per month billed monthly for independent creators, and a 7-day free trial that requires a card. Higher plans were also listed. We did not start the trial.",
+  "longDescription": "Ocoya's pricing page lists a Starter plan at $29 per month billed monthly for independent creators, and a 7-day free trial that requires a card. Higher plans were also listed.",
   "categories": [
     "content"
   ],
@@ -43,7 +43,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

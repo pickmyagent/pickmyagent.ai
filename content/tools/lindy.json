@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.lindy.ai/",
   "affiliateUrl": null,
   "shortDescription": "Assistant for inbox and calendar jobs, with $50 in free credits.",
-  "longDescription": "Lindy's pricing page says you can start with $50 in free credits and lists jobs including inbox and calendar, scheduling, and lead outreach. It also lists credit packs from $29.99. We did not create an account, and we do not treat the credit pack as a flat monthly seat price.",
+  "longDescription": "Lindy's pricing page says you can start with $50 in free credits and lists jobs including inbox and calendar, scheduling, and lead outreach. It also lists credit packs from $29.99. The credit pack is not a flat monthly seat price.",
   "categories": [
     "productivity"
   ],
@@ -39,12 +39,12 @@
     "Someone who wants one flat seat price with credits included"
   ],
   "strength": "Lindy's pricing page offers $50 in free credits and lists inbox and calendar among the jobs it can take.",
-  "weakness": "Paid use is sold as credit packs, starting at $29.99 on that page, not as one flat seat subscription we could confirm.",
+  "weakness": "Paid use is sold as credit packs, starting at $29.99 on that page, not as one flat seat subscription.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

@@ -5,7 +5,7 @@
   "websiteUrl": "https://zapier.com/",
   "affiliateUrl": null,
   "shortDescription": "Connects the apps you already use. The free plan includes 100 tasks per month.",
-  "longDescription": "Zapier connects SaaS apps, including agent-style steps. On October 16, 2026 the pricing page listed Free at $0 with 100 tasks per month, and Professional starting from $19.99 per month. We did not create an account.",
+  "longDescription": "Zapier connects SaaS apps, including agent-style steps. On October 16, 2026 the pricing page listed Free at $0 with 100 tasks per month, and Professional starting from $19.99 per month.",
   "categories": [
     "workflow-automation"
   ],
@@ -43,7 +43,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

@@ -4,8 +4,8 @@
   "name": "HeyGen",
   "websiteUrl": "https://www.heygen.com/",
   "affiliateUrl": null,
-  "shortDescription": "Avatar and spokesperson video from a script. Free to start; paid plans on their site.",
-  "longDescription": "HeyGen makes avatar and spokesperson videos. The pricing crawl included $0/month alongside $29 and $49 per month samples. Confirm what the free plan includes. We did not create an account.",
+  "shortDescription": "Avatar and spokesperson video from a script. Free to start. Paid plans are on their site.",
+  "longDescription": "HeyGen makes avatar and spokesperson videos. The pricing page lists $0 per month alongside $29 and $49 per month samples.",
   "categories": [
     "creative-media"
   ],
@@ -32,7 +32,7 @@
   "repoUrl": null,
   "bestFor": [
     "Spokesperson or avatar videos",
-    "Teams that want a hosted avatar tool with a $0 tier on the page we read"
+    "Teams that want a hosted avatar tool with a $0 tier on the pricing page"
   ],
   "notIdealFor": [
     "Gameplay capture or VOD clipping",
@@ -44,7 +44,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

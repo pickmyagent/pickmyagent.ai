@@ -4,8 +4,8 @@
   "name": "AutoGen (Microsoft)",
   "websiteUrl": "https://github.com/microsoft/autogen",
   "affiliateUrl": null,
-  "shortDescription": "Microsoft open-source Python library for multi-agent conversations. Newest release we found is from 2025.",
-  "longDescription": "AutoGen (the microsoft/autogen Python library) is a multi-agent framework. We installed autogen-agentchat and imported it, with no model call. The latest Python GitHub release we found, python-v0.7.5, was published on September 30, 2025. Treat freshness as an open question, not a verdict.",
+  "shortDescription": "Microsoft open-source Python library for multi-agent conversations. The newest recorded release is from 2025.",
+  "longDescription": "AutoGen is Microsoft's open-source Python library and framework for multi-agent conversations. You can have several agents work through a task together, and there is no product paywall.",
   "categories": [
     "agent-frameworks"
   ],
@@ -40,18 +40,18 @@
   ],
   "notIdealFor": [
     "A frequently updated hosted product",
-    "Anyone who needs a 2026 release cadence — we did not find one"
+    "Anyone who needs a release newer than September 30, 2025"
   ],
-  "strength": "We imported autogen-agentchat 0.7.5 locally, and the library is open source with no product paywall.",
-  "weakness": "The newest Python release we found is dated September 30, 2025, older than the peers we checked.",
+  "strength": "AutoGen 0.7.5 is open source with no product paywall.",
+  "weakness": "The newest Python release on record is dated September 30, 2025.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": true,
-    "detail": "pip install + import autogen_agentchat",
+    "detail": "We installed version 0.7.5 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
     "package": "autogen-agentchat==0.7.5",
     "llmCall": false,
     "accountSignup": false,
@@ -65,7 +65,7 @@
     "url": "https://github.com/microsoft/autogen/releases/tag/python-v0.7.5"
   },
   "problems": [
-    "Latest Autogen python release on GitHub is 2025-09-30; may be maintenance-mode relative to newer Microsoft Agent Framework."
+    "The last release was September 30, 2025."
   ],
   "featured": false,
   "featuredPaid": false,

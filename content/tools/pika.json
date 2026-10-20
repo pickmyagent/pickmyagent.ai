@@ -25,7 +25,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-16T19:00:00-04:00",
   "checkedDate": "2026-10-16",
-  "smokeTestNotes": "Official site and pricing page were fetched. No account was created.",
+  "smokeTestNotes": "Official site and pricing page reviewed.",
   "handsOn": {
     "performed": false
   },
@@ -42,7 +42,7 @@
   "name": "Pika",
   "websiteUrl": "https://pika.art/",
   "shortDescription": "Generates short videos from prompts, photos, or keyframes. Starter is $10/month.",
-  "longDescription": "Pika is a video generation product. Its site describes Video Studio for a short clip up to a 30-second multi-shot video. On October 16, 2026 the pricing page listed a Free plan with 0 credits per month (packs only, no commercial license) and Starter at $10 per month, billed monthly, with 900 credits. We did not create an account.",
+  "longDescription": "Pika is a video generation product. Its site describes Video Studio for a short clip up to a 30-second multi-shot video. On October 16, 2026 the pricing page listed a Free plan with 0 credits per month (packs only, no commercial license) and Starter at $10 per month, billed monthly, with 900 credits.",
   "pricingUrl": "https://pika.art/pricing",
   "docsUrl": "https://pika.art/faq",
   "freeTier": true,

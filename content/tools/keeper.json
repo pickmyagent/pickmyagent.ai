@@ -39,12 +39,12 @@
     "Someone who needs a published monthly price before signing up"
   ],
   "strength": "Keeper's pricing page lists federal and state filing plus quarterly tax payments, and the homepage says you can get started free.",
-  "weakness": "The pages we fetched did not state one monthly dollar price, so this listing does not invent one.",
+  "weakness": "The pages did not state one monthly dollar price.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

@@ -4,8 +4,8 @@
   "name": "Browser Use",
   "websiteUrl": "https://browser-use.com/",
   "affiliateUrl": null,
-  "shortDescription": "Open-source Python agent that controls a browser. Install the package yourself.",
-  "longDescription": "Browser Use is a Python agent for driving a browser. We installed browser-use and imported Agent. Docs mention separately billed cloud browsers; local use still needs your own browser and model keys.",
+  "shortDescription": "Open-source Python agent that controls a browser. Install it yourself.",
+  "longDescription": "Browser Use is a Python agent for driving a browser. It can open pages, click, and type. Their hosted cloud browsers are billed separately, and you still bring your own browser and model.",
   "categories": [
     "tool-use"
   ],
@@ -38,19 +38,19 @@
     "Python projects that can bring their own browser and model"
   ],
   "notIdealFor": [
-    "Jobs that only need an HTTP search API",
+    "Jobs that only need a web search API",
     "A no-code hosted agent with no local setup"
   ],
-  "strength": "We imported browser-use 0.13.11, which is built for agents that open pages, click, and type.",
-  "weakness": "You bring your own browser and model, and the docs bill cloud stealth browsers separately from the library.",
+  "strength": "Browser Use 0.13.11 is built for agents that open pages, click, and type.",
+  "weakness": "You bring your own browser and model, and their hosted cloud browsers are billed separately.",
   "smokeStatus": "tested-hands-on",
   "smokeTested": true,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "Install/import only; no API key, no LLM invoke, no signup.",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": true,
-    "detail": "pip install + import browser_use; from browser_use import Agent",
+    "detail": "We installed version 0.13.11 and confirmed it loads. We did not sign up, pay, or run it on a real task.",
     "package": "browser-use==0.13.11",
     "llmCall": false,
     "accountSignup": false,

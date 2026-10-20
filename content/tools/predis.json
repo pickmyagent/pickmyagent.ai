@@ -5,7 +5,7 @@
   "websiteUrl": "https://predis.ai/",
   "affiliateUrl": null,
   "shortDescription": "Generates and designs social posts and ads with AI.",
-  "longDescription": "Predis.ai's site says it generates, designs, and optimizes social media content with AI, including posts and ads. A $29 amount in the fetch was labeled extra credits, not a base plan, so this listing does not set a starting price. We did not subscribe.",
+  "longDescription": "Predis.ai's site says it generates, designs, and optimizes social media content with AI, including posts and ads. A $29 amount on the page was labeled extra credits, not a base plan, so no starting price is listed.",
   "categories": [
     "content"
   ],
@@ -39,12 +39,12 @@
     "Someone who needs a confirmed base-plan price"
   ],
   "strength": "Predis says it generates, designs, and optimizes social media content with AI.",
-  "weakness": "The fetched pricing text did not make a base monthly price clear, so none is listed.",
+  "weakness": "The pricing page did not make a base monthly price clear, so none is listed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.dropzone.ai/",
   "affiliateUrl": null,
   "shortDescription": "AI SOC analyst for alert triage and threat hunting.",
-  "longDescription": "Dropzone's site describes an AI SOC analyst that investigates alerts end to end and shows its reasoning, plus an AI threat hunter. The fetched text did not list a price. We did not request a demo.",
+  "longDescription": "Dropzone's site describes an AI SOC analyst that investigates alerts end to end and shows its reasoning, plus an AI threat hunter. The page did not list a price.",
   "categories": [
     "security"
   ],
@@ -39,12 +39,12 @@
     "Someone who needs a public monthly price"
   ],
   "strength": "Dropzone describes an AI SOC analyst that investigates alerts end to end and shows its reasoning.",
-  "weakness": "The fetched site did not list a dollar price, so this listing does not invent one.",
+  "weakness": "The site did not list a dollar price for the product.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official page checked on 2026-10-19. No account, payment, or hands-on run.",
+  "smokeTestNotes": "Official page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

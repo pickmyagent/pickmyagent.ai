@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.synthesis.com/tutor",
   "affiliateUrl": null,
   "shortDescription": "Math tutor for ages 5 to 11 that adapts the lesson to the child.",
-  "longDescription": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11, covering K-5 math and adapting to the child. It offers a 7-day free trial. The same page lists several plan prices that do not agree, so this listing does not state one monthly price. We did not start the trial.",
+  "longDescription": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11, covering K-5 math and adapting to the child. It offers a 7-day free trial. The same page lists several plan prices that do not agree monthly price.",
   "categories": [
     "learning"
   ],
@@ -38,12 +38,12 @@
     "An adult professional course"
   ],
   "strength": "Synthesis Tutor's page describes a personal math tutor for ages 5 to 11 that adapts to the child.",
-  "weakness": "The tutor page lists several plan prices that do not agree, so this listing states no single monthly price.",
+  "weakness": "The tutor page lists several plan prices that do not agree, so no single monthly price is listed.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",
   "checkedDate": "2026-10-19",
-  "smokeTestNotes": "Official tutor page fetched on 2026-10-19. No trial was started.",
+  "smokeTestNotes": "Official tutor page reviewed on October 19, 2026.",
   "handsOn": {
     "performed": false
   },

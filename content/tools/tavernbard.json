@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.tavernbard.com/",
   "affiliateUrl": null,
   "shortDescription": "AI game master for Discord. Homepage describes a free path that uses your own AI subscription.",
-  "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared on the homepage; confirm what is free versus paid on the live site. We did not join a server or create an account.",
+  "longDescription": "Tavernbard is an AI game master aimed at Discord. The homepage described a free play path that uses your own AI subscription. A $49.99 sample also appeared on the homepage.",
   "categories": [
     "game-ai"
   ],
@@ -41,12 +41,12 @@
     "A dedicated pricing page"
   ],
   "strength": "The homepage describes an AI game master for Discord, including a play path that uses an AI subscription you already have.",
-  "weakness": "That play path still depends on an AI subscription you already have, and a $49.99 homepage figure was not confirmed as a monthly plan.",
+  "weakness": "That play path still depends on an AI subscription you already have, and a $49.99 homepage figure is not described as a monthly plan.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

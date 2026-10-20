@@ -4,7 +4,7 @@
   "name": "AutoGPT",
   "websiteUrl": "https://github.com/Significant-Gravitas/AutoGPT",
   "affiliateUrl": null,
-  "shortDescription": "Open-source agent project with a platform beta. Site and repo checked; local install not run.",
+  "shortDescription": "Open-source agent project with a platform beta. The site and repo were reviewed.",
   "longDescription": "AutoGPT is an open-source agent project. A platform beta release was published on October 14, 2026. The repo is the free path, and hosted plans may be paid.",
   "categories": [
     "agent-frameworks",
@@ -40,15 +40,15 @@
   ],
   "notIdealFor": [
     "A tiny script where a smaller library is enough",
-    "A hands-on install — we did not run one"
+    "Running it on your own computer, which is not described here"
   ],
   "strength": "The open-source repo is the free path, and a platform beta release was published on October 14, 2026.",
-  "weakness": "The hosted plan we checked starts at $50 per month after a 7-day trial, so it is not a free product.",
+  "weakness": "The hosted plan starts at $50 per month after a 7-day trial, so it is not a free product.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },

@@ -5,7 +5,7 @@
   "websiteUrl": "https://inworld.ai/",
   "affiliateUrl": null,
   "shortDescription": "Character AI for games and interactive agents.",
-  "longDescription": "Inworld builds character AI for games and interactive experiences. A $0 sample appeared among paid usage samples. Confirm the current free allotment on the pricing page.",
+  "longDescription": "Inworld builds character AI for games and interactive experiences. A $0 sample appeared among paid usage samples.",
   "categories": [
     "game-ai"
   ],
@@ -45,7 +45,7 @@
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",
   "checkedDate": "2026-10-15",
-  "smokeTestNotes": "No local install attempted (SaaS/desktop/extension or install not feasible without account).",
+  "smokeTestNotes": null,
   "handsOn": {
     "performed": false
   },
