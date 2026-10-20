@@ -36,7 +36,7 @@
   "repoUrl": null,
   "bestFor": [
     "Agent retrieval that starts with web search",
-    "Apps that want search results, not a full browser"
+    "Apps that want search results without a full browser"
   ],
   "notIdealFor": [
     "Crawling your own site into a corpus",

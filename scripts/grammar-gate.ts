@@ -197,6 +197,11 @@ export function toolPageCopyProblems(text: string): string[] {
 const SPECIALIST_BANNED =
   /\bis for\b|\bwe imported\b|\blocally\b|\bpriced on the site\b|\bpricing page\b|\bso you can\b|\bdifferent job\b|\bnot a\b|\binstead of\b/i;
 
+/** Best for / Not ideal for bullets on a tool page. */
+export function toolPageBulletProblems(text: string): string[] {
+  return SPECIALIST_BANNED.test(text) ? ["tool page bullet uses banned wording"] : [];
+}
+
 /** Specialist why-lines must be "<Name> <verb> ...", with no template glue. */
 export function specialistWhyProblems(name: string, why: string): string[] {
   const problems: string[] = [];

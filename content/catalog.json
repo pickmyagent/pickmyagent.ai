@@ -3139,7 +3139,7 @@
       ],
       "notIdealFor": [
         "Interactive browser tasks such as clicking and login flows",
-        "A general web-search API, which is a different job"
+        "A general web-search API (see Tavily)"
       ],
       "strength": "The free cloud plan includes 1,000 credits per month to turn pages into markdown, and the repo is open source.",
       "weakness": "Paid plans start at $19 per month, or $16 per month when billed annually.",
@@ -4526,7 +4526,7 @@
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
-        "Asking questions about a spreadsheet in a chat priced on the site"
+        "Asking questions about a spreadsheet in chat"
       ],
       "notIdealFor": [
         "A team that needs a governed BI deployment"
@@ -5827,7 +5827,7 @@
       ],
       "notIdealFor": [
         "A standalone art or voice tool",
-        "A separate public pricing page"
+        "A separate public price list"
       ],
       "strength": "The homepage describes memory for game NPCs that need to remember the player.",
       "weakness": "A separate pricing page was not found, so no monthly price is listed.",
@@ -7922,7 +7922,7 @@
         "Searching an inbox and drafting from an AI email client"
       ],
       "notIdealFor": [
-        "A team that wants a one-time price instead of per seat"
+        "A team that wants a one-time price"
       ],
       "strength": "Shortwave lists Everyday AI productivity at $30 per seat per month and a 14-day free trial.",
       "weakness": "The price is per seat, and higher tiers on the same page cost $45 and $120 per seat.",
@@ -8609,7 +8609,7 @@
       ],
       "notIdealFor": [
         "In-engine NPCs inside Unity or Unreal",
-        "A dedicated pricing page"
+        "A dedicated public price list"
       ],
       "strength": "The homepage describes an AI game master for Discord, including a play path that uses an AI subscription you already have.",
       "weakness": "That play path still depends on an AI subscription you already have, and a $49.99 homepage figure is not described as a monthly plan.",
@@ -8679,7 +8679,7 @@
       "repoUrl": null,
       "bestFor": [
         "Agent retrieval that starts with web search",
-        "Apps that want search results, not a full browser"
+        "Apps that want search results without a full browser"
       ],
       "notIdealFor": [
         "Crawling your own site into a corpus",

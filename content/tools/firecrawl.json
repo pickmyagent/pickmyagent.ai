@@ -42,7 +42,7 @@
   ],
   "notIdealFor": [
     "Interactive browser tasks such as clicking and login flows",
-    "A general web-search API, which is a different job"
+    "A general web-search API (see Tavily)"
   ],
   "strength": "The free cloud plan includes 1,000 credits per month to turn pages into markdown, and the repo is open source.",
   "weakness": "Paid plans start at $19 per month, or $16 per month when billed annually.",
