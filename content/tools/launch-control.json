@@ -4,8 +4,8 @@
   "name": "Launch Control",
   "websiteUrl": "https://launchcontrol.us/",
   "affiliateUrl": null,
-  "shortDescription": "Texting for real estate owner lists. Skip tracing is listed at $0.13 on the pricing page.",
-  "longDescription": "Launch Control is a texting product for real estate investors. On October 19, 2026 the pricing page listed skip tracing at $0.13 and one plan as provider fees plus $22, with 12,500 monthly SMS. It did not show one all-in monthly price.",
+  "shortDescription": "Texting for real estate owner lists. Skip tracing is $0.13.",
+  "longDescription": "Launch Control is a texting product for real estate investors. Skip tracing is $0.13, and one plan is provider fees plus $22, with 12,500 monthly SMS. There is no single all-in monthly price.",
   "categories": [
     "real-estate"
   ],
@@ -38,7 +38,7 @@
   "notIdealFor": [
     "Someone who wants one published price with provider fees included"
   ],
-  "strength": "The pricing page lists skip tracing at $0.13 and a plan as provider fees plus $22 for 12,500 monthly texts.",
+  "strength": "Skip tracing is $0.13, and one plan is provider fees plus $22 for 12,500 monthly texts.",
   "weakness": "That $22 figure is not an all-in price, because the same page adds provider fees on top.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,

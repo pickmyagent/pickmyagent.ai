@@ -54,8 +54,8 @@
   "notIdealFor": [
     "Someone who needs the product to be described as an AI agent on the official page"
   ],
-  "strength": "The pricing page lists a free Starter plan, Plus at $10 per month, and Pro at $20 per month, with a rental, flip, and commercial calculator.",
-  "weakness": "The pricing page repeats the same feature bullets on every plan, so it does not say which calculator is free.",
+  "strength": "There is a free Starter plan, Plus is $10 per month, and Pro is $20 per month, with a rental, flip, and commercial calculator.",
+  "weakness": "The same feature bullets appear on every plan, so it is unclear which calculator is free.",
   "sources": [
     "https://dealcheck.io/pricing/",
     "https://help.dealcheck.io/en/articles/4471054-how-much-does-dealcheck-cost-can-i-try-it-for-free"

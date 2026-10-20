@@ -27,7 +27,7 @@
   "name": "Magnifi",
   "websiteUrl": "https://magnifi.com/",
   "shortDescription": "Links brokerage accounts on a $0 plan. Premium is $99 per year.",
-  "longDescription": "Magnifi is an investing app that links accounts and answers portfolio questions. On October 16, 2026 the pricing page listed a $0 plan with account overview and portfolio analysis, and Premium at $99 per year for forecasts and scenario tests. This is not financial advice.",
+  "longDescription": "Magnifi is an investing app that links accounts and answers portfolio questions. There is a $0 plan with account overview and portfolio analysis, and Premium is $99 per year for forecasts and scenario tests. This is not financial advice.",
   "categories": [
     "personal-finance"
   ],
@@ -54,7 +54,7 @@
     "Someone who needs forecasts without paying for Premium",
     "Anyone treating this card as financial advice"
   ],
-  "strength": "The pricing page lists a $0 plan that can link accounts, and Premium at $99 per year for forecasts.",
+  "strength": "There is a $0 plan that can link accounts, and Premium is $99 per year for forecasts.",
   "weakness": "Forecasts and scenario tests sit on the paid Premium plan, and fund fees can still apply.",
   "sources": [
     "https://magnifi.com/pricing"

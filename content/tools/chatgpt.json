@@ -27,7 +27,7 @@
   "name": "ChatGPT",
   "websiteUrl": "https://chatgpt.com/",
   "shortDescription": "General-purpose chat assistant from OpenAI, with a free plan and paid Go and Plus plans.",
-  "longDescription": "ChatGPT is OpenAI's general chat assistant. The pricing page lists Free, Go, Plus, and Pro. OpenAI's Go announcement lists Go at $8 per month in the US, and the Plus help article lists Plus at $20 per month. It is not a specialist for one job.",
+  "longDescription": "ChatGPT is OpenAI's general chat assistant. Plans are Free, Go, Plus, and Pro. Go is $8 per month in the US, and Plus is $20 per month. It is not a specialist for one job.",
   "categories": [
     "general-assistants"
   ],

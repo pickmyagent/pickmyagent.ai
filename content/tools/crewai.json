@@ -5,7 +5,7 @@
   "websiteUrl": "https://crewai.com/",
   "affiliateUrl": null,
   "shortDescription": "Open-source framework for crews of role-based agents that split a job into tasks.",
-  "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source framework and the hosted product are separate. Pricing figures are from the pricing page on October 15, 2026.",
+  "longDescription": "CrewAI is the crew-style option in this catalog: you define roles and tasks, and the Python library coordinates them. The open-source framework and the hosted product are separate. The free cloud plan includes 50 workflow executions per month.",
   "categories": [
     "agent-frameworks"
   ],

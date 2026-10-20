@@ -38,8 +38,8 @@
   "notIdealFor": [
     "Someone who needs a published seat price before a trial"
   ],
-  "strength": "Clay describes a data marketplace of more than 200 providers and offers a free trial on the pricing page.",
-  "weakness": "The pricing page did not state a dollar price or how many days the trial lasts.",
+  "strength": "Clay describes a data marketplace of more than 200 providers and offers a free trial.",
+  "weakness": "See the Clay site for the current price and trial length.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",

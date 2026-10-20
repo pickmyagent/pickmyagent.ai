@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.skyvern.com/",
   "affiliateUrl": null,
   "shortDescription": "Browser automation. Free is $0 per month and a paid plan is $29.",
-  "longDescription": "Skyvern's site describes AI browser automation for websites, and the pricing page lists a Free plan at $0 per month with 5,000 credits and a paid plan at $29 per month. A sample JSON price on the marketing site was not used as the plan price.",
+  "longDescription": "Skyvern automates browsers on websites. The Free plan is $0 per month with 5,000 credits, and paid plans start at $29 per month.",
   "categories": [
     "tool-use"
   ],
@@ -29,7 +29,7 @@
   "freeTierNotes": null,
   "startingPrice": 29,
   "freeTrial": null,
-  "pricingCheckedAt": "2026-10-19",
+  "pricingCheckedAt": "2026-10-20",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [

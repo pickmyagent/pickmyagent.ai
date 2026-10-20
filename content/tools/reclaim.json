@@ -39,7 +39,7 @@
     "Someone who needs a published monthly price"
   ],
   "strength": "Reclaim's pricing page lists smart meetings, scheduling links, and calendar sync.",
-  "weakness": "The pricing page did not include a dollar amount.",
+  "weakness": "See the Reclaim site for current pricing.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-19T16:00:00-04:00",

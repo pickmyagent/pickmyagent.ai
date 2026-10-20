@@ -5,7 +5,7 @@
   "websiteUrl": "https://www.pinecone.io/",
   "affiliateUrl": null,
   "shortDescription": "Managed vector database. Starter is free, and Builder is $20 per month.",
-  "longDescription": "Pinecone is a managed vector database used in retrieval stacks. On October 16, 2026 the pricing page listed Starter as free and Builder at $20 per month.",
+  "longDescription": "Pinecone is a managed vector database used in retrieval stacks. Starter is free, and Builder is $20 per month.",
   "categories": [
     "search-rag"
   ],
@@ -35,10 +35,10 @@
   ],
   "notIdealFor": [
     "A confirmed free tier",
-    "Web search or page crawling — different tools"
+    "Web search or page crawling, which other tools cover"
   ],
   "strength": "Starter is free for hosted vector search, and Builder is $20 per month with a 3-week trial.",
-  "weakness": "Builder is $20 per month after the trial, and the free Starter limits were not spelled out on the pricing page.",
+  "weakness": "Builder is $20 per month after the 3-week trial.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

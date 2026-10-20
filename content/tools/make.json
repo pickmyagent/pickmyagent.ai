@@ -41,7 +41,7 @@
     "Self-hosting the automation engine"
   ],
   "strength": "The official pricing FAQ describes a free plan with 1,000 credits per month for visual automations.",
-  "weakness": "Dollar amounts for Core, Pro, and Teams are not listed here.",
+  "weakness": "See the Make site for Core, Pro, and Teams pricing.",
   "smokeStatus": "verified-docs-only",
   "smokeTested": false,
   "checkedAt": "2026-10-15T18:31:00-04:00",

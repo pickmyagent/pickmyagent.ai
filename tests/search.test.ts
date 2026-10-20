@@ -836,6 +836,17 @@ test("grammar gate flags the broken header and assistant examples", () => {
     [],
   );
   assert.deepEqual(toolPageCopyProblems("Smoke-tested means we tried this tool ourselves."), []);
+  assert.ok(toolPageCopyProblems("Paid samples on the page included about $16.").length > 0);
+  assert.ok(toolPageCopyProblems("A monthly starting price is not listed here.").length > 0);
+  assert.ok(toolPageCopyProblems("The pricing page came back too thin.").length > 0);
+  assert.ok(toolPageCopyProblems("The pricing path redirected to the homepage.").length > 0);
+  assert.ok(toolPageCopyProblems("Re-read the pricing page.").length > 0);
+  assert.ok(toolPageCopyProblems("The price was shown as animated digits.").length > 0);
+  assert.ok(toolPageCopyProblems("A sample JSON price was ignored.").length > 0);
+  assert.ok(toolPageCopyProblems("Prices did not load without JavaScript.").length > 0);
+  assert.ok(toolPageCopyProblems("Paid plans — see the site.").length > 0);
+  assert.deepEqual(toolPageCopyProblems("Free plan available. Paid plans start at $19 per month."), []);
+  assert.deepEqual(toolPageCopyProblems("See their site for current pricing."), []);
 });
 
 test("every specialist use-case pair has a hand-written why-line", () => {

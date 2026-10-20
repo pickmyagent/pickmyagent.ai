@@ -5,7 +5,7 @@
   "websiteUrl": "https://mem0.ai/",
   "affiliateUrl": null,
   "shortDescription": "Memory layer for agents. Open-source, and you can install it yourself.",
-  "longDescription": "Mem0 stores memory for agents. The open-source library is the free path you can install yourself. A free cloud plan was not listed on the pricing page.",
+  "longDescription": "Mem0 stores memory for agents. The open-source library is free to install yourself. The Hobby cloud plan is free, with 10,000 add requests and 1,000 retrieval requests per month. Paid plans start at $19 per month.",
   "categories": [
     "search-rag"
   ],
@@ -30,7 +30,7 @@
   "freeTierNotes": "10,000 add requests and 1,000 retrieval requests per month.",
   "startingPrice": 19,
   "freeTrial": null,
-  "pricingCheckedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-20",
   "openSource": true,
   "repoUrl": "https://github.com/mem0ai/mem0",
   "bestFor": [
@@ -39,7 +39,7 @@
   ],
   "notIdealFor": [
     "A full research chat product",
-    "A confirmed free cloud allotment — re-read the pricing page"
+    "More than the free Hobby limits of 10,000 adds and 1,000 retrievals a month"
   ],
   "strength": "Mem0 2.2.1 is the open-source library, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month.",
   "weakness": "The paid plan starts at $19 per month once you pass those monthly request limits.",

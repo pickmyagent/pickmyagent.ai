@@ -5,7 +5,7 @@
   "websiteUrl": "https://inworld.ai/",
   "affiliateUrl": null,
   "shortDescription": "Character AI for games and interactive agents.",
-  "longDescription": "Inworld builds character AI for games and interactive experiences. A $0 sample appeared among paid usage samples.",
+  "longDescription": "Inworld builds character AI for games and interactive experiences. The On-Demand plan is $0, then you pay as you go. Paid plans start at $25 per month.",
   "categories": [
     "game-ai"
   ],
@@ -26,9 +26,9 @@
   "docsUrl": "https://docs.inworld.ai/",
   "freeTier": true,
   "freeTierNotes": "On-Demand plan is $0, then pay as you go.",
-  "startingPrice": null,
+  "startingPrice": 25,
   "freeTrial": null,
-  "pricingCheckedAt": "2026-10-16",
+  "pricingCheckedAt": "2026-10-20",
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
