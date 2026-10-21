@@ -971,6 +971,33 @@ const HELD_OUT: { query: string; expect: string | null }[] = [
   { query: "wheres a good wedding venue", expect: null },
 ];
 
+test("compound marketing and invoice query names both jobs", () => {
+  const query = "I want to find a tool to help me automate marketing promotions, and sending invoices to customers";
+  const ranked = rankCatalogQuery(query, catalog);
+  assert.equal(
+    ranked.lead,
+    "For automating marketing promotions and sending customer invoices, here's how each tool can help:",
+  );
+  assert.equal(
+    ranked.intro,
+    "AI agents can schedule promo emails and posts, and draft and send invoices on a schedule, often from one workflow that connects your marketing and billing apps.",
+  );
+  assert.equal(/,\s+and\b/i.test(ranked.lead), false);
+  const slugs = ranked.useCases.map((useCase) => useCase.slug);
+  assert.ok(slugs.includes("marketing-promotions"));
+  assert.ok(slugs.includes("finance-ops"));
+  const specialists = ranked.tools.filter((tool) => !tool.generalPurpose);
+  const tagsOf = (slug: string) => catalog.tools.find((tool) => tool.slug === slug)?.useCaseTags ?? [];
+  assert.ok(specialists.some((tool) => tagsOf(tool.slug).includes("marketing-promotions")));
+  assert.ok(specialists.some((tool) => tagsOf(tool.slug).includes("finance-ops")));
+  assert.ok(specialists.some((tool) => tool.slug === "n8n"));
+  const claude = ranked.tools.find((tool) => tool.slug === "claude");
+  assert.ok(claude);
+  assert.match(claude.whyItHelps, /marketing promotions and customer invoices/i);
+  assert.equal(claude.whyItHelps.includes(","), false);
+  assert.equal(/automating marketing promotions, and sending/i.test(claude.whyItHelps), false);
+});
+
 test("held-out paraphrases report precision at 3 without failing the build", () => {
   assert.ok(HELD_OUT.length >= 40);
   let hits = 0;

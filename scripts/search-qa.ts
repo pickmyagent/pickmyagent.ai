@@ -1,5 +1,6 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { CONCEPTS } from "../lib/concepts.ts";
+import { matchTagsForConcept } from "../lib/search.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { rankCatalogQuery } from "../lib/search.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
@@ -9,6 +10,8 @@ import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBroke
 export type QaQuery = {
   query: string;
   domain: string | null;
+  /** Each listed use case must show a specialist, and every specialist must belong to one of them. */
+  jobs?: string[];
 };
 
 /** Realistic searches: use-case jobs, wrappers, caps, typos, punctuation, questions, and unrelated work. */
@@ -254,6 +257,40 @@ export const QA_QUERIES: QaQuery[] = [
   { query: "chatgpt alternative", domain: null },
   { query: "learn spanish", domain: "learn-language" },
   { query: "language practice", domain: "learn-language" },
+  {
+    query: "I want to find a tool to help me automate marketing promotions, and sending invoices to customers",
+    domain: null,
+    jobs: ["marketing-promotions", "finance-ops", "workflow-automation"],
+  },
+  { query: "track expenses and file my taxes", domain: null, jobs: ["finance-ops", "do-taxes"] },
+  { query: "schedule meetings and take notes", domain: null, jobs: ["scheduling-assistant", "meetings-knowledge"] },
+  { query: "write blog posts and post them to social", domain: null, jobs: ["create-content", "social-media"] },
+  { query: "find leads and email them", domain: "sales-outreach", jobs: ["sales-outreach"] },
+  { query: "answer support tickets and update the knowledge base", domain: null, jobs: ["customer-support", "knowledge-qa"] },
+  { query: "edit listing videos and post to instagram", domain: null, jobs: ["listing-videos", "social-media"] },
+  { query: "send customer invoices and automate promo campaigns", domain: null, jobs: ["finance-ops", "marketing-promotions", "workflow-automation"] },
+  { query: "bill clients and draft a blog post", domain: null, jobs: ["finance-ops", "create-content"] },
+  { query: "file my taxes & track my expenses", domain: null, jobs: ["do-taxes", "finance-ops"] },
+  { query: "take meeting notes and schedule the follow-up", domain: null, jobs: ["meetings-knowledge", "scheduling-assistant"] },
+  { query: "draft a cold email and update the CRM", domain: "sales-outreach", jobs: ["sales-outreach"] },
+  { query: "clip a youtube short and post it to instagram", domain: null, jobs: ["game-creative", "social-media"] },
+  { query: "make a listing video and find off-market deals", domain: null, jobs: ["listing-videos", "find-off-market"] },
+  { query: "screen candidates and schedule interviews", domain: "hire-candidates", jobs: ["hire-candidates"] },
+  { query: "analyze a spreadsheet and write a blog post", domain: null, jobs: ["analyze-data", "create-content"] },
+  { query: "plan a trip and shop for luggage", domain: null, jobs: ["plan-travel", "shop-products"] },
+  { query: "reset a password and answer a support ticket", domain: null, jobs: ["it-helpdesk", "customer-support"] },
+  { query: "do my taxes plus manage my portfolio", domain: null, jobs: ["do-taxes", "manage-portfolio"] },
+  { query: "find land and rank rental properties", domain: null, jobs: ["find-land", "rank-property-deals"] },
+  { query: "write my resume and screen candidates", domain: null, jobs: ["write-resume", "hire-candidates"] },
+  { query: "transcribe my meeting and draft the follow-up email", domain: null, jobs: ["meetings-knowledge", "manage-inbox"] },
+  { query: "generate a voice track and make a cinematic video", domain: null, jobs: ["voice-audio", "video-generation"] },
+  { query: "tutor me in math and learn spanish", domain: null, jobs: ["tutoring", "learn-language"] },
+  { query: "fill out forms and qualify leads", domain: null, jobs: ["tool-use-browser", "sales-outreach"] },
+  { query: "monitor phishing and reset passwords", domain: null, jobs: ["security-ops", "it-helpdesk"] },
+  { query: "create social posts and write an SEO article", domain: null, jobs: ["social-media", "create-content"] },
+  { query: "process invoices and do my taxes", domain: null, jobs: ["finance-ops", "do-taxes"] },
+  { query: "book a hotel and clip my twitch stream", domain: null, jobs: ["plan-travel", "game-creative"] },
+  { query: "schedule meetings, also take notes", domain: null, jobs: ["scheduling-assistant", "meetings-knowledge"] },
 ];
 
 const PROPER = new Set([
@@ -331,6 +368,14 @@ function capitalIssues(text: string, allowed: Set<string>): string[] {
     });
   }
   return issues;
+}
+
+function specialistMatchesJob(tool: Tool, job: string, catalog: Catalog): boolean {
+  const concept = CONCEPTS.find((entry) => entry.useCase === job);
+  if (!concept) return false;
+  const tags = matchTagsForConcept(concept, catalog.useCases);
+  if (!tool.useCaseTags.some((tag) => tags.includes(tag))) return false;
+  return tool.categories.every((category) => concept.categories.includes(category));
 }
 
 function cardLabel(general: boolean, status: Tool["smokeStatus"]): string {
@@ -429,6 +474,36 @@ export function qaProblems(catalog: Catalog): string[] {
         }
         if (!source.categories.every((category) => categories.has(category))) {
           problems.push(`${item.query}: ${source.name} category is outside ${item.domain}`);
+        }
+      }
+    }
+    if (item.jobs && item.jobs.length > 1) {
+      const slugs = new Set(ranked.useCases.map((useCase) => useCase.slug));
+      for (const job of item.jobs) {
+        if (job === "workflow-automation") continue;
+        if (!slugs.has(job)) problems.push(`${item.query}: missing use case ${job}`);
+      }
+      for (const job of item.jobs) {
+        const has = ranked.tools.some((rankedTool) => {
+          if (rankedTool.generalPurpose) return false;
+          const source = bySlug.get(rankedTool.slug);
+          return Boolean(source && specialistMatchesJob(source, job, catalog));
+        });
+        if (!has) problems.push(`${item.query}: no specialist for ${job}`);
+      }
+      for (const rankedTool of ranked.tools) {
+        if (rankedTool.generalPurpose) continue;
+        const source = bySlug.get(rankedTool.slug);
+        if (!source) continue;
+        if (!item.jobs.some((job) => specialistMatchesJob(source, job, catalog))) {
+          problems.push(`${item.query}: ${source.name} is off-domain for ${item.jobs.join(" + ")}`);
+        }
+      }
+      if (/,\s+and\b/i.test(header)) problems.push(`${item.query}: comma before and in ${header}`);
+      for (const rankedTool of ranked.tools) {
+        if (!rankedTool.generalPurpose) continue;
+        if (rankedTool.whyItHelps.includes(",")) {
+          problems.push(`${item.query}: assistant why has a clause comma: ${rankedTool.whyItHelps}`);
         }
       }
     }

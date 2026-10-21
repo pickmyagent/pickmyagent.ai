@@ -80,6 +80,13 @@ export const DOMAIN_LINES: Record<string, Record<string, string>> = {
     perplexity: "for sourced tips on scheduling across time zones, with links you can check.",
     deepseek: "to turn a pile of constraints into two or three times you could offer.",
   }),
+  "marketing-promotions": lines({
+    claude: "to outline a promo email and a social post, and mark what you still send yourself.",
+    chatgpt: "for a checklist of the offer, the list, and the date a promotion goes out.",
+    gemini: "to build a sheet of campaigns, the channel, and whether the send is approved.",
+    perplexity: "for sourced notes on promo email timing, with links you can check.",
+    deepseek: "to rewrite a promotion so it states the offer and does not invent a discount.",
+  }),
   "create-content": lines({
     claude: "to outline a blog or marketing page and mark the sentences you should rewrite.",
     chatgpt: "for a checklist of headings, examples, and claims to verify in a draft.",

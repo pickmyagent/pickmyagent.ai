@@ -1,0 +1,70 @@
+{
+  "id": "mailchimp",
+  "slug": "mailchimp",
+  "name": "Mailchimp",
+  "websiteUrl": "https://mailchimp.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Email campaigns. The Free plan includes 250 contacts and 500 sends a month.",
+  "longDescription": "Mailchimp's help center says the Free Marketing plan includes up to 250 contacts and 500 sends a month, with a daily send limit of 250. The pricing page lists a 14-day trial of the Standard or Essentials plan.",
+  "categories": [
+    "content"
+  ],
+  "useCaseTags": [
+    "marketing-promotions"
+  ],
+  "toolTypes": [
+    "automation"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Help center: Free plan up to 250 contacts and 500 sends a month. Paid tiers vary by contact total, so startingPrice stays empty.",
+  "pricingUrl": "https://mailchimp.com/pricing/marketing/",
+  "docsUrl": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+  "freeTier": true,
+  "freeTierNotes": "Up to 250 contacts and 500 sends a month.",
+  "startingPrice": null,
+  "freeTrial": "14 days",
+  "pricingCheckedAt": "2026-10-20",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Sending email campaigns to a small list"
+  ],
+  "notIdealFor": [
+    "A sender who will pass 250 contacts on the Free plan"
+  ],
+  "strength": "Mailchimp's help center says the Free plan includes up to 250 contacts and 500 sends a month.",
+  "weakness": "Sending pauses if that Free plan passes 250 contacts, and paid tiers depend on the contact total.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-20T17:00:00-04:00",
+  "checkedDate": "2026-10-20",
+  "smokeTestNotes": "Official pages reviewed on October 20, 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "sources": [
+    "https://mailchimp.com/",
+    "https://mailchimp.com/pricing/marketing/",
+    "https://mailchimp.com/help/about-mailchimp-pricing-plans/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://mailchimp.com/"
+  },
+  "useCaseFit": {
+    "marketing-promotions": "Free plan sends email campaigns to 250 contacts and 500 sends a month."
+  }
+}

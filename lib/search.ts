@@ -1,5 +1,5 @@
 import { domainAssistantLine, openAssistantLine } from "./assistant-lines.ts";
-import { isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
+import { BRIDGE_LINES, isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
 import type { Category, SmokeStatus, Tool, UseCase } from "./types";
 
@@ -70,6 +70,9 @@ const LEADING_GERUNDS: Record<string, string> = {
   fill: "filling",
   file: "filing",
   transcribe: "transcribing",
+  send: "sending",
+  post: "posting",
+  take: "taking",
 };
 
 const GERUNDS: Record<string, string> = {
@@ -307,6 +310,7 @@ const CANONICAL_JOB: Record<string, string> = {
   "manage-inbox": "managing an email inbox",
   "scheduling-assistant": "scheduling and admin",
   "create-content": "creating and optimizing content",
+  "marketing-promotions": "automating marketing promotions",
   "analyze-data": "analyzing data and generating reports",
   "hire-candidates": "screening and sourcing candidates",
   "plan-travel": "planning and booking travel",
@@ -495,7 +499,11 @@ export function jobPhrase(query: string, useCase?: UseCase | null): string {
     .replace(/\s+/g, " ")
     .trim();
   const phrase = chooseHeader(cleaned, useCase, wantsYour);
-  return lowercasePhrase(phrase, query).replace(/\s+/g, " ").trim() || "help with this";
+  return lowercasePhrase(phrase, query)
+    .replace(/,\s+and\b/gi, " and")
+    .replace(/\bemail them\b/gi, "emailing them")
+    .replace(/\s+/g, " ")
+    .trim() || "help with this";
 }
 
 export function cleanUserPhrase(query: string): string {
@@ -680,13 +688,23 @@ function assistantSlot(query: string, useCase?: UseCase | null): string {
   return phrase.replace(/^help with\s+/i, "").trim() || phrase;
 }
 
-function assistantWhy(tool: Tool, query: string, useCase: UseCase | null): string {
+function guardSlot(slot: string): string {
+  const trimmed = slot.trim();
+  const count = trimmed.split(/\s+/).filter(Boolean).length;
+  if (!trimmed.includes(",") && count <= 8) return trimmed;
+  const first = trimmed.split(/,|\band\b|\bplus\b|&/i)[0]?.trim() ?? trimmed;
+  const short = first.split(/\s+/).filter(Boolean).slice(0, 6).join(" ");
+  return short || "this job";
+}
+
+function assistantWhy(tool: Tool, query: string, useCase: UseCase | null, slotOverride?: string): string {
   const name = tool.assistantName ?? tool.name.split("(")[0].trim();
-  if (useCase) {
+  if (useCase && !slotOverride) {
     const written = domainAssistantLine(tool.slug, useCase.slug);
     if (written) return written;
   }
-  return openAssistantLine(tool.slug, name, assistantSlot(query, useCase));
+  const slot = slotOverride ?? assistantSlot(query, useCase);
+  return openAssistantLine(tool.slug, name, guardSlot(slot));
 }
 
 function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean, index: number): string {
@@ -825,6 +843,228 @@ function alternativeLead(tool: IndexedTool): string {
   return `For finding ${article} ${name} alternative, here's how each tool can help:`;
 }
 
+type ConceptHit = { concept: Concept; score: number };
+
+function conceptHits(text: string): ConceptHit[] {
+  const lower = text.toLowerCase();
+  const tokens = new Set(words(text).map(correctToken));
+  return CONCEPTS
+    .map((concept) => ({ concept, score: scoreConcept(concept, lower, tokens) }))
+    .filter((item) => item.score >= CONCEPT_THRESHOLD)
+    .sort((a, b) => b.score - a.score || a.concept.id.localeCompare(b.concept.id));
+}
+
+function chooseWinner(hits: ConceptHit[]): ConceptHit | null {
+  if (hits.length === 0) return null;
+  const workflow = hits.find((item) => item.concept.id === "workflow");
+  const rest = hits.filter((item) => item.concept.id !== "workflow");
+  const base = workflow && rest.some((item) => item.score >= workflow.score) ? rest : hits;
+  const specific = base.filter((item) => !item.concept.broad);
+  const pool = specific.length > 0 ? specific : base;
+  const top = pool[0];
+  if (!top) return null;
+  return pool.filter((item) => item.score === top.score).length === 1 ? top : null;
+}
+
+/** Tags a concept may surface. Promotions also pulls catalog marketing and social tools. */
+export function matchTagsForConcept(concept: Concept, useCases: UseCase[]): string[] {
+  if (concept.id === "promotions") return ["marketing-promotions", "create-content", "social-media"];
+  const useCase = useCases.find((item) => item.slug === concept.useCase);
+  return useCase?.matchTags ?? [concept.useCase];
+}
+
+const JOB_SPLIT = /\s*(?:,\s*and\s+|,\s+|\s+&\s+|\s+\bplus\b\s+|\s+\balso\b\s+|\s+\band\b\s+)\s*/i;
+
+function jobParts(query: string): string[] {
+  const cleaned = stripWrappers(query).replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
+  return cleaned.split(JOB_SPLIT).map((part) => part.trim()).filter((part) => part.length > 0);
+}
+
+type CompoundHit = { part: string; concept: Concept; score: number };
+
+function phraseHit(concept: Concept, text: string): boolean {
+  const lower = text.toLowerCase();
+  return concept.phrases.some((phrase) => lower.includes(phrase));
+}
+
+function absorbed(hit: CompoundHit, hits: CompoundHit[]): boolean {
+  if (phraseHit(hit.concept, hit.part)) return false;
+  const tokens = new Set(words(hit.part));
+  const matched = hit.concept.anchors.filter((anchor) => tokens.has(anchor));
+  if (matched.length === 0) return false;
+  const others = hits.filter((other) => other.concept.useCase !== hit.concept.useCase);
+  return matched.every((anchor) => others.some((other) => other.concept.covered.includes(anchor)));
+}
+
+function compoundHits(query: string): CompoundHit[] | null {
+  const parts = jobParts(query);
+  if (parts.length < 2) return null;
+  const hits: CompoundHit[] = [];
+  for (const part of parts) {
+    const winner = chooseWinner(conceptHits(part));
+    if (!winner) continue;
+    hits.push({ part, concept: winner.concept, score: winner.score });
+  }
+  const kept = hits.filter((hit) => !absorbed(hit, hits));
+  if (new Set(kept.map((hit) => hit.concept.useCase)).size < 2) return null;
+  return kept;
+}
+
+const SHORT_LABEL: Record<string, string> = {
+  "marketing-promotions": "marketing promotions",
+  "finance-ops": "customer invoices",
+  "do-taxes": "taxes",
+  "scheduling-assistant": "meetings",
+  "meetings-knowledge": "meeting notes",
+  "create-content": "blog posts",
+  "social-media": "social posts",
+  "sales-outreach": "sales outreach",
+  "customer-support": "support tickets",
+  "knowledge-qa": "the knowledge base",
+  "listing-videos": "listing videos",
+  "manage-inbox": "an inbox",
+  "analyze-data": "a spreadsheet",
+  "hire-candidates": "hiring",
+  "plan-travel": "travel",
+  "shop-products": "shopping",
+  "coding-agents": "code",
+  "workflow-automation": "a workflow",
+  "find-off-market": "off-market deals",
+  "find-land": "land deals",
+  "rank-property-deals": "real estate deals",
+  "manage-portfolio": "a portfolio",
+  "it-helpdesk": "IT help desk tickets",
+  "security-ops": "security alerts",
+  "deep-research": "research",
+  tutoring: "tutoring",
+  "learn-language": "language practice",
+  "game-creative": "short clips",
+  "video-generation": "a video",
+  "voice-audio": "a voice track",
+  "make-images": "an image",
+  "make-3d": "a 3D model",
+  "avatar-video": "an avatar video",
+  "write-resume": "a resume",
+  "tool-use-browser": "browser steps",
+  "research-rag": "a RAG pipeline",
+  "multi-agent-workflows": "a multi-agent workflow",
+  "game-npcs": "game characters",
+  "real-estate": "real estate",
+};
+
+const INTRO_CLAUSE: Record<string, string> = {
+  "marketing-promotions": "schedule promo emails and posts",
+  "finance-ops": "draft and send invoices",
+  "do-taxes": "sort records for a tax return",
+  "scheduling-assistant": "schedule meetings",
+  "meetings-knowledge": "turn the call into notes",
+  "create-content": "draft blog posts",
+  "social-media": "put posts on a social schedule",
+  "sales-outreach": "find leads and email them",
+  "customer-support": "answer support tickets",
+  "knowledge-qa": "update the knowledge base",
+  "listing-videos": "edit a listing video",
+  "manage-inbox": "draft the follow-up email",
+  "analyze-data": "analyze a spreadsheet",
+  "hire-candidates": "screen candidates",
+  "plan-travel": "plan the trip",
+  "shop-products": "shop for the product",
+  "coding-agents": "write the code",
+  "workflow-automation": "connect the apps",
+  "find-off-market": "find off-market deals",
+  "find-land": "look up land",
+  "rank-property-deals": "rank the deals",
+  "manage-portfolio": "review a portfolio",
+  "it-helpdesk": "reset a password",
+  "security-ops": "review a security alert",
+  "deep-research": "research the question",
+  tutoring: "tutor the lesson",
+  "learn-language": "practice the language",
+  "game-creative": "cut a short clip",
+  "video-generation": "plan a cinematic video",
+  "voice-audio": "draft a voice track",
+  "make-images": "describe an image",
+  "make-3d": "describe a 3D model",
+  "avatar-video": "draft an avatar script",
+  "write-resume": "draft a resume",
+  "tool-use-browser": "fill the form",
+  "research-rag": "outline a RAG pipeline",
+  "multi-agent-workflows": "split the job across agents",
+  "game-npcs": "draft character lines",
+  "real-estate": "compare a property deal",
+};
+
+const PAIR_INTRO: Record<string, string> = {
+  "finance-ops+marketing-promotions":
+    "AI agents can schedule promo emails and posts, and draft and send invoices on a schedule, often from one workflow that connects your marketing and billing apps.",
+};
+
+function joinAnd(phrases: string[]): string {
+  if (phrases.length <= 1) return phrases[0] ?? "";
+  if (phrases.length === 2) return `${phrases[0]} and ${phrases[1]}`;
+  return `${phrases.slice(0, -1).join(", ")} and ${phrases[phrases.length - 1]}`;
+}
+
+function polishPart(phrase: string): string {
+  return phrase
+    .replace(/\bsending invoices to customers\b/gi, "sending customer invoices")
+    .replace(/\binvoices to customers\b/gi, "customer invoices")
+    .replace(/\btutoring me in\b/gi, "tutoring")
+    .replace(/\bemail them\b/gi, "emailing them")
+    .replace(/,\s+and\b/gi, " and")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function compoundLead(hits: CompoundHit[], useCases: UseCase[]): string {
+  const phrases = hits.map((hit) => {
+    const useCase = useCases.find((item) => item.slug === hit.concept.useCase) ?? null;
+    return polishPart(jobPhrase(hit.part, useCase));
+  });
+  return `For ${joinAnd(phrases)}, here's how each tool can help:`;
+}
+
+function compoundIntro(hits: CompoundHit[]): string {
+  const key = [...new Set(hits.map((hit) => hit.concept.useCase))].sort().join("+");
+  if (PAIR_INTRO[key]) return PAIR_INTRO[key];
+  const clauses: string[] = [];
+  const seen = new Set<string>();
+  for (const hit of hits) {
+    if (seen.has(hit.concept.useCase)) continue;
+    seen.add(hit.concept.useCase);
+    clauses.push(INTRO_CLAUSE[hit.concept.useCase] ?? "handle that part");
+  }
+  return `AI agents can ${joinAnd(clauses)}.`;
+}
+
+function compoundSlot(hits: CompoundHit[]): string {
+  const labels: string[] = [];
+  const seen = new Set<string>();
+  for (const hit of hits) {
+    const label = SHORT_LABEL[hit.concept.useCase] ?? "this job";
+    if (seen.has(label)) continue;
+    seen.add(label);
+    labels.push(label);
+  }
+  return joinAnd(labels);
+}
+
+function lineUseCase(tool: Tool, concept: Concept): string {
+  if (concept.id === "promotions") {
+    if (tool.useCaseTags.includes("marketing-promotions")) return "marketing-promotions";
+    if (tool.useCaseTags.includes("social-media")) return "social-media";
+    return "create-content";
+  }
+  return concept.useCase;
+}
+
+const BRIDGE_SLUGS = ["n8n", "make", "zapier"];
+
+function wantsBridge(hits: CompoundHit[]): boolean {
+  const ids = new Set(hits.map((hit) => hit.concept.useCase));
+  return ids.has("marketing-promotions") && ids.has("finance-ops");
+}
+
 export function rankCatalogQuery(
   query: string,
   catalog: { tools: Tool[]; useCases: UseCase[]; categories: Category[] },
@@ -877,65 +1117,120 @@ export function rankCatalogQuery(
   }
 
   const corrected = correctedQuery(query);
-  const lower = corrected.toLowerCase();
-  const tokens = new Set(words(corrected).map(correctToken));
-  const rankedConcepts = CONCEPTS
-    .map((concept) => ({ concept, score: scoreConcept(concept, lower, tokens) }))
-    .filter((item) => item.score >= CONCEPT_THRESHOLD)
-    .sort((a, b) => b.score - a.score);
-  const specificConcepts = rankedConcepts.filter((item) => !item.concept.broad);
-  const pool = specificConcepts.length > 0 ? specificConcepts : rankedConcepts;
-  const top = pool[0];
-  const tied = top ? pool.filter((item) => item.score === top.score) : [];
-  const winner = tied.length === 1 ? top : null;
-  if (winner?.concept.id === "video" && /\b(edit|editing|clip|clips|clipping|cut|make|making)\b/i.test(query)) {
-    // Video editing is not a land search. Land is already gated on land words.
-  }
-
   const terms = queryTokens(corrected);
   const queryWantsClips = terms.some((term) => CLIP_TERMS.has(term));
-  const specialists: IndexedTool[] = [];
-  if (winner) {
-    const allowed = new Set(winner.concept.categories);
-    const matchedCase = catalog.useCases.find((item) => item.slug === winner.concept.useCase);
-    const matchTags = matchedCase?.matchTags ?? [winner.concept.useCase];
-    const tagged = indexedTools.filter((tool) =>
-      !tool.source.generalPurpose &&
-      tool.useCaseTags.some((tag) => matchTags.includes(tag)) &&
-      tool.categories.every((category) => allowed.has(category)),
-    );
-    for (const tool of tagged) {
+  const assistantOrder = ["claude", "chatgpt", "gemini", "perplexity", "deepseek"];
+  const alt = alternativeTarget(corrected, indexedTools);
+  const assistants = indexedTools
+    .filter((tool) => tool.source.generalPurpose)
+    .sort((a, b) => assistantOrder.indexOf(a.slug) - assistantOrder.indexOf(b.slug));
+
+  const collect = (concept: Concept, score: number, text: string, clipAll: boolean): IndexedTool[] => {
+    const allowed = new Set(concept.categories);
+    const matchTags = matchTagsForConcept(concept, catalog.useCases);
+    const partTerms = queryTokens(text);
+    const found: IndexedTool[] = [];
+    for (const tool of indexedTools) {
+      if (tool.source.generalPurpose) continue;
+      if (!tool.useCaseTags.some((tag) => matchTags.includes(tag))) continue;
+      if (!tool.categories.every((category) => allowed.has(category))) continue;
       if (tool.slug === "synthesis-tutor" && !kidsTutorQuery(corrected)) continue;
       const ownTokens = new Set([...tool.nameTokens, ...tool.tokens]);
-      if (queryWantsClips && !hitsClipTerms(`${tool.name} ${tool.text}`, ownTokens)) continue;
+      const clipHere = clipAll || concept.id === "video";
+      if (queryWantsClips && clipHere && !hitsClipTerms(`${tool.name} ${tool.text}`, ownTokens)) continue;
       if (
-        winner.concept.id === "video" &&
+        concept.id === "video" &&
         !/\b(video|videos|clip|clips|clipping|youtube|caption|captions|stream|streams|reel|reels|edit|editing)\b/i.test(
           `${tool.name} ${tool.text}`,
         )
       ) {
         continue;
       }
-      const overlap = bm25(terms, tool.tokens, docTokens);
-      const recIndex = winner ? indexedCases.find((item) => item.slug === winner.concept.useCase)
-        ?.source.recommended.findIndex((item) => item.toolId === tool.source.id) ?? -1 : -1;
+      const overlap = bm25(partTerms.length > 0 ? partTerms : terms, tool.tokens, docTokens);
+      const recIndex = indexedCases.find((item) => item.slug === concept.useCase)
+        ?.source.recommended.findIndex((item) => item.toolId === tool.source.id) ?? -1;
+      const promoBonus = concept.id === "promotions" && tool.useCaseTags.includes("marketing-promotions") ? 12 : 0;
       const recBonus = recIndex >= 0 ? 8 - recIndex : 0;
-      tool.score = winner.score * 10 + overlap + recBonus + roleBonus(winner.concept.id, tool.slug, corrected);
-      specialists.push(tool);
+      found.push({
+        ...tool,
+        score: score * 10 + overlap + recBonus + promoBonus + roleBonus(concept.id, tool.slug, corrected),
+      });
     }
-  }
-  specialists.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
+    found.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
+    return found;
+  };
 
+  const compound = compoundHits(corrected);
+  if (compound) {
+    const seen = new Set<string>();
+    const specialists: IndexedTool[] = [];
+    const bridgeSlugs = new Set<string>();
+    const push = (tool: IndexedTool) => {
+      if (seen.has(tool.slug)) return;
+      seen.add(tool.slug);
+      specialists.push(tool);
+    };
+    if (wantsBridge(compound)) {
+      const lead = indexedTools.find((tool) => tool.slug === BRIDGE_SLUGS[0]);
+      if (lead) {
+        bridgeSlugs.add(lead.slug);
+        push({ ...lead, score: 5000 });
+      }
+    }
+    const groups = compound.map((hit) => collect(hit.concept, hit.score, hit.part, false));
+    for (let index = 0; index < 3; index++) {
+      for (const group of groups) {
+        if (group[index]) push(group[index]);
+      }
+    }
+    if (wantsBridge(compound)) {
+      for (const slug of BRIDGE_SLUGS.slice(1)) {
+        const tool = indexedTools.find((item) => item.slug === slug);
+        if (!tool) continue;
+        bridgeSlugs.add(slug);
+        push({ ...tool, score: 4000 - BRIDGE_SLUGS.indexOf(slug) });
+      }
+    }
+    const chosen = specialists.slice(0, 7);
+    const slot = compoundSlot(compound);
+    const cases = compound.flatMap((hit) => {
+      const found = indexedCases.find((item) => item.slug === hit.concept.useCase);
+      if (!found) return [];
+      found.score = Math.max(found.score, hit.score);
+      return [found];
+    }).filter((item, index, list) => list.findIndex((other) => other.slug === item.slug) === index);
+    const whyFor = (tool: IndexedTool, index: number): string => {
+      if (tool.source.generalPurpose) return assistantWhy(tool.source, corrected, null, slot);
+      if (bridgeSlugs.has(tool.slug) && BRIDGE_LINES[tool.slug]) return BRIDGE_LINES[tool.slug];
+      const hit = compound.find((item) => {
+        const tags = matchTagsForConcept(item.concept, catalog.useCases);
+        return tool.useCaseTags.some((tag) => tags.includes(tag))
+          && tool.categories.every((category) => item.concept.categories.includes(category));
+      }) ?? compound[0];
+      const useCase = catalog.useCases.find((item) => item.slug === lineUseCase(tool.source, hit.concept)) ?? null;
+      return whyItHelps(tool.source, useCase, hit.part, false, index);
+    };
+    const selected = [
+      ...chosen,
+      ...assistants.filter((tool) => !chosen.some((item) => item.slug === tool.slug)),
+    ].filter((tool) => tool.slug !== alt?.slug);
+    return {
+      tools: selected.map((tool, index) => presentTool(tool, whyFor(tool, index), Boolean(tool.source.generalPurpose))),
+      useCases: cases.map(presentCase),
+      fallback: false,
+      lowMatch: false,
+      lead: alt ? alternativeLead(alt) : compoundLead(compound, catalog.useCases),
+      intro: compoundIntro(compound),
+      disclaimer: cases.map((item) => item.source.disclaimer).find((item) => item) ?? null,
+    };
+  }
+
+  const winner = chooseWinner(conceptHits(corrected));
+  const specialists = winner ? collect(winner.concept, winner.score, corrected, true) : [];
   const primaryCase = winner
     ? indexedCases.find((item) => item.slug === winner.concept.useCase) ?? null
     : null;
   if (primaryCase && winner) primaryCase.score = winner.score;
-
-  const assistantOrder = ["claude", "chatgpt", "gemini", "perplexity", "deepseek"];
-  const alt = alternativeTarget(corrected, indexedTools);
-  const assistants = indexedTools
-    .filter((tool) => tool.source.generalPurpose)
-    .sort((a, b) => assistantOrder.indexOf(a.slug) - assistantOrder.indexOf(b.slug));
   const selected = [
     ...specialists.slice(0, 5),
     ...assistants.filter((tool) => !specialists.some((item) => item.slug === tool.slug)),
@@ -946,7 +1241,15 @@ export function rankCatalogQuery(
     tools: selected.map((tool, index) =>
       presentTool(
         tool,
-        whyItHelps(tool.source, primaryCase?.source ?? null, corrected, Boolean(tool.source.generalPurpose), index),
+        whyItHelps(
+          tool.source,
+          tool.source.generalPurpose || !winner
+            ? primaryCase?.source ?? null
+            : catalog.useCases.find((item) => item.slug === lineUseCase(tool.source, winner.concept)) ?? primaryCase?.source ?? null,
+          corrected,
+          Boolean(tool.source.generalPurpose),
+          index,
+        ),
         Boolean(tool.source.generalPurpose),
       ),
     ),

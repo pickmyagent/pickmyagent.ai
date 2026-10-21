@@ -128,7 +128,7 @@ export const CONCEPTS: Concept[] = [
     id: "sales",
     useCase: "sales-outreach",
     categories: ["sales"],
-    phrases: ["sales outreach", "cold email", "qualify leads"],
+    phrases: ["sales outreach", "cold email", "qualify leads", "email them", "email leads", "email the leads"],
     anchors: ["lead", "leads", "outreach", "crm", "pipeline", "prospect", "prospects", "sales"],
     coveredVerbs: [],
     covered: [
@@ -141,7 +141,7 @@ export const CONCEPTS: Concept[] = [
     id: "email",
     useCase: "manage-inbox",
     categories: ["productivity"],
-    phrases: ["email inbox", "draft replies", "draft reply"],
+    phrases: ["email inbox", "draft replies", "draft reply", "follow-up email", "follow up email"],
     anchors: ["inbox", "gmail", "triage"],
     coveredVerbs: ["manage"],
     covered: [
@@ -153,7 +153,15 @@ export const CONCEPTS: Concept[] = [
     id: "schedule",
     useCase: "scheduling-assistant",
     categories: ["productivity"],
-    phrases: ["personal assistant", "calendar management"],
+    phrases: [
+      "personal assistant",
+      "calendar management",
+      "schedule meetings",
+      "schedule a meeting",
+      "scheduling meetings",
+      "schedule the follow-up",
+      "schedule a follow-up",
+    ],
     anchors: ["calendar", "scheduling", "reminder", "reminders"],
     coveredVerbs: [],
     covered: [
@@ -172,6 +180,31 @@ export const CONCEPTS: Concept[] = [
     covered: [
       "create", "optimize", "content", "blog", "posts", "post", "social", "media", "seo",
       "articles", "article", "marketing", "copy", "campaign", "assets", "scale",
+    ],
+  },
+  {
+    id: "promotions",
+    useCase: "marketing-promotions",
+    categories: ["content"],
+    phrases: [
+      "marketing promotion",
+      "marketing promotions",
+      "promo email",
+      "promo emails",
+      "promo campaign",
+      "promo campaigns",
+      "discount campaign",
+      "coupon campaign",
+      "coupon code",
+    ],
+    anchors: [
+      "promotion", "promotions", "promo", "promos", "campaign", "campaigns",
+      "discount", "discounts", "coupon", "coupons",
+    ],
+    coveredVerbs: ["automate", "schedule", "send"],
+    covered: [
+      "marketing", "promotion", "promotions", "promo", "promos", "campaign", "campaigns",
+      "discount", "discounts", "coupon", "coupons", "email", "emails",
     ],
   },
   {
@@ -196,6 +229,8 @@ export const CONCEPTS: Concept[] = [
       "screen a resume",
       "screen resumes",
       "source candidates",
+      "schedule interviews",
+      "schedule an interview",
     ],
     anchors: [
       "hiring", "recruit", "recruiting", "recruiter", "candidate", "candidates",
@@ -240,8 +275,25 @@ export const CONCEPTS: Concept[] = [
     id: "invoices",
     useCase: "finance-ops",
     categories: ["finance-ops"],
-    phrases: ["accounts payable", "purchase order", "purchase orders", "finance ops"],
-    anchors: ["invoice", "invoices", "expense", "expenses", "bookkeeping", "receipt", "receipts"],
+    phrases: [
+      "accounts payable",
+      "purchase order",
+      "purchase orders",
+      "finance ops",
+      "send invoices",
+      "send an invoice",
+      "sending invoices",
+      "bill clients",
+      "bill customers",
+      "customer invoice",
+      "customer invoices",
+      "client invoice",
+      "client invoices",
+    ],
+    anchors: [
+      "invoice", "invoices", "invoicing", "billing", "expense", "expenses",
+      "bookkeeping", "receipt", "receipts",
+    ],
     coveredVerbs: ["process"],
     covered: [
       "process", "invoices", "invoice", "handle", "finance", "ops", "extract", "data",
@@ -264,8 +316,8 @@ export const CONCEPTS: Concept[] = [
     id: "social",
     useCase: "social-media",
     categories: ["content"],
-    phrases: ["social media"],
-    anchors: ["instagram", "linkedin"],
+    phrases: ["social media", "social posts", "to social", "on social"],
+    anchors: ["instagram", "linkedin", "social"],
     coveredVerbs: ["manage"],
     covered: [
       "manage", "social", "media", "content", "scheduling", "engagement", "monitoring",
@@ -522,7 +574,7 @@ export const CONCEPTS: Concept[] = [
     id: "meetings",
     useCase: "meetings-knowledge",
     categories: ["knowledge"],
-    phrases: ["meeting notes", "action items"],
+    phrases: ["meeting notes", "action items", "take notes", "take meeting notes"],
     anchors: ["meeting", "meetings", "transcript", "transcribe", "transcription"],
     coveredVerbs: ["turn"],
     covered: [
@@ -535,7 +587,7 @@ export const CONCEPTS: Concept[] = [
     id: "browser",
     useCase: "tool-use-browser",
     categories: ["tool-use"],
-    phrases: ["computer use", "computer-use", "fill forms", "browser agent"],
+    phrases: ["computer use", "computer-use", "fill forms", "fill out forms", "fill out a form", "browser agent"],
     anchors: ["browser", "mcp", "scrape", "scraping"],
     coveredVerbs: ["run"],
     covered: [

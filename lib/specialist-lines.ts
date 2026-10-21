@@ -127,6 +127,14 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "Reclaim shares scheduling links and holds focus blocks on the calendar.",
     ],
   },
+  "marketing-promotions": {
+    klaviyo: [
+      "Klaviyo sends email and text campaigns and builds a flow for a promotion.",
+    ],
+    mailchimp: [
+      "Mailchimp creates an email campaign and can send it to a list.",
+    ],
+  },
   "create-content": {
     "copy-ai": [
       "Copy.ai runs marketing content and go-to-market writing through a workflow.",
@@ -491,6 +499,13 @@ export function listingSpecialistLine(toolSlug: string, query: string): string |
   if (isListingPhotoQuery(query)) return LISTING_PHOTO_LINES[toolSlug] ?? null;
   return specialistLine("listing-videos", toolSlug);
 }
+
+/** Docs-backed lines for a workflow tool that can touch both jobs in one automation. */
+export const BRIDGE_LINES: Record<string, string> = {
+  n8n: "n8n connects Mailchimp campaigns and QuickBooks invoices in one hosted workflow.",
+  make: "Make connects Mailchimp campaigns and QuickBooks invoices in one scenario.",
+  zapier: "Zapier connects a new Mailchimp subscriber to a QuickBooks invoice.",
+};
 
 export function specialistLine(useCaseSlug: string, toolSlug: string, index = 0): string | null {
   const lines = LINES[useCaseSlug]?.[toolSlug];

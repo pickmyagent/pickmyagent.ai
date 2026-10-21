@@ -1,0 +1,26 @@
+{
+  "slug": "marketing-promotions",
+  "title": "Automate marketing promotions",
+  "summary": "Schedule promo emails, texts, and posts.",
+  "audienceHints": [
+    "marketers"
+  ],
+  "matchTags": [
+    "marketing-promotions"
+  ],
+  "jobPhrase": "automating marketing promotions",
+  "assistantTask": "outline a promo email and the post that goes with it",
+  "assistantContext": "scheduling a promotion",
+  "searchTopic": "the offer in the promotion",
+  "recommended": [
+    {
+      "toolId": "klaviyo",
+      "why": "Email and SMS campaigns on a free plan for small lists."
+    },
+    {
+      "toolId": "mailchimp",
+      "why": "Email campaigns on a free plan for 250 contacts."
+    }
+  ],
+  "intro": "AI agents can draft a promotion, schedule the email or post, and leave the send for you to approve."
+}
