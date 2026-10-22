@@ -296,9 +296,9 @@
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
@@ -313,9 +313,9 @@
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
@@ -330,9 +330,9 @@
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
@@ -347,9 +347,9 @@
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
@@ -365,8 +365,8 @@
 - Domain: manage-portfolio
 - Cards:
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
@@ -381,9 +381,9 @@
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
@@ -571,7 +571,7 @@
 ## 36. cold email to leads
 
 - Header: For help with a cold email to leads, here's how each tool can help:
-- Intro: AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent.
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
 - Domain: sales-outreach
 - Cards:
   - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
@@ -587,7 +587,7 @@
 ## 37. is there an AI that can draft a cold email
 
 - Header: For drafting a cold email, here's how each tool can help:
-- Intro: AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent.
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
 - Domain: sales-outreach
 - Cards:
   - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
@@ -603,12 +603,12 @@
 ## 38. qualify leads
 
 - Header: For qualifying leads, here's how each tool can help:
-- Intro: AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent.
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
 - Domain: sales-outreach
 - Cards:
-  - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
   - Apollo — Specialist · Docs checked — Apollo looks up contacts and companies before anyone writes sales outreach.
   - Clay — Specialist · Docs checked — Clay pulls lead data from many providers into one table for outreach.
+  - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
   - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline how to research a lead and which outreach sentence you would actually send.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a qualification checklist before you add a prospect to a pipeline.
@@ -619,7 +619,7 @@
 ## 39. best tool for sales outreach
 
 - Header: For help with sales outreach, here's how each tool can help:
-- Intro: AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent.
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
 - Domain: sales-outreach
 - Cards:
   - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
@@ -635,7 +635,7 @@
 ## 40. I need AI to update my CRM pipeline
 
 - Header: For updating your CRM pipeline, here's how each tool can help:
-- Intro: AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent.
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
 - Domain: sales-outreach
 - Cards:
   - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
@@ -741,7 +741,7 @@
 ## 47. calendar management
 
 - Header: For scheduling and admin, here's how each tool can help:
-- Intro: AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head.
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
 - Domain: scheduling-assistant
 - Cards:
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
@@ -756,7 +756,7 @@
 ## 48. best tool for calendar management
 
 - Header: For scheduling and admin, here's how each tool can help:
-- Intro: AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head.
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
 - Domain: scheduling-assistant
 - Cards:
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
@@ -771,7 +771,7 @@
 ## 49. I need AI to manage my calendar
 
 - Header: For managing your calendar, here's how each tool can help:
-- Intro: AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head.
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
 - Domain: scheduling-assistant
 - Cards:
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
@@ -786,7 +786,7 @@
 ## 50. is there an AI that can manage my calendar
 
 - Header: For managing your calendar, here's how each tool can help:
-- Intro: AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head.
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
 - Domain: scheduling-assistant
 - Cards:
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
@@ -801,7 +801,7 @@
 ## 51. reminders for next week
 
 - Header: For help with reminders for next week, here's how each tool can help:
-- Intro: AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head.
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
 - Domain: scheduling-assistant
 - Cards:
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
@@ -981,7 +981,7 @@
 ## 63. screen candidates
 
 - Header: For screening candidates, here's how each tool can help:
-- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
 - Domain: hire-candidates
 - Cards:
   - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
@@ -1011,7 +1011,7 @@
 ## 65. source candidates
 
 - Header: For sourcing candidates, here's how each tool can help:
-- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
 - Domain: hire-candidates
 - Cards:
   - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
@@ -1026,7 +1026,7 @@
 ## 66. use an agent for hiring
 
 - Header: For screening and sourcing candidates, here's how each tool can help:
-- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
 - Domain: hire-candidates
 - Cards:
   - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
@@ -1056,7 +1056,7 @@
 ## 68. resume review for this applicant
 
 - Header: For reviewing this applicant's resume, here's how each tool can help:
-- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
 - Domain: hire-candidates
 - Cards:
   - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
@@ -1933,12 +1933,12 @@
 ## 126. automate my workflow
 
 - Header: For automating your workflow, here's how each tool can help:
-- Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
+- Intro: AI agents can connect the apps in a repeated workflow and run the steps you approve.
 - Domain: workflow-automation
 - Cards:
   - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
   - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
-  - Zapier — Specialist · Docs checked — Zapier connects hosted apps so a repeated task fires without a server of your own.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
@@ -1948,12 +1948,12 @@
 ## 127. workflow
 
 - Header: For automating repeated tasks, here's how each tool can help:
-- Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
+- Intro: AI agents can connect the apps in a repeated workflow and run the steps you approve.
 - Domain: workflow-automation
 - Cards:
   - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
   - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
-  - Zapier — Specialist · Docs checked — Zapier connects hosted apps so a repeated task fires without a server of your own.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
@@ -1963,12 +1963,12 @@
 ## 128. best tool for workflow automation
 
 - Header: For automating repeated tasks, here's how each tool can help:
-- Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
+- Intro: AI agents can connect the apps in a repeated workflow and run the steps you approve.
 - Domain: workflow-automation
 - Cards:
   - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
   - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
-  - Zapier — Specialist · Docs checked — Zapier connects hosted apps so a repeated task fires without a server of your own.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
@@ -1978,12 +1978,12 @@
 ## 129. I need AI to automate a repeated task
 
 - Header: For automating a repeated task, here's how each tool can help:
-- Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
+- Intro: AI agents can connect the apps in a repeated workflow and run the steps you approve.
 - Domain: workflow-automation
 - Cards:
   - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
   - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
-  - Zapier — Specialist · Docs checked — Zapier connects hosted apps so a repeated task fires without a server of your own.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
@@ -1993,12 +1993,12 @@
 ## 130. multi-tool workflow
 
 - Header: For help with a multi-tool workflow, here's how each tool can help:
-- Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
+- Intro: AI agents can connect the apps in a repeated workflow and run the steps you approve.
 - Domain: workflow-automation
 - Cards:
   - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
   - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
-  - Zapier — Specialist · Docs checked — Zapier connects hosted apps so a repeated task fires without a server of your own.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
@@ -2195,7 +2195,7 @@
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
 - Domain: tool-use-browser
 - Cards:
-  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through steps in a browser from Python.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
@@ -2210,7 +2210,7 @@
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
 - Domain: tool-use-browser
 - Cards:
-  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through steps in a browser from Python.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
@@ -2225,7 +2225,7 @@
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
 - Domain: tool-use-browser
 - Cards:
-  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through steps in a browser from Python.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
@@ -2240,7 +2240,7 @@
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
 - Domain: tool-use-browser
 - Cards:
-  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through steps in a browser from Python.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
@@ -2255,7 +2255,7 @@
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
 - Domain: tool-use-browser
 - Cards:
-  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through steps in a browser from Python.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
@@ -2673,7 +2673,7 @@
 ## 179. which tool should screen candidates
 
 - Header: For screening candidates, here's how each tool can help:
-- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
 - Domain: hire-candidates
 - Cards:
   - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
@@ -2691,9 +2691,9 @@
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
@@ -2798,9 +2798,9 @@
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
@@ -2875,7 +2875,7 @@
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
 - Domain: tool-use-browser
 - Cards:
-  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through steps in a browser from Python.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
@@ -2887,7 +2887,7 @@
 ## 193. I want an agent that will source candidates
 
 - Header: For sourcing candidates, here's how each tool can help:
-- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
 - Domain: hire-candidates
 - Cards:
   - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
@@ -2931,7 +2931,7 @@
 ## 196. help me draft a cold email
 
 - Header: For drafting a cold email, here's how each tool can help:
-- Intro: AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent.
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
 - Domain: sales-outreach
 - Cards:
   - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
@@ -2947,7 +2947,7 @@
 ## 197. agent for my calendar
 
 - Header: For scheduling and admin, here's how each tool can help:
-- Intro: AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head.
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
 - Domain: scheduling-assistant
 - Cards:
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
@@ -2993,12 +2993,12 @@
 ## 200. something for workflow automation
 
 - Header: For automating repeated tasks, here's how each tool can help:
-- Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
+- Intro: AI agents can connect the apps in a repeated workflow and run the steps you approve.
 - Domain: workflow-automation
 - Cards:
   - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
   - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
-  - Zapier — Specialist · Docs checked — Zapier connects hosted apps so a repeated task fires without a server of your own.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
@@ -3044,9 +3044,9 @@
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in an investment portfolio and list fee questions worth asking.
@@ -3074,12 +3074,12 @@
 ## 205. workflow?
 
 - Header: For automating repeated tasks, here's how each tool can help:
-- Intro: AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual.
+- Intro: AI agents can connect the apps in a repeated workflow and run the steps you approve.
 - Domain: workflow-automation
 - Cards:
   - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
   - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
-  - Zapier — Specialist · Docs checked — Zapier connects hosted apps so a repeated task fires without a server of your own.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
@@ -3194,7 +3194,7 @@
 ## 213. calendar
 
 - Header: For scheduling and admin, here's how each tool can help:
-- Intro: AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head.
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
 - Domain: scheduling-assistant
 - Cards:
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
@@ -3488,7 +3488,7 @@
 ## 232. screen a resume
 
 - Header: For screening a resume, here's how each tool can help:
-- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
 - Domain: hire-candidates
 - Cards:
   - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
@@ -3642,16 +3642,16 @@
   - Zapier — Specialist · Docs checked — Zapier links Mailchimp and QuickBooks so a step in one app triggers a step in the other.
   - Klaviyo — Specialist · Docs checked — Klaviyo sends email and text campaigns and builds a flow for a promotion.
   - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, automating marketing promotions and sending customer invoices, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers automating marketing promotions and sending customer invoices.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to automate marketing promotions and send customer invoices.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to automate marketing promotions and send customer invoices.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to set up a sheet that tracks your invoices and your promo campaigns.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on automating marketing promotions and sending customer invoices, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, automating marketing promotions and sending customer invoices.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with automating marketing promotions or sending customer invoices, and why.
 
 ## 243. track expenses and file my taxes
 
 - Header: For tracking expenses and filing your taxes, here's how each tool can help:
-- Intro: AI agents can track expenses and file your taxes.
+- Intro: AI agents can sort receipts into expense categories as you go and pull them into a tax-ready summary, so filing goes faster.
 - Cards:
   - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
   - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
@@ -3659,32 +3659,32 @@
   - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
   - BILL — Specialist · Docs checked — BILL includes spend and expense tools with its invoicing.
   - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, tracking expenses and filing taxes, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers tracking expenses and filing taxes.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, tracking expenses and filing taxes.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on tracking expenses and filing taxes, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, tracking expenses and filing taxes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to track expenses and file your taxes.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to track expenses and file your taxes.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at tracking expenses and filing your taxes.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on tracking expenses and filing your taxes, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with tracking expenses or filing your taxes, and why.
 
 ## 244. schedule meetings and take notes
 
 - Header: For scheduling meetings and taking notes, here's how each tool can help:
-- Intro: AI agents can schedule meetings and take notes.
+- Intro: AI agents can find a meeting time that works for everyone and write up notes and action items once the call ends.
 - Cards:
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
   - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
   - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
   - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
   - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, scheduling meetings and taking notes, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers scheduling meetings and taking notes.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, scheduling meetings and taking notes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to schedule meetings and take notes.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to schedule meetings and take notes.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at scheduling meetings and taking notes.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on scheduling meetings and taking notes, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, scheduling meetings and taking notes.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with scheduling meetings or taking notes, and why.
 
 ## 245. write blog posts and post them to social
 
 - Header: For writing blog posts and posting them to social media, here's how each tool can help:
-- Intro: AI agents can write blog posts and post them to social media.
+- Intro: AI agents can draft the blog posts and turn the main points into social posts you can schedule.
 - Cards:
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
   - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
@@ -3692,16 +3692,16 @@
   - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
   - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, writing blog posts and posting them to social media, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers writing blog posts and posting them to social media.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, writing blog posts and posting them to social media.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to write blog posts and post them to social media.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to write blog posts and post them to social media.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at writing blog posts and posting them to social media.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on writing blog posts and posting them to social media, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, writing blog posts and posting them to social media.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with writing blog posts or posting them to social media, and why.
 
 ## 246. find leads and email them
 
 - Header: For finding leads and emailing them, here's how each tool can help:
-- Intro: AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent.
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
 - Domain: sales-outreach
 - Cards:
   - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
@@ -3717,7 +3717,7 @@
 ## 247. answer support tickets and update the knowledge base
 
 - Header: For answering support tickets and updating the knowledge base, here's how each tool can help:
-- Intro: AI agents can answer support tickets and update the knowledge base.
+- Intro: AI agents can draft a reply to the support ticket and file the answer in the knowledge base.
 - Cards:
   - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
   - Guru — Specialist · Docs checked — Guru answers questions from company cards and lets its agents improve those cards.
@@ -3725,16 +3725,16 @@
   - Glean — Specialist · Docs checked — Glean searches internal company documents through a large set of connectors.
   - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
   - Slite — Specialist · Docs checked — Slite answers questions over a team's docs with its Ask search.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, answering support tickets and updating the knowledge base, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers answering support tickets and updating the knowledge base.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, answering support tickets and updating the knowledge base.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to answer support tickets and update the knowledge base.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to answer support tickets and update the knowledge base.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at answering support tickets and updating the knowledge base.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on answering support tickets and updating the knowledge base, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, answering support tickets and updating the knowledge base.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with answering support tickets or updating the knowledge base, and why.
 
 ## 248. edit listing videos and post to instagram
 
 - Header: For editing listing videos and posting to Instagram, here's how each tool can help:
-- Intro: AI agents can edit listing videos and post them to Instagram.
+- Intro: AI agents can trim the listing video, add captions, and draft the Instagram post that goes with it.
 - Cards:
   - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
   - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
@@ -3742,16 +3742,16 @@
   - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
   - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
   - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, editing listing videos and posting to Instagram, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers editing listing videos and posting to Instagram.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, editing listing videos and posting to Instagram.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on editing listing videos and posting to Instagram, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, editing listing videos and posting to Instagram.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to edit listing videos and post them to Instagram.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to edit listing videos and post them to Instagram.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at editing listing videos and posting them to Instagram.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on editing listing videos and posting them to Instagram, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with editing listing videos or posting them to Instagram, and why.
 
 ## 249. send customer invoices and automate promo campaigns
 
 - Header: For sending customer invoices and automating promo campaigns, here's how each tool can help:
-- Intro: AI agents can send customer invoices and automate promo campaigns.
+- Intro: AI agents can send the customer invoice and schedule the promo emails from the apps you already use.
 - Cards:
   - n8n — Specialist · Docs checked — n8n connects Mailchimp campaigns and QuickBooks invoices in one workflow.
   - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
@@ -3760,31 +3760,31 @@
   - Zapier — Specialist · Docs checked — Zapier links Mailchimp and QuickBooks so a step in one app triggers a step in the other.
   - Mailchimp — Specialist · Docs checked — Mailchimp builds promo email campaigns and schedules them to your list.
   - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, sending customer invoices and automating promo campaigns, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers sending customer invoices and automating promo campaigns.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to send customer invoices and automate promo campaigns.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to send customer invoices and automate promo campaigns.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to set up a sheet that tracks your invoices and your promo campaigns.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on sending customer invoices and automating promo campaigns, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, sending customer invoices and automating promo campaigns.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with sending customer invoices or automating promo campaigns, and why.
 
 ## 250. bill clients and draft a blog post
 
 - Header: For billing clients and drafting a blog post, here's how each tool can help:
-- Intro: AI agents can bill clients and draft a blog post.
+- Intro: AI agents can prepare the client invoice and draft the blog post for you to review before either goes out.
 - Cards:
   - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
   - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, billing clients and drafting a blog post, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers billing clients and drafting a blog post.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, billing clients and drafting a blog post.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to bill clients and draft a blog post.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to bill clients and draft a blog post.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at billing clients and drafting a blog post.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on billing clients and drafting a blog post, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, billing clients and drafting a blog post.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with billing clients or drafting a blog post, and why.
 
 ## 251. file my taxes & track my expenses
 
 - Header: For filing your taxes and tracking your expenses, here's how each tool can help:
-- Intro: AI agents can file your taxes and track expenses.
+- Intro: AI agents can sort receipts into expense categories as you go and pull them into a tax-ready summary, so filing goes faster.
 - Cards:
   - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
   - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
@@ -3792,32 +3792,32 @@
   - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
   - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
   - BILL — Specialist · Docs checked — BILL includes spend and expense tools with its invoicing.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, filing taxes and tracking expenses, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers filing taxes and tracking expenses.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, filing taxes and tracking expenses.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on filing taxes and tracking expenses, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, filing taxes and tracking expenses.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to file your taxes and track expenses.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to file your taxes and track expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at filing your taxes and tracking expenses.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on filing your taxes and tracking expenses, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with filing your taxes or tracking expenses, and why.
 
 ## 252. take meeting notes and schedule the follow-up
 
 - Header: For taking meeting notes and scheduling the follow-up, here's how each tool can help:
-- Intro: AI agents can take meeting notes and schedule the follow-up.
+- Intro: AI agents can write up the meeting notes and propose a time for the follow-up.
 - Cards:
   - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
   - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
   - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
   - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, taking meeting notes and scheduling the follow-up, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers taking meeting notes and scheduling the follow-up.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, taking meeting notes and scheduling the follow-up.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to take meeting notes and schedule the follow-up.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to take meeting notes and schedule the follow-up.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at taking meeting notes and scheduling the follow-up.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on taking meeting notes and scheduling the follow-up, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, taking meeting notes and scheduling the follow-up.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with taking meeting notes or scheduling the follow-up, and why.
 
 ## 253. draft a cold email and update the CRM
 
 - Header: For drafting a cold email and updating the CRM, here's how each tool can help:
-- Intro: AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent.
+- Intro: AI agents can draft the cold email and log the contact in your CRM.
 - Domain: sales-outreach
 - Cards:
   - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
@@ -3833,7 +3833,7 @@
 ## 254. clip a youtube short and post it to instagram
 
 - Header: For clipping a YouTube short and posting it to Instagram, here's how each tool can help:
-- Intro: AI agents can clip a YouTube short and post it to Instagram.
+- Intro: AI agents can cut the YouTube video into a short and draft the Instagram caption to post with it.
 - Cards:
   - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
@@ -3841,16 +3841,16 @@
   - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
   - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
   - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, clipping a YouTube short and posting it to Instagram, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers clipping a YouTube short and posting it to Instagram.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, clipping a YouTube short and posting it to Instagram.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to clip a YouTube short and post it to Instagram.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to clip a YouTube short and post it to Instagram.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at clipping a YouTube short and posting it to Instagram.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on clipping a YouTube short and posting it to Instagram, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, clipping a YouTube short and posting it to Instagram.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with clipping a YouTube short or posting it to Instagram, and why.
 
 ## 255. make a listing video and find off-market deals
 
 - Header: For making a listing video and finding off-market deals, here's how each tool can help:
-- Intro: AI agents can make a listing video and find off-market deals.
+- Intro: AI agents can turn listing photos into a property video and pull owner records for off-market deals.
 - Cards:
   - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
@@ -3858,16 +3858,16 @@
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough-style video with music and text.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, making a listing video and finding off-market deals, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers making a listing video and finding off-market deals.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, making a listing video and finding off-market deals.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to make a listing video and find off-market deals.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to make a listing video and find off-market deals.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at making a listing video and finding off-market deals.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on making a listing video and finding off-market deals, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, making a listing video and finding off-market deals.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with making a listing video or finding off-market deals, and why.
 
 ## 256. screen candidates and schedule interviews
 
 - Header: For screening candidates and scheduling interviews, here's how each tool can help:
-- Intro: AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve.
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
 - Domain: hire-candidates
 - Cards:
   - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
@@ -3882,7 +3882,7 @@
 ## 257. analyze a spreadsheet and write a blog post
 
 - Header: For analyzing a spreadsheet and writing a blog post, here's how each tool can help:
-- Intro: AI agents can analyze a spreadsheet and write a blog post.
+- Intro: AI agents can read the spreadsheet, pull out the findings, and draft a blog post from them.
 - Cards:
   - Rows — Specialist · Docs checked — Rows analyzes spreadsheet data with an assistant sitting in the grid.
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
@@ -3890,79 +3890,79 @@
   - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Hex — Specialist · Docs checked — Hex keeps a shared notebook where a team analyzes data with its agent.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, analyzing a spreadsheet and writing a blog post, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers analyzing a spreadsheet and writing a blog post.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, analyzing a spreadsheet and writing a blog post.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to analyze a spreadsheet and write a blog post.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to analyze a spreadsheet and write a blog post.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at analyzing a spreadsheet and writing a blog post.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on analyzing a spreadsheet and writing a blog post, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, analyzing a spreadsheet and writing a blog post.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with analyzing a spreadsheet or writing a blog post, and why.
 
 ## 258. plan a trip and shop for luggage
 
 - Header: For planning a trip and shopping for luggage, here's how each tool can help:
-- Intro: AI agents can plan the trip and shop for luggage.
+- Intro: AI agents can sketch the trip itinerary and compare luggage that fits how you are traveling.
 - Cards:
   - GuideGeek — Specialist · Docs checked — GuideGeek plans travel across flights, stays, restaurants, and experiences.
   - Alexa for Shopping — Specialist · Docs checked — Alexa for Shopping answers product questions and recommends items in Amazon's app.
   - Wonderplan — Specialist · Docs checked — Wonderplan drafts a custom itinerary for the trip.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map both jobs, planning a trip and shopping for luggage, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers planning a trip and shopping for luggage.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, planning a trip and shopping for luggage.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on planning a trip and shopping for luggage, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, planning a trip and shopping for luggage.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to arrange the trip and shop for luggage.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to plan the trip and shop for luggage.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at planning the trip and shopping for luggage.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on planning the trip and shopping for luggage, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with planning the trip or shopping for luggage, and why.
 
 ## 259. reset a password and answer a support ticket
 
 - Header: For resetting a password and answering a support ticket, here's how each tool can help:
-- Intro: AI agents can reset a password and answer a support ticket.
+- Intro: AI agents can walk through the password reset and draft the reply to the support ticket.
 - Cards:
   - Freshservice — Specialist · Docs checked — Freshservice runs an IT service desk that takes incoming requests.
   - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
   - Moveworks — Specialist · Docs checked — Moveworks routes employee IT requests and answers common ones itself.
   - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
   - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, resetting a password and answering a support ticket, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers resetting a password and answering a support ticket.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, resetting a password and answering a support ticket.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to reset a password and answer a support ticket.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to reset a password and answer a support ticket.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at resetting a password and answering a support ticket.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on resetting a password and answering a support ticket, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, resetting a password and answering a support ticket.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with resetting a password or answering a support ticket, and why.
 
 ## 260. do my taxes plus manage my portfolio
 
 - Header: For doing your taxes and managing your portfolio, here's how each tool can help:
-- Intro: AI agents can do your taxes and manage your portfolio.
+- Intro: AI agents can organize the tax return and show a summary of the accounts in your portfolio.
 - Cards:
   - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot lines up accounts and reads the investment portfolio from them.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
   - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
   - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
-  - Composer — Specialist · Docs checked — Composer automates one trading strategy attached to an investment account.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, doing taxes and managing your portfolio, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers doing taxes and managing your portfolio.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, doing taxes and managing your portfolio.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on doing taxes and managing your portfolio, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, doing taxes and managing your portfolio.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to do your taxes and manage your portfolio.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to do your taxes and manage your portfolio.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at doing your taxes and managing your portfolio.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on doing your taxes and managing your portfolio, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with doing your taxes or managing your portfolio, and why.
 
 ## 261. find land and rank rental properties
 
 - Header: For finding land and ranking rental properties, here's how each tool can help:
-- Intro: AI agents can find land and rank rental properties.
+- Intro: AI agents can screen land parcels and rank rental properties by the income numbers.
 - Cards:
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
   - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
   - DealCheck — Specialist · Docs checked — DealCheck runs a rental, flip, or commercial calculator and lines the deals up together.
   - PropStream — Specialist · Docs checked — PropStream searches property records for land parcels.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, finding land and ranking rentals, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers finding land and ranking rentals.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, finding land and ranking rentals.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on finding land and ranking rentals, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, finding land and ranking rentals.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to find land and rank rental properties.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to find land and rank rental properties.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at finding land and ranking rental properties.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on finding land and ranking rental properties, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with finding land or ranking rental properties, and why.
 
 ## 262. write my resume and screen candidates
 
 - Header: For writing your resume and screening candidates, here's how each tool can help:
-- Intro: AI agents can write your resume and screen candidates.
+- Intro: AI agents can tailor your resume to a role and screen the candidates who apply.
 - Cards:
   - Teal — Specialist · Docs checked — Teal writes a resume tailored to a job description and tracks the jobs you save.
   - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
@@ -3970,95 +3970,95 @@
   - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
   - Kickresume — Specialist · Docs checked — Kickresume writes resume bullets from a job title and scores the draft.
   - Paradox — Specialist · Docs checked — Paradox schedules candidates and takes applications in a conversation.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, writing your resume and screening candidates, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers writing your resume and screening candidates.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, writing your resume and screening candidates.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to write your resume and screen candidates.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to write your resume and screen candidates.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at writing your resume and screening candidates.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on writing your resume and screening candidates, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, writing your resume and screening candidates.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with writing your resume or screening candidates, and why.
 
 ## 263. transcribe my meeting and draft the follow-up email
 
 - Header: For transcribing your meeting and drafting the follow-up email, here's how each tool can help:
-- Intro: AI agents can transcribe your meeting and draft the follow-up email.
+- Intro: AI agents can turn the meeting into notes and draft the follow-up email from them.
 - Cards:
   - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
   - Fyxer — Specialist · Docs checked — Fyxer organizes an email inbox and drafts the replies.
   - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
   - Shortwave — Specialist · Docs checked — Shortwave searches an email inbox and drafts from that client.
   - Spark — Specialist · Docs checked — Spark drafts email replies and sorts the inbox.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, meeting notes and the follow-up email, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers meeting notes and the follow-up email.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, meeting notes and the follow-up email.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on meeting notes and the follow-up email, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, meeting notes and the follow-up email.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to transcribe your meeting and draft the follow-up email.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to transcribe your meeting and draft the follow-up email.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at transcribing your meeting and drafting the follow-up email.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on transcribing your meeting and drafting the follow-up email, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with transcribing your meeting or drafting the follow-up email, and why.
 
 ## 264. generate a voice track and make a cinematic video
 
 - Header: For generating a voice track and making a cinematic video, here's how each tool can help:
-- Intro: AI agents can generate a voice track and make a cinematic video.
+- Intro: AI agents can generate the voice track and render a cinematic clip from a prompt.
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
   - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
   - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
   - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, generating a voice track and making a cinematic video, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers generating a voice track and making a cinematic video.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, generating a voice track and making a cinematic video.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to generate a voice track and make a cinematic video.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to generate a voice track and make a cinematic video.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at generating a voice track and making a cinematic video.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on generating a voice track and making a cinematic video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, generating a voice track and making a cinematic video.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with generating a voice track or making a cinematic video, and why.
 
 ## 265. tutor me in math and learn spanish
 
 - Header: For tutoring math and learning Spanish, here's how each tool can help:
-- Intro: AI agents can tutor math and practice Spanish.
+- Intro: AI agents can walk through a math problem step by step and practice Spanish conversation with you.
 - Cards:
   - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a math problem step by step.
   - Duolingo Max — Specialist · Docs checked — Duolingo Max lets you practice Spanish conversation with an AI partner.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, tutoring math and learning Spanish, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers tutoring math and learning Spanish.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, tutoring math and learning Spanish.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to tutor math and learn Spanish.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to tutor math and learn Spanish.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at tutoring math and learning Spanish.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on tutoring math and learning Spanish, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, tutoring math and learning Spanish.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with tutoring math or learning Spanish, and why.
 
 ## 266. fill out forms and qualify leads
 
 - Header: For filling out forms and qualifying leads, here's how each tool can help:
-- Intro: AI agents can fill out forms and qualify leads.
+- Intro: AI agents can fill out the form in the browser and pull lead data before anyone writes outreach.
 - Cards:
-  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through steps in a browser from Python.
-  - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
-  - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Apollo — Specialist · Docs checked — Apollo looks up contacts and companies before anyone writes sales outreach.
-  - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
+  - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Clay — Specialist · Docs checked — Clay pulls lead data from many providers into one table for outreach.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, filling out forms and qualifying leads, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers filling out forms and qualifying leads.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, filling out forms and qualifying leads.
+  - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
+  - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to fill out forms and qualify leads.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to fill out forms and qualify leads.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at filling out forms and qualifying leads.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on filling out forms and qualifying leads, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, filling out forms and qualifying leads.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with filling out forms or qualifying leads, and why.
 
 ## 267. monitor phishing and reset passwords
 
 - Header: For monitoring phishing and resetting passwords, here's how each tool can help:
-- Intro: AI agents can monitor phishing and reset passwords.
+- Intro: AI agents can flag the phishing email and walk through the password reset.
 - Cards:
   - Abnormal — Specialist · Docs checked — Abnormal flags email threats by watching how an account usually behaves.
   - Freshservice — Specialist · Docs checked — Freshservice runs an IT service desk that takes incoming requests.
   - Charlotte AI — Specialist · Docs checked — Charlotte AI assists security analysts inside the CrowdStrike platform.
   - Moveworks — Specialist · Docs checked — Moveworks routes employee IT requests and answers common ones itself.
   - Dropzone AI — Specialist · Docs checked — Dropzone AI reviews threat alerts and shows the reasoning behind each one.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, monitoring phishing and resetting passwords, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers monitoring phishing and resetting passwords.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, monitoring phishing and resetting passwords.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to monitor phishing and reset passwords.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to monitor phishing and reset passwords.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at monitoring phishing and resetting passwords.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on monitoring phishing and resetting passwords, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, monitoring phishing and resetting passwords.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with monitoring phishing or resetting passwords, and why.
 
 ## 268. create social posts and write an SEO article
 
 - Header: For creating social posts and writing an SEO article, here's how each tool can help:
-- Intro: AI agents can create social posts and write an SEO article.
+- Intro: AI agents can draft the social posts and write the SEO article in the same pass.
 - Cards:
   - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
@@ -4066,16 +4066,16 @@
   - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, creating social posts and writing an SEO article, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers creating social posts and writing an SEO article.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, creating social posts and writing an SEO article.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to create social posts and write an SEO article.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to create social posts and write an SEO article.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at creating social posts and writing an SEO article.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on creating social posts and writing an SEO article, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, creating social posts and writing an SEO article.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with creating social posts or writing an SEO article, and why.
 
 ## 269. process invoices and do my taxes
 
 - Header: For processing invoices and doing your taxes, here's how each tool can help:
-- Intro: AI agents can process invoices and do your taxes.
+- Intro: AI agents can capture the incoming invoices and organize the totals for the tax return.
 - Cards:
   - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
   - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
@@ -4083,40 +4083,40 @@
   - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
   - Vic.ai — Specialist · Docs checked — Vic.ai reads invoices for an accounts-payable team.
   - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, processing invoices and doing taxes, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers processing invoices and doing taxes.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, processing invoices and doing taxes.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on processing invoices and doing taxes, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, processing invoices and doing taxes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to process invoices and do your taxes.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to process invoices and do your taxes.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at processing invoices and doing your taxes.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on processing invoices and doing your taxes, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with processing invoices or doing your taxes, and why.
 
 ## 270. book a hotel and clip my twitch stream
 
 - Header: For booking a hotel and clipping your Twitch stream, here's how each tool can help:
-- Intro: AI agents can book your hotel and cut clips from your stream.
+- Intro: AI agents can compare hotels and plan your stay, and cut your Twitch stream into vertical clips.
 - Cards:
   - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
   - GuideGeek — Specialist · Docs checked — GuideGeek plans travel across flights, stays, restaurants, and experiences.
   - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - Wonderplan — Specialist · Docs checked — Wonderplan plans a hotel stay inside a trip itinerary.
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, booking a hotel and clipping your Twitch stream, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers booking a hotel and clipping your Twitch stream.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, booking a hotel and clipping your Twitch stream.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to book a hotel and clip your Twitch stream.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to book a hotel and clip your Twitch stream.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at booking a hotel and clipping your Twitch stream.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on booking a hotel and clipping your Twitch stream, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, booking a hotel and clipping your Twitch stream.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with booking a hotel or clipping your Twitch stream, and why.
 
 ## 271. schedule meetings, also take notes
 
 - Header: For scheduling meetings and taking notes, here's how each tool can help:
-- Intro: AI agents can schedule meetings and take notes.
+- Intro: AI agents can find a meeting time that works for everyone and write up notes and action items once the call ends.
 - Cards:
   - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
   - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
   - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
   - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
   - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan both jobs, scheduling meetings and taking notes, step by step.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that covers scheduling meetings and taking notes.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to take a first pass at both jobs, scheduling meetings and taking notes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to schedule meetings and take notes.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to schedule meetings and take notes.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at scheduling meetings and taking notes.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on scheduling meetings and taking notes, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to suggest which job to start with, scheduling meetings and taking notes.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with scheduling meetings or taking notes, and why.

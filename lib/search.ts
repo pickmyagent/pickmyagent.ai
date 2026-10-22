@@ -620,6 +620,11 @@ function roleBonus(conceptId: string, slug: string, query: string): number {
     return index >= 0 ? 400 - index * 80 : 0;
   }
   if (conceptId === "tutoring" && slug === "synthesis-tutor" && kidsTutorQuery(query)) return 20;
+  if (conceptId === "sales" && /\bqualify leads\b/i.test(query)) {
+    const qualifyOrder = ["apollo", "clay", "instantly", "smartlead"];
+    const index = qualifyOrder.indexOf(slug);
+    if (index >= 0) return 200 - index * 40;
+  }
   return 0;
 }
 
@@ -696,6 +701,9 @@ const LISTING_PHOTO_INTRO =
   "AI agents can turn listing photos into a home tour, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.";
 
 export function jobIntro(query: string, useCase: UseCase | undefined, concept: Concept | null): string {
+  if (/\bcold email\b/i.test(query) && /\bcrm\b/i.test(query)) {
+    return "AI agents can draft the cold email and log the contact in your CRM.";
+  }
   if (videoGenerationQuery(query)) return VIDEO_GENERATION_INTRO;
   if ((useCase?.slug === "coding-agents" || concept?.id === "code") && modelChoiceQuery(query)) return MODEL_CHOICE_INTRO;
   if (useCase?.slug === "listing-videos" || concept?.id === "listing-video") {
@@ -997,142 +1005,184 @@ function compoundLead(hits: CompoundHit[], useCases: UseCase[]): string {
   return `For ${joinAnd(phrases)}, here's how each tool can help:`;
 }
 
-function spokenIntroClause(part: string): string {
+type JobForms = { infinitive: string; gerund: string };
+
+/** Infinitive for "plan to …", gerund for "a first pass at …". Same verb, two grammatical shapes. */
+function jobForms(part: string): JobForms {
   const raw = stripWrappers(part).toLowerCase().replace(/\s+/g, " ").trim();
-  const mapped: Array<[RegExp, string]> = [
-    [/\bbook a hotel\b/, "book your hotel"],
-    [/\bclip\b[\s\S]*\b(?:twitch|stream)\b|\b(?:twitch|stream)\b[\s\S]*\bclip\b/, "cut clips from your stream"],
-    [/\bfill out forms\b/, "fill out forms"],
-    [/\bmake a listing video\b/, "make a listing video"],
-    [/\bedit listing videos\b/, "edit listing videos"],
-    [/\bpost it to instagram\b/, "post it to Instagram"],
-    [/\bpost (?:them )?to instagram\b/, "post them to Instagram"],
-    [/\bclip (?:a |my )?youtube short\b/, "clip a YouTube short"],
-    [/\bfind off-market\b/, "find off-market deals"],
-    [/\btrack (?:my |your )?expenses\b/, "track expenses"],
-    [/\bfile (?:my |your )?taxes\b/, "file your taxes"],
-    [/\bdo (?:my |your )?taxes\b/, "do your taxes"],
-    [/\bschedule meetings\b/, "schedule meetings"],
-    [/\btake notes\b/, "take notes"],
-    [/\bwrite blog posts\b/, "write blog posts"],
-    [/\bpost (?:them )?to social\b/, "post them to social media"],
-    [/\bsending invoices to customers\b|\bsend(?:ing)? customer invoices\b/, "send customer invoices"],
-    [/\bautomate promo campaigns\b/, "automate promo campaigns"],
-    [/\bautomate marketing promotions\b/, "automate marketing promotions"],
-    [/\bbill clients\b/, "bill clients"],
-    [/\bdraft a blog post\b/, "draft a blog post"],
-    [/\bwrite a blog post\b/, "write a blog post"],
-    [/\banalyze a spreadsheet\b/, "analyze a spreadsheet"],
-    [/\bfind land\b/, "find land"],
-    [/\brank rental/, "rank rental properties"],
-    [/\btranscribe/, "transcribe your meeting"],
-    [/\bfollow-up email\b/, "draft the follow-up email"],
-    [/\bplan a trip\b/, "plan the trip"],
-    [/\bshop for luggage\b/, "shop for luggage"],
-    [/\breset a password\b/, "reset a password"],
-    [/\breset passwords\b/, "reset passwords"],
-    [/\banswer a support ticket\b/, "answer a support ticket"],
-    [/\banswer support tickets\b/, "answer support tickets"],
-    [/\bupdate the knowledge base\b/, "update the knowledge base"],
-    [/\bmanage (?:my |your )?portfolio\b/, "manage your portfolio"],
-    [/\bwrite (?:my |your )?resume\b/, "write your resume"],
-    [/\bscreen candidates\b/, "screen candidates"],
-    [/\bgenerate a voice track\b/, "generate a voice track"],
-    [/\bmake a cinematic video\b/, "make a cinematic video"],
-    [/\btutor me in math\b/, "tutor math"],
-    [/\blearn spanish\b/, "practice Spanish"],
-    [/\bqualify leads\b/, "qualify leads"],
-    [/\bmonitor phishing\b/, "monitor phishing"],
-    [/\bcreate social posts\b/, "create social posts"],
-    [/\bseo article\b/, "write an SEO article"],
-    [/\bprocess invoices\b/, "process invoices"],
-    [/\btake meeting notes\b/, "take meeting notes"],
-    [/\bschedule the follow-up\b/, "schedule the follow-up"],
-    [/\bfind leads\b/, "find leads and email them"],
+  const mapped: Array<[RegExp, JobForms]> = [
+    [/\btrack (?:my |your )?expenses\b/, { infinitive: "track expenses", gerund: "tracking expenses" }],
+    [/\bfile (?:my |your )?taxes\b/, { infinitive: "file your taxes", gerund: "filing your taxes" }],
+    [/\bdo (?:my |your )?taxes\b/, { infinitive: "do your taxes", gerund: "doing your taxes" }],
+    [/\bschedule meetings\b/, { infinitive: "schedule meetings", gerund: "scheduling meetings" }],
+    [/\btake meeting notes\b/, { infinitive: "take meeting notes", gerund: "taking meeting notes" }],
+    [/\btake notes\b/, { infinitive: "take notes", gerund: "taking notes" }],
+    [/\bwrite blog posts\b/, { infinitive: "write blog posts", gerund: "writing blog posts" }],
+    [/\bpost it to instagram\b/, { infinitive: "post it to Instagram", gerund: "posting it to Instagram" }],
+    [/\bpost (?:them )?to instagram\b/, { infinitive: "post them to Instagram", gerund: "posting them to Instagram" }],
+    [/\bpost (?:them )?to social\b/, { infinitive: "post them to social media", gerund: "posting them to social media" }],
+    [/\bsending invoices to customers\b|\bsend(?:ing)? customer invoices\b/, { infinitive: "send customer invoices", gerund: "sending customer invoices" }],
+    [/\bautomate promo campaigns\b/, { infinitive: "automate promo campaigns", gerund: "automating promo campaigns" }],
+    [/\bautomate marketing promotions\b/, { infinitive: "automate marketing promotions", gerund: "automating marketing promotions" }],
+    [/\bbill clients\b/, { infinitive: "bill clients", gerund: "billing clients" }],
+    [/\bdraft a blog post\b/, { infinitive: "draft a blog post", gerund: "drafting a blog post" }],
+    [/\bwrite a blog post\b/, { infinitive: "write a blog post", gerund: "writing a blog post" }],
+    [/\banalyze a spreadsheet\b/, { infinitive: "analyze a spreadsheet", gerund: "analyzing a spreadsheet" }],
+    [/\bfind land\b/, { infinitive: "find land", gerund: "finding land" }],
+    [/\brank rental/, { infinitive: "rank rental properties", gerund: "ranking rental properties" }],
+    [/\btranscrib/, { infinitive: "transcribe your meeting", gerund: "transcribing your meeting" }],
+    [/\bfollow-up email\b/, { infinitive: "draft the follow-up email", gerund: "drafting the follow-up email" }],
+    [/\bplan a trip\b/, { infinitive: "plan the trip", gerund: "planning the trip" }],
+    [/\bshop for luggage\b/, { infinitive: "shop for luggage", gerund: "shopping for luggage" }],
+    [/\breset a password\b/, { infinitive: "reset a password", gerund: "resetting a password" }],
+    [/\breset passwords\b/, { infinitive: "reset passwords", gerund: "resetting passwords" }],
+    [/\banswer a support ticket\b/, { infinitive: "answer a support ticket", gerund: "answering a support ticket" }],
+    [/\banswer support tickets\b/, { infinitive: "answer support tickets", gerund: "answering support tickets" }],
+    [/\bupdate the knowledge base\b/, { infinitive: "update the knowledge base", gerund: "updating the knowledge base" }],
+    [/\bmanage (?:my |your )?portfolio\b/, { infinitive: "manage your portfolio", gerund: "managing your portfolio" }],
+    [/\bwrite (?:my |your )?resume\b/, { infinitive: "write your resume", gerund: "writing your resume" }],
+    [/\bscreen candidates\b/, { infinitive: "screen candidates", gerund: "screening candidates" }],
+    [/\bgenerate a voice track\b/, { infinitive: "generate a voice track", gerund: "generating a voice track" }],
+    [/\bmake a cinematic video\b/, { infinitive: "make a cinematic video", gerund: "making a cinematic video" }],
+    [/\btutor me in math\b/, { infinitive: "tutor math", gerund: "tutoring math" }],
+    [/\blearn spanish\b/, { infinitive: "learn Spanish", gerund: "learning Spanish" }],
+    [/\bqualify leads\b/, { infinitive: "qualify leads", gerund: "qualifying leads" }],
+    [/\bmonitor phishing\b/, { infinitive: "monitor phishing", gerund: "monitoring phishing" }],
+    [/\bcreate social posts\b/, { infinitive: "create social posts", gerund: "creating social posts" }],
+    [/\bseo article\b/, { infinitive: "write an SEO article", gerund: "writing an SEO article" }],
+    [/\bprocess invoices\b/, { infinitive: "process invoices", gerund: "processing invoices" }],
+    [/\bschedule the follow-up\b/, { infinitive: "schedule the follow-up", gerund: "scheduling the follow-up" }],
+    [/\bmake a listing video\b/, { infinitive: "make a listing video", gerund: "making a listing video" }],
+    [/\bedit listing videos\b/, { infinitive: "edit listing videos", gerund: "editing listing videos" }],
+    [/\bfind off-market\b/, { infinitive: "find off-market deals", gerund: "finding off-market deals" }],
+    [/\bfill out forms\b/, { infinitive: "fill out forms", gerund: "filling out forms" }],
+    [/\bbook a hotel\b/, { infinitive: "book a hotel", gerund: "booking a hotel" }],
+    [/\bclip\b[\s\S]*\b(?:twitch|stream)\b|\btwitch\b/, { infinitive: "clip your Twitch stream", gerund: "clipping your Twitch stream" }],
+    [/\bclip (?:a |my )?youtube short\b/, { infinitive: "clip a YouTube short", gerund: "clipping a YouTube short" }],
   ];
-  for (const [pattern, clause] of mapped) {
-    if (pattern.test(raw)) return clause;
+  for (const [pattern, forms] of mapped) {
+    if (pattern.test(raw)) return forms;
   }
-  return restoreNames(raw.replace(/\bmy\b/g, "your"));
+  const cleaned = raw.replace(/\bmy\b/g, "your");
+  return { infinitive: cleaned, gerund: cleaned };
 }
 
-function restoreNames(text: string): string {
-  return text
-    .replace(/\byoutube\b/g, "YouTube")
-    .replace(/\binstagram\b/g, "Instagram")
-    .replace(/\btwitch\b/g, "Twitch")
-    .replace(/\bspanish\b/g, "Spanish")
-    .replace(/\bfrench\b/g, "French")
-    .replace(/\bgerman\b/g, "German")
-    .replace(/\bjapanese\b/g, "Japanese")
-    .replace(/\bseo\b/g, "SEO")
-    .replace(/\bcrm\b/g, "CRM");
+function compoundForms(hits: CompoundHit[]): JobForms[] {
+  const forms: JobForms[] = [];
+  const seen = new Set<string>();
+  for (const hit of hits) {
+    const form = jobForms(hit.part);
+    if (seen.has(form.infinitive)) continue;
+    seen.add(form.infinitive);
+    forms.push(form);
+  }
+  return forms;
 }
 
 function compoundIntro(hits: CompoundHit[]): string {
   const blob = hits.map((hit) => hit.part.toLowerCase()).join(" ");
-  if (/\bmarketing promotions\b/.test(blob) && /\bsending invoices\b/.test(blob)) {
+  const has = (pattern: RegExp) => pattern.test(blob);
+  if (has(/\bmarketing promotions\b/) && has(/\bsending invoices\b/)) {
     return PAIR_INTRO["finance-ops+marketing-promotions"];
   }
-  const clauses: string[] = [];
-  const seen = new Set<string>();
-  for (const hit of hits) {
-    const clause = spokenIntroClause(hit.part);
-    if (seen.has(clause)) continue;
-    seen.add(clause);
-    clauses.push(clause);
+  if (has(/\bexpenses\b/) && has(/\btaxes\b/)) {
+    return "AI agents can sort receipts into expense categories as you go and pull them into a tax-ready summary, so filing goes faster.";
   }
-  return `AI agents can ${joinAnd(clauses)}.`;
-}
-
-/** Gerund label taken from the words the user typed, not the catalog job name. */
-function spokenLabel(part: string): string {
-  const raw = stripWrappers(part).toLowerCase();
-  if (/\btranscrib/.test(raw)) return "meeting notes";
-  if (/\bfollow-up email\b/.test(raw)) return "the follow-up email";
-  if (/\brank(?:ing)? rental/.test(raw)) return "ranking rentals";
-  if (/\bfind(?:ing)? land\b/.test(raw)) return "finding land";
-  if (/\btrack(?:ing)? (?:my |your )?expenses\b/.test(raw)) return "tracking expenses";
-  if (/\bfil(?:e|ing) (?:my |your )?taxes\b/.test(raw)) return "filing taxes";
-  const label = polishPart(jobPhrase(part, null))
-    .replace(/^help with\s+/i, "")
-    .replace(/\byour taxes\b/gi, "taxes")
-    .replace(/\s+/g, " ")
-    .trim();
-  return label || "this job";
-}
-
-function spokenLabels(hits: CompoundHit[]): string[] {
-  const labels: string[] = [];
-  const seen = new Set<string>();
-  for (const hit of hits) {
-    const label = spokenLabel(hit.part);
-    if (seen.has(label)) continue;
-    seen.add(label);
-    labels.push(label);
+  if (has(/\bschedule meetings\b/) && has(/\btake notes\b/)) {
+    return "AI agents can find a meeting time that works for everyone and write up notes and action items once the call ends.";
   }
-  return labels;
+  if (has(/\bwrite blog posts\b/) && has(/\bpost\b/)) {
+    return "AI agents can draft the blog posts and turn the main points into social posts you can schedule.";
+  }
+  if (has(/\bsupport tickets\b/) && has(/\bknowledge base\b/)) {
+    return "AI agents can draft a reply to the support ticket and file the answer in the knowledge base.";
+  }
+  if (has(/\bedit listing videos\b/) && has(/\binstagram\b/)) {
+    return "AI agents can trim the listing video, add captions, and draft the Instagram post that goes with it.";
+  }
+  if (has(/\bcustomer invoices\b|\bsending invoices\b/) && has(/\bpromo\b/)) {
+    return "AI agents can send the customer invoice and schedule the promo emails from the apps you already use.";
+  }
+  if (has(/\bbill clients\b/) && has(/\bblog post\b/)) {
+    return "AI agents can prepare the client invoice and draft the blog post for you to review before either goes out.";
+  }
+  if (has(/\btake meeting notes\b/) && has(/\bfollow-up\b/)) {
+    return "AI agents can write up the meeting notes and propose a time for the follow-up.";
+  }
+  if (has(/\byoutube short\b/) && has(/\binstagram\b/)) {
+    return "AI agents can cut the YouTube video into a short and draft the Instagram caption to post with it.";
+  }
+  if (has(/\bmake a listing video\b/) && has(/\boff-market\b/)) {
+    return "AI agents can turn listing photos into a property video and pull owner records for off-market deals.";
+  }
+  if (has(/\bspreadsheet\b/) && has(/\bblog post\b/)) {
+    return "AI agents can read the spreadsheet, pull out the findings, and draft a blog post from them.";
+  }
+  if (has(/\bplan a trip\b/) && has(/\bluggage\b/)) {
+    return "AI agents can sketch the trip itinerary and compare luggage that fits how you are traveling.";
+  }
+  if (has(/\breset a password\b/) && has(/\bsupport ticket\b/)) {
+    return "AI agents can walk through the password reset and draft the reply to the support ticket.";
+  }
+  if (has(/\btaxes\b/) && has(/\bportfolio\b/)) {
+    return "AI agents can organize the tax return and show a summary of the accounts in your portfolio.";
+  }
+  if (has(/\bfind land\b/) && has(/\brental\b/)) {
+    return "AI agents can screen land parcels and rank rental properties by the income numbers.";
+  }
+  if (has(/\bresume\b/) && has(/\bscreen candidates\b/)) {
+    return "AI agents can tailor your resume to a role and screen the candidates who apply.";
+  }
+  if (has(/\btranscrib/) && has(/\bfollow-up email\b/)) {
+    return "AI agents can turn the meeting into notes and draft the follow-up email from them.";
+  }
+  if (has(/\bvoice track\b/) && has(/\bcinematic\b/)) {
+    return "AI agents can generate the voice track and render a cinematic clip from a prompt.";
+  }
+  if (has(/\bmath\b/) && has(/\bspanish\b/)) {
+    return "AI agents can walk through a math problem step by step and practice Spanish conversation with you.";
+  }
+  if (has(/\bfill out forms\b/) && has(/\bqualify leads\b/)) {
+    return "AI agents can fill out the form in the browser and pull lead data before anyone writes outreach.";
+  }
+  if (has(/\bphishing\b/) && has(/\bpasswords?\b/)) {
+    return "AI agents can flag the phishing email and walk through the password reset.";
+  }
+  if (has(/\bsocial posts\b/) && has(/\bseo\b/)) {
+    return "AI agents can draft the social posts and write the SEO article in the same pass.";
+  }
+  if (has(/\bprocess invoices\b/) && has(/\btaxes\b/)) {
+    return "AI agents can capture the incoming invoices and organize the totals for the tax return.";
+  }
+  if (has(/\bbook a hotel\b/) && has(/\b(?:twitch|stream|clip)\b/)) {
+    return "AI agents can compare hotels and plan your stay, and cut your Twitch stream into vertical clips.";
+  }
+  const forms = compoundForms(hits);
+  return `AI agents can help with ${joinAnd(forms.map((form) => form.gerund))}, and you still decide what happens next.`;
 }
 
 function compoundAssistantWhy(tool: Tool, hits: CompoundHit[]): string {
   const name = tool.assistantName ?? tool.name.split("(")[0].trim();
-  const labels = spokenLabels(hits);
-  const both = joinAnd(labels);
-  const jobs = labels.length === 2 ? "both jobs" : "these jobs";
-  const invoicesAndPromos = labels.some((label) => /invoice/.test(label))
-    && labels.some((label) => /promo|campaign|marketing/.test(label));
+  const forms = compoundForms(hits);
+  const infinitive = joinAnd(forms.map((form) => form.infinitive));
+  const gerund = joinAnd(forms.map((form) => form.gerund));
+  const gerundOr = forms.length === 2
+    ? `${forms[0].gerund} or ${forms[1].gerund}`
+    : forms.map((form) => form.gerund).join(" or ");
+  const invoicesAndPromos = forms.some((form) => /invoice/.test(form.gerund))
+    && forms.some((form) => /promo|campaign|marketing/.test(form.gerund));
   if (tool.slug === "claude") {
-    const verb = labels.some((label) => /^planning\b/.test(label)) ? "map" : "plan";
-    return `Ask ${name} to ${verb} ${jobs}, ${both}, step by step.`;
+    const task = infinitive.replace(/\bplan the trip\b/, "arrange the trip");
+    return `Ask ${name} for a step-by-step plan to ${task}.`;
   }
-  if (tool.slug === "chatgpt") return `Ask ${name} for a checklist that covers ${both}.`;
+  if (tool.slug === "chatgpt") return `Ask ${name} for a checklist to ${infinitive}.`;
   if (tool.slug === "gemini" && invoicesAndPromos) {
     return `Ask ${name} to set up a sheet that tracks your invoices and your promo campaigns.`;
   }
-  if (tool.slug === "gemini") return `Ask ${name} to take a first pass at ${jobs}, ${both}.`;
-  if (tool.slug === "perplexity") return `Ask ${name} for sourced tips on ${both}, with links you can check.`;
-  if (tool.slug === "deepseek") return `Ask ${name} to suggest which job to start with, ${both}.`;
-  return `Ask ${name} to outline a next step for ${both}.`;
+  if (tool.slug === "gemini") return `Ask ${name} to draft a first pass at ${gerund}.`;
+  if (tool.slug === "perplexity") return `Ask ${name} for sourced tips on ${gerund}, with links you can check.`;
+  if (tool.slug === "deepseek") return `Ask ${name} whether to start with ${gerundOr}, and why.`;
+  return `Ask ${name} to outline a next step for ${gerund}.`;
 }
 
 function lineUseCase(tool: Tool, concept: Concept): string {

@@ -48,7 +48,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "manage-portfolio": {
     composer: [
-      "Composer automates one trading strategy attached to an investment account.",
+      "Composer automates a trading strategy on an investment account.",
     ],
     kubera: [
       "Kubera tracks a household balance sheet next to the rest of an investment portfolio.",
@@ -57,7 +57,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "Magnifi links brokerage accounts and shows a portfolio summary.",
     ],
     "portfolio-pilot": [
-      "PortfolioPilot lines up accounts and reads the investment portfolio from them.",
+      "PortfolioPilot tracks your accounts and assesses the portfolio.",
     ],
     range: [
       "Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.",
@@ -408,7 +408,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "n8n runs multi-step workflows you can host yourself for a repeated task.",
     ],
     zapier: [
-      "Zapier connects hosted apps so a repeated task fires without a server of your own.",
+      "Zapier connects the apps you already use so a step in one triggers a step in another.",
     ],
   },
   "multi-agent-workflows": {
@@ -449,7 +449,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "tool-use-browser": {
     "browser-use": [
-      "Browser Use opens pages and clicks through steps in a browser from Python.",
+      "Browser Use opens pages and clicks through the steps in a browser.",
     ],
     composio: [
       "Composio connects an agent to outside apps when the job needs more than browser steps.",

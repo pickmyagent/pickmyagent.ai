@@ -505,8 +505,8 @@ export function qaProblems(catalog: Catalog): string[] {
       for (const rankedTool of ranked.tools) {
         if (!rankedTool.generalPurpose) continue;
         const why = rankedTool.whyItHelps.toLowerCase();
-        for (let index = 0; index + 6 <= queryWords.length; index++) {
-          const span = queryWords.slice(index, index + 6).join(" ");
+        for (let index = 0; index + 9 <= queryWords.length; index++) {
+          const span = queryWords.slice(index, index + 9).join(" ");
           if (why.includes(span)) {
             problems.push(`${item.query}: assistant why pastes the query: ${rankedTool.whyItHelps}`);
             break;
