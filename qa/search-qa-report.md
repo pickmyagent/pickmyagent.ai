@@ -3646,7 +3646,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to automate marketing promotions and send customer invoices.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to set up a sheet that tracks your invoices and your promo campaigns.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on automating marketing promotions and sending customer invoices, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with automating marketing promotions or sending customer invoices, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on automating marketing promotions and sending customer invoices.
 
 ## 243. track expenses and file my taxes
 
@@ -3663,7 +3663,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to track expenses and file your taxes.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at tracking expenses and filing your taxes.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on tracking expenses and filing your taxes, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with tracking expenses or filing your taxes, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on tracking expenses and filing your taxes.
 
 ## 244. schedule meetings and take notes
 
@@ -3679,7 +3679,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to schedule meetings and take notes.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at scheduling meetings and taking notes.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on scheduling meetings and taking notes, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with scheduling meetings or taking notes, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on scheduling meetings and taking notes.
 
 ## 245. write blog posts and post them to social
 
@@ -3696,7 +3696,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to write blog posts and post them to social media.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at writing blog posts and posting them to social media.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on writing blog posts and posting them to social media, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with writing blog posts or posting them to social media, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on writing blog posts and posting them to social media.
 
 ## 246. find leads and email them
 
@@ -3729,7 +3729,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to answer support tickets and update the knowledge base.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at answering support tickets and updating the knowledge base.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on answering support tickets and updating the knowledge base, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with answering support tickets or updating the knowledge base, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on answering support tickets and updating the knowledge base.
 
 ## 248. edit listing videos and post to instagram
 
@@ -3746,7 +3746,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to edit listing videos and post them to Instagram.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at editing listing videos and posting them to Instagram.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on editing listing videos and posting them to Instagram, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with editing listing videos or posting them to Instagram, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on editing listing videos and posting them to Instagram.
 
 ## 249. send customer invoices and automate promo campaigns
 
@@ -3764,7 +3764,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to send customer invoices and automate promo campaigns.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to set up a sheet that tracks your invoices and your promo campaigns.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on sending customer invoices and automating promo campaigns, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with sending customer invoices or automating promo campaigns, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on sending customer invoices and automating promo campaigns.
 
 ## 250. bill clients and draft a blog post
 
@@ -3779,7 +3779,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to bill clients and draft a blog post.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at billing clients and drafting a blog post.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on billing clients and drafting a blog post, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with billing clients or drafting a blog post, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on billing clients and drafting a blog post.
 
 ## 251. file my taxes & track my expenses
 
@@ -3796,7 +3796,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to file your taxes and track expenses.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at filing your taxes and tracking expenses.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on filing your taxes and tracking expenses, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with filing your taxes or tracking expenses, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on filing your taxes and tracking expenses.
 
 ## 252. take meeting notes and schedule the follow-up
 
@@ -3812,7 +3812,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to take meeting notes and schedule the follow-up.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at taking meeting notes and scheduling the follow-up.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on taking meeting notes and scheduling the follow-up, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with taking meeting notes or scheduling the follow-up, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on taking meeting notes and scheduling the follow-up.
 
 ## 253. draft a cold email and update the CRM
 
@@ -3845,7 +3845,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to clip a YouTube short and post it to Instagram.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at clipping a YouTube short and posting it to Instagram.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on clipping a YouTube short and posting it to Instagram, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with clipping a YouTube short or posting it to Instagram, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on clipping a YouTube short and posting it to Instagram.
 
 ## 255. make a listing video and find off-market deals
 
@@ -3862,7 +3862,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to make a listing video and find off-market deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at making a listing video and finding off-market deals.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on making a listing video and finding off-market deals, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with making a listing video or finding off-market deals, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on making a listing video and finding off-market deals.
 
 ## 256. screen candidates and schedule interviews
 
@@ -3894,7 +3894,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to analyze a spreadsheet and write a blog post.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at analyzing a spreadsheet and writing a blog post.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on analyzing a spreadsheet and writing a blog post, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with analyzing a spreadsheet or writing a blog post, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on analyzing a spreadsheet and writing a blog post.
 
 ## 258. plan a trip and shop for luggage
 
@@ -3908,7 +3908,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to plan the trip and shop for luggage.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at planning the trip and shopping for luggage.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on planning the trip and shopping for luggage, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with planning the trip or shopping for luggage, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on planning the trip and shopping for luggage.
 
 ## 259. reset a password and answer a support ticket
 
@@ -3924,7 +3924,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to reset a password and answer a support ticket.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at resetting a password and answering a support ticket.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on resetting a password and answering a support ticket, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with resetting a password or answering a support ticket, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on resetting a password and answering a support ticket.
 
 ## 260. do my taxes plus manage my portfolio
 
@@ -3941,7 +3941,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to do your taxes and manage your portfolio.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at doing your taxes and managing your portfolio.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on doing your taxes and managing your portfolio, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with doing your taxes or managing your portfolio, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on doing your taxes and managing your portfolio.
 
 ## 261. find land and rank rental properties
 
@@ -3957,7 +3957,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to find land and rank rental properties.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at finding land and ranking rental properties.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on finding land and ranking rental properties, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with finding land or ranking rental properties, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on finding land and ranking rental properties.
 
 ## 262. write my resume and screen candidates
 
@@ -3974,7 +3974,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to write your resume and screen candidates.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at writing your resume and screening candidates.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on writing your resume and screening candidates, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with writing your resume or screening candidates, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on writing your resume and screening candidates.
 
 ## 263. transcribe my meeting and draft the follow-up email
 
@@ -3990,7 +3990,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to transcribe your meeting and draft the follow-up email.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at transcribing your meeting and drafting the follow-up email.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on transcribing your meeting and drafting the follow-up email, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with transcribing your meeting or drafting the follow-up email, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on transcribing your meeting and drafting the follow-up email.
 
 ## 264. generate a voice track and make a cinematic video
 
@@ -4005,7 +4005,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to generate a voice track and make a cinematic video.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at generating a voice track and making a cinematic video.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on generating a voice track and making a cinematic video, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with generating a voice track or making a cinematic video, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on generating a voice track and making a cinematic video.
 
 ## 265. tutor me in math and learn spanish
 
@@ -4020,7 +4020,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to tutor math and learn Spanish.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at tutoring math and learning Spanish.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on tutoring math and learning Spanish, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with tutoring math or learning Spanish, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on tutoring math and learning Spanish.
 
 ## 266. fill out forms and qualify leads
 
@@ -4037,7 +4037,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to fill out forms and qualify leads.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at filling out forms and qualifying leads.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on filling out forms and qualifying leads, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with filling out forms or qualifying leads, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on filling out forms and qualifying leads.
 
 ## 267. monitor phishing and reset passwords
 
@@ -4053,7 +4053,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to monitor phishing and reset passwords.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at monitoring phishing and resetting passwords.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on monitoring phishing and resetting passwords, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with monitoring phishing or resetting passwords, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on monitoring phishing and resetting passwords.
 
 ## 268. create social posts and write an SEO article
 
@@ -4070,7 +4070,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to create social posts and write an SEO article.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at creating social posts and writing an SEO article.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on creating social posts and writing an SEO article, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with creating social posts or writing an SEO article, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on creating social posts and writing an SEO article.
 
 ## 269. process invoices and do my taxes
 
@@ -4087,7 +4087,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to process invoices and do your taxes.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at processing invoices and doing your taxes.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on processing invoices and doing your taxes, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with processing invoices or doing your taxes, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on processing invoices and doing your taxes.
 
 ## 270. book a hotel and clip my twitch stream
 
@@ -4103,7 +4103,7 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to book a hotel and clip your Twitch stream.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at booking a hotel and clipping your Twitch stream.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on booking a hotel and clipping your Twitch stream, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with booking a hotel or clipping your Twitch stream, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on booking a hotel and clipping your Twitch stream.
 
 ## 271. schedule meetings, also take notes
 
@@ -4119,4 +4119,4 @@
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to schedule meetings and take notes.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at scheduling meetings and taking notes.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on scheduling meetings and taking notes, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek whether to start with scheduling meetings or taking notes, and why.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on scheduling meetings and taking notes.

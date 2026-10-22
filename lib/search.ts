@@ -1166,9 +1166,6 @@ function compoundAssistantWhy(tool: Tool, hits: CompoundHit[]): string {
   const forms = compoundForms(hits);
   const infinitive = joinAnd(forms.map((form) => form.infinitive));
   const gerund = joinAnd(forms.map((form) => form.gerund));
-  const gerundOr = forms.length === 2
-    ? `${forms[0].gerund} or ${forms[1].gerund}`
-    : forms.map((form) => form.gerund).join(" or ");
   const invoicesAndPromos = forms.some((form) => /invoice/.test(form.gerund))
     && forms.some((form) => /promo|campaign|marketing/.test(form.gerund));
   if (tool.slug === "claude") {
@@ -1181,7 +1178,7 @@ function compoundAssistantWhy(tool: Tool, hits: CompoundHit[]): string {
   }
   if (tool.slug === "gemini") return `Ask ${name} to draft a first pass at ${gerund}.`;
   if (tool.slug === "perplexity") return `Ask ${name} for sourced tips on ${gerund}, with links you can check.`;
-  if (tool.slug === "deepseek") return `Ask ${name} whether to start with ${gerundOr}, and why.`;
+  if (tool.slug === "deepseek") return `Ask ${name} for a quick how-to on ${gerund}.`;
   return `Ask ${name} to outline a next step for ${gerund}.`;
 }
 
