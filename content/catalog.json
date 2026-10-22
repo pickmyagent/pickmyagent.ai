@@ -4843,7 +4843,7 @@
       "websiteUrl": "https://www.klaviyo.com/",
       "affiliateUrl": null,
       "shortDescription": "Email and SMS campaigns with flows, plus an AI subject-line generator.",
-      "longDescription": "Klaviyo's help center describes a free email plan with up to 250 active profiles and 500 email sends a month. The pricing page lists campaigns, flows, and an AI subject-line generator, and it also showed a $1 total beside those limits.",
+      "longDescription": "Klaviyo sends email and text campaigns with flows and an AI subject-line generator. Free email plan for up to 250 active profiles and 500 sends a month. See their site for paid pricing.",
       "categories": [
         "content"
       ],
@@ -4860,7 +4860,7 @@
         "freemium",
         "subscription"
       ],
-      "pricingNotes": "Help center: free email plan up to 250 active profiles and 500 email sends a month. The pricing page also showed a $1 total beside those limits, so startingPrice stays empty.",
+      "pricingNotes": "Free email plan for up to 250 active profiles and 500 sends a month. See their site for paid pricing.",
       "pricingUrl": "https://www.klaviyo.com/pricing",
       "docsUrl": "https://help.klaviyo.com/hc/en-us/articles/360050759151",
       "freeTier": null,
@@ -4877,7 +4877,7 @@
         "Someone who needs one confirmed monthly price"
       ],
       "strength": "Klaviyo's help center describes a free email plan with up to 250 active profiles and 500 email sends a month.",
-      "weakness": "The pricing page also showed a $1 total beside those limits, so this listing does not confirm a $0 price.",
+      "weakness": "Paid pricing is on their site, beyond the free email plan of 250 active profiles and 500 sends a month.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
       "checkedAt": "2026-10-20T17:00:00-04:00",

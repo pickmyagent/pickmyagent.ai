@@ -991,6 +991,19 @@ test("compound marketing and invoice query names both jobs", () => {
   assert.ok(specialists.some((tool) => tagsOf(tool.slug).includes("marketing-promotions")));
   assert.ok(specialists.some((tool) => tagsOf(tool.slug).includes("finance-ops")));
   assert.ok(specialists.some((tool) => tool.slug === "n8n"));
+  assert.ok(specialists.some((tool) => tool.slug === "make"));
+  assert.ok(specialists.some((tool) => tool.slug === "zapier"));
+  const billed = rankCatalogQuery("bill clients and draft a blog post", catalog);
+  assert.equal(
+    billed.lead,
+    "For billing clients and drafting a blog post, here's how each tool can help:",
+  );
+  const notes = rankCatalogQuery("schedule meetings, also take notes", catalog);
+  assert.equal(
+    notes.lead,
+    "For scheduling meetings and taking notes, here's how each tool can help:",
+  );
+  assert.equal(/,\s+and\b|help with also/i.test(notes.lead), false);
   const claude = ranked.tools.find((tool) => tool.slug === "claude");
   assert.ok(claude);
   assert.match(claude.whyItHelps, /marketing promotions and customer invoices/i);

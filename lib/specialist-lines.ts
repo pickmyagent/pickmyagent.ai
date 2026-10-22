@@ -502,7 +502,7 @@ export function listingSpecialistLine(toolSlug: string, query: string): string |
 
 /** Docs-backed lines for a workflow tool that can touch both jobs in one automation. */
 export const BRIDGE_LINES: Record<string, string> = {
-  n8n: "n8n connects Mailchimp campaigns and QuickBooks invoices in one hosted workflow.",
+  n8n: "n8n connects Mailchimp campaigns and QuickBooks invoices in one workflow.",
   make: "Make connects Mailchimp campaigns and QuickBooks invoices in one scenario.",
   zapier: "Zapier connects a new Mailchimp subscriber to a QuickBooks invoice.",
 };

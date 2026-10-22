@@ -73,6 +73,7 @@ const LEADING_GERUNDS: Record<string, string> = {
   send: "sending",
   post: "posting",
   take: "taking",
+  bill: "billing",
 };
 
 const GERUNDS: Record<string, string> = {
@@ -203,7 +204,7 @@ const PHRASE_NOISE = new Set([
 const PROPER_NOUNS = new Set([
   "south", "carolina", "california", "texas", "florida", "york", "lisbon", "london",
   "seo", "api", "crm", "gpt", "irs", "npc", "npcs", "pdf", "ai", "fsbo", "rag", "soc",
-  "gmail", "youtube",
+  "gmail", "youtube", "instagram", "spanish", "french", "german", "japanese",
 ]);
 
 const ACRONYM_CASE: Record<string, string> = {
@@ -221,6 +222,11 @@ const ACRONYM_CASE: Record<string, string> = {
   soc: "SOC",
   gmail: "Gmail",
   youtube: "YouTube",
+  instagram: "Instagram",
+  spanish: "Spanish",
+  french: "French",
+  german: "German",
+  japanese: "Japanese",
   twitch: "Twitch",
   deepseek: "DeepSeek",
   "3d": "3D",
@@ -465,6 +471,7 @@ function bareGerundPhrase(phrase: string): boolean {
 
 function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, wantsYour: boolean): string {
   if (!cleaned) return useCase ? personalize(CANONICAL_JOB[useCase.slug] ?? "help with this", wantsYour) : "help with this";
+  if (/^(?:tutor(?:ing)?(?:\s+me)?)$/i.test(cleaned)) return "getting tutoring help";
   if (/\bimage[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from an image";
   if (/\btext[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from text";
   if (/\btext[\s-]to[\s-]speech\b/i.test(cleaned)) return "making speech from text";
@@ -501,6 +508,8 @@ export function jobPhrase(query: string, useCase?: UseCase | null): string {
   const phrase = chooseHeader(cleaned, useCase, wantsYour);
   return lowercasePhrase(phrase, query)
     .replace(/,\s+and\b/gi, " and")
+    .replace(/\band also\b/gi, "and")
+    .replace(/\bto social\b(?!\s+media)/gi, "to social media")
     .replace(/\bemail them\b/gi, "emailing them")
     .replace(/\s+/g, " ")
     .trim() || "help with this";
@@ -873,11 +882,14 @@ export function matchTagsForConcept(concept: Concept, useCases: UseCase[]): stri
   return useCase?.matchTags ?? [concept.useCase];
 }
 
-const JOB_SPLIT = /\s*(?:,\s*and\s+|,\s+|\s+&\s+|\s+\bplus\b\s+|\s+\balso\b\s+|\s+\band\b\s+)\s*/i;
+const JOB_SPLIT = /\s*(?:,\s*and\s+|,\s*also\s+|,\s+|\s+&\s+|\s+\bplus\b\s+|\s+\balso\b\s+|\s+\band\b\s+)\s*/i;
 
 function jobParts(query: string): string[] {
   const cleaned = stripWrappers(query).replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
-  return cleaned.split(JOB_SPLIT).map((part) => part.trim()).filter((part) => part.length > 0);
+  return cleaned
+    .split(JOB_SPLIT)
+    .map((part) => part.replace(/^(?:also|and)\s+/i, "").trim())
+    .filter((part) => part.length > 0);
 }
 
 type CompoundHit = { part: string; concept: Concept; score: number };
@@ -1011,6 +1023,8 @@ function polishPart(phrase: string): string {
     .replace(/\binvoices to customers\b/gi, "customer invoices")
     .replace(/\btutoring me in\b/gi, "tutoring")
     .replace(/\bemail them\b/gi, "emailing them")
+    .replace(/\band also\b/gi, "and")
+    .replace(/\bto social\b(?!\s+media)/gi, "to social media")
     .replace(/,\s+and\b/gi, " and")
     .replace(/\s+/g, " ")
     .trim();
@@ -1024,6 +1038,34 @@ function compoundLead(hits: CompoundHit[], useCases: UseCase[]): string {
   return `For ${joinAnd(phrases)}, here's how each tool can help:`;
 }
 
+function titledLanguage(language: string): string {
+  return language[0].toUpperCase() + language.slice(1).toLowerCase();
+}
+
+function introClause(hit: CompoundHit): string {
+  const part = hit.part.toLowerCase();
+  const useCase = hit.concept.useCase;
+  if (useCase === "finance-ops") {
+    if (/\b(expense|expenses|receipt|receipts|bookkeep)/.test(part)) return "track expenses";
+    if (/\bbill/.test(part)) return "bill clients";
+    if (/\bprocess/.test(part)) return "process invoices";
+  }
+  if (useCase === "sales-outreach" && /\bqualif/.test(part)) return "qualify leads";
+  if (useCase === "shop-products") {
+    const item = part.replace(/^(?:shop|shopping)\s+(?:for\s+)?/i, "").replace(/[.?!]+$/g, "").trim();
+    if (item && item.split(/\s+/).length <= 3) return `shop for ${item}`;
+  }
+  if (useCase === "tutoring") {
+    const subject = part.replace(/^tutor(?:ing)?\s+(?:me\s+)?(?:in\s+)?/i, "").trim();
+    if (subject && subject !== "me" && subject.split(/\s+/).length <= 3) return `tutor ${subject}`;
+  }
+  if (useCase === "learn-language") {
+    const language = part.match(/\b(spanish|french|german|japanese|english)\b/i)?.[1];
+    if (language) return `practice ${titledLanguage(language)}`;
+  }
+  return INTRO_CLAUSE[useCase] ?? "handle that part";
+}
+
 function compoundIntro(hits: CompoundHit[]): string {
   const key = [...new Set(hits.map((hit) => hit.concept.useCase))].sort().join("+");
   if (PAIR_INTRO[key]) return PAIR_INTRO[key];
@@ -1032,7 +1074,7 @@ function compoundIntro(hits: CompoundHit[]): string {
   for (const hit of hits) {
     if (seen.has(hit.concept.useCase)) continue;
     seen.add(hit.concept.useCase);
-    clauses.push(INTRO_CLAUSE[hit.concept.useCase] ?? "handle that part");
+    clauses.push(introClause(hit));
   }
   return `AI agents can ${joinAnd(clauses)}.`;
 }
@@ -1178,10 +1220,8 @@ export function rankCatalogQuery(
       }
     }
     const groups = compound.map((hit) => collect(hit.concept, hit.score, hit.part, false));
-    for (let index = 0; index < 3; index++) {
-      for (const group of groups) {
-        if (group[index]) push(group[index]);
-      }
+    for (const group of groups) {
+      if (group[0]) push(group[0]);
     }
     if (wantsBridge(compound)) {
       for (const slug of BRIDGE_SLUGS.slice(1)) {
@@ -1189,6 +1229,11 @@ export function rankCatalogQuery(
         if (!tool) continue;
         bridgeSlugs.add(slug);
         push({ ...tool, score: 4000 - BRIDGE_SLUGS.indexOf(slug) });
+      }
+    }
+    for (let index = 1; index < 3; index++) {
+      for (const group of groups) {
+        if (group[index]) push(group[index]);
       }
     }
     const chosen = specialists.slice(0, 7);

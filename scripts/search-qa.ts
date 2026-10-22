@@ -298,6 +298,7 @@ const PROPER = new Set([
   "seo", "api", "crm", "gpt", "irs", "npc", "npcs", "pdf", "fsbo", "rag", "soc", "gmail",
   "youtube", "google", "anthropic", "instagram", "k5",
   "openai", "nvidia", "github", "discord", "youtube", "twitch", "amazon", "duolingo",
+  "spanish", "french", "german", "japanese", "instagram",
   "microsoft", "python", "hex", "notion", "slack",
 ]);
 
