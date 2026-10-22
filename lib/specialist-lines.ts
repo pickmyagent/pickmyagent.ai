@@ -28,7 +28,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "Land id looks up parcel boundaries and owner names on land across the country.",
     ],
     propstream: [
-      "PropStream searches parcel records with the same filters it uses on other land listings.",
+      "PropStream searches property records for land parcels.",
     ],
     regrid: [
       "Regrid sells parcel boundaries and owner fields for one county or one state.",
@@ -118,7 +118,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "scheduling-assistant": {
     lindy: [
-      "Lindy takes calendar chores and inbox follow-ups as scheduling work.",
+      "Lindy schedules meetings and clears inbox follow-ups.",
     ],
     motion: [
       "Motion plans a calendar and a task list in the same scheduling view.",
@@ -132,7 +132,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "Klaviyo sends email and text campaigns and builds a flow for a promotion.",
     ],
     mailchimp: [
-      "Mailchimp creates an email campaign and can send it to a list.",
+      "Mailchimp builds promo email campaigns and schedules them to your list.",
     ],
   },
   "create-content": {
@@ -173,7 +173,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "GuideGeek plans travel across flights, stays, restaurants, and experiences.",
     ],
     wonderplan: [
-      "Wonderplan drafts a custom itinerary for the trip you still book yourself.",
+      "Wonderplan drafts a custom itinerary for the trip.",
     ],
   },
   "shop-products": {
@@ -255,7 +255,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "tutoring": {
     khanmigo: [
-      "Khanmigo teaches a concept and also helps a teacher plan that same lesson.",
+      "Khanmigo tutors a student through a problem step by step.",
     ],
     quizlet: [
       "Quizlet turns notes into a practice test and explains a homework step with more practice.",
@@ -269,7 +269,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "learn-language": {
     "duolingo-max": [
-      "Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.",
+      "Duolingo Max lets you practice conversation with an AI partner.",
     ],
   },
   "game-creative": {
@@ -486,6 +486,12 @@ export function isListingPhotoQuery(query: string): boolean {
     && !/\b(edit|editing|trim|trimming|caption|captions)\b/i.test(query);
 }
 
+/** "Make a listing video" means a photo-to-video tour, not a footage edit. */
+export function isListingMakeQuery(query: string): boolean {
+  return /\b(?:make|making|create|creating)\s+(?:a\s+)?listing videos?\b/i.test(query)
+    && !/\b(?:edit|editing|trim|trimming|caption|captions)\b/i.test(query);
+}
+
 const LISTING_PHOTO_LINES: Record<string, string> = {
   autoreel: "AutoReel turns listing photos into a property video with music and captions.",
   boxbrownie: "BoxBrownie builds a virtual tour of the home from 360 photos.",
@@ -496,7 +502,7 @@ const LISTING_PHOTO_LINES: Record<string, string> = {
 };
 
 export function listingSpecialistLine(toolSlug: string, query: string): string | null {
-  if (isListingPhotoQuery(query)) return LISTING_PHOTO_LINES[toolSlug] ?? null;
+  if (isListingPhotoQuery(query) || isListingMakeQuery(query)) return LISTING_PHOTO_LINES[toolSlug] ?? null;
   return specialistLine("listing-videos", toolSlug);
 }
 
@@ -504,7 +510,7 @@ export function listingSpecialistLine(toolSlug: string, query: string): string |
 export const BRIDGE_LINES: Record<string, string> = {
   n8n: "n8n connects Mailchimp campaigns and QuickBooks invoices in one workflow.",
   make: "Make connects Mailchimp campaigns and QuickBooks invoices in one scenario.",
-  zapier: "Zapier connects a new Mailchimp subscriber to a QuickBooks invoice.",
+  zapier: "Zapier links Mailchimp and QuickBooks so a step in one app triggers a step in the other.",
 };
 
 export function specialistLine(useCaseSlug: string, toolSlug: string, index = 0): string | null {

@@ -1006,9 +1006,26 @@ test("compound marketing and invoice query names both jobs", () => {
   assert.equal(/,\s+and\b|help with also/i.test(notes.lead), false);
   const claude = ranked.tools.find((tool) => tool.slug === "claude");
   assert.ok(claude);
-  assert.match(claude.whyItHelps, /marketing promotions and customer invoices/i);
-  assert.equal(claude.whyItHelps.includes(","), false);
+  assert.match(claude.whyItHelps, /plan both jobs, automating marketing promotions and sending customer invoices, step by step/i);
   assert.equal(/automating marketing promotions, and sending/i.test(claude.whyItHelps), false);
+  assert.equal(ranked.tools.some((tool) => tool.slug === "dext"), false);
+  const expenses = rankCatalogQuery("track expenses and file my taxes", catalog);
+  const expenseClaude = expenses.tools.find((tool) => tool.slug === "claude");
+  assert.match(expenseClaude?.whyItHelps ?? "", /tracking expenses and filing taxes/);
+  assert.equal(expenses.tools.some((tool) => tool.slug === "vic-ai"), false);
+  const billedTools = billed.tools.map((tool) => tool.slug);
+  assert.equal(billedTools.includes("ramp"), false);
+  assert.equal(billedTools.includes("vic-ai"), false);
+  const meetings = rankCatalogQuery("schedule meetings and take notes", catalog);
+  assert.equal(meetings.tools.some((tool) => tool.slug === "obsidian"), false);
+  const hotel = rankCatalogQuery("book a hotel and clip my twitch stream", catalog);
+  assert.match(hotel.intro, /book your hotel and cut clips from your stream/);
+  assert.equal(hotel.tools[0]?.slug, "streamladder");
+  const luggage = rankCatalogQuery("plan a trip and shop for luggage", catalog);
+  assert.equal(luggage.tools.some((tool) => tool.slug === "daydream"), false);
+  const listing = rankCatalogQuery("make a listing video and find off-market deals", catalog);
+  assert.match(listing.intro, /make a listing video/);
+  assert.equal(listing.tools[0]?.slug, "autoreel");
 });
 
 test("held-out paraphrases report precision at 3 without failing the build", () => {

@@ -213,7 +213,11 @@ export function specialistWhyProblems(name: string, why: string): string[] {
   const next = why.slice(name.length).trim().match(/^[A-Za-z]+/)?.[0] ?? "";
   const sentence = nlp(next).json() as Array<{ terms?: Term[] }>;
   const tags = sentence[0]?.terms?.[0]?.tags ?? [];
-  const verb = tags.includes("Verb") || tags.includes("PresentTense") || tags.includes("Infinitive");
+  // Compromise tags the verb "tutors" as a noun ("Khanmigo tutors a student").
+  const verb = next.toLowerCase() === "tutors"
+    || tags.includes("Verb")
+    || tags.includes("PresentTense")
+    || tags.includes("Infinitive");
   if (!verb) problems.push(`specialist why does not follow the name with a verb (${next || "missing"})`);
   return problems;
 }

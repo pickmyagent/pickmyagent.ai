@@ -501,10 +501,16 @@ export function qaProblems(catalog: Catalog): string[] {
         }
       }
       if (/,\s+and\b/i.test(header)) problems.push(`${item.query}: comma before and in ${header}`);
+      const queryWords = item.query.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((word) => word.length > 2);
       for (const rankedTool of ranked.tools) {
         if (!rankedTool.generalPurpose) continue;
-        if (rankedTool.whyItHelps.includes(",")) {
-          problems.push(`${item.query}: assistant why has a clause comma: ${rankedTool.whyItHelps}`);
+        const why = rankedTool.whyItHelps.toLowerCase();
+        for (let index = 0; index + 6 <= queryWords.length; index++) {
+          const span = queryWords.slice(index, index + 6).join(" ");
+          if (why.includes(span)) {
+            problems.push(`${item.query}: assistant why pastes the query: ${rankedTool.whyItHelps}`);
+            break;
+          }
         }
       }
     }
