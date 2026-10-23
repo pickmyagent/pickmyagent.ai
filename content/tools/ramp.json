@@ -10,7 +10,8 @@
     "finance-ops"
   ],
   "useCaseTags": [
-    "finance-ops"
+    "finance-ops",
+    "bookkeeping"
   ],
   "toolTypes": [
     "agent"
@@ -63,6 +64,7 @@
     "finalUrl": "https://ramp.com/"
   },
   "useCaseFit": {
-    "finance-ops": "Finance platform with a free plan at $0 per user and Plus at $15 per user."
+    "finance-ops": "Finance platform with a free plan at $0 per user and Plus at $15 per user.",
+    "bookkeeping": "Keeps card charges and expenses together for the books."
   }
 }

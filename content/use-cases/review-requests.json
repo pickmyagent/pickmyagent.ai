@@ -1,0 +1,17 @@
+{
+  "slug": "review-requests",
+  "title": "Ask for reviews",
+  "summary": "Draft the review request and a reply to a public review.",
+  "audienceHints": [
+    "owners"
+  ],
+  "matchTags": [
+    "review-requests"
+  ],
+  "jobPhrase": "asking customers for reviews",
+  "assistantTask": "draft a review request and a reply to a public review",
+  "assistantContext": "asking a customer for a review",
+  "searchTopic": "what a review request should say",
+  "recommended": [],
+  "intro": "AI agents can draft the review request you send after a job and a short reply to a public review. You still send it."
+}

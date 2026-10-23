@@ -1,0 +1,18 @@
+{
+  "slug": "payroll",
+  "title": "Run payroll",
+  "summary": "Hours, rates, and the questions you still ask a payroll service.",
+  "audienceHints": [
+    "owners"
+  ],
+  "matchTags": [
+    "payroll"
+  ],
+  "jobPhrase": "running payroll",
+  "assistantTask": "turn hours and rates into a payroll checklist",
+  "assistantContext": "checking a payroll run",
+  "searchTopic": "which payroll figures a person still confirms",
+  "recommended": [],
+  "intro": "AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.",
+  "disclaimer": "PickMyAgent is not tax or financial advice."
+}

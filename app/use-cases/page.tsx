@@ -58,7 +58,9 @@ export default function UseCasesPage() {
                   {useCase.summary}
                 </span>
                 <span className="mt-4 font-mono text-xs text-muted">
-                  {count} tools · {groups.recommended.length} on the short list
+                  {count === 0
+                    ? "No specialist in the directory"
+                    : `${count} tools · ${groups.recommended.length} on the short list`}
                 </span>
               </Link>
             </li>

@@ -1,0 +1,17 @@
+{
+  "slug": "contracts",
+  "title": "Draft a contract",
+  "summary": "Turn the terms you list into a draft a person still reviews.",
+  "audienceHints": [
+    "owners"
+  ],
+  "matchTags": [
+    "contracts"
+  ],
+  "jobPhrase": "drafting a contract",
+  "assistantTask": "draft a contract from the terms and mark lines to review",
+  "assistantContext": "drafting a contract",
+  "searchTopic": "which contract lines a person should review",
+  "recommended": [],
+  "intro": "AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording."
+}

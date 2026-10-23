@@ -1,0 +1,18 @@
+{
+  "slug": "sales-tax",
+  "title": "Handle sales tax",
+  "summary": "Sort taxable sales and list what a state form still needs.",
+  "audienceHints": [
+    "owners"
+  ],
+  "matchTags": [
+    "sales-tax"
+  ],
+  "jobPhrase": "handling sales tax",
+  "assistantTask": "separate taxable sales and list the filing date",
+  "assistantContext": "preparing a sales-tax filing",
+  "searchTopic": "which sales are taxable",
+  "recommended": [],
+  "intro": "AI agents can separate taxable sales from the receipts you already have, list the rate and the filing date to confirm, and draft questions for the state form. You still file it.",
+  "disclaimer": "PickMyAgent is not tax or financial advice."
+}

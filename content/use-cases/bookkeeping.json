@@ -1,0 +1,31 @@
+{
+  "slug": "bookkeeping",
+  "title": "Clean up the books",
+  "summary": "Capture receipts and expenses for the books. Not tax or financial advice.",
+  "audienceHints": [
+    "owners"
+  ],
+  "matchTags": [
+    "bookkeeping"
+  ],
+  "jobPhrase": "cleaning up the books",
+  "assistantTask": "list the receipts and expenses still missing from the books",
+  "assistantContext": "cleaning up the books",
+  "searchTopic": "what a bank reconciliation checks",
+  "recommended": [
+    {
+      "toolId": "dext",
+      "why": "Receipt and invoice capture for the books."
+    },
+    {
+      "toolId": "ramp",
+      "why": "Card charges and expenses in one finance platform."
+    },
+    {
+      "toolId": "bill-com",
+      "why": "Invoices, bills, and spend in one product."
+    }
+  ],
+  "intro": "AI agents can capture receipts, sort expenses into categories, and gather the records you review before they go back into the books.",
+  "disclaimer": "PickMyAgent is not tax or financial advice."
+}

@@ -10,7 +10,8 @@
     "content"
   ],
   "useCaseTags": [
-    "social-media"
+    "social-media",
+    "run-a-business"
   ],
   "toolTypes": [
     "agent"
@@ -63,6 +64,7 @@
     "finalUrl": "https://buffer.com/"
   },
   "useCaseFit": {
-    "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content."
+    "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content.",
+    "run-a-business": "Schedules social posts a small business can publish through the week."
   }
 }

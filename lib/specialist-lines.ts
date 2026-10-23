@@ -478,6 +478,34 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "Tavernbard plays a game master in Discord and can speak character lines there.",
     ],
   },
+  bookkeeping: {
+    dext: [
+      "Dext captures receipts and invoices so the books have the source documents in one place.",
+    ],
+    ramp: [
+      "Ramp keeps card charges and expenses together for the books.",
+    ],
+    "bill-com": [
+      "BILL sends invoices and tracks bills next to the books.",
+    ],
+  },
+  "run-a-business": {
+    dext: [
+      "Dext captures receipts and invoices so a small business can keep the books current.",
+    ],
+    "bill-com": [
+      "BILL sends customer invoices and pays vendor bills for a small business.",
+    ],
+    mailchimp: [
+      "Mailchimp sends email campaigns to the customers a small business already has.",
+    ],
+    buffer: [
+      "Buffer schedules social posts a small business can publish through the week.",
+    ],
+    zendesk: [
+      "Zendesk runs the customer support inbox for a small business.",
+    ],
+  },
 };
 
 /** Photo-to-video listing queries. Edit, trim, and caption queries stay on the editor lines. */

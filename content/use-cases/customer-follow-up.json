@@ -1,0 +1,18 @@
+{
+  "slug": "customer-follow-up",
+  "title": "Follow up with customers",
+  "summary": "Notes to people who already bought from you.",
+  "audienceHints": [
+    "owners"
+  ],
+  "matchTags": [
+    "customer-follow-up"
+  ],
+  "jobPhrase": "following up with customers",
+  "assistantTask": "draft a note to a customer you already know",
+  "assistantContext": "a thank-you or a check-in",
+  "searchTopic": "what to say in a customer follow-up",
+  "recommended": [],
+  "intro": "AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.",
+  "disclaimer": null
+}
