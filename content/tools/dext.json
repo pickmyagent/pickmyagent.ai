@@ -10,7 +10,9 @@
     "finance-ops"
   ],
   "useCaseTags": [
-    "finance-ops"
+    "finance-ops",
+    "bookkeeping",
+    "run-a-business"
   ],
   "toolTypes": [
     "agent"
@@ -63,6 +65,8 @@
     "finalUrl": "https://dext.com/"
   },
   "useCaseFit": {
-    "finance-ops": "Captures receipts and invoices and manages business expenses."
+    "finance-ops": "Captures receipts and invoices and manages business expenses.",
+    "bookkeeping": "Captures receipts and invoices so the books have the source documents.",
+    "run-a-business": "Captures receipts and invoices a small business can review before they hit the books."
   }
 }

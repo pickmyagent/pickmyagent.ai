@@ -586,7 +586,7 @@ const HEADER_CASES: { query: string; lead: string; intro: string | RegExp }[] = 
   {
     query: "AI for my small business",
     lead: "For help with your small business, here's how each tool can help:",
-    intro: /^AI assistants can't run a small business for you/,
+    intro: /^AI agents can capture receipts, send invoices/,
   },
   {
     query: "best AI tool for real estate",
@@ -969,6 +969,61 @@ const HELD_OUT: { query: string; expect: string | null }[] = [
   { query: "rank houses by cash flow", expect: "rank-property-deals" },
   { query: "a lot of deals", expect: null },
   { query: "wheres a good wedding venue", expect: null },
+  { query: "help with Ai quickbooks", expect: "bookkeeping" },
+  { query: "find and agent to help automate my quickbooks clean up for my small business", expect: "bookkeeping" },
+  { query: "clean up my books", expect: "bookkeeping" },
+  { query: "categorize transactions", expect: "bookkeeping" },
+  { query: "reconcile my bank accounts", expect: "bookkeeping" },
+  { query: "bookkeeping for my small business", expect: "bookkeeping" },
+  { query: "catch up on my books", expect: "bookkeeping" },
+  { query: "fix messy books", expect: "bookkeeping" },
+  { query: "xero cleanup", expect: "bookkeeping" },
+  { query: "freshbooks", expect: "bookkeeping" },
+  { query: "wave accounting", expect: "bookkeeping" },
+  { query: "my accountant", expect: "bookkeeping" },
+  { query: "expense reports", expect: "finance-ops" },
+  { query: "run payroll", expect: null },
+  { query: "paychecks", expect: null },
+  { query: "payroll taxes for my staff", expect: null },
+  { query: "schedule shifts for my restaurant", expect: null },
+  { query: "rota for the cafe", expect: null },
+  { query: "sales tax for my bakery", expect: null },
+  { query: "vat return", expect: null },
+  { query: "quarterly taxes", expect: "do-taxes" },
+  { query: "1099s for contractors", expect: "do-taxes" },
+  { query: "year-end tax prep", expect: "do-taxes" },
+  { query: "cash flow for my business", expect: "analyze-data" },
+  { query: "profit and loss report", expect: "analyze-data" },
+  { query: "financial dashboard", expect: "analyze-data" },
+  { query: "budget forecast", expect: "analyze-data" },
+  { query: "customer follow-up", expect: "sales-outreach" },
+  { query: "crm for leads", expect: "sales-outreach" },
+  { query: "appointment booking", expect: "scheduling-assistant" },
+  { query: "project management", expect: "scheduling-assistant" },
+  { query: "ask for google reviews", expect: null },
+  { query: "online reputation", expect: null },
+  { query: "email newsletter for my bakery", expect: "marketing-promotions" },
+  { query: "facebook ads for my salon", expect: "social-media" },
+  { query: "social posts for my bakery", expect: "social-media" },
+  { query: "local seo", expect: "create-content" },
+  { query: "google business profile for my restaurant", expect: "create-content" },
+  { query: "answer the phone for my salon", expect: "customer-support" },
+  { query: "faq chatbot for my website", expect: "customer-support" },
+  { query: "support inbox", expect: "customer-support" },
+  { query: "shopify inventory and shipping", expect: "workflow-automation" },
+  { query: "etsy shop orders", expect: "workflow-automation" },
+  { query: "shipping labels", expect: "workflow-automation" },
+  { query: "inventory for my shop", expect: "workflow-automation" },
+  { query: "SOP for my plumbing company", expect: "knowledge-qa" },
+  { query: "draft a quote for a kitchen remodel", expect: null },
+  { query: "write a proposal", expect: null },
+  { query: "draft a contract for a client", expect: null },
+  { query: "meeting notes", expect: "meetings-knowledge" },
+  { query: "hire staff for my restaurant", expect: "hire-candidates" },
+  { query: "onboarding staff for my restaurant", expect: "hire-candidates" },
+  { query: "what should a small business automate", expect: "run-a-business" },
+  { query: "run my whole business with AI", expect: "run-a-business" },
+  { query: "AI for my small business", expect: "run-a-business" },
 ];
 
 test("compound marketing and invoice query names both jobs", () => {
@@ -1036,6 +1091,39 @@ test("compound marketing and invoice query names both jobs", () => {
   assert.match(listing.intro, /turn listing photos into a property video/);
   assert.equal(/\bedit\b/i.test(listing.intro), false);
   assert.equal(listing.tools[0]?.slug, "autoreel");
+});
+
+test("small-business bookkeeping queries stay on the books", () => {
+  const banned = /midjourney|runway|higgsfield|kling|pika|luma|elevenlabs|scenario|rosebud|buildbox/i;
+  for (const query of [
+    "help with Ai quickbooks",
+    "find and agent to help automate my quickbooks clean up for my small business",
+  ]) {
+    const ranked = rankCatalogQuery(query, catalog);
+    assert.equal(ranked.useCases[0]?.slug, "bookkeeping", query);
+    assert.equal(ranked.fallback, false, query);
+    assert.match(ranked.intro, /^AI agents\b/, ranked.intro);
+    assert.match(ranked.intro, /QuickBooks/, ranked.intro);
+    const specialists = ranked.tools.filter((tool) => !tool.generalPurpose);
+    assert.deepEqual(specialists.slice(0, 3).map((tool) => tool.slug), ["dext", "ramp", "bill-com"], query);
+    for (const tool of specialists) {
+      assert.equal(banned.test(tool.name), false, `${query} showed ${tool.name}`);
+      assert.match(tool.whyItHelps, /QuickBooks/, tool.whyItHelps);
+    }
+    assert.equal(ranked.tools.filter((tool) => tool.generalPurpose).length, 5, query);
+  }
+  const cleanup = rankCatalogQuery(
+    "find and agent to help automate my quickbooks clean up for my small business",
+    catalog,
+  );
+  assert.equal(cleanup.lead, "For cleaning up your QuickBooks, here's how each tool can help:");
+  const plain = rankCatalogQuery("help with Ai quickbooks", catalog);
+  assert.equal(plain.lead, "For help with QuickBooks, here's how each tool can help:");
+  const salon = rankCatalogQuery("payroll and scheduling for my salon", catalog);
+  assert.deepEqual(salon.useCases.map((item) => item.slug), ["payroll", "scheduling-assistant"]);
+  assert.match(salon.intro, /^AI agents\b/);
+  const both = rankCatalogQuery("clean up quickbooks and send invoices", catalog);
+  assert.deepEqual(both.useCases.map((item) => item.slug), ["bookkeeping", "finance-ops"]);
 });
 
 test("held-out paraphrases report precision at 3 without failing the build", () => {

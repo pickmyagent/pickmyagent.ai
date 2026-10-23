@@ -290,6 +290,62 @@ export const DOMAIN_LINES: Record<string, Record<string, string>> = {
     perplexity: "for sourced pages on deal terms, listing video, and owner outreach, with links you can check.",
     deepseek: "to say which of the deal, the listing video, or the owner outreach is still unfinished.",
   }),
+  bookkeeping: lines({
+    claude: "to list the receipts and expenses to review before they go into the books.",
+    chatgpt: "for a checklist of statements, receipts, and uncategorized expenses.",
+    gemini: "to build a sheet of transactions, the category, and whether a receipt is attached.",
+    perplexity: "for sourced steps on a bank reconciliation, with links you can check.",
+    deepseek: "to flag which bookkeeping lines you should ask an accountant about.",
+  }),
+  "run-a-business": lines({
+    claude: "to draft a customer reply and a short list of bookkeeping you still check.",
+    chatgpt: "for a weekly checklist of posts, invoices, and customer replies for a small business.",
+    gemini: "to build a sheet of customers, the next reply, and the bookkeeping item still open.",
+    perplexity: "for sourced checklists for a small-business week, with links you can check.",
+    deepseek: "to outline one customer reply, one post, and the bookkeeping step you still do yourself.",
+  }),
+  payroll: lines({
+    claude: "to turn hours, rates, and deductions into a payroll checklist you still approve.",
+    chatgpt: "for a checklist of employees, hours, and the pay date.",
+    gemini: "to build a sheet of employees, hours, rate, and gross pay.",
+    perplexity: "for sourced notes on what a payroll run should include, with links you can check.",
+    deepseek: "to list which payroll figures a person must confirm before anyone is paid.",
+  }),
+  "sales-tax": lines({
+    claude: "to separate taxable sales from receipts and list the filing date to confirm.",
+    chatgpt: "for a checklist of taxable sales, the rate, and the state form.",
+    gemini: "to build a sheet of sales, whether each one is taxable, and the tax collected.",
+    perplexity: "for sourced pages on a state's sales-tax filing, with links you can check.",
+    deepseek: "to draft questions about which sales are taxable before you file.",
+  }),
+  "shift-scheduling": lines({
+    claude: "to draft a weekly shift schedule from who is available and the text you send the team.",
+    chatgpt: "for a checklist of names, available days, and the shifts still open.",
+    gemini: "to build a sheet of employees, the days they can work, and the assigned shift.",
+    perplexity: "for sourced notes on writing a fair weekly schedule, with links you can check.",
+    deepseek: "to point out shifts that overlap or leave a day uncovered.",
+  }),
+  "review-requests": lines({
+    claude: "to draft the review request you send after a job and a short reply to a public review.",
+    chatgpt: "for a checklist of when to ask, what to say, and which reviews need a reply.",
+    gemini: "to build a sheet of finished jobs, whether you asked for a review, and the reply.",
+    perplexity: "for sourced notes on review requests, with links you can check.",
+    deepseek: "to shorten a review request so it asks once and does not offer a reward.",
+  }),
+  quotes: lines({
+    claude: "to draft a quote from the job details and the price you set.",
+    chatgpt: "for a checklist of scope, price, and the date the quote expires.",
+    gemini: "to build a sheet of line items, the price, and whether the customer accepted.",
+    perplexity: "for sourced notes on what a simple quote includes, with links you can check.",
+    deepseek: "to mark which numbers in a quote you still need to confirm.",
+  }),
+  contracts: lines({
+    claude: "to draft a contract from the terms you list and mark the lines a person should review.",
+    chatgpt: "for a checklist of scope, price, dates, and the lines a lawyer should read.",
+    gemini: "to build a sheet of terms, the draft wording, and whether a person has reviewed it.",
+    perplexity: "for sourced notes on clauses small businesses often include, with links you can check.",
+    deepseek: "to list which contract lines are still vague before anyone signs.",
+  }),
 };
 
 export function domainAssistantLine(slug: string, useCaseSlug: string): string | null {

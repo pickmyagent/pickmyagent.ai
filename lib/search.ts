@@ -1,6 +1,21 @@
 import { domainAssistantLine, openAssistantLine } from "./assistant-lines.ts";
 import { BRIDGE_LINES, isListingMakeQuery, isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
+import {
+  SMB_SPELLING,
+  booksBrandQuery,
+  brandCase,
+  conceptBlocked,
+  propertyMoneyQuery,
+  receivableQuery,
+  smallBusinessAssistantLine,
+  smallBusinessCompoundIntro,
+  smallBusinessHeader,
+  smallBusinessIntro,
+  smallBusinessJobForms,
+  smallBusinessRoleBonus,
+  smallBusinessSpecialistLine,
+} from "./small-business.ts";
 import type { Category, SmokeStatus, Tool, UseCase } from "./types";
 
 /**
@@ -74,6 +89,14 @@ const LEADING_GERUNDS: Record<string, string> = {
   post: "posting",
   take: "taking",
   bill: "billing",
+  clean: "cleaning",
+  categorize: "categorizing",
+  reconcile: "reconciling",
+  chase: "chasing",
+  catch: "catching",
+  hire: "hiring",
+  ask: "asking",
+  onboard: "onboarding",
 };
 
 const GERUNDS: Record<string, string> = {
@@ -99,6 +122,7 @@ const SPELLING: Record<string, string> = {
   emial: "email",
   portfolo: "portfolio",
   investmnt: "investment",
+  ...SMB_SPELLING,
 };
 
 const DO_NOT_CORRECT = new Set([
@@ -107,6 +131,7 @@ const DO_NOT_CORRECT = new Set([
   "properties", "real", "estate", "cash", "flow", "reach", "realtor", "owner",
   "thread", "threads",
   "owners", "seller", "sellers", "plan", "write", "bake", "train", "organize",
+  "shipping", "shipped",
 ]);
 
 const ANCHOR_DICTIONARY = [...new Set(CONCEPTS.flatMap((concept) => concept.anchors))].filter(
@@ -185,9 +210,13 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   if (concept.id === "avatar" && (videoGenerationQuery(lower) || listingVideoQuery(lower))) return 0;
   if (concept.id === "listing-video" && avatarQuery(lower)) return 0;
   if (concept.id === "tutoring" && languageQuery(lower)) return 0;
+  if (conceptBlocked(concept.id, lower)) return 0;
   let score = 0;
   if (concept.id === "video-generation" && videoGenerationQuery(lower)) score += 12;
-  for (const phrase of concept.phrases) {
+  const phrases = concept.id === "deals" && !propertyMoneyQuery(lower)
+    ? concept.phrases.filter((phrase) => phrase !== "cash flow")
+    : concept.phrases;
+  for (const phrase of phrases) {
     if (lower.includes(phrase)) score += 12;
   }
   for (const anchor of concept.anchors) {
@@ -204,7 +233,7 @@ const PHRASE_NOISE = new Set([
 const PROPER_NOUNS = new Set([
   "south", "carolina", "california", "texas", "florida", "york", "lisbon", "london",
   "seo", "api", "crm", "gpt", "irs", "npc", "npcs", "pdf", "ai", "fsbo", "rag", "soc",
-  "gmail", "youtube", "instagram", "spanish", "french", "german", "japanese",
+  "gmail", "youtube", "instagram", "facebook", "google", "amazon", "spanish", "french", "german", "japanese",
 ]);
 
 const ACRONYM_CASE: Record<string, string> = {
@@ -217,6 +246,7 @@ const ACRONYM_CASE: Record<string, string> = {
   npcs: "NPCs",
   pdf: "PDF",
   ai: "AI",
+  faq: "FAQ",
   fsbo: "FSBO",
   rag: "RAG",
   soc: "SOC",
@@ -236,8 +266,12 @@ const ACRONYM_CASE: Record<string, string> = {
 /** Drop "use an agent for", "is there an AI that can", and the other tool-seeking openers. */
 export function stripWrappers(input: string): string {
   let text = input.trim().replace(/\s+/g, " ").replace(/^[^A-Za-z0-9]+/, "").replace(/[.?!…]+$/g, "").replace(/\s+please$/i, "");
+  text = text.replace(/\band\s+(agent|ai)s?\b/gi, "an $1").replace(/\band\s+tools?\b/gi, "a tool");
   const patterns = [
     /^(?:hey|hi|hello|ok|okay|so)\s+/i,
+    /^(?:i|we)\s+(?:own|run)\s+(?:an?\s+)?(?:[a-z0-9]+\s+){0,8}?(?:and\s+(?:i\s+)?)?(?:need|want)\s+(?:to\s+|help\s+(?:with\s+)?)?/i,
+    /^(?:i|we)\s+(?:own|run)\s+(?:an?\s+)?(?:[a-z0-9]+\s+){1,6}?and\s+(?=(?:my|our|the)\s+)/i,
+    /^(?:i(?:'m|\s+am)|we(?:'re|\s+are))\s+(?:an?\s+)?[a-z0-9]+\s+(?:owner\s+)?and\s+(?:i\s+)?(?:need|want)\s+(?:to\s+|help\s+(?:with\s+)?)?/i,
     /^please\s+/i,
     /^(?:i\s+was\s+wondering\s+if|i(?:'ve|\s+have)\s+been\s+trying\s+to(?:\s+figure\s+out)?)\s+/i,
     /^(?:can|could)\s+you\s+(?:please\s+)?/i,
@@ -297,6 +331,8 @@ function lowercasePhrase(phrase: string, original: string): string {
     const bare = word.toLowerCase().replace(/[^a-z0-9]/g, "");
     if (word === "IT") return "IT";
     if (/^q&a$/i.test(word)) return "Q&A";
+    const branded = brandCase(bare);
+    if (branded) return branded;
     if (ACRONYM_CASE[bare]) return ACRONYM_CASE[bare];
     if (proper.has(bare) || PROPER_NOUNS.has(bare)) {
       return word[0].toUpperCase() + word.slice(1).toLowerCase();
@@ -344,6 +380,14 @@ const CANONICAL_JOB: Record<string, string> = {
   "meetings-knowledge": "turning a meeting into notes and tasks",
   "tool-use-browser": "automating steps in a web browser",
   "game-npcs": "adding an in-game character that can talk",
+  bookkeeping: "help with bookkeeping",
+  "run-a-business": "running a small business",
+  payroll: "running payroll",
+  "sales-tax": "handling sales tax",
+  "shift-scheduling": "scheduling staff shifts",
+  "review-requests": "asking customers for reviews",
+  quotes: "drafting a quote",
+  contracts: "drafting a contract",
 };
 
 /** Noun phrases that should use the use-case line instead of "help with". */
@@ -407,6 +451,8 @@ const PHRASE_HEADER: Record<string, string> = {
 const NO_ARTICLE = new Set([
   "real", "acreage", "zoning", "meal", "homework", "research", "hiring", "fsbo", "marketing",
   "npc", "npcs", "rag", "soc", "crm", "gmail", "youtube",
+  "bookkeeping", "payroll", "invoicing", "billing", "quickbooks", "shopify", "inventory",
+  "onboarding", "sales",
 ]);
 
 function tokenAt(text: string, index: number): string {
@@ -454,7 +500,7 @@ function lightArticle(phrase: string): string {
   const parts = phrase.split(/\s+/);
   const first = parts[0]?.toLowerCase().replace(/[^a-z0-9]/g, "") ?? "";
   if ((first === "youtube" || first === "soc") && parts.length > 1) return `a ${phrase}`;
-  if (!first || NO_ARTICLE.has(first)) return phrase;
+  if (!first || NO_ARTICLE.has(first) || /ing$/i.test(first)) return phrase;
   if (first === "seo") return `an ${phrase}`;
   if (/(?:s|es)$/i.test(first) && !/(?:ss|is|us)$/i.test(first)) return phrase;
   const head = phrase.split(/\s+\b(?:in|for|on|with|from|near|by|to)\b\s+/i)[0] ?? phrase;
@@ -486,6 +532,8 @@ function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, want
     if (thin && useCase) return canonicalHeader(useCase, key, wantsYour) ?? gerunded;
     return gerunded;
   }
+  const branded = smallBusinessHeader(cleaned);
+  if (branded) return branded;
   if (videoGenerationQuery(cleaned) && /\bwith\b/i.test(cleaned)) {
     return `making ${lightArticle(cleaned)}`;
   }
@@ -499,12 +547,15 @@ function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, want
 
 export function jobPhrase(query: string, useCase?: UseCase | null): string {
   const wantsYour = /\b(?:my|our)\b/i.test(query);
-  const cleaned = stripWrappers(query)
+  let cleaned = stripWrappers(query)
     .replace(/\b(?:my|our)\b/gi, "your")
     .replace(/,\s+i\b[\s\S]*$/i, "")
     .replace(/\s+and\s+i\b[\s\S]*$/i, "")
     .replace(/\s+/g, " ")
     .trim();
+  if (/^automat/i.test(cleaned) && (booksBrandQuery(cleaned) || /\b(?:books|bookkeeping)\b/i.test(cleaned))) {
+    cleaned = cleaned.replace(/^automat\w*\s+/i, "").trim();
+  }
   const phrase = chooseHeader(cleaned, useCase, wantsYour);
   return lowercasePhrase(phrase, query)
     .replace(/,\s+and\b/gi, " and")
@@ -588,9 +639,7 @@ const LISTING_PHOTO_ORDER = ["autoreel", "canva", "kapwing", "capcut"];
 
 function financeIntent(part: string): "receivable" | "expense" | "payable" | "any" {
   const text = part.toLowerCase();
-  if (/\bbill (?:clients|customers)\b/.test(text)) return "receivable";
-  if (/\bcustomer invoices?\b/.test(text)) return "receivable";
-  if (/\b(?:send|sending)\b/.test(text) && /\binvoic/.test(text)) return "receivable";
+  if (receivableQuery(text)) return "receivable";
   if (/\b(?:expense|expenses|receipt|receipts)\b/.test(text)) return "expense";
   if (/\b(?:process(?:ing)? invoices|accounts payable|purchase orders?)\b/.test(text)) return "payable";
   return "any";
@@ -614,6 +663,8 @@ function luggageQuery(text: string): boolean {
 }
 
 function roleBonus(conceptId: string, slug: string, query: string): number {
+  const smb = smallBusinessRoleBonus(conceptId, slug, query);
+  if (smb) return smb;
   if (conceptId === "listing-video") {
     const order = isListingPhotoQuery(query) || isListingMakeQuery(query) ? LISTING_PHOTO_ORDER : LISTING_EDITOR_ORDER;
     const index = order.indexOf(slug);
@@ -709,6 +760,8 @@ export function jobIntro(query: string, useCase: UseCase | undefined, concept: C
   if (useCase?.slug === "listing-videos" || concept?.id === "listing-video") {
     return isListingPhotoQuery(query) ? LISTING_PHOTO_INTRO : LISTING_EDIT_INTRO;
   }
+  const smb = smallBusinessIntro(query, useCase?.slug, concept?.id ?? null);
+  if (smb) return smb;
   if (useCase?.intro) return useCase.intro;
   return openIntro(query, useCase);
 }
@@ -743,6 +796,10 @@ function guardSlot(slot: string): string {
 
 function assistantWhy(tool: Tool, query: string, useCase: UseCase | null, slotOverride?: string): string {
   const name = tool.assistantName ?? tool.name.split("(")[0].trim();
+  if (!slotOverride) {
+    const smb = smallBusinessAssistantLine(tool.slug, useCase?.slug, query);
+    if (smb) return smb;
+  }
   if (useCase && !slotOverride) {
     const written = domainAssistantLine(tool.slug, useCase.slug);
     if (written) return written;
@@ -762,6 +819,10 @@ function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general:
   }
   if (tool.slug === "khanmigo" && /\bmath\b/i.test(query)) {
     return "Khanmigo tutors a student through a math problem step by step.";
+  }
+  if (useCase) {
+    const smbLine = smallBusinessSpecialistLine(useCase.slug, tool.slug, query);
+    if (smbLine) return smbLine;
   }
   if (tool.slug === "bill-com" && financeIntent(query) === "expense") {
     return "BILL includes spend and expense tools with its invoicing.";
@@ -1063,6 +1124,8 @@ function jobForms(part: string): JobForms {
   for (const [pattern, forms] of mapped) {
     if (pattern.test(raw)) return forms;
   }
+  const smb = smallBusinessJobForms(raw);
+  if (smb) return smb;
   const cleaned = raw.replace(/\bmy\b/g, "your");
   return { infinitive: cleaned, gerund: cleaned };
 }
@@ -1081,6 +1144,8 @@ function compoundForms(hits: CompoundHit[]): JobForms[] {
 
 function compoundIntro(hits: CompoundHit[]): string {
   const blob = hits.map((hit) => hit.part.toLowerCase()).join(" ");
+  const smb = smallBusinessCompoundIntro(blob);
+  if (smb) return smb;
   const has = (pattern: RegExp) => pattern.test(blob);
   if (has(/\bmarketing promotions\b/) && has(/\bsending invoices\b/)) {
     return PAIR_INTRO["finance-ops+marketing-promotions"];

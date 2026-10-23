@@ -10,7 +10,8 @@
     "content"
   ],
   "useCaseTags": [
-    "marketing-promotions"
+    "marketing-promotions",
+    "run-a-business"
   ],
   "toolTypes": [
     "automation"
@@ -65,6 +66,7 @@
     "finalUrl": "https://mailchimp.com/"
   },
   "useCaseFit": {
-    "marketing-promotions": "Free plan sends email campaigns to 250 contacts and 500 sends a month."
+    "marketing-promotions": "Free plan sends email campaigns to 250 contacts and 500 sends a month.",
+    "run-a-business": "Sends email campaigns to the customers a small business already has."
   }
 }

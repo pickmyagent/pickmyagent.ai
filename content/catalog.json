@@ -725,7 +725,9 @@
         "finance-ops"
       ],
       "useCaseTags": [
-        "finance-ops"
+        "finance-ops",
+        "bookkeeping",
+        "run-a-business"
       ],
       "toolTypes": [
         "agent"
@@ -778,7 +780,9 @@
         "finalUrl": "https://www.bill.com/"
       },
       "useCaseFit": {
-        "finance-ops": "Lists invoicing, accounts-payable controls, and spend and expense tools."
+        "finance-ops": "Lists invoicing, accounts-payable controls, and spend and expense tools.",
+        "bookkeeping": "Sends invoices and tracks bills next to the books.",
+        "run-a-business": "Sends customer invoices and pays vendor bills for a small business."
       }
     },
     {
@@ -1019,7 +1023,8 @@
         "content"
       ],
       "useCaseTags": [
-        "social-media"
+        "social-media",
+        "run-a-business"
       ],
       "toolTypes": [
         "agent"
@@ -1072,7 +1077,8 @@
         "finalUrl": "https://buffer.com/"
       },
       "useCaseFit": {
-        "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content."
+        "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content.",
+        "run-a-business": "Schedules social posts a small business can publish through the week."
       }
     },
     {
@@ -2614,7 +2620,9 @@
         "finance-ops"
       ],
       "useCaseTags": [
-        "finance-ops"
+        "finance-ops",
+        "bookkeeping",
+        "run-a-business"
       ],
       "toolTypes": [
         "agent"
@@ -2667,7 +2675,9 @@
         "finalUrl": "https://dext.com/"
       },
       "useCaseFit": {
-        "finance-ops": "Captures receipts and invoices and manages business expenses."
+        "finance-ops": "Captures receipts and invoices and manages business expenses.",
+        "bookkeeping": "Captures receipts and invoices so the books have the source documents.",
+        "run-a-business": "Captures receipts and invoices a small business can review before they hit the books."
       }
     },
     {
@@ -5431,7 +5441,8 @@
         "content"
       ],
       "useCaseTags": [
-        "marketing-promotions"
+        "marketing-promotions",
+        "run-a-business"
       ],
       "toolTypes": [
         "automation"
@@ -5486,7 +5497,8 @@
         "finalUrl": "https://mailchimp.com/"
       },
       "useCaseFit": {
-        "marketing-promotions": "Free plan sends email campaigns to 250 contacts and 500 sends a month."
+        "marketing-promotions": "Free plan sends email campaigns to 250 contacts and 500 sends a month.",
+        "run-a-business": "Sends email campaigns to the customers a small business already has."
       }
     },
     {
@@ -7206,7 +7218,8 @@
         "finance-ops"
       ],
       "useCaseTags": [
-        "finance-ops"
+        "finance-ops",
+        "bookkeeping"
       ],
       "toolTypes": [
         "agent"
@@ -7259,7 +7272,8 @@
         "finalUrl": "https://ramp.com/"
       },
       "useCaseFit": {
-        "finance-ops": "Finance platform with a free plan at $0 per user and Plus at $15 per user."
+        "finance-ops": "Finance platform with a free plan at $0 per user and Plus at $15 per user.",
+        "bookkeeping": "Keeps card charges and expenses together for the books."
       }
     },
     {
@@ -9343,7 +9357,8 @@
         "customer-support"
       ],
       "useCaseTags": [
-        "customer-support"
+        "customer-support",
+        "run-a-business"
       ],
       "toolTypes": [
         "agent"
@@ -9395,7 +9410,8 @@
         "finalUrl": "https://www.zendesk.com/"
       },
       "useCaseFit": {
-        "customer-support": "Prices a support platform from $19 per month and describes Zendesk AI for service teams."
+        "customer-support": "Prices a support platform from $19 per month and describes Zendesk AI for service teams.",
+        "run-a-business": "Runs the customer support inbox for a small business."
       }
     }
   ],
@@ -9462,6 +9478,37 @@
       "intro": "AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself."
     },
     {
+      "slug": "bookkeeping",
+      "title": "Clean up the books",
+      "summary": "Capture receipts and expenses for the books. Not tax or financial advice.",
+      "audienceHints": [
+        "owners"
+      ],
+      "matchTags": [
+        "bookkeeping"
+      ],
+      "jobPhrase": "cleaning up the books",
+      "assistantTask": "list the receipts and expenses still missing from the books",
+      "assistantContext": "cleaning up the books",
+      "searchTopic": "what a bank reconciliation checks",
+      "recommended": [
+        {
+          "toolId": "dext",
+          "why": "Receipt and invoice capture for the books."
+        },
+        {
+          "toolId": "ramp",
+          "why": "Card charges and expenses in one finance platform."
+        },
+        {
+          "toolId": "bill-com",
+          "why": "Invoices, bills, and spend in one product."
+        }
+      ],
+      "intro": "AI agents can capture receipts, sort expenses into categories, and gather the records you review before they go back into the books.",
+      "disclaimer": "PickMyAgent is not tax or financial advice."
+    },
+    {
       "slug": "coding-agents",
       "title": "Code with an AI agent",
       "summary": "IDE agents and copilots that edit, run, and review code.",
@@ -9494,6 +9541,23 @@
       "assistantContext": "writing and reviewing code",
       "searchTopic": "the library or error you are working through",
       "intro": "AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships."
+    },
+    {
+      "slug": "contracts",
+      "title": "Draft a contract",
+      "summary": "Turn the terms you list into a draft a person still reviews.",
+      "audienceHints": [
+        "owners"
+      ],
+      "matchTags": [
+        "contracts"
+      ],
+      "jobPhrase": "drafting a contract",
+      "assistantTask": "draft a contract from the terms and mark lines to review",
+      "assistantContext": "drafting a contract",
+      "searchTopic": "which contract lines a person should review",
+      "recommended": [],
+      "intro": "AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording."
     },
     {
       "slug": "create-content",
@@ -10168,6 +10232,24 @@
       "intro": "AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent."
     },
     {
+      "slug": "payroll",
+      "title": "Run payroll",
+      "summary": "Hours, rates, and the questions you still ask a payroll service.",
+      "audienceHints": [
+        "owners"
+      ],
+      "matchTags": [
+        "payroll"
+      ],
+      "jobPhrase": "running payroll",
+      "assistantTask": "turn hours and rates into a payroll checklist",
+      "assistantContext": "checking a payroll run",
+      "searchTopic": "which payroll figures a person still confirms",
+      "recommended": [],
+      "intro": "AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.",
+      "disclaimer": "PickMyAgent is not tax or financial advice."
+    },
+    {
       "slug": "plan-travel",
       "title": "Plan and book travel",
       "summary": "Compare flights, hotels, and vacation itineraries.",
@@ -10192,6 +10274,23 @@
         }
       ],
       "intro": "AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself."
+    },
+    {
+      "slug": "quotes",
+      "title": "Draft a quote",
+      "summary": "Turn job details and your price into a quote you still check.",
+      "audienceHints": [
+        "owners"
+      ],
+      "matchTags": [
+        "quotes"
+      ],
+      "jobPhrase": "drafting a quote",
+      "assistantTask": "draft a quote from the job details and the price",
+      "assistantContext": "writing a customer quote",
+      "searchTopic": "what a simple quote should include",
+      "recommended": [],
+      "intro": "AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers before it goes out."
     },
     {
       "slug": "rank-property-deals",
@@ -10302,6 +10401,62 @@
       "intro": "AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself."
     },
     {
+      "slug": "review-requests",
+      "title": "Ask for reviews",
+      "summary": "Draft the review request and a reply to a public review.",
+      "audienceHints": [
+        "owners"
+      ],
+      "matchTags": [
+        "review-requests"
+      ],
+      "jobPhrase": "asking customers for reviews",
+      "assistantTask": "draft a review request and a reply to a public review",
+      "assistantContext": "asking a customer for a review",
+      "searchTopic": "what a review request should say",
+      "recommended": [],
+      "intro": "AI agents can draft the review request you send after a job and a short reply to a public review. You still send it."
+    },
+    {
+      "slug": "run-a-business",
+      "title": "Run a small business",
+      "summary": "Receipts, invoices, posts, and customer replies. You still approve the money.",
+      "audienceHints": [
+        "owners"
+      ],
+      "matchTags": [
+        "run-a-business"
+      ],
+      "jobPhrase": "running a small business",
+      "assistantTask": "draft a customer reply and list the bookkeeping still open",
+      "assistantContext": "planning a small-business week",
+      "searchTopic": "which weekly tasks a small business can hand to software",
+      "recommended": [
+        {
+          "toolId": "dext",
+          "why": "Receipts and invoices for the books."
+        },
+        {
+          "toolId": "bill-com",
+          "why": "Customer invoices and vendor bills."
+        },
+        {
+          "toolId": "mailchimp",
+          "why": "Email campaigns for a customer list."
+        },
+        {
+          "toolId": "buffer",
+          "why": "Social posts on a schedule."
+        },
+        {
+          "toolId": "zendesk",
+          "why": "A customer support inbox."
+        }
+      ],
+      "intro": "AI agents can capture receipts, send invoices, schedule the week's posts, and draft customer replies for a small business. You still approve the money and the messages.",
+      "disclaimer": "PickMyAgent is not tax or financial advice."
+    },
+    {
       "slug": "sales-outreach",
       "title": "Qualify leads and send sales outreach",
       "summary": "Research accounts and draft outreach. You still approve what gets sent.",
@@ -10334,6 +10489,24 @@
         }
       ],
       "intro": "AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve."
+    },
+    {
+      "slug": "sales-tax",
+      "title": "Handle sales tax",
+      "summary": "Sort taxable sales and list what a state form still needs.",
+      "audienceHints": [
+        "owners"
+      ],
+      "matchTags": [
+        "sales-tax"
+      ],
+      "jobPhrase": "handling sales tax",
+      "assistantTask": "separate taxable sales and list the filing date",
+      "assistantContext": "preparing a sales-tax filing",
+      "searchTopic": "which sales are taxable",
+      "recommended": [],
+      "intro": "AI agents can separate taxable sales from the receipts you already have, list the rate and the filing date to confirm, and draft questions for the state form. You still file it.",
+      "disclaimer": "PickMyAgent is not tax or financial advice."
     },
     {
       "slug": "scheduling-assistant",
@@ -10394,6 +10567,23 @@
         }
       ],
       "intro": "AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts."
+    },
+    {
+      "slug": "shift-scheduling",
+      "title": "Schedule staff shifts",
+      "summary": "Draft a weekly shift schedule from who is available.",
+      "audienceHints": [
+        "owners"
+      ],
+      "matchTags": [
+        "shift-scheduling"
+      ],
+      "jobPhrase": "scheduling staff shifts",
+      "assistantTask": "draft a weekly shift schedule and the text to the team",
+      "assistantContext": "building a shift schedule",
+      "searchTopic": "how a weekly shift schedule is usually laid out",
+      "recommended": [],
+      "intro": "AI agents can draft a weekly shift schedule from who is available and write the text you send the team. You still post the final schedule."
     },
     {
       "slug": "shop-products",

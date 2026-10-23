@@ -48,15 +48,17 @@ export default async function UseCasePage({
           { name: useCase.title, path: `/use-cases/${useCase.slug}` },
         ])}
       />
-      <JsonLd
-        data={itemListLd(
-          useCase.title,
-          groups.recommended.map(({ tool }) => ({
-            name: tool.name,
-            url: absoluteUrl(`/tools/${tool.slug}`),
-          })),
-        )}
-      />
+      {groups.recommended.length > 0 ? (
+        <JsonLd
+          data={itemListLd(
+            useCase.title,
+            groups.recommended.map(({ tool }) => ({
+              name: tool.name,
+              url: absoluteUrl(`/tools/${tool.slug}`),
+            })),
+          )}
+        />
+      ) : null}
       <Breadcrumbs
         items={[
           { href: "/", label: "Home" },
@@ -88,18 +90,26 @@ export default async function UseCasePage({
       </p>
 
       <RankingNote className="mt-6" />
-      <h2 className="mt-10 text-xl font-semibold">Short list</h2>
-      <ul className="mt-4 grid gap-3 lg:grid-cols-2">
-        {groups.recommended.map(({ tool, why }) => (
-          <li key={tool.id}>
-            <ToolCard
-              tool={tool}
-              why={why}
-              recentReleaseSince={site.recentReleaseSince}
-            />
-          </li>
-        ))}
-      </ul>
+      {groups.recommended.length > 0 ? (
+        <>
+          <h2 className="mt-10 text-xl font-semibold">Short list</h2>
+          <ul className="mt-4 grid gap-3 lg:grid-cols-2">
+            {groups.recommended.map(({ tool, why }) => (
+              <li key={tool.id}>
+                <ToolCard
+                  tool={tool}
+                  why={why}
+                  recentReleaseSince={site.recentReleaseSince}
+                />
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <p className="mt-10 max-w-2xl text-sm text-muted">
+          No specialist in this directory covers this job. Search still explains how AI agents help, and the general assistants cover the how-to.
+        </p>
+      )}
 
       {groups.related.length > 0 ? (
         <>

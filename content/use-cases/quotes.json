@@ -1,0 +1,17 @@
+{
+  "slug": "quotes",
+  "title": "Draft a quote",
+  "summary": "Turn job details and your price into a quote you still check.",
+  "audienceHints": [
+    "owners"
+  ],
+  "matchTags": [
+    "quotes"
+  ],
+  "jobPhrase": "drafting a quote",
+  "assistantTask": "draft a quote from the job details and the price",
+  "assistantContext": "writing a customer quote",
+  "searchTopic": "what a simple quote should include",
+  "recommended": [],
+  "intro": "AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers before it goes out."
+}

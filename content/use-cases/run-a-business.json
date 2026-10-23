@@ -1,0 +1,39 @@
+{
+  "slug": "run-a-business",
+  "title": "Run a small business",
+  "summary": "Receipts, invoices, posts, and customer replies. You still approve the money.",
+  "audienceHints": [
+    "owners"
+  ],
+  "matchTags": [
+    "run-a-business"
+  ],
+  "jobPhrase": "running a small business",
+  "assistantTask": "draft a customer reply and list the bookkeeping still open",
+  "assistantContext": "planning a small-business week",
+  "searchTopic": "which weekly tasks a small business can hand to software",
+  "recommended": [
+    {
+      "toolId": "dext",
+      "why": "Receipts and invoices for the books."
+    },
+    {
+      "toolId": "bill-com",
+      "why": "Customer invoices and vendor bills."
+    },
+    {
+      "toolId": "mailchimp",
+      "why": "Email campaigns for a customer list."
+    },
+    {
+      "toolId": "buffer",
+      "why": "Social posts on a schedule."
+    },
+    {
+      "toolId": "zendesk",
+      "why": "A customer support inbox."
+    }
+  ],
+  "intro": "AI agents can capture receipts, send invoices, schedule the week's posts, and draft customer replies for a small business. You still approve the money and the messages.",
+  "disclaimer": "PickMyAgent is not tax or financial advice."
+}

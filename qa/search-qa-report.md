@@ -1,6 +1,6 @@
 # Search QA report
 
-271 queries through the ranker and the header, intro, and why-line renderers.
+348 queries through the ranker and the header, intro, and why-line renderers.
 
 ## 1. find homes for sale by owner
 
@@ -1269,7 +1269,7 @@
 
 ## 83. invoices
 
-- Header: For processing invoices and finance ops, here's how each tool can help:
+- Header: For sending invoices, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
 - Domain: finance-ops
 - Cards:
@@ -2352,8 +2352,14 @@
 ## 153. AI for my small business
 
 - Header: For help with your small business, here's how each tool can help:
-- Intro: AI assistants can't run a small business for you, but they can draft a customer reply, outline a week of posts, and list the bookkeeping you still check.
+- Intro: AI agents can capture receipts, send invoices, schedule the week's posts, and draft customer replies for a small business. You still approve the money and the messages.
+- Domain: run-a-business
 - Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so a small business can keep the books current.
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and pays vendor bills for a small business.
+  - Mailchimp — Specialist · Docs checked — Mailchimp sends email campaigns to the customers a small business already has.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts a small business can publish through the week.
+  - Zendesk — Specialist · Docs checked — Zendesk runs the customer support inbox for a small business.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a customer reply and a short list of bookkeeping you still check.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a weekly checklist of posts, invoices, and customer replies for a small business.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of customers, the next reply, and the bookkeeping item still open.
@@ -2855,7 +2861,7 @@
 
 ## 191. best tool for invoices
 
-- Header: For processing invoices and finance ops, here's how each tool can help:
+- Header: For sending invoices, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
 - Domain: finance-ops
 - Cards:
@@ -3131,7 +3137,7 @@
 
 ## 209. invoice
 
-- Header: For processing invoices and finance ops, here's how each tool can help:
+- Header: For sending invoice, here's how each tool can help:
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
 - Domain: finance-ops
 - Cards:
@@ -3637,7 +3643,7 @@
 - Cards:
   - n8n — Specialist · Docs checked — n8n connects Mailchimp campaigns and QuickBooks invoices in one workflow.
   - Mailchimp — Specialist · Docs checked — Mailchimp builds promo email campaigns and schedules them to your list.
-  - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and records the payments that come back.
   - Make — Specialist · Docs checked — Make connects Mailchimp campaigns and QuickBooks invoices in one scenario.
   - Zapier — Specialist · Docs checked — Zapier links Mailchimp and QuickBooks so a step in one app triggers a step in the other.
   - Klaviyo — Specialist · Docs checked — Klaviyo sends email and text campaigns and builds a flow for a promotion.
@@ -3754,7 +3760,7 @@
 - Intro: AI agents can send the customer invoice and schedule the promo emails from the apps you already use.
 - Cards:
   - n8n — Specialist · Docs checked — n8n connects Mailchimp campaigns and QuickBooks invoices in one workflow.
-  - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and records the payments that come back.
   - Klaviyo — Specialist · Docs checked — Klaviyo sends email and text campaigns and builds a flow for a promotion.
   - Make — Specialist · Docs checked — Make connects Mailchimp campaigns and QuickBooks invoices in one scenario.
   - Zapier — Specialist · Docs checked — Zapier links Mailchimp and QuickBooks so a step in one app triggers a step in the other.
@@ -3771,7 +3777,7 @@
 - Header: For billing clients and drafting a blog post, here's how each tool can help:
 - Intro: AI agents can prepare the client invoice and draft the blog post for you to review before either goes out.
 - Cards:
-  - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and records the payments that come back.
   - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
   - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
   - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
@@ -4120,3 +4126,1122 @@
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at scheduling meetings and taking notes.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on scheduling meetings and taking notes, with links you can check.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on scheduling meetings and taking notes.
+
+## 272. help with Ai quickbooks
+
+- Header: For help with QuickBooks, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses and publish the ones you approve into QuickBooks. You still decide what hits the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext publishes receipts and invoices into QuickBooks after you review each one.
+  - Ramp — Specialist · Docs checked — Ramp keeps QuickBooks updated with card expenses and the attached receipts.
+  - BILL — Specialist · Docs checked — BILL keeps QuickBooks updated with invoices and bills.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which QuickBooks transactions still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a QuickBooks cleanup checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of QuickBooks transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on reconciling QuickBooks to a bank statement, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which QuickBooks lines you should ask an accountant about.
+
+## 273. find and agent to help automate my quickbooks clean up for my small business
+
+- Header: For cleaning up your QuickBooks, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses and publish the ones you approve into QuickBooks. You still decide what hits the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext publishes receipts and invoices into QuickBooks after you review each one.
+  - Ramp — Specialist · Docs checked — Ramp keeps QuickBooks updated with card expenses and the attached receipts.
+  - BILL — Specialist · Docs checked — BILL keeps QuickBooks updated with invoices and bills.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which QuickBooks transactions still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a QuickBooks cleanup checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of QuickBooks transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on reconciling QuickBooks to a bank statement, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which QuickBooks lines you should ask an accountant about.
+
+## 274. quickbooks
+
+- Header: For help with QuickBooks, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses and publish the ones you approve into QuickBooks. You still decide what hits the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext publishes receipts and invoices into QuickBooks after you review each one.
+  - Ramp — Specialist · Docs checked — Ramp keeps QuickBooks updated with card expenses and the attached receipts.
+  - BILL — Specialist · Docs checked — BILL keeps QuickBooks updated with invoices and bills.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which QuickBooks transactions still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a QuickBooks cleanup checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of QuickBooks transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on reconciling QuickBooks to a bank statement, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which QuickBooks lines you should ask an accountant about.
+
+## 275. QBO
+
+- Header: For help with QBO, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses and publish the ones you approve into QuickBooks. You still decide what hits the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext publishes receipts and invoices into QuickBooks after you review each one.
+  - Ramp — Specialist · Docs checked — Ramp keeps QuickBooks updated with card expenses and the attached receipts.
+  - BILL — Specialist · Docs checked — BILL keeps QuickBooks updated with invoices and bills.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which QuickBooks transactions still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a QuickBooks cleanup checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of QuickBooks transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on reconciling QuickBooks to a bank statement, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which QuickBooks lines you should ask an accountant about.
+
+## 276. clean up my books
+
+- Header: For cleaning up your books, here's how each tool can help:
+- Intro: AI agents can capture receipts, sort expenses into categories, and gather the records you review before they go back into the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
+  - BILL — Specialist · Docs checked — BILL sends invoices and tracks bills next to the books.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts and expenses to review before they go into the books.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a bank reconciliation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which bookkeeping lines you should ask an accountant about.
+
+## 277. categorize transactions
+
+- Header: For categorizing transactions, here's how each tool can help:
+- Intro: AI agents can read a receipt or a card charge and suggest a category for the books. You still correct the ones that look wrong.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext reads a receipt and assigns a category you can correct before the books update.
+  - Ramp — Specialist · Docs checked — Ramp codes card expenses into categories for the books.
+  - BILL — Specialist · Docs checked — BILL codes spend into categories next to the bills it pays.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to suggest a category for each transaction and mark the ones you should correct.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of transaction categories a small business usually uses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of transactions, a suggested category, and whether you approved it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on expense categories, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag transactions whose category does not match the receipt.
+
+## 278. reconcile my bank accounts
+
+- Header: For reconciling your bank accounts, here's how each tool can help:
+- Intro: AI agents can gather the receipts and card charges that belong on a bank or credit-card reconciliation. You still match each line to the statement.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext gathers receipts and invoices you can match to a bank or card statement.
+  - Ramp — Specialist · Docs checked — Ramp lists card charges you can match to a bank or card statement.
+  - BILL — Specialist · Docs checked — BILL lists bills and payments you can match to a bank statement.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the statement lines that still need a receipt before you reconcile.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a reconciliation checklist of the statement, the receipts, and the unmatched lines.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of statement lines, the amount, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a bank reconciliation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point at statement lines that do not have a matching receipt.
+
+## 279. bookkeeping for my small business
+
+- Header: For help with bookkeeping, here's how each tool can help:
+- Intro: AI agents can capture receipts, sort expenses into categories, and gather the records you review before they go back into the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
+  - BILL — Specialist · Docs checked — BILL sends invoices and tracks bills next to the books.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts and expenses to review before they go into the books.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a bank reconciliation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which bookkeeping lines you should ask an accountant about.
+
+## 280. catch up on my books
+
+- Header: For catching up on your books, here's how each tool can help:
+- Intro: AI agents can pull receipts and expenses into one pile so catching up on messy books starts from complete records. You still decide what gets entered.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
+  - BILL — Specialist · Docs checked — BILL sends invoices and tracks bills next to the books.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts and expenses to review before they go into the books.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a bank reconciliation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which bookkeeping lines you should ask an accountant about.
+
+## 281. fix messy books
+
+- Header: For fixing messy books, here's how each tool can help:
+- Intro: AI agents can pull receipts and expenses into one pile so catching up on messy books starts from complete records. You still decide what gets entered.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
+  - BILL — Specialist · Docs checked — BILL sends invoices and tracks bills next to the books.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts and expenses to review before they go into the books.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a bank reconciliation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which bookkeeping lines you should ask an accountant about.
+
+## 282. quikbooks cleanup
+
+- Header: For cleaning up your QuickBooks, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses and publish the ones you approve into QuickBooks. You still decide what hits the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext publishes receipts and invoices into QuickBooks after you review each one.
+  - Ramp — Specialist · Docs checked — Ramp keeps QuickBooks updated with card expenses and the attached receipts.
+  - BILL — Specialist · Docs checked — BILL keeps QuickBooks updated with invoices and bills.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which QuickBooks transactions still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a QuickBooks cleanup checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of QuickBooks transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on reconciling QuickBooks to a bank statement, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which QuickBooks lines you should ask an accountant about.
+
+## 283. catagorize my expenses
+
+- Header: For categorizing your expenses, here's how each tool can help:
+- Intro: AI agents can read a receipt or a card charge and suggest a category for the books. You still correct the ones that look wrong.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext reads a receipt and assigns a category you can correct before the books update.
+  - Ramp — Specialist · Docs checked — Ramp codes card expenses into categories for the books.
+  - BILL — Specialist · Docs checked — BILL codes spend into categories next to the bills it pays.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to suggest a category for each transaction and mark the ones you should correct.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of transaction categories a small business usually uses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of transactions, a suggested category, and whether you approved it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on expense categories, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag transactions whose category does not match the receipt.
+
+## 284. xero cleanup
+
+- Header: For cleaning up your Xero, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses and sync the records you approve to Xero. You still decide what hits the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext publishes receipts and invoices into Xero after you review each one.
+  - Ramp — Specialist · Docs checked — Ramp keeps Xero updated with card expenses.
+  - BILL — Specialist · Docs checked — BILL keeps Xero updated with invoices and bills.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which Xero transactions still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a Xero cleanup checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of Xero transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on reconciling Xero to a bank statement, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which Xero lines you should ask an accountant about.
+
+## 285. freshbooks
+
+- Header: For help with FreshBooks, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses, and BILL can export and import invoice data with FreshBooks. You still decide what gets entered.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
+  - BILL — Specialist · Docs checked — BILL exports and imports invoice data with FreshBooks.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which FreshBooks entries still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a FreshBooks checklist of invoices, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of FreshBooks invoices, the amount, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a FreshBooks cleanup, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which FreshBooks lines you should ask an accountant about.
+
+## 286. zoho books
+
+- Header: For help with Zoho books, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses, and Ramp can connect card expenses to Zoho books. You still decide what gets entered.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp connects card expenses to Zoho books.
+  - BILL — Specialist · Docs checked — BILL sends invoices and tracks bills next to the books.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which Zoho books entries still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of Zoho books expenses, receipts, and open invoices.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of Zoho books transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a Zoho books cleanup, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which Zoho books lines you should ask an accountant about.
+
+## 287. wave accounting
+
+- Header: For help with Wave, here's how each tool can help:
+- Intro: AI agents can capture receipts, sort expenses into categories, and gather the records you review before they go back into the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
+  - BILL — Specialist · Docs checked — BILL sends invoices and tracks bills next to the books.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which Wave entries still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a Wave checklist of invoices, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of Wave transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on cleaning up Wave, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which Wave lines you should ask an accountant about.
+
+## 288. my accountant
+
+- Header: For help with bookkeeping, here's how each tool can help:
+- Intro: AI agents can organize receipts and expenses into a packet you can hand to your accountant. You still confirm the numbers.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext gathers receipts and invoices into one inbox you can share with an accountant.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and receipts together for the packet an accountant reviews.
+  - BILL — Specialist · Docs checked — BILL keeps invoices and bills in one product an accountant can review.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts and expenses to review before they go into the books.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a bank reconciliation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which bookkeeping lines you should ask an accountant about.
+
+## 289. reconcile my credit card
+
+- Header: For reconciling your credit card, here's how each tool can help:
+- Intro: AI agents can gather the receipts and card charges that belong on a bank or credit-card reconciliation. You still match each line to the statement.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext gathers receipts and invoices you can match to a bank or card statement.
+  - Ramp — Specialist · Docs checked — Ramp lists card charges you can match to a bank or card statement.
+  - BILL — Specialist · Docs checked — BILL lists bills and payments you can match to a bank statement.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the statement lines that still need a receipt before you reconcile.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a reconciliation checklist of the statement, the receipts, and the unmatched lines.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of statement lines, the amount, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a bank reconciliation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point at statement lines that do not have a matching receipt.
+
+## 290. I own a restaurant and my books are a mess
+
+- Header: For help with the books, here's how each tool can help:
+- Intro: AI agents can pull receipts and expenses into one pile so catching up on messy books starts from complete records. You still decide what gets entered.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
+  - BILL — Specialist · Docs checked — BILL sends invoices and tracks bills next to the books.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts and expenses to review before they go into the books.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a bank reconciliation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which bookkeeping lines you should ask an accountant about.
+
+## 291. find and agent to help with bookeeping
+
+- Header: For help with bookkeeping, here's how each tool can help:
+- Intro: AI agents can capture receipts, sort expenses into categories, and gather the records you review before they go back into the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
+  - BILL — Specialist · Docs checked — BILL sends invoices and tracks bills next to the books.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts and expenses to review before they go into the books.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on a bank reconciliation, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which bookkeeping lines you should ask an accountant about.
+
+## 292. get paid faster
+
+- Header: For getting paid faster, here's how each tool can help:
+- Intro: AI agents can send the invoice, list which ones are still unpaid, and draft the reminder. You still approve the amount and the note that goes out.
+- Domain: finance-ops
+- Cards:
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and records the payments that come back.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list unpaid invoices and draft a short reminder you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of invoice number, due date, and who has not paid.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of open invoices, the amount, and the last reminder.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on invoice payment terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a late-payment note that states the amount and the due date.
+
+## 293. overdue invoices
+
+- Header: For chasing overdue invoices, here's how each tool can help:
+- Intro: AI agents can send the invoice, list which ones are still unpaid, and draft the reminder. You still approve the amount and the note that goes out.
+- Domain: finance-ops
+- Cards:
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and records the payments that come back.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list unpaid invoices and draft a short reminder you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of invoice number, due date, and who has not paid.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of open invoices, the amount, and the last reminder.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on invoice payment terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a late-payment note that states the amount and the due date.
+
+## 294. I own a plumbing company and need to chase late invoices
+
+- Header: For chasing late invoices, here's how each tool can help:
+- Intro: AI agents can send the invoice, list which ones are still unpaid, and draft the reminder. You still approve the amount and the note that goes out.
+- Domain: finance-ops
+- Cards:
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and records the payments that come back.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list unpaid invoices and draft a short reminder you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of invoice number, due date, and who has not paid.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of open invoices, the amount, and the last reminder.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on invoice payment terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a late-payment note that states the amount and the due date.
+
+## 295. subscription billing
+
+- Header: For sending recurring invoices, here's how each tool can help:
+- Intro: AI agents can send the invoice, list which ones are still unpaid, and draft the reminder. You still approve the amount and the note that goes out.
+- Domain: finance-ops
+- Cards:
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and records the payments that come back.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list unpaid invoices and draft a short reminder you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of invoice number, due date, and who has not paid.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of open invoices, the amount, and the last reminder.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on invoice payment terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a late-payment note that states the amount and the due date.
+
+## 296. expense reports
+
+- Header: For help with expense reports, here's how each tool can help:
+- Intro: AI agents can collect receipts and card charges into an expense report you still approve. You correct the category before it is filed.
+- Domain: finance-ops
+- Cards:
+  - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
+  - BILL — Specialist · Docs checked — BILL includes spend and expense tools with its invoicing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts an expense report is still missing.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the date, the amount, and the category on an expense report.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of expenses, the receipt, and whether the report is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on what an expense report should include, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag expense lines that do not have a receipt.
+
+## 297. chase late payments
+
+- Header: For chasing late payments, here's how each tool can help:
+- Intro: AI agents can send the invoice, list which ones are still unpaid, and draft the reminder. You still approve the amount and the note that goes out.
+- Domain: finance-ops
+- Cards:
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and records the payments that come back.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list unpaid invoices and draft a short reminder you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of invoice number, due date, and who has not paid.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of open invoices, the amount, and the last reminder.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on invoice payment terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a late-payment note that states the amount and the due date.
+
+## 298. run payroll
+
+- Header: For running payroll, here's how each tool can help:
+- Intro: AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.
+- Domain: payroll
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn hours, rates, and deductions into a payroll checklist you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of employees, hours, and the pay date.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of employees, hours, rate, and gross pay.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on what a payroll run should include, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list which payroll figures a person must confirm before anyone is paid.
+
+## 299. I own a bakery and want help with payroll
+
+- Header: For running payroll, here's how each tool can help:
+- Intro: AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.
+- Domain: payroll
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn hours, rates, and deductions into a payroll checklist you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of employees, hours, and the pay date.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of employees, hours, rate, and gross pay.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on what a payroll run should include, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list which payroll figures a person must confirm before anyone is paid.
+
+## 300. paychecks
+
+- Header: For running payroll, here's how each tool can help:
+- Intro: AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.
+- Domain: payroll
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn hours, rates, and deductions into a payroll checklist you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of employees, hours, and the pay date.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of employees, hours, rate, and gross pay.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on what a payroll run should include, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list which payroll figures a person must confirm before anyone is paid.
+
+## 301. payroll taxes for my staff
+
+- Header: For help with payroll taxes for your staff, here's how each tool can help:
+- Intro: AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.
+- Domain: payroll
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn hours, rates, and deductions into a payroll checklist you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of employees, hours, and the pay date.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of employees, hours, rate, and gross pay.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on what a payroll run should include, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list which payroll figures a person must confirm before anyone is paid.
+
+## 302. schedule shifts for my restaurant
+
+- Header: For scheduling shifts for your restaurant, here's how each tool can help:
+- Intro: AI agents can draft a weekly shift schedule from who is available and write the text you send the team. You still post the final schedule.
+- Domain: shift-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a weekly shift schedule from who is available and the text you send the team.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of names, available days, and the shifts still open.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of employees, the days they can work, and the assigned shift.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on writing a fair weekly schedule, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out shifts that overlap or leave a day uncovered.
+
+## 303. I own a salon and need to schedule shifts
+
+- Header: For scheduling shifts, here's how each tool can help:
+- Intro: AI agents can draft a weekly shift schedule from who is available and write the text you send the team. You still post the final schedule.
+- Domain: shift-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a weekly shift schedule from who is available and the text you send the team.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of names, available days, and the shifts still open.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of employees, the days they can work, and the assigned shift.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on writing a fair weekly schedule, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out shifts that overlap or leave a day uncovered.
+
+## 304. rota for the cafe
+
+- Header: For scheduling staff shifts, here's how each tool can help:
+- Intro: AI agents can draft a weekly shift schedule from who is available and write the text you send the team. You still post the final schedule.
+- Domain: shift-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a weekly shift schedule from who is available and the text you send the team.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of names, available days, and the shifts still open.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of employees, the days they can work, and the assigned shift.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on writing a fair weekly schedule, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out shifts that overlap or leave a day uncovered.
+
+## 305. quarterly taxes
+
+- Header: For help with quarterly taxes, here's how each tool can help:
+- Intro: AI agents can list the quarterly dates, sort the income and expenses you still verify, and carry the totals into a filing product. You still decide what gets filed.
+- Domain: do-taxes
+- Cards:
+  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
+  - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
+  - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
+  - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to sort income and possible deductions into questions for a tax pro.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of forms and receipts to gather before you file.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks documents you still need for a tax return.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages about common deductions, with links you can check before you file.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft questions about credits and deductions for a tax pro to answer.
+
+## 306. year-end tax prep
+
+- Header: For preparing year-end taxes, here's how each tool can help:
+- Intro: AI agents can gather year-end income, expenses, and receipts into a packet for the return. You still decide what gets filed.
+- Domain: do-taxes
+- Cards:
+  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
+  - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
+  - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
+  - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to sort income and possible deductions into questions for a tax pro.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of forms and receipts to gather before you file.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks documents you still need for a tax return.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages about common deductions, with links you can check before you file.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft questions about credits and deductions for a tax pro to answer.
+
+## 307. 1099s for contractors
+
+- Header: For help with 1099s for contractors, here's how each tool can help:
+- Intro: AI agents can list contractor payments and the questions a 1099 still needs. You confirm every amount before anything is filed.
+- Domain: do-taxes
+- Cards:
+  - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
+  - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
+  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
+  - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to sort income and possible deductions into questions for a tax pro.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of forms and receipts to gather before you file.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks documents you still need for a tax return.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages about common deductions, with links you can check before you file.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft questions about credits and deductions for a tax pro to answer.
+
+## 308. sales tax for my bakery
+
+- Header: For handling sales tax, here's how each tool can help:
+- Intro: AI agents can separate taxable sales from the receipts you already have, list the rate and the filing date to confirm, and draft questions for the state form. You still file it.
+- Domain: sales-tax
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate taxable sales from receipts and list the filing date to confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of taxable sales, the rate, and the state form.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of sales, whether each one is taxable, and the tax collected.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on a state's sales-tax filing, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft questions about which sales are taxable before you file.
+
+## 309. vat return
+
+- Header: For handling sales tax, here's how each tool can help:
+- Intro: AI agents can separate taxable sales from the receipts you already have, list the rate and the filing date to confirm, and draft questions for the state form. You still file it.
+- Domain: sales-tax
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate taxable sales from receipts and list the filing date to confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of taxable sales, the rate, and the state form.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of sales, whether each one is taxable, and the tax collected.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on a state's sales-tax filing, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft questions about which sales are taxable before you file.
+
+## 310. cash flow for my business
+
+- Header: For reading your cash flow, here's how each tool can help:
+- Intro: AI agents can read a spreadsheet of income and expenses and draft a cash-flow or profit-and-loss summary. You recompute the totals before you trust them.
+- Domain: analyze-data
+- Cards:
+  - Julius — Specialist · Docs checked — Julius answers questions about the data in a cash-flow or profit-and-loss spreadsheet.
+  - Rows — Specialist · Docs checked — Rows totals a spreadsheet of income and expenses into a report you can check.
+  - Hex — Specialist · Docs checked — Hex charts financial data in a shared notebook so the report starts from the sheet.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain a cash-flow spreadsheet and name the total you should recompute.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of income, expenses, and the months a cash-flow sheet should show.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet layout for profit and loss, with one tab for the source numbers.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced definitions of cash-flow terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list which figures in a profit-and-loss table do not support the conclusion.
+
+## 311. profit and loss report
+
+- Header: For reading your profit and loss, here's how each tool can help:
+- Intro: AI agents can read a spreadsheet of income and expenses and draft a cash-flow or profit-and-loss summary. You recompute the totals before you trust them.
+- Domain: analyze-data
+- Cards:
+  - Julius — Specialist · Docs checked — Julius answers questions about the data in a cash-flow or profit-and-loss spreadsheet.
+  - Rows — Specialist · Docs checked — Rows totals a spreadsheet of income and expenses into a report you can check.
+  - Hex — Specialist · Docs checked — Hex charts financial data in a shared notebook so the report starts from the sheet.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain a cash-flow spreadsheet and name the total you should recompute.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of income, expenses, and the months a cash-flow sheet should show.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet layout for profit and loss, with one tab for the source numbers.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced definitions of cash-flow terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list which figures in a profit-and-loss table do not support the conclusion.
+
+## 312. financial dashboard
+
+- Header: For reading a financial dashboard, here's how each tool can help:
+- Intro: AI agents can read a spreadsheet of income and expenses and draft a cash-flow or profit-and-loss summary. You recompute the totals before you trust them.
+- Domain: analyze-data
+- Cards:
+  - Julius — Specialist · Docs checked — Julius answers questions about the data in a cash-flow or profit-and-loss spreadsheet.
+  - Rows — Specialist · Docs checked — Rows totals a spreadsheet of income and expenses into a report you can check.
+  - Hex — Specialist · Docs checked — Hex charts financial data in a shared notebook so the report starts from the sheet.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain a cash-flow spreadsheet and name the total you should recompute.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of income, expenses, and the months a cash-flow sheet should show.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet layout for profit and loss, with one tab for the source numbers.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced definitions of cash-flow terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list which figures in a profit-and-loss table do not support the conclusion.
+
+## 313. budget forecast
+
+- Header: For forecasting cash flow, here's how each tool can help:
+- Intro: AI agents can read a spreadsheet of income and expenses and draft a cash-flow or profit-and-loss summary. You recompute the totals before you trust them.
+- Domain: analyze-data
+- Cards:
+  - Julius — Specialist · Docs checked — Julius answers questions about the data in a cash-flow or profit-and-loss spreadsheet.
+  - Rows — Specialist · Docs checked — Rows totals a spreadsheet of income and expenses into a report you can check.
+  - Hex — Specialist · Docs checked — Hex charts financial data in a shared notebook so the report starts from the sheet.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain a cash-flow spreadsheet and name the total you should recompute.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of income, expenses, and the months a cash-flow sheet should show.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet layout for profit and loss, with one tab for the source numbers.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced definitions of cash-flow terms, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list which figures in a profit-and-loss table do not support the conclusion.
+
+## 314. customer follow-up
+
+- Header: For help with a customer follow-up, here's how each tool can help:
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
+- Domain: sales-outreach
+- Cards:
+  - Apollo — Specialist · Docs checked — Apollo looks up contacts and companies before anyone writes sales outreach.
+  - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
+  - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
+  - Clay — Specialist · Docs checked — Clay pulls lead data from many providers into one table for outreach.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline how to research a lead and which outreach sentence you would actually send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a qualification checklist before you add a prospect to a pipeline.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of leads, last contact, and the next outreach step.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a company you might email, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a cold email so the ask is specific and you still choose what gets sent.
+
+## 315. crm for leads
+
+- Header: For help with CRM for leads, here's how each tool can help:
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
+- Domain: sales-outreach
+- Cards:
+  - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
+  - Apollo — Specialist · Docs checked — Apollo looks up contacts and companies before anyone writes sales outreach.
+  - Clay — Specialist · Docs checked — Clay pulls lead data from many providers into one table for outreach.
+  - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline how to research a lead and which outreach sentence you would actually send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a qualification checklist before you add a prospect to a pipeline.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of leads, last contact, and the next outreach step.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a company you might email, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a cold email so the ask is specific and you still choose what gets sent.
+
+## 316. appointment booking
+
+- Header: For booking appointments, here's how each tool can help:
+- Intro: AI agents can offer a scheduling link, hold the appointment on a calendar, and draft a reminder. You still confirm who is coming.
+- Domain: scheduling-assistant
+- Cards:
+  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
+  - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
+  - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to propose meeting times and a prep list from a messy calendar description.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a weekly checklist of meetings, reminders, and follow-ups.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet for next week's reminders and meetings.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on scheduling across time zones, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to turn a pile of constraints into two or three times you could offer.
+
+## 317. no-shows
+
+- Header: For handling no-shows, here's how each tool can help:
+- Intro: AI agents can offer a scheduling link, hold the appointment on a calendar, and draft a reminder. You still confirm who is coming.
+- Domain: scheduling-assistant
+- Cards:
+  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
+  - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
+  - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a reminder that cuts down no-shows and a note for anyone who missed.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of confirmation texts to send before an appointment.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of appointments, whether they confirmed, and who did not show.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on reducing no-shows, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a reminder so it states the time and how to cancel.
+
+## 318. ask for google reviews
+
+- Header: For asking for Google reviews, here's how each tool can help:
+- Intro: AI agents can draft the review request you send after a job and a short reply to a public review. You still send it.
+- Domain: review-requests
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the review request you send after a job and a short reply to a public review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of when to ask, what to say, and which reviews need a reply.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of finished jobs, whether you asked for a review, and the reply.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on review requests, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a review request so it asks once and does not offer a reward.
+
+## 319. online reputation
+
+- Header: For help with an online reputation, here's how each tool can help:
+- Intro: AI agents can draft the review request you send after a job and a short reply to a public review. You still send it.
+- Domain: review-requests
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the review request you send after a job and a short reply to a public review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of when to ask, what to say, and which reviews need a reply.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of finished jobs, whether you asked for a review, and the reply.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on review requests, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a review request so it asks once and does not offer a reward.
+
+## 320. email newsletter for my bakery
+
+- Header: For sending an email newsletter, here's how each tool can help:
+- Intro: AI agents can draft an email newsletter and a subject line for the list you already have. You still approve the send.
+- Domain: marketing-promotions
+- Cards:
+  - Klaviyo — Specialist · Docs checked — Klaviyo sends email campaigns and drafts a subject line for a newsletter.
+  - Mailchimp — Specialist · Docs checked — Mailchimp sends an email newsletter to the contacts on a list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an email newsletter and mark the lines you still want to change.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the subject line, the offer, and the list a newsletter goes to.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of newsletter drafts, the subject, and whether the send is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on email newsletter timing, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a newsletter so it states one offer and the next step.
+
+## 321. facebook ads for my salon
+
+- Header: For help with Facebook ads for your salon, here's how each tool can help:
+- Intro: AI agents can draft the ad creative and the caption. You still choose the budget and where it runs.
+- Domain: social-media
+- Cards:
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft ad copy and mark the budget and the audience you still choose.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the offer, the caption, and where an ad will run.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of ad drafts, the caption, and whether you approved the spend.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on writing a local ad, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite an ad so it states the offer and does not invent a discount.
+
+## 322. local seo
+
+- Header: For help with local SEO, here's how each tool can help:
+- Intro: AI agents can draft the local page and the Google business profile description. You still publish it and check the hours and the address.
+- Domain: create-content
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts marketing content, including the words for a local page or a Google business profile.
+  - Copy.ai — Specialist · Docs checked — Copy.ai drafts marketing content you can paste into a local page or a business profile.
+  - Writesonic — Specialist · Docs checked — Writesonic writes content for a local page and tracks where the brand is mentioned.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a Google business profile description and mark the hours you must confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the business name, hours, services, and address to verify.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of local pages, the target phrase, and whether the draft is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on local pages, with links you can check before you publish.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a business description so it states the service and the city.
+
+## 323. google business profile for my restaurant
+
+- Header: For drafting a Google business profile, here's how each tool can help:
+- Intro: AI agents can draft the local page and the Google business profile description. You still publish it and check the hours and the address.
+- Domain: create-content
+- Cards:
+  - Writesonic — Specialist · Docs checked — Writesonic writes content for a local page and tracks where the brand is mentioned.
+  - Jasper — Specialist · Docs checked — Jasper drafts marketing content, including the words for a local page or a Google business profile.
+  - Copy.ai — Specialist · Docs checked — Copy.ai drafts marketing content you can paste into a local page or a business profile.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a Google business profile description and mark the hours you must confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the business name, hours, services, and address to verify.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of local pages, the target phrase, and whether the draft is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on local pages, with links you can check before you publish.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a business description so it states the service and the city.
+
+## 324. social posts for my bakery
+
+- Header: For help with social posts for your bakery, here's how each tool can help:
+- Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
+- Domain: social-media
+- Cards:
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a social post and a reply to a comment, both for you to send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a posting checklist with the claim, the asset, and the date.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that lays out posts across the month.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a topic you might post about, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a caption so it makes one point and does not invent a statistic.
+
+## 325. answer the phone for my salon
+
+- Header: For answering the phone for your salon, here's how each tool can help:
+- Intro: AI agents can handle a customer conversation by chat, email, or voice and hand off the calls a person should take.
+- Domain: customer-support
+- Cards:
+  - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
+  - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
+  - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft what a voice agent should say and which calls a person still takes.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of questions the phone greeting should ask.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of call types, the answer, and when to hand the call to a person.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on small-business phone greetings, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a short greeting that states the hours and how to reach a person.
+
+## 326. faq chatbot for my website
+
+- Header: For answering website questions, here's how each tool can help:
+- Intro: AI agents can answer repeated questions on the site and hand the rest to a person. You still decide which questions they may answer.
+- Domain: customer-support
+- Cards:
+  - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
+  - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the questions a website chatbot may answer and which ones a person still takes.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of FAQ answers a chatbot can give before a person steps in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of frequent questions, the chatbot reply, and when to hand off.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a website FAQ chatbot, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a FAQ answer so a chatbot can say it in one or two sentences.
+
+## 327. support inbox
+
+- Header: For help with a support inbox, here's how each tool can help:
+- Intro: AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle.
+- Domain: customer-support
+- Cards:
+  - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
+  - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a support ticket about a refund or an order into a reply a person still approves.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of order facts to confirm before answering a customer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet that tracks ticket status, the order, and who replies next.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced help-center pages about refunds and shipping, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft a calm reply that states what is known and what a person must still decide.
+
+## 328. shopify inventory and shipping
+
+- Header: For help with Shopify inventory and shipping, here's how each tool can help:
+- Intro: AI agents can connect the store, order, and shipping apps you already use and pass a step from one app to the next. You still confirm the count and the label.
+- Domain: workflow-automation
+- Cards:
+  - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
+  - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
+
+## 329. etsy shop orders
+
+- Header: For help with Etsy shop orders, here's how each tool can help:
+- Intro: AI agents can connect the store, order, and shipping apps you already use and pass a step from one app to the next. You still confirm the count and the label.
+- Domain: workflow-automation
+- Cards:
+  - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
+  - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
+
+## 330. sell on amazon
+
+- Header: For selling on Amazon, here's how each tool can help:
+- Intro: AI agents can connect the store, order, and shipping apps you already use and pass a step from one app to the next. You still confirm the count and the label.
+- Domain: workflow-automation
+- Cards:
+  - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
+  - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
+
+## 331. shipping labels
+
+- Header: For shipping labels, here's how each tool can help:
+- Intro: AI agents can connect the store, order, and shipping apps you already use and pass a step from one app to the next. You still confirm the count and the label.
+- Domain: workflow-automation
+- Cards:
+  - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
+  - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
+
+## 332. inventory for my shop
+
+- Header: For help with inventory for your shop, here's how each tool can help:
+- Intro: AI agents can connect the store, order, and shipping apps you already use and pass a step from one app to the next. You still confirm the count and the label.
+- Domain: workflow-automation
+- Cards:
+  - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
+  - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of triggers, apps, and the step that must stay manual.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of workflow steps, the app each one touches, and who approves it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced docs on the apps a workflow would connect, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to point out which step in an automation description is still vague.
+
+## 333. SOP for my plumbing company
+
+- Header: For writing an SOP, here's how each tool can help:
+- Intro: AI agents can draft a standard operating procedure and file it where the team can search it. You still correct the steps.
+- Domain: knowledge-qa
+- Cards:
+  - Glean — Specialist · Docs checked — Glean searches internal company documents through a large set of connectors.
+  - Guru — Specialist · Docs checked — Guru answers questions from company cards and lets its agents improve those cards.
+  - Slite — Specialist · Docs checked — Slite answers questions over a team's docs with its Ask search.
+  - Notion — Specialist · Docs checked — Notion searches the docs and wikis a team already keeps.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to answer a policy question and name the wiki page a teammate should open.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of what an internal answer must cite before you trust it.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a doc that collects the policy excerpts people keep asking about.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for public sources when the company wiki does not cover a term, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft an answer that quotes only the document text you paste in.
+
+## 334. draft a quote for a kitchen remodel
+
+- Header: For drafting a quote for a kitchen remodel, here's how each tool can help:
+- Intro: AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers before it goes out.
+- Domain: quotes
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a quote from the job details and the price you set.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of scope, price, and the date the quote expires.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of line items, the price, and whether the customer accepted.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on what a simple quote includes, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark which numbers in a quote you still need to confirm.
+
+## 335. write a proposal
+
+- Header: For writing a proposal, here's how each tool can help:
+- Intro: AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers before it goes out.
+- Domain: quotes
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a quote from the job details and the price you set.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of scope, price, and the date the quote expires.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of line items, the price, and whether the customer accepted.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on what a simple quote includes, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark which numbers in a quote you still need to confirm.
+
+## 336. draft a contract for a client
+
+- Header: For drafting a contract for a client, here's how each tool can help:
+- Intro: AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording.
+- Domain: contracts
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a contract from the terms you list and mark the lines a person should review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of scope, price, dates, and the lines a lawyer should read.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of terms, the draft wording, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on clauses small businesses often include, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list which contract lines are still vague before anyone signs.
+
+## 337. take meeting notes for my team
+
+- Header: For taking meeting notes for your team, here's how each tool can help:
+- Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
+- Domain: meetings-knowledge
+- Cards:
+  - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
+  - Obsidian — Specialist · Docs checked — Obsidian stores meeting notes in files on your computer.
+  - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn meeting notes into decisions and action items you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist that separates decisions, owners, and due dates.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a doc of action items with owner and date columns.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on meeting notes, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to extract tasks from a transcript and drop anything that was only an aside.
+
+## 338. project management
+
+- Header: For managing projects, here's how each tool can help:
+- Intro: AI agents can turn a project into a task list and propose times to do the work. You still decide what gets done first.
+- Domain: scheduling-assistant
+- Cards:
+  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
+  - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
+  - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a project into a task list and mark what you still have to schedule.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of project tasks, the owner, and the due date.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of tasks, the owner, and whether each one is done.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a simple project list, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to split a project into the next three tasks you can actually finish.
+
+## 339. hire staff for my restaurant
+
+- Header: For hiring staff for your restaurant, here's how each tool can help:
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
+- Domain: hire-candidates
+- Cards:
+  - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
+  - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
+  - Paradox — Specialist · Docs checked — Paradox schedules candidates and takes applications in a conversation.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to screen a resume against a role and list gaps a person should confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for an interview checklist and the outreach points you might send a candidate.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of applicants, stage, and the next scheduling step.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced background on a skill you are hiring for, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to draft candidate outreach that a recruiter can edit before it is sent.
+
+## 340. onboarding staff for my restaurant
+
+- Header: For onboarding staff for your restaurant, here's how each tool can help:
+- Intro: AI agents can draft an onboarding checklist and the first notes for a new hire. You still decide who starts.
+- Domain: hire-candidates
+- Cards:
+  - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
+  - Paradox — Specialist · Docs checked — Paradox schedules candidates and takes applications in a conversation.
+  - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an onboarding checklist for a new hire and the first note you send them.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of paperwork, tools, and the first-week tasks for a new hire.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of new hires, the start date, and the tasks still open.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on a simple onboarding list, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten an onboarding note so it states the start time and who to ask.
+
+## 341. what should a small business automate
+
+- Header: For running a small business, here's how each tool can help:
+- Intro: AI agents can capture receipts, send invoices, schedule the week's posts, and draft customer replies for a small business. You still approve the money and the messages.
+- Domain: run-a-business
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so a small business can keep the books current.
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and pays vendor bills for a small business.
+  - Mailchimp — Specialist · Docs checked — Mailchimp sends email campaigns to the customers a small business already has.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts a small business can publish through the week.
+  - Zendesk — Specialist · Docs checked — Zendesk runs the customer support inbox for a small business.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a customer reply and a short list of bookkeeping you still check.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a weekly checklist of posts, invoices, and customer replies for a small business.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of customers, the next reply, and the bookkeeping item still open.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced checklists for a small-business week, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one customer reply, one post, and the bookkeeping step you still do yourself.
+
+## 342. run my whole business with AI
+
+- Header: For running your whole business with AI, here's how each tool can help:
+- Intro: AI agents can capture receipts, send invoices, schedule the week's posts, and draft customer replies for a small business. You still approve the money and the messages.
+- Domain: run-a-business
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so a small business can keep the books current.
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and pays vendor bills for a small business.
+  - Mailchimp — Specialist · Docs checked — Mailchimp sends email campaigns to the customers a small business already has.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts a small business can publish through the week.
+  - Zendesk — Specialist · Docs checked — Zendesk runs the customer support inbox for a small business.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a customer reply and a short list of bookkeeping you still check.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a weekly checklist of posts, invoices, and customer replies for a small business.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of customers, the next reply, and the bookkeeping item still open.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced checklists for a small-business week, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one customer reply, one post, and the bookkeeping step you still do yourself.
+
+## 343. promo for my etsy shop
+
+- Header: For help with a promo for your Etsy shop, here's how each tool can help:
+- Intro: AI agents can draft a promotion, schedule the email or post, and leave the send for you to approve.
+- Cards:
+  - Klaviyo — Specialist · Docs checked — Klaviyo sends email and text campaigns and builds a flow for a promotion.
+  - Mailchimp — Specialist · Docs checked — Mailchimp builds promo email campaigns and schedules them to your list.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a promo email and a social post, and mark what you still send yourself.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist of the offer, the list, and the date a promotion goes out.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of campaigns, the channel, and whether the send is approved.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes on promo email timing, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to rewrite a promotion so it states the offer and does not invent a discount.
+
+## 344. clean up quickbooks and send invoices
+
+- Header: For cleaning up QuickBooks and sending invoices, here's how each tool can help:
+- Intro: AI agents can gather the receipts for a QuickBooks cleanup and send the invoices you approve.
+- Cards:
+  - Dext — Specialist · Docs checked — Dext publishes receipts and invoices into QuickBooks after you review each one.
+  - BILL — Specialist · Docs checked — BILL keeps QuickBooks updated with invoices and bills.
+  - Ramp — Specialist · Docs checked — Ramp keeps QuickBooks updated with card expenses and the attached receipts.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to clean up QuickBooks and send the invoices.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to clean up QuickBooks and send the invoices.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at cleaning up QuickBooks and sending the invoices.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on cleaning up QuickBooks and sending the invoices, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on cleaning up QuickBooks and sending the invoices.
+
+## 345. email newsletter and social posts
+
+- Header: For sending an email newsletter and creating social posts, here's how each tool can help:
+- Intro: AI agents can draft the email newsletter and turn the main point into social posts you can schedule.
+- Cards:
+  - Klaviyo — Specialist · Docs checked — Klaviyo sends email campaigns and drafts a subject line for a newsletter.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
+  - Mailchimp — Specialist · Docs checked — Mailchimp sends an email newsletter to the contacts on a list.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to send an email newsletter and social posts.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to send an email newsletter and social posts.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at sending an email newsletter and social posts.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on sending an email newsletter and social posts, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on sending an email newsletter and social posts.
+
+## 346. categorize expenses and do my quarterly taxes
+
+- Header: For categorizing expenses and doing your quarterly taxes, here's how each tool can help:
+- Intro: AI agents can sort receipts into expense categories as you go and pull them into a tax-ready summary, so filing goes faster.
+- Cards:
+  - Dext — Specialist · Docs checked — Dext reads a receipt and assigns a category you can correct before the books update.
+  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
+  - Ramp — Specialist · Docs checked — Ramp codes card expenses into categories for the books.
+  - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
+  - BILL — Specialist · Docs checked — BILL codes spend into categories next to the bills it pays.
+  - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to categorize transactions and do your quarterly taxes.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to categorize transactions and do your quarterly taxes.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at categorizing transactions and doing your quarterly taxes.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on categorizing transactions and doing your quarterly taxes, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on categorizing transactions and doing your quarterly taxes.
+
+## 347. quotes and invoices for a remodel
+
+- Header: For drafting a quote and sending invoices for a remodel, here's how each tool can help:
+- Intro: AI agents can draft the quote and send the invoice after you approve the price.
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
+  - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
+  - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to write the quote and send the invoices.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist to write the quote and send the invoices.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to draft a first pass at writing the quote and sending the invoices.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on writing the quote and sending the invoices, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek for a quick how-to on writing the quote and sending the invoices.
+
+## 348. I own a plumbing company and need help reconciling quickbooks
+
+- Header: For reconciling QuickBooks, here's how each tool can help:
+- Intro: AI agents can pull receipts and card charges into QuickBooks and line them up against the statement. You still confirm each match.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext codes receipts to the QuickBooks categories so a reconciliation starts from those records.
+  - Ramp — Specialist · Docs checked — Ramp checks card balances against QuickBooks with its reconciliation tool.
+  - BILL — Specialist · Docs checked — BILL keeps QuickBooks updated with payments so a reconciliation starts from those records.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which QuickBooks transactions still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a QuickBooks cleanup checklist of statements, receipts, and uncategorized expenses.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of QuickBooks transactions, the category, and whether a receipt is attached.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced steps on reconciling QuickBooks to a bank statement, with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which QuickBooks lines you should ask an accountant about.

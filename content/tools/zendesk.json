@@ -10,7 +10,8 @@
     "customer-support"
   ],
   "useCaseTags": [
-    "customer-support"
+    "customer-support",
+    "run-a-business"
   ],
   "toolTypes": [
     "agent"
@@ -62,6 +63,7 @@
     "finalUrl": "https://www.zendesk.com/"
   },
   "useCaseFit": {
-    "customer-support": "Prices a support platform from $19 per month and describes Zendesk AI for service teams."
+    "customer-support": "Prices a support platform from $19 per month and describes Zendesk AI for service teams.",
+    "run-a-business": "Runs the customer support inbox for a small business."
   }
 }
