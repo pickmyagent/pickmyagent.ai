@@ -138,7 +138,7 @@ export const CONCEPTS: Concept[] = [
     categories: ["sales"],
     phrases: [
       "sales outreach", "cold email", "qualify leads", "email them", "email leads", "email the leads",
-      "customer follow-up", "follow up with customers", "follow up with leads", "lead follow-up",
+      "follow up with leads", "lead follow-up",
     ],
     anchors: ["lead", "leads", "outreach", "crm", "pipeline", "prospect", "prospects", "sales"],
     coveredVerbs: [],
@@ -147,6 +147,20 @@ export const CONCEPTS: Concept[] = [
       "outreach", "prospect", "prospects", "personalized", "email", "sequences", "sequence",
       "crm", "updates", "pipeline", "management",
     ],
+  },
+  {
+    id: "customer-follow-up",
+    useCase: "customer-follow-up",
+    categories: [],
+    phrases: [
+      "customer follow-up", "customer follow up",
+      "follow up with customers", "follow up with my customers", "follow up with your customers",
+      "thank-you notes", "thank you notes", "thank-you note", "thank you note",
+      "re-engage past customers", "reengage past customers", "re-engage customers",
+    ],
+    anchors: [],
+    coveredVerbs: [],
+    covered: ["customer", "customers", "follow", "thank", "note", "notes"],
   },
   {
     id: "email",
@@ -265,10 +279,12 @@ export const CONCEPTS: Concept[] = [
       "employee onboarding",
       "onboard new hires",
       "new hire onboarding",
+      "onboard a new hire",
+      "onboarding a new hire",
     ],
     anchors: [
       "hiring", "recruit", "recruiting", "recruiter", "candidate", "candidates",
-      "applicant", "applicants",
+      "applicant", "applicants", "onboard", "onboarding",
     ],
     coveredVerbs: ["screen", "source"],
     covered: [
@@ -427,7 +443,7 @@ export const CONCEPTS: Concept[] = [
     id: "sales-tax",
     useCase: "sales-tax",
     categories: [],
-    phrases: ["sales tax", "sales taxes"],
+    phrases: ["sales tax", "sales taxes", "vat return", "vat returns", "gst return", "gst returns"],
     anchors: ["vat"],
     coveredVerbs: [],
     covered: ["sales", "tax", "taxes", "vat"],

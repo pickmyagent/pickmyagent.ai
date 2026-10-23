@@ -14,6 +14,7 @@ import {
   smallBusinessIntro,
   smallBusinessJobForms,
   smallBusinessRoleBonus,
+  specialistDropped,
   smallBusinessSpecialistLine,
 } from "./small-business.ts";
 import type { Category, SmokeStatus, Tool, UseCase } from "./types";
@@ -247,6 +248,8 @@ const ACRONYM_CASE: Record<string, string> = {
   pdf: "PDF",
   ai: "AI",
   faq: "FAQ",
+  vat: "VAT",
+  gst: "GST",
   fsbo: "FSBO",
   rag: "RAG",
   soc: "SOC",
@@ -338,7 +341,7 @@ function lowercasePhrase(phrase: string, original: string): string {
       return word[0].toUpperCase() + word.slice(1).toLowerCase();
     }
     return word.toLowerCase();
-  }).join(" ");
+  }).join(" ").replace(/\bZoho books\b/g, "Zoho Books");
 }
 
 const CANONICAL_JOB: Record<string, string> = {
@@ -382,6 +385,7 @@ const CANONICAL_JOB: Record<string, string> = {
   "game-npcs": "adding an in-game character that can talk",
   bookkeeping: "help with bookkeeping",
   "run-a-business": "running a small business",
+  "customer-follow-up": "help with customer follow-up",
   payroll: "running payroll",
   "sales-tax": "handling sales tax",
   "shift-scheduling": "scheduling staff shifts",
@@ -645,9 +649,16 @@ function financeIntent(part: string): "receivable" | "expense" | "payable" | "an
   return "any";
 }
 
-function financeToolFits(slug: string, part: string): boolean {
+function financeToolFits(slug: string, part: string, full: string): boolean {
   const intent = financeIntent(part);
   if (intent === "receivable") return slug === "bill-com";
+  if (
+    /\b(?:quotes?|proposals?)\b/i.test(full)
+    && /\binvoic/i.test(part)
+    && !/\b(?:process|purchase|match)\b/i.test(part)
+  ) {
+    return slug === "bill-com";
+  }
   if (intent === "expense") return slug === "dext" || slug === "ramp" || slug === "bill-com";
   if (intent === "payable") return slug === "dext" || slug === "vic-ai" || slug === "bill-com";
   return true;
@@ -1333,7 +1344,8 @@ export function rankCatalogQuery(
       if (!tool.useCaseTags.some((tag) => matchTags.includes(tag))) continue;
       if (!tool.categories.every((category) => allowed.has(category))) continue;
       if (tool.slug === "synthesis-tutor" && !kidsTutorQuery(corrected)) continue;
-      if (concept.useCase === "finance-ops" && !financeToolFits(tool.slug, text)) continue;
+      if (concept.useCase === "finance-ops" && !financeToolFits(tool.slug, text, corrected)) continue;
+      if (specialistDropped(concept.id, tool.slug, text)) continue;
       if (
         tool.slug === "obsidian"
         && inCompound

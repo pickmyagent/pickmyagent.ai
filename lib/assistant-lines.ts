@@ -339,6 +339,13 @@ export const DOMAIN_LINES: Record<string, Record<string, string>> = {
     perplexity: "for sourced notes on what a simple quote includes, with links you can check.",
     deepseek: "to mark which numbers in a quote you still need to confirm.",
   }),
+  "customer-follow-up": lines({
+    claude: "to draft a thank-you or a check-in for a customer you already know.",
+    chatgpt: "for a checklist of which customers to thank and what the note should say.",
+    gemini: "to build a sheet of customers, the last visit, and whether you followed up.",
+    perplexity: "for sourced notes on a short customer thank-you, with links you can check.",
+    deepseek: "to shorten a customer note so it thanks them and asks one clear question.",
+  }),
   contracts: lines({
     claude: "to draft a contract from the terms you list and mark the lines a person should review.",
     chatgpt: "for a checklist of scope, price, dates, and the lines a lawyer should read.",

@@ -333,7 +333,7 @@ export const QA_QUERIES: QaQuery[] = [
   { query: "profit and loss report", domain: "analyze-data" },
   { query: "financial dashboard", domain: "analyze-data" },
   { query: "budget forecast", domain: "analyze-data" },
-  { query: "customer follow-up", domain: "sales-outreach" },
+  { query: "customer follow-up", domain: "customer-follow-up" },
   { query: "crm for leads", domain: "sales-outreach" },
   { query: "appointment booking", domain: "scheduling-assistant" },
   { query: "no-shows", domain: "scheduling-assistant" },
@@ -380,6 +380,18 @@ export const QA_QUERIES: QaQuery[] = [
   },
   { query: "quotes and invoices for a remodel", domain: null },
   { query: "I own a plumbing company and need help reconciling quickbooks", domain: "bookkeeping" },
+  { query: "follow up with my customers", domain: "customer-follow-up" },
+  { query: "thank you notes for customers", domain: "customer-follow-up" },
+  { query: "book appointments online for my barbershop", domain: "scheduling-assistant" },
+  { query: "reduce no shows at my clinic", domain: "scheduling-assistant" },
+  { query: "onboard a new hire", domain: "hire-candidates" },
+  { query: "send 1099s", domain: "do-taxes" },
+  { query: "quarterly estimated taxes for my freelance business", domain: "do-taxes" },
+  { query: "recurring invoices for my clients", domain: "finance-ops" },
+  { query: "VAT return for my shop", domain: "sales-tax" },
+  { query: "zoho books cleanup", domain: "bookkeeping" },
+  { query: "quotes and invoices for my landscaping business", domain: null },
+  { query: "re-engage past customers", domain: "customer-follow-up" },
 ];
 
 const PROPER = new Set([
@@ -389,7 +401,7 @@ const PROPER = new Set([
   "openai", "nvidia", "github", "discord", "youtube", "twitch", "amazon", "duolingo",
   "spanish", "french", "german", "japanese", "instagram",
   "microsoft", "python", "hex", "notion", "slack",
-  "xero", "shopify", "etsy", "zoho", "wave", "freshbooks", "quickbooks", "qbo",
+  "xero", "shopify", "etsy", "zoho", "wave", "freshbooks", "quickbooks", "qbo", "books",
 ]);
 
 const WRAPPER =

@@ -990,13 +990,13 @@ const HELD_OUT: { query: string; expect: string | null }[] = [
   { query: "sales tax for my bakery", expect: null },
   { query: "vat return", expect: null },
   { query: "quarterly taxes", expect: "do-taxes" },
-  { query: "1099s for contractors", expect: "do-taxes" },
+  { query: "1099s for contractors", expect: null },
   { query: "year-end tax prep", expect: "do-taxes" },
   { query: "cash flow for my business", expect: "analyze-data" },
   { query: "profit and loss report", expect: "analyze-data" },
   { query: "financial dashboard", expect: "analyze-data" },
   { query: "budget forecast", expect: "analyze-data" },
-  { query: "customer follow-up", expect: "sales-outreach" },
+  { query: "customer follow-up", expect: null },
   { query: "crm for leads", expect: "sales-outreach" },
   { query: "appointment booking", expect: "scheduling-assistant" },
   { query: "project management", expect: "scheduling-assistant" },
@@ -1020,10 +1020,142 @@ const HELD_OUT: { query: string; expect: string | null }[] = [
   { query: "draft a contract for a client", expect: null },
   { query: "meeting notes", expect: "meetings-knowledge" },
   { query: "hire staff for my restaurant", expect: "hire-candidates" },
-  { query: "onboarding staff for my restaurant", expect: "hire-candidates" },
+  { query: "onboarding staff for my restaurant", expect: null },
   { query: "what should a small business automate", expect: "run-a-business" },
   { query: "run my whole business with AI", expect: "run-a-business" },
   { query: "AI for my small business", expect: "run-a-business" },
+  // Paraphrases of jobs that still return three on-domain tools.
+  { query: "clean up the books for my cafe", expect: "bookkeeping" },
+  { query: "catch up on bookkeeping", expect: "bookkeeping" },
+  { query: "messy books for my bakery", expect: "bookkeeping" },
+  { query: "reconcile the books", expect: "bookkeeping" },
+  { query: "quickbooks for my salon", expect: "bookkeeping" },
+  { query: "help with xero", expect: "bookkeeping" },
+  { query: "xero for my shop", expect: "bookkeeping" },
+  { query: "freshbooks cleanup", expect: "bookkeeping" },
+  { query: "qbo cleanup", expect: "bookkeeping" },
+  { query: "cold email sequences", expect: "sales-outreach" },
+  { query: "find sales leads", expect: "sales-outreach" },
+  { query: "sales outreach tool", expect: "sales-outreach" },
+  { query: "email my leads", expect: "sales-outreach" },
+  { query: "prospecting for new leads", expect: "sales-outreach" },
+  { query: "draft a cold email to a lead", expect: "sales-outreach" },
+  { query: "update the crm pipeline", expect: "sales-outreach" },
+  { query: "post to instagram", expect: "social-media" },
+  { query: "social media manager", expect: "social-media" },
+  { query: "plan my social posts", expect: "social-media" },
+  { query: "customer support chatbot", expect: "customer-support" },
+  { query: "refund a customer order", expect: "customer-support" },
+  { query: "support tickets for my store", expect: "customer-support" },
+  { query: "help center articles", expect: "customer-support" },
+  { query: "file my taxes this year", expect: "do-taxes" },
+  { query: "prepare my tax return", expect: "do-taxes" },
+  { query: "do my personal taxes", expect: "do-taxes" },
+  { query: "1040 tax filing", expect: "do-taxes" },
+  { query: "sort my tax deductions", expect: "do-taxes" },
+  { query: "screen resumes for a role", expect: "hire-candidates" },
+  { query: "recruit staff for my cafe", expect: "hire-candidates" },
+  { query: "interview candidates", expect: "hire-candidates" },
+  { query: "source candidates for a job", expect: "hire-candidates" },
+  { query: "manage my calendar this week", expect: "scheduling-assistant" },
+  { query: "calendar for a busy founder", expect: "scheduling-assistant" },
+  { query: "spreadsheet analysis", expect: "analyze-data" },
+  { query: "cash flow spreadsheet", expect: "analyze-data" },
+  { query: "profit and loss spreadsheet", expect: "analyze-data" },
+  { query: "automate my workflows", expect: "workflow-automation" },
+  { query: "zapier style automation", expect: "workflow-automation" },
+  { query: "for sale by owner homes", expect: "find-off-market" },
+  { query: "off market property deals", expect: "find-off-market" },
+  { query: "skip trace a property owner", expect: "find-off-market" },
+  { query: "motivated sellers in my city", expect: "find-off-market" },
+  { query: "write an seo blog post", expect: "create-content" },
+  { query: "draft marketing copy", expect: "create-content" },
+  { query: "blog post outline", expect: "create-content" },
+  { query: "triage my email inbox", expect: "manage-inbox" },
+  { query: "clean up my gmail", expect: "manage-inbox" },
+  { query: "meeting action items", expect: "meetings-knowledge" },
+  { query: "notes from my last meeting", expect: "meetings-knowledge" },
+  { query: "search the company wiki", expect: "knowledge-qa" },
+  { query: "debug this unit test", expect: "coding-agents" },
+  { query: "fix a pull request", expect: "coding-agents" },
+  { query: "rebalance my portfolio", expect: "manage-portfolio" },
+  { query: "track my brokerage account", expect: "manage-portfolio" },
+  { query: "rank rental deals", expect: "rank-property-deals" },
+  { query: "score a flip deal", expect: "rank-property-deals" },
+  { query: "vacant land in florida", expect: "find-land" },
+  { query: "look up zoning", expect: "find-land" },
+  { query: "phishing email report", expect: "security-ops" },
+  { query: "browser agent for forms", expect: "tool-use-browser" },
+  { query: "clip a kick highlight", expect: "game-creative" },
+  { query: "twitch highlight reel", expect: "game-creative" },
+  { query: "match invoices to purchase orders", expect: "finance-ops" },
+  { query: "audit employee expenses", expect: "finance-ops" },
+  { query: "expense report software", expect: "finance-ops" },
+  { query: "run my small business with AI", expect: "run-a-business" },
+  { query: "automate a small business", expect: "run-a-business" },
+  { query: "AI tools for a small business", expect: "run-a-business" },
+  { query: "local seo for my cafe", expect: "create-content" },
+  { query: "google business profile copy", expect: "create-content" },
+  { query: "standard operating procedure", expect: "knowledge-qa" },
+  { query: "shopify order shipping", expect: "workflow-automation" },
+  { query: "etsy order workflow", expect: "workflow-automation" },
+  { query: "print shipping labels", expect: "workflow-automation" },
+  { query: "facebook ads for a cafe", expect: "social-media" },
+  { query: "instagram posts for my bakery", expect: "social-media" },
+  { query: "faq bot for the website", expect: "customer-support" },
+  { query: "customer support inbox", expect: "customer-support" },
+  { query: "what can a small business automate", expect: "run-a-business" },
+  { query: "help running my small business", expect: "run-a-business" },
+  { query: "clean up xero", expect: "bookkeeping" },
+  { query: "wave accounting cleanup", expect: "bookkeeping" },
+  { query: "my books are behind", expect: "bookkeeping" },
+  { query: "qualify inbound leads", expect: "sales-outreach" },
+  { query: "cold outreach sequences", expect: "sales-outreach" },
+  { query: "crm lead list", expect: "sales-outreach" },
+  { query: "founder calendar", expect: "scheduling-assistant" },
+  { query: "block focus time on my calendar", expect: "scheduling-assistant" },
+  { query: "weekly calendar planning", expect: "scheduling-assistant" },
+  { query: "build a profit and loss", expect: "analyze-data" },
+  { query: "cash flow report", expect: "analyze-data" },
+  { query: "recruit a cook", expect: "hire-candidates" },
+  { query: "file a 1040 return", expect: "do-taxes" },
+  { query: "help with my tax return", expect: "do-taxes" },
+  { query: "personal tax filing", expect: "do-taxes" },
+  { query: "deduction checklist for my return", expect: "do-taxes" },
+  { query: "off-market homes", expect: "find-off-market" },
+  { query: "fsbo list", expect: "find-off-market" },
+  { query: "vacant parcel search", expect: "find-land" },
+  { query: "acreage with zoning", expect: "find-land" },
+  { query: "401k rebalance", expect: "manage-portfolio" },
+  { query: "investment portfolio tracker", expect: "manage-portfolio" },
+  { query: "gmail triage", expect: "manage-inbox" },
+  { query: "soc alerts", expect: "security-ops" },
+  { query: "report a phishing email", expect: "security-ops" },
+  { query: "action items from a transcript", expect: "meetings-knowledge" },
+  { query: "turn meeting notes into tasks", expect: "meetings-knowledge" },
+  { query: "knowledge base search", expect: "knowledge-qa" },
+  { query: "pto policy lookup", expect: "knowledge-qa" },
+  { query: "computer use agent", expect: "tool-use-browser" },
+  { query: "automate browser forms", expect: "tool-use-browser" },
+  { query: "instagram posting schedule", expect: "social-media" },
+  { query: "bar exam study plan", expect: "tutoring" },
+  { query: "failing test in the repo", expect: "coding-agents" },
+  { query: "refactor a github pull request", expect: "coding-agents" },
+  { query: "workflow across apps", expect: "workflow-automation" },
+  { query: "n8n style workflow", expect: "workflow-automation" },
+  { query: "kick stream highlights", expect: "game-creative" },
+  { query: "make a highlight reel", expect: "game-creative" },
+  { query: "score real estate deals", expect: "rank-property-deals" },
+  { query: "invoice matching", expect: "finance-ops" },
+  { query: "accounts payable invoices", expect: "finance-ops" },
+  { query: "process vendor invoices", expect: "finance-ops" },
+  { query: "seo article writer", expect: "create-content" },
+  { query: "optimize a blog post", expect: "create-content" },
+  { query: "small business automation ideas", expect: "run-a-business" },
+  { query: "AI to run the business", expect: "run-a-business" },
+  { query: "reconcile quickbooks", expect: "bookkeeping" },
+  { query: "catch up quickbooks", expect: "bookkeeping" },
+  { query: "restaurant bookkeeping cleanup", expect: "bookkeeping" },
 ];
 
 test("compound marketing and invoice query names both jobs", () => {
@@ -1126,6 +1258,187 @@ test("small-business bookkeeping queries stay on the books", () => {
   assert.deepEqual(both.useCases.map((item) => item.slug), ["bookkeeping", "finance-ops"]);
 });
 
+test("ceo qa keeps each specialist on the job its data supports", () => {
+  const rankedOf = (query: string) => rankCatalogQuery(query, catalog);
+  const specialistSlugs = (query: string) =>
+    rankedOf(query).tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
+  const copyOk = (query: string) => {
+    const ranked = rankedOf(query);
+    assert.deepEqual(grammarProblems(ranked.lead, "header"), [], `${query} header: ${ranked.lead}`);
+    assert.deepEqual(grammarProblems(ranked.intro, "intro"), [], `${query} intro: ${ranked.intro}`);
+    for (const tool of ranked.tools) {
+      if (tool.generalPurpose) continue;
+      assert.deepEqual(specialistWhyProblems(tool.name, tool.whyItHelps), [], `${query} / ${tool.whyItHelps}`);
+    }
+  };
+
+  const invoice = rankedOf("invoice");
+  assert.equal(invoice.lead, "For help with invoices, here's how each tool can help:");
+  assert.match(invoice.intro, /purchase order/);
+  assert.equal(rankedOf("invoices").lead, "For help with invoices, here's how each tool can help:");
+  copyOk("invoice");
+
+  for (const query of ["1099s for contractors", "send 1099s"]) {
+    const ranked = rankedOf(query);
+    assert.ok(ranked.tools.every((tool) => tool.generalPurpose), query);
+    assert.match(ranked.intro, /confirm every amount/);
+    copyOk(query);
+  }
+
+  for (const query of [
+    "quarterly taxes",
+    "year-end tax prep",
+    "quarterly taxes for freelancers",
+    "quarterly estimated taxes for my freelance business",
+  ]) {
+    const slugs = specialistSlugs(query);
+    assert.equal(slugs.includes("turbotax"), false, query);
+    assert.equal(slugs.includes("taxact"), false, query);
+    assert.ok(slugs.includes("keeper"), query);
+    assert.ok(slugs.includes("flyfin"), query);
+    copyOk(query);
+  }
+  assert.ok(specialistSlugs("do my taxes").includes("turbotax"));
+  assert.ok(specialistSlugs("do my taxes").includes("taxact"));
+  assert.ok(specialistSlugs("file my 1040").includes("turbotax"));
+  const quarterlyCompound = rankedOf("categorize expenses and do my quarterly taxes");
+  assert.equal(quarterlyCompound.tools.some((tool) => tool.slug === "turbotax" || tool.slug === "taxact"), false);
+  assert.equal(quarterlyCompound.tools.some((tool) => tool.slug === "bill-com"), false);
+  assert.ok(quarterlyCompound.tools.some((tool) => tool.slug === "keeper"));
+  assert.ok(quarterlyCompound.tools.some((tool) => tool.slug === "dext"));
+
+  for (const query of [
+    "customer follow-up",
+    "follow up with my customers",
+    "thank you notes for customers",
+    "re-engage past customers",
+  ]) {
+    const ranked = rankedOf(query);
+    assert.equal(ranked.useCases[0]?.slug, "customer-follow-up", query);
+    assert.ok(ranked.tools.every((tool) => tool.generalPurpose), query);
+    assert.match(ranked.intro, /customer you already know/);
+    copyOk(query);
+  }
+  assert.ok(specialistSlugs("crm for leads").includes("apollo"));
+
+  assert.deepEqual(specialistSlugs("appointment booking").slice().sort(), ["lindy", "reclaim"]);
+  const barber = specialistSlugs("book appointments online for my barbershop");
+  assert.ok(barber.includes("reclaim") && barber.includes("lindy"));
+  assert.equal(barber.includes("motion"), false);
+  for (const query of ["no-shows", "reduce no shows at my clinic"]) {
+    const ranked = rankedOf(query);
+    assert.equal(ranked.lead, "For handling no-shows, here's how each tool can help:");
+    assert.match(ranked.intro, /reminder/);
+    assert.ok(ranked.tools.every((tool) => tool.generalPurpose), query);
+    copyOk(query);
+  }
+  const calendar = specialistSlugs("calendar management for a founder");
+  assert.ok(calendar.includes("motion") && calendar.includes("reclaim") && calendar.includes("lindy"));
+
+  for (const query of ["onboarding staff for my restaurant", "onboard a new hire"]) {
+    const ranked = rankedOf(query);
+    assert.ok(ranked.tools.every((tool) => tool.generalPurpose), query);
+    assert.match(ranked.intro, /onboarding/);
+    copyOk(query);
+  }
+  const hire = rankedOf("hire staff for my restaurant");
+  assert.equal(hire.tools.find((tool) => !tool.generalPurpose)?.slug, "paradox");
+  const gem = hire.tools.find((tool) => tool.slug === "gem");
+  const metaview = hire.tools.find((tool) => tool.slug === "metaview");
+  assert.ok(gem && metaview);
+  assert.equal(/recruiter|enterprise/i.test(`${gem.whyItHelps} ${metaview.whyItHelps}`), false);
+  const deepseek = hire.tools.find((tool) => tool.slug === "deepseek");
+  assert.ok(deepseek);
+  assert.equal(/recruiter/i.test(deepseek.whyItHelps), false);
+  copyOk("hire staff for my restaurant");
+
+  assert.deepEqual(specialistSlugs("quotes and invoices for a remodel"), ["bill-com"]);
+  assert.deepEqual(specialistSlugs("quotes and invoices for my landscaping business"), ["bill-com"]);
+  const cleanupAndInvoices = specialistSlugs("clean up quickbooks and send invoices");
+  assert.ok(cleanupAndInvoices.includes("dext"));
+  assert.ok(cleanupAndInvoices.includes("ramp"));
+  assert.ok(cleanupAndInvoices.includes("bill-com"));
+  copyOk("quotes and invoices for a remodel");
+
+  assert.deepEqual(specialistSlugs("project management"), ["motion"]);
+  copyOk("project management");
+
+  for (const query of ["zoho books", "zoho books cleanup"]) {
+    const ranked = rankedOf(query);
+    assert.match(ranked.lead, /Zoho Books/);
+    assert.match(ranked.intro, /Zoho Books/);
+    const prose = `${ranked.lead} ${ranked.intro} ${ranked.tools.map((tool) => tool.whyItHelps).join(" ")}`;
+    assert.equal(/Zoho books/.test(prose), false, query);
+    assert.equal(ranked.tools.some((tool) => tool.slug === "bill-com"), false, query);
+    copyOk(query);
+  }
+
+  for (const query of ["vat return", "VAT return for my shop"]) {
+    const ranked = rankedOf(query);
+    assert.equal(ranked.lead, "For handling your VAT return, here's how each tool can help:");
+    assert.match(ranked.intro, /VAT/);
+    assert.equal(/sales tax/i.test(`${ranked.lead} ${ranked.intro}`), false);
+    copyOk(query);
+  }
+  const gst = rankedOf("gst return");
+  assert.equal(gst.lead, "For handling your GST return, here's how each tool can help:");
+  assert.match(gst.intro, /GST/);
+  assert.equal(/sales tax/i.test(`${gst.lead} ${gst.intro}`), false);
+  copyOk("gst return");
+  const salesTax = rankedOf("sales tax for my bakery");
+  assert.match(salesTax.lead, /sales tax/);
+  assert.equal(/\bVAT\b/.test(salesTax.intro), false);
+
+  for (const query of ["subscription billing", "recurring invoices for my clients"]) {
+    const ranked = rankedOf(query);
+    assert.match(ranked.lead, /recurring invoices/);
+    assert.match(ranked.intro, /repeats/);
+    const bill = ranked.tools.find((tool) => tool.slug === "bill-com");
+    assert.ok(bill, query);
+    assert.match(bill.whyItHelps, /recurring invoice/);
+    assert.equal(/unpaid|chasing/i.test(`${ranked.intro} ${bill.whyItHelps}`), false);
+    copyOk(query);
+  }
+
+  for (const query of [
+    "clean up my books",
+    "bookkeeping for my small business",
+    "catch up on my books",
+    "fix messy books",
+    "I own a restaurant and my books are a mess",
+  ]) {
+    const bill = rankedOf(query).tools.find((tool) => tool.slug === "bill-com");
+    assert.ok(bill, query);
+    assert.match(bill.whyItHelps, /QuickBooks and Xero updated/);
+    assert.equal(/next to the books/i.test(bill.whyItHelps), false);
+    copyOk(query);
+  }
+  for (const query of ["categorize transactions", "catagorize my expenses"]) {
+    assert.equal(rankedOf(query).tools.some((tool) => tool.slug === "bill-com"), false, query);
+    copyOk(query);
+  }
+  const quickbooks = rankedOf("help with Ai quickbooks");
+  assert.deepEqual(specialistSlugs("help with Ai quickbooks").slice(0, 3), ["dext", "ramp", "bill-com"]);
+  assert.match(quickbooks.intro, /QuickBooks/);
+
+  const etsy = rankedOf("promo for my etsy shop");
+  const copy = etsy.tools.find((tool) => tool.slug === "copy-ai");
+  assert.ok(copy);
+  assert.match(copy.whyItHelps, /promo copy/);
+  assert.equal(/go-to-market/i.test(copy.whyItHelps), false);
+  copyOk("promo for my etsy shop");
+
+  const phone = rankedOf("answer the phone for my salon");
+  assert.deepEqual(specialistSlugs("answer the phone for my salon"), ["decagon"]);
+  assert.match(phone.tools[0]?.whyItHelps ?? "", /calls/);
+  assert.equal(phone.tools.some((tool) => tool.slug === "zendesk" || tool.slug === "intercom-fin"), false);
+  copyOk("answer the phone for my salon");
+  const faq = specialistSlugs("faq chatbot for my website");
+  assert.ok(faq.includes("zendesk"));
+  assert.ok(faq.includes("intercom-fin"));
+  assert.ok(faq.includes("decagon"));
+});
+
 test("held-out paraphrases report precision at 3 without failing the build", () => {
   assert.ok(HELD_OUT.length >= 40);
   let hits = 0;
@@ -1157,7 +1470,7 @@ test("held-out paraphrases report precision at 3 without failing the build", () 
   const precision = hits / slots;
   console.log(`held-out precision@3: ${precision.toFixed(3)} (${hits}/${slots})`);
   for (const miss of misses) console.log(`held-out miss: ${miss}`);
-  assert.ok(precision >= 0);
+  assert.ok(precision >= 0.971, `held-out precision@3 ${precision.toFixed(3)} (${hits}/${slots})`);
 });
 
 test("regression report for the pull request", () => {

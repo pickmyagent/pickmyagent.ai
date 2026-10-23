@@ -9590,6 +9590,24 @@
       "intro": "AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit."
     },
     {
+      "slug": "customer-follow-up",
+      "title": "Follow up with customers",
+      "summary": "Notes to people who already bought from you.",
+      "audienceHints": [
+        "owners"
+      ],
+      "matchTags": [
+        "customer-follow-up"
+      ],
+      "jobPhrase": "following up with customers",
+      "assistantTask": "draft a note to a customer you already know",
+      "assistantContext": "a thank-you or a check-in",
+      "searchTopic": "what to say in a customer follow-up",
+      "recommended": [],
+      "intro": "AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.",
+      "disclaimer": null
+    },
+    {
       "slug": "customer-support",
       "title": "Handle customer support tickets",
       "summary": "Reply to common tickets and send the rest to a person.",

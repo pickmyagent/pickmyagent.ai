@@ -53,7 +53,73 @@ export function portfolioQuery(text: string): boolean {
 }
 
 export function salesTaxQuery(text: string): boolean {
-  return /\bsales tax\b/i.test(text) || /\bvat\b/i.test(text);
+  return /\bsales tax(?:es)?\b/i.test(text);
+}
+
+export function vatQuery(text: string): boolean {
+  return /\bvat\b/i.test(text);
+}
+
+export function gstQuery(text: string): boolean {
+  return /\bgst\b/i.test(text);
+}
+
+export function ten99Query(text: string): boolean {
+  return /\b1099s?\b/i.test(text);
+}
+
+/** Quarterly, year-end, or small-business tax wording. Personal "do my taxes" stays out. */
+export function businessTaxQuery(text: string): boolean {
+  const lower = text.toLowerCase();
+  if (ten99Query(lower)) return false;
+  if (/\b(?:quarterly|estimated)\b/.test(lower) && /\btax/.test(lower)) return true;
+  if (/\byear-?end\b/.test(lower) && /\btax/.test(lower)) return true;
+  if (/\b(?:small business|freelance|freelancer|freelancers|self-employed)\b/.test(lower) && /\btax/.test(lower)) return true;
+  return false;
+}
+
+export function onboardingOnlyQuery(text: string): boolean {
+  const lower = text.toLowerCase();
+  return /\bonboard/.test(lower) && !/\b(?:hiring|hire staff|hire employees|recruit)\b/.test(lower);
+}
+
+export function noShowQuery(text: string): boolean {
+  return /\bno[-\s]?shows?\b/i.test(text) || /\bmissed appointments?\b/i.test(text);
+}
+
+export function customerBookingQuery(text: string): boolean {
+  return /\bappointments?\b/i.test(text) && !noShowQuery(text);
+}
+
+export function projectPlanQuery(text: string): boolean {
+  return /\b(?:project management|task management)\b/i.test(text);
+}
+
+/** Categorize wording that does not name a books brand, invoices, or bills. */
+export function pureCategorizeQuery(text: string): boolean {
+  const lower = text.toLowerCase();
+  if (!categorizeQuery(lower)) return false;
+  if (booksBrandQuery(lower)) return false;
+  if (/\b(?:invoices?|bills?)\b/.test(lower)) return false;
+  return true;
+}
+
+const PERSONAL_RETURN_TOOLS = new Set(["turbotax", "taxact"]);
+const BOOKING_TOOLS = new Set(["reclaim", "lindy"]);
+
+/** True when this specialist does not do the job the words describe. */
+export function specialistDropped(conceptId: string, slug: string, part: string): boolean {
+  const text = part.toLowerCase();
+  if (conceptId === "taxes" && ten99Query(text)) return true;
+  if (conceptId === "taxes" && businessTaxQuery(text) && PERSONAL_RETURN_TOOLS.has(slug)) return true;
+  if (conceptId === "hiring" && onboardingOnlyQuery(text)) return true;
+  if (conceptId === "support" && phoneQuery(text) && slug !== "decagon") return true;
+  if (conceptId === "schedule" && noShowQuery(text)) return true;
+  if (conceptId === "schedule" && customerBookingQuery(text) && !BOOKING_TOOLS.has(slug)) return true;
+  if (conceptId === "schedule" && projectPlanQuery(text) && slug !== "motion") return true;
+  if (conceptId === "bookkeeping" && slug === "bill-com" && pureCategorizeQuery(text)) return true;
+  if (conceptId === "bookkeeping" && slug === "bill-com" && zohoBooksQuery(text)) return true;
+  return false;
 }
 
 export function payrollQuery(text: string): boolean {
@@ -146,7 +212,7 @@ export function commerceQuery(text: string): boolean {
 
 /** Concepts that must not win for this wording. */
 export function conceptBlocked(id: string, lower: string): boolean {
-  if (id === "taxes" && (salesTaxQuery(lower) || payrollQuery(lower))) return true;
+  if (id === "taxes" && (salesTaxQuery(lower) || vatQuery(lower) || gstQuery(lower) || payrollQuery(lower))) return true;
   if (id === "schedule" && shiftQuery(lower)) return true;
   if (id === "books-reports") {
     if (propertyMoneyQuery(lower) || portfolioQuery(lower)) return true;
@@ -163,6 +229,7 @@ export function conceptBlocked(id: string, lower: string): boolean {
   }
   if (id === "shopping" && /\b(etsy|shopify|inventory|ecommerce|e-commerce)\b/.test(lower)) return true;
   if (id === "shopping" && /\bamazon\s+(?:store|seller)\b/.test(lower)) return true;
+  if (id === "shopping" && (vatQuery(lower) || gstQuery(lower))) return true;
   return false;
 }
 
@@ -176,8 +243,10 @@ export function smallBusinessHeader(cleaned: string): string | null {
   }
   if (freshBooksQuery(lower)) return cleanup ? "cleaning up your FreshBooks" : "help with FreshBooks";
   if (xeroQuery(lower)) return cleanup ? "cleaning up your Xero" : "help with Xero";
-  if (zohoBooksQuery(lower)) return cleanup ? "cleaning up your Zoho books" : "help with Zoho books";
+  if (zohoBooksQuery(lower)) return cleanup ? "cleaning up your Zoho Books" : "help with Zoho Books";
   if (waveAccountingQuery(lower)) return cleanup ? "cleaning up your Wave books" : "help with Wave";
+  if (vatQuery(lower)) return "handling your VAT return";
+  if (gstQuery(lower)) return "handling your GST return";
   if (salesTaxQuery(lower)) return "handling sales tax";
   if (shiftQuery(lower)) return "scheduling staff shifts";
   if (payrollQuery(lower) && contentCount(lower) <= 2) return "running payroll";
@@ -194,15 +263,21 @@ export function smallBusinessHeader(cleaned: string): string | null {
   if (/\bprofit and loss\b|\bp&l\b|\bp and l\b/.test(lower)) return "reading your profit and loss";
   if (/\bfinancial dashboards?\b/.test(lower)) return "reading a financial dashboard";
   if (/\b(?:budget|forecast)/.test(lower)) return "forecasting cash flow";
-  if (appointmentQuery(lower)) {
-    if (/\bno-?shows?\b/.test(lower)) return "handling no-shows";
-    return "booking appointments";
-  }
+  if (noShowQuery(lower)) return "handling no-shows";
+  if (appointmentQuery(lower)) return "booking appointments";
   if (/\bfaq\b|\bchatbots?\b/.test(lower)) return "answering website questions";
   if (/\bproject management\b|\btask management\b|\btask list\b|\bto-?do list\b/.test(lower)) return "managing projects";
   if (/^(?:your\s+)?social posts?$/.test(lower.trim())) return "creating social posts";
   if (/^overdue invoices?$/.test(lower.trim())) return "chasing overdue invoices";
-  if (/^invoices?\b/.test(lower.trim())) return `sending ${lower.trim()}`;
+  if (/^invoices?$/.test(lower.trim())) return "help with invoices";
+  if (/^invoices?\b/.test(lower.trim())) {
+    const rest = lower.trim().replace(/^invoices?\s+/, "");
+    if (/^for your\s+[a-z]+ing\b/.test(rest)) return `sending invoices for a ${rest.replace(/^for your\s+/, "")}`;
+    return `sending ${lower.trim()}`;
+  }
+  if (/\bcustomer follow-?up\b|\bfollow up with (?:my |your |our )?customers\b|\bthank[- ]you notes?\b|\bre-?engage/.test(lower)) {
+    return "help with customer follow-up";
+  }
   if (/\bsell on amazon\b/.test(lower)) return "selling on Amazon";
   if (/\b(?:quotes?|proposals?)\b/.test(lower)) return "drafting a quote";
   if (/\b(?:small business|whole business)\b/.test(lower) && /\b(?:what should|automat)/.test(lower)) {
@@ -221,7 +296,12 @@ const BOOKS_INTRO = "AI agents can capture receipts, sort expenses into categori
 const QB_INTRO = "AI agents can capture receipts and expenses and publish the ones you approve into QuickBooks. You still decide what hits the books.";
 const XERO_INTRO = "AI agents can capture receipts and expenses and sync the records you approve to Xero. You still decide what hits the books.";
 const FRESHBOOKS_INTRO = "AI agents can capture receipts and expenses, and BILL can export and import invoice data with FreshBooks. You still decide what gets entered.";
-const ZOHO_INTRO = "AI agents can capture receipts and expenses, and Ramp can connect card expenses to Zoho books. You still decide what gets entered.";
+const ZOHO_INTRO = "AI agents can capture receipts and expenses, and Ramp can connect card expenses to Zoho Books. You still decide what gets entered.";
+const VAT_INTRO = "AI agents can list the VAT collected and the VAT paid, and draft the figures for the return. You still file it.";
+const GST_INTRO = "AI agents can list the GST collected and the GST paid, and draft the figures for the return. You still file it.";
+const RECURRING_INTRO = "AI agents can set up an invoice that repeats for a client and list the ones already sent. You still approve the amount and the schedule.";
+const FOLLOWUP_INTRO = "AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.";
+const NOSHOW_INTRO = "AI agents can draft the reminder you send before an appointment and a short note for anyone who missed. You still send it.";
 const CHATBOT_INTRO = "AI agents can answer repeated questions on the site and hand the rest to a person. You still decide which questions they may answer.";
 const PROJECT_INTRO = "AI agents can turn a project into a task list and propose times to do the work. You still decide what gets done first.";
 const RECONCILE_INTRO = "AI agents can gather the receipts and card charges that belong on a bank or credit-card reconciliation. You still match each line to the statement.";
@@ -236,7 +316,7 @@ const YEAREND_INTRO = "AI agents can gather year-end income, expenses, and recei
 const CASH_INTRO = "AI agents can read a spreadsheet of income and expenses and draft a cash-flow or profit-and-loss summary. You recompute the totals before you trust them.";
 const LOCAL_SEO_INTRO = "AI agents can draft the local page and the Google business profile description. You still publish it and check the hours and the address.";
 const ADS_INTRO = "AI agents can draft the ad creative and the caption. You still choose the budget and where it runs.";
-const PHONE_INTRO = "AI agents can handle a customer conversation by chat, email, or voice and hand off the calls a person should take.";
+const PHONE_INTRO = "AI agents can answer a phone call and hand off the ones a person should take. You still decide which calls stay with you.";
 const APPOINTMENT_INTRO = "AI agents can offer a scheduling link, hold the appointment on a calendar, and draft a reminder. You still confirm who is coming.";
 const COMMERCE_INTRO = "AI agents can connect the store, order, and shipping apps you already use and pass a step from one app to the next. You still confirm the count and the label.";
 const NEWSLETTER_INTRO = "AI agents can draft an email newsletter and a subject line for the list you already have. You still approve the send.";
@@ -262,7 +342,11 @@ export function smallBusinessIntro(query: string, useCaseSlug: string | undefine
   if (useCaseSlug === "finance-ops" && /\bexpense reports?\b/.test(text)) {
     return "AI agents can collect receipts and card charges into an expense report you still approve. You correct the category before it is filed.";
   }
+  if (useCaseSlug === "finance-ops" && (/\bsubscription billing\b/.test(text) || /\brecurring invoices?\b/.test(text))) {
+    return RECURRING_INTRO;
+  }
   if (useCaseSlug === "finance-ops" && receivableQuery(text)) return GET_PAID_INTRO;
+  if (useCaseSlug === "customer-follow-up" || conceptId === "customer-follow-up") return FOLLOWUP_INTRO;
   if ((useCaseSlug === "hire-candidates" || conceptId === "hiring") && /\bonboard/.test(text)) {
     return "AI agents can draft an onboarding checklist and the first notes for a new hire. You still decide who starts.";
   }
@@ -279,7 +363,10 @@ export function smallBusinessIntro(query: string, useCaseSlug: string | undefine
   if (/\b(?:project management|task management|task list|to-?do list)\b/.test(text) && (useCaseSlug === "scheduling-assistant" || conceptId === "schedule")) {
     return PROJECT_INTRO;
   }
+  if (noShowQuery(text) && (useCaseSlug === "scheduling-assistant" || conceptId === "schedule")) return NOSHOW_INTRO;
   if (appointmentQuery(text) && (useCaseSlug === "scheduling-assistant" || conceptId === "schedule")) return APPOINTMENT_INTRO;
+  if ((useCaseSlug === "sales-tax" || conceptId === "sales-tax") && vatQuery(text)) return VAT_INTRO;
+  if ((useCaseSlug === "sales-tax" || conceptId === "sales-tax") && gstQuery(text)) return GST_INTRO;
   if (newsletterQuery(text) && (conceptId === "newsletter" || useCaseSlug === "marketing-promotions")) return NEWSLETTER_INTRO;
   if (/\b(sops?|standard operating)\b/.test(text) && (useCaseSlug === "knowledge-qa" || conceptId === "knowledge")) return SOP_INTRO;
   return null;
@@ -308,7 +395,7 @@ const FRESHBOOKS_LINES: Record<string, string> = {
 };
 
 const ZOHO_LINES: Record<string, string> = {
-  ramp: "Ramp connects card expenses to Zoho books.",
+  ramp: "Ramp connects card expenses to Zoho Books.",
 };
 
 const RECONCILE_LINES: Record<string, string> = {
@@ -320,7 +407,6 @@ const RECONCILE_LINES: Record<string, string> = {
 const CATEGORIZE_LINES: Record<string, string> = {
   dext: "Dext reads a receipt and assigns a category you can correct before the books update.",
   ramp: "Ramp codes card expenses into categories for the books.",
-  "bill-com": "BILL codes spend into categories next to the bills it pays.",
 };
 
 const ACCOUNTANT_LINES: Record<string, string> = {
@@ -332,7 +418,22 @@ const ACCOUNTANT_LINES: Record<string, string> = {
 const BOOKS_LINES: Record<string, string> = {
   dext: "Dext captures receipts and invoices so the books have the source documents in one place.",
   ramp: "Ramp keeps card charges and expenses together for the books.",
-  "bill-com": "BILL sends invoices and tracks bills next to the books.",
+  "bill-com": "BILL keeps QuickBooks and Xero updated with the invoices and bills it pays.",
+};
+
+const RECURRING_LINES: Record<string, string> = {
+  "bill-com": "BILL creates a recurring invoice and can email it each time one is generated.",
+};
+
+const BOOKING_LINES: Record<string, string> = {
+  reclaim: "Reclaim shares a scheduling link a customer can use to book a time.",
+  lindy: "Lindy shares a booking link so a customer can pick a time on your calendar.",
+};
+
+const HOURLY_HIRE_LINES: Record<string, string> = {
+  paradox: "Paradox takes applications in a conversation and schedules the interview.",
+  gem: "Gem checks applicants and shows which ones are still open.",
+  metaview: "Metaview takes notes during the interview.",
 };
 
 const GET_PAID_LINES: Record<string, string> = {
@@ -368,16 +469,29 @@ export function smallBusinessSpecialistLine(useCaseSlug: string, toolSlug: strin
     if (quickBooksQuery(text)) return pick(QB_LINES, toolSlug);
     if (xeroQuery(text)) return pick(XERO_LINES, toolSlug) ?? pick(BOOKS_LINES, toolSlug);
     if (freshBooksQuery(text)) return pick(FRESHBOOKS_LINES, toolSlug) ?? pick(BOOKS_LINES, toolSlug);
-    if (zohoBooksQuery(text)) return pick(ZOHO_LINES, toolSlug) ?? pick(BOOKS_LINES, toolSlug);
+    if (zohoBooksQuery(text)) return pick(ZOHO_LINES, toolSlug);
     if (reconcileQuery(text)) return pick(RECONCILE_LINES, toolSlug);
     if (categorizeQuery(text)) return pick(CATEGORIZE_LINES, toolSlug);
     if (accountantQuery(text)) return pick(ACCOUNTANT_LINES, toolSlug);
     return pick(BOOKS_LINES, toolSlug);
   }
+  if (useCaseSlug === "finance-ops" && (/\bsubscription billing\b/.test(text) || /\brecurring invoices?\b/.test(text))) {
+    return pick(RECURRING_LINES, toolSlug);
+  }
   if (useCaseSlug === "finance-ops" && receivableQuery(text)) return pick(GET_PAID_LINES, toolSlug);
   if (useCaseSlug === "marketing-promotions" && newsletterQuery(text)) return pick(NEWSLETTER_LINES, toolSlug);
+  if (useCaseSlug === "scheduling-assistant" && customerBookingQuery(text)) return pick(BOOKING_LINES, toolSlug);
+  if (useCaseSlug === "customer-support" && phoneQuery(text) && toolSlug === "decagon") {
+    return "Decagon answers customer calls by voice and can hand a call to a person.";
+  }
+  if (useCaseSlug === "hire-candidates" && /\b(?:restaurant|salon|cafe|bakery|barbershop|hourly|landscaping)\b/.test(text)) {
+    return pick(HOURLY_HIRE_LINES, toolSlug);
+  }
   if (useCaseSlug === "analyze-data" && cashReportQuery(text)) return pick(CASH_LINES, toolSlug);
   if (useCaseSlug === "create-content" && localSeoQuery(text)) return pick(LOCAL_SEO_LINES, toolSlug);
+  if ((useCaseSlug === "create-content" || useCaseSlug === "marketing-promotions") && toolSlug === "copy-ai" && /\b(?:etsy|shopify|shop|salon|bakery|restaurant)\b/.test(text) && !localSeoQuery(text)) {
+    return "Copy.ai drafts the promo copy you can paste into an email or a post.";
+  }
   return null;
 }
 
@@ -417,11 +531,11 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
   }
   if (useCaseSlug === "bookkeeping" && zohoBooksQuery(text)) {
     return ask(slug, {
-      claude: "to list which Zoho books entries still need a receipt or a category.",
-      chatgpt: "for a checklist of Zoho books expenses, receipts, and open invoices.",
-      gemini: "to build a sheet of Zoho books transactions, the category, and whether a receipt is attached.",
-      perplexity: "for sourced steps on a Zoho books cleanup, with links you can check.",
-      deepseek: "to flag which Zoho books lines you should ask an accountant about.",
+      claude: "to list which Zoho Books entries still need a receipt or a category.",
+      chatgpt: "for a checklist of Zoho Books expenses, receipts, and open invoices.",
+      gemini: "to build a sheet of Zoho Books transactions, the category, and whether a receipt is attached.",
+      perplexity: "for sourced steps on a Zoho Books cleanup, with links you can check.",
+      deepseek: "to flag which Zoho Books lines you should ask an accountant about.",
     });
   }
   if (useCaseSlug === "bookkeeping" && waveAccountingQuery(text)) {
@@ -469,6 +583,15 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
       deepseek: "to flag expense lines that do not have a receipt.",
     });
   }
+  if (useCaseSlug === "finance-ops" && (/\bsubscription billing\b/.test(text) || /\brecurring invoices?\b/.test(text))) {
+    return ask(slug, {
+      claude: "to draft a recurring invoice and list which clients are on that schedule.",
+      chatgpt: "for a checklist of the amount, how often it repeats, and who receives it.",
+      gemini: "to build a sheet of clients, the repeating amount, and the next invoice date.",
+      perplexity: "for sourced notes on recurring invoice schedules, with links you can check.",
+      deepseek: "to flag a repeating invoice whose amount or end date you still need to set.",
+    });
+  }
   if (useCaseSlug === "finance-ops" && receivableQuery(text)) {
     return ask(slug, {
       claude: "to list unpaid invoices and draft a short reminder you still approve.",
@@ -476,6 +599,60 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
       gemini: "to build a sheet of open invoices, the amount, and the last reminder.",
       perplexity: "for sourced notes on invoice payment terms, with links you can check.",
       deepseek: "to draft a late-payment note that states the amount and the due date.",
+    });
+  }
+  if (useCaseSlug === "do-taxes" && ten99Query(text)) {
+    return ask(slug, {
+      claude: "to list contractor payments a 1099 still needs and the amounts you must confirm.",
+      chatgpt: "for a checklist of contractor name, payments, and the 1099 boxes still blank.",
+      gemini: "to build a sheet of contractors, the amount paid, and whether a 1099 is ready.",
+      perplexity: "for sourced notes on what a 1099 asks for, with links you can check.",
+      deepseek: "to flag which 1099 amounts you should confirm before anything is filed.",
+    });
+  }
+  if (useCaseSlug === "do-taxes" && /\b(?:quarterly|estimated)\b/.test(text)) {
+    return ask(slug, {
+      claude: "to list quarterly income and expenses and the payment date you still confirm.",
+      chatgpt: "for a checklist of quarterly income, expenses, and the estimate you still check.",
+      gemini: "to build a sheet of quarters, income, expenses, and the estimate.",
+      perplexity: "for sourced notes on quarterly estimated taxes, with links you can check.",
+      deepseek: "to flag which quarterly figures you should confirm before you pay.",
+    });
+  }
+  if (useCaseSlug === "do-taxes" && /\byear-?end\b|\btax prep/.test(text)) {
+    return ask(slug, {
+      claude: "to gather year-end income and expenses into questions for the person who files.",
+      chatgpt: "for a year-end checklist of income, expenses, and receipts to gather.",
+      gemini: "to build a sheet of year-end totals and the documents still missing.",
+      perplexity: "for sourced notes on a year-end tax packet, with links you can check.",
+      deepseek: "to flag which year-end totals you should confirm before filing.",
+    });
+  }
+  if (useCaseSlug === "sales-tax" && vatQuery(text)) {
+    return ask(slug, {
+      claude: "to list VAT collected and VAT paid and the figures you still confirm.",
+      chatgpt: "for a checklist of VAT collected, VAT paid, and the return date.",
+      gemini: "to build a sheet of sales, the VAT collected, and the VAT paid.",
+      perplexity: "for sourced notes on a VAT return, with links you can check.",
+      deepseek: "to flag which VAT figures you should confirm before you file.",
+    });
+  }
+  if (useCaseSlug === "sales-tax" && gstQuery(text)) {
+    return ask(slug, {
+      claude: "to list GST collected and GST paid and the figures you still confirm.",
+      chatgpt: "for a checklist of GST collected, GST paid, and the return date.",
+      gemini: "to build a sheet of sales, the GST collected, and the GST paid.",
+      perplexity: "for sourced notes on a GST return, with links you can check.",
+      deepseek: "to flag which GST figures you should confirm before you file.",
+    });
+  }
+  if (useCaseSlug === "customer-follow-up") {
+    return ask(slug, {
+      claude: "to draft a thank-you or a check-in for a customer you already know.",
+      chatgpt: "for a checklist of which customers to thank and what the note should say.",
+      gemini: "to build a sheet of customers, the last visit, and whether you followed up.",
+      perplexity: "for sourced notes on a short customer thank-you, with links you can check.",
+      deepseek: "to shorten a customer note so it thanks them and asks one clear question.",
     });
   }
   if (useCaseSlug === "create-content" && localSeoQuery(text)) {
@@ -505,7 +682,16 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
       deepseek: "to rewrite an ad so it states the offer and does not invent a discount.",
     });
   }
-  if (useCaseSlug === "scheduling-assistant" && /\bno-?shows?\b/.test(text)) {
+  if (useCaseSlug === "scheduling-assistant" && customerBookingQuery(text)) {
+    return ask(slug, {
+      claude: "to draft the text that shares a booking link and a reminder for the day before.",
+      chatgpt: "for a checklist of the service, the length, and what the booking page should say.",
+      gemini: "to build a sheet of appointments, the customer, and whether they confirmed.",
+      perplexity: "for sourced notes on a simple booking page, with links you can check.",
+      deepseek: "to shorten a booking reminder so it states the time and how to cancel.",
+    });
+  }
+  if (useCaseSlug === "scheduling-assistant" && noShowQuery(text)) {
     return ask(slug, {
       claude: "to draft a reminder that cuts down no-shows and a note for anyone who missed.",
       chatgpt: "for a checklist of confirmation texts to send before an appointment.",
@@ -521,6 +707,15 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
       gemini: "to build a sheet of tasks, the owner, and whether each one is done.",
       perplexity: "for sourced notes on a simple project list, with links you can check.",
       deepseek: "to split a project into the next three tasks you can actually finish.",
+    });
+  }
+  if (useCaseSlug === "hire-candidates" && /\b(?:restaurant|salon|cafe|bakery|barbershop|hourly|landscaping)\b/.test(text) && !/\bonboard/.test(text)) {
+    return ask(slug, {
+      claude: "to compare an application with the shift you need filled and list what you still confirm.",
+      chatgpt: "for a checklist of questions to ask before you hire someone for a shift.",
+      gemini: "to build a sheet of applicants, the role, and whether you scheduled an interview.",
+      perplexity: "for sourced notes on hiring hourly staff, with links you can check.",
+      deepseek: "to shorten a note to an applicant so it states the shift and the next step.",
     });
   }
   if (useCaseSlug === "hire-candidates" && /\bonboard/.test(text)) {
@@ -569,13 +764,15 @@ export function smallBusinessJobForms(raw: string): Forms | null {
   if (quickBooksQuery(text)) return { infinitive: "clean up QuickBooks", gerund: "cleaning up QuickBooks" };
   if (freshBooksQuery(text)) return { infinitive: "clean up FreshBooks", gerund: "cleaning up FreshBooks" };
   if (xeroQuery(text)) return { infinitive: "clean up Xero", gerund: "cleaning up Xero" };
-  if (zohoBooksQuery(text)) return { infinitive: "clean up Zoho books", gerund: "cleaning up Zoho books" };
+  if (zohoBooksQuery(text)) return { infinitive: "clean up Zoho Books", gerund: "cleaning up Zoho Books" };
   if (/\b(my books|the books|messy books|bookkeeping)\b/.test(text)) {
     return { infinitive: "clean up the books", gerund: "cleaning up the books" };
   }
   if (categorizeQuery(text)) return { infinitive: "categorize transactions", gerund: "categorizing transactions" };
   if (reconcileQuery(text)) return { infinitive: "reconcile the bank accounts", gerund: "reconciling the bank accounts" };
   if (payrollQuery(text)) return { infinitive: "run payroll", gerund: "running payroll" };
+  if (vatQuery(text)) return { infinitive: "handle your VAT return", gerund: "handling your VAT return" };
+  if (gstQuery(text)) return { infinitive: "handle your GST return", gerund: "handling your GST return" };
   if (salesTaxQuery(text)) return { infinitive: "handle sales tax", gerund: "handling sales tax" };
   if (shiftQuery(text)) return { infinitive: "schedule staff shifts", gerund: "scheduling staff shifts" };
   if (newsletterQuery(text)) return { infinitive: "send an email newsletter", gerund: "sending an email newsletter" };
@@ -647,6 +844,11 @@ export function smallBusinessRoleBonus(conceptId: string, slug: string, query: s
   if (conceptId === "invoices" && receivableQuery(query)) {
     if (slug === "bill-com") return 80;
     if (slug === "dext") return 40;
+  }
+  if (conceptId === "hiring" && /\b(?:restaurant|salon|cafe|bakery|barbershop|hourly|landscaping)\b/i.test(query)) {
+    const order = ["paradox", "gem", "metaview"];
+    const index = order.indexOf(slug);
+    if (index >= 0) return 240 - index * 40;
   }
   if (conceptId === "newsletter") {
     const order = ["klaviyo", "mailchimp"];
