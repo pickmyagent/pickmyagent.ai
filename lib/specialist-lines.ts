@@ -28,7 +28,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "Land id looks up parcel boundaries and owner names on land across the country.",
     ],
     propstream: [
-      "PropStream searches parcel records with the same filters it uses on other land listings.",
+      "PropStream searches property records for land parcels.",
     ],
     regrid: [
       "Regrid sells parcel boundaries and owner fields for one county or one state.",
@@ -48,7 +48,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "manage-portfolio": {
     composer: [
-      "Composer automates one trading strategy attached to an investment account.",
+      "Composer automates a trading strategy on an investment account.",
     ],
     kubera: [
       "Kubera tracks a household balance sheet next to the rest of an investment portfolio.",
@@ -57,7 +57,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "Magnifi links brokerage accounts and shows a portfolio summary.",
     ],
     "portfolio-pilot": [
-      "PortfolioPilot lines up accounts and reads the investment portfolio from them.",
+      "PortfolioPilot tracks your accounts and assesses the portfolio.",
     ],
     range: [
       "Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.",
@@ -118,13 +118,21 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "scheduling-assistant": {
     lindy: [
-      "Lindy takes calendar chores and inbox follow-ups as scheduling work.",
+      "Lindy schedules meetings and clears inbox follow-ups.",
     ],
     motion: [
       "Motion plans a calendar and a task list in the same scheduling view.",
     ],
     reclaim: [
       "Reclaim shares scheduling links and holds focus blocks on the calendar.",
+    ],
+  },
+  "marketing-promotions": {
+    klaviyo: [
+      "Klaviyo sends email and text campaigns and builds a flow for a promotion.",
+    ],
+    mailchimp: [
+      "Mailchimp builds promo email campaigns and schedules them to your list.",
     ],
   },
   "create-content": {
@@ -165,7 +173,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "GuideGeek plans travel across flights, stays, restaurants, and experiences.",
     ],
     wonderplan: [
-      "Wonderplan drafts a custom itinerary for the trip you still book yourself.",
+      "Wonderplan drafts a custom itinerary for the trip.",
     ],
   },
   "shop-products": {
@@ -247,7 +255,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "tutoring": {
     khanmigo: [
-      "Khanmigo teaches a concept and also helps a teacher plan that same lesson.",
+      "Khanmigo tutors a student through a problem step by step.",
     ],
     quizlet: [
       "Quizlet turns notes into a practice test and explains a homework step with more practice.",
@@ -261,7 +269,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "learn-language": {
     "duolingo-max": [
-      "Duolingo Max practices a language with the GPT-4 features Duolingo added for Max.",
+      "Duolingo Max lets you practice conversation with an AI partner.",
     ],
   },
   "game-creative": {
@@ -400,7 +408,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "n8n runs multi-step workflows you can host yourself for a repeated task.",
     ],
     zapier: [
-      "Zapier connects hosted apps so a repeated task fires without a server of your own.",
+      "Zapier connects the apps you already use so a step in one triggers a step in another.",
     ],
   },
   "multi-agent-workflows": {
@@ -441,7 +449,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "tool-use-browser": {
     "browser-use": [
-      "Browser Use opens pages and clicks through steps in a browser from Python.",
+      "Browser Use opens pages and clicks through the steps in a browser.",
     ],
     composio: [
       "Composio connects an agent to outside apps when the job needs more than browser steps.",
@@ -478,6 +486,12 @@ export function isListingPhotoQuery(query: string): boolean {
     && !/\b(edit|editing|trim|trimming|caption|captions)\b/i.test(query);
 }
 
+/** "Make a listing video" means a photo-to-video tour, not a footage edit. */
+export function isListingMakeQuery(query: string): boolean {
+  return /\b(?:make|making|create|creating)\s+(?:a\s+)?listing videos?\b/i.test(query)
+    && !/\b(?:edit|editing|trim|trimming|caption|captions)\b/i.test(query);
+}
+
 const LISTING_PHOTO_LINES: Record<string, string> = {
   autoreel: "AutoReel turns listing photos into a property video with music and captions.",
   boxbrownie: "BoxBrownie builds a virtual tour of the home from 360 photos.",
@@ -488,9 +502,16 @@ const LISTING_PHOTO_LINES: Record<string, string> = {
 };
 
 export function listingSpecialistLine(toolSlug: string, query: string): string | null {
-  if (isListingPhotoQuery(query)) return LISTING_PHOTO_LINES[toolSlug] ?? null;
+  if (isListingPhotoQuery(query) || isListingMakeQuery(query)) return LISTING_PHOTO_LINES[toolSlug] ?? null;
   return specialistLine("listing-videos", toolSlug);
 }
+
+/** Docs-backed lines for a workflow tool that can touch both jobs in one automation. */
+export const BRIDGE_LINES: Record<string, string> = {
+  n8n: "n8n connects Mailchimp campaigns and QuickBooks invoices in one workflow.",
+  make: "Make connects Mailchimp campaigns and QuickBooks invoices in one scenario.",
+  zapier: "Zapier links Mailchimp and QuickBooks so a step in one app triggers a step in the other.",
+};
 
 export function specialistLine(useCaseSlug: string, toolSlug: string, index = 0): string | null {
   const lines = LINES[useCaseSlug]?.[toolSlug];

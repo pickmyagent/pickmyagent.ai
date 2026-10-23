@@ -1,0 +1,70 @@
+{
+  "id": "klaviyo",
+  "slug": "klaviyo",
+  "name": "Klaviyo",
+  "websiteUrl": "https://www.klaviyo.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Email and SMS campaigns with flows, plus an AI subject-line generator.",
+  "longDescription": "Klaviyo sends email and text campaigns with flows and an AI subject-line generator. Free email plan for up to 250 active profiles and 500 sends a month. See their site for paid pricing.",
+  "categories": [
+    "content"
+  ],
+  "useCaseTags": [
+    "marketing-promotions"
+  ],
+  "toolTypes": [
+    "automation"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Free email plan for up to 250 active profiles and 500 sends a month. See their site for paid pricing.",
+  "pricingUrl": "https://www.klaviyo.com/pricing",
+  "docsUrl": "https://help.klaviyo.com/hc/en-us/articles/360050759151",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-20",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Scheduling promo email and text campaigns"
+  ],
+  "notIdealFor": [
+    "Someone who needs one confirmed monthly price"
+  ],
+  "strength": "Klaviyo's help center describes a free email plan with up to 250 active profiles and 500 email sends a month.",
+  "weakness": "Paid pricing is on their site, beyond the free email plan of 250 active profiles and 500 sends a month.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-20T17:00:00-04:00",
+  "checkedDate": "2026-10-20",
+  "smokeTestNotes": "Official pages reviewed on October 20, 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "sources": [
+    "https://www.klaviyo.com/",
+    "https://www.klaviyo.com/pricing",
+    "https://help.klaviyo.com/hc/en-us/articles/360050759151"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.klaviyo.com/"
+  },
+  "useCaseFit": {
+    "marketing-promotions": "Describes email and SMS campaigns, flows, and a free email plan for small lists."
+  }
+}

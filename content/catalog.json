@@ -4837,6 +4837,76 @@
       }
     },
     {
+      "id": "klaviyo",
+      "slug": "klaviyo",
+      "name": "Klaviyo",
+      "websiteUrl": "https://www.klaviyo.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Email and SMS campaigns with flows, plus an AI subject-line generator.",
+      "longDescription": "Klaviyo sends email and text campaigns with flows and an AI subject-line generator. Free email plan for up to 250 active profiles and 500 sends a month. See their site for paid pricing.",
+      "categories": [
+        "content"
+      ],
+      "useCaseTags": [
+        "marketing-promotions"
+      ],
+      "toolTypes": [
+        "automation"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Free email plan for up to 250 active profiles and 500 sends a month. See their site for paid pricing.",
+      "pricingUrl": "https://www.klaviyo.com/pricing",
+      "docsUrl": "https://help.klaviyo.com/hc/en-us/articles/360050759151",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-20",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Scheduling promo email and text campaigns"
+      ],
+      "notIdealFor": [
+        "Someone who needs one confirmed monthly price"
+      ],
+      "strength": "Klaviyo's help center describes a free email plan with up to 250 active profiles and 500 email sends a month.",
+      "weakness": "Paid pricing is on their site, beyond the free email plan of 250 active profiles and 500 sends a month.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-20T17:00:00-04:00",
+      "checkedDate": "2026-10-20",
+      "smokeTestNotes": "Official pages reviewed on October 20, 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "sources": [
+        "https://www.klaviyo.com/",
+        "https://www.klaviyo.com/pricing",
+        "https://help.klaviyo.com/hc/en-us/articles/360050759151"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.klaviyo.com/"
+      },
+      "useCaseFit": {
+        "marketing-promotions": "Describes email and SMS campaigns, flows, and a free email plan for small lists."
+      }
+    },
+    {
       "affiliateUrl": null,
       "platforms": [
         "web"
@@ -5347,6 +5417,76 @@
       },
       "useCaseFit": {
         "manage-portfolio": "Links brokerage accounts on the $0 plan and adds forecasts on Premium."
+      }
+    },
+    {
+      "id": "mailchimp",
+      "slug": "mailchimp",
+      "name": "Mailchimp",
+      "websiteUrl": "https://mailchimp.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Email campaigns. The Free plan includes 250 contacts and 500 sends a month.",
+      "longDescription": "Mailchimp's help center says the Free Marketing plan includes up to 250 contacts and 500 sends a month, with a daily send limit of 250. The pricing page lists a 14-day trial of the Standard or Essentials plan.",
+      "categories": [
+        "content"
+      ],
+      "useCaseTags": [
+        "marketing-promotions"
+      ],
+      "toolTypes": [
+        "automation"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Help center: Free plan up to 250 contacts and 500 sends a month. Paid tiers vary by contact total, so startingPrice stays empty.",
+      "pricingUrl": "https://mailchimp.com/pricing/marketing/",
+      "docsUrl": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+      "freeTier": true,
+      "freeTierNotes": "Up to 250 contacts and 500 sends a month.",
+      "startingPrice": null,
+      "freeTrial": "14 days",
+      "pricingCheckedAt": "2026-10-20",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Sending email campaigns to a small list"
+      ],
+      "notIdealFor": [
+        "A sender who will pass 250 contacts on the Free plan"
+      ],
+      "strength": "Mailchimp's help center says the Free plan includes up to 250 contacts and 500 sends a month.",
+      "weakness": "Sending pauses if that Free plan passes 250 contacts, and paid tiers depend on the contact total.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-20T17:00:00-04:00",
+      "checkedDate": "2026-10-20",
+      "smokeTestNotes": "Official pages reviewed on October 20, 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "sources": [
+        "https://mailchimp.com/",
+        "https://mailchimp.com/pricing/marketing/",
+        "https://mailchimp.com/help/about-mailchimp-pricing-plans/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://mailchimp.com/"
+      },
+      "useCaseFit": {
+        "marketing-promotions": "Free plan sends email campaigns to 250 contacts and 500 sends a month."
       }
     },
     {
@@ -9695,7 +9835,7 @@
           "why": "Source, review, and report."
         }
       ],
-      "intro": "AI agents can screen a resume, draft candidate outreach, and line up interview scheduling notes for a person to approve."
+      "intro": "AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve."
     },
     {
       "slug": "it-helpdesk",
@@ -9938,6 +10078,32 @@
       "intro": "AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk."
     },
     {
+      "slug": "marketing-promotions",
+      "title": "Automate marketing promotions",
+      "summary": "Schedule promo emails, texts, and posts.",
+      "audienceHints": [
+        "marketers"
+      ],
+      "matchTags": [
+        "marketing-promotions"
+      ],
+      "jobPhrase": "automating marketing promotions",
+      "assistantTask": "outline a promo email and the post that goes with it",
+      "assistantContext": "scheduling a promotion",
+      "searchTopic": "the offer in the promotion",
+      "recommended": [
+        {
+          "toolId": "klaviyo",
+          "why": "Email and SMS campaigns on a free plan for small lists."
+        },
+        {
+          "toolId": "mailchimp",
+          "why": "Email campaigns on a free plan for 250 contacts."
+        }
+      ],
+      "intro": "AI agents can draft a promotion, schedule the email or post, and leave the send for you to approve."
+    },
+    {
       "slug": "meetings-knowledge",
       "title": "Meetings, notes & knowledge",
       "summary": "Capture, summarize, and query your team’s context.",
@@ -10167,7 +10333,7 @@
           "why": "Cold-email assistant."
         }
       ],
-      "intro": "AI agents can research a sales lead, draft outreach, and line up a pipeline note so you choose what actually gets sent."
+      "intro": "AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve."
     },
     {
       "slug": "scheduling-assistant",
@@ -10197,7 +10363,7 @@
           "why": "Inbox and calendar jobs with free credits."
         }
       ],
-      "intro": "AI agents can plan a calendar, propose meeting times, and draft follow-ups so the schedule is not only in your head."
+      "intro": "AI agents can propose times on the calendar and draft the follow-up once you pick one."
     },
     {
       "slug": "security-ops",
@@ -10445,7 +10611,7 @@
       "assistantTask": "map the steps, draft the instructions, and list which apps each step touches",
       "assistantContext": "automating a repeated personal task",
       "searchTopic": "how the apps in your task can connect",
-      "intro": "AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual."
+      "intro": "AI agents can connect the apps in a repeated workflow and run the steps you approve."
     },
     {
       "slug": "write-resume",

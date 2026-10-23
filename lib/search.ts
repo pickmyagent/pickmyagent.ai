@@ -1,5 +1,5 @@
 import { domainAssistantLine, openAssistantLine } from "./assistant-lines.ts";
-import { isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
+import { BRIDGE_LINES, isListingMakeQuery, isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
 import type { Category, SmokeStatus, Tool, UseCase } from "./types";
 
@@ -70,6 +70,10 @@ const LEADING_GERUNDS: Record<string, string> = {
   fill: "filling",
   file: "filing",
   transcribe: "transcribing",
+  send: "sending",
+  post: "posting",
+  take: "taking",
+  bill: "billing",
 };
 
 const GERUNDS: Record<string, string> = {
@@ -200,7 +204,7 @@ const PHRASE_NOISE = new Set([
 const PROPER_NOUNS = new Set([
   "south", "carolina", "california", "texas", "florida", "york", "lisbon", "london",
   "seo", "api", "crm", "gpt", "irs", "npc", "npcs", "pdf", "ai", "fsbo", "rag", "soc",
-  "gmail", "youtube",
+  "gmail", "youtube", "instagram", "spanish", "french", "german", "japanese",
 ]);
 
 const ACRONYM_CASE: Record<string, string> = {
@@ -218,6 +222,11 @@ const ACRONYM_CASE: Record<string, string> = {
   soc: "SOC",
   gmail: "Gmail",
   youtube: "YouTube",
+  instagram: "Instagram",
+  spanish: "Spanish",
+  french: "French",
+  german: "German",
+  japanese: "Japanese",
   twitch: "Twitch",
   deepseek: "DeepSeek",
   "3d": "3D",
@@ -307,6 +316,7 @@ const CANONICAL_JOB: Record<string, string> = {
   "manage-inbox": "managing an email inbox",
   "scheduling-assistant": "scheduling and admin",
   "create-content": "creating and optimizing content",
+  "marketing-promotions": "automating marketing promotions",
   "analyze-data": "analyzing data and generating reports",
   "hire-candidates": "screening and sourcing candidates",
   "plan-travel": "planning and booking travel",
@@ -461,6 +471,7 @@ function bareGerundPhrase(phrase: string): boolean {
 
 function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, wantsYour: boolean): string {
   if (!cleaned) return useCase ? personalize(CANONICAL_JOB[useCase.slug] ?? "help with this", wantsYour) : "help with this";
+  if (/^(?:tutor(?:ing)?(?:\s+me)?)$/i.test(cleaned)) return "getting tutoring help";
   if (/\bimage[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from an image";
   if (/\btext[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from text";
   if (/\btext[\s-]to[\s-]speech\b/i.test(cleaned)) return "making speech from text";
@@ -495,7 +506,13 @@ export function jobPhrase(query: string, useCase?: UseCase | null): string {
     .replace(/\s+/g, " ")
     .trim();
   const phrase = chooseHeader(cleaned, useCase, wantsYour);
-  return lowercasePhrase(phrase, query).replace(/\s+/g, " ").trim() || "help with this";
+  return lowercasePhrase(phrase, query)
+    .replace(/,\s+and\b/gi, " and")
+    .replace(/\band also\b/gi, "and")
+    .replace(/\bto social\b(?!\s+media)/gi, "to social media")
+    .replace(/\bemail them\b/gi, "emailing them")
+    .replace(/\s+/g, " ")
+    .trim() || "help with this";
 }
 
 export function cleanUserPhrase(query: string): string {
@@ -569,13 +586,45 @@ function languageQuery(query: string): boolean {
 const LISTING_EDITOR_ORDER = ["capcut", "kapwing", "descript", "canva"];
 const LISTING_PHOTO_ORDER = ["autoreel", "canva", "kapwing", "capcut"];
 
+function financeIntent(part: string): "receivable" | "expense" | "payable" | "any" {
+  const text = part.toLowerCase();
+  if (/\bbill (?:clients|customers)\b/.test(text)) return "receivable";
+  if (/\bcustomer invoices?\b/.test(text)) return "receivable";
+  if (/\b(?:send|sending)\b/.test(text) && /\binvoic/.test(text)) return "receivable";
+  if (/\b(?:expense|expenses|receipt|receipts)\b/.test(text)) return "expense";
+  if (/\b(?:process(?:ing)? invoices|accounts payable|purchase orders?)\b/.test(text)) return "payable";
+  return "any";
+}
+
+function financeToolFits(slug: string, part: string): boolean {
+  const intent = financeIntent(part);
+  if (intent === "receivable") return slug === "bill-com";
+  if (intent === "expense") return slug === "dext" || slug === "ramp" || slug === "bill-com";
+  if (intent === "payable") return slug === "dext" || slug === "vic-ai" || slug === "bill-com";
+  return true;
+}
+
+function notesAppQuery(text: string): boolean {
+  return /\b(notes app|personal notes|obsidian|markdown)\b/i.test(text);
+}
+
+function luggageQuery(text: string): boolean {
+  return /\b(luggage|suitcase|suitcases|backpack|backpacks|bags?)\b/i.test(text)
+    && !/\b(fashion|outfit|apparel|clothes)\b/i.test(text);
+}
+
 function roleBonus(conceptId: string, slug: string, query: string): number {
   if (conceptId === "listing-video") {
-    const order = isListingPhotoQuery(query) ? LISTING_PHOTO_ORDER : LISTING_EDITOR_ORDER;
+    const order = isListingPhotoQuery(query) || isListingMakeQuery(query) ? LISTING_PHOTO_ORDER : LISTING_EDITOR_ORDER;
     const index = order.indexOf(slug);
     return index >= 0 ? 400 - index * 80 : 0;
   }
   if (conceptId === "tutoring" && slug === "synthesis-tutor" && kidsTutorQuery(query)) return 20;
+  if (conceptId === "sales" && /\bqualify leads\b/i.test(query)) {
+    const qualifyOrder = ["apollo", "clay", "instantly", "smartlead"];
+    const index = qualifyOrder.indexOf(slug);
+    if (index >= 0) return 200 - index * 40;
+  }
   return 0;
 }
 
@@ -652,6 +701,9 @@ const LISTING_PHOTO_INTRO =
   "AI agents can turn listing photos into a home tour, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.";
 
 export function jobIntro(query: string, useCase: UseCase | undefined, concept: Concept | null): string {
+  if (/\bcold email\b/i.test(query) && /\bcrm\b/i.test(query)) {
+    return "AI agents can draft the cold email and log the contact in your CRM.";
+  }
   if (videoGenerationQuery(query)) return VIDEO_GENERATION_INTRO;
   if ((useCase?.slug === "coding-agents" || concept?.id === "code") && modelChoiceQuery(query)) return MODEL_CHOICE_INTRO;
   if (useCase?.slug === "listing-videos" || concept?.id === "listing-video") {
@@ -680,17 +732,43 @@ function assistantSlot(query: string, useCase?: UseCase | null): string {
   return phrase.replace(/^help with\s+/i, "").trim() || phrase;
 }
 
-function assistantWhy(tool: Tool, query: string, useCase: UseCase | null): string {
+function guardSlot(slot: string): string {
+  const trimmed = slot.trim();
+  const count = trimmed.split(/\s+/).filter(Boolean).length;
+  if (!trimmed.includes(",") && count <= 8) return trimmed;
+  const first = trimmed.split(/,|\band\b|\bplus\b|&/i)[0]?.trim() ?? trimmed;
+  const short = first.split(/\s+/).filter(Boolean).slice(0, 6).join(" ");
+  return short || "this job";
+}
+
+function assistantWhy(tool: Tool, query: string, useCase: UseCase | null, slotOverride?: string): string {
   const name = tool.assistantName ?? tool.name.split("(")[0].trim();
-  if (useCase) {
+  if (useCase && !slotOverride) {
     const written = domainAssistantLine(tool.slug, useCase.slug);
     if (written) return written;
   }
-  return openAssistantLine(tool.slug, name, assistantSlot(query, useCase));
+  const slot = slotOverride ?? assistantSlot(query, useCase);
+  return openAssistantLine(tool.slug, name, guardSlot(slot));
 }
 
 function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean, index: number): string {
   if (general) return assistantWhy(tool, query, useCase);
+  if (tool.slug === "duolingo-max") {
+    const language = query.match(/\b(spanish|french|german|japanese)\b/i)?.[1];
+    if (language) {
+      const titled = language[0].toUpperCase() + language.slice(1).toLowerCase();
+      return `Duolingo Max lets you practice ${titled} conversation with an AI partner.`;
+    }
+  }
+  if (tool.slug === "khanmigo" && /\bmath\b/i.test(query)) {
+    return "Khanmigo tutors a student through a math problem step by step.";
+  }
+  if (tool.slug === "bill-com" && financeIntent(query) === "expense") {
+    return "BILL includes spend and expense tools with its invoicing.";
+  }
+  if (tool.slug === "wonderplan" && /\bbook/i.test(query)) {
+    return "Wonderplan plans a hotel stay inside a trip itinerary.";
+  }
   if (useCase?.slug === "listing-videos") {
     const written = listingSpecialistLine(tool.slug, query);
     if (written) return written;
@@ -825,6 +903,301 @@ function alternativeLead(tool: IndexedTool): string {
   return `For finding ${article} ${name} alternative, here's how each tool can help:`;
 }
 
+type ConceptHit = { concept: Concept; score: number };
+
+function conceptHits(text: string): ConceptHit[] {
+  const lower = text.toLowerCase();
+  const tokens = new Set(words(text).map(correctToken));
+  return CONCEPTS
+    .map((concept) => ({ concept, score: scoreConcept(concept, lower, tokens) }))
+    .filter((item) => item.score >= CONCEPT_THRESHOLD)
+    .sort((a, b) => b.score - a.score || a.concept.id.localeCompare(b.concept.id));
+}
+
+function chooseWinner(hits: ConceptHit[]): ConceptHit | null {
+  if (hits.length === 0) return null;
+  const workflow = hits.find((item) => item.concept.id === "workflow");
+  const rest = hits.filter((item) => item.concept.id !== "workflow");
+  const base = workflow && rest.some((item) => item.score >= workflow.score) ? rest : hits;
+  const specific = base.filter((item) => !item.concept.broad);
+  const pool = specific.length > 0 ? specific : base;
+  const top = pool[0];
+  if (!top) return null;
+  return pool.filter((item) => item.score === top.score).length === 1 ? top : null;
+}
+
+/** Tags a concept may surface. Promotions also pulls catalog marketing and social tools. */
+export function matchTagsForConcept(concept: Concept, useCases: UseCase[]): string[] {
+  if (concept.id === "promotions") return ["marketing-promotions", "create-content", "social-media"];
+  const useCase = useCases.find((item) => item.slug === concept.useCase);
+  return useCase?.matchTags ?? [concept.useCase];
+}
+
+const JOB_SPLIT = /\s*(?:,\s*and\s+|,\s*also\s+|,\s+|\s+&\s+|\s+\bplus\b\s+|\s+\balso\b\s+|\s+\band\b\s+)\s*/i;
+
+function jobParts(query: string): string[] {
+  const cleaned = stripWrappers(query).replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
+  return cleaned
+    .split(JOB_SPLIT)
+    .map((part) => part.replace(/^(?:also|and)\s+/i, "").trim())
+    .filter((part) => part.length > 0);
+}
+
+type CompoundHit = { part: string; concept: Concept; score: number };
+
+function phraseHit(concept: Concept, text: string): boolean {
+  const lower = text.toLowerCase();
+  return concept.phrases.some((phrase) => lower.includes(phrase));
+}
+
+function absorbed(hit: CompoundHit, hits: CompoundHit[]): boolean {
+  if (phraseHit(hit.concept, hit.part)) return false;
+  const tokens = new Set(words(hit.part));
+  const matched = hit.concept.anchors.filter((anchor) => tokens.has(anchor));
+  if (matched.length === 0) return false;
+  const others = hits.filter((other) => other.concept.useCase !== hit.concept.useCase);
+  return matched.every((anchor) => others.some((other) => other.concept.covered.includes(anchor)));
+}
+
+function compoundHits(query: string): CompoundHit[] | null {
+  const parts = jobParts(query);
+  if (parts.length < 2) return null;
+  const hits: CompoundHit[] = [];
+  for (const part of parts) {
+    const winner = chooseWinner(conceptHits(part));
+    if (!winner) continue;
+    hits.push({ part, concept: winner.concept, score: winner.score });
+  }
+  const kept = hits.filter((hit) => !absorbed(hit, hits));
+  if (new Set(kept.map((hit) => hit.concept.useCase)).size < 2) return null;
+  return kept;
+}
+
+const PAIR_INTRO: Record<string, string> = {
+  "finance-ops+marketing-promotions":
+    "AI agents can schedule promo emails and posts, and draft and send invoices on a schedule, often from one workflow that connects your marketing and billing apps.",
+};
+
+function joinAnd(phrases: string[]): string {
+  if (phrases.length <= 1) return phrases[0] ?? "";
+  if (phrases.length === 2) return `${phrases[0]} and ${phrases[1]}`;
+  return `${phrases.slice(0, -1).join(", ")} and ${phrases[phrases.length - 1]}`;
+}
+
+function polishPart(phrase: string): string {
+  return phrase
+    .replace(/\bsending invoices to customers\b/gi, "sending customer invoices")
+    .replace(/\binvoices to customers\b/gi, "customer invoices")
+    .replace(/\btutoring me in\b/gi, "tutoring")
+    .replace(/\bemail them\b/gi, "emailing them")
+    .replace(/\band also\b/gi, "and")
+    .replace(/\bto social\b(?!\s+media)/gi, "to social media")
+    .replace(/,\s+and\b/gi, " and")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function compoundLead(hits: CompoundHit[], useCases: UseCase[]): string {
+  const phrases = hits.map((hit) => {
+    const useCase = useCases.find((item) => item.slug === hit.concept.useCase) ?? null;
+    return polishPart(jobPhrase(hit.part, useCase));
+  });
+  return `For ${joinAnd(phrases)}, here's how each tool can help:`;
+}
+
+type JobForms = { infinitive: string; gerund: string };
+
+/** Infinitive for "plan to …", gerund for "a first pass at …". Same verb, two grammatical shapes. */
+function jobForms(part: string): JobForms {
+  const raw = stripWrappers(part).toLowerCase().replace(/\s+/g, " ").trim();
+  const mapped: Array<[RegExp, JobForms]> = [
+    [/\btrack (?:my |your )?expenses\b/, { infinitive: "track expenses", gerund: "tracking expenses" }],
+    [/\bfile (?:my |your )?taxes\b/, { infinitive: "file your taxes", gerund: "filing your taxes" }],
+    [/\bdo (?:my |your )?taxes\b/, { infinitive: "do your taxes", gerund: "doing your taxes" }],
+    [/\bschedule meetings\b/, { infinitive: "schedule meetings", gerund: "scheduling meetings" }],
+    [/\btake meeting notes\b/, { infinitive: "take meeting notes", gerund: "taking meeting notes" }],
+    [/\btake notes\b/, { infinitive: "take notes", gerund: "taking notes" }],
+    [/\bwrite blog posts\b/, { infinitive: "write blog posts", gerund: "writing blog posts" }],
+    [/\bpost it to instagram\b/, { infinitive: "post it to Instagram", gerund: "posting it to Instagram" }],
+    [/\bpost (?:them )?to instagram\b/, { infinitive: "post them to Instagram", gerund: "posting them to Instagram" }],
+    [/\bpost (?:them )?to social\b/, { infinitive: "post them to social media", gerund: "posting them to social media" }],
+    [/\bsending invoices to customers\b|\bsend(?:ing)? customer invoices\b/, { infinitive: "send customer invoices", gerund: "sending customer invoices" }],
+    [/\bautomate promo campaigns\b/, { infinitive: "automate promo campaigns", gerund: "automating promo campaigns" }],
+    [/\bautomate marketing promotions\b/, { infinitive: "automate marketing promotions", gerund: "automating marketing promotions" }],
+    [/\bbill clients\b/, { infinitive: "bill clients", gerund: "billing clients" }],
+    [/\bdraft a blog post\b/, { infinitive: "draft a blog post", gerund: "drafting a blog post" }],
+    [/\bwrite a blog post\b/, { infinitive: "write a blog post", gerund: "writing a blog post" }],
+    [/\banalyze a spreadsheet\b/, { infinitive: "analyze a spreadsheet", gerund: "analyzing a spreadsheet" }],
+    [/\bfind land\b/, { infinitive: "find land", gerund: "finding land" }],
+    [/\brank rental/, { infinitive: "rank rental properties", gerund: "ranking rental properties" }],
+    [/\btranscrib/, { infinitive: "transcribe your meeting", gerund: "transcribing your meeting" }],
+    [/\bfollow-up email\b/, { infinitive: "draft the follow-up email", gerund: "drafting the follow-up email" }],
+    [/\bplan a trip\b/, { infinitive: "plan the trip", gerund: "planning the trip" }],
+    [/\bshop for luggage\b/, { infinitive: "shop for luggage", gerund: "shopping for luggage" }],
+    [/\breset a password\b/, { infinitive: "reset a password", gerund: "resetting a password" }],
+    [/\breset passwords\b/, { infinitive: "reset passwords", gerund: "resetting passwords" }],
+    [/\banswer a support ticket\b/, { infinitive: "answer a support ticket", gerund: "answering a support ticket" }],
+    [/\banswer support tickets\b/, { infinitive: "answer support tickets", gerund: "answering support tickets" }],
+    [/\bupdate the knowledge base\b/, { infinitive: "update the knowledge base", gerund: "updating the knowledge base" }],
+    [/\bmanage (?:my |your )?portfolio\b/, { infinitive: "manage your portfolio", gerund: "managing your portfolio" }],
+    [/\bwrite (?:my |your )?resume\b/, { infinitive: "write your resume", gerund: "writing your resume" }],
+    [/\bscreen candidates\b/, { infinitive: "screen candidates", gerund: "screening candidates" }],
+    [/\bgenerate a voice track\b/, { infinitive: "generate a voice track", gerund: "generating a voice track" }],
+    [/\bmake a cinematic video\b/, { infinitive: "make a cinematic video", gerund: "making a cinematic video" }],
+    [/\btutor me in math\b/, { infinitive: "tutor math", gerund: "tutoring math" }],
+    [/\blearn spanish\b/, { infinitive: "learn Spanish", gerund: "learning Spanish" }],
+    [/\bqualify leads\b/, { infinitive: "qualify leads", gerund: "qualifying leads" }],
+    [/\bmonitor phishing\b/, { infinitive: "monitor phishing", gerund: "monitoring phishing" }],
+    [/\bcreate social posts\b/, { infinitive: "create social posts", gerund: "creating social posts" }],
+    [/\bseo article\b/, { infinitive: "write an SEO article", gerund: "writing an SEO article" }],
+    [/\bprocess invoices\b/, { infinitive: "process invoices", gerund: "processing invoices" }],
+    [/\bschedule the follow-up\b/, { infinitive: "schedule the follow-up", gerund: "scheduling the follow-up" }],
+    [/\bmake a listing video\b/, { infinitive: "make a listing video", gerund: "making a listing video" }],
+    [/\bedit listing videos\b/, { infinitive: "edit listing videos", gerund: "editing listing videos" }],
+    [/\bfind off-market\b/, { infinitive: "find off-market deals", gerund: "finding off-market deals" }],
+    [/\bfill out forms\b/, { infinitive: "fill out forms", gerund: "filling out forms" }],
+    [/\bbook a hotel\b/, { infinitive: "book a hotel", gerund: "booking a hotel" }],
+    [/\bclip\b[\s\S]*\b(?:twitch|stream)\b|\btwitch\b/, { infinitive: "clip your Twitch stream", gerund: "clipping your Twitch stream" }],
+    [/\bclip (?:a |my )?youtube short\b/, { infinitive: "clip a YouTube short", gerund: "clipping a YouTube short" }],
+  ];
+  for (const [pattern, forms] of mapped) {
+    if (pattern.test(raw)) return forms;
+  }
+  const cleaned = raw.replace(/\bmy\b/g, "your");
+  return { infinitive: cleaned, gerund: cleaned };
+}
+
+function compoundForms(hits: CompoundHit[]): JobForms[] {
+  const forms: JobForms[] = [];
+  const seen = new Set<string>();
+  for (const hit of hits) {
+    const form = jobForms(hit.part);
+    if (seen.has(form.infinitive)) continue;
+    seen.add(form.infinitive);
+    forms.push(form);
+  }
+  return forms;
+}
+
+function compoundIntro(hits: CompoundHit[]): string {
+  const blob = hits.map((hit) => hit.part.toLowerCase()).join(" ");
+  const has = (pattern: RegExp) => pattern.test(blob);
+  if (has(/\bmarketing promotions\b/) && has(/\bsending invoices\b/)) {
+    return PAIR_INTRO["finance-ops+marketing-promotions"];
+  }
+  if (has(/\bexpenses\b/) && has(/\btaxes\b/)) {
+    return "AI agents can sort receipts into expense categories as you go and pull them into a tax-ready summary, so filing goes faster.";
+  }
+  if (has(/\bschedule meetings\b/) && has(/\btake notes\b/)) {
+    return "AI agents can find a meeting time that works for everyone and write up notes and action items once the call ends.";
+  }
+  if (has(/\bwrite blog posts\b/) && has(/\bpost\b/)) {
+    return "AI agents can draft the blog posts and turn the main points into social posts you can schedule.";
+  }
+  if (has(/\bsupport tickets\b/) && has(/\bknowledge base\b/)) {
+    return "AI agents can draft a reply to the support ticket and file the answer in the knowledge base.";
+  }
+  if (has(/\bedit listing videos\b/) && has(/\binstagram\b/)) {
+    return "AI agents can trim the listing video, add captions, and draft the Instagram post that goes with it.";
+  }
+  if (has(/\bcustomer invoices\b|\bsending invoices\b/) && has(/\bpromo\b/)) {
+    return "AI agents can send the customer invoice and schedule the promo emails from the apps you already use.";
+  }
+  if (has(/\bbill clients\b/) && has(/\bblog post\b/)) {
+    return "AI agents can prepare the client invoice and draft the blog post for you to review before either goes out.";
+  }
+  if (has(/\btake meeting notes\b/) && has(/\bfollow-up\b/)) {
+    return "AI agents can write up the meeting notes and propose a time for the follow-up.";
+  }
+  if (has(/\byoutube short\b/) && has(/\binstagram\b/)) {
+    return "AI agents can cut the YouTube video into a short and draft the Instagram caption to post with it.";
+  }
+  if (has(/\bmake a listing video\b/) && has(/\boff-market\b/)) {
+    return "AI agents can turn listing photos into a property video and pull owner records for off-market deals.";
+  }
+  if (has(/\bspreadsheet\b/) && has(/\bblog post\b/)) {
+    return "AI agents can read the spreadsheet, pull out the findings, and draft a blog post from them.";
+  }
+  if (has(/\bplan a trip\b/) && has(/\bluggage\b/)) {
+    return "AI agents can sketch the trip itinerary and compare luggage that fits how you are traveling.";
+  }
+  if (has(/\breset a password\b/) && has(/\bsupport ticket\b/)) {
+    return "AI agents can walk through the password reset and draft the reply to the support ticket.";
+  }
+  if (has(/\btaxes\b/) && has(/\bportfolio\b/)) {
+    return "AI agents can organize the tax return and show a summary of the accounts in your portfolio.";
+  }
+  if (has(/\bfind land\b/) && has(/\brental\b/)) {
+    return "AI agents can screen land parcels and rank rental properties by the income numbers.";
+  }
+  if (has(/\bresume\b/) && has(/\bscreen candidates\b/)) {
+    return "AI agents can tailor your resume to a role and screen the candidates who apply.";
+  }
+  if (has(/\btranscrib/) && has(/\bfollow-up email\b/)) {
+    return "AI agents can turn the meeting into notes and draft the follow-up email from them.";
+  }
+  if (has(/\bvoice track\b/) && has(/\bcinematic\b/)) {
+    return "AI agents can generate the voice track and render a cinematic clip from a prompt.";
+  }
+  if (has(/\bmath\b/) && has(/\bspanish\b/)) {
+    return "AI agents can walk through a math problem step by step and practice Spanish conversation with you.";
+  }
+  if (has(/\bfill out forms\b/) && has(/\bqualify leads\b/)) {
+    return "AI agents can fill out the form in the browser and pull lead data before anyone writes outreach.";
+  }
+  if (has(/\bphishing\b/) && has(/\bpasswords?\b/)) {
+    return "AI agents can flag the phishing email and walk through the password reset.";
+  }
+  if (has(/\bsocial posts\b/) && has(/\bseo\b/)) {
+    return "AI agents can draft the social posts and write the SEO article in the same pass.";
+  }
+  if (has(/\bprocess invoices\b/) && has(/\btaxes\b/)) {
+    return "AI agents can capture the incoming invoices and organize the totals for the tax return.";
+  }
+  if (has(/\bbook a hotel\b/) && has(/\b(?:twitch|stream|clip)\b/)) {
+    return "AI agents can compare hotels and plan your stay, and cut your Twitch stream into vertical clips.";
+  }
+  const forms = compoundForms(hits);
+  return `AI agents can help with ${joinAnd(forms.map((form) => form.gerund))}, and you still decide what happens next.`;
+}
+
+function compoundAssistantWhy(tool: Tool, hits: CompoundHit[]): string {
+  const name = tool.assistantName ?? tool.name.split("(")[0].trim();
+  const forms = compoundForms(hits);
+  const infinitive = joinAnd(forms.map((form) => form.infinitive));
+  const gerund = joinAnd(forms.map((form) => form.gerund));
+  const invoicesAndPromos = forms.some((form) => /invoice/.test(form.gerund))
+    && forms.some((form) => /promo|campaign|marketing/.test(form.gerund));
+  if (tool.slug === "claude") {
+    const task = infinitive.replace(/\bplan the trip\b/, "arrange the trip");
+    return `Ask ${name} for a step-by-step plan to ${task}.`;
+  }
+  if (tool.slug === "chatgpt") return `Ask ${name} for a checklist to ${infinitive}.`;
+  if (tool.slug === "gemini" && invoicesAndPromos) {
+    return `Ask ${name} to set up a sheet that tracks your invoices and your promo campaigns.`;
+  }
+  if (tool.slug === "gemini") return `Ask ${name} to draft a first pass at ${gerund}.`;
+  if (tool.slug === "perplexity") return `Ask ${name} for sourced tips on ${gerund}, with links you can check.`;
+  if (tool.slug === "deepseek") return `Ask ${name} for a quick how-to on ${gerund}.`;
+  return `Ask ${name} to outline a next step for ${gerund}.`;
+}
+
+function lineUseCase(tool: Tool, concept: Concept): string {
+  if (concept.id === "promotions") {
+    if (tool.useCaseTags.includes("marketing-promotions")) return "marketing-promotions";
+    if (tool.useCaseTags.includes("social-media")) return "social-media";
+    return "create-content";
+  }
+  return concept.useCase;
+}
+
+const BRIDGE_SLUGS = ["n8n", "make", "zapier"];
+
+function wantsBridge(hits: CompoundHit[]): boolean {
+  const ids = new Set(hits.map((hit) => hit.concept.useCase));
+  return ids.has("marketing-promotions") && ids.has("finance-ops");
+}
+
 export function rankCatalogQuery(
   query: string,
   catalog: { tools: Tool[]; useCases: UseCase[]; categories: Category[] },
@@ -877,65 +1250,135 @@ export function rankCatalogQuery(
   }
 
   const corrected = correctedQuery(query);
-  const lower = corrected.toLowerCase();
-  const tokens = new Set(words(corrected).map(correctToken));
-  const rankedConcepts = CONCEPTS
-    .map((concept) => ({ concept, score: scoreConcept(concept, lower, tokens) }))
-    .filter((item) => item.score >= CONCEPT_THRESHOLD)
-    .sort((a, b) => b.score - a.score);
-  const specificConcepts = rankedConcepts.filter((item) => !item.concept.broad);
-  const pool = specificConcepts.length > 0 ? specificConcepts : rankedConcepts;
-  const top = pool[0];
-  const tied = top ? pool.filter((item) => item.score === top.score) : [];
-  const winner = tied.length === 1 ? top : null;
-  if (winner?.concept.id === "video" && /\b(edit|editing|clip|clips|clipping|cut|make|making)\b/i.test(query)) {
-    // Video editing is not a land search. Land is already gated on land words.
-  }
-
   const terms = queryTokens(corrected);
   const queryWantsClips = terms.some((term) => CLIP_TERMS.has(term));
-  const specialists: IndexedTool[] = [];
-  if (winner) {
-    const allowed = new Set(winner.concept.categories);
-    const matchedCase = catalog.useCases.find((item) => item.slug === winner.concept.useCase);
-    const matchTags = matchedCase?.matchTags ?? [winner.concept.useCase];
-    const tagged = indexedTools.filter((tool) =>
-      !tool.source.generalPurpose &&
-      tool.useCaseTags.some((tag) => matchTags.includes(tag)) &&
-      tool.categories.every((category) => allowed.has(category)),
-    );
-    for (const tool of tagged) {
+  const assistantOrder = ["claude", "chatgpt", "gemini", "perplexity", "deepseek"];
+  const alt = alternativeTarget(corrected, indexedTools);
+  const assistants = indexedTools
+    .filter((tool) => tool.source.generalPurpose)
+    .sort((a, b) => assistantOrder.indexOf(a.slug) - assistantOrder.indexOf(b.slug));
+
+  const collect = (concept: Concept, score: number, text: string, clipAll: boolean, inCompound: boolean): IndexedTool[] => {
+    const allowed = new Set(concept.categories);
+    const matchTags = matchTagsForConcept(concept, catalog.useCases);
+    const partTerms = queryTokens(text);
+    const found: IndexedTool[] = [];
+    for (const tool of indexedTools) {
+      if (tool.source.generalPurpose) continue;
+      if (!tool.useCaseTags.some((tag) => matchTags.includes(tag))) continue;
+      if (!tool.categories.every((category) => allowed.has(category))) continue;
       if (tool.slug === "synthesis-tutor" && !kidsTutorQuery(corrected)) continue;
-      const ownTokens = new Set([...tool.nameTokens, ...tool.tokens]);
-      if (queryWantsClips && !hitsClipTerms(`${tool.name} ${tool.text}`, ownTokens)) continue;
+      if (concept.useCase === "finance-ops" && !financeToolFits(tool.slug, text)) continue;
       if (
-        winner.concept.id === "video" &&
+        tool.slug === "obsidian"
+        && inCompound
+        && concept.useCase === "meetings-knowledge"
+        && !notesAppQuery(text)
+        && !notesAppQuery(corrected)
+      ) continue;
+      if (tool.slug === "daydream" && luggageQuery(text)) continue;
+      const ownTokens = new Set([...tool.nameTokens, ...tool.tokens]);
+      const clipHere = clipAll || concept.id === "video";
+      if (queryWantsClips && clipHere && !hitsClipTerms(`${tool.name} ${tool.text}`, ownTokens)) continue;
+      if (
+        concept.id === "video" &&
         !/\b(video|videos|clip|clips|clipping|youtube|caption|captions|stream|streams|reel|reels|edit|editing)\b/i.test(
           `${tool.name} ${tool.text}`,
         )
       ) {
         continue;
       }
-      const overlap = bm25(terms, tool.tokens, docTokens);
-      const recIndex = winner ? indexedCases.find((item) => item.slug === winner.concept.useCase)
-        ?.source.recommended.findIndex((item) => item.toolId === tool.source.id) ?? -1 : -1;
+      const overlap = bm25(partTerms.length > 0 ? partTerms : terms, tool.tokens, docTokens);
+      const recIndex = indexedCases.find((item) => item.slug === concept.useCase)
+        ?.source.recommended.findIndex((item) => item.toolId === tool.source.id) ?? -1;
+      const promoBonus = concept.id === "promotions" && tool.useCaseTags.includes("marketing-promotions") ? 12 : 0;
       const recBonus = recIndex >= 0 ? 8 - recIndex : 0;
-      tool.score = winner.score * 10 + overlap + recBonus + roleBonus(winner.concept.id, tool.slug, corrected);
-      specialists.push(tool);
+      found.push({
+        ...tool,
+        score: score * 10 + overlap + recBonus + promoBonus + roleBonus(concept.id, tool.slug, corrected),
+      });
     }
-  }
-  specialists.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
+    found.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
+    return found;
+  };
 
+  const compound = compoundHits(corrected);
+  if (compound) {
+    const seen = new Set<string>();
+    const specialists: IndexedTool[] = [];
+    const bridgeSlugs = new Set<string>();
+    const push = (tool: IndexedTool) => {
+      if (seen.has(tool.slug)) return;
+      seen.add(tool.slug);
+      specialists.push(tool);
+    };
+    if (wantsBridge(compound)) {
+      const lead = indexedTools.find((tool) => tool.slug === BRIDGE_SLUGS[0]);
+      if (lead) {
+        bridgeSlugs.add(lead.slug);
+        push({ ...lead, score: 5000 });
+      }
+    }
+    const groups = compound.map((hit) => collect(hit.concept, hit.score, hit.part, false, true));
+    const travelIndex = compound.findIndex((hit) => hit.concept.useCase === "plan-travel" && /\bbook/i.test(hit.part));
+    const rankedGroups = travelIndex > -1 && groups.length > 1
+      ? [...groups.filter((_, index) => index !== travelIndex), groups[travelIndex]]
+      : groups;
+    for (const group of rankedGroups) {
+      if (group[0]) push(group[0]);
+    }
+    if (wantsBridge(compound)) {
+      for (const slug of BRIDGE_SLUGS.slice(1)) {
+        const tool = indexedTools.find((item) => item.slug === slug);
+        if (!tool) continue;
+        bridgeSlugs.add(slug);
+        push({ ...tool, score: 4000 - BRIDGE_SLUGS.indexOf(slug) });
+      }
+    }
+    for (let index = 1; index < 3; index++) {
+      for (const group of rankedGroups) {
+        if (group[index]) push(group[index]);
+      }
+    }
+    const chosen = specialists.slice(0, 7);
+    const cases = compound.flatMap((hit) => {
+      const found = indexedCases.find((item) => item.slug === hit.concept.useCase);
+      if (!found) return [];
+      found.score = Math.max(found.score, hit.score);
+      return [found];
+    }).filter((item, index, list) => list.findIndex((other) => other.slug === item.slug) === index);
+    const whyFor = (tool: IndexedTool, index: number): string => {
+      if (tool.source.generalPurpose) return compoundAssistantWhy(tool.source, compound);
+      if (bridgeSlugs.has(tool.slug) && BRIDGE_LINES[tool.slug]) return BRIDGE_LINES[tool.slug];
+      const hit = compound.find((item) => {
+        const tags = matchTagsForConcept(item.concept, catalog.useCases);
+        return tool.useCaseTags.some((tag) => tags.includes(tag))
+          && tool.categories.every((category) => item.concept.categories.includes(category));
+      }) ?? compound[0];
+      const useCase = catalog.useCases.find((item) => item.slug === lineUseCase(tool.source, hit.concept)) ?? null;
+      return whyItHelps(tool.source, useCase, hit.part, false, index);
+    };
+    const selected = [
+      ...chosen,
+      ...assistants.filter((tool) => !chosen.some((item) => item.slug === tool.slug)),
+    ].filter((tool) => tool.slug !== alt?.slug);
+    return {
+      tools: selected.map((tool, index) => presentTool(tool, whyFor(tool, index), Boolean(tool.source.generalPurpose))),
+      useCases: cases.map(presentCase),
+      fallback: false,
+      lowMatch: false,
+      lead: alt ? alternativeLead(alt) : compoundLead(compound, catalog.useCases),
+      intro: compoundIntro(compound),
+      disclaimer: cases.map((item) => item.source.disclaimer).find((item) => item) ?? null,
+    };
+  }
+
+  const winner = chooseWinner(conceptHits(corrected));
+  const specialists = winner ? collect(winner.concept, winner.score, corrected, true, false) : [];
   const primaryCase = winner
     ? indexedCases.find((item) => item.slug === winner.concept.useCase) ?? null
     : null;
   if (primaryCase && winner) primaryCase.score = winner.score;
-
-  const assistantOrder = ["claude", "chatgpt", "gemini", "perplexity", "deepseek"];
-  const alt = alternativeTarget(corrected, indexedTools);
-  const assistants = indexedTools
-    .filter((tool) => tool.source.generalPurpose)
-    .sort((a, b) => assistantOrder.indexOf(a.slug) - assistantOrder.indexOf(b.slug));
   const selected = [
     ...specialists.slice(0, 5),
     ...assistants.filter((tool) => !specialists.some((item) => item.slug === tool.slug)),
@@ -946,7 +1389,15 @@ export function rankCatalogQuery(
     tools: selected.map((tool, index) =>
       presentTool(
         tool,
-        whyItHelps(tool.source, primaryCase?.source ?? null, corrected, Boolean(tool.source.generalPurpose), index),
+        whyItHelps(
+          tool.source,
+          tool.source.generalPurpose || !winner
+            ? primaryCase?.source ?? null
+            : catalog.useCases.find((item) => item.slug === lineUseCase(tool.source, winner.concept)) ?? primaryCase?.source ?? null,
+          corrected,
+          Boolean(tool.source.generalPurpose),
+          index,
+        ),
         Boolean(tool.source.generalPurpose),
       ),
     ),

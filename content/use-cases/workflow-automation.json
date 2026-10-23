@@ -26,5 +26,5 @@
   "assistantTask": "map the steps, draft the instructions, and list which apps each step touches",
   "assistantContext": "automating a repeated personal task",
   "searchTopic": "how the apps in your task can connect",
-  "intro": "AI agents can map a repeated workflow, connect the apps it touches, and run the steps you approve so the checklist does not stay manual."
+  "intro": "AI agents can connect the apps in a repeated workflow and run the steps you approve."
 }

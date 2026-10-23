@@ -971,6 +971,73 @@ const HELD_OUT: { query: string; expect: string | null }[] = [
   { query: "wheres a good wedding venue", expect: null },
 ];
 
+test("compound marketing and invoice query names both jobs", () => {
+  const query = "I want to find a tool to help me automate marketing promotions, and sending invoices to customers";
+  const ranked = rankCatalogQuery(query, catalog);
+  assert.equal(
+    ranked.lead,
+    "For automating marketing promotions and sending customer invoices, here's how each tool can help:",
+  );
+  assert.equal(
+    ranked.intro,
+    "AI agents can schedule promo emails and posts, and draft and send invoices on a schedule, often from one workflow that connects your marketing and billing apps.",
+  );
+  assert.equal(/,\s+and\b/i.test(ranked.lead), false);
+  const slugs = ranked.useCases.map((useCase) => useCase.slug);
+  assert.ok(slugs.includes("marketing-promotions"));
+  assert.ok(slugs.includes("finance-ops"));
+  const specialists = ranked.tools.filter((tool) => !tool.generalPurpose);
+  const tagsOf = (slug: string) => catalog.tools.find((tool) => tool.slug === slug)?.useCaseTags ?? [];
+  assert.ok(specialists.some((tool) => tagsOf(tool.slug).includes("marketing-promotions")));
+  assert.ok(specialists.some((tool) => tagsOf(tool.slug).includes("finance-ops")));
+  assert.ok(specialists.some((tool) => tool.slug === "n8n"));
+  assert.ok(specialists.some((tool) => tool.slug === "make"));
+  assert.ok(specialists.some((tool) => tool.slug === "zapier"));
+  const billed = rankCatalogQuery("bill clients and draft a blog post", catalog);
+  assert.equal(
+    billed.lead,
+    "For billing clients and drafting a blog post, here's how each tool can help:",
+  );
+  const notes = rankCatalogQuery("schedule meetings, also take notes", catalog);
+  assert.equal(
+    notes.lead,
+    "For scheduling meetings and taking notes, here's how each tool can help:",
+  );
+  assert.equal(/,\s+and\b|help with also/i.test(notes.lead), false);
+  const claude = ranked.tools.find((tool) => tool.slug === "claude");
+  assert.ok(claude);
+  assert.match(claude.whyItHelps, /step-by-step plan to automate marketing promotions and send customer invoices/i);
+  assert.equal(/automating marketing promotions, and sending/i.test(claude.whyItHelps), false);
+  assert.equal(ranked.tools.some((tool) => tool.slug === "dext"), false);
+  const expenses = rankCatalogQuery("track expenses and file my taxes", catalog);
+  const expenseClaude = expenses.tools.find((tool) => tool.slug === "claude");
+  assert.match(expenseClaude?.whyItHelps ?? "", /step-by-step plan to track expenses and file your taxes/);
+  assert.match(expenses.intro, /sort receipts into expense categories/);
+  assert.equal(expenses.tools.some((tool) => tool.slug === "vic-ai"), false);
+  const billedTools = billed.tools.map((tool) => tool.slug);
+  assert.equal(billedTools.includes("ramp"), false);
+  assert.equal(billedTools.includes("vic-ai"), false);
+  const meetings = rankCatalogQuery("schedule meetings and take notes", catalog);
+  assert.equal(meetings.tools.some((tool) => tool.slug === "obsidian"), false);
+  const hotel = rankCatalogQuery("book a hotel and clip my twitch stream", catalog);
+  assert.match(hotel.intro, /compare hotels and plan your stay, and cut your Twitch stream into vertical clips/);
+  assert.equal(/\bbook your hotel\b/i.test(hotel.intro), false);
+  assert.equal(hotel.tools[0]?.slug, "streamladder");
+  const forms = rankCatalogQuery("fill out forms and qualify leads", catalog);
+  const sales = forms.tools.filter((tool) => ["apollo", "clay", "instantly"].includes(tool.slug)).map((tool) => tool.slug);
+  assert.ok(sales.indexOf("apollo") < sales.indexOf("instantly"));
+  assert.ok(sales.indexOf("clay") < sales.indexOf("instantly"));
+  const transcribed = rankCatalogQuery("transcribe my meeting and draft the follow-up email", catalog);
+  assert.match(transcribed.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "", /transcribe your meeting/);
+  assert.match(transcribed.tools.find((tool) => tool.slug === "gemini")?.whyItHelps ?? "", /transcribing your meeting/);
+  const luggage = rankCatalogQuery("plan a trip and shop for luggage", catalog);
+  assert.equal(luggage.tools.some((tool) => tool.slug === "daydream"), false);
+  const listing = rankCatalogQuery("make a listing video and find off-market deals", catalog);
+  assert.match(listing.intro, /turn listing photos into a property video/);
+  assert.equal(/\bedit\b/i.test(listing.intro), false);
+  assert.equal(listing.tools[0]?.slug, "autoreel");
+});
+
 test("held-out paraphrases report precision at 3 without failing the build", () => {
   assert.ok(HELD_OUT.length >= 40);
   let hits = 0;
