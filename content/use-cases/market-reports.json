@@ -11,7 +11,7 @@
   "recommended": [
     {
       "toolId": "cloud-cma",
-      "why": "Turns neighborhood stats into a market update you can check before a client sees it."
+      "why": "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity."
     }
   ],
   "intro": "AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them."

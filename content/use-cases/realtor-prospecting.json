@@ -1,10 +1,10 @@
 {
   "slug": "realtor-prospecting",
-  "title": "Prospect expireds, FSBOs, and a farm",
+  "title": "Prospect expireds, FSBOs, and your farm",
   "summary": "List expired, FSBO, and farm-area owners and draft the first outreach. You still decide who to contact.",
   "audienceHints": ["realtors", "investors"],
   "matchTags": ["realtor-prospecting"],
-  "jobPhrase": "prospecting expireds, FSBOs, and a farm",
+  "jobPhrase": "prospecting expireds, FSBOs, and your farm",
   "assistantTask": "list expired, FSBO, and farm-area owners and draft the first outreach",
   "assistantContext": "prospecting owners",
   "searchTopic": "expired listings, FSBOs, and farm areas",

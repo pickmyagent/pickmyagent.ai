@@ -522,7 +522,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   },
   "market-reports": {
     "cloud-cma": [
-      "Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.",
+      "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.",
     ],
   },
   "realtor-prospecting": {

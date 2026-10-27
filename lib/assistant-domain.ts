@@ -151,7 +151,7 @@ export const DOMAIN_TAILS: Record<string, Record<string, string>> = {
   tutoring: {
     claude: "to explain one concept and then write practice problems that test only that idea.",
     chatgpt: "to show a worked example and then a similar problem with the answer withheld.",
-    gemini: "to track which practice problems you still miss.",
+    gemini: "to track which practice items are still open.",
     perplexity: "to find a lesson on the topic and keep the link so you can read it yourself.",
     deepseek: "to check that a practice problem only tests the idea you just explained.",
   },
@@ -177,7 +177,7 @@ export const DOMAIN_TAILS: Record<string, Record<string, string>> = {
     deepseek: "to make a prompt name the subject, the camera move, and the length.",
   },
   "voice-audio": {
-    claude: "to draft the script and describe the voice you want before you generate the audio.",
+    claude: "to draft the script and name how the voice should sound before you generate the audio.",
     chatgpt: "to rewrite a script so the line is short enough to read aloud.",
     gemini: "to track each line, the voice, and whether the take is approved.",
     perplexity: "to find notes on voice generation and keep the links.",
@@ -227,7 +227,7 @@ export const DOMAIN_TAILS: Record<string, Record<string, string>> = {
   },
   "tool-use-browser": {
     claude: "to write browser steps for a repeated web task and mark where a login should stop you.",
-    chatgpt: "to review a click-path and name the step that should stop at a captcha.",
+    chatgpt: "to read the browser steps and mark the one a person should do.",
     gemini: "to list the page, the field, and the value a browser step may enter.",
     perplexity: "to find docs on browser automation limits and keep the links.",
     deepseek: "to mark the step a person must do because it asks for a password.",
@@ -268,11 +268,11 @@ export const DOMAIN_TAILS: Record<string, Record<string, string>> = {
     deepseek: "to drop a room from the tour if you do not have a clip for it.",
   },
   "real-estate": {
-    claude: "to compare one deal, outline a listing video, and draft the owner note you still send.",
-    chatgpt: "to say which of the deal, the listing video, or the owner outreach is still unfinished.",
-    gemini: "to track the property, the deal figure, the listing video, and the next owner note.",
-    perplexity: "to find public pages on deal terms, listing video, and owner outreach and keep the links.",
-    deepseek: "to name the one piece, deal, video, or owner note, that is still unfinished.",
+    claude: "to turn the property facts you paste in into a short note you can edit.",
+    chatgpt: "to list what is still missing from the property facts you paste in.",
+    gemini: "to put the property facts you paste in on one row so you can check them.",
+    perplexity: "to find a public page about the property and keep the link.",
+    deepseek: "to remove a claim the property facts you pasted do not support.",
   },
   bookkeeping: {
     claude: "to list the receipts and expenses to review before they go into the books.",
@@ -324,7 +324,7 @@ export const DOMAIN_TAILS: Record<string, Record<string, string>> = {
     deepseek: "to highlight a price in the quote that you have not confirmed.",
   },
   "customer-follow-up": {
-    claude: "to draft a thank-you or a check-in for a customer you already know.",
+    claude: "to draft a thank-you or a check-in for someone already in your contacts.",
     chatgpt: "to shorten a customer note so it thanks them and asks one clear question.",
     gemini: "to track customers, the last visit, and whether you followed up.",
     perplexity: "to find examples of a short customer thank-you and keep the links.",

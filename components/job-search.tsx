@@ -9,6 +9,7 @@ import {
   SearchNewsletterPrompt,
   useSearchNewsletterDismissed,
 } from "@/components/search-newsletter-prompt";
+import { skipSemanticDownload } from "@/lib/embed-policy";
 import { formatDate } from "@/lib/format";
 import { rankCatalogQuery, type RankedTool } from "@/lib/search";
 import type { Category, Tool, UseCase } from "@/lib/types";
@@ -94,32 +95,21 @@ export function JobSearch({
     [tools, useCases, categories, trimmed],
   );
   const [refined, setRefined] = useState<{ query: string; ranked: ReturnType<typeof rankCatalogQuery> } | null>(null);
+  const [submitted, setSubmitted] = useState<{ query: string; attempt: number } | null>(null);
 
   useEffect(() => {
-    const idle = window.requestIdleCallback?.(() => {
-      void import("@/lib/browser-embed").then((mod) => mod.prefetchEmbedder());
-    });
-    return () => {
-      if (typeof idle === "number") window.cancelIdleCallback?.(idle);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!trimmed) return;
+    if (!submitted || submitted.query !== trimmed || skipSemanticDownload()) return;
     let cancel = false;
-    const timer = window.setTimeout(() => {
-      void import("@/lib/browser-embed")
-        .then((mod) => mod.refineQuery(trimmed, { tools, useCases, categories }))
-        .then((next) => {
-          if (!cancel && next) setRefined({ query: trimmed, ranked: next });
-        })
-        .catch(() => undefined);
-    }, 80);
+    void import("@/lib/browser-embed")
+      .then((mod) => mod.refineQuery(submitted.query, { tools, useCases, categories }))
+      .then((next) => {
+        if (!cancel && next) setRefined({ query: submitted.query, ranked: next });
+      })
+      .catch(() => undefined);
     return () => {
       cancel = true;
-      window.clearTimeout(timer);
     };
-  }, [trimmed, tools, useCases, categories]);
+  }, [submitted, trimmed, tools, useCases, categories]);
 
   const ranked = refined?.query === trimmed ? refined.ranked : lexical;
   const visibleCases = ranked.useCases;
@@ -144,6 +134,7 @@ export function JobSearch({
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (trimmed) setSubmitted((current) => ({ query: trimmed, attempt: (current?.attempt ?? 0) + 1 }));
     const target = document.getElementById(trimmed ? "match-results" : "use-cases");
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     target?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });

@@ -90,6 +90,16 @@ const FRAME_LINES: Array<{ test: RegExp; lines: Record<string, string> }> = [
   },
 ];
 
+/** Used when the query is not a grammatical verb phrase, so the line does not splice it. */
+export function neutralAssistantLine(slug: string, name: string): string {
+  if (slug === "claude") return `Ask ${name} to turn this into a short plan you can edit.`;
+  if (slug === "chatgpt") return `Ask ${name} to list the steps and leave the decisions to you.`;
+  if (slug === "gemini") return `Ask ${name} to lay the steps out so you can check them.`;
+  if (slug === "perplexity") return `Ask ${name} for sourced notes, and you keep the links.`;
+  if (slug === "deepseek") return `Ask ${name} to outline one next step and mark what you still decide.`;
+  return `Ask ${name} to outline a next step you can edit.`;
+}
+
 export function openAssistantLine(slug: string, name: string, slot: string): string {
   const task = slot.trim();
   for (const frame of FRAME_LINES) {

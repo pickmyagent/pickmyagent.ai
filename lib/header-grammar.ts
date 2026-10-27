@@ -23,6 +23,65 @@ const MASS = new Set([
 
 const SAFE_HELP = /^(?:your small business|quickbooks|qbo|freshbooks|xero|zoho books|wave|invoices|bookkeeping|the books|local seo|customer follow-up)$/i;
 
+/** Shown when the query is not a grammatical verb phrase. */
+export const NEUTRAL_LEAD = "Here's how AI assistants can help with this:";
+
+export const NEUTRAL_INTRO =
+  "AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.";
+
+/** Base verbs and gerunds that are not also ordinary nouns in this directory. */
+const ARTICLE_VERBS = new Set([
+  "describe", "describing", "replace", "replacing", "wear", "wearing", "ask", "asking",
+  "organize", "organizing", "automate", "automating", "summarize", "summarizing",
+  "compare", "comparing", "recommend", "recommending", "transcribe", "transcribing",
+  "categorize", "categorizing", "reconcile", "reconciling", "orchestrate", "orchestrating",
+  "qualify", "qualifying", "debug", "debugging", "refactor", "refactoring",
+  "analyze", "analyzing", "generate", "generating", "create", "creating",
+  "edit", "editing", "write", "writing", "find", "finding", "build", "building",
+  "make", "making", "do", "doing", "send", "sending", "hire", "hiring",
+  "say", "saying", "tell", "telling", "give", "giving", "think", "thinking",
+  "begin", "hear", "believe", "bring", "sit", "stand", "lose", "meet", "learn", "learning",
+  "speak", "spend", "grow", "win", "remember", "buy", "wait", "stay", "fall", "reach",
+  "go", "going", "see", "seeing", "let", "know", "put", "keep", "try", "leave",
+]);
+
+export function articleVerbProblems(text: string): string[] {
+  const problems: string[] = [];
+  const re = /\b(?:a|an)\s+([A-Za-z]+)\b/gi;
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(text))) {
+    if (ARTICLE_VERBS.has(match[1].toLowerCase())) problems.push("a/an before a verb");
+  }
+  return problems;
+}
+
+/** A standalone lowercase "i", as in "an i wear". */
+export function hasLowercaseI(text: string): boolean {
+  return /(?:^|[^A-Za-z])i(?:[^A-Za-z]|$)/.test(text);
+}
+
+/**
+ * The line copies four or more words from the query and changes my/I/our/me to you/your.
+ * A short gerund such as "training your dog" is not a flip.
+ */
+export function pronounFlip(text: string, query: string): boolean {
+  const lower = text.toLowerCase().replace(/’/g, "'");
+  const words = query.toLowerCase().replace(/’/g, "'").match(/[a-z0-9']+/g) ?? [];
+  const swap: Record<string, string> = { my: "your", our: "your", i: "you", me: "you" };
+  for (let start = 0; start < words.length; start++) {
+    for (let length = 4; length <= 8 && start + length <= words.length; length++) {
+      const slice = words.slice(start, start + length);
+      if (!slice.some((word) => word in swap)) continue;
+      const distinctive = slice.some((word) => !(word in swap) && word.replace(/[^a-z]/g, "").length >= 6);
+      if (!distinctive) continue;
+      const flipped = slice.map((word) => swap[word] ?? word).join(" ");
+      const pattern = new RegExp(`(?:^|[^a-z0-9])${flipped.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:[^a-z0-9]|$)`);
+      if (pattern.test(lower)) return true;
+    }
+  }
+  return false;
+}
+
 const SKIP_IN_NOUN = new Set([
   "in", "for", "on", "from", "near", "by", "to", "of", "the", "your", "my", "our", "this", "that", "per", "with",
 ]);
@@ -96,6 +155,8 @@ export function headerEchoProblems(phrase: string): string[] {
     problems.push("bare singular after a");
   }
   problems.push(...articleIssues(lower));
+  problems.push(...articleVerbProblems(phrase));
+  if (hasLowercaseI(phrase)) problems.push("lowercase i");
   return [...new Set(problems)];
 }
 

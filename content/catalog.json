@@ -1648,7 +1648,7 @@
       },
       "useCaseFit": {
         "cma-comps": "Builds a CMA report from MLS comps and neighborhood stats.",
-        "market-reports": "Turns neighborhood stats into a market update a client can review."
+        "market-reports": "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity."
       }
     },
     {
@@ -10518,7 +10518,7 @@
       "recommended": [
         {
           "toolId": "cloud-cma",
-          "why": "Turns neighborhood stats into a market update you can check before a client sees it."
+          "why": "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity."
         }
       ],
       "intro": "AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them."
@@ -10813,7 +10813,7 @@
     },
     {
       "slug": "realtor-prospecting",
-      "title": "Prospect expireds, FSBOs, and a farm",
+      "title": "Prospect expireds, FSBOs, and your farm",
       "summary": "List expired, FSBO, and farm-area owners and draft the first outreach. You still decide who to contact.",
       "audienceHints": [
         "realtors",
@@ -10822,7 +10822,7 @@
       "matchTags": [
         "realtor-prospecting"
       ],
-      "jobPhrase": "prospecting expireds, FSBOs, and a farm",
+      "jobPhrase": "prospecting expireds, FSBOs, and your farm",
       "assistantTask": "list expired, FSBO, and farm-area owners and draft the first outreach",
       "assistantContext": "prospecting owners",
       "searchTopic": "expired listings, FSBOs, and farm areas",

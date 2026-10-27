@@ -1,5 +1,5 @@
-import { domainAssistantLine, openAssistantLine } from "./assistant-lines.ts";
-import { headerEchoBroken, safeHelpWith } from "./header-grammar.ts";
+import { domainAssistantLine, neutralAssistantLine, openAssistantLine } from "./assistant-lines.ts";
+import { headerEchoBroken, NEUTRAL_INTRO, NEUTRAL_LEAD, pronounFlip, safeHelpWith } from "./header-grammar.ts";
 import { BRIDGE_LINES, isListingMakeQuery, isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
 import { jobCueBlocks, jobCueBonus } from "./job-cues.ts";
@@ -437,7 +437,7 @@ const CANONICAL_JOB: Record<string, string> = {
   "showing-scheduling": "scheduling showings and open houses",
   "transaction-coordination": "coordinating contracts and disclosures",
   "market-reports": "drafting a neighborhood market update",
-  "realtor-prospecting": "prospecting expireds, FSBOs, and a farm",
+  "realtor-prospecting": "prospecting expireds, FSBOs, and your farm",
   "agent-social": "posting listings on social media",
   "learn-language": "practicing a language",
   "property-management": "handling property management tasks",
@@ -530,7 +530,7 @@ function tokenAt(text: string, index: number): string {
   return text.split(/\s+/)[index]?.toLowerCase().replace(/[^a-z]/g, "") ?? "";
 }
 
-function startsWithTaskVerb(text: string): boolean {
+export function startsWithTaskVerb(text: string): boolean {
   const first = tokenAt(text, 0);
   const second = tokenAt(text, 1);
   if (!first) return false;
@@ -671,6 +671,8 @@ export function jobPhrase(query: string, useCase?: UseCase | null): string {
   if (/^automat/i.test(cleaned) && (booksBrandQuery(cleaned) || /\b(?:books|bookkeeping)\b/i.test(cleaned))) {
     cleaned = cleaned.replace(/^automat\w*\s+/i, "").trim();
   }
+  const altPhrase = alternativeGerund(cleaned);
+  if (altPhrase) return altPhrase;
   const phrase = chooseHeader(cleaned, useCase, wantsYour);
   let display = restoreDisplayedContractions(
     lowercasePhrase(phrase, query)
@@ -682,10 +684,39 @@ export function jobPhrase(query: string, useCase?: UseCase | null): string {
       .trim(),
     query,
   );
-  if (!useCase && /^help with (?:what|how|why|when|where|who|which)\b/i.test(display)) {
-    display = `answering "${display.replace(/^help with\s+/i, "")}"`;
-  }
-  return display || "help with this";
+  display = display.replace(/\btutoring for (\d+(?:st|nd|rd|th) grade)\b/gi, "tutoring $1");
+  if (cleanVerbEcho(display, query) || trustedHelp(display, query)) return display;
+  const canonical = useCaseHeader(useCase, wantsYour);
+  if (canonical && !headerEchoBroken(canonical) && !pronounFlip(canonical, query)) return canonical;
+  return "";
+}
+
+const ECHO_DETERMINER = new Set(["a", "an", "the", "your", "my", "our", "this", "that", "these", "those"]);
+
+/** A short "help with …" line that names a brand or a safe noun, not the raw query. */
+function trustedHelp(display: string, query: string): boolean {
+  if (!/^help with\b/i.test(display) || headerEchoBroken(display)) return false;
+  if (!startsWithTaskVerb(stripWrappers(query)) && pronounFlip(display, query)) return false;
+  if (safeHelpWith(display)) return true;
+  const rest = display.replace(/^help with\s+/i, "").trim();
+  return /^[A-Z][\w.]*$/.test(rest);
+}
+
+/**
+ * The phrase may be shown only when it is a grammatical gerund.
+ * A leading gerund that was already in the query ("running shoes") is a noun, not a task.
+ */
+function cleanVerbEcho(phrase: string, query: string): boolean {
+  const display = phrase.trim();
+  if (!/^(?:[a-z]+-)?[a-z]+ing\b/i.test(display)) return false;
+  if (headerEchoBroken(display)) return false;
+  if (!startsWithTaskVerb(stripWrappers(query)) && pronounFlip(display, query)) return false;
+  const phraseWords = display.toLowerCase().match(/[a-z0-9'-]+/g) ?? [];
+  const first = phraseWords[0] ?? "";
+  const second = phraseWords[1] ?? "";
+  const start = stripWrappers(query).split(/\s+/)[0]?.toLowerCase().replace(/[^a-z]/g, "") ?? "";
+  if (start && start === first && !ECHO_DETERMINER.has(second)) return false;
+  return true;
 }
 
 export function cleanUserPhrase(query: string): string {
@@ -693,7 +724,9 @@ export function cleanUserPhrase(query: string): string {
 }
 
 export function jobLead(query: string, useCase?: UseCase | null): string {
-  return `For ${jobPhrase(query, useCase)}, here's how each tool can help:`;
+  const phrase = jobPhrase(query, useCase);
+  if (!phrase) return NEUTRAL_LEAD;
+  return `For ${phrase}, here's how each tool can help:`;
 }
 
 function introVerbs(query: string): string[] {
@@ -863,12 +896,23 @@ function modelChoiceQuery(query: string): boolean {
     || (/\bcheap\b/i.test(query) && /\bcod/i.test(query));
 }
 
+/** A hand-written frame key when the query is not a clean gerund we can echo. */
+function framedTopic(query: string, useCase?: UseCase | null): string {
+  const phrase = jobPhrase(query, useCase).replace(/^help with\s+/i, "");
+  if (phrase) return phrase;
+  const cleaned = stripWrappers(query);
+  if (/\bmeal prep\b/i.test(cleaned)) return "meal prep";
+  if (/\bgrocery list\b/i.test(cleaned)) return "grocery list";
+  if (/\b(?:baby names?|nam(?:e|ing) a baby)\b/i.test(cleaned)) return "naming a baby";
+  if (/\bbook club\b/i.test(cleaned)) return "book club";
+  if (/\bsmall business\b/i.test(cleaned)) return "small business";
+  if (/\b\w+\s+alternatives?\b/i.test(cleaned)) return "finding an alternative";
+  return "";
+}
+
 function openIntro(query: string, useCase?: UseCase | null): string {
-  const topic = jobPhrase(query, useCase).replace(/^help with\s+/i, "");
-  if (/^answering "/.test(topic)) {
-    const question = topic.replace(/^answering\s+/i, "");
-    return `AI assistants can take the question ${question} and turn it into a plan, answer as you go, and draft anything you need to write.`;
-  }
+  const topic = framedTopic(query, useCase);
+  if (!topic) return NEUTRAL_INTRO;
   if (/\b\w+\s+alternatives?\b/i.test(query)) {
     return "AI assistants can compare other tools for the same job, and you still pick the one to try.";
   }
@@ -948,14 +992,7 @@ function infinitivePhrase(phrase: string): string {
 
 function assistantSlot(query: string, useCase?: UseCase | null): string {
   const phrase = jobPhrase(query, useCase);
-  const quoted = phrase.match(/^answering "(.+)"$/);
-  if (quoted) {
-    const question = quoted[1];
-    const count = question.split(/\s+/).filter(Boolean).length;
-    if (!question.includes(",") && count <= 6) return `"${question}"`;
-    return "that question";
-  }
-  return phrase.replace(/^help with\s+/i, "").trim() || phrase;
+  return phrase.replace(/^help with\s+/i, "").trim();
 }
 
 function guardSlot(slot: string): string {
@@ -977,8 +1014,15 @@ function assistantWhy(tool: Tool, query: string, useCase: UseCase | null, slotOv
     const written = domainAssistantLine(tool.slug, useCase.slug);
     if (written) return written;
   }
+  if (!slotOverride && !jobPhrase(query, useCase)) {
+    const framed = framedTopic(query, useCase);
+    if (!framed) return neutralAssistantLine(tool.slug, name);
+    return openAssistantLine(tool.slug, name, guardSlot(framed));
+  }
   const slot = slotOverride ?? assistantSlot(query, useCase);
-  return openAssistantLine(tool.slug, name, guardSlot(slot));
+  const guarded = guardSlot(slot || "this");
+  if (!slotOverride && slot.trim() && guarded !== slot.trim()) return neutralAssistantLine(tool.slug, name);
+  return openAssistantLine(tool.slug, name, guarded);
 }
 
 function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean, index: number): string {
@@ -1135,6 +1179,22 @@ function alternativeLead(tool: IndexedTool): string {
   const name = tool.name.split("(")[0].trim();
   const article = /^[aeiou]/i.test(name) ? "an" : "a";
   return `For finding ${article} ${name} alternative, here's how each tool can help:`;
+}
+
+/** Gerund for "X alternative", so the why-line can use the compare-tools frame. */
+function alternativeGerund(cleaned: string): string {
+  const match = cleaned.match(/^(?:(?:best|cheap|good|free)\s+)?(?:an?\s+)?(.+?)\s+alternatives?$/i);
+  if (!match) return "";
+  const subject = match[1].replace(/^(?:a|an|the)\s+/i, "").replace(/\s+/g, " ").trim();
+  if (subject.length < 2) return "";
+  const name = subject.split(/\s+/).map((word) => {
+    const bare = word.toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (bare === "chatgpt") return "ChatGPT";
+    return brandCase(bare) ?? ACRONYM_CASE[bare] ?? word.toLowerCase();
+  }).join(" ");
+  const article = /^[aeiou]/i.test(name) ? "an" : "a";
+  const phrase = `finding ${article} ${name} alternative`;
+  return headerEchoBroken(phrase) ? "" : phrase;
 }
 
 type ConceptHit = { concept: Concept; score: number };
@@ -1403,8 +1463,14 @@ function polishPart(phrase: string): string {
 function compoundLead(hits: CompoundHit[], useCases: UseCase[]): string {
   const phrases = hits.map((hit) => {
     const useCase = useCases.find((item) => item.slug === hit.concept.useCase) ?? null;
-    return polishPart(jobPhrase(hit.part, useCase));
-  });
+    const phrase = polishPart(jobPhrase(hit.part, useCase));
+    const canonical = polishPart(useCaseHeader(useCase, /\b(?:my|our)\b/i.test(hit.part)));
+    if (phrase && phrase !== canonical) return phrase;
+    const specific = explicitJobForms(hit.part);
+    if (specific && !headerEchoBroken(specific.gerund)) return polishPart(specific.gerund);
+    return phrase;
+  }).filter(Boolean);
+  if (phrases.length === 0) return NEUTRAL_LEAD;
   return `For ${joinAnd(phrases)}, here's how each tool can help:`;
 }
 
@@ -1412,6 +1478,14 @@ type JobForms = { infinitive: string; gerund: string };
 
 /** Infinitive for "plan to …", gerund for "a first pass at …". Same verb, two grammatical shapes. */
 function jobForms(part: string): JobForms {
+  const explicit = explicitJobForms(part);
+  if (explicit) return explicit;
+  const raw = stripWrappers(part).toLowerCase().replace(/\s+/g, " ").trim();
+  const cleaned = raw.replace(/\bmy\b/g, "your");
+  return { infinitive: cleaned, gerund: cleaned };
+}
+
+function explicitJobForms(part: string): JobForms | null {
   const raw = stripWrappers(part).toLowerCase().replace(/\s+/g, " ").trim();
   const mapped: Array<[RegExp, JobForms]> = [
     [/\btrack (?:my |your )?expenses\b/, { infinitive: "track expenses", gerund: "tracking expenses" }],
@@ -1467,9 +1541,7 @@ function jobForms(part: string): JobForms {
     if (pattern.test(raw)) return forms;
   }
   const smb = smallBusinessJobForms(raw);
-  if (smb) return smb;
-  const cleaned = raw.replace(/\bmy\b/g, "your");
-  return { infinitive: cleaned, gerund: cleaned };
+  return smb;
 }
 
 function compoundForms(hits: CompoundHit[]): JobForms[] {

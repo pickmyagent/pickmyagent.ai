@@ -1,5 +1,8 @@
 import path from "node:path";
 import { readFileSync } from "node:fs";
+
+process.env.OMP_NUM_THREADS ??= "1";
+process.env.ORT_NUM_THREADS ??= "1";
 import { decodeStoredIndex, type EmbeddingIndex } from "../lib/embedding-math.ts";
 import { EMBEDDING_DTYPE, EMBEDDING_MODEL, EMBEDDING_POOLING, EMBEDDING_QUERY_PREFIX } from "../lib/semantic-config.ts";
 import { textForEmbedding } from "../lib/search.ts";
@@ -25,10 +28,13 @@ async function extractor(): Promise<Extractor> {
   if (!extractorPromise) {
     extractorPromise = (async () => {
       const { env, pipeline } = await import("@huggingface/transformers");
-      env.localModelPath = path.resolve("public/models");
+      env.localModelPath = path.resolve("vendor/models");
       env.allowRemoteModels = false;
       env.allowLocalModels = true;
-      const created = await pipeline("feature-extraction", EMBEDDING_MODEL, { dtype: EMBEDDING_DTYPE });
+      const created = await pipeline("feature-extraction", EMBEDDING_MODEL, {
+        dtype: EMBEDDING_DTYPE,
+        session_options: { intraOpNumThreads: 1, interOpNumThreads: 1 },
+      });
       return created as unknown as Extractor;
     })();
   }

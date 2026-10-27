@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
 import { readFileSync, writeFileSync } from "node:fs";
 import test from "node:test";
+import { neutralAssistantLine } from "../lib/assistant-lines.ts";
 import { CONCEPTS } from "../lib/concepts.ts";
+import { articleVerbProblems, hasLowercaseI, NEUTRAL_INTRO, NEUTRAL_LEAD, pronounFlip } from "../lib/header-grammar.ts";
 import { domainAssistantLine } from "../lib/assistant-lines.ts";
 import { specialistLine, specialistLinePairs } from "../lib/specialist-lines.ts";
 import { BROKEN_ASSISTANT, BROKEN_HEADERS, descriptionProblems, grammarProblems, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "../scripts/grammar-gate.ts";
@@ -128,7 +130,7 @@ test("generic words do not select a specialist", () => {
   assert.equal(ranked.useCases.length, 0);
   assert.ok(ranked.tools.length > 0);
   assert.ok(ranked.tools.every((tool) => tool.generalPurpose));
-  assert.match(ranked.intro, /^AI assistants can help with .+ by turning it into a plan/);
+  assert.equal(ranked.intro, NEUTRAL_INTRO);
   assert.equal(/\bparts of\b/i.test(ranked.intro), false);
   for (const tool of ranked.tools) {
     assert.ok(tool.whyItHelps.trim().length > 0, tool.name);
@@ -802,6 +804,28 @@ test("grammar gate flags the broken header and assistant examples", () => {
   assert.equal(rag.lead, "For building a RAG pipeline, here's how each tool can help:");
   const tutor = rankCatalogQuery("I need AI to tutor me", catalog);
   assert.equal(tutor.lead, "For getting tutoring help, here's how each tool can help:");
+  const worth = rankCatalogQuery("what's my business worth", catalog);
+  assert.equal(worth.lead, NEUTRAL_LEAD);
+  assert.equal(worth.intro, NEUTRAL_INTRO);
+  assert.equal(worth.useCases.length, 0);
+  for (const tool of worth.tools) {
+    const source = catalog.tools.find((item) => item.slug === tool.slug);
+    const name = source?.assistantName ?? tool.name.split("(")[0].trim();
+    assert.equal(tool.whyItHelps, neutralAssistantLine(tool.slug, name));
+    assert.equal(pronounFlip(tool.whyItHelps, "what's my business worth"), false);
+  }
+  assert.ok(pronounFlip('For answering "what\'s your business worth"', "what's my business worth"));
+  assert.ok(articleVerbProblems("For help with a describe the backyard").length > 0);
+  assert.ok(hasLowercaseI("For help with an i wear every hat"));
+  assert.ok(grammarProblems("Ask Claude to break an i wear every hat into a step-by-step plan", "why", "i wear every hat").length > 0);
+  assert.equal(grammarProblems(NEUTRAL_LEAD, "header").length, 0);
+  const shoes = rankCatalogQuery("running shoes that last more than a season", catalog);
+  assert.equal(/running shoes/i.test(shoes.lead), false);
+  const grade = rankCatalogQuery("tutor for 3rd grade math", catalog);
+  assert.equal(/tutoring for 3rd/i.test(grade.lead), false);
+  const farm = rankCatalogQuery("expired listings and a farm", catalog);
+  assert.match(farm.lead, /your farm/);
+  assert.equal(/\ba farm\b/i.test(farm.lead), false);
   assert.ok(descriptionProblems("No monthly price confirmed.").length > 0);
   assert.ok(descriptionProblems("Pricing page included a free-to-start option.").length > 0);
   assert.ok(descriptionProblems("The plans on the page we read are paid.").length > 0);
@@ -880,6 +904,21 @@ test("every specialist use-case pair has a hand-written why-line", () => {
       assert.ok(specialistLine(concept.useCase, tool.slug), tool.slug);
     }
   }
+});
+
+test("meaning search starts after submit and does not host the model", () => {
+  const search = readFileSync(new URL("../components/job-search.tsx", import.meta.url), "utf8");
+  const embed = readFileSync(new URL("../lib/browser-embed.ts", import.meta.url), "utf8");
+  assert.equal(search.includes("requestIdleCallback"), false);
+  assert.equal(search.includes("prefetchEmbedder"), false);
+  assert.match(search, /setSubmitted/);
+  assert.match(search, /skipSemanticDownload/);
+  assert.match(embed, /huggingface\.co/);
+  assert.match(embed, /cdn\.jsdelivr\.net\/npm\/onnxruntime-web/);
+  assert.match(embed, /cdn\.jsdelivr\.net\/npm\/@huggingface\/transformers/);
+  assert.equal(embed.includes('localModelPath = "/models/"'), false);
+  assert.equal(embed.includes("/onnx/"), false);
+  assert.equal(readFileSync(new URL("../scripts/embed-session.ts", import.meta.url), "utf8").includes('path.resolve("vendor/models")'), true);
 });
 
 test("catalog prose and the search QA harness stay grammatical", async () => {

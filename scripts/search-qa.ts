@@ -4,6 +4,7 @@ import { matchTagsForConcept } from "../lib/search.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
+import { NEUTRAL_LEAD } from "../lib/header-grammar.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
 import { buildHeldOut, buildOtherHeldOut, buildParaphrases, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
 import { rankObserved } from "./rank-observed.ts";
@@ -521,7 +522,7 @@ export function qaProblems(catalog: Catalog): string[] {
     const allowed = allowedWords(item.query, pageTools);
     const header = ranked.lead;
     const intro = ranked.intro;
-    if (!/^For [a-z]/.test(header)) problems.push(`${item.query}: header does not start with a lowercase gerund: ${header}`);
+    if (header !== NEUTRAL_LEAD && !/^For [a-z]/.test(header)) problems.push(`${item.query}: header does not start with a lowercase gerund: ${header}`);
     if (!/^AI (?:agents|assistants)\b/.test(intro)) problems.push(`${item.query}: intro does not start with AI agents or AI assistants: ${intro}`);
     for (const text of [header, intro]) {
       if (WRAPPER.test(text)) problems.push(`${item.query}: wrapper text in "${text}"`);
@@ -530,7 +531,7 @@ export function qaProblems(catalog: Catalog): string[] {
       if (INTERNAL.test(text)) problems.push(`${item.query}: internal wording in "${text}"`);
       const caps = capitalIssues(text, allowed);
       if (caps.length > 0) problems.push(`${item.query}: mid-sentence capital ${caps.join(", ")} in "${text}"`);
-      const grammar = grammarProblems(text, text === header ? "header" : "intro");
+      const grammar = grammarProblems(text, text === header ? "header" : "intro", item.query);
       if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in "${text}"`);
     }
     const whys = ranked.tools.map((tool) => tool.whyItHelps);
@@ -549,7 +550,7 @@ export function qaProblems(catalog: Catalog): string[] {
       const queryWords = new Set(item.query.toLowerCase().match(/[a-z0-9]+/g) ?? []);
       const leaked = capitalIssues(why, allowed).filter((word) => queryWords.has(word.toLowerCase()));
       if (leaked.length > 0) problems.push(`${item.query}: query capital ${leaked.join(", ")} in ${tool.name} why: ${why}`);
-      const grammar = grammarProblems(why, "why");
+      const grammar = grammarProblems(why, "why", item.query);
       if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in ${tool.name} why: ${why}`);
       if (!tool.generalPurpose) {
         const specialist = specialistWhyProblems(tool.name, why);
@@ -733,10 +734,10 @@ const SPOT_QUERIES = [
 ];
 
 const OFF_DOMAIN = [
-  { query: "plan a wedding", expect: null, echo: /wedding/i },
-  { query: "train my dog", expect: null, echo: /dog/i },
-  { query: "what's my business worth", expect: null, echo: /business/i },
-  { query: "price comparison for headphones", expect: "shop-products", echo: /headphone/i },
+  { query: "plan a wedding", expect: null, echo: /wedding/i, neutral: false },
+  { query: "train my dog", expect: null, echo: /dog/i, neutral: false },
+  { query: "what's my business worth", expect: null, echo: null, neutral: true },
+  { query: "price comparison for headphones", expect: "shop-products", echo: /headphone/i, neutral: false },
 ];
 
 export function reportQueries(): string[] {
@@ -756,15 +757,19 @@ function benchLines(): string[] {
       modelBytes: number;
       wasmBytes: number;
       indexBytes: number;
+      indexGzipBytes: number;
+      chunkBytes: number;
+      chunkGzipBytes: number;
       loadMs: number;
       queryMedianMs: number;
       cpu: string;
       laptopNote: string;
     };
-    const mb = (bytes: number) => `${(bytes / 1_000_000).toFixed(1)} MB`;
+    const size = (bytes: number) => bytes >= 1_000_000 ? `${(bytes / 1_000_000).toFixed(1)} MB` : `${bytes} bytes`;
     return [
-      `Model ${bench.model}, ${bench.dtype}. Weights ${mb(bench.modelBytes)}. WASM runtime ${mb(bench.wasmBytes)}. Embedding index ${mb(bench.indexBytes)}.`,
-      `Measured load ${Math.round(bench.loadMs)} ms and warm query median ${bench.queryMedianMs.toFixed(1)} ms on ${bench.cpu}.`,
+      `Model ${bench.model}, ${bench.dtype}. Weights ${size(bench.modelBytes)} from the Hugging Face hub. WASM runtime ${size(bench.wasmBytes)} from jsDelivr. This site does not serve either file.`,
+      `A first submitted search also downloads the embedding index from this site (${bench.indexBytes} bytes, ${bench.indexGzipBytes} bytes gzipped) and the search script (${bench.chunkBytes} bytes, ${bench.chunkGzipBytes} bytes gzipped). Together that is ${bench.indexGzipBytes + bench.chunkGzipBytes} bytes gzipped from this site. Later searches in that browser use the Cache API, so this site sends 0 bytes for the index. Data Saver, slow-2g, and 2g skip the model and the index.`,
+      `Warm query median ${bench.queryMedianMs.toFixed(1)} ms on ${bench.cpu}, with the weights already cached. Session init in that run was ${Math.round(bench.loadMs)} ms.`,
       bench.laptopNote,
     ];
   } catch {
@@ -781,11 +786,18 @@ export function offDomainProblems(catalog: Catalog): string[] {
     if (item.expect === "shop-products" && ranked.tools.some((tool) => tool.slug === "cloud-cma")) {
       problems.push(`${item.query} surfaced Cloud CMA`);
     }
-    if (got === null && !item.echo.test(`${ranked.lead} ${ranked.intro}`)) {
+    if (item.neutral && ranked.lead !== NEUTRAL_LEAD) {
+      problems.push(`${item.query} should use the neutral header: ${ranked.lead}`);
+    }
+    if (!item.neutral && got === null && item.echo && !item.echo.test(`${ranked.lead} ${ranked.intro}`)) {
       problems.push(`${item.query} fallback did not echo the job: ${ranked.intro}`);
     }
-    const grammar = grammarProblems(ranked.lead, "header");
+    const grammar = grammarProblems(ranked.lead, "header", item.query);
     if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join(", ")}`);
+    for (const tool of ranked.tools) {
+      const why = grammarProblems(tool.whyItHelps, "why", item.query);
+      if (why.length > 0) problems.push(`${item.query}: ${why.join(", ")} in ${tool.name}`);
+    }
   }
   return problems;
 }

@@ -530,7 +530,7 @@ function freshenTail(slug: string, tail: string): string {
       `to write ${body} in the order you would actually do the work.`,
       `to turn ${body} into a note you could hand a coworker.`,
       `to draft ${body} in plain sentences you can edit.`,
-      `to spell out ${body} without adding a figure you have not checked.`,
+      `to list ${body} as short lines you can check.`,
     ];
     return frames[body.length % frames.length];
   }
@@ -704,7 +704,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
   }
   if (useCaseSlug === "customer-follow-up") {
     return ask(slug, {
-      claude: "to draft a thank-you or a check-in for a customer you already know.",
+      claude: "to draft a thank-you or a check-in for someone already in your contacts.",
       chatgpt: "for a checklist of which customers to thank and what the note should say.",
       gemini: "to build a sheet of customers, the last visit, and whether you followed up.",
       perplexity: "for sourced notes on a short customer thank-you, with links you can check.",

@@ -1,5 +1,8 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
+
+process.env.OMP_NUM_THREADS ??= "1";
+process.env.ORT_NUM_THREADS ??= "1";
 import { env, pipeline } from "@huggingface/transformers";
 import { encodeMatrix } from "../lib/embedding-math.ts";
 import { EMBEDDING_DTYPE, EMBEDDING_MODEL, EMBEDDING_POOLING, EMBEDDING_QUERY_PREFIX } from "../lib/semantic-config.ts";
@@ -21,7 +24,7 @@ const OFF_DOMAIN = [
   "a lot of deals",
 ];
 
-env.localModelPath = path.resolve("public/models");
+env.localModelPath = path.resolve("vendor/models");
 env.allowRemoteModels = false;
 env.allowLocalModels = true;
 
@@ -42,7 +45,10 @@ async function embedBatch(extractor: Extractor, texts: string[]): Promise<Float3
 }
 
 const documents = embeddingDocuments();
-const extractor = await pipeline("feature-extraction", MODEL, { dtype: DTYPE }) as unknown as Extractor;
+const extractor = await pipeline("feature-extraction", MODEL, {
+  dtype: DTYPE,
+  session_options: { intraOpNumThreads: 1, interOpNumThreads: 1 },
+}) as unknown as Extractor;
 const vectors: Float32Array[] = [];
 // One sentence at a time. Batched CLS pooling in this runtime changes the vector
 // with the other sentences in the batch, and the browser embeds one query.

@@ -52,6 +52,6 @@
   },
   "useCaseFit": {
     "cma-comps": "Builds a CMA report from MLS comps and neighborhood stats.",
-    "market-reports": "Turns neighborhood stats into a market update a client can review."
+    "market-reports": "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity."
   }
 }

@@ -1,8 +1,9 @@
 import { CONCEPTS } from "../lib/concepts.ts";
 import { CANONICAL_REAL_ESTATE } from "../lib/real-estate-match.ts";
+import { articleVerbProblems, hasLowercaseI, pronounFlip } from "../lib/header-grammar.ts";
 import { grammarProblems } from "./grammar-gate.ts";
 import { HELD_OUT_OTHER } from "./held-out-other.ts";
-import { matchTagsForConcept } from "../lib/search.ts";
+import { matchTagsForConcept, startsWithTaskVerb, stripWrappers } from "../lib/search.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
 import { FOUNDER_QUERY, HELD_OUT_REAL_ESTATE, SEEDS } from "./natural-seeds.ts";
 import { rankObserved } from "./rank-observed.ts";
@@ -122,6 +123,16 @@ export type ParaphraseReport = {
   otherHeldOutMisses: string[];
 };
 
+function copyGateIssues(lead: string, intro: string, whys: string[], query: string): string[] {
+  const issues: string[] = [];
+  for (const text of [lead, ...whys]) {
+    if (articleVerbProblems(text).length > 0) issues.push(`a/an before a verb in "${text}"`);
+    if (hasLowercaseI(text)) issues.push(`lowercase i in "${text}"`);
+    if (!startsWithTaskVerb(stripWrappers(query)) && pronounFlip(text, query)) issues.push(`pronoun flip in "${text}"`);
+  }
+  return issues;
+}
+
 function gradeItems(items: Paraphrase[], catalog: Catalog, collectProblems: boolean): {
   grades: ParaphraseGrade[];
   problems: string[];
@@ -147,7 +158,9 @@ function gradeItems(items: Paraphrase[], catalog: Catalog, collectProblems: bool
       return !source || !specialistOnDomain(source, item.useCase, catalog);
     });
     const generic = GENERIC_INTRO.test(ranked.intro);
-    const headerProblems = grammarProblems(ranked.lead, "header");
+    const headerProblems = grammarProblems(ranked.lead, "header", item.query);
+    const gate = copyGateIssues(ranked.lead, ranked.intro, ranked.tools.map((tool) => tool.whyItHelps), item.query);
+    if (gate.length > 0 && problems.length < 40) problems.push(`${item.query}: ${gate.join("; ")}`);
     const reasons: string[] = [];
     if (got !== item.useCase) reasons.push(`ranked ${got ?? "none"}`);
     if (generic) reasons.push("generic intro");
@@ -222,7 +235,7 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
   const wrappedGrade = gradeItems(wrapped, catalog, true);
   const heldGrade = gradeItems(heldOut, catalog, false);
   const otherGrade = gradeItems(other, catalog, false);
-  problems.push(...seedGrade.problems, ...wrappedGrade.problems);
+  problems.push(...seedGrade.problems, ...wrappedGrade.problems, ...heldGrade.problems, ...otherGrade.problems);
   const heldOutMisses = heldGrade.grades.filter((item) => !item.pass).map((item) => `${item.useCase}: ${item.query} → ${item.reason}`);
   const otherHeldOutMisses = otherGrade.grades.filter((item) => !item.pass).map((item) => `${item.useCase}: ${item.query} → ${item.reason}`);
 

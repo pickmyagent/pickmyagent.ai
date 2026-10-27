@@ -1,9 +1,10 @@
 # Search QA report
 
 Lexical match paints first. Meaning match uses quantized bge-small in the browser and in this harness.
-Model Xenova/bge-small-en-v1.5, q8. Weights 34.0 MB. WASM runtime 26.9 MB. Embedding index 1.0 MB.
-Measured load 930 ms and warm query median 44.3 ms on Chrome 156 headless WASM on a 4-core Intel Xeon (KVM), a mid-range laptop stand-in.
-The host is a 4-core Intel Xeon under KVM, measured in headless Chrome 156 with the weights already in the browser cache. Session init was 930 ms and the warm-query median was 44.3 ms (seven queries, 15 ms to 101 ms). The same page with DevTools CPU throttling at 4× initialized in 4924 ms with a 140.9 ms query median. A first visit also downloads the 34.0 MB weights, the 26.9 MB WASM runtime, and the 1.0 MB index after lexical results paint; later visits use that cache. The Node harness uses onnxruntime-node, about 3 ms per query on this host. Visitors see the WASM timings.
+Model Xenova/bge-small-en-v1.5, q8. Weights 34.0 MB from the Hugging Face hub. WASM runtime 26.9 MB from jsDelivr. This site does not serve either file.
+A first submitted search also downloads the embedding index from this site (1005339 bytes, 737063 bytes gzipped) and the search script (2986 bytes, 1533 bytes gzipped). Together that is 738596 bytes gzipped from this site. Later searches in that browser use the Cache API, so this site sends 0 bytes for the index. Data Saver, slow-2g, and 2g skip the model and the index.
+Warm query median 44.3 ms on Chrome 156 headless WASM on a 4-core Intel Xeon (KVM), a mid-range laptop stand-in, with the weights already cached. Session init in that run was 930 ms.
+Weights and the WASM runtime are not served by this site. The browser fetches the 34.0 MB q8 weights from the Hugging Face hub and the 26.9 MB onnxruntime-web WASM from jsDelivr, and keeps a Cache API copy if those CDNs fail later. A submitted search on a normal connection also downloads the embedding index from this site (1,005,339 bytes, 737,063 bytes gzipped) and a 2,986-byte script (1,533 bytes gzipped). That is 738,596 bytes gzipped from pickmyagent.ai on the first search, and 0 bytes from this site on a later search once the index is cached. Data Saver, slow-2g, and 2g never start that download and keep the lexical results. Typing, idle time, and other pages do not load the model. The warm-query median above was measured in headless Chrome 156 on this 4-core Intel Xeon KVM host with weights already cached: session init 930 ms, median 44.3 ms across seven queries (15 ms to 101 ms). The same page at DevTools 4× CPU throttle initialized in 4924 ms with a 140.9 ms median. The Node harness uses onnxruntime-node, about 3 ms per query on this host. Visitors see the WASM timings. This is not a physical laptop.
 
 Seed pass rate 100.0% (889 natural seeds). Wrapped pass rate 100.0% (3556 template variants).
 Held-out real estate pass rate 98.1% (160 queries written independently of the lexicon).
@@ -138,19 +139,19 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   For following up with buyers and sellers, here's how each tool can help:
   AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
 - pass realtor-prospecting: call the expired on Birch before someone else does
-  For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+  For prospecting expireds, FSBOs and your farm, here's how each tool can help:
   AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - pass realtor-prospecting: farm the streets around my last sale
   For prospecting expireds, FSBOs and your farm, here's how each tool can help:
   AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - pass realtor-prospecting: geographic farm I have been ignoring
-  For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+  For prospecting expireds, FSBOs and your farm, here's how each tool can help:
   AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - pass realtor-prospecting: expired owners who have not relisted
-  For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+  For prospecting expireds, FSBOs and your farm, here's how each tool can help:
   AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - pass realtor-prospecting: who in the farm might sell this year
-  For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+  For prospecting expireds, FSBOs and your farm, here's how each tool can help:
   AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 
 # Off-domain checks
@@ -162,8 +163,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   For training your dog, here's how each tool can help:
   AI assistants can't train your dog for you, but they can build a checklist and remind you when each step is due.
 - what's my business worth → general assistants
-  For answering "what's your business worth", here's how each tool can help:
-  AI assistants can take the question "what's your business worth" and turn it into a plan, answer as you go, and draft anything you need to write.
+  Here's how AI assistants can help with this:
+  AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - price comparison for headphones → shop-products
   For shopping and comparing products, here's how each tool can help:
   AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
@@ -1612,7 +1613,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1623,7 +1624,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1634,7 +1635,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1645,7 +1646,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1656,7 +1657,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1667,7 +1668,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1678,7 +1679,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1689,7 +1690,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1700,7 +1701,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1711,7 +1712,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1722,7 +1723,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1733,7 +1734,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1744,7 +1745,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1755,7 +1756,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -1766,7 +1767,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -2142,9 +2143,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 156. AI tools for real estate
 
@@ -2157,9 +2158,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 157. apps for real estate
 
@@ -2172,9 +2173,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 158. best AI tool for real estate
 
@@ -2187,9 +2188,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 159. best software for real estate
 
@@ -2202,9 +2203,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 160. platforms for real estate
 
@@ -2217,9 +2218,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 161. real estate
 
@@ -2232,9 +2233,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 162. real estate AI tools
 
@@ -2247,9 +2248,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 163. real estate platforms
 
@@ -2262,9 +2263,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 164. real estate tech tools
 
@@ -2277,9 +2278,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 165. software for real estate
 
@@ -2292,9 +2293,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 166. technology for real estate
 
@@ -2307,9 +2308,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 167. tools for real estate
 
@@ -2322,9 +2323,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 168. what AI tools fit real estate
 
@@ -2337,9 +2338,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 169. which AI for real estate
 
@@ -2352,9 +2353,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 170. buyer database for my team
 
@@ -2688,7 +2689,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 200. circle prospecting
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2703,7 +2704,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 201. door knock script for the farm
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2718,7 +2719,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 202. door knock the farm area
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2733,7 +2734,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 203. expired listing leads
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2763,7 +2764,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 205. expireds to call this week
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2778,7 +2779,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 206. farm area owners
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2793,7 +2794,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 207. farming a neighborhood
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2808,7 +2809,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 208. find expired listings
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2823,7 +2824,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 209. geographic farm list
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2838,7 +2839,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 210. I want more listings
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2853,7 +2854,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 211. need new listings this quarter
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2868,7 +2869,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 212. prospect the expireds
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2883,7 +2884,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 213. sphere of influence prospecting
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -2898,7 +2899,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 214. who should I prospect for listings
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -3452,15 +3453,15 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 16. describe the backyard from these bullet facts only
 
-- Header: MISS For help with a describe the backyard from these bullet facts only, here's how each tool can help:
-- Intro: AI assistants can help with a describe the backyard from these bullet facts only by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: listing-copy
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a describe the backyard from these into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a describe the backyard from these.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a describe the backyard from these.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a describe the backyard from these with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a describe the backyard from these.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 17. MLS copy for a condo with a deeded spot
 
@@ -3828,7 +3829,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: realtor-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -4234,7 +4235,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -4245,7 +4246,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -4256,7 +4257,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -4267,7 +4268,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -4278,7 +4279,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -4289,7 +4290,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -4300,7 +4301,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -4311,7 +4312,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -4322,7 +4323,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
@@ -4333,14 +4334,14 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
 ## 91. I need listing appointments not more buyers
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -4355,7 +4356,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 92. call the expired on Birch before someone else does
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -4385,7 +4386,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 94. door knock list for Saturday
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -4400,7 +4401,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 95. expired owners who have not relisted
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -4415,7 +4416,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 96. geographic farm I have been ignoring
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -4430,7 +4431,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 97. prospect for a listing on the west side
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -4445,7 +4446,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 98. circle dialing the expireds
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -4460,7 +4461,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 99. who in the farm might sell this year
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -4475,7 +4476,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 100. more seller appointments on the board
 
-- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
@@ -4985,7 +4986,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 138. find the owner before I knock
 
-- Header: For finding the owner before i knock, here's how each tool can help:
+- Header: For finding off-market and for-sale-by-owner deals, here's how each tool can help:
 - Intro: AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach.
 - Domain: find-off-market
 - Cards:
@@ -5082,7 +5083,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 145. rank the three rentals I toured
 
-- Header: For ranking the three rentals i toured, here's how each tool can help:
+- Header: For finding and ranking real estate deals, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
 - Domain: rank-property-deals
 - Cards:
@@ -5169,9 +5170,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 152. AI stack for a real estate team
 
@@ -5184,9 +5185,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 153. tools built for real estate work
 
@@ -5199,9 +5200,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 154. what should a brokerage look at for AI
 
@@ -5214,9 +5215,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 155. real estate technology beyond a chatbot
 
@@ -5229,9 +5230,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 156. apps real estate agents keep on a laptop
 
@@ -5244,9 +5245,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 157. platform list for real estate
 
@@ -5259,9 +5260,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 158. which real estate AI is worth a seat
 
@@ -5274,9 +5275,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 159. tech for a real estate office
 
@@ -5289,9 +5290,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 160. AI products aimed at real estate
 
@@ -5304,9 +5305,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 # Held-out other queries
 
@@ -5416,15 +5417,15 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 9. the bank feed has not been matched in months
 
-- Header: MISS For help with the bank feed has not been matched in months, here's how each tool can help:
-- Intro: AI assistants can help with the bank feed has not been matched in months by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: bookkeeping
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break the bank feed has not been into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for the bank feed has not been.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track the bank feed has not been.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on the bank feed has not been with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for the bank feed has not been.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 10. receipts in a shoebox and the books are behind
 
@@ -5481,7 +5482,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 14. review this diff before I merge
 
-- Header: For reviewing this diff before i merge, here's how each tool can help:
+- Header: For writing and reviewing code, here's how each tool can help:
 - Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
 - Domain: coding-agents
 - Cards:
@@ -5597,15 +5598,15 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 23. rewrite this draft so it sounds like our brand
 
-- Header: MISS For help with rewrite this draft so it sounds like your brand, here's how each tool can help:
-- Intro: AI assistants can help with rewrite this draft so it sounds like your brand by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: create-content
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break rewrite this draft so it sounds into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for rewrite this draft so it sounds.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track rewrite this draft so it sounds.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on rewrite this draft so it sounds with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for rewrite this draft so it sounds.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 24. outline a post before I sit down to write
 
@@ -5626,7 +5627,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -5638,7 +5639,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -5650,7 +5651,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -5662,11 +5663,11 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI assistants can help with asking recent buyers how the product is working out by turning it into a plan, answering questions as you go, and drafting anything you need to write.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break asking recent buyers how the product into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for asking recent buyers how the product.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track asking recent buyers how the product.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on asking recent buyers how the product with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for asking recent buyers how the product.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 29. a customer is angry about a late package
 
@@ -5698,15 +5699,15 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 31. someone asked if we can replace a broken item
 
-- Header: MISS For help with a someone asked if we can replace a broken item, here's how each tool can help:
-- Intro: AI assistants can help with a someone asked if we can replace a broken item by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: customer-support
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a someone asked if we can into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a someone asked if we can.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a someone asked if we can.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a someone asked if we can with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a someone asked if we can.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 32. the help center does not cover this shipping question
 
@@ -5736,15 +5737,15 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 34. sourced brief on the three vendors we might switch to
 
-- Header: MISS For help with a sourced brief on the three vendors we might switch to, here's how each tool can help:
-- Intro: AI assistants can help with a sourced brief on the three vendors we might switch to by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: deep-research
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a sourced brief on the three into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a sourced brief on the three.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a sourced brief on the three.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a sourced brief on the three with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a sourced brief on the three.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 35. what do the papers actually say about this claim
 
@@ -5863,7 +5864,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
   - BILL — Specialist · Docs checked — BILL includes spend and expense tools with its invoicing.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts an expense report is still missing.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out the date, the amount, and the category on an expense report without adding a figure you have not checked.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the date, the amount, and the category on an expense report as short lines you can check.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put expenses, the receipt, and whether the report is approved where you can sort and filter it.
 
 ## 44. which bills are due before Friday
@@ -6028,15 +6029,15 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 55. outreach to designers who might want the role
 
-- Header: MISS For help with an outreach to designers who might want the role, here's how each tool can help:
-- Intro: AI assistants can help with an outreach to designers who might want the role by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: hire-candidates
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break an outreach to designers who might into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for an outreach to designers who might.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track an outreach to designers who might.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on an outreach to designers who might with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for an outreach to designers who might.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 56. score these applicants against the posting
 
@@ -6718,15 +6719,15 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 109. I wear every hat and I need a plan for the week
 
-- Header: MISS For help with an i wear every hat, here's how each tool can help:
-- Intro: AI assistants can help with an i wear every hat by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: run-a-business
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break an i wear every hat into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for an i wear every hat.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track an i wear every hat.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on an i wear every hat with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for an i wear every hat.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 110. receipts, posts, and a customer who is waiting on me
 
@@ -6812,15 +6813,15 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 116. the state form wants a number I do not have yet
 
-- Header: MISS For help with the state form wants a number i do not have yet, here's how each tool can help:
-- Intro: AI assistants can help with the state form wants a number i do not have yet by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: sales-tax
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break the state form wants a number into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for the state form wants a number.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track the state form wants a number.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on the state form wants a number with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for the state form wants a number.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 117. vat on the european orders
 
@@ -6950,19 +6951,19 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 127. which of these coffee makers is worth the money
 
-- Header: MISS For answering "which of these coffee makers is worth the money", here's how each tool can help:
-- Intro: AI assistants can take the question "which of these coffee makers is worth the money" and turn it into a plan, answer as you go, and draft anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: shop-products
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break that question into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for that question.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track that question.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on that question with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for that question.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 128. compare the two laptops before I buy
 
-- Header: For comparing the two laptops before i buy, here's how each tool can help:
+- Header: For shopping and comparing products, here's how each tool can help:
 - Intro: AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
 - Domain: shop-products
 - Cards:
@@ -6974,15 +6975,15 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 129. running shoes that last more than a season
 
-- Header: MISS For running shoes that last more than a season, here's how each tool can help:
-- Intro: AI assistants can help with running shoes that last more than a season by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: shop-products
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break running shoes that last more than a season into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for running shoes that last more than a season.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track running shoes that last more than a season.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on running shoes that last more than a season with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for running shoes that last more than a season.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 130. queue of posts for the week on instagram
 
@@ -7036,7 +7037,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 134. an agent that clicks through the admin site
@@ -7049,7 +7050,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 135. computer use so I stop copying between tabs
@@ -7062,7 +7063,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 136. explain photosynthesis like I am 14
@@ -7076,7 +7077,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 137. practice questions for the calculus quiz
 
@@ -7089,7 +7090,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 138. study plan for the bar that fits after work
 
@@ -7102,7 +7103,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 139. a cinematic shot of a train in the rain
 
@@ -7153,7 +7154,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -7164,7 +7165,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -7175,7 +7176,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -7194,27 +7195,27 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 146. stop copying the same info between these two apps
 
-- Header: MISS For help with stop copying the same info between these two apps, here's how each tool can help:
-- Intro: AI assistants can help with stop copying the same info between these two apps by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: workflow-automation
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break stop copying the same info between into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for stop copying the same info between.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track stop copying the same info between.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on stop copying the same info between with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for stop copying the same info between.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 147. when a payment lands, notify the slack channel
 
-- Header: MISS For answering "when a payment lands, notify the slack channel", here's how each tool can help:
-- Intro: AI assistants can take the question "when a payment lands, notify the slack channel" and turn it into a plan, answer as you go, and draft anything you need to write.
+- Header: MISS Here's how AI assistants can help with this:
+- Intro: AI assistants can lay out the steps, compare a few options, and draft a first version you still edit.
 - Domain: workflow-automation
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break that question into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for that question.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track that question.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on that question with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for that question.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn this into a short plan you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the steps and leave the decisions to you.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay the steps out so you can check them.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced notes, and you keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline one next step and mark what you still decide.
 
 ## 148. bullets for the job I am applying to
 
@@ -7672,7 +7673,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 30. video of me talking without filming
 
-- Header: For making a video of you talking without filming, here's how each tool can help:
+- Header: For making an avatar video, here's how each tool can help:
 - Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
 - Domain: avatar-video
 - Cards:
@@ -8468,7 +8469,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8480,7 +8481,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8492,7 +8493,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8504,7 +8505,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8516,7 +8517,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8528,7 +8529,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8540,7 +8541,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8552,7 +8553,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8564,7 +8565,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8576,7 +8577,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8588,7 +8589,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8600,7 +8601,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8612,7 +8613,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8624,7 +8625,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8636,7 +8637,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -8667,7 +8668,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
   - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the questions a website chatbot may answer and which ones a person still takes.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out FAQ answers a chatbot can give before a person steps in without adding a figure you have not checked.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list FAQ answers a chatbot can give before a person steps in as short lines you can check.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to organize frequent questions, the chatbot reply, and when to hand off so the missing piece is easy to see.
 
 ## 108. customer support macros
@@ -8737,7 +8738,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
   - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the questions a website chatbot may answer and which ones a person still takes.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out FAQ answers a chatbot can give before a person steps in without adding a figure you have not checked.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list FAQ answers a chatbot can give before a person steps in as short lines you can check.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to organize frequent questions, the chatbot reply, and when to hand off so the missing piece is easy to see.
 
 ## 113. help center for order status
@@ -8762,7 +8763,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - Decagon — Specialist · Docs checked — Decagon answers customer calls by voice and can hand a call to a person.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft what a voice agent should say and which calls a person still takes.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out questions the phone greeting should ask without adding a figure you have not checked.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list questions the phone greeting should ask as short lines you can check.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put call types, the answer, and when to hand the call to a person where you can sort and filter it.
 
 ## 115. reply to this support ticket
@@ -9292,7 +9293,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
   - BILL — Specialist · Docs checked — BILL includes spend and expense tools with its invoicing.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts an expense report is still missing.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out the date, the amount, and the category on an expense report without adding a figure you have not checked.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the date, the amount, and the category on an expense report as short lines you can check.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put expenses, the receipt, and whether the report is approved where you can sort and filter it.
 
 ## 156. invoice exception on the freight line
@@ -9374,7 +9375,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
   - BILL — Specialist · Docs checked — BILL includes spend and expense tools with its invoicing.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts an expense report is still missing.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out the date, the amount, and the category on an expense report without adding a figure you have not checked.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the date, the amount, and the category on an expense report as short lines you can check.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put expenses, the receipt, and whether the report is approved where you can sort and filter it.
 
 ## 162. recurring invoice for the retainer
@@ -9915,7 +9916,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 199. hiring pipeline
 
-- Header: For hiring pipeline, here's how each tool can help:
+- Header: For screening and sourcing candidates, here's how each tool can help:
 - Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
 - Domain: hire-candidates
 - Cards:
@@ -9979,7 +9980,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 204. onboarding checklist for day one
 
-- Header: For onboarding checklist for day one, here's how each tool can help:
+- Header: For screening and sourcing candidates, here's how each tool can help:
 - Intro: AI agents can draft an onboarding checklist and the first notes for a new hire. You still decide who starts.
 - Domain: hire-candidates
 - Cards:
@@ -12041,7 +12042,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 362. do not pay until I confirm hours
 
-- Header: For doing not pay until i confirm hours, here's how each tool can help:
+- Header: For running payroll, here's how each tool can help:
 - Intro: AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.
 - Domain: payroll
 - Cards:
@@ -13308,7 +13309,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 462. research this account before I email
 
-- Header: For researching this account before i email, here's how each tool can help:
+- Header: For qualifying leads and sending sales outreach, here's how each tool can help:
 - Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
 - Domain: sales-outreach
 - Cards:
@@ -13568,7 +13569,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 483. booking link for new clients
 
-- Header: For booking link for new clients, here's how each tool can help:
+- Header: For scheduling and admin, here's how each tool can help:
 - Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
 - Domain: scheduling-assistant
 - Cards:
@@ -14230,7 +14231,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 536. shopping for a carry-on
 
-- Header: For shopping for a carry-on, here's how each tool can help:
+- Header: For shopping and comparing products, here's how each tool can help:
 - Intro: AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
 - Domain: shop-products
 - Cards:
@@ -14508,7 +14509,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 557. browser agent to fill the form
@@ -14521,7 +14522,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 558. browser automation for the admin page
@@ -14534,7 +14535,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 559. browser steps for the portal
@@ -14547,7 +14548,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 560. click through this signup
@@ -14560,7 +14561,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 561. click-path for the export
@@ -14573,7 +14574,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 562. computer use for the weekly report page
@@ -14586,7 +14587,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 563. computer use that stops at login
@@ -14599,7 +14600,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 564. do not type the password
@@ -14612,7 +14613,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 565. fill out the vendor form
@@ -14625,7 +14626,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 566. form fields the agent may enter
@@ -14638,7 +14639,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 567. repeat this web task
@@ -14651,7 +14652,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 568. stop at the login
@@ -14664,7 +14665,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 569. web form I fill every week
@@ -14677,7 +14678,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 570. which step hits a captcha
@@ -14690,7 +14691,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 571. explain photosynthesis simply
@@ -14704,7 +14705,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 572. explain this concept then quiz me
 
@@ -14717,7 +14718,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 573. homework help for 3rd grade math
 
@@ -14731,7 +14732,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 574. I need AI to tutor me
 
@@ -14744,7 +14745,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 575. k-5 math tutor
 
@@ -14758,7 +14759,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 576. math for kids
 
@@ -14772,7 +14773,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 577. one concept at a time
 
@@ -14785,7 +14786,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 578. practice problems for fractions
 
@@ -14798,7 +14799,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 579. practice problems I still miss
 
@@ -14811,7 +14812,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 580. quiz me on the chapter
 
@@ -14824,7 +14825,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 581. study plan for the exam
 
@@ -14837,11 +14838,11 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 582. tutor for 3rd grade math
 
-- Header: For tutoring for 3rd grade math, here's how each tool can help:
+- Header: For tutoring 3rd grade math, here's how each tool can help:
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
@@ -14851,7 +14852,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 583. tutor me in algebra
 
@@ -14864,11 +14865,11 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 584. tutoring for the test
 
-- Header: For tutoring for the test, here's how each tool can help:
+- Header: For getting tutoring help, here's how each tool can help:
 - Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
 - Domain: tutoring
 - Cards:
@@ -14877,7 +14878,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 585. walk me through this problem
 
@@ -14890,7 +14891,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 586. AI video with camera moves
 
@@ -15108,7 +15109,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15119,7 +15120,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15130,7 +15131,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15141,7 +15142,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15152,7 +15153,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15163,7 +15164,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15173,7 +15174,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a script and describe the voice you want, so you generate the audio and check it yourself.
 - Domain: voice-audio
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on voice generation and keep the links.
@@ -15186,7 +15187,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15197,7 +15198,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15208,7 +15209,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15219,7 +15220,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15230,7 +15231,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15241,7 +15242,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15252,7 +15253,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15263,7 +15264,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -15887,7 +15888,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 17. best tool for ranking real estate deals
 
-- Header: For ranking real estate deals, here's how each tool can help:
+- Header: For finding and ranking real estate deals, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
 - Domain: rank-property-deals
 - Cards:
@@ -17137,7 +17138,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 112. practice problems
 
@@ -17150,7 +17151,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 113. personalized learning
 
@@ -17163,7 +17164,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 114. I need AI to tutor me
 
@@ -17176,7 +17177,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 115. best tool for homework
 
@@ -17189,7 +17190,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 116. sizzle reel
 
@@ -17585,7 +17586,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 145. fill forms
@@ -17598,7 +17599,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 146. computer use
@@ -17611,7 +17612,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 147. I need AI to run a browser task
@@ -17624,7 +17625,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 148. browser
@@ -17637,7 +17638,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 149. game npcs
@@ -17741,9 +17742,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 ## 156. Help me with my resume
 
@@ -17827,7 +17828,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 163. meal prep for the week
 
-- Header: For help with meal prep for the week, here's how each tool can help:
+- Header: Here's how AI assistants can help with this:
 - Intro: AI assistants can't cook the week's meals for you, but they can plan the menu, list the ingredients, and write the prep steps.
 - Cards:
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan a week of meals from what you already have, and list the prep steps.
@@ -17914,7 +17915,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 171. grocery list
 
-- Header: For help with a grocery list, here's how each tool can help:
+- Header: Here's how AI assistants can help with this:
 - Intro: AI assistants can group a grocery list and note what you still buy at the store.
 - Cards:
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to group a grocery list by store section and mark what you might already have.
@@ -18207,7 +18208,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
 
 ## 194. I want an agent that will source candidates
@@ -18475,7 +18476,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 214. calendar
 
@@ -18567,7 +18568,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: voice-audio
 - Cards:
   - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and name how the voice should sound before you generate the audio.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
 
@@ -18722,7 +18723,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 232. video of me talking without filming
 
-- Header: For making a video of you talking without filming, here's how each tool can help:
+- Header: For making an avatar video, here's how each tool can help:
 - Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
 - Domain: avatar-video
 - Cards:
@@ -18771,7 +18772,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 236. math for kids
 
@@ -18785,7 +18786,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 237. 3rd grade math
 
@@ -18799,7 +18800,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice items are still open.
 
 ## 238. cheap AI model for coding
 
@@ -19605,7 +19606,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
   - BILL — Specialist · Docs checked — BILL includes spend and expense tools with its invoicing.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts an expense report is still missing.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out the date, the amount, and the category on an expense report without adding a figure you have not checked.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list the date, the amount, and the category on an expense report as short lines you can check.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put expenses, the receipt, and whether the report is approved where you can sort and filter it.
 
 ## 298. chase late payments
@@ -19821,7 +19822,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -19963,7 +19964,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - Decagon — Specialist · Docs checked — Decagon answers customer calls by voice and can hand a call to a person.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft what a voice agent should say and which calls a person still takes.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out questions the phone greeting should ask without adding a figure you have not checked.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list questions the phone greeting should ask as short lines you can check.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put call types, the answer, and when to hand the call to a person where you can sort and filter it.
 
 ## 327. faq chatbot for my website
@@ -19977,7 +19978,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
   - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the questions a website chatbot may answer and which ones a person still takes.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out FAQ answers a chatbot can give before a person steps in without adding a figure you have not checked.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list FAQ answers a chatbot can give before a person steps in as short lines you can check.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to organize frequent questions, the chatbot reply, and when to hand off so the missing piece is easy to see.
 
 ## 328. support inbox
@@ -20035,7 +20036,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 332. shipping labels
 
-- Header: For shipping labels, here's how each tool can help:
+- Header: For automating repeated tasks, here's how each tool can help:
 - Intro: AI agents can connect the store, order, and shipping apps you already use and pass a step from one app to the next. You still confirm the count and the label.
 - Domain: workflow-automation
 - Cards:
@@ -20148,7 +20149,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 341. onboarding staff for my restaurant
 
-- Header: For onboarding staff for your restaurant, here's how each tool can help:
+- Header: For screening and sourcing candidates, here's how each tool can help:
 - Intro: AI agents can draft an onboarding checklist and the first notes for a new hire. You still decide who starts.
 - Domain: hire-candidates
 - Cards:
@@ -20243,7 +20244,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 348. quotes and invoices for a remodel
 
-- Header: For drafting a quote and sending invoices for a remodel, here's how each tool can help:
+- Header: For writing the quote and sending invoices for a remodel, here's how each tool can help:
 - Intro: AI agents can draft the quote and send the invoice after you approve the price.
 - Cards:
   - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
@@ -20270,7 +20271,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -20282,7 +20283,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
@@ -20385,7 +20386,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 ## 360. quotes and invoices for my landscaping business
 
-- Header: For drafting a quote and sending invoices for a landscaping business, here's how each tool can help:
+- Header: For writing the quote and sending invoices for a landscaping business, here's how each tool can help:
 - Intro: AI agents can draft the quote and send the invoice after you approve the price.
 - Cards:
   - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
@@ -20399,7 +20400,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: customer-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for someone already in your contacts.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.

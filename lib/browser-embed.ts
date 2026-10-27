@@ -11,6 +11,20 @@ type Extractor = (
 
 type CatalogSlice = { tools: Tool[]; useCases: UseCase[]; categories: Category[] };
 
+type RemoteEnv = {
+  allowRemoteModels: boolean;
+  allowLocalModels: boolean;
+  remoteHost: string;
+  useBrowserCache: boolean;
+  fetch: typeof fetch;
+  backends: { onnx: { wasm: { wasmPaths: { mjs: string; wasm: string } } } };
+};
+
+const TRANSFORMERS_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.1/+esm";
+const WASM_BASE = "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.31.0-dev.20260914-8d85527a0/dist/";
+const CACHE_NAME = "pickmyagent-embed-v1";
+const INDEX_URL = "/embeddings/use-cases.json";
+
 let extractorPromise: Promise<Extractor> | null = null;
 let indexPromise: Promise<ReturnType<typeof decodeStoredIndex>> | null = null;
 let embedChain: Promise<unknown> = Promise.resolve();
@@ -21,22 +35,72 @@ function exclusive<T>(work: () => Promise<T>): Promise<T> {
   return run;
 }
 
-export function prefetchEmbedder(): Promise<void> {
-  return Promise.all([loadExtractor(), loadIndex()]).then(() => undefined);
+function sameOrigin(url: string): boolean {
+  try {
+    return new URL(url, location.origin).origin === location.origin;
+  } catch {
+    return false;
+  }
+}
+
+/** Network first for the CDN. The index is cache-first so a repeat search does not hit this site. */
+async function fetchWithCache(input: RequestInfo | URL, init?: RequestInit): Promise<Response> {
+  const request = new Request(input, init);
+  const cache = typeof caches === "undefined" ? null : await caches.open(CACHE_NAME).catch(() => null);
+  if (cache && sameOrigin(request.url)) {
+    const cached = await cache.match(request);
+    if (cached) return cached;
+  }
+  try {
+    const response = await fetch(request);
+    if (response.ok && cache) await cache.put(request, response.clone()).catch(() => undefined);
+    if (response.ok || !cache) return response;
+    const cached = await cache.match(request);
+    return cached ?? response;
+  } catch (error) {
+    if (cache) {
+      const cached = await cache.match(request);
+      if (cached) return cached;
+    }
+    throw error;
+  }
+}
+
+async function runtimeUrl(file: string): Promise<string> {
+  const remote = `${WASM_BASE}${file}`;
+  const cache = typeof caches === "undefined" ? null : await caches.open(CACHE_NAME).catch(() => null);
+  try {
+    const response = await fetch(remote);
+    if (!response.ok) throw new Error(String(response.status));
+    if (cache) await cache.put(remote, response.clone()).catch(() => undefined);
+    return remote;
+  } catch (error) {
+    const cached = cache ? await cache.match(remote) : undefined;
+    if (!cached) throw error;
+    return URL.createObjectURL(await cached.blob());
+  }
 }
 
 async function loadExtractor(): Promise<Extractor> {
   if (!extractorPromise) {
     extractorPromise = (async () => {
-      const { env, pipeline } = await import("@huggingface/transformers");
-      env.allowRemoteModels = false;
-      env.allowLocalModels = true;
-      env.localModelPath = "/models/";
-      env.backends.onnx.wasm.wasmPaths = {
-        mjs: "/onnx/ort-wasm-simd-threaded.asyncify.mjs",
-        wasm: "/onnx/ort-wasm-simd-threaded.asyncify.wasm",
-      };
-      const extractor = await pipeline("feature-extraction", EMBEDDING_MODEL, { dtype: EMBEDDING_DTYPE });
+      const remote = await import(
+        /* webpackIgnore: true */
+        /* turbopackIgnore: true */
+        TRANSFORMERS_URL,
+      );
+      const env = remote.env as RemoteEnv;
+      env.allowRemoteModels = true;
+      env.allowLocalModels = false;
+      env.remoteHost = "https://huggingface.co/";
+      env.useBrowserCache = true;
+      env.fetch = fetchWithCache;
+      const [mjs, wasm] = await Promise.all([
+        runtimeUrl("ort-wasm-simd-threaded.asyncify.mjs"),
+        runtimeUrl("ort-wasm-simd-threaded.asyncify.wasm"),
+      ]);
+      env.backends.onnx.wasm.wasmPaths = { mjs, wasm };
+      const extractor = await remote.pipeline("feature-extraction", EMBEDDING_MODEL, { dtype: EMBEDDING_DTYPE });
       return extractor as unknown as Extractor;
     })();
   }
@@ -45,11 +109,8 @@ async function loadExtractor(): Promise<Extractor> {
 
 function loadIndex() {
   if (!indexPromise) {
-    indexPromise = fetch("/embeddings/use-cases.json")
-      .then((response) => {
-        if (!response.ok) throw new Error("embedding index missing");
-        return response.json() as Promise<StoredEmbeddingIndex>;
-      })
+    indexPromise = fetchWithCache(INDEX_URL)
+      .then((response) => response.json() as Promise<StoredEmbeddingIndex>)
       .then((stored) => decodeStoredIndex(stored));
   }
   return indexPromise;
