@@ -2,11 +2,11 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { CONCEPTS } from "../lib/concepts.ts";
 import { matchTagsForConcept } from "../lib/search.ts";
 import { smokeLabel } from "../lib/labels.ts";
-import { rankCatalogQuery } from "../lib/search.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
-import { buildHeldOut, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
+import { buildHeldOut, buildOtherHeldOut, buildParaphrases, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
+import { rankObserved } from "./rank-observed.ts";
 
 export type QaQuery = {
   query: string;
@@ -490,7 +490,7 @@ function cardLabel(general: boolean, status: Tool["smokeStatus"]): string {
 
 export function runSearchQa(catalog: Catalog): QaRow[] {
   return QA_QUERIES.map((item) => {
-    const ranked = rankCatalogQuery(item.query, catalog);
+    const ranked = rankObserved(item.query, catalog);
     return {
       query: item.query,
       domain: item.domain,
@@ -506,7 +506,7 @@ export function runSearchQa(catalog: Catalog): QaRow[] {
 }
 
 export function qaProblems(catalog: Catalog): string[] {
-  const problems: string[] = [...paraphraseProblems(catalog)];
+  const problems: string[] = [...paraphraseProblems(catalog), ...offDomainProblems(catalog)];
   const bySlug = new Map(catalog.tools.map((tool) => [tool.slug, tool]));
   if (QA_QUERIES.length < 200) problems.push(`expected at least 200 queries, found ${QA_QUERIES.length}`);
   const seen = new Set<string>();
@@ -514,7 +514,7 @@ export function qaProblems(catalog: Catalog): string[] {
     const key = item.query.toLowerCase();
     if (seen.has(key)) problems.push(`duplicate query: ${item.query}`);
     seen.add(key);
-    const ranked = rankCatalogQuery(item.query, catalog);
+    const ranked = rankObserved(item.query, catalog);
     const pageTools = ranked.tools
       .map((tool) => bySlug.get(tool.slug))
       .filter((tool): tool is Tool => Boolean(tool));
@@ -687,7 +687,7 @@ function renderRows(rows: QaRow[], start: number): string[] {
 
 function paraphraseRows(catalog: Catalog, items: Paraphrase[]): QaRow[] {
   return items.map((item) => {
-    const ranked = rankCatalogQuery(item.query, catalog);
+    const ranked = rankObserved(item.query, catalog);
     return {
       query: item.query,
       domain: item.useCase,
@@ -712,6 +712,84 @@ function sortSeeds(items: Paraphrase[], founderFirst: boolean): Paraphrase[] {
   });
 }
 
+const SPOT_QUERIES = [
+  "what would this place list at if I were the listing agent",
+  "clients keep asking how the neighborhood is doing",
+  "monthly note on prices in my farm area",
+  "housing figures for the area I farm",
+  "is the neighborhood slower than last spring",
+  "closing is Friday and the paperwork is scattered",
+  "what is still due before we close",
+  "purchase contract is missing the earnest money line",
+  "text the buyers who toured last weekend",
+  "seller has gone quiet since the inspection",
+  "buyers I have not touched in a month",
+  "check in with buyers who lost the last offer",
+  "call the expired on Birch before someone else does",
+  "farm the streets around my last sale",
+  "geographic farm I have been ignoring",
+  "expired owners who have not relisted",
+  "who in the farm might sell this year",
+];
+
+const OFF_DOMAIN = [
+  { query: "plan a wedding", expect: null, echo: /wedding/i },
+  { query: "train my dog", expect: null, echo: /dog/i },
+  { query: "what's my business worth", expect: null, echo: /business/i },
+  { query: "price comparison for headphones", expect: "shop-products", echo: /headphone/i },
+];
+
+export function reportQueries(): string[] {
+  return [
+    ...QA_QUERIES.map((item) => item.query),
+    ...buildParaphrases().map((item) => item.query),
+    ...OFF_DOMAIN.map((item) => item.query),
+    ...SPOT_QUERIES,
+  ];
+}
+
+function benchLines(): string[] {
+  try {
+    const bench = JSON.parse(readFileSync(new URL("../qa/embed-bench.json", import.meta.url), "utf8")) as {
+      model: string;
+      dtype: string;
+      modelBytes: number;
+      wasmBytes: number;
+      indexBytes: number;
+      loadMs: number;
+      queryMedianMs: number;
+      cpu: string;
+      laptopNote: string;
+    };
+    const mb = (bytes: number) => `${(bytes / 1_000_000).toFixed(1)} MB`;
+    return [
+      `Model ${bench.model}, ${bench.dtype}. Weights ${mb(bench.modelBytes)}. WASM runtime ${mb(bench.wasmBytes)}. Embedding index ${mb(bench.indexBytes)}.`,
+      `Measured load ${Math.round(bench.loadMs)} ms and warm query median ${bench.queryMedianMs.toFixed(1)} ms on ${bench.cpu}.`,
+      bench.laptopNote,
+    ];
+  } catch {
+    return ["Embedding timings were not recorded in qa/embed-bench.json."];
+  }
+}
+
+export function offDomainProblems(catalog: Catalog): string[] {
+  const problems: string[] = [];
+  for (const item of OFF_DOMAIN) {
+    const ranked = rankObserved(item.query, catalog);
+    const got = ranked.useCases[0]?.slug ?? null;
+    if (got !== item.expect) problems.push(`${item.query} landed on ${got ?? "none"}`);
+    if (item.expect === "shop-products" && ranked.tools.some((tool) => tool.slug === "cloud-cma")) {
+      problems.push(`${item.query} surfaced Cloud CMA`);
+    }
+    if (got === null && !item.echo.test(`${ranked.lead} ${ranked.intro}`)) {
+      problems.push(`${item.query} fallback did not echo the job: ${ranked.intro}`);
+    }
+    const grammar = grammarProblems(ranked.lead, "header");
+    if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join(", ")}`);
+  }
+  return problems;
+}
+
 export function renderSearchQaReport(catalog: Catalog): string {
   const rows = runSearchQa(catalog);
   const graded = gradeParaphrases(catalog);
@@ -719,13 +797,19 @@ export function renderSearchQaReport(catalog: Catalog): string {
   const realEstateSeeds = sortSeeds(seeds.filter((item) => item.realEstate), true);
   const otherSeeds = sortSeeds(seeds.filter((item) => !item.realEstate), false);
   const heldOut = buildHeldOut();
+  const otherHeldOut = buildOtherHeldOut();
   const heldOutFail = new Set(graded.heldOutMisses.map((item) => item.replace(/ → .*$/, "")));
+  const otherFail = new Set(graded.otherHeldOutMisses.map((item) => item.replace(/ → .*$/, "")));
   const lines = [
     "# Search QA report",
     "",
+    "Lexical match paints first. Meaning match uses quantized bge-small in the browser and in this harness.",
+    ...benchLines(),
+    "",
     `Seed pass rate ${(graded.seedPassRate * 100).toFixed(1)}% (${graded.seedCount} natural seeds). Wrapped pass rate ${(graded.wrappedPassRate * 100).toFixed(1)}% (${graded.wrappedCount} template variants).`,
     `Held-out real estate pass rate ${(graded.heldOutPassRate * 100).toFixed(1)}% (${graded.heldOutCount} queries written independently of the lexicon).`,
-    `Seed precision@3 ${graded.precisionAt3.toFixed(3)}. Held-out precision@3 ${graded.heldOutPrecisionAt3.toFixed(3)}.`,
+    `Held-out other pass rate ${(graded.otherHeldOutPassRate * 100).toFixed(1)}% (${graded.otherHeldOutCount} small-business, creator, developer, and consumer queries).`,
+    `Seed precision@3 ${graded.precisionAt3.toFixed(3)}. Real-estate held-out precision@3 ${graded.heldOutPrecisionAt3.toFixed(3)}. Other held-out precision@3 ${graded.otherHeldOutPrecisionAt3.toFixed(3)}.`,
     `Founder demo query: ${FOUNDER_QUERY}`,
     "",
     "Per-use-case seed pass rate:",
@@ -735,8 +819,32 @@ export function renderSearchQaReport(catalog: Catalog): string {
     lines.push(`- ${row.useCase}: ${(row.rate * 100).toFixed(1)}% (${row.passed}/${row.total})`);
   }
   if (graded.heldOutMisses.length > 0) {
-    lines.push("", "Held-out misses:", "");
+    lines.push("", "Real-estate held-out misses:", "");
     for (const miss of graded.heldOutMisses) lines.push(`- ${miss}`);
+  }
+  if (graded.otherHeldOutMisses.length > 0) {
+    lines.push("", "Other held-out misses:", "");
+    for (const miss of graded.otherHeldOutMisses) lines.push(`- ${miss}`);
+  }
+  lines.push("", "# Spot checks", "", "Queries the word-overlap backstop missed. Graded by the same embedding path.", "");
+  for (const query of SPOT_QUERIES) {
+    const grade = graded.grades.find((item) => item.query === query);
+    if (!grade) {
+      lines.push(`- missing from the held-out set: ${query}`);
+      continue;
+    }
+    lines.push(`- ${grade.pass ? "pass" : "miss"} ${grade.useCase}: ${query}`);
+    lines.push(`  ${grade.header}`);
+    lines.push(`  ${grade.intro}`);
+    if (!grade.pass) lines.push(`  ${grade.reason}`);
+  }
+  lines.push("", "# Off-domain checks", "");
+  for (const item of OFF_DOMAIN) {
+    const ranked = rankObserved(item.query, catalog);
+    const got = ranked.useCases[0]?.slug ?? "general assistants";
+    lines.push(`- ${item.query} → ${got}`);
+    lines.push(`  ${ranked.lead}`);
+    lines.push(`  ${ranked.intro}`);
   }
   lines.push(
     "",
@@ -758,6 +866,18 @@ export function renderSearchQaReport(catalog: Catalog): string {
     if (heldOutFail.has(key)) row.header = `MISS ${row.header}`;
   });
   lines.push(...renderRows(heldRows, 1));
+  lines.push(
+    "# Held-out other queries",
+    "",
+    `${otherHeldOut.length} held-out queries outside real estate. ${graded.otherHeldOutCount - graded.otherHeldOutMisses.length} passed. Written before the embedding scores were inspected.`,
+    "",
+  );
+  const otherRows = paraphraseRows(catalog, otherHeldOut);
+  otherRows.forEach((row, index) => {
+    const key = `${otherHeldOut[index]?.useCase}: ${otherHeldOut[index]?.query}`;
+    if (otherFail.has(key)) row.header = `MISS ${row.header}`;
+  });
+  lines.push(...renderRows(otherRows, 1));
   lines.push("# Other natural seeds", "");
   lines.push(...renderRows(paraphraseRows(catalog, otherSeeds), 1));
   lines.push(
@@ -772,6 +892,8 @@ export function renderSearchQaReport(catalog: Catalog): string {
 
 const invoked = process.argv[1]?.includes("search-qa");
 if (invoked) {
+  const { ensureEmbedded } = await import("./embed-session.ts");
+  await ensureEmbedded(reportQueries());
   const catalog = JSON.parse(readFileSync(new URL("../content/catalog.json", import.meta.url), "utf8")) as Catalog;
   const problems = [...catalogLeakProblems(catalog), ...qaProblems(catalog)];
   const report = renderSearchQaReport(catalog);

@@ -89,10 +89,39 @@ export function JobSearch({
   }, [paused, query]);
 
   const trimmed = query.trim();
-  const ranked = useMemo(
+  const lexical = useMemo(
     () => rankCatalogQuery(trimmed, { tools, useCases, categories }),
     [tools, useCases, categories, trimmed],
   );
+  const [refined, setRefined] = useState<{ query: string; ranked: ReturnType<typeof rankCatalogQuery> } | null>(null);
+
+  useEffect(() => {
+    const idle = window.requestIdleCallback?.(() => {
+      void import("@/lib/browser-embed").then((mod) => mod.prefetchEmbedder());
+    });
+    return () => {
+      if (typeof idle === "number") window.cancelIdleCallback?.(idle);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!trimmed) return;
+    let cancel = false;
+    const timer = window.setTimeout(() => {
+      void import("@/lib/browser-embed")
+        .then((mod) => mod.refineQuery(trimmed, { tools, useCases, categories }))
+        .then((next) => {
+          if (!cancel && next) setRefined({ query: trimmed, ranked: next });
+        })
+        .catch(() => undefined);
+    }, 80);
+    return () => {
+      cancel = true;
+      window.clearTimeout(timer);
+    };
+  }, [trimmed, tools, useCases, categories]);
+
+  const ranked = refined?.query === trimmed ? refined.ranked : lexical;
   const visibleCases = ranked.useCases;
   const visibleTools = ranked.tools;
   const showSearchNewsletter = Boolean(trimmed) && !dismissed;

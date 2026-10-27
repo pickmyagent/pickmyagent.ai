@@ -1,0 +1,11 @@
+{
+  "model": "Xenova/bge-small-en-v1.5",
+  "dtype": "q8",
+  "modelBytes": 34014426,
+  "wasmBytes": 26861777,
+  "indexBytes": 1005339,
+  "loadMs": 929.8,
+  "queryMedianMs": 44.3,
+  "cpu": "Chrome 156 headless WASM on a 4-core Intel Xeon (KVM), a mid-range laptop stand-in",
+  "laptopNote": "The host is a 4-core Intel Xeon under KVM, measured in headless Chrome 156 with the weights already in the browser cache. Session init was 930 ms and the warm-query median was 44.3 ms (seven queries, 15 ms to 101 ms). The same page with DevTools CPU throttling at 4× initialized in 4924 ms with a 140.9 ms query median. A first visit also downloads the 34.0 MB weights, the 26.9 MB WASM runtime, and the 1.0 MB index after lexical results paint; later visits use that cache. The Node harness uses onnxruntime-node, about 3 ms per query on this host. Visitors see the WASM timings."
+}

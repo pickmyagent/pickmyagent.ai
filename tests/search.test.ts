@@ -5,7 +5,9 @@ import { CONCEPTS } from "../lib/concepts.ts";
 import { domainAssistantLine } from "../lib/assistant-lines.ts";
 import { specialistLine, specialistLinePairs } from "../lib/specialist-lines.ts";
 import { BROKEN_ASSISTANT, BROKEN_HEADERS, descriptionProblems, grammarProblems, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "../scripts/grammar-gate.ts";
-import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport } from "../scripts/search-qa.ts";
+import { ensureEmbedded } from "../scripts/embed-session.ts";
+import { rankObserved } from "../scripts/rank-observed.ts";
+import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport, reportQueries } from "../scripts/search-qa.ts";
 import {
   GENERIC_MATCH_WORDS,
   jobLead,
@@ -880,7 +882,8 @@ test("every specialist use-case pair has a hand-written why-line", () => {
   }
 });
 
-test("catalog prose and the search QA harness stay grammatical", () => {
+test("catalog prose and the search QA harness stay grammatical", async () => {
+  await ensureEmbedded(reportQueries());
   const problems = [...catalogLeakProblems(catalog), ...qaProblems(catalog)];
   assert.deepEqual(problems, [], problems.slice(0, 12).join("\n"));
   const report = readFileSync(new URL("../qa/search-qa-report.md", import.meta.url), "utf8");
@@ -1439,8 +1442,9 @@ test("ceo qa keeps each specialist on the job its data supports", () => {
   assert.ok(faq.includes("decagon"));
 });
 
-test("held-out paraphrases report precision at 3 without failing the build", () => {
+test("held-out paraphrases report precision at 3 without failing the build", async () => {
   assert.ok(HELD_OUT.length >= 40);
+  await ensureEmbedded(HELD_OUT.map((item) => item.query));
   let hits = 0;
   let slots = 0;
   const misses: string[] = [];
@@ -1471,6 +1475,26 @@ test("held-out paraphrases report precision at 3 without failing the build", () 
   console.log(`held-out precision@3: ${precision.toFixed(3)} (${hits}/${slots})`);
   for (const miss of misses) console.log(`held-out miss: ${miss}`);
   assert.ok(precision >= 0.974, `held-out precision@3 ${precision.toFixed(3)} (${hits}/${slots})`);
+
+  let fusedHits = 0;
+  let fusedSlots = 0;
+  for (const item of HELD_OUT) {
+    const ranked = rankObserved(item.query, catalog);
+    const top = ranked.tools.slice(0, 3);
+    for (const tool of top) {
+      fusedSlots += 1;
+      const relevant = item.expect
+        ? !tool.generalPurpose &&
+          (catalog.tools.find((entry) => entry.slug === tool.slug)?.useCaseTags ?? []).some((tag) =>
+            matchTagsFor(item.expect as string).includes(tag),
+          )
+        : tool.generalPurpose;
+      if (relevant) fusedHits += 1;
+    }
+  }
+  const fusedPrecision = fusedHits / fusedSlots;
+  console.log(`fused held-out precision@3: ${fusedPrecision.toFixed(3)} (${fusedHits}/${fusedSlots})`);
+  assert.ok(fusedPrecision >= 0.974, `fused held-out precision@3 ${fusedPrecision.toFixed(3)} (${fusedHits}/${fusedSlots})`);
 });
 
 test("regression report for the pull request", () => {

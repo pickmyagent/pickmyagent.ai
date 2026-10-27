@@ -12,6 +12,7 @@
     "seed": "node scripts/seed-catalog.mjs"
   },
   "dependencies": {
+    "@huggingface/transformers": "^4.3.1",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.118.0",
     "@vercel/analytics": "^2.0.1",

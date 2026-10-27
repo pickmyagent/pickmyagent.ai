@@ -4,6 +4,8 @@
  * states only what the directory, or the tool's own site, supports.
  */
 
+import { dealSpecificSignal, propertyOpsSignal } from "./real-estate-match.ts";
+
 export const SMB_SPELLING: Record<string, string> = {
   quickbok: "quickbooks",
   quickboks: "quickbooks",
@@ -215,11 +217,14 @@ export function conceptBlocked(id: string, lower: string): boolean {
   if (id === "taxes" && (salesTaxQuery(lower) || vatQuery(lower) || gstQuery(lower) || payrollQuery(lower))) return true;
   if (id === "schedule" && shiftQuery(lower)) return true;
   if (id === "books-reports") {
+    if (dealSpecificSignal(lower)) return true;
     if (propertyMoneyQuery(lower) || portfolioQuery(lower)) return true;
     if (/\b(trips?|travel|vacations?|hotels?|flights?)\b/.test(lower)) return true;
     if (/\bsales\b/.test(lower) && !/\b(cash|profit|budget|expense|p&l)\b/.test(lower)) return true;
   }
   if (id === "bookkeeping") {
+    if (propertyOpsSignal(lower) || dealSpecificSignal(lower)) return true;
+    if (/\bjob descriptions?\b/.test(lower)) return true;
     if (/\b(accounts payable|accounts receivable|ap ar)\b/.test(lower) && !/\b(quickbooks|qbo|reconcil|categoriz|xero|freshbooks|wave)\b/.test(lower)) return true;
     if (/\b(photos?|images?|videos?)\b/.test(lower)) return true;
     if (/\b(book club|novel|novels|library)\b/.test(lower)) return true;
@@ -231,6 +236,17 @@ export function conceptBlocked(id: string, lower: string): boolean {
   if (id === "shopping" && /\b(etsy|shopify|inventory|ecommerce|e-commerce)\b/.test(lower)) return true;
   if (id === "shopping" && /\bamazon\s+(?:store|seller)\b/.test(lower)) return true;
   if (id === "shopping" && (vatQuery(lower) || gstQuery(lower))) return true;
+  if (id === "invest" && dealSpecificSignal(lower) && !/\b(stocks?|etfs?|401k|brokerage|index funds?)\b/.test(lower)) return true;
+  if (id === "sales" && /\b(job descriptions?|the role|candidates?)\b/.test(lower) && !/\b(leads?|crm|pipeline|cold email)\b/.test(lower)) return true;
+  if ((id === "video" || id === "video-generation") && /\b(face videos?|spokespersons?|talking heads?)\b/.test(lower) && !/\b(twitch|vod|streams?|kick)\b/.test(lower)) return true;
+  if (id === "social" && /\b(vods?|twitch|kick|livestreams?)\b/.test(lower)) return true;
+  if (id === "social" && /\boutline\b/.test(lower) && /\bposts?\b/.test(lower) && !/\b(instagram|facebook|tiktok|linkedin)\b/.test(lower)) return true;
+  if (id === "newsletter" && /\b(bury|unread|inbox)\b/.test(lower)) return true;
+  if (id === "email" && /\bcompanies\b/.test(lower) && /\b(e-?mails?|email)\b/.test(lower) && !/\b(inbox|gmail)\b/.test(lower)) return true;
+  if (id === "shopping" && /\bone person\b/.test(lower)) return true;
+  if (id === "quotes" && /\bbrand\b/.test(lower) && !/\b(quotes?|proposals?|estimates?)\b/.test(lower)) return true;
+  if (id === "content" && /\bexports?\b/.test(lower) && !/\b(blog|seo|articles?|copy)\b/.test(lower)) return true;
+  if ((id === "invoices" || id === "books-reports") && /\bhave not heard\b/.test(lower)) return true;
   return false;
 }
 

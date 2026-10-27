@@ -8,7 +8,7 @@ function has(text: string, pattern: RegExp): boolean {
 }
 
 export function investmentSignal(text: string): boolean {
-  return has(text, /\b(cap rates?|capitalization rates?|arv|after repair|rental comps?|cash ?flow|fix and flip|houses? to flip|flips?)\b/);
+  return has(text, /\b(cap rates?|capitalization rates?|arv|after repair|rental comps?|cash ?flow|fix and flip|houses? to flip|flips?|percent down|down payments?|investment propert(?:y|ies))\b/);
 }
 
 const HOME = /\b(houses?|homes?|propert(?:y|ies)|listings?)\b/;
@@ -96,7 +96,9 @@ export function agentSocialSignal(text: string): boolean {
   if (has(text, /\b(captions?|posts?)\b/) && has(text, /\b(listings?|open houses?)\b/)) return true;
   if (has(text, /\b(instagram|facebook|tiktok|linkedin)\b/) && has(text, /\b(listings?|realtors?|real estate|open houses?)\b/)) return true;
   const realtor = has(text, /\b(realtors?|real estate|listing agents?|for agents|my listings)\b/);
-  const social = has(text, /\b(social|instagram|facebook|tiktok|linkedin|posts?|captions?)\b/);
+  const social = has(text, /\b(social|instagram|facebook|tiktok|linkedin|posts?|captions?|stories|story)\b/);
+  if (has(text, /\bcoming soon\b/) && has(text, /\b(photos?|posts?|facebook|instagram|copy|stories|story)\b/)) return true;
+  if (has(text, /\bprice changes?\b/) && has(text, /\b(instagram|facebook|tiktok|stories|story|posts?|captions?)\b/)) return true;
   if (!realtor || !social) return false;
   return true;
 }
@@ -109,6 +111,13 @@ export function showingSignal(text: string): boolean {
   }
   if (has(text, /\bbuyers?\b/) && has(text, /\b(see the (?:house|home)|tour the)\b/)) return true;
   if (has(text, /\bshowings?\b/) && has(text, /\bshowing (?:me|you|us|them|how)\b/)) return false;
+  if (
+    has(text, /\btours?\b/)
+    && has(text, /\b(listing agents?|confirm|schedule|book)\b/)
+    && !has(text, /\b(videos?|reels?|footage|edit|cut)\b/)
+  ) {
+    return true;
+  }
   return has(text, /\bshowings?\b/);
 }
 
@@ -118,6 +127,8 @@ export function transactionSignal(text: string): boolean {
   }
   if (has(text, /\bclosings?\b/) && has(text, /\b(documents?|due|checklists?)\b/)) return true;
   if (has(text, /\bcoordinat\w*\b/) && has(text, /\btransactions?\b/)) return true;
+  if (has(text, /\bearnest money\b/) || has(text, /\btransaction files?\b/)) return true;
+  if (has(text, /\bpurchase contracts?\b/) && has(text, /\b(earnest|escrow|closings?|disclosures?)\b/)) return true;
   return has(text, /\b(disclosures?|contracts?)\b/)
     && has(text, /\b(real estate|realtors?|listings?|closings?|buyers?|sellers?|houses?|homes?)\b/)
     && has(text, /\b(closings?|disclosures?|purchase|escrow|transactions?)\b/);
@@ -142,7 +153,9 @@ export function marketReportSignal(text: string): boolean {
   if (has(text, /\b(market (?:reports?|updates?|stats|statistics)|neighborhood (?:reports?|updates?|markets?)|housing market updates?|client market updates?)\b/)) {
     return true;
   }
-  if (has(text, /\blocal markets?\b/) || has(text, /\bmarket notes?\b/)) return true;
+  if (has(text, /\blocal markets?\b/) || has(text, /\bmarket notes?\b/) || has(text, /\bmarket snapshots?\b/)) return true;
+  if (has(text, /\bhousing figures?\b/)) return true;
+  if (has(text, /\b(prices?|stats|statistics|figures)\b/) && has(text, /\b(farms?|farm|neighbou?rhoods?)\b/)) return true;
   return has(text, /\bneighbou?rhoods?\b/)
     && has(text, /\b(markets?|stats|statistics)\b/)
     && !investmentSignal(text)
@@ -154,6 +167,7 @@ export function prospectingSignal(text: string): boolean {
   if (has(text, /\bexpireds\b/)) return true;
   if (has(text, /\bexpired\b/) && has(text, /\b(listings?|realtors?|real estate|owners?|fsbo|leads?)\b/)) return true;
   if (has(text, /\bprospect\w*\b/) && has(text, /\b(listings?|sellers?|expireds?|fsbos?|farms?)\b/)) return true;
+  if (has(text, /\b(listing|seller) appointments?\b/) && !cmaSignal(text)) return true;
   if (listingVideoSignal(text) || listingCopySignal(text) || cmaSignal(text)) return false;
   return has(text, /\b(more|new) listings?\b/) && has(text, /\b(want|need|get|find|win|book|land)\b/);
 }
@@ -166,7 +180,55 @@ export function propertyOpsSignal(text: string): boolean {
   if (has(text, /\b(property management|tenants?|landlords?|rent collection|collect rent|work orders?|maintenance requests?|lease renewals?|manage my rentals)\b/)) {
     return true;
   }
-  return has(text, /\brents?\b/) && has(text, /\b(units?|owes?|owe|track|collect|tenants?|landlords?)\b/);
+  return has(text, /\brents?\b/) && has(text, /\b(units?|owes?|owe|track|collect|tenants?|landlords?)\b/)
+    || has(text, /\bunits?\b/) && has(text, /\b(propert(?:y|ies)|rentals?)\b/);
+}
+
+/** The person said the job is not real estate. */
+export function deniesRealEstate(text: string): boolean {
+  return /\bnot\b(?:\s+\w+){0,4}\s+real estate\b/.test(text.toLowerCase());
+}
+
+/** A business or company valuation is not a home CMA. */
+export function businessValuationQuery(text: string): boolean {
+  return has(text, /\b(business|company|companies)\b/) && has(text, /\b(worth|valuation|valued)\b/);
+}
+
+/**
+ * Cross-job conflicts for the embedding pass.
+ * The lexicon still requires its own signal words. Meaning match does not,
+ * or a paraphrase that never says "market report" could never land.
+ */
+export function semanticRealEstateBlock(id: string, text: string): boolean {
+  const lower = text.toLowerCase();
+  if (id === "cma" && businessWorth(lower)) return true;
+  if (id === "cma" && investmentSignal(lower) && !has(lower, /\b(cma|bpo|broker price|comparative market|comparable sales)\b/)) return true;
+  if (id === "deals" && cmaSignal(lower) && !investmentSignal(lower)) return true;
+  if (id === "deals" && propertyOpsSignal(lower) && !has(lower, /\b(rank|score|cap rate|cash flow|flip|deal|comps?)\b/)) return true;
+  if (id === "deals" && marketReportSignal(lower) && !investmentSignal(lower)) return true;
+  if (id === "listing-video" && listingPhotoSignal(lower)) return true;
+  if (id === "listing-video" && showingSignal(lower) && !has(lower, /\b(videos?|reels?|footage|edit|cut)\b/)) return true;
+  if (id === "listing-photos" && listingVideoSignal(lower) && !listingPhotoSignal(lower)) return true;
+  if (id === "listing-copy" && listingPhotoSignal(lower) && !listingCopySignal(lower)) return true;
+  if (id === "content" && listingCopySignal(lower)) return true;
+  if (id === "social" && agentSocialSignal(lower)) return true;
+  if (id === "agent-social" && listingCopySignal(lower) && !agentSocialSignal(lower)) return true;
+  if (id === "video" && (listingVideoSignal(lower) || listingPhotoSignal(lower))) return true;
+  if (id === "schedule" && (showingSignal(lower) || prospectingSignal(lower))) return true;
+  if (id === "contracts" && transactionSignal(lower)) return true;
+  if (id === "realtor-follow-up" && has(lower, /\b(products?|invoices?)\b/)) return true;
+  if ((id === "sales" || id === "customer-follow-up") && buyerSellerNurture(lower)) return true;
+  if (id === "sales" && (realtorCrmSignal(lower) || prospectingSignal(lower) || (cmaSignal(lower) && !has(lower, /\b(leads?|outreach|crm|pipeline|prospects?)\b/)))) return true;
+  if (id === "showings" && agentSocialSignal(lower) && !has(lower, /\bschedul\w*/)) return true;
+  if (id === "showings" && buyerSellerNurture(lower) && !has(lower, /\bschedul\w*/)) return true;
+  if (id === "prospecting" && cmaSignal(lower)) return true;
+  if (id === "research" && marketReportSignal(lower)) return true;
+  if (id === "prospecting" && marketReportSignal(lower) && !has(lower, /\b(expireds?|door ?knock|circle prospecting)\b/)) return true;
+  if (id === "prospecting" && buyerSellerNurture(lower)) return true;
+  if (id === "prospecting" && fsboSignal(lower) && !prospectingSignal(lower)) return true;
+  if (id === "offmarket" && prospectingSignal(lower)) return true;
+  if (id === "land" && (cmaSignal(lower) || listingCopySignal(lower) || listingPhotoSignal(lower))) return true;
+  return false;
 }
 
 /** Return true when this concept must not win. */
@@ -179,28 +241,58 @@ export function blockRealEstateConcept(id: string, text: string): boolean {
   if (id === "deals" && marketReportSignal(lower) && !investmentSignal(lower)) return true;
   if (id === "listing-photos" && !listingPhotoSignal(lower)) return true;
   if (id === "listing-video" && listingPhotoSignal(lower)) return true;
+  if (id === "listing-video" && showingSignal(lower) && !has(lower, /\b(videos?|reels?|footage|edit|cut)\b/)) return true;
   if (id === "listing-copy" && !listingCopySignal(lower)) return true;
   if (id === "content" && listingCopySignal(lower)) return true;
   if (id === "agent-social" && !agentSocialSignal(lower)) return true;
   if (id === "social" && agentSocialSignal(lower)) return true;
   if (id === "video" && (listingVideoSignal(lower) || listingPhotoSignal(lower))) return true;
   if (id === "showings" && !showingSignal(lower)) return true;
-  if (id === "schedule" && showingSignal(lower)) return true;
+  if (id === "schedule" && (showingSignal(lower) || prospectingSignal(lower))) return true;
   if (id === "transaction" && !transactionSignal(lower)) return true;
   if (id === "contracts" && transactionSignal(lower)) return true;
-  if (id === "realtor-follow-up" && !buyerSellerNurture(lower)) return true;
+  if (id === "realtor-follow-up" && (has(lower, /\bproducts?\b/) || !buyerSellerNurture(lower))) return true;
   if ((id === "sales" || id === "customer-follow-up") && buyerSellerNurture(lower)) return true;
   if (id === "sales" && (realtorCrmSignal(lower) || prospectingSignal(lower) || (cmaSignal(lower) && !has(lower, /\b(leads?|outreach|crm|pipeline|prospects?)\b/)))) return true;
   if (id === "showings" && agentSocialSignal(lower) && !has(lower, /\bschedul\w*/)) return true;
+  if (id === "showings" && buyerSellerNurture(lower) && !has(lower, /\bschedul\w*/)) return true;
   if (id === "realtor-crm" && !realtorCrmSignal(lower)) return true;
   if (id === "market-report" && !marketReportSignal(lower)) return true;
   if (id === "research" && marketReportSignal(lower)) return true;
+  if (id === "prospecting" && marketReportSignal(lower) && !has(lower, /\b(expireds?|door ?knock|circle prospecting)\b/)) return true;
   if (id === "prospecting" && (!prospectingSignal(lower) || buyerSellerNurture(lower))) return true;
   if (id === "prospecting" && fsboSignal(lower) && !prospectingSignal(lower)) return true;
   if (id === "offmarket" && prospectingSignal(lower)) return true;
   if (id === "property-mgmt" && !propertyOpsSignal(lower)) return true;
   if (id === "land" && (cmaSignal(lower) || listingCopySignal(lower) || listingPhotoSignal(lower))) return true;
   return false;
+}
+
+/** A deal phrase that is not also a plain cash-flow report. */
+export function dealSpecificSignal(text: string): boolean {
+  return has(text, /\b(cap rates?|capitalization rates?|arv|after repair|rental comps?|fix and flip|houses? to flip|flips?|percent down|down payments?|investment propert(?:y|ies))\b/);
+}
+
+const CONCEPT_SIGNALS: Record<string, (text: string) => boolean> = {
+  cma: cmaSignal,
+  deals: dealSpecificSignal,
+  "listing-video": listingVideoSignal,
+  "listing-photos": listingPhotoSignal,
+  "listing-copy": listingCopySignal,
+  "agent-social": agentSocialSignal,
+  showings: showingSignal,
+  transaction: transactionSignal,
+  "market-report": marketReportSignal,
+  prospecting: prospectingSignal,
+  "property-mgmt": propertyOpsSignal,
+  "realtor-follow-up": buyerSellerNurture,
+  offmarket: fsboSignal,
+  "realtor-crm": realtorCrmSignal,
+};
+
+/** True when the query uses this job's own vocabulary, not just a nearby embedding. */
+export function conceptHasSignal(id: string, text: string): boolean {
+  return CONCEPT_SIGNALS[id]?.(text.toLowerCase()) ?? false;
 }
 
 export const CANONICAL_REAL_ESTATE = new Set([

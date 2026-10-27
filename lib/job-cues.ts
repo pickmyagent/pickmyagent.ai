@@ -113,7 +113,8 @@ export function socialCue(text: string): boolean {
   if (has(text, /\breply to (?:this |the )?comments?\b/) || has(text, /\bcomment repl(?:y|ies)\b/)) return true;
   if (has(text, /\b(ideas|plan)\b/) && has(text, /\b(tiktok|instagram|facebook|linkedin)\b/)) return true;
   if (has(text, /\bthis weeks? posts\b/) || has(text, /\bdraft\b/) && has(text, /\bposts\b/)) return true;
-  if (has(text, /\bcaptions?\b/) && !has(text, /\b(twitch|clips?|reels?|listings?|videos?)\b/)) return true;
+  if (has(text, /\b(vods?|twitch|kick|livestreams?|streams?)\b/) && has(text, /\bcaptions?\b/)) return false;
+  if (has(text, /\bcaptions?\b/) && !has(text, /\b(twitch|clips?|reels?|listings?|videos?|vods?|streams?|kick)\b/)) return true;
   return has(text, /\b(instagram|linkedin|tiktok|facebook|social)\b/)
     && has(text, /\b(captions?|posts?|calendars?|comments?)\b/);
 }

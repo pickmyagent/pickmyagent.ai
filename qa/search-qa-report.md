@@ -1,8 +1,14 @@
 # Search QA report
 
+Lexical match paints first. Meaning match uses quantized bge-small in the browser and in this harness.
+Model Xenova/bge-small-en-v1.5, q8. Weights 34.0 MB. WASM runtime 26.9 MB. Embedding index 1.0 MB.
+Measured load 930 ms and warm query median 44.3 ms on Chrome 156 headless WASM on a 4-core Intel Xeon (KVM), a mid-range laptop stand-in.
+The host is a 4-core Intel Xeon under KVM, measured in headless Chrome 156 with the weights already in the browser cache. Session init was 930 ms and the warm-query median was 44.3 ms (seven queries, 15 ms to 101 ms). The same page with DevTools CPU throttling at 4× initialized in 4924 ms with a 140.9 ms query median. A first visit also downloads the 34.0 MB weights, the 26.9 MB WASM runtime, and the 1.0 MB index after lexical results paint; later visits use that cache. The Node harness uses onnxruntime-node, about 3 ms per query on this host. Visitors see the WASM timings.
+
 Seed pass rate 100.0% (889 natural seeds). Wrapped pass rate 100.0% (3556 template variants).
-Held-out real estate pass rate 66.9% (160 queries written independently of the lexicon).
-Seed precision@3 0.987. Held-out precision@3 0.829.
+Held-out real estate pass rate 98.1% (160 queries written independently of the lexicon).
+Held-out other pass rate 90.2% (153 small-business, creator, developer, and consumer queries).
+Seed precision@3 0.987. Real-estate held-out precision@3 0.988. Other held-out precision@3 0.941.
 Founder demo query: pull house comparisons for me to make a CMA"
 
 Per-use-case seed pass rate:
@@ -67,61 +73,100 @@ Per-use-case seed pass rate:
 - workflow-automation: 100.0% (15/15)
 - write-resume: 100.0% (15/15)
 
-Held-out misses:
+Real-estate held-out misses:
 
-- cma-comps: what would this place list at if I were the listing agent → ranked none; generic intro; Cloud CMA is not first
 - listing-copy: describe the backyard from these bullet facts only → ranked none; generic intro
-- listing-photos: stage the vacant primary bedroom in the picture → ranked none; generic intro
-- listing-photos: which of these listing shots are too dark to upload → ranked none; generic intro
-- listing-videos: order the rooms in the tour starting at the front door → ranked none; generic intro
-- listing-videos: reel that ends on the backyard → ranked game-creative; off-domain Opus Clip, Captions
-- listing-videos: walkthrough is four minutes and I need a short version → ranked game-creative; off-domain Opus Clip, Captions
-- listing-videos: edit the open house footage into a tour → ranked showing-scheduling
-- realtor-follow-up: text the buyers who toured last weekend → ranked none; generic intro
-- realtor-follow-up: drip the people in my past-client list → ranked none; generic intro
-- realtor-follow-up: stay in front of the sphere without being annoying → ranked none; generic intro
-- realtor-follow-up: follow-up for the couple who saw the ranch → ranked none; generic intro
-- realtor-follow-up: buyers I have not touched in a month → ranked none; generic intro
-- realtor-follow-up: after-showing note to the seller → ranked showing-scheduling
-- real-estate-crm: where do my buyer names actually live → ranked none; generic intro
-- real-estate-crm: realtor database instead of a spreadsheet of buyers → ranked analyze-data; off-domain Rows, Julius, Hex
-- showing-scheduling: confirm the tour with the listing agent → ranked listing-videos; off-domain CapCut, Kapwing, Descript; specialist on an assistant-only job
-- transaction-coordination: closing is Friday and the paperwork is scattered → ranked none; generic intro
-- transaction-coordination: purchase contract is missing the earnest money line → ranked contracts
-- transaction-coordination: escrow wants the settlement figures checked → ranked none; generic intro
-- transaction-coordination: transaction file before the broker reviews it → ranked none; generic intro
-- transaction-coordination: what is still due before we close → ranked none; generic intro
-- transaction-coordination: coordinate the buyer side to the closing table → ranked none; generic intro
-- transaction-coordination: disclosure packet for the ranch → ranked none; generic intro
-- market-reports: clients keep asking how the neighborhood is doing → ranked plan-travel; off-domain GuideGeek, Wonderplan
-- market-reports: monthly note on prices in my farm area → ranked realtor-prospecting; off-domain PropStream, DealMachine, BatchLeads
-- market-reports: stats I can paste into the client update → ranked none; generic intro
-- market-reports: what changed in this subdivision's market → ranked none; generic intro
-- market-reports: market snapshot for the newsletter → ranked marketing-promotions; off-domain Klaviyo, Mailchimp
-- market-reports: housing figures for the area I farm → ranked none; generic intro
-- market-reports: draft the market paragraph from these stats → ranked none; generic intro
-- market-reports: is the neighborhood slower than last spring → ranked plan-travel; off-domain GuideGeek, Wonderplan
-- realtor-prospecting: I need listing appointments not more buyers → ranked scheduling-assistant; off-domain Reclaim, Lindy
-- realtor-prospecting: call the expired on Birch before someone else does → ranked none; generic intro
-- realtor-prospecting: farm the streets around my last sale → ranked none; generic intro
-- realtor-prospecting: who in the farm might sell this year → ranked none; generic intro
-- realtor-prospecting: more seller appointments on the board → ranked scheduling-assistant; off-domain Reclaim, Lindy
-- agent-social: facebook copy for the coming soon photo → ranked none; generic intro
-- agent-social: what should I post about this listing → ranked none; generic intro
-- agent-social: instagram story text for the price change → ranked social-media
-- agent-social: calendar of listing content for the month → ranked scheduling-assistant; off-domain Motion, Reclaim, Lindy
-- property-management: who is late on rent this month → ranked none; generic intro
-- property-management: lease is up in 45 days for the duplex → ranked none; generic intro
-- property-management: rental I manage needs a repair logged → ranked rank-property-deals; off-domain Mashvisor, DealCheck, PropStream
-- property-management: property books for the four units → ranked bookkeeping; off-domain Dext, Ramp, BILL
-- find-land: vacant tract the seller calls a homesite → ranked customer-support; off-domain Decagon
-- find-off-market: find the owner before I knock → ranked none; generic intro
-- rank-property-deals: deal score before I write the offer → ranked none; generic intro
-- rank-property-deals: cash flow if I put 20 percent down → ranked analyze-data; off-domain Julius, Rows, Hex
-- rank-property-deals: sort these investment properties → ranked manage-portfolio; off-domain PortfolioPilot, Magnifi, Composer
-- real-estate: software a working realtor would actually open → ranked none; generic intro
-- real-estate: what should a brokerage look at for AI → ranked manage-portfolio; off-domain Magnifi, Composer, PortfolioPilot
-- real-estate: real estate technology beyond a chatbot → ranked customer-support; off-domain Intercom Fin, Zendesk, Decagon
+- listing-videos: order the rooms in the tour starting at the front door → ranked showing-scheduling
+- realtor-follow-up: follow-up for the couple who saw the ranch → ranked customer-follow-up
+
+Other held-out misses:
+
+- bookkeeping: the bank feed has not been matched in months → ranked none; generic intro
+- create-content: rewrite this draft so it sounds like our brand → ranked none; generic intro
+- customer-follow-up: ask recent buyers how the product is working out → ranked none; generic intro
+- customer-support: someone asked if we can replace a broken item → ranked none; generic intro
+- deep-research: sourced brief on the three vendors we might switch to → ranked none; generic intro
+- hire-candidates: outreach to designers who might want the role → ranked none; generic intro
+- knowledge-qa: the new hire asked how expenses get approved → ranked payroll
+- marketing-promotions: schedule the announcement posts and the email together → ranked social-media
+- run-a-business: I wear every hat and I need a plan for the week → ranked none; generic intro
+- run-a-business: receipts, posts, and a customer who is waiting on me → ranked finance-ops; off-domain Ramp
+- sales-tax: the state form wants a number I do not have yet → ranked none; generic intro
+- shop-products: which of these coffee makers is worth the money → ranked none; generic intro
+- shop-products: running shoes that last more than a season → ranked none; generic intro
+- workflow-automation: stop copying the same info between these two apps → ranked none; generic intro
+- workflow-automation: when a payment lands, notify the slack channel → ranked none; generic intro
+
+# Spot checks
+
+Queries the word-overlap backstop missed. Graded by the same embedding path.
+
+- pass cma-comps: what would this place list at if I were the listing agent
+  For pulling comps for a CMA, here's how each tool can help:
+  AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
+- pass market-reports: clients keep asking how the neighborhood is doing
+  For drafting a neighborhood market update, here's how each tool can help:
+  AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
+- pass market-reports: monthly note on prices in my farm area
+  For drafting your neighborhood market update, here's how each tool can help:
+  AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
+- pass market-reports: housing figures for the area I farm
+  For drafting a neighborhood market update, here's how each tool can help:
+  AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
+- pass market-reports: is the neighborhood slower than last spring
+  For drafting a neighborhood market update, here's how each tool can help:
+  AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
+- pass transaction-coordination: closing is Friday and the paperwork is scattered
+  For coordinating contracts and disclosures, here's how each tool can help:
+  AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
+- pass transaction-coordination: what is still due before we close
+  For coordinating contracts and disclosures, here's how each tool can help:
+  AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
+- pass transaction-coordination: purchase contract is missing the earnest money line
+  For coordinating contracts and disclosures, here's how each tool can help:
+  AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
+- pass realtor-follow-up: text the buyers who toured last weekend
+  For following up with buyers and sellers, here's how each tool can help:
+  AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- pass realtor-follow-up: seller has gone quiet since the inspection
+  For following up with buyers and sellers, here's how each tool can help:
+  AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- pass realtor-follow-up: buyers I have not touched in a month
+  For following up with buyers and sellers, here's how each tool can help:
+  AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- pass realtor-follow-up: check in with buyers who lost the last offer
+  For following up with buyers and sellers, here's how each tool can help:
+  AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- pass realtor-prospecting: call the expired on Birch before someone else does
+  For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+  AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- pass realtor-prospecting: farm the streets around my last sale
+  For prospecting expireds, FSBOs and your farm, here's how each tool can help:
+  AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- pass realtor-prospecting: geographic farm I have been ignoring
+  For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+  AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- pass realtor-prospecting: expired owners who have not relisted
+  For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+  AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- pass realtor-prospecting: who in the farm might sell this year
+  For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+  AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+
+# Off-domain checks
+
+- plan a wedding → general assistants
+  For planning a wedding, here's how each tool can help:
+  AI assistants can help with planning a wedding by laying out the steps, comparing options, and drafting the messages you still send yourself.
+- train my dog → general assistants
+  For training your dog, here's how each tool can help:
+  AI assistants can't train your dog for you, but they can build a checklist and remind you when each step is due.
+- what's my business worth → general assistants
+  For answering "what's your business worth", here's how each tool can help:
+  AI assistants can take the question "what's your business worth" and turn it into a plan, answer as you go, and draft anything you need to write.
+- price comparison for headphones → shop-products
+  For shopping and comparing products, here's how each tool can help:
+  AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
 
 # Real estate natural seeds
 
@@ -3228,7 +3273,7 @@ Held-out misses:
 
 # Held-out real estate queries
 
-160 held-out queries. 107 passed. These were not used to add one-off phrases.
+160 held-out queries. 157 passed. These were not used to add one-off phrases.
 
 ## 1. seller appointment tomorrow and I still need numbers on the subject house
 
@@ -3254,15 +3299,14 @@ Held-out misses:
 
 ## 3. what would this place list at if I were the listing agent
 
-- Header: MISS For help with a what would this place list at if i were the listing agent, here's how each tool can help:
-- Intro: AI assistants can help with a what would this place list at if i were the listing agent by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For pulling comps for a CMA, here's how each tool can help:
+- Intro: AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
 - Domain: cma-comps
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a what would this place list into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a what would this place list.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a what would this place list.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a what would this place list with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a what would this place list.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to gather the sold homes you paste in and draft a CMA you still edit before naming a price.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write which sold homes are close to the subject and which you should drop.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each sold home on its own row with price, beds, and how far it sits from the subject.
 
 ## 4. pull solds within a half mile of the subject
 
@@ -3483,15 +3527,14 @@ Held-out misses:
 
 ## 22. stage the vacant primary bedroom in the picture
 
-- Header: MISS For staging the vacant primary bedroom in the picture, here's how each tool can help:
-- Intro: AI assistants can help with staging the vacant primary bedroom in the picture by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For editing listing photos and virtual staging, here's how each tool can help:
+- Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
 - Domain: listing-photos
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break staging the vacant primary bedroom in the picture into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for staging the vacant primary bedroom in the picture.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track staging the vacant primary bedroom in the picture.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on staging the vacant primary bedroom in the picture with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for staging the vacant primary bedroom in the picture.
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie edits a listing photo and virtually stages an empty room.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan which listing photos to edit and which empty room to stage in a picture.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
 ## 23. dusk shot of the facade before the listing goes live
 
@@ -3550,15 +3593,14 @@ Held-out misses:
 
 ## 28. which of these listing shots are too dark to upload
 
-- Header: MISS For help with which of these listing shots are too dark to upload, here's how each tool can help:
-- Intro: AI assistants can help with which of these listing shots are too dark to upload by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For editing listing photos and virtual staging, here's how each tool can help:
+- Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
 - Domain: listing-photos
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break which of these listing shots are into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for which of these listing shots are.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track which of these listing shots are.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on which of these listing shots are with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for which of these listing shots are.
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie edits a listing photo and virtually stages an empty room.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan which listing photos to edit and which empty room to stage in a picture.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
 ## 29. photo of the empty nursery needs staging
 
@@ -3614,15 +3656,15 @@ Held-out misses:
 
 ## 33. order the rooms in the tour starting at the front door
 
-- Header: MISS For help with order the rooms in the tour starting at the front door, here's how each tool can help:
-- Intro: AI assistants can help with order the rooms in the tour starting at the front door by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS For scheduling showings and open houses, here's how each tool can help:
+- Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
 - Domain: listing-videos
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break order the rooms in the tour into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for order the rooms in the tour.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track order the rooms in the tour.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on order the rooms in the tour with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for order the rooms in the tour.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an open-house schedule and the reminder you still confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of showing requests into two or three times you could offer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each showing, the address, and the time you still confirm.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
 ## 34. property video from clips I already shot
 
@@ -3640,33 +3682,31 @@ Held-out misses:
 
 ## 35. reel that ends on the backyard
 
-- Header: MISS For turning a long video into short clips, here's how each tool can help:
-- Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
+- Header: For making a real estate listing video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
 - Domain: listing-videos
 - Cards:
-  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
-  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
-  - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
-  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to pick which moments in a long video are worth cutting into a short clip.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list timecodes, captions, and which clip is ready.
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
 ## 36. walkthrough is four minutes and I need a short version
 
-- Header: MISS For turning a long video into short clips, here's how each tool can help:
-- Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
+- Header: For making a real estate listing video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
 - Domain: listing-videos
 - Cards:
-  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
-  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
-  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
-  - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to pick which moments in a long video are worth cutting into a short clip.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list timecodes, captions, and which clip is ready.
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
 ## 37. captions on the home tour for each room
 
@@ -3714,27 +3754,29 @@ Held-out misses:
 
 ## 40. edit the open house footage into a tour
 
-- Header: MISS For scheduling showings and open houses, here's how each tool can help:
-- Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
+- Header: For editing the open house footage into a tour, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
 - Domain: listing-videos
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an open-house schedule and the reminder you still confirm.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of showing requests into two or three times you could offer.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each showing, the address, and the time you still confirm.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie builds a virtual tour of the home from 360 photos.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
 ## 41. text the buyers who toured last weekend
 
-- Header: MISS For texting the buyers who toured last weekend, here's how each tool can help:
-- Intro: AI assistants can help with texting the buyers who toured last weekend by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
 - Domain: realtor-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break texting the buyers who toured last weekend into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for texting the buyers who toured last weekend.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track texting the buyers who toured last weekend.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on texting the buyers who toured last weekend with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for texting the buyers who toured last weekend.
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
 ## 42. seller has gone quiet since the inspection
 
@@ -3749,15 +3791,14 @@ Held-out misses:
 
 ## 43. drip the people in my past-client list
 
-- Header: MISS For help with a drip the people in your past-client list, here's how each tool can help:
-- Intro: AI assistants can help with a drip the people in your past-client list by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
 - Domain: realtor-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a drip the people in your past-client list into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a drip the people in your past-client list.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a drip the people in your past-client list.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a drip the people in your past-client list with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a drip the people in your past-client list.
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
 ## 44. check in with buyers who lost the last offer
 
@@ -3772,27 +3813,26 @@ Held-out misses:
 
 ## 45. stay in front of the sphere without being annoying
 
-- Header: MISS For help with a stay in front of the sphere without being annoying, here's how each tool can help:
-- Intro: AI assistants can help with a stay in front of the sphere without being annoying by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
 - Domain: realtor-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a stay in front of the into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a stay in front of the.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a stay in front of the.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a stay in front of the with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a stay in front of the.
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
 ## 46. follow-up for the couple who saw the ranch
 
-- Header: MISS For help with a follow-up for the couple who saw the ranch, here's how each tool can help:
-- Intro: AI assistants can help with a follow-up for the couple who saw the ranch by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: MISS For help with customer follow-up, here's how each tool can help:
+- Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
 - Domain: realtor-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a follow-up for the couple who into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a follow-up for the couple who.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a follow-up for the couple who.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a follow-up for the couple who with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a follow-up for the couple who.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a customer note so it thanks them and asks one clear question.
 
 ## 47. nurture the seller until they are ready to list
 
@@ -3818,39 +3858,36 @@ Held-out misses:
 
 ## 49. buyers I have not touched in a month
 
-- Header: MISS For help with buyers i have not touched in a month, here's how each tool can help:
-- Intro: AI assistants can help with buyers i have not touched in a month by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
 - Domain: realtor-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break buyers i have not touched in a month into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for buyers i have not touched in a month.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track buyers i have not touched in a month.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on buyers i have not touched in a month with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for buyers i have not touched in a month.
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
 ## 50. after-showing note to the seller
 
-- Header: MISS For scheduling showings and open houses, here's how each tool can help:
-- Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
 - Domain: realtor-follow-up
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an open-house schedule and the reminder you still confirm.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of showing requests into two or three times you could offer.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each showing, the address, and the time you still confirm.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
 ## 51. where do my buyer names actually live
 
-- Header: MISS For help with where do your buyer names actually live, here's how each tool can help:
-- Intro: AI assistants can help with where do your buyer names actually live by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For running your real estate CRM, here's how each tool can help:
+- Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
 - Domain: real-estate-crm
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break where do your buyer names actually live into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for where do your buyer names actually live.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track where do your buyer names actually live.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on where do your buyer names actually live with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for where do your buyer names actually live.
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss keeps buyer and seller leads in one real estate CRM.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to organize buyer and seller contacts and draft the next touch in a real estate CRM.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
 ## 52. pipeline view of sellers who might list
 
@@ -3898,16 +3935,14 @@ Held-out misses:
 
 ## 56. realtor database instead of a spreadsheet of buyers
 
-- Header: MISS For analyzing data and generating reports, here's how each tool can help:
-- Intro: AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table.
+- Header: For running a real estate CRM, here's how each tool can help:
+- Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
 - Domain: real-estate-crm
 - Cards:
-  - Rows — Specialist · Docs checked — Rows analyzes spreadsheet data with an assistant sitting in the grid.
-  - Julius — Specialist · Docs checked — Julius answers questions about data in a spreadsheet chat.
-  - Hex — Specialist · Docs checked — Hex keeps a shared notebook where a team analyzes data with its agent.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain what the spreadsheet columns show and which total you should recompute.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to name the filters, totals, and chart you would build from a table.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to sketch a report layout with one tab reserved for the source numbers.
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss keeps buyer and seller leads in one real estate CRM.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to organize buyer and seller contacts and draft the next touch in a real estate CRM.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
 ## 57. track listing leads in one CRM
 
@@ -4003,18 +4038,15 @@ Held-out misses:
 
 ## 65. confirm the tour with the listing agent
 
-- Header: MISS For making a real estate listing video, here's how each tool can help:
-- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Header: For scheduling showings and open houses, here's how each tool can help:
+- Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
 - Domain: showing-scheduling
 - Cards:
-  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
-  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
-  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
-  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
-  - BoxBrownie — Specialist · Docs checked — BoxBrownie builds a virtual tour of the home from 360 photos.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an open-house schedule and the reminder you still confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of showing requests into two or three times you could offer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each showing, the address, and the time you still confirm.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
 ## 66. move the 4pm showing to 5
 
@@ -4090,27 +4122,27 @@ Held-out misses:
 
 ## 72. closing is Friday and the paperwork is scattered
 
-- Header: MISS For help with closing is Friday and the paperwork is scattered, here's how each tool can help:
-- Intro: AI assistants can help with closing is Friday and the paperwork is scattered by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
 - Domain: transaction-coordination
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break closing is Friday and the paperwork is scattered into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for closing is Friday and the paperwork is scattered.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track closing is Friday and the paperwork is scattered.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on closing is Friday and the paperwork is scattered with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for closing is Friday and the paperwork is scattered.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
 ## 73. purchase contract is missing the earnest money line
 
-- Header: MISS For drafting a contract, here's how each tool can help:
-- Intro: AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording.
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
 - Domain: transaction-coordination
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a contract from the terms you list and mark the lines a person should review.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which contract lines are still vague before anyone signs.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each term, the draft wording, and whether a person has reviewed it.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on clauses small businesses often include and keep the links.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a contract line that still has a blank price or date.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
 ## 74. seller still has not signed the disclosure
 
@@ -4126,63 +4158,63 @@ Held-out misses:
 
 ## 75. escrow wants the settlement figures checked
 
-- Header: MISS For help with escrow wants the settlement figures checked, here's how each tool can help:
-- Intro: AI assistants can help with escrow wants the settlement figures checked by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
 - Domain: transaction-coordination
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break escrow wants the settlement figures checked into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for escrow wants the settlement figures checked.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track escrow wants the settlement figures checked.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on escrow wants the settlement figures checked with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for escrow wants the settlement figures checked.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
 ## 76. transaction file before the broker reviews it
 
-- Header: MISS For help with transaction file before the broker reviews it, here's how each tool can help:
-- Intro: AI assistants can help with transaction file before the broker reviews it by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
 - Domain: transaction-coordination
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break transaction file before the broker reviews it into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for transaction file before the broker reviews it.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track transaction file before the broker reviews it.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on transaction file before the broker reviews it with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for transaction file before the broker reviews it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
 ## 77. what is still due before we close
 
-- Header: MISS For help with a what is still due before we close, here's how each tool can help:
-- Intro: AI assistants can help with a what is still due before we close by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
 - Domain: transaction-coordination
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a what is still due before we close into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a what is still due before we close.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a what is still due before we close.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a what is still due before we close with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a what is still due before we close.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
 ## 78. coordinate the buyer side to the closing table
 
-- Header: MISS For help with a coordinate the buyer side to the closing table, here's how each tool can help:
-- Intro: AI assistants can help with a coordinate the buyer side to the closing table by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
 - Domain: transaction-coordination
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a coordinate the buyer side to into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a coordinate the buyer side to.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a coordinate the buyer side to.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a coordinate the buyer side to with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a coordinate the buyer side to.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
 ## 79. disclosure packet for the ranch
 
-- Header: MISS For help with a disclosure packet for the ranch, here's how each tool can help:
-- Intro: AI assistants can help with a disclosure packet for the ranch by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
 - Domain: transaction-coordination
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a disclosure packet for the ranch into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a disclosure packet for the ranch.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a disclosure packet for the ranch.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a disclosure packet for the ranch with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a disclosure packet for the ranch.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
 ## 80. closing checklist the attorney will read
 
@@ -4198,54 +4230,47 @@ Held-out misses:
 
 ## 81. clients keep asking how the neighborhood is doing
 
-- Header: MISS For planning and booking travel, here's how each tool can help:
-- Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - GuideGeek — Specialist · Docs checked — GuideGeek plans travel across flights, stays, restaurants, and experiences.
-  - Wonderplan — Specialist · Docs checked — Wonderplan drafts a custom itinerary for the trip.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an itinerary with flights, hotels, and the bookings you still make yourself.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two hotel descriptions and say what is still unconfirmed.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put flight options, hotels, and dates in separate columns.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
 ## 82. monthly note on prices in my farm area
 
-- Header: MISS For prospecting expireds, FSBOs and your farm, here's how each tool can help:
-- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- Header: For drafting your neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
-  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
-  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
-  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
-  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
 ## 83. stats I can paste into the client update
 
-- Header: MISS For help with stats i can paste into the client update, here's how each tool can help:
-- Intro: AI assistants can help with stats i can paste into the client update by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break stats i can paste into the client update into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for stats i can paste into the client update.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track stats i can paste into the client update.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on stats i can paste into the client update with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for stats i can paste into the client update.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
 ## 84. what changed in this subdivision's market
 
-- Header: MISS For help with a what changed in this subdivisions market, here's how each tool can help:
-- Intro: AI assistants can help with a what changed in this subdivisions market by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a what changed in this subdivisions market into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a what changed in this subdivisions market.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a what changed in this subdivisions market.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a what changed in this subdivisions market with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a what changed in this subdivisions market.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
 ## 85. neighborhood email about days on market
 
@@ -4260,39 +4285,36 @@ Held-out misses:
 
 ## 86. market snapshot for the newsletter
 
-- Header: MISS For sending an email newsletter, here's how each tool can help:
-- Intro: AI agents can draft an email newsletter and a subject line for the list you already have. You still approve the send.
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Klaviyo — Specialist · Docs checked — Klaviyo sends email campaigns and drafts a subject line for a newsletter.
-  - Mailchimp — Specialist · Docs checked — Mailchimp sends an email newsletter to the contacts on a list.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an email newsletter and mark the lines you still want to change.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the subject line, the offer, and the list a newsletter goes to in plain sentences you can edit.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up newsletter drafts, the subject, and whether the send is approved so you can scan it in one pass.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
 ## 87. housing figures for the area I farm
 
-- Header: MISS For help with housing figures for the area i farm, here's how each tool can help:
-- Intro: AI assistants can help with housing figures for the area i farm by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break housing figures for the area i farm into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for housing figures for the area i farm.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track housing figures for the area i farm.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on housing figures for the area i farm with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for housing figures for the area i farm.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
 ## 88. draft the market paragraph from these stats
 
-- Header: MISS For drafting the market paragraph from these stats, here's how each tool can help:
-- Intro: AI assistants can help with drafting the market paragraph from these stats by drafting a first version, listing what to change, and leaving the final wording to you.
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break drafting the market paragraph from these stats into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for drafting the market paragraph from these stats.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track drafting the market paragraph from these stats.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on drafting the market paragraph from these stats with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for drafting the market paragraph from these stats.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
 ## 89. local market blurb for past clients
 
@@ -4307,51 +4329,59 @@ Held-out misses:
 
 ## 90. is the neighborhood slower than last spring
 
-- Header: MISS For planning and booking travel, here's how each tool can help:
-- Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
 - Domain: market-reports
 - Cards:
-  - GuideGeek — Specialist · Docs checked — GuideGeek plans travel across flights, stays, restaurants, and experiences.
-  - Wonderplan — Specialist · Docs checked — Wonderplan drafts a custom itinerary for the trip.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an itinerary with flights, hotels, and the bookings you still make yourself.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two hotel descriptions and say what is still unconfirmed.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put flight options, hotels, and dates in separate columns.
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
 ## 91. I need listing appointments not more buyers
 
-- Header: MISS For booking appointments, here's how each tool can help:
-- Intro: AI agents can offer a scheduling link, hold the appointment on a calendar, and draft a reminder. You still confirm who is coming.
+- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
-  - Reclaim — Specialist · Docs checked — Reclaim shares a scheduling link a customer can use to book a time.
-  - Lindy — Specialist · Docs checked — Lindy shares a booking link so a customer can pick a time on your calendar.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the text that shares a booking link and a reminder for the day before.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn the service, the length, and what the booking page should say into a note you could hand a coworker.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out appointments, the customer, and whether they confirmed with one row per item.
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
 ## 92. call the expired on Birch before someone else does
 
-- Header: MISS For calling the expired on Birch before someone else does, here's how each tool can help:
-- Intro: AI assistants can help with calling the expired on Birch before someone else does by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break calling the expired on Birch before into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for calling the expired on Birch before.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track calling the expired on Birch before.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on calling the expired on Birch before with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for calling the expired on Birch before.
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
 ## 93. farm the streets around my last sale
 
-- Header: MISS For help with farm the streets around your last sale, here's how each tool can help:
-- Intro: AI assistants can help with farm the streets around your last sale by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break farm the streets around your last sale into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for farm the streets around your last sale.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track farm the streets around your last sale.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on farm the streets around your last sale with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for farm the streets around your last sale.
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
 ## 94. door knock list for Saturday
 
@@ -4430,27 +4460,33 @@ Held-out misses:
 
 ## 99. who in the farm might sell this year
 
-- Header: MISS For help with a who in the farm might sell this year, here's how each tool can help:
-- Intro: AI assistants can help with a who in the farm might sell this year by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a who in the farm might into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a who in the farm might.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a who in the farm might.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a who in the farm might with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a who in the farm might.
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
 ## 100. more seller appointments on the board
 
-- Header: MISS For booking appointments, here's how each tool can help:
-- Intro: AI agents can offer a scheduling link, hold the appointment on a calendar, and draft a reminder. You still confirm who is coming.
+- Header: For prospecting expireds, FSBOs and a farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
 - Domain: realtor-prospecting
 - Cards:
-  - Reclaim — Specialist · Docs checked — Reclaim shares a scheduling link a customer can use to book a time.
-  - Lindy — Specialist · Docs checked — Lindy shares a booking link so a customer can pick a time on your calendar.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the text that shares a booking link and a reminder for the day before.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn the service, the length, and what the booking page should say into a note you could hand a coworker.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out appointments, the customer, and whether they confirmed with one row per item.
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
 ## 101. caption the new listing for the instagram grid
 
@@ -4482,15 +4518,17 @@ Held-out misses:
 
 ## 103. facebook copy for the coming soon photo
 
-- Header: MISS For help with a Facebook copy for the coming soon photo, here's how each tool can help:
-- Intro: AI assistants can help with a Facebook copy for the coming soon photo by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For posting listings on social media, here's how each tool can help:
+- Intro: AI agents can draft listing posts and a weekly social calendar, and you still approve what gets published.
 - Domain: agent-social
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a Facebook copy for the coming soon photo into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a Facebook copy for the coming soon photo.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a Facebook copy for the coming soon photo.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a Facebook copy for the coming soon photo with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a Facebook copy for the coming soon photo.
+  - Buffer — Specialist · Docs checked — Buffer schedules listing posts and drafts captions for an agent's social channels.
+  - Hootsuite — Specialist · Docs checked — Hootsuite publishes an agent's social posts from one suite.
+  - Ocoya — Specialist · Docs checked — Ocoya creates listing posts and puts them on a social schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives for a listing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a listing post and a weekly social calendar you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a listing caption so it names the address, the bed count, and one feature you verified.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out posts, the listing, and the day they go out.
 
 ## 104. social queue of listing posts
 
@@ -4522,29 +4560,31 @@ Held-out misses:
 
 ## 106. what should I post about this listing
 
-- Header: MISS For help with a what should i post about this listing, here's how each tool can help:
-- Intro: AI assistants can help with a what should i post about this listing by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For posting listings on social media, here's how each tool can help:
+- Intro: AI agents can draft listing posts and a weekly social calendar, and you still approve what gets published.
 - Domain: agent-social
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a what should i post about this listing into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a what should i post about this listing.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a what should i post about this listing.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a what should i post about this listing with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a what should i post about this listing.
+  - Buffer — Specialist · Docs checked — Buffer schedules listing posts and drafts captions for an agent's social channels.
+  - Hootsuite — Specialist · Docs checked — Hootsuite publishes an agent's social posts from one suite.
+  - Ocoya — Specialist · Docs checked — Ocoya creates listing posts and puts them on a social schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives for a listing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a listing post and a weekly social calendar you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a listing caption so it names the address, the bed count, and one feature you verified.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out posts, the listing, and the day they go out.
 
 ## 107. instagram story text for the price change
 
-- Header: MISS For managing social media, here's how each tool can help:
-- Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
+- Header: For posting listings on social media, here's how each tool can help:
+- Intro: AI agents can draft listing posts and a weekly social calendar, and you still approve what gets published.
 - Domain: agent-social
 - Cards:
-  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
-  - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
-  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
-  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a social post and a reply to a comment, both for you to send.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a caption so it makes one point and does not invent a statistic.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay posts across the month with the claim and the asset for each.
+  - Buffer — Specialist · Docs checked — Buffer schedules listing posts and drafts captions for an agent's social channels.
+  - Hootsuite — Specialist · Docs checked — Hootsuite publishes an agent's social posts from one suite.
+  - Ocoya — Specialist · Docs checked — Ocoya creates listing posts and puts them on a social schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives for a listing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a listing post and a weekly social calendar you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a listing caption so it names the address, the bed count, and one feature you verified.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out posts, the listing, and the day they go out.
 
 ## 108. weekly posts a realtor would actually publish
 
@@ -4576,16 +4616,17 @@ Held-out misses:
 
 ## 110. calendar of listing content for the month
 
-- Header: MISS For scheduling and admin, here's how each tool can help:
-- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
+- Header: For posting listings on social media, here's how each tool can help:
+- Intro: AI agents can draft listing posts and a weekly social calendar, and you still approve what gets published.
 - Domain: agent-social
 - Cards:
-  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
-  - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
-  - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to propose two meeting times and a short prep list from a messy calendar note.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of constraints into the times you could actually offer.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out next week's meetings and reminders by day.
+  - Buffer — Specialist · Docs checked — Buffer schedules listing posts and drafts captions for an agent's social channels.
+  - Hootsuite — Specialist · Docs checked — Hootsuite publishes an agent's social posts from one suite.
+  - Ocoya — Specialist · Docs checked — Ocoya creates listing posts and puts them on a social schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives for a listing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a listing post and a weekly social calendar you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a listing caption so it names the address, the bed count, and one feature you verified.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out posts, the listing, and the day they go out.
 
 ## 111. tenant says the heat is out in unit 2
 
@@ -4600,27 +4641,25 @@ Held-out misses:
 
 ## 112. who is late on rent this month
 
-- Header: MISS For help with a who is late on rent this month, here's how each tool can help:
-- Intro: AI assistants can help with a who is late on rent this month by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For handling property management tasks, here's how each tool can help:
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
 - Domain: property-management
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a who is late on rent this month into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a who is late on rent this month.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a who is late on rent this month.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a who is late on rent this month with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a who is late on rent this month.
+  - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a tenant reply and sort a maintenance request you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
 ## 113. lease is up in 45 days for the duplex
 
-- Header: MISS For help with a lease is up in 45 days for the duplex, here's how each tool can help:
-- Intro: AI assistants can help with a lease is up in 45 days for the duplex by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For handling property management tasks, here's how each tool can help:
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
 - Domain: property-management
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a lease is up in 45 into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a lease is up in 45.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a lease is up in 45.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a lease is up in 45 with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a lease is up in 45.
+  - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a tenant reply and sort a maintenance request you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
 ## 114. work order for the broken disposal
 
@@ -4668,29 +4707,25 @@ Held-out misses:
 
 ## 118. rental I manage needs a repair logged
 
-- Header: MISS For finding and ranking real estate deals, here's how each tool can help:
-- Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
+- Header: For handling property management tasks, here's how each tool can help:
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
 - Domain: property-management
 - Cards:
-  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
-  - DealCheck — Specialist · Docs checked — DealCheck runs a rental, flip, or commercial calculator and lines the deals up together.
-  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate price, rent, and rehab on one deal so you can compare it with the next.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
+  - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a tenant reply and sort a maintenance request you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
 ## 119. property books for the four units
 
-- Header: MISS For help with bookkeeping, here's how each tool can help:
-- Intro: AI agents can capture receipts, sort expenses into categories, and gather the records you review before they go back into the books.
+- Header: For handling property management tasks, here's how each tool can help:
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
 - Domain: property-management
 - Cards:
-  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
-  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
-  - BILL — Specialist · Docs checked — BILL keeps QuickBooks and Xero updated with the invoices and bills it pays.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts and expenses to review before they go into the books.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which bookkeeping lines you should ask an accountant about.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each transaction, the category, and whether a receipt is attached.
+  - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a tenant reply and sort a maintenance request you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
 ## 120. tenant request about the leaking window
 
@@ -4733,14 +4768,17 @@ Held-out misses:
 
 ## 123. vacant tract the seller calls a homesite
 
-- Header: MISS For handling customer support tickets, here's how each tool can help:
-- Intro: AI agents can answer a phone call and hand off the ones a person should take. You still decide which calls stay with you.
+- Header: For finding potentially viable land deals, here's how each tool can help:
+- Intro: AI agents can screen parcels, pull zoning and comps, and track listings so you spend time only on land deals worth pursuing.
 - Domain: find-land
 - Cards:
-  - Decagon — Specialist · Docs checked — Decagon answers customer calls by voice and can hand a call to a person.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft what a voice agent should say and which calls a person still takes.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out questions the phone greeting should ask without adding a figure you have not checked.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put call types, the answer, and when to hand the call to a person where you can sort and filter it.
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
+  - PropStream — Specialist · Docs checked — PropStream searches property records for land parcels.
+  - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the zoning, access, and flood questions to settle before you pursue a parcel.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the facts you still need on a vacant parcel, starting with access and zoning.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out acreage, zoning, and which parcels you have already screened.
 
 ## 124. parcel map questions before I write an offer
 
@@ -4947,15 +4985,18 @@ Held-out misses:
 
 ## 138. find the owner before I knock
 
-- Header: MISS For finding the owner before i knock, here's how each tool can help:
-- Intro: AI assistants can help with finding the owner before i knock by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For finding the owner before i knock, here's how each tool can help:
+- Intro: AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach.
 - Domain: find-off-market
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break finding the owner before i knock into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for finding the owner before i knock.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track finding the owner before i knock.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on finding the owner before i knock with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for finding the owner before i knock.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to group each owner, the property address, and whether you already made contact.
 
 ## 139. off-market lead from a driving tour
 
@@ -5080,55 +5121,57 @@ Held-out misses:
 
 ## 148. deal score before I write the offer
 
-- Header: MISS For help with a deal score before i write the offer, here's how each tool can help:
-- Intro: AI assistants can help with a deal score before i write the offer by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For finding and ranking real estate deals, here's how each tool can help:
+- Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
 - Domain: rank-property-deals
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a deal score before i write the offer into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a deal score before i write the offer.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a deal score before i write the offer.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a deal score before i write the offer with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a deal score before i write the offer.
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
+  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate price, rent, and rehab on one deal so you can compare it with the next.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
 ## 149. cash flow if I put 20 percent down
 
-- Header: MISS For reading your cash flow, here's how each tool can help:
-- Intro: AI agents can read a spreadsheet of income and expenses and draft a cash-flow or profit-and-loss summary. You recompute the totals before you trust them.
+- Header: For reading your cash flow, here's how each tool can help:
+- Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
 - Domain: rank-property-deals
 - Cards:
-  - Julius — Specialist · Docs checked — Julius answers questions about the data in a cash-flow or profit-and-loss spreadsheet.
-  - Rows — Specialist · Docs checked — Rows totals a spreadsheet of income and expenses into a report you can check.
-  - Hex — Specialist · Docs checked — Hex charts financial data in a shared notebook so the report starts from the sheet.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain a cash-flow spreadsheet and name the total you should recompute.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft income, expenses, and the months a cash-flow sheet should show in plain sentences you can edit.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up profit and loss, with one tab for the source numbers so you can scan it in one pass.
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
+  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate price, rent, and rehab on one deal so you can compare it with the next.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
 ## 150. sort these investment properties
 
-- Header: MISS For sorting these investment properties, here's how each tool can help:
-- Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
+- Header: For sorting these investment properties, here's how each tool can help:
+- Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
 - Domain: rank-property-deals
 - Cards:
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
-  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
-  - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in a portfolio and list the fee questions worth asking.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the holdings you would fill in before comparing how the money is split.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put one row per account with a column for the annual cost.
+  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
+  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate price, rent, and rehab on one deal so you can compare it with the next.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
 ## 151. software a working realtor would actually open
 
-- Header: MISS For help with a software a working realtor would actually open, here's how each tool can help:
-- Intro: AI assistants can help with a software a working realtor would actually open by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Header: For finding AI tools for real estate, here's how each tool can help:
+- Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
 - Domain: real-estate
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a software a working realtor would actually open into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a software a working realtor would actually open.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a software a working realtor would actually open.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a software a working realtor would actually open with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a software a working realtor would actually open.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
 
 ## 152. AI stack for a real estate team
 
@@ -5162,32 +5205,33 @@ Held-out misses:
 
 ## 154. what should a brokerage look at for AI
 
-- Header: MISS For managing an investment portfolio, here's how each tool can help:
-- Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
+- Header: For finding AI tools for real estate, here's how each tool can help:
+- Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
 - Domain: real-estate
 - Cards:
-  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
-  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
-  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
-  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
-  - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in a portfolio and list the fee questions worth asking.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the holdings you would fill in before comparing how the money is split.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put one row per account with a column for the annual cost.
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
 
 ## 155. real estate technology beyond a chatbot
 
-- Header: MISS For answering website questions, here's how each tool can help:
-- Intro: AI agents can answer repeated questions on the site and hand the rest to a person. You still decide which questions they may answer.
+- Header: For answering website questions, here's how each tool can help:
+- Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
 - Domain: real-estate
 - Cards:
-  - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
-  - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
-  - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
-  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the questions a website chatbot may answer and which ones a person still takes.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out FAQ answers a chatbot can give before a person steps in without adding a figure you have not checked.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to organize frequent questions, the chatbot reply, and when to hand off so the missing piece is easy to see.
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
 
 ## 156. apps real estate agents keep on a laptop
 
@@ -5263,6 +5307,1989 @@ Held-out misses:
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare one deal, outline a listing video, and draft the owner note you still send.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which of the deal, the listing video, or the owner outreach is still unfinished.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the property, the deal figure, the listing video, and the next owner note.
+
+# Held-out other queries
+
+153 held-out queries outside real estate. 138 passed. Written before the embedding scores were inspected.
+
+## 1. what is this spreadsheet actually saying
+
+- Header: For analyzing data and generating reports, here's how each tool can help:
+- Intro: AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table.
+- Domain: analyze-data
+- Cards:
+  - Rows — Specialist · Docs checked — Rows analyzes spreadsheet data with an assistant sitting in the grid.
+  - Julius — Specialist · Docs checked — Julius answers questions about data in a spreadsheet chat.
+  - Hex — Specialist · Docs checked — Hex keeps a shared notebook where a team analyzes data with its agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain what the spreadsheet columns show and which total you should recompute.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to name the filters, totals, and chart you would build from a table.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to sketch a report layout with one tab reserved for the source numbers.
+
+## 2. chart the monthly numbers for the board
+
+- Header: For analyzing data and generating reports, here's how each tool can help:
+- Intro: AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table.
+- Domain: analyze-data
+- Cards:
+  - Julius — Specialist · Docs checked — Julius answers questions about data in a spreadsheet chat.
+  - Rows — Specialist · Docs checked — Rows analyzes spreadsheet data with an assistant sitting in the grid.
+  - Hex — Specialist · Docs checked — Hex keeps a shared notebook where a team analyzes data with its agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain what the spreadsheet columns show and which total you should recompute.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to name the filters, totals, and chart you would build from a table.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to sketch a report layout with one tab reserved for the source numbers.
+
+## 3. find the weird row in this csv
+
+- Header: For finding the weird row in this csv, here's how each tool can help:
+- Intro: AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table.
+- Domain: analyze-data
+- Cards:
+  - Julius — Specialist · Docs checked — Julius answers questions about data in a spreadsheet chat.
+  - Rows — Specialist · Docs checked — Rows analyzes spreadsheet data with an assistant sitting in the grid.
+  - Hex — Specialist · Docs checked — Hex keeps a shared notebook where a team analyzes data with its agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain what the spreadsheet columns show and which total you should recompute.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to name the filters, totals, and chart you would build from a table.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to sketch a report layout with one tab reserved for the source numbers.
+
+## 4. turn the export into a one page summary
+
+- Header: For turning the export into a one page summary, here's how each tool can help:
+- Intro: AI agents can read a spreadsheet, summarize what the columns show, and draft a report you can check against the source table.
+- Domain: analyze-data
+- Cards:
+  - Julius — Specialist · Docs checked — Julius answers questions about data in a spreadsheet chat.
+  - Rows — Specialist · Docs checked — Rows analyzes spreadsheet data with an assistant sitting in the grid.
+  - Hex — Specialist · Docs checked — Hex keeps a shared notebook where a team analyzes data with its agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain what the spreadsheet columns show and which total you should recompute.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to name the filters, totals, and chart you would build from a table.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to sketch a report layout with one tab reserved for the source numbers.
+
+## 5. a presenter on camera without me filming
+
+- Header: For making an avatar video, here's how each tool can help:
+- Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
+- Domain: avatar-video
+- Cards:
+  - D-ID — Specialist · Docs checked — D-ID turns a photo and a script into a talking-head video.
+  - Synthesia — Specialist · Docs checked — Synthesia generates an avatar video from a script and a stock or custom avatar.
+  - HeyGen — Specialist · Docs checked — HeyGen generates an avatar or spokesperson video from a script.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script an avatar will speak, and you record nothing on camera.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to shorten a spokesperson script so the avatar can say it in one take.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the avatar, and whether the take is approved.
+
+## 6. talking head from this script
+
+- Header: For making an avatar video, here's how each tool can help:
+- Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
+- Domain: avatar-video
+- Cards:
+  - D-ID — Specialist · Docs checked — D-ID turns a photo and a script into a talking-head video.
+  - Synthesia — Specialist · Docs checked — Synthesia generates an avatar video from a script and a stock or custom avatar.
+  - HeyGen — Specialist · Docs checked — HeyGen generates an avatar or spokesperson video from a script.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script an avatar will speak, and you record nothing on camera.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to shorten a spokesperson script so the avatar can say it in one take.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the avatar, and whether the take is approved.
+
+## 7. spokesperson clip I can drop in the homepage
+
+- Header: For making an avatar video, here's how each tool can help:
+- Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
+- Domain: avatar-video
+- Cards:
+  - D-ID — Specialist · Docs checked — D-ID turns a photo and a script into a talking-head video.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script an avatar will speak, and you record nothing on camera.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to shorten a spokesperson script so the avatar can say it in one take.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the avatar, and whether the take is approved.
+
+## 8. face video of someone reading the product pitch
+
+- Header: For making an avatar video, here's how each tool can help:
+- Intro: AI agents can draft the script, name the avatar, and leave the recording to the video app so you never have to film yourself.
+- Domain: avatar-video
+- Cards:
+  - HeyGen — Specialist · Docs checked — HeyGen generates an avatar or spokesperson video from a script.
+  - D-ID — Specialist · Docs checked — D-ID turns a photo and a script into a talking-head video.
+  - Synthesia — Specialist · Docs checked — Synthesia generates an avatar video from a script and a stock or custom avatar.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script an avatar will speak, and you record nothing on camera.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to shorten a spokesperson script so the avatar can say it in one take.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the avatar, and whether the take is approved.
+
+## 9. the bank feed has not been matched in months
+
+- Header: MISS For help with the bank feed has not been matched in months, here's how each tool can help:
+- Intro: AI assistants can help with the bank feed has not been matched in months by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: bookkeeping
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break the bank feed has not been into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for the bank feed has not been.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track the bank feed has not been.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on the bank feed has not been with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for the bank feed has not been.
+
+## 10. receipts in a shoebox and the books are behind
+
+- Header: For help with the books, here's how each tool can help:
+- Intro: AI agents can capture receipts, sort expenses into categories, and gather the records you review before they go back into the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so the books have the source documents in one place.
+  - Ramp — Specialist · Docs checked — Ramp keeps card charges and expenses together for the books.
+  - BILL — Specialist · Docs checked — BILL keeps QuickBooks and Xero updated with the invoices and bills it pays.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts and expenses to review before they go into the books.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which bookkeeping lines you should ask an accountant about.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each transaction, the category, and whether a receipt is attached.
+
+## 11. categorize last quarter in quickbooks
+
+- Header: For help with QuickBooks, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses and publish the ones you approve into QuickBooks. You still decide what hits the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext publishes receipts and invoices into QuickBooks after you review each one.
+  - Ramp — Specialist · Docs checked — Ramp keeps QuickBooks updated with card expenses and the attached receipts.
+  - BILL — Specialist · Docs checked — BILL keeps QuickBooks updated with invoices and bills.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which QuickBooks transactions still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write statements, receipts, and uncategorized expenses in the order you would actually do the work.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up QuickBooks transactions, the category, and whether a receipt is attached so you can scan it in one pass.
+
+## 12. xero is a mess after I ignored it
+
+- Header: For help with Xero, here's how each tool can help:
+- Intro: AI agents can capture receipts and expenses and sync the records you approve to Xero. You still decide what hits the books.
+- Domain: bookkeeping
+- Cards:
+  - Dext — Specialist · Docs checked — Dext publishes receipts and invoices into Xero after you review each one.
+  - Ramp — Specialist · Docs checked — Ramp keeps Xero updated with card expenses.
+  - BILL — Specialist · Docs checked — BILL keeps Xero updated with invoices and bills.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which Xero transactions still need a receipt or a category.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write statements, receipts, and uncategorized expenses in the order you would actually do the work.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out Xero transactions, the category, and whether a receipt is attached with one row per item.
+
+## 13. the test fails only on the branch I just pushed
+
+- Header: For writing and reviewing code, here's how each tool can help:
+- Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
+- Domain: coding-agents
+- Cards:
+  - Cursor — Specialist · Docs checked — Cursor edits code in the repo from a desktop agent.
+  - Continue — Specialist · Docs checked — Continue installs an open-source coding agent in the editor you already use.
+  - GitHub Copilot — Specialist · Docs checked — GitHub Copilot writes code and can carry a change toward a merge.
+  - Replit — Specialist · Not fully checked — Replit runs a coding agent inside a browser editor.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to read a bug report and suggest a code edit plus a review note you can reject.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to fill in a function from the code before and after the gap, then explain the edit.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the failing test, the hypothesis, and the diff.
+
+## 14. review this diff before I merge
+
+- Header: For reviewing this diff before i merge, here's how each tool can help:
+- Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
+- Domain: coding-agents
+- Cards:
+  - Cursor — Specialist · Docs checked — Cursor edits code in the repo from a desktop agent.
+  - GitHub Copilot — Specialist · Docs checked — GitHub Copilot writes code and can carry a change toward a merge.
+  - Continue — Specialist · Docs checked — Continue installs an open-source coding agent in the editor you already use.
+  - Replit — Specialist · Not fully checked — Replit runs a coding agent inside a browser editor.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to read a bug report and suggest a code edit plus a review note you can reject.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to fill in a function from the code before and after the gap, then explain the edit.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the failing test, the hypothesis, and the diff.
+
+## 15. pair with me while I fix the null crash
+
+- Header: For writing and reviewing code, here's how each tool can help:
+- Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
+- Domain: coding-agents
+- Cards:
+  - Cursor — Specialist · Docs checked — Cursor edits code in the repo from a desktop agent.
+  - Continue — Specialist · Docs checked — Continue installs an open-source coding agent in the editor you already use.
+  - GitHub Copilot — Specialist · Docs checked — GitHub Copilot writes code and can carry a change toward a merge.
+  - Replit — Specialist · Not fully checked — Replit runs a coding agent inside a browser editor.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to read a bug report and suggest a code edit plus a review note you can reject.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to fill in a function from the code before and after the gap, then explain the edit.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the failing test, the hypothesis, and the diff.
+
+## 16. copilot that can edit the repo not just chat
+
+- Header: For writing and reviewing code, here's how each tool can help:
+- Intro: AI agents can read a repo, suggest a code edit, and draft a review note so you can check the change before it ships.
+- Domain: coding-agents
+- Cards:
+  - Cursor — Specialist · Docs checked — Cursor edits code in the repo from a desktop agent.
+  - GitHub Copilot — Specialist · Docs checked — GitHub Copilot writes code and can carry a change toward a merge.
+  - Continue — Specialist · Docs checked — Continue installs an open-source coding agent in the editor you already use.
+  - Replit — Specialist · Not fully checked — Replit runs a coding agent inside a browser editor.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to read a bug report and suggest a code edit plus a review note you can reject.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to fill in a function from the code before and after the gap, then explain the edit.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the failing test, the hypothesis, and the diff.
+
+## 17. write up the terms we agreed on for the freelance work
+
+- Header: For writing up the terms we agreed on for the freelance work, here's how each tool can help:
+- Intro: AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording.
+- Domain: contracts
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a contract from the terms you list and mark the lines a person should review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which contract lines are still vague before anyone signs.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each term, the draft wording, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on clauses small businesses often include and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a contract line that still has a blank price or date.
+
+## 18. service agreement before I start the project
+
+- Header: For drafting a contract, here's how each tool can help:
+- Intro: AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording.
+- Domain: contracts
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a contract from the terms you list and mark the lines a person should review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which contract lines are still vague before anyone signs.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each term, the draft wording, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on clauses small businesses often include and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a contract line that still has a blank price or date.
+
+## 19. the client wants the scope in a contract
+
+- Header: For drafting a contract, here's how each tool can help:
+- Intro: AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording.
+- Domain: contracts
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a contract from the terms you list and mark the lines a person should review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which contract lines are still vague before anyone signs.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each term, the draft wording, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on clauses small businesses often include and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a contract line that still has a blank price or date.
+
+## 20. one page agreement for the retainer
+
+- Header: For drafting a contract, here's how each tool can help:
+- Intro: AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording.
+- Domain: contracts
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a contract from the terms you list and mark the lines a person should review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which contract lines are still vague before anyone signs.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each term, the draft wording, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on clauses small businesses often include and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a contract line that still has a blank price or date.
+
+## 21. blog post about how we onboard new customers
+
+- Header: For creating and optimizing content, here's how each tool can help:
+- Intro: AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit.
+- Domain: create-content
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
+  - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to revise one paragraph so the claim is narrower and easier to check.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track draft status, the target reader, and the open questions.
+
+## 22. an article that answers a question people search
+
+- Header: For creating and optimizing content, here's how each tool can help:
+- Intro: AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit.
+- Domain: create-content
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
+  - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to revise one paragraph so the claim is narrower and easier to check.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track draft status, the target reader, and the open questions.
+
+## 23. rewrite this draft so it sounds like our brand
+
+- Header: MISS For help with rewrite this draft so it sounds like your brand, here's how each tool can help:
+- Intro: AI assistants can help with rewrite this draft so it sounds like your brand by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: create-content
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break rewrite this draft so it sounds into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for rewrite this draft so it sounds.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track rewrite this draft so it sounds.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on rewrite this draft so it sounds with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for rewrite this draft so it sounds.
+
+## 24. outline a post before I sit down to write
+
+- Header: For creating and optimizing content, here's how each tool can help:
+- Intro: AI agents can outline a blog or marketing page, draft the copy, and list SEO headings for you to edit.
+- Domain: create-content
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts marketing content with agents in a workspace built for that writing.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
+  - Writesonic — Specialist · Docs checked — Writesonic writes content and tracks where the brand gets mentioned.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a blog or marketing page and mark the sentences you should rewrite.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to revise one paragraph so the claim is narrower and easier to check.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track draft status, the target reader, and the open questions.
+
+## 25. thank the people who bought last week
+
+- Header: For help with customer follow-up, here's how each tool can help:
+- Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
+- Domain: customer-follow-up
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a customer note so it thanks them and asks one clear question.
+
+## 26. check in with customers after the job is done
+
+- Header: For help with customer follow-up, here's how each tool can help:
+- Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
+- Domain: customer-follow-up
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a customer note so it thanks them and asks one clear question.
+
+## 27. note to clients I have not heard from since the invoice
+
+- Header: For help with customer follow-up, here's how each tool can help:
+- Intro: AI agents can draft a note to a customer you already know, such as a thank-you or a check-in. You still send it.
+- Domain: customer-follow-up
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a thank-you or a check-in for a customer you already know.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn which customers to thank and what the note should say into a note you could hand a coworker.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out customers, the last visit, and whether you followed up with one row per item.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to pull a cited explanation of a short customer thank-you and keep the source.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to shorten a customer note so it thanks them and asks one clear question.
+
+## 28. ask recent buyers how the product is working out
+
+- Header: MISS For asking recent buyers how the product is working out, here's how each tool can help:
+- Intro: AI assistants can help with asking recent buyers how the product is working out by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: customer-follow-up
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break asking recent buyers how the product into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for asking recent buyers how the product.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track asking recent buyers how the product.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on asking recent buyers how the product with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for asking recent buyers how the product.
+
+## 29. a customer is angry about a late package
+
+- Header: For handling customer support tickets, here's how each tool can help:
+- Intro: AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle.
+- Domain: customer-support
+- Cards:
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
+  - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
+  - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
+  - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a refund ticket into a reply a person still approves before it is sent.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the order facts to confirm before you answer a customer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track ticket status, the order number, and who replies next.
+
+## 30. refund ticket sitting in the queue since Monday
+
+- Header: For handling customer support tickets, here's how each tool can help:
+- Intro: AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle.
+- Domain: customer-support
+- Cards:
+  - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
+  - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a refund ticket into a reply a person still approves before it is sent.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the order facts to confirm before you answer a customer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track ticket status, the order number, and who replies next.
+
+## 31. someone asked if we can replace a broken item
+
+- Header: MISS For help with a someone asked if we can replace a broken item, here's how each tool can help:
+- Intro: AI assistants can help with a someone asked if we can replace a broken item by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: customer-support
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a someone asked if we can into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a someone asked if we can.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a someone asked if we can.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a someone asked if we can with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a someone asked if we can.
+
+## 32. the help center does not cover this shipping question
+
+- Header: For handling customer support tickets, here's how each tool can help:
+- Intro: AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle.
+- Domain: customer-support
+- Cards:
+  - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
+  - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a refund ticket into a reply a person still approves before it is sent.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the order facts to confirm before you answer a customer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track ticket status, the order number, and who replies next.
+
+## 33. literature on sodium batteries for a brief
+
+- Header: For doing deep research, here's how each tool can help:
+- Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
+- Domain: deep-research
+- Cards:
+  - SciSpace — Specialist · Docs checked — SciSpace reads scientific papers and supports a literature review with chat.
+  - Elicit — Specialist · Docs checked — Elicit gathers papers for a literature review in its research assistant.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a literature review and mark which claims need a source.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two summaries and list claims that still have no citation.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track sources, the date, and the finding you took from each.
+
+## 34. sourced brief on the three vendors we might switch to
+
+- Header: MISS For help with a sourced brief on the three vendors we might switch to, here's how each tool can help:
+- Intro: AI assistants can help with a sourced brief on the three vendors we might switch to by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: deep-research
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break a sourced brief on the three into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for a sourced brief on the three.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track a sourced brief on the three.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on a sourced brief on the three with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for a sourced brief on the three.
+
+## 35. what do the papers actually say about this claim
+
+- Header: For doing deep research, here's how each tool can help:
+- Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
+- Domain: deep-research
+- Cards:
+  - SciSpace — Specialist · Docs checked — SciSpace reads scientific papers and supports a literature review with chat.
+  - Elicit — Specialist · Docs checked — Elicit gathers papers for a literature review in its research assistant.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a literature review and mark which claims need a source.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two summaries and list claims that still have no citation.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track sources, the date, and the finding you took from each.
+
+## 36. competitive read on the CRM space with citations
+
+- Header: For doing deep research, here's how each tool can help:
+- Intro: AI agents can do deep research by opening sources, summarizing the papers, and drafting a brief you can check.
+- Domain: deep-research
+- Cards:
+  - Elicit — Specialist · Docs checked — Elicit gathers papers for a literature review in its research assistant.
+  - SciSpace — Specialist · Docs checked — SciSpace reads scientific papers and supports a literature review with chat.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a literature review and mark which claims need a source.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two summaries and list claims that still have no citation.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track sources, the date, and the finding you took from each.
+
+## 37. the IRS form for my freelance income is still blank
+
+- Header: For doing your taxes, here's how each tool can help:
+- Intro: AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.
+- Domain: do-taxes
+- Cards:
+  - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
+  - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
+  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
+  - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to sort income and possible deductions into questions for a tax pro.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the forms and receipts you still need to gather before you file.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which tax documents you have and which ones are still missing.
+
+## 38. where do I put the home office deduction
+
+- Header: For doing your taxes, here's how each tool can help:
+- Intro: AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.
+- Domain: do-taxes
+- Cards:
+  - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
+  - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
+  - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
+  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to sort income and possible deductions into questions for a tax pro.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the forms and receipts you still need to gather before you file.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which tax documents you have and which ones are still missing.
+
+## 39. estimated payment is due and I have not calculated it
+
+- Header: For doing your taxes, here's how each tool can help:
+- Intro: AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.
+- Domain: do-taxes
+- Cards:
+  - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
+  - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
+  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
+  - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list quarterly income and expenses and the payment date you still confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write quarterly income, expenses, and the estimate you still check in the order you would actually do the work.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up quarters, income, expenses, and the estimate so you can scan it in one pass.
+
+## 40. help me get through this year's return
+
+- Header: For doing your taxes, here's how each tool can help:
+- Intro: AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.
+- Domain: do-taxes
+- Cards:
+  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
+  - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
+  - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
+  - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to sort income and possible deductions into questions for a tax pro.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the forms and receipts you still need to gather before you file.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which tax documents you have and which ones are still missing.
+
+## 41. the vendor bill does not match the purchase order
+
+- Header: For processing invoices and finance ops, here's how each tool can help:
+- Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
+- Domain: finance-ops
+- Cards:
+  - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
+  - Vic.ai — Specialist · Docs checked — Vic.ai reads invoices for an accounts-payable team.
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to pull invoice fields into a list and flag lines that do not match a purchase order.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to state which invoice lines a person should question before approving payment.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up invoice number, amount, and whether the line is an exception.
+
+## 42. enter this stack of invoices
+
+- Header: For processing invoices and finance ops, here's how each tool can help:
+- Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
+- Domain: finance-ops
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
+  - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
+  - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
+  - Vic.ai — Specialist · Docs checked — Vic.ai reads invoices for an accounts-payable team.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to pull invoice fields into a list and flag lines that do not match a purchase order.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to state which invoice lines a person should question before approving payment.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up invoice number, amount, and whether the line is an exception.
+
+## 43. expense report from the conference receipts
+
+- Header: For processing invoices and finance ops, here's how each tool can help:
+- Intro: AI agents can collect receipts and card charges into an expense report you still approve. You correct the category before it is filed.
+- Domain: finance-ops
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
+  - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
+  - BILL — Specialist · Docs checked — BILL includes spend and expense tools with its invoicing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the receipts an expense report is still missing.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to spell out the date, the amount, and the category on an expense report without adding a figure you have not checked.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put expenses, the receipt, and whether the report is approved where you can sort and filter it.
+
+## 44. which bills are due before Friday
+
+- Header: For processing invoices and finance ops, here's how each tool can help:
+- Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
+- Domain: finance-ops
+- Cards:
+  - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
+  - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
+  - Vic.ai — Specialist · Docs checked — Vic.ai reads invoices for an accounts-payable team.
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to pull invoice fields into a list and flag lines that do not match a purchase order.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to state which invoice lines a person should question before approving payment.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up invoice number, amount, and whether the line is an exception.
+
+## 45. cut the two hour podcast down to clips
+
+- Header: For cutting the two hour podcast down to clips, here's how each tool can help:
+- Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
+- Domain: game-creative
+- Cards:
+  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
+  - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
+  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
+  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
+  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to pick which moments in a long video are worth cutting into a short clip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list timecodes, captions, and which clip is ready.
+
+## 46. shorts from last night's stream
+
+- Header: For turning a long video into short clips, here's how each tool can help:
+- Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
+- Domain: game-creative
+- Cards:
+  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
+  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
+  - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
+  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
+  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to pick which moments in a long video are worth cutting into a short clip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list timecodes, captions, and which clip is ready.
+
+## 47. captions on the funny moments from the VOD
+
+- Header: For turning a long video into short clips, here's how each tool can help:
+- Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
+- Domain: game-creative
+- Cards:
+  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
+  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
+  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
+  - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
+  - Kapwing — Specialist · Docs checked — Kapwing trims, captions, and resizes a video into a social clip in the browser.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to pick which moments in a long video are worth cutting into a short clip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list timecodes, captions, and which clip is ready.
+
+## 48. a highlight from the boss fight
+
+- Header: For turning a long video into short clips, here's how each tool can help:
+- Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
+- Domain: game-creative
+- Cards:
+  - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
+  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
+  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
+  - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
+  - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to pick which moments in a long video are worth cutting into a short clip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list timecodes, captions, and which clip is ready.
+
+## 49. an NPC that remembers what the player said
+
+- Header: For adding an in-game character that can talk, here's how each tool can help:
+- Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
+- Domain: game-npcs
+- Cards:
+  - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
+  - MistScale — Specialist · Docs checked — MistScale remembers what a game character should know about the player.
+  - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
+  - Bitpart — Specialist · Docs checked — Bitpart supplies an engine and SDKs for a character that talks in a game.
+  - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a character line so it stays in the voice you described.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list lines, the trigger, and whether the game may say them.
+
+## 50. dialogue for the shopkeeper in the game
+
+- Header: For adding an in-game character that can talk, here's how each tool can help:
+- Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
+- Domain: game-npcs
+- Cards:
+  - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
+  - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
+  - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
+  - MistScale — Specialist · Docs checked — MistScale remembers what a game character should know about the player.
+  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a character line so it stays in the voice you described.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list lines, the trigger, and whether the game may say them.
+
+## 51. a character in Discord who stays in world
+
+- Header: For adding an in-game character that can talk, here's how each tool can help:
+- Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
+- Domain: game-npcs
+- Cards:
+  - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
+  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
+  - MistScale — Specialist · Docs checked — MistScale remembers what a game character should know about the player.
+  - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
+  - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a character line so it stays in the voice you described.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list lines, the trigger, and whether the game may say them.
+
+## 52. bark lines so the guards do not repeat one sentence
+
+- Header: For adding an in-game character that can talk, here's how each tool can help:
+- Intro: AI agents can draft what an in-game character says, while the game still decides which lines are allowed.
+- Domain: game-npcs
+- Cards:
+  - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
+  - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
+  - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
+  - MistScale — Specialist · Docs checked — MistScale remembers what a game character should know about the player.
+  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a character line so it stays in the voice you described.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list lines, the trigger, and whether the game may say them.
+
+## 53. which resumes are worth a phone screen
+
+- Header: For screening and sourcing candidates, here's how each tool can help:
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
+- Domain: hire-candidates
+- Cards:
+  - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
+  - Paradox — Specialist · Docs checked — Paradox schedules candidates and takes applications in a conversation.
+  - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to screen a resume against a role and list the gaps a person should confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft interview questions and the note you might send a candidate.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track applicants, the stage, and the next scheduling step.
+
+## 54. job description for a part time bookkeeper
+
+- Header: For screening and sourcing candidates, here's how each tool can help:
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
+- Domain: hire-candidates
+- Cards:
+  - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
+  - Paradox — Specialist · Docs checked — Paradox schedules candidates and takes applications in a conversation.
+  - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to screen a resume against a role and list the gaps a person should confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft interview questions and the note you might send a candidate.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track applicants, the stage, and the next scheduling step.
+
+## 55. outreach to designers who might want the role
+
+- Header: MISS For help with an outreach to designers who might want the role, here's how each tool can help:
+- Intro: AI assistants can help with an outreach to designers who might want the role by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: hire-candidates
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break an outreach to designers who might into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for an outreach to designers who might.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track an outreach to designers who might.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on an outreach to designers who might with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for an outreach to designers who might.
+
+## 56. score these applicants against the posting
+
+- Header: For scoring these applicants against the posting, here's how each tool can help:
+- Intro: AI agents can screen resumes, draft candidate outreach, and suggest interview times for you to approve.
+- Domain: hire-candidates
+- Cards:
+  - Metaview — Specialist · Docs checked — Metaview finds candidate profiles and takes notes in the interview.
+  - Paradox — Specialist · Docs checked — Paradox schedules candidates and takes applications in a conversation.
+  - Gem — Specialist · Docs checked — Gem screens candidates and reports where each one stands.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to screen a resume against a role and list the gaps a person should confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft interview questions and the note you might send a candidate.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track applicants, the stage, and the next scheduling step.
+
+## 57. new hire cannot get on the vpn
+
+- Header: For handling IT help desk requests, here's how each tool can help:
+- Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
+- Domain: it-helpdesk
+- Cards:
+  - Freshservice — Specialist · Docs checked — Freshservice runs an IT service desk that takes incoming requests.
+  - Moveworks — Specialist · Docs checked — Moveworks routes employee IT requests and answers common ones itself.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to triage a help desk ticket and write the password-reset steps a person still runs.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to separate a password reset from a ticket that needs an admin.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track tickets, the owner, and the next handoff.
+
+## 58. password reset for the laptop that locked itself
+
+- Header: For handling IT help desk requests, here's how each tool can help:
+- Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
+- Domain: it-helpdesk
+- Cards:
+  - Freshservice — Specialist · Docs checked — Freshservice runs an IT service desk that takes incoming requests.
+  - Moveworks — Specialist · Docs checked — Moveworks routes employee IT requests and answers common ones itself.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to triage a help desk ticket and write the password-reset steps a person still runs.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to separate a password reset from a ticket that needs an admin.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track tickets, the owner, and the next handoff.
+
+## 59. the office printer ticket is still open
+
+- Header: For handling IT help desk requests, here's how each tool can help:
+- Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
+- Domain: it-helpdesk
+- Cards:
+  - Freshservice — Specialist · Docs checked — Freshservice runs an IT service desk that takes incoming requests.
+  - Moveworks — Specialist · Docs checked — Moveworks routes employee IT requests and answers common ones itself.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to triage a help desk ticket and write the password-reset steps a person still runs.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to separate a password reset from a ticket that needs an admin.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track tickets, the owner, and the next handoff.
+
+## 60. wifi drops every time someone joins the call
+
+- Header: For handling IT help desk requests, here's how each tool can help:
+- Intro: AI agents can triage an IT help desk ticket, draft a password-reset step, and route what a person still has to do.
+- Domain: it-helpdesk
+- Cards:
+  - Freshservice — Specialist · Docs checked — Freshservice runs an IT service desk that takes incoming requests.
+  - Moveworks — Specialist · Docs checked — Moveworks routes employee IT requests and answers common ones itself.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to triage a help desk ticket and write the password-reset steps a person still runs.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to separate a password reset from a ticket that needs an admin.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track tickets, the owner, and the next handoff.
+
+## 61. where is the policy on parental leave
+
+- Header: For answering questions from your company wiki, here's how each tool can help:
+- Intro: AI agents can search an internal knowledge base and answer a policy question with the document to check.
+- Domain: knowledge-qa
+- Cards:
+  - Glean — Specialist · Docs checked — Glean searches internal company documents through a large set of connectors.
+  - Guru — Specialist · Docs checked — Guru answers questions from company cards and lets its agents improve those cards.
+  - Slite — Specialist · Docs checked — Slite answers questions over a team's docs with its Ask search.
+  - Notion — Specialist · Docs checked — Notion searches the docs and wikis a team already keeps.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to answer a policy question and name the wiki page a teammate should open.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft an answer that quotes only the document text you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to collect the policy excerpts people keep asking about in one doc.
+
+## 62. answer this from the handbook not from the internet
+
+- Header: For answering this from the handbook not from the internet, here's how each tool can help:
+- Intro: AI agents can search an internal knowledge base and answer a policy question with the document to check.
+- Domain: knowledge-qa
+- Cards:
+  - Guru — Specialist · Docs checked — Guru answers questions from company cards and lets its agents improve those cards.
+  - Glean — Specialist · Docs checked — Glean searches internal company documents through a large set of connectors.
+  - Slite — Specialist · Docs checked — Slite answers questions over a team's docs with its Ask search.
+  - Notion — Specialist · Docs checked — Notion searches the docs and wikis a team already keeps.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to answer a policy question and name the wiki page a teammate should open.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft an answer that quotes only the document text you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to collect the policy excerpts people keep asking about in one doc.
+
+## 63. the new hire asked how expenses get approved
+
+- Header: MISS For running payroll, here's how each tool can help:
+- Intro: AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.
+- Domain: knowledge-qa
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn hours, rates, and deductions into a payroll list you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which payroll figures a person must confirm before anyone is paid.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up employees, hours, rate, and gross pay.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find what a payroll run should include and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag a pay line whose hours or rate you have not confirmed.
+
+## 64. search the wiki for the refund rule
+
+- Header: For answering questions from your company wiki, here's how each tool can help:
+- Intro: AI agents can search an internal knowledge base and answer a policy question with the document to check.
+- Domain: knowledge-qa
+- Cards:
+  - Glean — Specialist · Docs checked — Glean searches internal company documents through a large set of connectors.
+  - Guru — Specialist · Docs checked — Guru answers questions from company cards and lets its agents improve those cards.
+  - Slite — Specialist · Docs checked — Slite answers questions over a team's docs with its Ask search.
+  - Notion — Specialist · Docs checked — Notion searches the docs and wikis a team already keeps.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to answer a policy question and name the wiki page a teammate should open.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft an answer that quotes only the document text you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to collect the policy excerpts people keep asking about in one doc.
+
+## 65. I want to practice Japanese on the train
+
+- Header: For practicing a language, here's how each tool can help:
+- Intro: AI agents can practice a language with you, explain a mistake, and suggest the next drill.
+- Domain: learn-language
+- Cards:
+  - Duolingo Max — Specialist · Docs checked — Duolingo Max lets you practice Japanese conversation with an AI partner.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to practice a short dialogue and explain the mistake in the last sentence.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to correct one sentence and give a similar one to try.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep phrases, the correction, and what to practice next.
+
+## 66. drill me on French verbs I keep mixing up
+
+- Header: For practicing a language, here's how each tool can help:
+- Intro: AI agents can practice a language with you, explain a mistake, and suggest the next drill.
+- Domain: learn-language
+- Cards:
+  - Duolingo Max — Specialist · Docs checked — Duolingo Max lets you practice French conversation with an AI partner.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to practice a short dialogue and explain the mistake in the last sentence.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to correct one sentence and give a similar one to try.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep phrases, the correction, and what to practice next.
+
+## 67. conversation practice in Spanish for a trip
+
+- Header: For practicing a language, here's how each tool can help:
+- Intro: AI agents can practice a language with you, explain a mistake, and suggest the next drill.
+- Domain: learn-language
+- Cards:
+  - Duolingo Max — Specialist · Docs checked — Duolingo Max lets you practice Spanish conversation with an AI partner.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to practice a short dialogue and explain the mistake in the last sentence.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to correct one sentence and give a similar one to try.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep phrases, the correction, and what to practice next.
+
+## 68. correct my German without switching to English
+
+- Header: For practicing your language, here's how each tool can help:
+- Intro: AI agents can practice a language with you, explain a mistake, and suggest the next drill.
+- Domain: learn-language
+- Cards:
+  - Duolingo Max — Specialist · Docs checked — Duolingo Max lets you practice German conversation with an AI partner.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to practice a short dialogue and explain the mistake in the last sentence.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to correct one sentence and give a similar one to try.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep phrases, the correction, and what to practice next.
+
+## 69. a 3d model of a chair from this description
+
+- Header: For making a 3D model, here's how each tool can help:
+- Intro: AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: make-3d
+- Cards:
+  - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a 3D prompt so the subject, scale, and style are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each 3D prompt, the result, and what you would change.
+
+## 70. mesh of a low poly tree for the scene
+
+- Header: For making a 3D model, here's how each tool can help:
+- Intro: AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: make-3d
+- Cards:
+  - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a 3D prompt so the subject, scale, and style are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each 3D prompt, the result, and what you would change.
+
+## 71. turn this sketch into a 3d prop
+
+- Header: For turning this sketch into a 3D prop, here's how each tool can help:
+- Intro: AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: make-3d
+- Cards:
+  - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a 3D prompt so the subject, scale, and style are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each 3D prompt, the result, and what you would change.
+
+## 72. text to 3d for a product mockup
+
+- Header: For making a 3D model, here's how each tool can help:
+- Intro: AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: make-3d
+- Cards:
+  - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a 3D prompt so the subject, scale, and style are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each 3D prompt, the result, and what you would change.
+
+## 73. picture of a ceramic lamp on a wood table
+
+- Header: For making an image, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten an image prompt so the subject, style, and framing are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each image prompt, the result, and what you would change.
+
+## 74. poster image with a bold red circle
+
+- Header: For making an image, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten an image prompt so the subject, style, and framing are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each image prompt, the result, and what you would change.
+
+## 75. concept art of a rainy alley
+
+- Header: For making an image, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten an image prompt so the subject, style, and framing are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each image prompt, the result, and what you would change.
+
+## 76. change the background of this generated image
+
+- Header: For making an image, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten an image prompt so the subject, style, and framing are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each image prompt, the result, and what you would change.
+
+## 77. I have 200 unread messages and I am behind
+
+- Header: For managing an email inbox, here's how each tool can help:
+- Intro: AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends.
+- Domain: manage-inbox
+- Cards:
+  - Shortwave — Specialist · Docs checked — Shortwave searches an email inbox and drafts from that client.
+  - Fyxer — Specialist · Docs checked — Fyxer organizes an email inbox and drafts the replies.
+  - Spark — Specialist · Docs checked — Spark drafts email replies and sorts the inbox.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to group an inbox into threads that need a reply and threads to archive.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short reply to one thread and list what you should not promise.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list senders, subjects, and whether a reply is still owed.
+
+## 78. sort the mail that actually needs a reply today
+
+- Header: For sorting the mail that actually needs a reply today, here's how each tool can help:
+- Intro: AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends.
+- Domain: manage-inbox
+- Cards:
+  - Shortwave — Specialist · Docs checked — Shortwave searches an email inbox and drafts from that client.
+  - Fyxer — Specialist · Docs checked — Fyxer organizes an email inbox and drafts the replies.
+  - Spark — Specialist · Docs checked — Spark drafts email replies and sorts the inbox.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to group an inbox into threads that need a reply and threads to archive.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short reply to one thread and list what you should not promise.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list senders, subjects, and whether a reply is still owed.
+
+## 79. draft a response to the thread with my vendor
+
+- Header: For drafting a response to the thread with your vendor, here's how each tool can help:
+- Intro: AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends.
+- Domain: manage-inbox
+- Cards:
+  - Fyxer — Specialist · Docs checked — Fyxer organizes an email inbox and drafts the replies.
+  - Shortwave — Specialist · Docs checked — Shortwave searches an email inbox and drafts from that client.
+  - Spark — Specialist · Docs checked — Spark drafts email replies and sorts the inbox.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to group an inbox into threads that need a reply and threads to archive.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short reply to one thread and list what you should not promise.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list senders, subjects, and whether a reply is still owed.
+
+## 80. surface what my boss sent and bury the newsletters
+
+- Header: For sending an email newsletter, here's how each tool can help:
+- Intro: AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends.
+- Domain: manage-inbox
+- Cards:
+  - Shortwave — Specialist · Docs checked — Shortwave searches an email inbox and drafts from that client.
+  - Fyxer — Specialist · Docs checked — Fyxer organizes an email inbox and drafts the replies.
+  - Spark — Specialist · Docs checked — Spark drafts email replies and sorts the inbox.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to group an inbox into threads that need a reply and threads to archive.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short reply to one thread and list what you should not promise.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list senders, subjects, and whether a reply is still owed.
+
+## 81. my brokerage account is a mess of random stocks
+
+- Header: For managing your investment portfolio, here's how each tool can help:
+- Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
+- Domain: manage-portfolio
+- Cards:
+  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
+  - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in a portfolio and list the fee questions worth asking.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the holdings you would fill in before comparing how the money is split.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put one row per account with a column for the annual cost.
+
+## 82. should I rebalance the retirement accounts this quarter
+
+- Header: For managing an investment portfolio, here's how each tool can help:
+- Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
+- Domain: manage-portfolio
+- Cards:
+  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
+  - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in a portfolio and list the fee questions worth asking.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the holdings you would fill in before comparing how the money is split.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put one row per account with a column for the annual cost.
+
+## 83. how is the 401k allocation looking
+
+- Header: For managing an investment portfolio, here's how each tool can help:
+- Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
+- Domain: manage-portfolio
+- Cards:
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
+  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
+  - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in a portfolio and list the fee questions worth asking.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the holdings you would fill in before comparing how the money is split.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put one row per account with a column for the annual cost.
+
+## 84. track what my index funds did this year
+
+- Header: For tracking what your index funds did this year, here's how each tool can help:
+- Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
+- Domain: manage-portfolio
+- Cards:
+  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
+  - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
+  - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
+  - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
+  - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate the accounts in a portfolio and list the fee questions worth asking.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the holdings you would fill in before comparing how the money is split.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put one row per account with a column for the annual cost.
+
+## 85. coupon email for the weekend sale
+
+- Header: For automating marketing promotions, here's how each tool can help:
+- Intro: AI agents can draft a promotion, schedule the email or post, and leave the send for you to approve.
+- Domain: marketing-promotions
+- Cards:
+  - Klaviyo — Specialist · Docs checked — Klaviyo sends email and text campaigns and builds a flow for a promotion.
+  - Mailchimp — Specialist · Docs checked — Mailchimp builds promo email campaigns and schedules them to your list.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a promo email and a social post, and mark what you still send yourself.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a promotion so it states the offer and does not invent a discount.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each campaign, the channel, and whether the send is approved.
+
+## 86. text blast for the holiday discount
+
+- Header: For texting blast for the holiday discount, here's how each tool can help:
+- Intro: AI agents can draft a promotion, schedule the email or post, and leave the send for you to approve.
+- Domain: marketing-promotions
+- Cards:
+  - Klaviyo — Specialist · Docs checked — Klaviyo sends email and text campaigns and builds a flow for a promotion.
+  - Mailchimp — Specialist · Docs checked — Mailchimp builds promo email campaigns and schedules them to your list.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a promo email and a social post, and mark what you still send yourself.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a promotion so it states the offer and does not invent a discount.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each campaign, the channel, and whether the send is approved.
+
+## 87. promo campaign for the new flavor
+
+- Header: For automating marketing promotions, here's how each tool can help:
+- Intro: AI agents can draft a promotion, schedule the email or post, and leave the send for you to approve.
+- Domain: marketing-promotions
+- Cards:
+  - Klaviyo — Specialist · Docs checked — Klaviyo sends email and text campaigns and builds a flow for a promotion.
+  - Mailchimp — Specialist · Docs checked — Mailchimp builds promo email campaigns and schedules them to your list.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Copy.ai — Specialist · Docs checked — Copy.ai runs marketing content and go-to-market writing through a workflow.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a promo email and a social post, and mark what you still send yourself.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a promotion so it states the offer and does not invent a discount.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each campaign, the channel, and whether the send is approved.
+
+## 88. schedule the announcement posts and the email together
+
+- Header: MISS For scheduling the announcement posts and the email together, here's how each tool can help:
+- Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
+- Domain: marketing-promotions
+- Cards:
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a social post and a reply to a comment, both for you to send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a caption so it makes one point and does not invent a statistic.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay posts across the month with the claim and the asset for each.
+
+## 89. notes from the standup and the tasks we named
+
+- Header: For turning a meeting into notes and tasks, here's how each tool can help:
+- Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
+- Domain: meetings-knowledge
+- Cards:
+  - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
+  - Obsidian — Specialist · Docs checked — Obsidian stores meeting notes in files on your computer.
+  - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn meeting notes into decisions and action items you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to extract tasks from a transcript and drop anything that was only an aside.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list action items with an owner and a date.
+
+## 90. turn the client call recording into action items
+
+- Header: For turning the client call recording into action items, here's how each tool can help:
+- Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
+- Domain: meetings-knowledge
+- Cards:
+  - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
+  - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
+  - Obsidian — Specialist · Docs checked — Obsidian stores meeting notes in files on your computer.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn meeting notes into decisions and action items you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to extract tasks from a transcript and drop anything that was only an aside.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list action items with an owner and a date.
+
+## 91. what did we decide in yesterday's meeting
+
+- Header: For turning a meeting into notes and tasks, here's how each tool can help:
+- Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
+- Domain: meetings-knowledge
+- Cards:
+  - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
+  - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
+  - Obsidian — Specialist · Docs checked — Obsidian stores meeting notes in files on your computer.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn meeting notes into decisions and action items you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to extract tasks from a transcript and drop anything that was only an aside.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list action items with an owner and a date.
+
+## 92. summary of the transcript for people who missed it
+
+- Header: For turning a meeting into notes and tasks, here's how each tool can help:
+- Intro: AI agents can turn meeting notes or a transcript into decisions and action items so you can edit the list instead of replaying the call.
+- Domain: meetings-knowledge
+- Cards:
+  - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
+  - Obsidian — Specialist · Docs checked — Obsidian stores meeting notes in files on your computer.
+  - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn meeting notes into decisions and action items you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to extract tasks from a transcript and drop anything that was only an aside.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list action items with an owner and a date.
+
+## 93. split the research across a few agents
+
+- Header: For splitting one job across several agents, here's how each tool can help:
+- Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
+- Domain: multi-agent-workflows
+- Cards:
+  - CrewAI — Specialist · Smoke-tested — CrewAI splits one job across agents that each have a role.
+  - LangChain — Specialist · Smoke-tested — LangChain composes agents that call tools in code you write.
+  - AutoGen (Microsoft) — Specialist · Smoke-tested — AutoGen (Microsoft) runs conversations between several agents in Python.
+  - Dify — Specialist · Docs checked — Dify lays out agent workflows on a visual canvas you can host.
+  - Flowise — Specialist · Docs checked — Flowise assembles low-code model flows for agents on a server you run.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to split one job into steps and say which step a second agent could draft.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a handoff so each agent has one output you can approve.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the step, who drafts it, and whether you accepted the result.
+
+## 94. a crew where one agent searches and another writes
+
+- Header: For splitting one job across several agents, here's how each tool can help:
+- Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
+- Domain: multi-agent-workflows
+- Cards:
+  - CrewAI — Specialist · Smoke-tested — CrewAI splits one job across agents that each have a role.
+  - LangChain — Specialist · Smoke-tested — LangChain composes agents that call tools in code you write.
+  - AutoGen (Microsoft) — Specialist · Smoke-tested — AutoGen (Microsoft) runs conversations between several agents in Python.
+  - Dify — Specialist · Docs checked — Dify lays out agent workflows on a visual canvas you can host.
+  - Flowise — Specialist · Docs checked — Flowise assembles low-code model flows for agents on a server you run.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to split one job into steps and say which step a second agent could draft.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a handoff so each agent has one output you can approve.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the step, who drafts it, and whether you accepted the result.
+
+## 95. orchestrate three agents on the same job
+
+- Header: For orchestrating three agents on the same job, here's how each tool can help:
+- Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
+- Domain: multi-agent-workflows
+- Cards:
+  - CrewAI — Specialist · Smoke-tested — CrewAI splits one job across agents that each have a role.
+  - LangChain — Specialist · Smoke-tested — LangChain composes agents that call tools in code you write.
+  - AutoGen (Microsoft) — Specialist · Smoke-tested — AutoGen (Microsoft) runs conversations between several agents in Python.
+  - Dify — Specialist · Docs checked — Dify lays out agent workflows on a visual canvas you can host.
+  - Flowise — Specialist · Docs checked — Flowise assembles low-code model flows for agents on a server you run.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to split one job into steps and say which step a second agent could draft.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a handoff so each agent has one output you can approve.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the step, who drafts it, and whether you accepted the result.
+
+## 96. multi agent setup instead of one long prompt
+
+- Header: For splitting one job across several agents, here's how each tool can help:
+- Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
+- Domain: multi-agent-workflows
+- Cards:
+  - CrewAI — Specialist · Smoke-tested — CrewAI splits one job across agents that each have a role.
+  - AutoGen (Microsoft) — Specialist · Smoke-tested — AutoGen (Microsoft) runs conversations between several agents in Python.
+  - LangChain — Specialist · Smoke-tested — LangChain composes agents that call tools in code you write.
+  - Dify — Specialist · Docs checked — Dify lays out agent workflows on a visual canvas you can host.
+  - Flowise — Specialist · Docs checked — Flowise assembles low-code model flows for agents on a server you run.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to split one job into steps and say which step a second agent could draft.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a handoff so each agent has one output you can approve.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track the step, who drafts it, and whether you accepted the result.
+
+## 97. hours are in and people need to be paid Friday
+
+- Header: For running payroll, here's how each tool can help:
+- Intro: AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.
+- Domain: payroll
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn hours, rates, and deductions into a payroll list you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which payroll figures a person must confirm before anyone is paid.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up employees, hours, rate, and gross pay.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find what a payroll run should include and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag a pay line whose hours or rate you have not confirmed.
+
+## 98. paycheck amounts look wrong for the overtime week
+
+- Header: For running payroll, here's how each tool can help:
+- Intro: AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.
+- Domain: payroll
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn hours, rates, and deductions into a payroll list you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which payroll figures a person must confirm before anyone is paid.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up employees, hours, rate, and gross pay.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find what a payroll run should include and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag a pay line whose hours or rate you have not confirmed.
+
+## 99. what do I still have to send the payroll company
+
+- Header: For running payroll, here's how each tool can help:
+- Intro: AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.
+- Domain: payroll
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn hours, rates, and deductions into a payroll list you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which payroll figures a person must confirm before anyone is paid.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up employees, hours, rate, and gross pay.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find what a payroll run should include and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag a pay line whose hours or rate you have not confirmed.
+
+## 100. flights to Denver that are not overnight
+
+- Header: For planning and booking travel, here's how each tool can help:
+- Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
+- Domain: plan-travel
+- Cards:
+  - GuideGeek — Specialist · Docs checked — GuideGeek plans travel across flights, stays, restaurants, and experiences.
+  - Wonderplan — Specialist · Docs checked — Wonderplan drafts a custom itinerary for the trip.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an itinerary with flights, hotels, and the bookings you still make yourself.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two hotel descriptions and say what is still unconfirmed.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put flight options, hotels, and dates in separate columns.
+
+## 101. a week in Lisbon with a kid
+
+- Header: For planning and booking travel, here's how each tool can help:
+- Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
+- Domain: plan-travel
+- Cards:
+  - GuideGeek — Specialist · Docs checked — GuideGeek plans travel across flights, stays, restaurants, and experiences.
+  - Wonderplan — Specialist · Docs checked — Wonderplan drafts a custom itinerary for the trip.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an itinerary with flights, hotels, and the bookings you still make yourself.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two hotel descriptions and say what is still unconfirmed.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put flight options, hotels, and dates in separate columns.
+
+## 102. hotel near the conference that is walkable
+
+- Header: For planning and booking travel, here's how each tool can help:
+- Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
+- Domain: plan-travel
+- Cards:
+  - GuideGeek — Specialist · Docs checked — GuideGeek plans travel across flights, stays, restaurants, and experiences.
+  - Wonderplan — Specialist · Docs checked — Wonderplan drafts a custom itinerary for the trip.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an itinerary with flights, hotels, and the bookings you still make yourself.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two hotel descriptions and say what is still unconfirmed.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put flight options, hotels, and dates in separate columns.
+
+## 103. turn this job walkthrough into a price for the customer
+
+- Header: For turning this job walkthrough into a price for the customer, here's how each tool can help:
+- Intro: AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers before it goes out.
+- Domain: quotes
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a quote from the job details and the price you set.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to mark which numbers in a quote you still need to confirm.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up the scope, the price, and whether the customer accepted.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find what a simple quote usually includes and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to highlight a price in the quote that you have not confirmed.
+
+## 104. estimate for the bathroom remodel they asked about
+
+- Header: For drafting a quote, here's how each tool can help:
+- Intro: AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers before it goes out.
+- Domain: quotes
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a quote from the job details and the price you set.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to mark which numbers in a quote you still need to confirm.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up the scope, the price, and whether the customer accepted.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find what a simple quote usually includes and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to highlight a price in the quote that you have not confirmed.
+
+## 105. proposal with the line items we discussed
+
+- Header: For drafting a quote, here's how each tool can help:
+- Intro: AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers before it goes out.
+- Domain: quotes
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a quote from the job details and the price you set.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to mark which numbers in a quote you still need to confirm.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up the scope, the price, and whether the customer accepted.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find what a simple quote usually includes and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to highlight a price in the quote that you have not confirmed.
+
+## 106. ask the client for a google review after the job
+
+- Header: For asking the client for a Google review after the job, here's how each tool can help:
+- Intro: AI agents can draft the review request you send after a job and a short reply to a public review. You still send it.
+- Domain: review-requests
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the review request you send after a job and a short reply to a public review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to shorten a review request so it asks once and does not offer a reward.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track finished jobs, whether you asked for a review, and the public reply.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on asking customers for reviews and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to remove any line that offers a reward for a review.
+
+## 107. reply to the one star review without being defensive
+
+- Header: For asking customers for reviews, here's how each tool can help:
+- Intro: AI agents can draft the review request you send after a job and a short reply to a public review. You still send it.
+- Domain: review-requests
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the review request you send after a job and a short reply to a public review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to shorten a review request so it asks once and does not offer a reward.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track finished jobs, whether you asked for a review, and the public reply.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on asking customers for reviews and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to remove any line that offers a reward for a review.
+
+## 108. a short text asking happy customers to rate us
+
+- Header: For asking customers for reviews, here's how each tool can help:
+- Intro: AI agents can draft the review request you send after a job and a short reply to a public review. You still send it.
+- Domain: review-requests
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the review request you send after a job and a short reply to a public review.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to shorten a review request so it asks once and does not offer a reward.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track finished jobs, whether you asked for a review, and the public reply.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on asking customers for reviews and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to remove any line that offers a reward for a review.
+
+## 109. I wear every hat and I need a plan for the week
+
+- Header: MISS For help with an i wear every hat, here's how each tool can help:
+- Intro: AI assistants can help with an i wear every hat by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: run-a-business
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break an i wear every hat into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for an i wear every hat.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track an i wear every hat.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on an i wear every hat with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for an i wear every hat.
+
+## 110. receipts, posts, and a customer who is waiting on me
+
+- Header: MISS For processing invoices and finance ops, here's how each tool can help:
+- Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
+- Domain: run-a-business
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
+  - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
+  - BILL — Specialist · Docs checked — BILL includes spend and expense tools with its invoicing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to pull invoice fields into a list and flag lines that do not match a purchase order.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to state which invoice lines a person should question before approving payment.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up invoice number, amount, and whether the line is an exception.
+
+## 111. what should a one person shop do first on Monday
+
+- Header: For running a small business, here's how each tool can help:
+- Intro: AI agents can capture receipts, send invoices, schedule the week's posts, and draft customer replies for a small business. You still approve the money and the messages.
+- Domain: run-a-business
+- Cards:
+  - Dext — Specialist · Docs checked — Dext captures receipts and invoices so a small business can keep the books current.
+  - BILL — Specialist · Docs checked — BILL sends customer invoices and pays vendor bills for a small business.
+  - Mailchimp — Specialist · Docs checked — Mailchimp sends email campaigns to the customers a small business already has.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts a small business can publish through the week.
+  - Zendesk — Specialist · Docs checked — Zendesk runs the customer support inbox for a small business.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a customer reply and a short list of bookkeeping you still check.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to outline one customer reply, one post, and the bookkeeping step you still do yourself.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track customers, the next reply, and the bookkeeping item still open.
+
+## 112. I have a list of companies and no idea who to email first
+
+- Header: For qualifying leads and sending sales outreach, here's how each tool can help:
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
+- Domain: sales-outreach
+- Cards:
+  - Apollo — Specialist · Docs checked — Apollo looks up contacts and companies before anyone writes sales outreach.
+  - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
+  - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
+  - Clay — Specialist · Docs checked — Clay pulls lead data from many providers into one table for outreach.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline how you would research one lead and which sentence you would actually send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a cold email so the ask is specific and you still choose what gets sent.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track leads, the last contact, and the next outreach step in one view.
+
+## 113. first note to a prospect who downloaded the guide
+
+- Header: For qualifying leads and sending sales outreach, here's how each tool can help:
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
+- Domain: sales-outreach
+- Cards:
+  - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
+  - Apollo — Specialist · Docs checked — Apollo looks up contacts and companies before anyone writes sales outreach.
+  - Clay — Specialist · Docs checked — Clay pulls lead data from many providers into one table for outreach.
+  - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline how you would research one lead and which sentence you would actually send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a cold email so the ask is specific and you still choose what gets sent.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track leads, the last contact, and the next outreach step in one view.
+
+## 114. these leads are sitting in the pipeline with no next step
+
+- Header: For qualifying leads and sending sales outreach, here's how each tool can help:
+- Intro: AI agents can research a sales lead, draft the outreach, and leave the final send for you to approve.
+- Domain: sales-outreach
+- Cards:
+  - Instantly — Specialist · Docs checked — Instantly sends sales email sequences from more than one inbox.
+  - Apollo — Specialist · Docs checked — Apollo looks up contacts and companies before anyone writes sales outreach.
+  - Clay — Specialist · Docs checked — Clay pulls lead data from many providers into one table for outreach.
+  - Smartlead — Specialist · Docs checked — Smartlead sets up cold-email outreach and fixes the sequence when it breaks.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline how you would research one lead and which sentence you would actually send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a cold email so the ask is specific and you still choose what gets sent.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track leads, the last contact, and the next outreach step in one view.
+
+## 115. which sales were taxable in Texas this quarter
+
+- Header: For handling sales tax, here's how each tool can help:
+- Intro: AI agents can separate taxable sales from the receipts you already have, list the rate and the filing date to confirm, and draft questions for the state form. You still file it.
+- Domain: sales-tax
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate taxable sales from receipts and list the filing date to confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft questions about which sales are taxable before you file.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up sales, whether each one is taxable, and the tax collected.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find a state's sales-tax filing page and keep the link.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a sale you have not yet called taxable or exempt.
+
+## 116. the state form wants a number I do not have yet
+
+- Header: MISS For help with the state form wants a number i do not have yet, here's how each tool can help:
+- Intro: AI assistants can help with the state form wants a number i do not have yet by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: sales-tax
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break the state form wants a number into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for the state form wants a number.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track the state form wants a number.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on the state form wants a number with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for the state form wants a number.
+
+## 117. vat on the european orders
+
+- Header: For handling your VAT return, here's how each tool can help:
+- Intro: AI agents can list the VAT collected and the VAT paid, and draft the figures for the return. You still file it.
+- Domain: sales-tax
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list VAT collected and VAT paid and the figures you still confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write VAT collected, VAT paid, and the return date in the order you would actually do the work.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out sales, the VAT collected, and the VAT paid with one row per item.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to look up a VAT return and keep the links beside what you found.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to flag which VAT figures you should confirm before you file.
+
+## 118. find a time for the three of us next week
+
+- Header: For finding a time for the three of us next week, here's how each tool can help:
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
+- Domain: scheduling-assistant
+- Cards:
+  - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
+  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
+  - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to propose two meeting times and a short prep list from a messy calendar note.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of constraints into the times you could actually offer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out next week's meetings and reminders by day.
+
+## 119. send a link so clients can grab a slot
+
+- Header: For sending a link so clients can grab a slot, here's how each tool can help:
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
+- Domain: scheduling-assistant
+- Cards:
+  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
+  - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
+  - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to propose two meeting times and a short prep list from a messy calendar note.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of constraints into the times you could actually offer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out next week's meetings and reminders by day.
+
+## 120. move Thursday's call without double booking
+
+- Header: For scheduling and admin, here's how each tool can help:
+- Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
+- Domain: scheduling-assistant
+- Cards:
+  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
+  - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
+  - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to propose two meeting times and a short prep list from a messy calendar note.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of constraints into the times you could actually offer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out next week's meetings and reminders by day.
+
+## 121. a phishing email that got forwarded to security
+
+- Header: For monitoring security threats, here's how each tool can help:
+- Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
+- Domain: security-ops
+- Cards:
+  - Abnormal — Specialist · Docs checked — Abnormal flags email threats by watching how an account usually behaves.
+  - Charlotte AI — Specialist · Docs checked — Charlotte AI assists security analysts inside the CrowdStrike platform.
+  - Dropzone AI — Specialist · Docs checked — Dropzone AI reviews threat alerts and shows the reasoning behind each one.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to summarize a phishing report and list what a person should verify before anyone clicks.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say whether a pasted email header is enough to call something phishing.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track alerts, the severity, and the evidence still missing.
+
+## 122. this alert fired and I do not know if it is real
+
+- Header: For monitoring security threats, here's how each tool can help:
+- Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
+- Domain: security-ops
+- Cards:
+  - Dropzone AI — Specialist · Docs checked — Dropzone AI reviews threat alerts and shows the reasoning behind each one.
+  - Charlotte AI — Specialist · Docs checked — Charlotte AI assists security analysts inside the CrowdStrike platform.
+  - Abnormal — Specialist · Docs checked — Abnormal flags email threats by watching how an account usually behaves.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to summarize a phishing report and list what a person should verify before anyone clicks.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say whether a pasted email header is enough to call something phishing.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track alerts, the severity, and the evidence still missing.
+
+## 123. triage the malware ticket before the morning standup
+
+- Header: For triaging the malware ticket before the morning standup, here's how each tool can help:
+- Intro: AI agents can summarize a security alert or a phishing report and list what a person should verify before anyone acts.
+- Domain: security-ops
+- Cards:
+  - Dropzone AI — Specialist · Docs checked — Dropzone AI reviews threat alerts and shows the reasoning behind each one.
+  - Charlotte AI — Specialist · Docs checked — Charlotte AI assists security analysts inside the CrowdStrike platform.
+  - Abnormal — Specialist · Docs checked — Abnormal flags email threats by watching how an account usually behaves.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to summarize a phishing report and list what a person should verify before anyone clicks.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say whether a pasted email header is enough to call something phishing.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track alerts, the severity, and the evidence still missing.
+
+## 124. who can work Saturday at the cafe
+
+- Header: For scheduling staff shifts, here's how each tool can help:
+- Intro: AI agents can draft a weekly shift schedule from who is available and write the text you send the team. You still post the final schedule.
+- Domain: shift-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a weekly shift schedule from who is available and the text you send the team.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to point out shifts that overlap or leave a day uncovered.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up employees, the days they can work, and the assigned shift.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on writing a fair weekly schedule and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to name the day that still has nobody assigned.
+
+## 125. build next week's rota from the availability sheet
+
+- Header: For scheduling staff shifts, here's how each tool can help:
+- Intro: AI agents can draft a weekly shift schedule from who is available and write the text you send the team. You still post the final schedule.
+- Domain: shift-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a weekly shift schedule from who is available and the text you send the team.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to point out shifts that overlap or leave a day uncovered.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up employees, the days they can work, and the assigned shift.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on writing a fair weekly schedule and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to name the day that still has nobody assigned.
+
+## 126. two people asked off the same dinner shift
+
+- Header: For scheduling staff shifts, here's how each tool can help:
+- Intro: AI agents can draft a weekly shift schedule from who is available and write the text you send the team. You still post the final schedule.
+- Domain: shift-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a weekly shift schedule from who is available and the text you send the team.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to point out shifts that overlap or leave a day uncovered.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up employees, the days they can work, and the assigned shift.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on writing a fair weekly schedule and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to name the day that still has nobody assigned.
+
+## 127. which of these coffee makers is worth the money
+
+- Header: MISS For answering "which of these coffee makers is worth the money", here's how each tool can help:
+- Intro: AI assistants can take the question "which of these coffee makers is worth the money" and turn it into a plan, answer as you go, and draft anything you need to write.
+- Domain: shop-products
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break that question into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for that question.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track that question.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on that question with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for that question.
+
+## 128. compare the two laptops before I buy
+
+- Header: For comparing the two laptops before i buy, here's how each tool can help:
+- Intro: AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from.
+- Domain: shop-products
+- Cards:
+  - Daydream — Specialist · Docs checked — Daydream shops fashion products by chat across thousands of stores.
+  - Alexa for Shopping — Specialist · Docs checked — Alexa for Shopping answers product questions and recommends items in Amazon's app.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare the product differences and leave the purchase to you.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to narrow a product list to three options and name the spec that separates them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up models, the price you still verify, and the source link for each.
+
+## 129. running shoes that last more than a season
+
+- Header: MISS For running shoes that last more than a season, here's how each tool can help:
+- Intro: AI assistants can help with running shoes that last more than a season by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: shop-products
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break running shoes that last more than a season into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for running shoes that last more than a season.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track running shoes that last more than a season.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on running shoes that last more than a season with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for running shoes that last more than a season.
+
+## 130. queue of posts for the week on instagram
+
+- Header: For managing social media, here's how each tool can help:
+- Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
+- Domain: social-media
+- Cards:
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a social post and a reply to a comment, both for you to send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a caption so it makes one point and does not invent a statistic.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay posts across the month with the claim and the asset for each.
+
+## 131. captions for the photos I already shot
+
+- Header: For managing social media, here's how each tool can help:
+- Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
+- Domain: social-media
+- Cards:
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a social post and a reply to a comment, both for you to send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a caption so it makes one point and does not invent a statistic.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay posts across the month with the claim and the asset for each.
+
+## 132. a content calendar that is not just real estate
+
+- Header: For managing social media, here's how each tool can help:
+- Intro: AI agents can draft a social post, put it on a schedule, and draft a reply to a comment for you to send.
+- Domain: social-media
+- Cards:
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
+  - Hootsuite — Specialist · Docs checked — Hootsuite plans and publishes social posts in one suite.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a social post and a reply to a comment, both for you to send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a caption so it makes one point and does not invent a statistic.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay posts across the month with the claim and the asset for each.
+
+## 133. fill this government form in the browser for me
+
+- Header: For filling this government form in the browser for me, here's how each tool can help:
+- Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
+- Domain: tool-use-browser
+- Cards:
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
+  - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
+  - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
+
+## 134. an agent that clicks through the admin site
+
+- Header: For automating steps in a web browser, here's how each tool can help:
+- Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
+- Domain: tool-use-browser
+- Cards:
+  - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
+  - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
+
+## 135. computer use so I stop copying between tabs
+
+- Header: For automating steps in a web browser, here's how each tool can help:
+- Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
+- Domain: tool-use-browser
+- Cards:
+  - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
+  - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to review a click-path and name the step that should stop at a captcha.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list the page, the field, and the value a browser step may enter.
+
+## 136. explain photosynthesis like I am 14
+
+- Header: For getting tutoring help, here's how each tool can help:
+- Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
+- Domain: tutoring
+- Cards:
+  - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+
+## 137. practice questions for the calculus quiz
+
+- Header: For getting tutoring help, here's how each tool can help:
+- Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
+- Domain: tutoring
+- Cards:
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+
+## 138. study plan for the bar that fits after work
+
+- Header: For getting tutoring help, here's how each tool can help:
+- Intro: AI agents can tutor by explaining a concept, drafting practice problems, and tracking which ones you still miss.
+- Domain: tutoring
+- Cards:
+  - StudyFetch — Specialist · Docs checked — StudyFetch explains a subject from your materials and builds practice from them.
+  - Quizlet — Specialist · Docs checked — Quizlet turns notes into a practice test and explains a homework step with more practice.
+  - Khanmigo — Specialist · Docs checked — Khanmigo tutors a student through a problem step by step.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to explain one concept and then write practice problems that test only that idea.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to show a worked example and then a similar problem with the answer withheld.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track which practice problems you still miss.
+
+## 139. a cinematic shot of a train in the rain
+
+- Header: For making a cinematic video, here's how each tool can help:
+- Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
+- Domain: video-generation
+- Cards:
+  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
+  - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
+  - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a shot list, name the camera move, and draft the prompt you paste into a video app.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a scene into a shot list with camera moves and a prompt you can edit.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each shot, the camera move, and the prompt on its own row.
+
+## 140. text to video of a product spinning on a table
+
+- Header: For making a video from text, here's how each tool can help:
+- Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
+- Domain: video-generation
+- Cards:
+  - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
+  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
+  - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a shot list, name the camera move, and draft the prompt you paste into a video app.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a scene into a shot list with camera moves and a prompt you can edit.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each shot, the camera move, and the prompt on its own row.
+
+## 141. image to video with a slow push in
+
+- Header: For making a video from an image, here's how each tool can help:
+- Intro: AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.
+- Domain: video-generation
+- Cards:
+  - Seedance — Specialist · Docs checked — Seedance renders video from text, an image, or a reference clip in Dreamina.
+  - Higgsfield — Specialist · Docs checked — Higgsfield generates cinematic clips with camera presets such as a POV or a helicopter shot.
+  - Runway — Specialist · Docs checked — Runway generates footage from a prompt and then edits that video.
+  - Pika — Specialist · Docs checked — Pika creates a short video from a prompt, a photo, or keyframes.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a shot list, name the camera move, and draft the prompt you paste into a video app.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a scene into a shot list with camera moves and a prompt you can edit.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each shot, the camera move, and the prompt on its own row.
+
+## 142. voiceover for the explainer from this script
+
+- Header: For generating a voice track, here's how each tool can help:
+- Intro: AI agents can draft a script and describe the voice you want, so you generate the audio and check it yourself.
+- Domain: voice-audio
+- Cards:
+  - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
+
+## 143. narration that does not sound like a robot
+
+- Header: For generating a voice track, here's how each tool can help:
+- Intro: AI agents can draft a script and describe the voice you want, so you generate the audio and check it yourself.
+- Domain: voice-audio
+- Cards:
+  - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
+
+## 144. text to speech for the youtube voice track
+
+- Header: For making speech from text, here's how each tool can help:
+- Intro: AI agents can draft a script and describe the voice you want, so you generate the audio and check it yourself.
+- Domain: voice-audio
+- Cards:
+  - ElevenLabs — Specialist · Docs checked — ElevenLabs generates voice and audio from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft the script and describe the voice you want before you generate the audio.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a script so the line is short enough to read aloud.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each line, the voice, and whether the take is approved.
+
+## 145. every time a form is submitted, add a row and send a note
+
+- Header: For automating repeated tasks, here's how each tool can help:
+- Intro: AI agents can connect the apps in a repeated workflow and run the steps you approve.
+- Domain: workflow-automation
+- Cards:
+  - n8n — Specialist · Docs checked — n8n runs multi-step workflows you can host yourself for a repeated task.
+  - Make — Specialist · Docs checked — Make builds visual automations across the apps a repeated task touches.
+  - Zapier — Specialist · Docs checked — Zapier connects the apps you already use so a step in one triggers a step in another.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to map a repeated task into steps you approve before any app runs them.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to point out which step in an automation description is still vague.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each step, the app it touches, and who approves it.
+
+## 146. stop copying the same info between these two apps
+
+- Header: MISS For help with stop copying the same info between these two apps, here's how each tool can help:
+- Intro: AI assistants can help with stop copying the same info between these two apps by turning it into a plan, answering questions as you go, and drafting anything you need to write.
+- Domain: workflow-automation
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break stop copying the same info between into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for stop copying the same info between.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track stop copying the same info between.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on stop copying the same info between with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for stop copying the same info between.
+
+## 147. when a payment lands, notify the slack channel
+
+- Header: MISS For answering "when a payment lands, notify the slack channel", here's how each tool can help:
+- Intro: AI assistants can take the question "when a payment lands, notify the slack channel" and turn it into a plan, answer as you go, and draft anything you need to write.
+- Domain: workflow-automation
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break that question into a step-by-step plan.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for that question.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track that question.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on that question with links you can check.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for that question.
+
+## 148. bullets for the job I am applying to
+
+- Header: For writing a resume, here's how each tool can help:
+- Intro: AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you.
+- Domain: write-resume
+- Cards:
+  - Kickresume — Specialist · Docs checked — Kickresume writes resume bullets from a job title and scores the draft.
+  - Teal — Specialist · Docs checked — Teal writes a resume tailored to a job description and tracks the jobs you save.
+  - Rezi — Specialist · Docs checked — Rezi builds a resume, scores the sections, and pulls keywords from a job description.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft resume bullets from the job you did and the role you are applying for.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a bullet so it names the work and the result, and you keep the facts.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up roles, bullets, and the keywords from the posting.
+
+## 149. tailor this CV to the posting
+
+- Header: For writing a resume, here's how each tool can help:
+- Intro: AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you.
+- Domain: write-resume
+- Cards:
+  - Kickresume — Specialist · Docs checked — Kickresume writes resume bullets from a job title and scores the draft.
+  - Teal — Specialist · Docs checked — Teal writes a resume tailored to a job description and tracks the jobs you save.
+  - Rezi — Specialist · Docs checked — Rezi builds a resume, scores the sections, and pulls keywords from a job description.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft resume bullets from the job you did and the role you are applying for.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a bullet so it names the work and the result, and you keep the facts.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up roles, bullets, and the keywords from the posting.
+
+## 150. a resume that does not list every chore I have done
+
+- Header: For writing a resume, here's how each tool can help:
+- Intro: AI agents can draft resume bullets from your experience, tailor them to a job description, and leave the final wording to you.
+- Domain: write-resume
+- Cards:
+  - Teal — Specialist · Docs checked — Teal writes a resume tailored to a job description and tracks the jobs you save.
+  - Kickresume — Specialist · Docs checked — Kickresume writes resume bullets from a job title and scores the draft.
+  - Rezi — Specialist · Docs checked — Rezi builds a resume, scores the sections, and pulls keywords from a job description.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft resume bullets from the job you did and the role you are applying for.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a bullet so it names the work and the result, and you keep the facts.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up roles, bullets, and the keywords from the posting.
+
+## 151. crawl the docs and answer from the pages
+
+- Header: For crawling the docs and answering from the pages, here's how each tool can help:
+- Intro: AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself.
+- Domain: research-rag
+- Cards:
+  - Mem0 — Specialist · Smoke-tested — Mem0 stores memory an agent can read later when it answers from source pages.
+  - Pinecone — Specialist · Docs checked — Pinecone keeps vectors a search uses to look up source pages.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a retrieval pipeline from source pages to a short answer you can trace.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which part of a retrieved answer is not backed by the passages you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track source URLs, the passage used, and the answer it supports.
+
+## 152. retrieval over our pdfs instead of guessing
+
+- Header: For building your RAG pipeline, here's how each tool can help:
+- Intro: AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself.
+- Domain: research-rag
+- Cards:
+  - Mem0 — Specialist · Smoke-tested — Mem0 stores memory an agent can read later when it answers from source pages.
+  - Pinecone — Specialist · Docs checked — Pinecone keeps vectors a search uses to look up source pages.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a retrieval pipeline from source pages to a short answer you can trace.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which part of a retrieved answer is not backed by the passages you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track source URLs, the passage used, and the answer it supports.
+
+## 153. a vector index of the help articles
+
+- Header: For building a RAG pipeline, here's how each tool can help:
+- Intro: AI agents can open source pages, compare what they say, and draft a short brief so you can check the links yourself.
+- Domain: research-rag
+- Cards:
+  - Pinecone — Specialist · Docs checked — Pinecone keeps vectors a search uses to look up source pages.
+  - Mem0 — Specialist · Smoke-tested — Mem0 stores memory an agent can read later when it answers from source pages.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a retrieval pipeline from source pages to a short answer you can trace.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which part of a retrieved answer is not backed by the passages you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track source URLs, the passage used, and the answer it supports.
 
 # Other natural seeds
 
@@ -15734,13 +17761,14 @@ Held-out misses:
 ## 157. USE AI TO WRITE EMAILS
 
 - Header: For writing emails, here's how each tool can help:
-- Intro: AI assistants can help with writing emails by drafting a first version, listing what to change, and leaving the final wording to you.
+- Intro: AI agents can triage an email inbox, summarize a thread, and draft a reply you can edit before it sends.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break writing emails into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for writing emails.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track writing emails.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on writing emails with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for writing emails.
+  - Shortwave — Specialist · Docs checked — Shortwave searches an email inbox and drafts from that client.
+  - Spark — Specialist · Docs checked — Spark drafts email replies and sorts the inbox.
+  - Fyxer — Specialist · Docs checked — Fyxer organizes an email inbox and drafts the replies.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to group an inbox into threads that need a reply and threads to archive.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short reply to one thread and list what you should not promise.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list senders, subjects, and whether a reply is still owed.
 
 ## 158. plan a wedding
 
@@ -15833,13 +17861,13 @@ Held-out misses:
 ## 166. plan a birthday party
 
 - Header: For planning a birthday party, here's how each tool can help:
-- Intro: AI assistants can help with planning a birthday party by laying out the steps, comparing options, and drafting the messages you still send yourself.
+- Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break planning a birthday party into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for planning a birthday party.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track planning a birthday party.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on planning a birthday party with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for planning a birthday party.
+  - GuideGeek — Specialist · Docs checked — GuideGeek plans travel across flights, stays, restaurants, and experiences.
+  - Wonderplan — Specialist · Docs checked — Wonderplan drafts a custom itinerary for the trip.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an itinerary with flights, hotels, and the bookings you still make yourself.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two hotel descriptions and say what is still unconfirmed.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put flight options, hotels, and dates in separate columns.
 
 ## 167. start a book club
 
@@ -15855,24 +17883,23 @@ Held-out misses:
 ## 168. learn piano
 
 - Header: For learning piano, here's how each tool can help:
-- Intro: AI assistants can help with learning piano by explaining the next idea, drafting a little practice, and keeping a list of what you still want to review.
+- Intro: AI agents can practice a language with you, explain a mistake, and suggest the next drill.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break learning piano into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for learning piano.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track learning piano.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on learning piano with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for learning piano.
+  - Duolingo Max — Specialist · Docs checked — Duolingo Max lets you practice conversation with an AI partner.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to practice a short dialogue and explain the mistake in the last sentence.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to correct one sentence and give a similar one to try.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep phrases, the correction, and what to practice next.
 
 ## 169. pack for a move
 
 - Header: For packing for a move, here's how each tool can help:
-- Intro: AI assistants can't pack for a move, but they can build a checklist and remind you when each step is due.
+- Intro: AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to break packing for a move into a step-by-step plan.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT for a checklist for packing for a move.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a shared doc or sheet to track packing for a move.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced tips on packing for a move with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to outline tradeoffs and a next step for packing for a move.
+  - GuideGeek — Specialist · Docs checked — GuideGeek plans travel across flights, stays, restaurants, and experiences.
+  - Wonderplan — Specialist · Docs checked — Wonderplan drafts a custom itinerary for the trip.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an itinerary with flights, hotels, and the bookings you still make yourself.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two hotel descriptions and say what is still unconfirmed.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put flight options, hotels, and dates in separate columns.
 
 ## 170. name a baby
 
@@ -16805,12 +18832,14 @@ Held-out misses:
 ## 240. chatgpt alternative
 
 - Header: For finding a ChatGPT alternative, here's how each tool can help:
-- Intro: AI assistants can compare other tools for the same job, and you still pick the one to try.
+- Intro: AI agents can read a support ticket, draft a reply about refunds or order status, and mark what a person should still handle.
 - Cards:
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to compare tools that do this job and name what you would give up by switching.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to build a sheet of tools, the job each one does, and the one you want to try.
-  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity for sourced pages on tools that do this job, with links you can check.
-  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to list what you use the tool for and which part another tool would still miss.
+  - Intercom Fin — Specialist · Docs checked — Intercom Fin answers customer conversations inside a support inbox.
+  - Zendesk — Specialist · Docs checked — Zendesk runs a support suite and applies its AI to service tickets.
+  - Decagon — Specialist · Docs checked — Decagon handles customer chat, email, and voice in one support conversation.
+  - Sierra — Specialist · Docs checked — Sierra builds customer-service agents for a brand's support conversations.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a refund ticket into a reply a person still approves before it is sent.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track ticket status, the order number, and who replies next.
 
 ## 241. learn spanish
 

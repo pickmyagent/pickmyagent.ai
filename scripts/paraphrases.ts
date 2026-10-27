@@ -1,9 +1,11 @@
 import { CONCEPTS } from "../lib/concepts.ts";
 import { CANONICAL_REAL_ESTATE } from "../lib/real-estate-match.ts";
 import { grammarProblems } from "./grammar-gate.ts";
-import { matchTagsForConcept, rankCatalogQuery } from "../lib/search.ts";
+import { HELD_OUT_OTHER } from "./held-out-other.ts";
+import { matchTagsForConcept } from "../lib/search.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
 import { FOUNDER_QUERY, HELD_OUT_REAL_ESTATE, SEEDS } from "./natural-seeds.ts";
+import { rankObserved } from "./rank-observed.ts";
 
 /**
  * Paraphrase gate.
@@ -33,7 +35,7 @@ export type Paraphrase = {
   query: string;
   useCase: string;
   realEstate: boolean;
-  kind: "seed" | "wrapped" | "held-out";
+  kind: "seed" | "wrapped" | "held-out" | "other-held-out";
 };
 
 function row(query: string, useCase: string, kind: Paraphrase["kind"]): Paraphrase {
@@ -59,8 +61,12 @@ export function buildHeldOut(): Paraphrase[] {
   return HELD_OUT_REAL_ESTATE.map((item) => row(item.query, item.useCase, "held-out"));
 }
 
+export function buildOtherHeldOut(): Paraphrase[] {
+  return HELD_OUT_OTHER.map((item) => row(item.query, item.useCase, "other-held-out"));
+}
+
 export function buildParaphrases(): Paraphrase[] {
-  return [...buildSeeds(), ...buildWrapped(), ...buildHeldOut()];
+  return [...buildSeeds(), ...buildWrapped(), ...buildHeldOut(), ...buildOtherHeldOut()];
 }
 
 const GENERIC_INTRO = /^AI assistants\b/;
@@ -103,13 +109,17 @@ export type ParaphraseReport = {
   seedPassRate: number;
   wrappedPassRate: number;
   heldOutPassRate: number;
+  otherHeldOutPassRate: number;
   precisionAt3: number;
   heldOutPrecisionAt3: number;
+  otherHeldOutPrecisionAt3: number;
   byUseCase: RateBucket[];
   realEstateCount: number;
   seedCount: number;
   wrappedCount: number;
   heldOutCount: number;
+  otherHeldOutCount: number;
+  otherHeldOutMisses: string[];
 };
 
 function gradeItems(items: Paraphrase[], catalog: Catalog, collectProblems: boolean): {
@@ -127,7 +137,7 @@ function gradeItems(items: Paraphrase[], catalog: Catalog, collectProblems: bool
   let slots = 0;
   const byUseCase = new Map<string, { total: number; passed: number }>();
   for (const item of items) {
-    const ranked = rankCatalogQuery(item.query, catalog);
+    const ranked = rankObserved(item.query, catalog);
     const got = ranked.useCases[0]?.slug ?? null;
     const topTools = ranked.tools.slice(0, 3);
     const specialists = availableSpecialists(catalog, item.useCase);
@@ -200,11 +210,21 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
   }
   if (heldOut.length < 150) problems.push(`held-out real estate set has ${heldOut.length} queries`);
 
+  const other = buildOtherHeldOut();
+  if (other.length < 150) problems.push(`non-real-estate held-out set has ${other.length} queries`);
+  const covered = new Set(other.map((item) => item.useCase));
+  for (const concept of CONCEPTS) {
+    if (REAL_ESTATE.has(concept.useCase) || concept.useCase === "real-estate") continue;
+    if (!covered.has(concept.useCase)) problems.push(`non-real-estate held-out set misses ${concept.useCase}`);
+  }
+
   const seedGrade = gradeItems(seeds, catalog, true);
   const wrappedGrade = gradeItems(wrapped, catalog, true);
   const heldGrade = gradeItems(heldOut, catalog, false);
+  const otherGrade = gradeItems(other, catalog, false);
   problems.push(...seedGrade.problems, ...wrappedGrade.problems);
   const heldOutMisses = heldGrade.grades.filter((item) => !item.pass).map((item) => `${item.useCase}: ${item.query} → ${item.reason}`);
+  const otherHeldOutMisses = otherGrade.grades.filter((item) => !item.pass).map((item) => `${item.useCase}: ${item.query} → ${item.reason}`);
 
   const byUseCase = [...seedGrade.byUseCase.entries()]
     .map(([useCase, bucket]) => ({
@@ -217,20 +237,24 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
 
   const realEstateSeeds = seeds.filter((item) => item.realEstate).length;
   return {
-    grades: [...seedGrade.grades, ...wrappedGrade.grades, ...heldGrade.grades],
+    grades: [...seedGrade.grades, ...wrappedGrade.grades, ...heldGrade.grades, ...otherGrade.grades],
     problems,
     heldOutMisses,
+    otherHeldOutMisses,
     passRate: rateOf(seedGrade.passed, seeds.length),
     seedPassRate: rateOf(seedGrade.passed, seeds.length),
     wrappedPassRate: rateOf(wrappedGrade.passed, wrapped.length),
     heldOutPassRate: rateOf(heldGrade.passed, heldOut.length),
+    otherHeldOutPassRate: rateOf(otherGrade.passed, other.length),
     precisionAt3: rateOf(seedGrade.hits, seedGrade.slots),
     heldOutPrecisionAt3: rateOf(heldGrade.hits, heldGrade.slots),
+    otherHeldOutPrecisionAt3: rateOf(otherGrade.hits, otherGrade.slots),
     byUseCase,
     realEstateCount: realEstateSeeds + heldOut.length,
     seedCount: seeds.length,
     wrappedCount: wrapped.length,
     heldOutCount: heldOut.length,
+    otherHeldOutCount: other.length,
   };
 }
 
@@ -252,7 +276,8 @@ export function paraphraseSummary(catalog: Catalog): string {
   const report = gradeParaphrases(catalog);
   const lines = [
     `Seed pass rate ${(report.seedPassRate * 100).toFixed(1)}% (${report.seedCount} natural seeds). Wrapped pass rate ${(report.wrappedPassRate * 100).toFixed(1)}% (${report.wrappedCount}).`,
-    `Held-out real estate pass rate ${(report.heldOutPassRate * 100).toFixed(1)}% (${report.heldOutCount}). Seed precision@3 ${report.precisionAt3.toFixed(3)}. Held-out precision@3 ${report.heldOutPrecisionAt3.toFixed(3)}.`,
+    `Held-out real estate pass rate ${(report.heldOutPassRate * 100).toFixed(1)}% (${report.heldOutCount}). Other held-out pass rate ${(report.otherHeldOutPassRate * 100).toFixed(1)}% (${report.otherHeldOutCount}).`,
+    `Seed precision@3 ${report.precisionAt3.toFixed(3)}. Real-estate held-out precision@3 ${report.heldOutPrecisionAt3.toFixed(3)}. Other held-out precision@3 ${report.otherHeldOutPrecisionAt3.toFixed(3)}.`,
     "",
     "Per-use-case seed pass rate:",
   ];
