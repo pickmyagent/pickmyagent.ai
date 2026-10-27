@@ -1,0 +1,52 @@
+{
+  "affiliateUrl": null,
+  "categories": ["creative-media"],
+  "useCaseTags": ["floor-plan-rendering"],
+  "toolTypes": ["creative"],
+  "platforms": ["web"],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:30:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "moldaspace",
+  "name": "MoldaSpace",
+  "websiteUrl": "https://www.moldaspace.com/",
+  "shortDescription": "Turns a floor plan, sketch, or photo into a photoreal render. Creator is $19 a month.",
+  "longDescription": "MoldaSpace takes a photo, a floor plan, a sketch, or a 3D export and returns a photoreal render. Creator is $19 a month for 50 credits. Studio is $99 a month for 300 credits. Scale is $499 a month for 2,000 credits. A one-time pack is $6 for 10 credits or $19 for 40 credits. Eligible new accounts get 5 free credits and no card is required. A 2K generation uses 1 credit and a 4K generation uses 2.",
+  "pricingModel": ["freemium", "subscription", "usage"],
+  "pricingNotes": "Creator is $19 per month for 50 credits. Studio is $99 per month for 300 credits. Scale is $499 per month for 2,000 credits. One-time packs are $6 for 10 credits and $19 for 40 credits. Eligible new accounts get 5 free credits.",
+  "pricingUrl": "https://www.moldaspace.com/",
+  "docsUrl": "https://www.moldaspace.com/",
+  "freeTier": true,
+  "freeTierNotes": "5 free credits for eligible new accounts. No card required.",
+  "startingPrice": 19,
+  "bestFor": [
+    "A floor plan or sketch that should become a client render in one meeting",
+    "A room photo you want restyled before a design approval"
+  ],
+  "notIdealFor": [
+    "A dimensioned model you edit room by room",
+    "Final construction documentation"
+  ],
+  "strength": "MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render in the browser.",
+  "weakness": "Creator is $19 per month for 50 credits, and each new version spends another credit.",
+  "sources": ["https://www.moldaspace.com/"],
+  "siteLoad": { "status": 200, "finalUrl": "https://www.moldaspace.com/" },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a floor plan, a sketch, or a room photo into a photoreal render."
+  },
+  "id": "moldaspace"
+}

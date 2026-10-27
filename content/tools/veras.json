@@ -1,0 +1,69 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": "14 days",
+  "slug": "veras",
+  "name": "Veras",
+  "websiteUrl": "https://www.chaos.com/veras",
+  "shortDescription": "Turns a sketch, a floor plan, or a model view into a visualization. From $202.80 a year.",
+  "longDescription": "Veras, from Chaos, turns a sketch, an image, or a prompt into a visualization, and it can turn a sketch, floor plan, or image into an editable 3D scene for Revit, Rhino, or SketchUp. It also renders from a 3D model inside Revit, SketchUp, Rhino, Archicad, Vectorworks, Forma, and Allplan. One license is $202.80 billed annually. Veras Pro is $29 a month billed annually at $348. A trial can create up to 4 scenes.",
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "One license is $202.80 billed annually. Veras Pro is $29 per month billed annually at $348. The trial can create up to 4 scenes.",
+  "pricingUrl": "https://www.chaos.com/veras",
+  "docsUrl": "https://www.chaos.com/veras",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": 16.9,
+  "bestFor": [
+    "A sketch or floor plan that should become a visualization",
+    "A Revit, SketchUp, or Rhino view you want to render in place"
+  ],
+  "notIdealFor": [
+    "Someone who only has a phone photo and no design app",
+    "Virtual staging of a listing photo"
+  ],
+  "strength": "Veras turns a sketch, a floor plan, or an image into a visualization and can build an editable 3D scene from that input.",
+  "weakness": "The published license is $202.80 billed annually, and the workflow is aimed at people who already model in a design app.",
+  "sources": [
+    "https://www.chaos.com/veras"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.chaos.com/veras"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a sketch, a floor plan, or a model view into a visualization."
+  },
+  "id": "veras"
+}

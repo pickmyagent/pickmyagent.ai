@@ -1,0 +1,55 @@
+{
+  "affiliateUrl": null,
+  "categories": ["creative-media"],
+  "useCaseTags": ["floor-plan-rendering"],
+  "toolTypes": ["creative"],
+  "platforms": ["web"],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:30:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "homedesigns",
+  "name": "HomeDesigns AI",
+  "websiteUrl": "https://homedesigns.ai/",
+  "shortDescription": "Redesigns a room photo and turns a flat floor plan into a 3D view. Standard is $22 a month.",
+  "longDescription": "HomeDesigns AI redesigns a photo of a room, an exterior, or a garden, and it also turns a flat floor plan into a furnished 3D view. Standard is $22 a month, or $9 a month billed yearly, for 100 design credits. Pro is $29 a month, or $11 a month billed yearly, for 1,000 credits. Expert is $37 a month, or $14 a month billed yearly, for 2,000 credits. Each paid plan lists 2D to 3D floor plans.",
+  "pricingModel": ["subscription"],
+  "pricingNotes": "Standard is $22 per month or $9 per month billed yearly for 100 credits. Pro is $29 per month or $11 per month billed yearly for 1,000 credits. Expert is $37 per month or $14 per month billed yearly for 2,000 credits.",
+  "pricingUrl": "https://homedesigns.ai/pricing",
+  "docsUrl": "https://homedesigns.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": 22,
+  "bestFor": [
+    "A room photo that should become an interior redesign",
+    "A flat floor plan that should become a furnished 3D view"
+  ],
+  "notIdealFor": [
+    "A blueprint photo when you need the walls locked to the drawing",
+    "Virtual staging quoted as a separate listing service"
+  ],
+  "strength": "HomeDesigns AI redesigns a room photo and also turns a flat floor plan into a furnished 3D view.",
+  "weakness": "Standard is $22 per month, and a public free credit grant is not stated on the pricing page.",
+  "sources": [
+    "https://homedesigns.ai/",
+    "https://homedesigns.ai/pricing"
+  ],
+  "siteLoad": { "status": 200, "finalUrl": "https://homedesigns.ai/pricing" },
+  "useCaseFit": {
+    "floor-plan-rendering": "Redesigns a room photo and turns a flat floor plan into a furnished 3D view."
+  },
+  "id": "homedesigns"
+}

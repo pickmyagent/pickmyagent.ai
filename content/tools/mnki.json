@@ -1,0 +1,55 @@
+{
+  "affiliateUrl": null,
+  "categories": ["creative-media"],
+  "useCaseTags": ["floor-plan-rendering"],
+  "toolTypes": ["creative"],
+  "platforms": ["web"],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:30:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "mnki",
+  "name": "MNKI",
+  "websiteUrl": "https://mnki.ai/floor-plan-rendering",
+  "shortDescription": "Turns a floor plan image into a furnished 3D view or a render. Basic is $28.99 a month.",
+  "longDescription": "MNKI takes a PNG, JPEG, or WebP of a 2D floor plan and returns a furnished 3D plan view or a perspective render. A standard render costs 4 credits. Basic is $28.99 a month for 500 credits. Pro is $148.99 a month for 3,000 credits. New accounts start with 40 trial credits and no watermark. A top-up is $10 for 150 credits.",
+  "pricingModel": ["freemium", "subscription", "usage"],
+  "pricingNotes": "Basic is $28.99 per month for 500 credits. Pro is $148.99 per month for 3,000 credits. A top-up is $10 for 150 credits. New accounts start with 40 trial credits.",
+  "pricingUrl": "https://mnki.ai/pricing",
+  "docsUrl": "https://mnki.ai/floor-plan-rendering",
+  "freeTier": true,
+  "freeTierNotes": "40 trial credits on signup. No watermark.",
+  "startingPrice": 28.99,
+  "bestFor": [
+    "A clean floor plan image that should become a furnished 3D view",
+    "A plan you want rendered in more than one material style"
+  ],
+  "notIdealFor": [
+    "A measured drawing a builder stamps",
+    "Virtual staging of a listing photo with no plan"
+  ],
+  "strength": "MNKI turns a floor plan image into a furnished 3D view or a perspective render.",
+  "weakness": "Basic is $28.99 per month, and a standard render spends 4 of the monthly credits.",
+  "sources": [
+    "https://mnki.ai/floor-plan-rendering",
+    "https://mnki.ai/pricing"
+  ],
+  "siteLoad": { "status": 200, "finalUrl": "https://mnki.ai/floor-plan-rendering" },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a floor plan image into a furnished 3D view or a perspective render."
+  },
+  "id": "mnki"
+}

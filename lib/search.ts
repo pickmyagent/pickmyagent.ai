@@ -227,6 +227,17 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   if ((concept.id === "voice" || concept.id === "image" || concept.id === "three-d") && videoGenerationQuery(lower)) return 0;
   if (concept.id === "image" && threeDQuery(lower)) return 0;
   if (concept.id === "three-d" && !threeDQuery(lower) && !/\bmesh(?:es)?\b/.test(lower)) return 0;
+  if (concept.id === "floor-plan-render" && !floorPlanRenderQuery(lower)) return 0;
+  if (
+    concept.id === "showings"
+    && floorPlanRenderQuery(lower)
+    && !/\b(open houses?|lock\s?box|lockbox|schedule a showing|showing appointment)\b/.test(lower)
+  ) return 0;
+  if (
+    floorPlanRenderQuery(lower)
+    && (concept.id === "three-d" || concept.id === "image" || concept.id === "listing-video"
+      || concept.id === "listing-photos" || concept.id === "video" || concept.id === "video-generation")
+  ) return 0;
   if (concept.id === "video-generation" && (listingVideoQuery(lower) || avatarQuery(lower))) return 0;
   if (concept.id === "avatar" && (videoGenerationQuery(lower) || listingVideoQuery(lower))) return 0;
   if (concept.id === "listing-video" && avatarQuery(lower)) return 0;
@@ -253,6 +264,7 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   }
   if (concept.id === "video-generation" && videoGenerationQuery(lower)) score += 12;
   if (concept.id === "listing-video" && listingVideoQuery(lower)) score += 12;
+  if (concept.id === "floor-plan-render" && floorPlanRenderQuery(lower)) score += 12;
   const phrases = concept.id === "deals" && !propertyMoneyQuery(lower)
     ? concept.phrases.filter((phrase) => phrase !== "cash flow")
     : concept.phrases;
@@ -432,6 +444,7 @@ const CANONICAL_JOB: Record<string, string> = {
   "cma-comps": "pulling comps for a CMA",
   "listing-copy": "writing an MLS listing description",
   "listing-photos": "editing listing photos and virtual staging",
+  "floor-plan-rendering": "turning floor plans and blueprints into renderings",
   "realtor-follow-up": "following up with buyers and sellers",
   "real-estate-crm": "running a real estate CRM",
   "showing-scheduling": "scheduling showings and open houses",
@@ -780,6 +793,32 @@ function threeDQuery(query: string): boolean {
   return /\b3d\b/i.test(query) || /\bthree[-\s]?d\b/i.test(query);
 }
 
+/**
+ * A plan, blueprint, or sketch that should become a picture.
+ * Virtual staging and a generic 3D asset do not match.
+ */
+export function floorPlanRenderQuery(query: string): boolean {
+  const lower = query.toLowerCase();
+  if (/\b(business|company|startup|strategy)\s+blueprints?\b/.test(lower) && !/\b(house|home|floor|building)\b/.test(lower)) {
+    return false;
+  }
+  if (/\b(floor\s*plans?|floorplans?|blueprints?)\b/.test(lower)) return true;
+  if (/\b(house|home|building)\s+plans?\b/.test(lower)) return true;
+  if (/\bplans?\b/.test(lower) && /\b(house|home|blueprint|floor)\b/.test(lower)) return true;
+  if (/\blook like\b/.test(lower) && /\bplans?\b/.test(lower)) return true;
+  if (/\b(sketches?)\b/.test(lower) && /\b(renders?|rendering|pictures?|images?|photoreal)\b/.test(lower)) return true;
+  if (/\b(remodel|renovation|renovate)\b/.test(lower) && /\b(visualiz\w*|renders?|rendering|mock-?ups?|pictures?|images?|look)\b/.test(lower)) {
+    return true;
+  }
+  if (/\b(architectural drawings?|construction drawings?)\b/.test(lower) && /\b(house|home|image|picture|render)\b/.test(lower)) {
+    return true;
+  }
+  if (/\bplans?\b/.test(lower) && /\b(picture|image|render|photo|rooms?)\b/.test(lower) && !/\b(business|company|marketing)\b/.test(lower)) {
+    return true;
+  }
+  return /\b(interior design mock-?ups?|photoreal(?:istic)? rendering|sketch to render)\b/.test(lower);
+}
+
 function avatarQuery(query: string): boolean {
   return /\b(avatar|avatars|talking[-\s]?head|spokesperson|without filming)\b/i.test(query);
 }
@@ -853,6 +892,11 @@ function roleBonus(conceptId: string, slug: string, query: string): number {
   const ordered = realEstateOrder[conceptId];
   if (ordered) {
     const index = ordered.indexOf(slug);
+    if (index >= 0) return 400 - index * 40;
+  }
+  if (conceptId === "floor-plan-render") {
+    const order = ["mnml", "morphome", "mnki", "rendair", "moldaspace"];
+    const index = order.indexOf(slug);
     if (index >= 0) return 400 - index * 40;
   }
   if (conceptId === "listing-video") {
@@ -1218,6 +1262,8 @@ export function labelConceptForSeed(query: string, useCase: string): string {
 }
 
 function semanticAllowed(concept: Concept, lower: string): boolean {
+  if (floorPlanRenderQuery(lower)) return concept.id === "floor-plan-render";
+  if (concept.id === "floor-plan-render") return false;
   if (businessValuationQuery(lower)) return false;
   if (deniesRealEstate(lower) && (concept.categories.includes("real-estate") || concept.id === "agent-social" || concept.id === "real-estate" || concept.id === "listing-video")) return false;
   if (semanticRealEstateBlock(concept.id, lower)) return false;
@@ -1431,7 +1477,11 @@ function compoundHits(query: string): CompoundHit[] | null {
     if (!winner) continue;
     hits.push({ part, concept: winner.concept, score: winner.score });
   }
-  const kept = hits.filter((hit) => !absorbed(hit, hits));
+  const outputOnly = new Set(["image", "three-d", "video", "video-generation", "listing-photos", "listing-video"]);
+  const kept = hits.filter((hit) => {
+    if (floorPlanRenderQuery(query) && outputOnly.has(hit.concept.id)) return false;
+    return !absorbed(hit, hits);
+  });
   if (new Set(kept.map((hit) => hit.concept.useCase)).size < 2) return null;
   return kept;
 }

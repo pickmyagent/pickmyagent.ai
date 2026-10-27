@@ -73,6 +73,17 @@ export default async function UseCasePage({
         {useCase.title}
       </h1>
       <p className="mt-3 max-w-2xl text-lg text-muted">{useCase.summary}</p>
+      {useCase.related && useCase.related.length > 0 ? (
+        <ul className="mt-4 max-w-2xl space-y-1 text-sm">
+          {useCase.related.map((item) => (
+            <li key={item.slug}>
+              <Link href={`/use-cases/${item.slug}`} className="font-semibold text-gold hover:underline">
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : null}
       <ul className="mt-4 flex flex-wrap gap-2" aria-label="Audience">
         {useCase.audienceHints.map((hint) => (
           <li

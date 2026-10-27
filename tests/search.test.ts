@@ -1601,6 +1601,28 @@ test("specialists stay inside the query domain", () => {
   assert.match(model.lead, /3D model/);
   const modelSlugs = model.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug);
   assert.deepEqual(modelSlugs, ["meshy"]);
+  const floorPlans = rankCatalogQuery("Generate renderings from floor plans", catalog);
+  assert.equal(floorPlans.useCases[0]?.slug, "floor-plan-rendering");
+  assert.equal(floorPlans.tools.find((tool) => !tool.generalPurpose)?.slug, "mnml");
+  assert.deepEqual(
+    floorPlans.tools.filter((tool) => !tool.generalPurpose).map((tool) => tool.slug),
+    ["mnml", "morphome", "mnki", "rendair", "moldaspace"],
+  );
+  assert.equal(floorPlans.tools.some((tool) => tool.slug === "midjourney" || tool.slug === "meshy"), false);
+  assert.ok(floorPlans.tools.filter((tool) => tool.generalPurpose).length <= 3);
+  const blueprintPhoto = rankCatalogQuery(
+    "I want to submit a photo of my house blueprints and generate an image",
+    catalog,
+  );
+  assert.equal(blueprintPhoto.useCases[0]?.slug, "floor-plan-rendering");
+  assert.equal(blueprintPhoto.tools.find((tool) => !tool.generalPurpose)?.slug, "mnml");
+  assert.equal(blueprintPhoto.tools.some((tool) => tool.slug === "midjourney" || tool.slug === "meshy"), false);
+  const planTo3d = rankCatalogQuery("turn a 2D floor plan into 3D", catalog);
+  assert.equal(planTo3d.useCases[0]?.slug, "floor-plan-rendering");
+  assert.equal(planTo3d.tools.some((tool) => tool.slug === "meshy"), false);
+  const vacant = rankCatalogQuery("virtual staging for the vacant house", catalog);
+  assert.equal(vacant.useCases[0]?.slug, "listing-photos");
+  assert.ok(vacant.tools.some((tool) => tool.slug === "boxbrownie"));
   const picture = rankCatalogQuery("concept art", catalog);
   const pictureSlugs = picture.tools.map((tool) => tool.slug);
   assert.equal(picture.useCases[0]?.slug, "make-images");

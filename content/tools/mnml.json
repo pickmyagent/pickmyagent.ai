@@ -1,0 +1,73 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "mnml",
+  "name": "mnml.ai",
+  "websiteUrl": "https://mnml.ai/floor-plan-to-render-ai",
+  "shortDescription": "Turns a floor plan photo into a furnished 2D or 3D view. Lite is $29 a month.",
+  "longDescription": "mnml.ai Floor Plan AI takes a PDF, a CAD screenshot, or a photo of a 2D plan and returns a colored plan or a furnished 3D view. The walls stay as drawn. Sketch to Image does the same from a hand sketch. Lite is $29 a month for 1,000 credits, Plus is $49, and Studio is $119. A one-time pack is $149 for 10,000 credits. New accounts get 100 credits and no card is required.",
+  "pricingModel": [
+    "freemium",
+    "subscription",
+    "usage"
+  ],
+  "pricingNotes": "Lite is $29 per month for 1,000 credits. Plus is $49 per month for 3,000 credits. Studio is $119 per month for 10,000 credits. A one-time pack is $149 for 10,000 credits. New accounts get 100 credits with no card.",
+  "pricingUrl": "https://mnml.ai/pricing",
+  "docsUrl": "https://mnml.ai/floor-plan-to-render-ai",
+  "freeTier": true,
+  "freeTierNotes": "100 credits on signup. No card required.",
+  "startingPrice": 29,
+  "bestFor": [
+    "A photo or scan of a floor plan that should become a furnished view",
+    "A hand sketch that should become an architectural render"
+  ],
+  "notIdealFor": [
+    "Virtual staging of an empty listing photo",
+    "A measured construction set a builder stamps"
+  ],
+  "strength": "mnml takes a photo, PDF, or CAD screenshot of a floor plan and returns a furnished view while keeping the walls as drawn.",
+  "weakness": "Lite is $29 per month, and each render spends credits from that monthly grant or from a $149 credit pack.",
+  "sources": [
+    "https://mnml.ai/floor-plan-to-render-ai",
+    "https://mnml.ai/pricing",
+    "https://mnml.ai/app/sketch2img"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://mnml.ai/floor-plan-to-render-ai"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a photo of a floor plan into a furnished view and keeps the walls as drawn."
+  },
+  "id": "mnml"
+}

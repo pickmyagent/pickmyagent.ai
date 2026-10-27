@@ -1027,6 +1027,25 @@ SEEDS["run-a-business"] = [
   "whole business overview",
 ];
 
+SEEDS["floor-plan-rendering"] = [
+  "Generate renderings from floor plans",
+  "I want to submit a photo of my house blueprints and generate an image",
+  "render my floor plan",
+  "turn a 2D floor plan into 3D",
+  "photoreal rendering of a house from blueprints",
+  "visualize a remodel",
+  "interior design mockup from a photo",
+  "sketch to render",
+  "floor plan to 3D tour",
+  "upload my blueprint and make a picture of the house",
+  "turn house plans into a picture",
+  "what will my house look like from the plans",
+  "make an image from my floor plan photo",
+  "blueprint to realistic picture",
+  "show me the finished house from the floor plan",
+  "photo of the plans into a rendering",
+];
+
 function assertSeedShape(): void {
   for (const [useCase, rows] of Object.entries(SEEDS)) {
     if (!Array.isArray(rows) || rows.length < 15) {

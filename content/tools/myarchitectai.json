@@ -1,0 +1,71 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "myarchitectai",
+  "name": "MyArchitectAI",
+  "websiteUrl": "https://www.myarchitectai.com/",
+  "shortDescription": "Renders an uploaded design or a sketch. Plans start at $29 a month, with 10 renders free.",
+  "longDescription": "MyArchitectAI renders an uploaded SketchUp or Archicad design and also lists sketch rendering. The homepage offers 10 renders free. The pricing page says plans start at $29 a month.",
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "10 renders are free. Plans start at $29 per month.",
+  "pricingUrl": "https://www.myarchitectai.com/pricing",
+  "docsUrl": "https://www.myarchitectai.com/",
+  "freeTier": true,
+  "freeTierNotes": "10 renders free.",
+  "startingPrice": 29,
+  "bestFor": [
+    "A SketchUp or Archicad view that should become a render",
+    "A sketch you want rendered in a few seconds"
+  ],
+  "notIdealFor": [
+    "A phone photo of paper blueprints with no model",
+    "Virtual staging of a listing photo"
+  ],
+  "strength": "MyArchitectAI renders an uploaded design view or a sketch, and the free testing plan includes 10 renders.",
+  "weakness": "Paid plans start at $29 per month, and the homepage is clearest when you already have a SketchUp or Archicad view.",
+  "sources": [
+    "https://www.myarchitectai.com/",
+    "https://www.myarchitectai.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.myarchitectai.com/"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Renders an uploaded design view or a sketch."
+  },
+  "id": "myarchitectai"
+}

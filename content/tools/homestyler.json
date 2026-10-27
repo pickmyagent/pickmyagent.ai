@@ -1,0 +1,70 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "homestyler",
+  "name": "Homestyler",
+  "websiteUrl": "https://www.homestyler.com/pricing",
+  "shortDescription": "Browser 3D floor planner with rendering. Pro+ starts at $6.80 a month.",
+  "longDescription": "Homestyler is a cloud 3D floor planner with more than 100,000 free models. The Basic plan is free and includes unlimited 1K rendering. Pro+ starts at $6.80 a month and includes 75 renders each at 2K and 4K plus 180 AI credits a month. Master+ starts at $11.80 a month with unlimited 4K image rendering.",
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Basic is free with unlimited 1K rendering. Pro+ starts at $6.80 per month. Master+ starts at $11.80 per month. Team starts at $19.90 per seat per month.",
+  "pricingUrl": "https://www.homestyler.com/pricing",
+  "docsUrl": "https://www.homestyler.com/pricing",
+  "freeTier": true,
+  "freeTierNotes": "Free Basic plan with unlimited 1K rendering.",
+  "startingPrice": 6.8,
+  "bestFor": [
+    "A floor plan you draw in the browser and then render",
+    "A free 1K render while you check a layout"
+  ],
+  "notIdealFor": [
+    "A one-photo blueprint with no drawing step",
+    "Virtual staging of an existing listing photo"
+  ],
+  "strength": "Homestyler is a browser 3D floor planner with free unlimited 1K rendering and paid higher-resolution renders.",
+  "weakness": "Pro+ starts at $6.80 per month, and a presentation-resolution render needs that paid allowance or a per-render purchase.",
+  "sources": [
+    "https://www.homestyler.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.homestyler.com/pricing"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Builds a 3D floor plan in the browser and renders it."
+  },
+  "id": "homestyler"
+}

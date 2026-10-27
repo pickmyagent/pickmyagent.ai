@@ -1,0 +1,71 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "cedreo",
+  "name": "Cedreo",
+  "websiteUrl": "https://cedreo.com/compare/",
+  "shortDescription": "Home design with photoreal interior and exterior renderings. Plans from $129 a month.",
+  "longDescription": "Cedreo is cloud home-design software for builders and remodelers. You draw a floor plan or start from an existing plan, then produce photoreal interior and exterior renderings. The comparison page lists plans from $129 a month and a Personal plan at $139 per project. A free plan covers one project.",
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Plans are listed from $129 per month. Personal is a one-time $139 per project. A free plan covers one project.",
+  "pricingUrl": "https://cedreo.com/compare/",
+  "docsUrl": "https://cedreo.com/3d-rendering",
+  "freeTier": true,
+  "freeTierNotes": "Free plan with one project.",
+  "startingPrice": 129,
+  "bestFor": [
+    "A builder who wants photoreal interior and exterior renderings from a house plan",
+    "A remodel presentation with a plan and a picture"
+  ],
+  "notIdealFor": [
+    "A single listing-photo staging job",
+    "A game-style 3D asset from a text prompt"
+  ],
+  "strength": "Cedreo produces photoreal interior and exterior renderings from a house plan you draw or upload.",
+  "weakness": "Paid plans are listed from $129 per month, with a one-project Personal option at $139.",
+  "sources": [
+    "https://cedreo.com/compare/",
+    "https://cedreo.com/3d-rendering"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://cedreo.com/compare/"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Produces photoreal interior and exterior renderings from a house plan."
+  },
+  "id": "cedreo"
+}

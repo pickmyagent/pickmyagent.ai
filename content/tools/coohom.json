@@ -1,0 +1,71 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "coohom",
+  "name": "Coohom",
+  "websiteUrl": "https://www.coohom.com/2D-Design-Tool/",
+  "shortDescription": "Uploads a floor plan and builds an editable 3D scene. A free Basic account is available.",
+  "longDescription": "Coohom lets you upload a floor plan you already have, or describe one, and then builds a 3D scene you can edit and render. The help center says a free Basic account is available. See their site for paid plan prices.",
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "A free Basic account is available. See their site for paid plan prices.",
+  "pricingUrl": "https://www.coohom.com/pricing",
+  "docsUrl": "https://www.coohom.com/2D-Design-Tool/",
+  "freeTier": true,
+  "freeTierNotes": "Free Basic account.",
+  "startingPrice": null,
+  "bestFor": [
+    "An uploaded floor plan that should become an editable 3D scene",
+    "An interior presentation you furnish after the plan is read"
+  ],
+  "notIdealFor": [
+    "A one-photo staging job with no plan",
+    "A construction quantity takeoff"
+  ],
+  "strength": "Coohom turns an uploaded floor plan into an editable 3D scene you can render.",
+  "weakness": "A free basic account is listed, and the public price text does not include a paid dollar amount.",
+  "sources": [
+    "https://www.coohom.com/2D-Design-Tool/",
+    "https://www.coohom.com/helpcenter/pricing%2C-subscription%2C-and-payment"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.coohom.com/2D-Design-Tool/"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns an uploaded floor plan into an editable 3D scene."
+  },
+  "id": "coohom"
+}

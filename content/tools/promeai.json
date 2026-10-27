@@ -1,0 +1,69 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "promeai",
+  "name": "PromeAI",
+  "websiteUrl": "https://www.promeai.pro/",
+  "shortDescription": "Turns a sketch, a photo, or a modeling screenshot into a realistic render.",
+  "longDescription": "PromeAI Sketch Rendering takes a hand-drawn sketch, a photo, or a screenshot from modeling software and generates a realistic render. The same site also lists texture-lock rendering and region edits. See their site for current pricing.",
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See their site for current pricing.",
+  "pricingUrl": "https://www.promeai.pro/",
+  "docsUrl": "https://www.promeai.pro/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "bestFor": [
+    "A sketch or modeling screenshot that should become a realistic render",
+    "A photo you want to restyle as an architectural image"
+  ],
+  "notIdealFor": [
+    "A measured editable floor plan with dimensions",
+    "Virtual staging of a listing photo as the only job"
+  ],
+  "strength": "PromeAI turns a sketch, a photo, or a modeling screenshot into a realistic render.",
+  "weakness": "The public homepage describes the sketch workflow and does not list a dollar plan.",
+  "sources": [
+    "https://www.promeai.pro/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.promeai.pro/"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a sketch, a photo, or a modeling screenshot into a realistic render."
+  },
+  "id": "promeai"
+}

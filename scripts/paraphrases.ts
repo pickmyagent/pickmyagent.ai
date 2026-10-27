@@ -2,6 +2,7 @@ import { CONCEPTS } from "../lib/concepts.ts";
 import { CANONICAL_REAL_ESTATE } from "../lib/real-estate-match.ts";
 import { articleVerbProblems, hasLowercaseI, pronounFlip } from "../lib/header-grammar.ts";
 import { grammarProblems } from "./grammar-gate.ts";
+import { HELD_OUT_HOME, PLAIN_FLOOR_PLAN_QUERIES } from "./held-out-home.ts";
 import { HELD_OUT_OTHER } from "./held-out-other.ts";
 import { matchTagsForConcept, startsWithTaskVerb, stripWrappers } from "../lib/search.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
@@ -36,7 +37,7 @@ export type Paraphrase = {
   query: string;
   useCase: string;
   realEstate: boolean;
-  kind: "seed" | "wrapped" | "held-out" | "other-held-out";
+  kind: "seed" | "wrapped" | "held-out" | "other-held-out" | "home-held-out";
 };
 
 function row(query: string, useCase: string, kind: Paraphrase["kind"]): Paraphrase {
@@ -66,8 +67,12 @@ export function buildOtherHeldOut(): Paraphrase[] {
   return HELD_OUT_OTHER.map((item) => row(item.query, item.useCase, "other-held-out"));
 }
 
+export function buildHomeHeldOut(): Paraphrase[] {
+  return HELD_OUT_HOME.map((item) => row(item.query, item.useCase, "home-held-out"));
+}
+
 export function buildParaphrases(): Paraphrase[] {
-  return [...buildSeeds(), ...buildWrapped(), ...buildHeldOut(), ...buildOtherHeldOut()];
+  return [...buildSeeds(), ...buildWrapped(), ...buildHeldOut(), ...buildOtherHeldOut(), ...buildHomeHeldOut()];
 }
 
 const GENERIC_INTRO = /^AI assistants\b/;
@@ -111,6 +116,7 @@ export type ParaphraseReport = {
   wrappedPassRate: number;
   heldOutPassRate: number;
   otherHeldOutPassRate: number;
+  homeHeldOutPassRate: number;
   precisionAt3: number;
   heldOutPrecisionAt3: number;
   otherHeldOutPrecisionAt3: number;
@@ -121,6 +127,8 @@ export type ParaphraseReport = {
   heldOutCount: number;
   otherHeldOutCount: number;
   otherHeldOutMisses: string[];
+  homeHeldOutCount: number;
+  homeHeldOutMisses: string[];
 };
 
 function copyGateIssues(lead: string, intro: string, whys: string[], query: string): string[] {
@@ -224,7 +232,9 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
   if (heldOut.length < 150) problems.push(`held-out real estate set has ${heldOut.length} queries`);
 
   const other = buildOtherHeldOut();
+  const home = buildHomeHeldOut();
   if (other.length < 150) problems.push(`non-real-estate held-out set has ${other.length} queries`);
+  if (home.length < 100) problems.push(`home held-out set has ${home.length} queries`);
   const covered = new Set(other.map((item) => item.useCase));
   for (const concept of CONCEPTS) {
     if (REAL_ESTATE.has(concept.useCase) || concept.useCase === "real-estate") continue;
@@ -235,9 +245,18 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
   const wrappedGrade = gradeItems(wrapped, catalog, true);
   const heldGrade = gradeItems(heldOut, catalog, false);
   const otherGrade = gradeItems(other, catalog, false);
-  problems.push(...seedGrade.problems, ...wrappedGrade.problems, ...heldGrade.problems, ...otherGrade.problems);
+  const homeGrade = gradeItems(home, catalog, false);
+  problems.push(...seedGrade.problems, ...wrappedGrade.problems, ...heldGrade.problems, ...otherGrade.problems, ...homeGrade.problems);
   const heldOutMisses = heldGrade.grades.filter((item) => !item.pass).map((item) => `${item.useCase}: ${item.query} → ${item.reason}`);
   const otherHeldOutMisses = otherGrade.grades.filter((item) => !item.pass).map((item) => `${item.useCase}: ${item.query} → ${item.reason}`);
+  const homeHeldOutMisses = homeGrade.grades.filter((item) => !item.pass).map((item) => `${item.useCase}: ${item.query} → ${item.reason}`);
+  const plainMisses = PLAIN_FLOOR_PLAN_QUERIES.filter((query) => {
+    const grade = homeGrade.grades.find((item) => item.query === query);
+    return !grade?.pass;
+  });
+  if (plainMisses.length > 0) {
+    problems.push(`plain floor-plan wording missed: ${plainMisses.join(" | ")}`);
+  }
 
   const byUseCase = [...seedGrade.byUseCase.entries()]
     .map(([useCase, bucket]) => ({
@@ -250,15 +269,17 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
 
   const realEstateSeeds = seeds.filter((item) => item.realEstate).length;
   return {
-    grades: [...seedGrade.grades, ...wrappedGrade.grades, ...heldGrade.grades, ...otherGrade.grades],
+    grades: [...seedGrade.grades, ...wrappedGrade.grades, ...heldGrade.grades, ...otherGrade.grades, ...homeGrade.grades],
     problems,
     heldOutMisses,
     otherHeldOutMisses,
+    homeHeldOutMisses,
     passRate: rateOf(seedGrade.passed, seeds.length),
     seedPassRate: rateOf(seedGrade.passed, seeds.length),
     wrappedPassRate: rateOf(wrappedGrade.passed, wrapped.length),
     heldOutPassRate: rateOf(heldGrade.passed, heldOut.length),
     otherHeldOutPassRate: rateOf(otherGrade.passed, other.length),
+    homeHeldOutPassRate: rateOf(homeGrade.passed, home.length),
     precisionAt3: rateOf(seedGrade.hits, seedGrade.slots),
     heldOutPrecisionAt3: rateOf(heldGrade.hits, heldGrade.slots),
     otherHeldOutPrecisionAt3: rateOf(otherGrade.hits, otherGrade.slots),
@@ -268,6 +289,7 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
     wrappedCount: wrapped.length,
     heldOutCount: heldOut.length,
     otherHeldOutCount: other.length,
+    homeHeldOutCount: home.length,
   };
 }
 
@@ -282,6 +304,9 @@ export function paraphraseProblems(catalog: Catalog): string[] {
   if (report.wrappedPassRate < 1) {
     problems.unshift(`wrapped template pass rate ${report.wrappedPassRate.toFixed(3)}`);
   }
+  if (report.homeHeldOutPassRate < 0.95) {
+    problems.unshift(`home held-out pass rate ${report.homeHeldOutPassRate.toFixed(3)}`);
+  }
   return problems;
 }
 
@@ -289,7 +314,7 @@ export function paraphraseSummary(catalog: Catalog): string {
   const report = gradeParaphrases(catalog);
   const lines = [
     `Seed pass rate ${(report.seedPassRate * 100).toFixed(1)}% (${report.seedCount} natural seeds). Wrapped pass rate ${(report.wrappedPassRate * 100).toFixed(1)}% (${report.wrappedCount}).`,
-    `Held-out real estate pass rate ${(report.heldOutPassRate * 100).toFixed(1)}% (${report.heldOutCount}). Other held-out pass rate ${(report.otherHeldOutPassRate * 100).toFixed(1)}% (${report.otherHeldOutCount}).`,
+    `Held-out real estate pass rate ${(report.heldOutPassRate * 100).toFixed(1)}% (${report.heldOutCount}). Other held-out pass rate ${(report.otherHeldOutPassRate * 100).toFixed(1)}% (${report.otherHeldOutCount}). Home held-out pass rate ${(report.homeHeldOutPassRate * 100).toFixed(1)}% (${report.homeHeldOutCount}).`,
     `Seed precision@3 ${report.precisionAt3.toFixed(3)}. Real-estate held-out precision@3 ${report.heldOutPrecisionAt3.toFixed(3)}. Other held-out precision@3 ${report.otherHeldOutPrecisionAt3.toFixed(3)}.`,
     "",
     "Per-use-case seed pass rate:",
