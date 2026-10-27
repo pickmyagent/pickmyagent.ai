@@ -11970,7 +11970,7 @@
           "why": "Turns a floor plan, a sketch, or a room photo into a photoreal render."
         }
       ],
-      "intro": "AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.",
+      "intro": "AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.",
       "related": [
         {
           "slug": "listing-photos",
@@ -12543,7 +12543,7 @@
     {
       "slug": "property-management",
       "title": "Handle property management tasks",
-      "summary": "Draft a tenant reply, sort a maintenance request, and list the rent roll you still check.",
+      "summary": "Draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.",
       "audienceHints": [
         "landlords",
         "property managers"
@@ -12561,7 +12561,7 @@
           "why": "Tracks rent, maintenance, and leases and includes an assistant for tenant questions."
         }
       ],
-      "intro": "AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check."
+      "intro": "AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it."
     },
     {
       "slug": "quotes",

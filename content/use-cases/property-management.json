@@ -1,7 +1,7 @@
 {
   "slug": "property-management",
   "title": "Handle property management tasks",
-  "summary": "Draft a tenant reply, sort a maintenance request, and list the rent roll you still check.",
+  "summary": "Draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.",
   "audienceHints": ["landlords", "property managers"],
   "matchTags": ["property-management"],
   "jobPhrase": "handling property management tasks",
@@ -14,5 +14,5 @@
       "why": "Tracks rent, maintenance, and leases and includes an assistant for tenant questions."
     }
   ],
-  "intro": "AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check."
+  "intro": "AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it."
 }

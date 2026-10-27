@@ -1032,7 +1032,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 65. blueprint to realistic picture
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1047,7 +1047,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 66. floor plan to 3D tour
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1062,7 +1062,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 67. Generate renderings from floor plans
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1077,7 +1077,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 68. I want to submit a photo of my house blueprints and generate an image
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1092,7 +1092,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 69. interior design mockup from a photo
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1107,7 +1107,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 70. make an image from my floor plan photo
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1122,7 +1122,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 71. photo of the plans into a rendering
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1137,7 +1137,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 72. photoreal rendering of a house from blueprints
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1152,7 +1152,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 73. render my floor plan
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1167,7 +1167,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 74. show me the finished house from the floor plan
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1182,7 +1182,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 75. sketch to render
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1197,7 +1197,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 76. turn a 2D floor plan into 3D
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1212,7 +1212,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 77. turn house plans into a picture
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1227,7 +1227,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 78. upload my blueprint and make a picture of the house
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1242,7 +1242,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 79. visualize a remodel
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -1257,7 +1257,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 80. what will my house look like from the plans
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -2017,7 +2017,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 141. collect rent from tenants
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2028,7 +2028,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 142. landlord maintenance queue
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2039,7 +2039,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 143. lease renewal for the tenant
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2050,7 +2050,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 144. maintanance request from unit 4
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2061,7 +2061,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 145. maintenance request for a tenant
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2072,7 +2072,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 146. manage my rentals
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2083,7 +2083,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 147. property management for my duplex
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2094,7 +2094,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 148. property management tasks
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2105,7 +2105,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 149. renew the tenant lease
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2116,7 +2116,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 150. rent collection this month
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2127,7 +2127,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 151. tenant has not paid rent
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2138,7 +2138,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 152. tenant work order
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2149,7 +2149,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 153. track rent for my units
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2160,7 +2160,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 154. who owes rent
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -2171,7 +2171,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 155. work order for the leaking sink
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4874,7 +4874,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 111. tenant says the heat is out in unit 2
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4885,7 +4885,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 112. who is late on rent this month
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4896,7 +4896,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 113. lease is up in 45 days for the duplex
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4907,7 +4907,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 114. work order for the broken disposal
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4918,7 +4918,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 115. landlord side of a maintenance ticket
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4929,7 +4929,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 116. collect the rent that is still outstanding
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4940,7 +4940,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 117. renewal offer for the tenant in 3B
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4951,7 +4951,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 118. rental I manage needs a repair logged
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4962,7 +4962,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 119. property books for the four units
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4973,7 +4973,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 120. tenant request about the leaking window
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -7541,7 +7541,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 1. Generate renderings from floor plans
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7556,7 +7556,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 2. I want to submit a photo of my house blueprints and generate an image
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7571,7 +7571,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 3. upload my blueprint and make a picture of the house
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7586,7 +7586,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 4. turn house plans into a picture
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7601,7 +7601,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 5. what will my house look like from the plans
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7616,7 +7616,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 6. make an image from my floor plan photo
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7631,7 +7631,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 7. blueprint to realistic picture
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7646,7 +7646,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 8. render my floor plan
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7661,7 +7661,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 9. turn a 2D floor plan into 3D
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7676,7 +7676,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 10. photoreal rendering of a house from blueprints
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7691,7 +7691,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 11. visualize a remodel
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7706,7 +7706,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 12. interior design mockup from a photo
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7721,7 +7721,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 13. sketch to render
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7736,7 +7736,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 14. floor plan to 3D tour
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7751,7 +7751,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 15. take a picture of the plans and show me the house
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7766,7 +7766,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 16. I have a photo of the floor plan, make it look real
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7781,7 +7781,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 17. turn this sketch of the kitchen into a render
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7796,7 +7796,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 18. what would the remodel look like
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7811,7 +7811,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 19. make a realistic picture from the blueprint
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7826,7 +7826,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 20. house plans to a photo
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7841,7 +7841,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 21. upload the architectural drawings and get an image of the house
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7856,7 +7856,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 22. show me the finished house from the floor plan
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7871,7 +7871,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 23. convert my 2d plan into a picture of the rooms
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7886,7 +7886,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 24. blueprint photo to a rendering of the exterior
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7901,7 +7901,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 25. I snapped the house plans, now make an image
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7916,7 +7916,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 26. from the blueprints, what does the living room look like
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7931,7 +7931,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 27. generate a picture of the home from the floorplan
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7946,7 +7946,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 28. turn my hand sketch into a photoreal room
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7961,7 +7961,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 29. make the floor plan look like a real house
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7976,7 +7976,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 30. photo of blueprints to an exterior image
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -7991,7 +7991,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 31. render the construction drawings so the buyer can see the house
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -8006,7 +8006,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 32. building plans into a picture of the front elevation
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -8021,7 +8021,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 33. I photographed the blueprint, make a rendering
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -8036,7 +8036,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 34. sketch of the addition, render the exterior
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -8051,7 +8051,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 35. what will the renovation look like in a picture
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -8066,7 +8066,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 36. turn the PDF floor plan into a furnished image
 
 - Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
-- Intro: AI agents can turn a floor plan, a blueprint, or a room photo into a rendering, and you still choose what a client sees.
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
 - Domain: floor-plan-rendering
 - Cards:
   - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
@@ -8796,7 +8796,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 95. maintenance request from the tenant in unit 4
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -8807,7 +8807,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 96. collect rent and see who still owes
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -8818,7 +8818,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 97. lease renewal for the duplex
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -8829,7 +8829,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 98. property management tasks for the rentals I own
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
