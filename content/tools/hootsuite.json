@@ -10,7 +10,8 @@
     "content"
   ],
   "useCaseTags": [
-    "social-media"
+    "social-media",
+    "agent-social"
   ],
   "toolTypes": [
     "agent"
@@ -63,6 +64,7 @@
     "finalUrl": "https://www.hootsuite.com/"
   },
   "useCaseFit": {
-    "social-media": "Plans and publishes social content, and the plans page says the suite is connected by AI."
+    "social-media": "Plans and publishes social content, and the plans page says the suite is connected by AI.",
+    "agent-social": "Publishes an agent's social posts from one suite."
   }
 }

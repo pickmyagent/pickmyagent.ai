@@ -1,0 +1,18 @@
+{
+  "slug": "cma-comps",
+  "title": "Pull comps for a CMA",
+  "summary": "Gather comparable sales and draft a CMA, then pick the comps and the price yourself.",
+  "audienceHints": ["realtors", "brokers"],
+  "matchTags": ["cma-comps"],
+  "jobPhrase": "pulling comps for a CMA",
+  "assistantTask": "gather comparable sales and draft a CMA you still price",
+  "assistantContext": "preparing a CMA",
+  "searchTopic": "comparable sales and a CMA",
+  "recommended": [
+    {
+      "toolId": "cloud-cma",
+      "why": "Builds a CMA report from MLS comps and leaves the list price with the agent."
+    }
+  ],
+  "intro": "AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board."
+}

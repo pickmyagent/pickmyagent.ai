@@ -1,0 +1,34 @@
+{
+  "slug": "realtor-prospecting",
+  "title": "Prospect expireds, FSBOs, and a farm",
+  "summary": "List expired, FSBO, and farm-area owners and draft the first outreach. You still decide who to contact.",
+  "audienceHints": ["realtors", "investors"],
+  "matchTags": ["realtor-prospecting"],
+  "jobPhrase": "prospecting expireds, FSBOs, and a farm",
+  "assistantTask": "list expired, FSBO, and farm-area owners and draft the first outreach",
+  "assistantContext": "prospecting owners",
+  "searchTopic": "expired listings, FSBOs, and farm areas",
+  "recommended": [
+    {
+      "toolId": "propstream",
+      "why": "Searches expired, FSBO, and farm-area records in one property list."
+    },
+    {
+      "toolId": "dealmachine",
+      "why": "Pulls owner records for a farm area and tags a property during a drive."
+    },
+    {
+      "toolId": "batchleads",
+      "why": "Saves owner phone numbers and emails for an expired or FSBO list."
+    },
+    {
+      "toolId": "resimpli",
+      "why": "Contacts owners by phone, text, and email from a prospecting list."
+    },
+    {
+      "toolId": "launch-control",
+      "why": "Messages owners whose numbers are already on a prospecting list."
+    }
+  ],
+  "intro": "AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact."
+}

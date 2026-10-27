@@ -1470,7 +1470,7 @@ test("held-out paraphrases report precision at 3 without failing the build", () 
   const precision = hits / slots;
   console.log(`held-out precision@3: ${precision.toFixed(3)} (${hits}/${slots})`);
   for (const miss of misses) console.log(`held-out miss: ${miss}`);
-  assert.ok(precision >= 0.971, `held-out precision@3 ${precision.toFixed(3)} (${hits}/${slots})`);
+  assert.ok(precision >= 0.974, `held-out precision@3 ${precision.toFixed(3)} (${hits}/${slots})`);
 });
 
 test("regression report for the pull request", () => {

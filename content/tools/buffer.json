@@ -11,7 +11,8 @@
   ],
   "useCaseTags": [
     "social-media",
-    "run-a-business"
+    "run-a-business",
+    "agent-social"
   ],
   "toolTypes": [
     "agent"
@@ -65,6 +66,7 @@
   },
   "useCaseFit": {
     "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content.",
-    "run-a-business": "Schedules social posts a small business can publish through the week."
+    "run-a-business": "Schedules social posts a small business can publish through the week.",
+    "agent-social": "Schedules listing posts and drafts captions for an agent's social channels."
   }
 }

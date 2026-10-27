@@ -10,7 +10,8 @@
     "content"
   ],
   "useCaseTags": [
-    "social-media"
+    "social-media",
+    "agent-social"
   ],
   "toolTypes": [
     "agent"
@@ -62,6 +63,7 @@
     "finalUrl": "https://www.ocoya.com/"
   },
   "useCaseFit": {
-    "social-media": "Social content tool with Starter at $29 per month and a 7-day trial."
+    "social-media": "Social content tool with Starter at $29 per month and a 7-day trial.",
+    "agent-social": "Creates listing posts and puts them on a social schedule."
   }
 }

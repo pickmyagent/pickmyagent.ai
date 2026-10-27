@@ -10,7 +10,8 @@
     "content"
   ],
   "useCaseTags": [
-    "create-content"
+    "create-content",
+    "listing-copy"
   ],
   "toolTypes": [
     "agent"
@@ -62,6 +63,7 @@
     "finalUrl": "https://writesonic.com/"
   },
   "useCaseFit": {
-    "create-content": "Content plans with Starter listed at $79 per month when billed annually."
+    "create-content": "Content plans with Starter listed at $79 per month when billed annually.",
+    "listing-copy": "Drafts a property description you can edit before it goes on the MLS."
   }
 }

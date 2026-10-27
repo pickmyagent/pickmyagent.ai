@@ -220,6 +220,7 @@ export function conceptBlocked(id: string, lower: string): boolean {
     if (/\bsales\b/.test(lower) && !/\b(cash|profit|budget|expense|p&l)\b/.test(lower)) return true;
   }
   if (id === "bookkeeping") {
+    if (/\b(accounts payable|accounts receivable|ap ar)\b/.test(lower) && !/\b(quickbooks|qbo|reconcil|categoriz|xero|freshbooks|wave)\b/.test(lower)) return true;
     if (/\b(photos?|images?|videos?)\b/.test(lower)) return true;
     if (/\b(book club|novel|novels|library)\b/.test(lower)) return true;
     if (/\b(file|filing|1040)\b/.test(lower) && /\btax/.test(lower)) return true;
@@ -284,7 +285,9 @@ export function smallBusinessHeader(cleaned: string): string | null {
     return "running a small business";
   }
   if (/\bbookkeeping\b/.test(lower)) return "help with bookkeeping";
-  if (/\b(?:my|your|the|messy) books\b/.test(lower)) return "help with the books";
+  if (/\b(?:my|your|the|messy) books\b/.test(lower) && !/\b(ap\/ar|a\/p|a\/r|accounts payable|accounts receivable)\b/.test(lower)) {
+    return "help with the books";
+  }
   return null;
 }
 

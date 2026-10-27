@@ -10,7 +10,8 @@
     "content"
   ],
   "useCaseTags": [
-    "create-content"
+    "create-content",
+    "listing-copy"
   ],
   "toolTypes": [
     "agent"
@@ -64,6 +65,7 @@
     "finalUrl": "https://www.jasper.ai/"
   },
   "useCaseFit": {
-    "create-content": "Marketing content workspace with agents and a free-trial offer."
+    "create-content": "Marketing content workspace with agents and a free-trial offer.",
+    "listing-copy": "Drafts a listing description from the property facts you give it."
   }
 }

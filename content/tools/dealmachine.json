@@ -11,7 +11,8 @@
   ],
   "useCaseTags": [
     "find-off-market",
-    "real-estate-overview"
+    "real-estate-overview",
+    "realtor-prospecting"
   ],
   "toolTypes": [
     "agent"
@@ -64,6 +65,7 @@
   },
   "useCaseFit": {
     "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month.",
-    "real-estate": "Pulls owner records and tags a property during a drive."
+    "real-estate": "Pulls owner records and tags a property during a drive.",
+    "realtor-prospecting": "Pulls owner records for a farm area and tags a property during a drive."
   }
 }

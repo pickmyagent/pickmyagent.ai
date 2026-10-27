@@ -1,0 +1,26 @@
+{
+  "slug": "listing-copy",
+  "title": "Write an MLS listing description",
+  "summary": "Draft listing remarks from the property facts, then check them against your board's rules.",
+  "audienceHints": ["realtors"],
+  "matchTags": ["listing-copy"],
+  "jobPhrase": "writing an MLS listing description",
+  "assistantTask": "draft an MLS listing description from the facts you provide",
+  "assistantContext": "writing a listing description",
+  "searchTopic": "MLS listing descriptions",
+  "recommended": [
+    {
+      "toolId": "jasper",
+      "why": "Drafts a listing description from the property facts you give it."
+    },
+    {
+      "toolId": "copy-ai",
+      "why": "Drafts MLS remarks you still check against your board's rules."
+    },
+    {
+      "toolId": "writesonic",
+      "why": "Drafts a property description you can edit before it goes on the MLS."
+    }
+  ],
+  "intro": "AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live."
+}

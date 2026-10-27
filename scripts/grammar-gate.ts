@@ -2,7 +2,7 @@ import nlp from "compromise";
 
 type Term = { text: string; tags: string[] };
 
-const ACRONYM = /\b(seo|fsbo|npcs|npc|rag|soc|crm|gmail)\b|\bq&a\b/;
+const ACRONYM = /\b(seo|fsbo|fsbos|npcs|npc|rag|soc|crm|gmail|cma|cmas|bpo|bpos|mls|arv)\b|\bq&a\b/;
 
 /** Strings from the CEO review. The gate must flag each one. */
 export const BROKEN_HEADERS = [

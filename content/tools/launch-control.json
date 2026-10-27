@@ -10,7 +10,8 @@
     "real-estate"
   ],
   "useCaseTags": [
-    "find-off-market"
+    "find-off-market",
+    "realtor-prospecting"
   ],
   "toolTypes": [
     "automation"
@@ -63,6 +64,7 @@
     "finalUrl": "https://launchcontrol.us/pricing/"
   },
   "useCaseFit": {
-    "find-off-market": "Sends texts to owner lists, and the pricing page lists skip tracing at $0.13."
+    "find-off-market": "Sends texts to owner lists, and the pricing page lists skip tracing at $0.13.",
+    "realtor-prospecting": "Messages owners whose numbers are already on a prospecting list."
   }
 }

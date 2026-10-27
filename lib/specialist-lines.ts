@@ -489,6 +489,78 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "BILL sends invoices and tracks bills next to the books.",
     ],
   },
+  "cma-comps": {
+    "cloud-cma": [
+      "Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.",
+    ],
+  },
+  "listing-copy": {
+    jasper: [
+      "Jasper drafts a listing description from the property facts you give it.",
+    ],
+    "copy-ai": [
+      "Copy.ai drafts MLS remarks you still check against your board's rules.",
+    ],
+    writesonic: [
+      "Writesonic drafts a property description you can edit before it goes on the MLS.",
+    ],
+  },
+  "listing-photos": {
+    boxbrownie: [
+      "BoxBrownie edits a listing photo and virtually stages an empty room.",
+    ],
+  },
+  "realtor-follow-up": {
+    "follow-up-boss": [
+      "Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.",
+    ],
+  },
+  "real-estate-crm": {
+    "follow-up-boss": [
+      "Follow Up Boss keeps buyer and seller leads in one real estate CRM.",
+    ],
+  },
+  "market-reports": {
+    "cloud-cma": [
+      "Cloud CMA turns neighborhood stats into a market update you can check before a client sees it.",
+    ],
+  },
+  "realtor-prospecting": {
+    propstream: [
+      "PropStream searches expired, FSBO, and farm-area records in one property list.",
+    ],
+    dealmachine: [
+      "DealMachine pulls owner records for a farm area and tags a property during a drive.",
+    ],
+    batchleads: [
+      "BatchLeads saves owner phone numbers and emails for an expired or FSBO list.",
+    ],
+    resimpli: [
+      "REsimpli contacts owners by phone, text, and email from a prospecting list.",
+    ],
+    "launch-control": [
+      "Launch Control messages owners whose numbers are already on a prospecting list.",
+    ],
+  },
+  "agent-social": {
+    buffer: [
+      "Buffer schedules listing posts and drafts captions for an agent's social channels.",
+    ],
+    hootsuite: [
+      "Hootsuite publishes an agent's social posts from one suite.",
+    ],
+    ocoya: [
+      "Ocoya creates listing posts and puts them on a social schedule.",
+    ],
+    predis: [
+      "Predis.ai generates social posts and ad creatives for a listing.",
+    ],
+  },
+  "property-management": {
+    doorloop: [
+      "DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.",
+    ],
+  },
   "run-a-business": {
     dext: [
       "Dext captures receipts and invoices so a small business can keep the books current.",

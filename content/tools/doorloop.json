@@ -1,0 +1,50 @@
+{
+  "id": "doorloop",
+  "slug": "doorloop",
+  "name": "DoorLoop",
+  "websiteUrl": "https://www.doorloop.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Property management for rent, leasing, and maintenance. One starts at a $199 monthly minimum.",
+  "longDescription": "DoorLoop's One plan is $2.50 per unit per month with a $199 monthly minimum, and $1.50 per unit after 100 units. Connect is $4 per unit per month with a $299 minimum, and Multiply is $5 per unit per month with a $399 minimum. The One plan includes an AI assistant for listings, summaries, and inspection reports, along with accounting, leasing, maintenance, and rent collection. Tenant screening is $35 on every plan.",
+  "categories": ["real-estate"],
+  "useCaseTags": ["property-management"],
+  "toolTypes": ["other"],
+  "platforms": ["web"],
+  "pricingModel": ["subscription"],
+  "pricingNotes": "One is $2.50 per unit per month ($1.50 per unit above 100) with a $199 monthly minimum. Connect is $4 per unit with a $299 minimum. Multiply is $5 per unit with a $399 minimum. The One plan includes an AI assistant, accounting, leasing, maintenance, and rent collection. Tenant screening is $35 on every plan. No trial length is shown.",
+  "pricingUrl": "https://www.doorloop.com/pricing",
+  "docsUrl": "https://www.doorloop.com/pricing",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": 199,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-27",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Rent collection, leasing, and maintenance with an assistant on the One plan"
+  ],
+  "notIdealFor": [
+    "A landlord who wants a plan below the $199 monthly minimum"
+  ],
+  "strength": "DoorLoop's One plan includes an AI assistant for listings, summaries, and inspection reports, plus rent collection, leasing, and maintenance.",
+  "weakness": "The One plan has a $199 monthly minimum, tenant screening is $35 on every plan, and no trial length is shown.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T12:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Pricing page reviewed on October 27, 2026.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "sources": ["https://www.doorloop.com/pricing"],
+  "siteLoad": { "status": 200, "finalUrl": "https://www.doorloop.com/pricing" },
+  "useCaseFit": {
+    "property-management": "Tracks rent, maintenance, and leases and includes an assistant for tenant questions."
+  }
+}

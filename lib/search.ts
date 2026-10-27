@@ -1,6 +1,9 @@
 import { domainAssistantLine, openAssistantLine } from "./assistant-lines.ts";
 import { BRIDGE_LINES, isListingMakeQuery, isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
+import { EXTRA_SPELLING, prepareQuery } from "./match-text.ts";
+import { semanticHits } from "./semantic.ts";
+import { blockRealEstateConcept, CANONICAL_REAL_ESTATE, CAP_RATE_INTRO } from "./real-estate-match.ts";
 import {
   SMB_SPELLING,
   booksBrandQuery,
@@ -82,6 +85,10 @@ const LEADING_GERUNDS: Record<string, string> = {
   water: "watering",
   fold: "folding",
   start: "starting",
+  pull: "pulling",
+  price: "pricing",
+  stage: "staging",
+  nurture: "nurturing",
   triage: "triaging",
   fill: "filling",
   file: "filing",
@@ -112,7 +119,8 @@ const GERUNDS: Record<string, string> = {
   qualify: "qualifying", turn: "turning", run: "running", optimize: "optimizing",
   draft: "drafting", summarize: "summarizing", compare: "comparing", track: "tracking",
   handle: "handling", orchestrate: "orchestrating", design: "designing", cook: "cooking",
-  call: "calling", recommend: "recommending",
+  call: "calling", recommend: "recommending", pull: "pulling", price: "pricing",
+  stage: "staging", nurture: "nurturing",
 };
 
 const ACTION_VERBS = Object.keys(GERUNDS);
@@ -124,6 +132,7 @@ const SPELLING: Record<string, string> = {
   portfolo: "portfolio",
   investmnt: "investment",
   ...SMB_SPELLING,
+  ...EXTRA_SPELLING,
 };
 
 const DO_NOT_CORRECT = new Set([
@@ -135,9 +144,10 @@ const DO_NOT_CORRECT = new Set([
   "shipping", "shipped",
 ]);
 
-const ANCHOR_DICTIONARY = [...new Set(CONCEPTS.flatMap((concept) => concept.anchors))].filter(
-  (word) => word.length >= 5,
-);
+const ANCHOR_DICTIONARY = [...new Set([
+  ...CONCEPTS.flatMap((concept) => concept.anchors),
+  ...Object.values(EXTRA_SPELLING),
+])].filter((word) => word.length >= 5);
 
 function words(text: string): string[] {
   return text.toLowerCase().match(/[a-z0-9]+/g) ?? [];
@@ -172,6 +182,7 @@ function correctToken(token: string): string {
   let match: string | null = null;
   for (const candidate of ANCHOR_DICTIONARY) {
     if (candidate[0] !== token[0]) continue;
+    if (token === `${candidate}s` || token === `${candidate}es`) continue;
     if (editDistance(token, candidate) !== 1) continue;
     if (match) return token;
     match = candidate;
@@ -210,10 +221,27 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   if (concept.id === "video-generation" && (listingVideoQuery(lower) || avatarQuery(lower))) return 0;
   if (concept.id === "avatar" && (videoGenerationQuery(lower) || listingVideoQuery(lower))) return 0;
   if (concept.id === "listing-video" && avatarQuery(lower)) return 0;
+  if (
+    concept.id === "meetings"
+    && /\b(schedule(?:\s+a)? meetings?|scheduling meetings|calendar management)\b/.test(lower)
+    && !/\b(notes|transcript|action items|transcribe)\b/.test(lower)
+  ) {
+    return 0;
+  }
   if (concept.id === "tutoring" && languageQuery(lower)) return 0;
   if (conceptBlocked(concept.id, lower)) return 0;
+  if (blockRealEstateConcept(concept.id, lower)) return 0;
   let score = 0;
+  if (
+    (concept.id === "cma" || concept.id === "listing-copy" || concept.id === "listing-photos"
+      || concept.id === "realtor-follow-up" || concept.id === "realtor-crm" || concept.id === "showings"
+      || concept.id === "transaction" || concept.id === "market-report" || concept.id === "prospecting"
+      || concept.id === "agent-social" || concept.id === "property-mgmt")
+  ) {
+    score += 12;
+  }
   if (concept.id === "video-generation" && videoGenerationQuery(lower)) score += 12;
+  if (concept.id === "listing-video" && listingVideoQuery(lower)) score += 12;
   const phrases = concept.id === "deals" && !propertyMoneyQuery(lower)
     ? concept.phrases.filter((phrase) => phrase !== "cash flow")
     : concept.phrases;
@@ -222,6 +250,9 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   }
   for (const anchor of concept.anchors) {
     if (tokens.has(anchor)) score += 8;
+  }
+  for (const bag of concept.bags ?? []) {
+    if (bag.every((term) => tokens.has(term))) score += 12;
   }
   return score;
 }
@@ -251,6 +282,13 @@ const ACRONYM_CASE: Record<string, string> = {
   vat: "VAT",
   gst: "GST",
   fsbo: "FSBO",
+  fsbos: "FSBOs",
+  cma: "CMA",
+  cmas: "CMAs",
+  bpo: "BPO",
+  mls: "MLS",
+  arv: "ARV",
+  qbo: "QBO",
   rag: "RAG",
   soc: "SOC",
   gmail: "Gmail",
@@ -268,7 +306,8 @@ const ACRONYM_CASE: Record<string, string> = {
 
 /** Drop "use an agent for", "is there an AI that can", and the other tool-seeking openers. */
 export function stripWrappers(input: string): string {
-  let text = input.trim().replace(/\s+/g, " ").replace(/^[^A-Za-z0-9]+/, "").replace(/[.?!…]+$/g, "").replace(/\s+please$/i, "");
+  let text = input.trim().replace(/[“”‘’"'`]+/g, "").replace(/\s+/g, " ").replace(/^[^A-Za-z0-9]+/, "").replace(/[.?!…]+$/g, "").replace(/\s+please$/i, "");
+  text = text.replace(/\bfor me to\b/gi, " ");
   text = text.replace(/\band\s+(agent|ai)s?\b/gi, "an $1").replace(/\band\s+tools?\b/gi, "a tool");
   const patterns = [
     /^(?:hey|hi|hello|ok|okay|so)\s+/i,
@@ -374,6 +413,17 @@ const CANONICAL_JOB: Record<string, string> = {
   "make-3d": "making a 3D model",
   "avatar-video": "making an avatar video",
   "listing-videos": "making a real estate listing video",
+  "cma-comps": "pulling comps for a CMA",
+  "listing-copy": "writing an MLS listing description",
+  "listing-photos": "editing listing photos and virtual staging",
+  "realtor-follow-up": "following up with buyers and sellers",
+  "real-estate-crm": "running a real estate CRM",
+  "showing-scheduling": "scheduling showings and open houses",
+  "transaction-coordination": "coordinating contracts and disclosures",
+  "market-reports": "drafting a neighborhood market update",
+  "realtor-prospecting": "prospecting expireds, FSBOs, and a farm",
+  "agent-social": "posting social media for an agent",
+  "property-management": "handling property management tasks",
   "real-estate": "finding AI tools for real estate",
   "write-resume": "writing a resume",
   "coding-agents": "writing and reviewing code",
@@ -520,6 +570,9 @@ function bareGerundPhrase(phrase: string): boolean {
 }
 
 function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, wantsYour: boolean): string {
+  if (useCase && CANONICAL_REAL_ESTATE.has(useCase.slug)) {
+    return personalize(CANONICAL_JOB[useCase.slug] ?? "help with this", wantsYour);
+  }
   if (!cleaned) return useCase ? personalize(CANONICAL_JOB[useCase.slug] ?? "help with this", wantsYour) : "help with this";
   if (/^(?:tutor(?:ing)?(?:\s+me)?)$/i.test(cleaned)) return "getting tutoring help";
   if (/\bimage[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from an image";
@@ -630,8 +683,10 @@ function avatarQuery(query: string): boolean {
 }
 
 function listingVideoQuery(query: string): boolean {
-  if (/\b(listing videos?|video tour|property walkthrough|realtor video|listing photos)\b/i.test(query)) return true;
-  return /\b(realtor|listing)\b/i.test(query) && /\b(video|videos|tour|walkthrough)\b/i.test(query);
+  if (/\b(listing videos?|video tours?|property walkthroughs?|realtor videos?|house tours?|home tours?|property reels?)\b/i.test(query)) return true;
+  if (/\b(listing photos?|property photos?)\b/i.test(query) && /\b(videos?|reels?|tours?)\b/i.test(query)) return true;
+  return /\b(realtors?|listings?|propert(?:y|ies)|houses?|homes?)\b/i.test(query)
+    && /\b(videos?|reels?|walkthroughs?|tours?)\b/i.test(query);
 }
 
 function languageQuery(query: string): boolean {
@@ -676,6 +731,22 @@ function luggageQuery(text: string): boolean {
 function roleBonus(conceptId: string, slug: string, query: string): number {
   const smb = smallBusinessRoleBonus(conceptId, slug, query);
   if (smb) return smb;
+  const realEstateOrder: Record<string, string[]> = {
+    cma: ["cloud-cma"],
+    "listing-copy": ["jasper", "copy-ai", "writesonic"],
+    "listing-photos": ["boxbrownie"],
+    "realtor-follow-up": ["follow-up-boss"],
+    "realtor-crm": ["follow-up-boss"],
+    "market-report": ["cloud-cma"],
+    prospecting: ["propstream", "dealmachine", "batchleads", "resimpli", "launch-control"],
+    "agent-social": ["buffer", "hootsuite", "ocoya", "predis"],
+    "property-mgmt": ["doorloop"],
+  };
+  const ordered = realEstateOrder[conceptId];
+  if (ordered) {
+    const index = ordered.indexOf(slug);
+    if (index >= 0) return 400 - index * 40;
+  }
   if (conceptId === "listing-video") {
     const order = isListingPhotoQuery(query) || isListingMakeQuery(query) ? LISTING_PHOTO_ORDER : LISTING_EDITOR_ORDER;
     const index = order.indexOf(slug);
@@ -770,6 +841,9 @@ export function jobIntro(query: string, useCase: UseCase | undefined, concept: C
   if ((useCase?.slug === "coding-agents" || concept?.id === "code") && modelChoiceQuery(query)) return MODEL_CHOICE_INTRO;
   if (useCase?.slug === "listing-videos" || concept?.id === "listing-video") {
     return isListingPhotoQuery(query) ? LISTING_PHOTO_INTRO : LISTING_EDIT_INTRO;
+  }
+  if ((useCase?.slug === "rank-property-deals" || concept?.id === "deals") && /\b(cap rates?|arv|after repair|rental comps?)\b/i.test(query)) {
+    return CAP_RATE_INTRO;
   }
   const smb = smallBusinessIntro(query, useCase?.slug, concept?.id ?? null);
   if (smb) return smb;
@@ -978,12 +1052,17 @@ function alternativeLead(tool: IndexedTool): string {
 type ConceptHit = { concept: Concept; score: number };
 
 function conceptHits(text: string): ConceptHit[] {
-  const lower = text.toLowerCase();
-  const tokens = new Set(words(text).map(correctToken));
-  return CONCEPTS
-    .map((concept) => ({ concept, score: scoreConcept(concept, lower, tokens) }))
+  const prepared = prepareQuery(text);
+  const lexicon = CONCEPTS
+    .map((concept) => ({ concept, score: scoreConcept(concept, prepared.text, prepared.tokens) }))
     .filter((item) => item.score >= CONCEPT_THRESHOLD)
     .sort((a, b) => b.score - a.score || a.concept.id.localeCompare(b.concept.id));
+  if (lexicon.length > 0) return lexicon;
+  const backstop = semanticHits(text);
+  return backstop.flatMap((hit) => {
+    const concept = CONCEPTS.find((item) => item.id === hit.id);
+    return concept ? [{ concept, score: hit.score }] : [];
+  });
 }
 
 function chooseWinner(hits: ConceptHit[]): ConceptHit | null {

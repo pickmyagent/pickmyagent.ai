@@ -6,6 +6,7 @@ import { rankCatalogQuery } from "../lib/search.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
+import { buildParaphrases, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems } from "./paraphrases.ts";
 
 export type QaQuery = {
   query: string;
@@ -16,6 +17,7 @@ export type QaQuery = {
 
 /** Realistic searches: use-case jobs, wrappers, caps, typos, punctuation, questions, and unrelated work. */
 export const QA_QUERIES: QaQuery[] = [
+  { query: 'pull house comparisons for me to make a CMA"', domain: "cma-comps" },
   { query: "find homes for sale by owner", domain: "find-off-market" },
   { query: "use an agent for motivated sellers", domain: "find-off-market" },
   { query: "fsbo near me", domain: "find-off-market" },
@@ -504,7 +506,7 @@ export function runSearchQa(catalog: Catalog): QaRow[] {
 }
 
 export function qaProblems(catalog: Catalog): string[] {
-  const problems: string[] = [];
+  const problems: string[] = [...paraphraseProblems(catalog)];
   const bySlug = new Map(catalog.tools.map((tool) => [tool.slug, tool]));
   if (QA_QUERIES.length < 200) problems.push(`expected at least 200 queries, found ${QA_QUERIES.length}`);
   const seen = new Set<string>();
@@ -666,16 +668,10 @@ export function catalogLeakProblems(catalog: Catalog): string[] {
   return problems;
 }
 
-export function renderSearchQaReport(catalog: Catalog): string {
-  const rows = runSearchQa(catalog);
-  const lines = [
-    "# Search QA report",
-    "",
-    `${rows.length} queries through the ranker and the header, intro, and why-line renderers.`,
-    "",
-  ];
+function renderRows(rows: QaRow[], start: number): string[] {
+  const lines: string[] = [];
   rows.forEach((row, index) => {
-    lines.push(`## ${index + 1}. ${row.query}`, "");
+    lines.push(`## ${start + index}. ${row.query}`, "");
     lines.push(`- Header: ${row.header}`);
     lines.push(`- Intro: ${row.intro}`);
     if (row.domain) lines.push(`- Domain: ${row.domain}`);
@@ -686,6 +682,62 @@ export function renderSearchQaReport(catalog: Catalog): string {
     }
     lines.push("");
   });
+  return lines;
+}
+
+function paraphraseRows(catalog: Catalog, realEstate: boolean): QaRow[] {
+  const wanted = buildParaphrases().filter((item) => item.realEstate === realEstate);
+  if (realEstate) {
+    wanted.sort((a, b) => {
+      if (a.query === FOUNDER_QUERY) return -1;
+      if (b.query === FOUNDER_QUERY) return 1;
+      return a.useCase.localeCompare(b.useCase) || a.query.localeCompare(b.query);
+    });
+  }
+  return wanted.map((item) => {
+    const ranked = rankCatalogQuery(item.query, catalog);
+    return {
+      query: item.query,
+      domain: item.useCase,
+      header: ranked.lead,
+      intro: ranked.intro,
+      cards: ranked.tools.map((tool) => ({
+        name: tool.name,
+        label: cardLabel(tool.generalPurpose, tool.smokeStatus),
+        why: tool.whyItHelps,
+      })),
+    };
+  });
+}
+
+export function renderSearchQaReport(catalog: Catalog): string {
+  const rows = runSearchQa(catalog);
+  const graded = gradeParaphrases(catalog);
+  const realEstate = paraphraseRows(catalog, true);
+  const other = paraphraseRows(catalog, false);
+  const lines = [
+    "# Search QA report",
+    "",
+    `Paraphrase gate: ${graded.grades.length} variants, pass rate ${(graded.passRate * 100).toFixed(1)}%, precision@3 ${graded.precisionAt3.toFixed(3)}.`,
+    `Real estate variants: ${graded.realEstateCount}. Founder demo query: ${FOUNDER_QUERY}`,
+    "",
+    "Per-use-case pass rate:",
+    "",
+  ];
+  for (const row of [...graded.byUseCase].sort((a, b) => a.useCase.localeCompare(b.useCase))) {
+    lines.push(`- ${row.useCase}: ${(row.rate * 100).toFixed(1)}% (${row.passed}/${row.total})`);
+  }
+  lines.push("", "# Real estate paraphrases", "", `${realEstate.length} real estate queries. The founder demo is first.`, "");
+  lines.push(...renderRows(realEstate, 1));
+  lines.push("# Other paraphrases", "");
+  lines.push(...renderRows(other, 1));
+  lines.push(
+    "# Legacy search QA",
+    "",
+    `${rows.length} queries through the ranker and the header, intro, and why-line renderers.`,
+    "",
+  );
+  lines.push(...renderRows(rows, 1));
   return lines.join("\n");
 }
 

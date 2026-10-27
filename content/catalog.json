@@ -658,7 +658,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-off-market"
+        "find-off-market",
+        "realtor-prospecting"
       ],
       "toolTypes": [
         "agent"
@@ -710,7 +711,8 @@
         "finalUrl": "https://batchleads.io/pricing"
       },
       "useCaseFit": {
-        "find-off-market": "Saves properties with owner phone numbers and emails, and Growth is $119 per month."
+        "find-off-market": "Saves properties with owner phone numbers and emails, and Growth is $119 per month.",
+        "realtor-prospecting": "Saves owner phone numbers and emails for an expired or FSBO list."
       }
     },
     {
@@ -863,13 +865,14 @@
       "name": "BoxBrownie",
       "websiteUrl": "https://www.boxbrownie.com/",
       "affiliateUrl": null,
-      "shortDescription": "Stitches 360 photos into a virtual tour of a property.",
-      "longDescription": "BoxBrownie's virtual tour page says a tour is a 360 degree view of a property that a buyer can pan through. Its guide says you upload 360 photos, label each room, and get a shareable tour link. Those pages do not list a monthly plan price.",
+      "shortDescription": "Edits listing photos, virtually stages rooms, and builds 360 tours. Priced per image.",
+      "longDescription": "BoxBrownie edits listing photos and virtually stages empty rooms, and it can stitch 360 photos into a tour a buyer can pan through. Image enhancement is US$2 per photo. Virtual staging is US$30 per photo. A virtual tour of up to 15 photos is US$20, a tour of 16 to 25 photos is US$30, and 360 virtual staging is US$60 per photo. There is no monthly subscription.",
       "categories": [
         "creative-media"
       ],
       "useCaseTags": [
-        "listing-videos"
+        "listing-videos",
+        "listing-photos"
       ],
       "toolTypes": [
         "creative"
@@ -878,33 +881,33 @@
         "web"
       ],
       "pricingModel": [
-        "contact"
+        "usage"
       ],
-      "pricingNotes": "The virtual tour pages we read did not list a monthly plan price.",
-      "pricingUrl": "https://www.boxbrownie.com/360-virtual-tours",
+      "pricingNotes": "Image enhancement is US$2 per photo. Virtual staging is US$30 per photo. A virtual tour of up to 15 photos is US$20, and 16 to 25 photos is US$30. 360 virtual staging is US$60 per photo. There is no monthly subscription.",
+      "pricingUrl": "https://www.boxbrownie.com/pricing",
       "docsUrl": "https://www.boxbrownie.com/b/how-to-easily-create-a-virtual-tour-for-real-estate-listings",
       "freeTier": null,
       "freeTierNotes": null,
       "startingPrice": null,
       "freeTrial": null,
-      "pricingCheckedAt": "2026-10-19",
+      "pricingCheckedAt": "2026-10-27",
       "openSource": false,
       "repoUrl": null,
       "bestFor": [
-        "A 360 virtual tour a buyer can pan through",
-        "A property walkthrough built from 360 photos"
+        "Editing a listing photo or virtually staging an empty room",
+        "A 360 virtual tour a buyer can pan through"
       ],
       "notIdealFor": [
         "A vertical Instagram reel from ordinary listing photos",
-        "A published monthly price"
+        "A monthly subscription price"
       ],
-      "strength": "The BoxBrownie virtual tour page says it stitches 360 photos into a walkthrough a buyer can pan through.",
-      "weakness": "The virtual tour pages do not list a monthly price, and the tour is a 360 viewer rather than a social reel.",
+      "strength": "BoxBrownie edits a listing photo, virtually stages an empty room, and can stitch 360 photos into a tour a buyer can pan through.",
+      "weakness": "Image work is priced per photo, with enhancement at US$2, virtual staging at US$30, and no monthly plan.",
       "smokeStatus": "verified-docs-only",
       "smokeTested": false,
-      "checkedAt": "2026-10-19T23:40:00-04:00",
-      "checkedDate": "2026-10-19",
-      "smokeTestNotes": "Virtual tour page and listing guide reviewed on October 19, 2026.",
+      "checkedAt": "2026-10-27T12:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Pricing and virtual tour pages reviewed on October 27, 2026.",
       "handsOn": {
         "performed": false
       },
@@ -914,17 +917,19 @@
       "featuredPaid": false,
       "status": "published",
       "publishedAt": "2026-10-19",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-27",
       "sources": [
+        "https://www.boxbrownie.com/pricing",
         "https://www.boxbrownie.com/360-virtual-tours",
         "https://www.boxbrownie.com/b/how-to-easily-create-a-virtual-tour-for-real-estate-listings"
       ],
       "siteLoad": {
         "status": 200,
-        "finalUrl": "https://www.boxbrownie.com/360-virtual-tours"
+        "finalUrl": "https://www.boxbrownie.com/pricing"
       },
       "useCaseFit": {
-        "listing-videos": "Builds a virtual tour of the home from 360 photos."
+        "listing-videos": "Builds a virtual tour of the home from 360 photos.",
+        "listing-photos": "Edits a listing photo and virtually stages an empty room."
       }
     },
     {
@@ -1024,7 +1029,8 @@
       ],
       "useCaseTags": [
         "social-media",
-        "run-a-business"
+        "run-a-business",
+        "agent-social"
       ],
       "toolTypes": [
         "agent"
@@ -1078,7 +1084,8 @@
       },
       "useCaseFit": {
         "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content.",
-        "run-a-business": "Schedules social posts a small business can publish through the week."
+        "run-a-business": "Schedules social posts a small business can publish through the week.",
+        "agent-social": "Schedules listing posts and drafts captions for an agent's social channels."
       }
     },
     {
@@ -1575,6 +1582,76 @@
       }
     },
     {
+      "id": "cloud-cma",
+      "slug": "cloud-cma",
+      "name": "Cloud CMA",
+      "websiteUrl": "https://www.lwolf.com/engage/cma",
+      "affiliateUrl": null,
+      "shortDescription": "Branded CMA reports from MLS comps, with a 14-day trial.",
+      "longDescription": "Cloud CMA builds branded CMA reports from MLS comps, comparable sales, and neighborhood stats. Lone Wolf lists Cloud CMA at $49 per month, or $499 annually, and that price includes Homebeat. A 14-day trial is available. Many MLS memberships include Cloud CMA, and access still depends on the board.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "cma-comps",
+        "market-reports"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Cloud CMA is $49 per month or $499 annually, and that price includes Homebeat. A 14-day trial is available. Some MLS memberships include Cloud CMA.",
+      "pricingUrl": "https://www.lwolf.com/resources/cloud-cma-vs-moxiworks-cma-moxipresent-which-cma-tool-wins",
+      "docsUrl": "https://www.lwolf.com/engage/cma",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 49,
+      "freeTrial": "14 days",
+      "pricingCheckedAt": "2026-10-27",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A branded CMA built from MLS comps and neighborhood stats"
+      ],
+      "notIdealFor": [
+        "An agent whose board does not include MLS access for Cloud CMA"
+      ],
+      "strength": "Cloud CMA builds a branded CMA from MLS comps and neighborhood stats, and a 14-day trial is available.",
+      "weakness": "The $49 per month price includes Homebeat, and MLS comps are available only when the agent's board provides them.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T12:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and comparison pages reviewed on October 27, 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "sources": [
+        "https://www.lwolf.com/engage/cma",
+        "https://www.lwolf.com/resources/cloud-cma-vs-moxiworks-cma-moxipresent-which-cma-tool-wins"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.lwolf.com/resources/cloud-cma-vs-moxiworks-cma-moxipresent-which-cma-tool-wins"
+      },
+      "useCaseFit": {
+        "cma-comps": "Builds a CMA report from MLS comps and neighborhood stats.",
+        "market-reports": "Turns neighborhood stats into a market update a client can review."
+      }
+    },
+    {
       "affiliateUrl": null,
       "platforms": [
         "web"
@@ -1886,7 +1963,8 @@
         "content"
       ],
       "useCaseTags": [
-        "create-content"
+        "create-content",
+        "listing-copy"
       ],
       "toolTypes": [
         "agent"
@@ -1939,7 +2017,8 @@
         "finalUrl": "https://www.copy.ai/"
       },
       "useCaseFit": {
-        "create-content": "Describes content-creation workflows for marketing teams."
+        "create-content": "Describes content-creation workflows for marketing teams.",
+        "listing-copy": "Drafts MLS remarks you still check against your board's rules."
       }
     },
     {
@@ -2326,7 +2405,8 @@
       ],
       "useCaseTags": [
         "find-off-market",
-        "real-estate-overview"
+        "real-estate-overview",
+        "realtor-prospecting"
       ],
       "toolTypes": [
         "agent"
@@ -2379,7 +2459,8 @@
       },
       "useCaseFit": {
         "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month.",
-        "real-estate": "Pulls owner records and tags a property during a drive."
+        "real-estate": "Pulls owner records and tags a property during a drive.",
+        "realtor-prospecting": "Pulls owner records for a farm area and tags a property during a drive."
       }
     },
     {
@@ -2760,6 +2841,73 @@
       },
       "useCaseFit": {
         "multi-agent-workflows": "Visual builder for agent workflows, with a self-hosted community edition."
+      }
+    },
+    {
+      "id": "doorloop",
+      "slug": "doorloop",
+      "name": "DoorLoop",
+      "websiteUrl": "https://www.doorloop.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Property management for rent, leasing, and maintenance. One starts at a $199 monthly minimum.",
+      "longDescription": "DoorLoop's One plan is $2.50 per unit per month with a $199 monthly minimum, and $1.50 per unit after 100 units. Connect is $4 per unit per month with a $299 minimum, and Multiply is $5 per unit per month with a $399 minimum. The One plan includes an AI assistant for listings, summaries, and inspection reports, along with accounting, leasing, maintenance, and rent collection. Tenant screening is $35 on every plan.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "property-management"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "One is $2.50 per unit per month ($1.50 per unit above 100) with a $199 monthly minimum. Connect is $4 per unit with a $299 minimum. Multiply is $5 per unit with a $399 minimum. The One plan includes an AI assistant, accounting, leasing, maintenance, and rent collection. Tenant screening is $35 on every plan. No trial length is shown.",
+      "pricingUrl": "https://www.doorloop.com/pricing",
+      "docsUrl": "https://www.doorloop.com/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 199,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-27",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "Rent collection, leasing, and maintenance with an assistant on the One plan"
+      ],
+      "notIdealFor": [
+        "A landlord who wants a plan below the $199 monthly minimum"
+      ],
+      "strength": "DoorLoop's One plan includes an AI assistant for listings, summaries, and inspection reports, plus rent collection, leasing, and maintenance.",
+      "weakness": "The One plan has a $199 monthly minimum, tenant screening is $35 on every plan, and no trial length is shown.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T12:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Pricing page reviewed on October 27, 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "sources": [
+        "https://www.doorloop.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.doorloop.com/pricing"
+      },
+      "useCaseFit": {
+        "property-management": "Tracks rent, maintenance, and leases and includes an assistant for tenant questions."
       }
     },
     {
@@ -3333,6 +3481,75 @@
       },
       "useCaseFit": {
         "do-taxes": "Describes an AI and CPA flow that finds deductions and files self-employed taxes."
+      }
+    },
+    {
+      "id": "follow-up-boss",
+      "slug": "follow-up-boss",
+      "name": "Follow Up Boss",
+      "websiteUrl": "https://www.followupboss.com/",
+      "affiliateUrl": null,
+      "shortDescription": "Real estate CRM with action plans. Grow is $69 per user per month.",
+      "longDescription": "Follow Up Boss is a real estate CRM whose action plans automate follow-up with buyers and sellers. Grow is $69 per user per month plus tax, or $58 per user per month when billed annually. Pro is $499 per month and includes 10 users. Platform is $1000 per month and includes 30 users. A free trial is offered with no contract, and the pricing page does not state how long the trial lasts. AI features are included, and many of them rely on FUB Calling, a paid add-on on Grow.",
+      "categories": [
+        "real-estate"
+      ],
+      "useCaseTags": [
+        "realtor-follow-up",
+        "real-estate-crm"
+      ],
+      "toolTypes": [
+        "other"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Grow is $69 per user per month plus tax, or $58 per user per month billed annually. Pro is $499 per month and includes 10 users. Platform is $1000 per month and includes 30 users. A free trial is offered with no contract and no stated length. Many AI features rely on FUB Calling, a paid add-on on Grow.",
+      "pricingUrl": "https://www.followupboss.com/pricing",
+      "docsUrl": "https://www.followupboss.com/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 69,
+      "freeTrial": null,
+      "pricingCheckedAt": "2026-10-27",
+      "openSource": false,
+      "repoUrl": null,
+      "bestFor": [
+        "A real estate CRM that runs follow-up action plans for buyers and sellers"
+      ],
+      "notIdealFor": [
+        "A team that needs every AI feature without the FUB Calling add-on"
+      ],
+      "strength": "Follow Up Boss keeps a real estate CRM and action plans for follow-up, and Grow is $69 per user per month.",
+      "weakness": "Many AI features depend on FUB Calling, a paid add-on on the Grow plan, and the free trial does not state a length.",
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T12:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Pricing page reviewed on October 27, 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "sources": [
+        "https://www.followupboss.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.followupboss.com/pricing"
+      },
+      "useCaseFit": {
+        "realtor-follow-up": "Runs action plans that remind you to follow up with buyers and sellers.",
+        "real-estate-crm": "Keeps buyer and seller leads in one real estate CRM."
       }
     },
     {
@@ -4169,7 +4386,8 @@
         "content"
       ],
       "useCaseTags": [
-        "social-media"
+        "social-media",
+        "agent-social"
       ],
       "toolTypes": [
         "agent"
@@ -4222,7 +4440,8 @@
         "finalUrl": "https://www.hootsuite.com/"
       },
       "useCaseFit": {
-        "social-media": "Plans and publishes social content, and the plans page says the suite is connected by AI."
+        "social-media": "Plans and publishes social content, and the plans page says the suite is connected by AI.",
+        "agent-social": "Publishes an agent's social posts from one suite."
       }
     },
     {
@@ -4444,7 +4663,8 @@
         "content"
       ],
       "useCaseTags": [
-        "create-content"
+        "create-content",
+        "listing-copy"
       ],
       "toolTypes": [
         "agent"
@@ -4498,7 +4718,8 @@
         "finalUrl": "https://www.jasper.ai/"
       },
       "useCaseFit": {
-        "create-content": "Marketing content workspace with agents and a free-trial offer."
+        "create-content": "Marketing content workspace with agents and a free-trial offer.",
+        "listing-copy": "Drafts a listing description from the property facts you give it."
       }
     },
     {
@@ -5149,7 +5370,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-off-market"
+        "find-off-market",
+        "realtor-prospecting"
       ],
       "toolTypes": [
         "automation"
@@ -5202,7 +5424,8 @@
         "finalUrl": "https://launchcontrol.us/pricing/"
       },
       "useCaseFit": {
-        "find-off-market": "Sends texts to owner lists, and the pricing page lists skip tracing at $0.13."
+        "find-off-market": "Sends texts to owner lists, and the pricing page lists skip tracing at $0.13.",
+        "realtor-prospecting": "Messages owners whose numbers are already on a prospecting list."
       }
     },
     {
@@ -6520,7 +6743,8 @@
         "content"
       ],
       "useCaseTags": [
-        "social-media"
+        "social-media",
+        "agent-social"
       ],
       "toolTypes": [
         "agent"
@@ -6572,7 +6796,8 @@
         "finalUrl": "https://www.ocoya.com/"
       },
       "useCaseFit": {
-        "social-media": "Social content tool with Starter at $29 per month and a 7-day trial."
+        "social-media": "Social content tool with Starter at $29 per month and a 7-day trial.",
+        "agent-social": "Creates listing posts and puts them on a social schedule."
       }
     },
     {
@@ -7005,7 +7230,8 @@
         "content"
       ],
       "useCaseTags": [
-        "social-media"
+        "social-media",
+        "agent-social"
       ],
       "toolTypes": [
         "agent"
@@ -7058,7 +7284,8 @@
         "finalUrl": "https://predis.ai/"
       },
       "useCaseFit": {
-        "social-media": "Generates social posts and ads with AI, without a clear base price in the fetch."
+        "social-media": "Generates social posts and ads with AI, without a clear base price in the fetch.",
+        "agent-social": "Generates social posts and ad creatives for a listing."
       }
     },
     {
@@ -7098,7 +7325,8 @@
         "find-land",
         "find-off-market",
         "rank-property-deals",
-        "real-estate-overview"
+        "real-estate-overview",
+        "realtor-prospecting"
       ],
       "toolTypes": [
         "agent"
@@ -7132,7 +7360,8 @@
         "find-land": "Searches property records with an AI search box, and Essentials is $99 per month.",
         "find-off-market": "Filters property records, including off-market search, and Essentials is $99 per month.",
         "rank-property-deals": "Filters property records, including off-market ones.",
-        "real-estate": "Searches property records, including off-market listings, from one set of filters."
+        "real-estate": "Searches property records, including off-market listings, from one set of filters.",
+        "realtor-prospecting": "Searches expired, FSBO, and farm-area records in one property list."
       }
     },
     {
@@ -7567,7 +7796,8 @@
         "real-estate"
       ],
       "useCaseTags": [
-        "find-off-market"
+        "find-off-market",
+        "realtor-prospecting"
       ],
       "toolTypes": [
         "agent"
@@ -7619,7 +7849,8 @@
         "finalUrl": "https://resimpli.com/pricing/"
       },
       "useCaseFit": {
-        "find-off-market": "Includes calling, texting, and email on every plan, with a 14-day trial."
+        "find-off-market": "Includes calling, texting, and email on every plan, with a 14-day trial.",
+        "realtor-prospecting": "Contacts owners by phone, text, and email from a prospecting list."
       }
     },
     {
@@ -9221,7 +9452,8 @@
         "content"
       ],
       "useCaseTags": [
-        "create-content"
+        "create-content",
+        "listing-copy"
       ],
       "toolTypes": [
         "agent"
@@ -9273,7 +9505,8 @@
         "finalUrl": "https://writesonic.com/"
       },
       "useCaseFit": {
-        "create-content": "Content plans with Starter listed at $79 per month when billed annually."
+        "create-content": "Content plans with Starter listed at $79 per month when billed annually.",
+        "listing-copy": "Drafts a property description you can edit before it goes on the MLS."
       }
     },
     {
@@ -9417,6 +9650,40 @@
   ],
   "useCases": [
     {
+      "slug": "agent-social",
+      "title": "Post social media for an agent",
+      "summary": "Draft listing posts and a weekly social calendar. You still approve what gets published.",
+      "audienceHints": [
+        "realtors"
+      ],
+      "matchTags": [
+        "agent-social"
+      ],
+      "jobPhrase": "posting social media for an agent",
+      "assistantTask": "draft listing posts and a weekly social calendar",
+      "assistantContext": "posting for an agent",
+      "searchTopic": "listing posts and an agent social calendar",
+      "recommended": [
+        {
+          "toolId": "buffer",
+          "why": "Schedules listing posts and drafts captions for an agent's social channels."
+        },
+        {
+          "toolId": "hootsuite",
+          "why": "Publishes an agent's social posts from one suite."
+        },
+        {
+          "toolId": "ocoya",
+          "why": "Creates listing posts and puts them on a social schedule."
+        },
+        {
+          "toolId": "predis",
+          "why": "Generates social posts and ad creatives for a listing."
+        }
+      ],
+      "intro": "AI agents can draft listing posts and a weekly social calendar for an agent, and you still approve what gets published."
+    },
+    {
       "slug": "analyze-data",
       "title": "Analyze data and generate reports",
       "summary": "Ask questions of spreadsheets and dashboards.",
@@ -9507,6 +9774,29 @@
       ],
       "intro": "AI agents can capture receipts, sort expenses into categories, and gather the records you review before they go back into the books.",
       "disclaimer": "PickMyAgent is not tax or financial advice."
+    },
+    {
+      "slug": "cma-comps",
+      "title": "Pull comps for a CMA",
+      "summary": "Gather comparable sales and draft a CMA, then pick the comps and the price yourself.",
+      "audienceHints": [
+        "realtors",
+        "brokers"
+      ],
+      "matchTags": [
+        "cma-comps"
+      ],
+      "jobPhrase": "pulling comps for a CMA",
+      "assistantTask": "gather comparable sales and draft a CMA you still price",
+      "assistantContext": "preparing a CMA",
+      "searchTopic": "comparable sales and a CMA",
+      "recommended": [
+        {
+          "toolId": "cloud-cma",
+          "why": "Builds a CMA report from MLS comps and leaves the list price with the agent."
+        }
+      ],
+      "intro": "AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board."
     },
     {
       "slug": "coding-agents",
@@ -10002,6 +10292,58 @@
       "intro": "AI agents can practice a language with you, explain a mistake, and suggest the next drill."
     },
     {
+      "slug": "listing-copy",
+      "title": "Write an MLS listing description",
+      "summary": "Draft listing remarks from the property facts, then check them against your board's rules.",
+      "audienceHints": [
+        "realtors"
+      ],
+      "matchTags": [
+        "listing-copy"
+      ],
+      "jobPhrase": "writing an MLS listing description",
+      "assistantTask": "draft an MLS listing description from the facts you provide",
+      "assistantContext": "writing a listing description",
+      "searchTopic": "MLS listing descriptions",
+      "recommended": [
+        {
+          "toolId": "jasper",
+          "why": "Drafts a listing description from the property facts you give it."
+        },
+        {
+          "toolId": "copy-ai",
+          "why": "Drafts MLS remarks you still check against your board's rules."
+        },
+        {
+          "toolId": "writesonic",
+          "why": "Drafts a property description you can edit before it goes on the MLS."
+        }
+      ],
+      "intro": "AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live."
+    },
+    {
+      "slug": "listing-photos",
+      "title": "Edit listing photos and virtual staging",
+      "summary": "Edit a listing photo or stage an empty room in a picture, then choose the image that goes on the listing.",
+      "audienceHints": [
+        "realtors"
+      ],
+      "matchTags": [
+        "listing-photos"
+      ],
+      "jobPhrase": "editing listing photos and virtual staging",
+      "assistantTask": "edit a listing photo or stage an empty room in a picture",
+      "assistantContext": "preparing listing photos",
+      "searchTopic": "listing photos and virtual staging",
+      "recommended": [
+        {
+          "toolId": "boxbrownie",
+          "why": "Edits a listing photo and virtually stages an empty room."
+        }
+      ],
+      "intro": "AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing."
+    },
+    {
       "slug": "listing-videos",
       "title": "Make a real estate listing video",
       "summary": "Trim a walkthrough or turn listing photos into a home tour with captions and music.",
@@ -10160,6 +10502,28 @@
       "intro": "AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk."
     },
     {
+      "slug": "market-reports",
+      "title": "Draft a neighborhood market update",
+      "summary": "Draft a market update from figures you supply or a report you upload, then check the numbers before a client sees them.",
+      "audienceHints": [
+        "realtors"
+      ],
+      "matchTags": [
+        "market-reports"
+      ],
+      "jobPhrase": "drafting a neighborhood market update",
+      "assistantTask": "draft a neighborhood market update from figures you supply",
+      "assistantContext": "sending a market update",
+      "searchTopic": "neighborhood market updates",
+      "recommended": [
+        {
+          "toolId": "cloud-cma",
+          "why": "Turns neighborhood stats into a market update you can check before a client sees it."
+        }
+      ],
+      "intro": "AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them."
+    },
+    {
       "slug": "marketing-promotions",
       "title": "Automate marketing promotions",
       "summary": "Schedule promo emails, texts, and posts.",
@@ -10294,6 +10658,29 @@
       "intro": "AI agents can plan travel by comparing flights, hotels, and vacation deals and drafting an itinerary you can book yourself."
     },
     {
+      "slug": "property-management",
+      "title": "Handle property management tasks",
+      "summary": "Draft a tenant reply, sort a maintenance request, and list the rent roll you still check.",
+      "audienceHints": [
+        "landlords",
+        "property managers"
+      ],
+      "matchTags": [
+        "property-management"
+      ],
+      "jobPhrase": "handling property management tasks",
+      "assistantTask": "draft a tenant reply, sort a maintenance request, and list the rent roll",
+      "assistantContext": "handling property management",
+      "searchTopic": "rent, maintenance, and leases",
+      "recommended": [
+        {
+          "toolId": "doorloop",
+          "why": "Tracks rent, maintenance, and leases and includes an assistant for tenant questions."
+        }
+      ],
+      "intro": "AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check."
+    },
+    {
       "slug": "quotes",
       "title": "Draft a quote",
       "summary": "Turn job details and your price into a quote you still check.",
@@ -10342,6 +10729,28 @@
       "intro": "AI agents can compare property records and rental or flip numbers so you sort the deals yourself."
     },
     {
+      "slug": "real-estate-crm",
+      "title": "Run a real estate CRM",
+      "summary": "Keep buyer and seller contacts in a real estate CRM and draft the next touch.",
+      "audienceHints": [
+        "realtors"
+      ],
+      "matchTags": [
+        "real-estate-crm"
+      ],
+      "jobPhrase": "running a real estate CRM",
+      "assistantTask": "organize buyer and seller contacts and draft the next touch",
+      "assistantContext": "running a real estate CRM",
+      "searchTopic": "a real estate CRM",
+      "recommended": [
+        {
+          "toolId": "follow-up-boss",
+          "why": "Keeps buyer and seller leads in one real estate CRM."
+        }
+      ],
+      "intro": "AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out."
+    },
+    {
       "slug": "real-estate",
       "title": "Find AI tools for real estate",
       "summary": "Compare deal, listing-video, outreach, and land tools before you pick one.",
@@ -10379,6 +10788,67 @@
       "assistantContext": "choosing a real estate tool",
       "searchTopic": "deals, listing videos, and owner outreach",
       "intro": "AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue."
+    },
+    {
+      "slug": "realtor-follow-up",
+      "title": "Follow up with buyers and sellers",
+      "summary": "Draft buyer and seller follow-ups and see who to contact next. You still decide what gets sent.",
+      "audienceHints": [
+        "realtors"
+      ],
+      "matchTags": [
+        "realtor-follow-up"
+      ],
+      "jobPhrase": "following up with buyers and sellers",
+      "assistantTask": "draft buyer and seller follow-ups and list who to contact next",
+      "assistantContext": "following up with buyers and sellers",
+      "searchTopic": "buyer and seller follow-up",
+      "recommended": [
+        {
+          "toolId": "follow-up-boss",
+          "why": "Runs action plans that remind you to follow up with buyers and sellers."
+        }
+      ],
+      "intro": "AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent."
+    },
+    {
+      "slug": "realtor-prospecting",
+      "title": "Prospect expireds, FSBOs, and a farm",
+      "summary": "List expired, FSBO, and farm-area owners and draft the first outreach. You still decide who to contact.",
+      "audienceHints": [
+        "realtors",
+        "investors"
+      ],
+      "matchTags": [
+        "realtor-prospecting"
+      ],
+      "jobPhrase": "prospecting expireds, FSBOs, and a farm",
+      "assistantTask": "list expired, FSBO, and farm-area owners and draft the first outreach",
+      "assistantContext": "prospecting owners",
+      "searchTopic": "expired listings, FSBOs, and farm areas",
+      "recommended": [
+        {
+          "toolId": "propstream",
+          "why": "Searches expired, FSBO, and farm-area records in one property list."
+        },
+        {
+          "toolId": "dealmachine",
+          "why": "Pulls owner records for a farm area and tags a property during a drive."
+        },
+        {
+          "toolId": "batchleads",
+          "why": "Saves owner phone numbers and emails for an expired or FSBO list."
+        },
+        {
+          "toolId": "resimpli",
+          "why": "Contacts owners by phone, text, and email from a prospecting list."
+        },
+        {
+          "toolId": "launch-control",
+          "why": "Messages owners whose numbers are already on a prospecting list."
+        }
+      ],
+      "intro": "AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact."
     },
     {
       "slug": "research-rag",
@@ -10630,6 +11100,23 @@
       "intro": "AI agents can shop by comparing products, summarizing the differences, and drafting a short list to buy from."
     },
     {
+      "slug": "showing-scheduling",
+      "title": "Schedule showings and open houses",
+      "summary": "Draft an open-house schedule and reminder messages. You still confirm the time in your showing system.",
+      "audienceHints": [
+        "realtors"
+      ],
+      "matchTags": [
+        "showing-scheduling"
+      ],
+      "jobPhrase": "scheduling showings and open houses",
+      "assistantTask": "draft an open-house schedule and reminder messages",
+      "assistantContext": "scheduling showings",
+      "searchTopic": "showing and open-house schedules",
+      "recommended": [],
+      "intro": "AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system."
+    },
+    {
       "slug": "social-media",
       "title": "Manage social media",
       "summary": "Draft, schedule, and review social posts.",
@@ -10700,6 +11187,24 @@
       "assistantContext": "automating steps in a web browser",
       "searchTopic": "what the site allows an automated browser to do",
       "intro": "AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path."
+    },
+    {
+      "slug": "transaction-coordination",
+      "title": "Coordinate contracts and disclosures",
+      "summary": "List closing documents and draft a disclosure summary. A broker or attorney still reviews every contract.",
+      "audienceHints": [
+        "realtors",
+        "transaction coordinators"
+      ],
+      "matchTags": [
+        "transaction-coordination"
+      ],
+      "jobPhrase": "coordinating contracts and disclosures",
+      "assistantTask": "list closing documents and draft a disclosure summary",
+      "assistantContext": "coordinating a closing",
+      "searchTopic": "closing documents and disclosures",
+      "recommended": [],
+      "intro": "AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract."
     },
     {
       "slug": "tutoring",

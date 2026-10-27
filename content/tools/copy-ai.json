@@ -10,7 +10,8 @@
     "content"
   ],
   "useCaseTags": [
-    "create-content"
+    "create-content",
+    "listing-copy"
   ],
   "toolTypes": [
     "agent"
@@ -63,6 +64,7 @@
     "finalUrl": "https://www.copy.ai/"
   },
   "useCaseFit": {
-    "create-content": "Describes content-creation workflows for marketing teams."
+    "create-content": "Describes content-creation workflows for marketing teams.",
+    "listing-copy": "Drafts MLS remarks you still check against your board's rules."
   }
 }
