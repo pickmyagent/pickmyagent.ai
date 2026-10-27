@@ -1,0 +1,51 @@
+{
+  "id": "follow-up-boss",
+  "slug": "follow-up-boss",
+  "name": "Follow Up Boss",
+  "websiteUrl": "https://www.followupboss.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Real estate CRM with action plans. Grow is $69 per user per month.",
+  "longDescription": "Follow Up Boss is a real estate CRM whose action plans automate follow-up with buyers and sellers. Grow is $69 per user per month plus tax, or $58 per user per month when billed annually. Pro is $499 per month and includes 10 users. Platform is $1000 per month and includes 30 users. A free trial is offered with no contract, and the pricing page does not state how long the trial lasts. AI features are included, and many of them rely on FUB Calling, a paid add-on on Grow.",
+  "categories": ["real-estate"],
+  "useCaseTags": ["realtor-follow-up", "real-estate-crm"],
+  "toolTypes": ["other"],
+  "platforms": ["web"],
+  "pricingModel": ["subscription"],
+  "pricingNotes": "Grow is $69 per user per month plus tax, or $58 per user per month billed annually. Pro is $499 per month and includes 10 users. Platform is $1000 per month and includes 30 users. A free trial is offered with no contract and no stated length. Many AI features rely on FUB Calling, a paid add-on on Grow.",
+  "pricingUrl": "https://www.followupboss.com/pricing",
+  "docsUrl": "https://www.followupboss.com/pricing",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": 69,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-27",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "A real estate CRM that runs follow-up action plans for buyers and sellers"
+  ],
+  "notIdealFor": [
+    "A team that needs every AI feature without the FUB Calling add-on"
+  ],
+  "strength": "Follow Up Boss keeps a real estate CRM and action plans for follow-up, and Grow is $69 per user per month.",
+  "weakness": "Many AI features depend on FUB Calling, a paid add-on on the Grow plan, and the free trial does not state a length.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T12:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Pricing page reviewed on October 27, 2026.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "sources": ["https://www.followupboss.com/pricing"],
+  "siteLoad": { "status": 200, "finalUrl": "https://www.followupboss.com/pricing" },
+  "useCaseFit": {
+    "realtor-follow-up": "Runs action plans that remind you to follow up with buyers and sellers.",
+    "real-estate-crm": "Keeps buyer and seller leads in one real estate CRM."
+  }
+}

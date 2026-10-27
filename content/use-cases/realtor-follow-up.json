@@ -1,0 +1,18 @@
+{
+  "slug": "realtor-follow-up",
+  "title": "Follow up with buyers and sellers",
+  "summary": "Draft buyer and seller follow-ups and see who to contact next. You still decide what gets sent.",
+  "audienceHints": ["realtors"],
+  "matchTags": ["realtor-follow-up"],
+  "jobPhrase": "following up with buyers and sellers",
+  "assistantTask": "draft buyer and seller follow-ups and list who to contact next",
+  "assistantContext": "following up with buyers and sellers",
+  "searchTopic": "buyer and seller follow-up",
+  "recommended": [
+    {
+      "toolId": "follow-up-boss",
+      "why": "Runs action plans that remind you to follow up with buyers and sellers."
+    }
+  ],
+  "intro": "AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent."
+}

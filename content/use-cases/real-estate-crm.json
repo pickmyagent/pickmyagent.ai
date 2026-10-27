@@ -1,0 +1,18 @@
+{
+  "slug": "real-estate-crm",
+  "title": "Run a real estate CRM",
+  "summary": "Keep buyer and seller contacts in a real estate CRM and draft the next touch.",
+  "audienceHints": ["realtors"],
+  "matchTags": ["real-estate-crm"],
+  "jobPhrase": "running a real estate CRM",
+  "assistantTask": "organize buyer and seller contacts and draft the next touch",
+  "assistantContext": "running a real estate CRM",
+  "searchTopic": "a real estate CRM",
+  "recommended": [
+    {
+      "toolId": "follow-up-boss",
+      "why": "Keeps buyer and seller leads in one real estate CRM."
+    }
+  ],
+  "intro": "AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out."
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "market-reports",
+  "title": "Draft a neighborhood market update",
+  "summary": "Draft a market update from figures you supply or a report you upload, then check the numbers before a client sees them.",
+  "audienceHints": ["realtors"],
+  "matchTags": ["market-reports"],
+  "jobPhrase": "drafting a neighborhood market update",
+  "assistantTask": "draft a neighborhood market update from figures you supply",
+  "assistantContext": "sending a market update",
+  "searchTopic": "neighborhood market updates",
+  "recommended": [
+    {
+      "toolId": "cloud-cma",
+      "why": "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity."
+    }
+  ],
+  "intro": "AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them."
+}

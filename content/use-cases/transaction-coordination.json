@@ -1,0 +1,13 @@
+{
+  "slug": "transaction-coordination",
+  "title": "Coordinate contracts and disclosures",
+  "summary": "List closing documents and draft a disclosure summary. A broker or attorney still reviews every contract.",
+  "audienceHints": ["realtors", "transaction coordinators"],
+  "matchTags": ["transaction-coordination"],
+  "jobPhrase": "coordinating contracts and disclosures",
+  "assistantTask": "list closing documents and draft a disclosure summary",
+  "assistantContext": "coordinating a closing",
+  "searchTopic": "closing documents and disclosures",
+  "recommended": [],
+  "intro": "AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract."
+}

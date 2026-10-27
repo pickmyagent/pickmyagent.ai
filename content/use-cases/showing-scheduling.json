@@ -1,0 +1,13 @@
+{
+  "slug": "showing-scheduling",
+  "title": "Schedule showings and open houses",
+  "summary": "Draft an open-house schedule and reminder messages. You still confirm the time in your showing system.",
+  "audienceHints": ["realtors"],
+  "matchTags": ["showing-scheduling"],
+  "jobPhrase": "scheduling showings and open houses",
+  "assistantTask": "draft an open-house schedule and reminder messages",
+  "assistantContext": "scheduling showings",
+  "searchTopic": "showing and open-house schedules",
+  "recommended": [],
+  "intro": "AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system."
+}

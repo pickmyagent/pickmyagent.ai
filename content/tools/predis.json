@@ -10,7 +10,8 @@
     "content"
   ],
   "useCaseTags": [
-    "social-media"
+    "social-media",
+    "agent-social"
   ],
   "toolTypes": [
     "agent"
@@ -63,6 +64,7 @@
     "finalUrl": "https://predis.ai/"
   },
   "useCaseFit": {
-    "social-media": "Generates social posts and ads with AI, without a clear base price in the fetch."
+    "social-media": "Generates social posts and ads with AI, without a clear base price in the fetch.",
+    "agent-social": "Generates social posts and ad creatives for a listing."
   }
 }

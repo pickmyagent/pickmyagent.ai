@@ -1,0 +1,18 @@
+{
+  "slug": "listing-photos",
+  "title": "Edit listing photos and virtual staging",
+  "summary": "Edit a listing photo or stage an empty room in a picture, then choose the image that goes on the listing.",
+  "audienceHints": ["realtors"],
+  "matchTags": ["listing-photos"],
+  "jobPhrase": "editing listing photos and virtual staging",
+  "assistantTask": "edit a listing photo or stage an empty room in a picture",
+  "assistantContext": "preparing listing photos",
+  "searchTopic": "listing photos and virtual staging",
+  "recommended": [
+    {
+      "toolId": "boxbrownie",
+      "why": "Edits a listing photo and virtually stages an empty room."
+    }
+  ],
+  "intro": "AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing."
+}

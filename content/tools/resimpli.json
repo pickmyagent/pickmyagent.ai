@@ -10,7 +10,8 @@
     "real-estate"
   ],
   "useCaseTags": [
-    "find-off-market"
+    "find-off-market",
+    "realtor-prospecting"
   ],
   "toolTypes": [
     "agent"
@@ -62,6 +63,7 @@
     "finalUrl": "https://resimpli.com/pricing/"
   },
   "useCaseFit": {
-    "find-off-market": "Includes calling, texting, and email on every plan, with a 14-day trial."
+    "find-off-market": "Includes calling, texting, and email on every plan, with a 14-day trial.",
+    "realtor-prospecting": "Contacts owners by phone, text, and email from a prospecting list."
   }
 }

@@ -1,11 +1,15 @@
 import assert from "node:assert/strict";
 import { readFileSync, writeFileSync } from "node:fs";
 import test from "node:test";
+import { neutralAssistantLine } from "../lib/assistant-lines.ts";
 import { CONCEPTS } from "../lib/concepts.ts";
+import { articleVerbProblems, hasLowercaseI, NEUTRAL_INTRO, NEUTRAL_LEAD, pronounFlip } from "../lib/header-grammar.ts";
 import { domainAssistantLine } from "../lib/assistant-lines.ts";
 import { specialistLine, specialistLinePairs } from "../lib/specialist-lines.ts";
 import { BROKEN_ASSISTANT, BROKEN_HEADERS, descriptionProblems, grammarProblems, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "../scripts/grammar-gate.ts";
-import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport } from "../scripts/search-qa.ts";
+import { ensureEmbedded } from "../scripts/embed-session.ts";
+import { rankObserved } from "../scripts/rank-observed.ts";
+import { QA_QUERIES, catalogLeakProblems, qaProblems, renderSearchQaReport, reportQueries } from "../scripts/search-qa.ts";
 import {
   GENERIC_MATCH_WORDS,
   jobLead,
@@ -126,7 +130,7 @@ test("generic words do not select a specialist", () => {
   assert.equal(ranked.useCases.length, 0);
   assert.ok(ranked.tools.length > 0);
   assert.ok(ranked.tools.every((tool) => tool.generalPurpose));
-  assert.match(ranked.intro, /^AI assistants can help with .+ by turning it into a plan/);
+  assert.equal(ranked.intro, NEUTRAL_INTRO);
   assert.equal(/\bparts of\b/i.test(ranked.intro), false);
   for (const tool of ranked.tools) {
     assert.ok(tool.whyItHelps.trim().length > 0, tool.name);
@@ -793,13 +797,35 @@ test("grammar gate flags the broken header and assistant examples", () => {
   const sellers = rankCatalogQuery("use an agent for motivated sellers", catalog);
   assert.equal(sellers.lead, "For finding motivated sellers, here's how each tool can help:");
   const fsbo = rankCatalogQuery("fsbo near me", catalog);
-  assert.equal(fsbo.lead, "For help with FSBO near me, here's how each tool can help:");
+  assert.equal(fsbo.lead, "For finding off-market and for-sale-by-owner deals, here's how each tool can help:");
   const gmail = rankCatalogQuery("triage my gmail", catalog);
   assert.equal(gmail.lead, "For triaging your Gmail, here's how each tool can help:");
   const rag = rankCatalogQuery("rag", catalog);
   assert.equal(rag.lead, "For building a RAG pipeline, here's how each tool can help:");
   const tutor = rankCatalogQuery("I need AI to tutor me", catalog);
   assert.equal(tutor.lead, "For getting tutoring help, here's how each tool can help:");
+  const worth = rankCatalogQuery("what's my business worth", catalog);
+  assert.equal(worth.lead, NEUTRAL_LEAD);
+  assert.equal(worth.intro, NEUTRAL_INTRO);
+  assert.equal(worth.useCases.length, 0);
+  for (const tool of worth.tools) {
+    const source = catalog.tools.find((item) => item.slug === tool.slug);
+    const name = source?.assistantName ?? tool.name.split("(")[0].trim();
+    assert.equal(tool.whyItHelps, neutralAssistantLine(tool.slug, name));
+    assert.equal(pronounFlip(tool.whyItHelps, "what's my business worth"), false);
+  }
+  assert.ok(pronounFlip('For answering "what\'s your business worth"', "what's my business worth"));
+  assert.ok(articleVerbProblems("For help with a describe the backyard").length > 0);
+  assert.ok(hasLowercaseI("For help with an i wear every hat"));
+  assert.ok(grammarProblems("Ask Claude to break an i wear every hat into a step-by-step plan", "why", "i wear every hat").length > 0);
+  assert.equal(grammarProblems(NEUTRAL_LEAD, "header").length, 0);
+  const shoes = rankCatalogQuery("running shoes that last more than a season", catalog);
+  assert.equal(/running shoes/i.test(shoes.lead), false);
+  const grade = rankCatalogQuery("tutor for 3rd grade math", catalog);
+  assert.equal(/tutoring for 3rd/i.test(grade.lead), false);
+  const farm = rankCatalogQuery("expired listings and a farm", catalog);
+  assert.match(farm.lead, /your farm/);
+  assert.equal(/\ba farm\b/i.test(farm.lead), false);
   assert.ok(descriptionProblems("No monthly price confirmed.").length > 0);
   assert.ok(descriptionProblems("Pricing page included a free-to-start option.").length > 0);
   assert.ok(descriptionProblems("The plans on the page we read are paid.").length > 0);
@@ -880,7 +906,23 @@ test("every specialist use-case pair has a hand-written why-line", () => {
   }
 });
 
-test("catalog prose and the search QA harness stay grammatical", () => {
+test("meaning search starts after submit and does not host the model", () => {
+  const search = readFileSync(new URL("../components/job-search.tsx", import.meta.url), "utf8");
+  const embed = readFileSync(new URL("../lib/browser-embed.ts", import.meta.url), "utf8");
+  assert.equal(search.includes("requestIdleCallback"), false);
+  assert.equal(search.includes("prefetchEmbedder"), false);
+  assert.match(search, /setSubmitted/);
+  assert.match(search, /skipSemanticDownload/);
+  assert.match(embed, /huggingface\.co/);
+  assert.match(embed, /cdn\.jsdelivr\.net\/npm\/onnxruntime-web/);
+  assert.match(embed, /cdn\.jsdelivr\.net\/npm\/@huggingface\/transformers/);
+  assert.equal(embed.includes('localModelPath = "/models/"'), false);
+  assert.equal(embed.includes("/onnx/"), false);
+  assert.equal(readFileSync(new URL("../scripts/embed-session.ts", import.meta.url), "utf8").includes('path.resolve("vendor/models")'), true);
+});
+
+test("catalog prose and the search QA harness stay grammatical", async () => {
+  await ensureEmbedded(reportQueries());
   const problems = [...catalogLeakProblems(catalog), ...qaProblems(catalog)];
   assert.deepEqual(problems, [], problems.slice(0, 12).join("\n"));
   const report = readFileSync(new URL("../qa/search-qa-report.md", import.meta.url), "utf8");
@@ -1242,7 +1284,7 @@ test("small-business bookkeeping queries stay on the books", () => {
       assert.equal(banned.test(tool.name), false, `${query} showed ${tool.name}`);
       assert.match(tool.whyItHelps, /QuickBooks/, tool.whyItHelps);
     }
-    assert.equal(ranked.tools.filter((tool) => tool.generalPurpose).length, 5, query);
+    assert.equal(ranked.tools.filter((tool) => tool.generalPurpose).length, 3, query);
   }
   const cleanup = rankCatalogQuery(
     "find and agent to help automate my quickbooks clean up for my small business",
@@ -1347,9 +1389,9 @@ test("ceo qa keeps each specialist on the job its data supports", () => {
   const metaview = hire.tools.find((tool) => tool.slug === "metaview");
   assert.ok(gem && metaview);
   assert.equal(/recruiter|enterprise/i.test(`${gem.whyItHelps} ${metaview.whyItHelps}`), false);
-  const deepseek = hire.tools.find((tool) => tool.slug === "deepseek");
-  assert.ok(deepseek);
-  assert.equal(/recruiter/i.test(deepseek.whyItHelps), false);
+  const hireAssistants = hire.tools.filter((tool) => tool.generalPurpose);
+  assert.ok(hireAssistants.length <= 3);
+  assert.equal(hireAssistants.some((tool) => /recruiter/i.test(tool.whyItHelps)), false);
   copyOk("hire staff for my restaurant");
 
   assert.deepEqual(specialistSlugs("quotes and invoices for a remodel"), ["bill-com"]);
@@ -1439,8 +1481,9 @@ test("ceo qa keeps each specialist on the job its data supports", () => {
   assert.ok(faq.includes("decagon"));
 });
 
-test("held-out paraphrases report precision at 3 without failing the build", () => {
+test("held-out paraphrases report precision at 3 without failing the build", async () => {
   assert.ok(HELD_OUT.length >= 40);
+  await ensureEmbedded(HELD_OUT.map((item) => item.query));
   let hits = 0;
   let slots = 0;
   const misses: string[] = [];
@@ -1470,7 +1513,27 @@ test("held-out paraphrases report precision at 3 without failing the build", () 
   const precision = hits / slots;
   console.log(`held-out precision@3: ${precision.toFixed(3)} (${hits}/${slots})`);
   for (const miss of misses) console.log(`held-out miss: ${miss}`);
-  assert.ok(precision >= 0.971, `held-out precision@3 ${precision.toFixed(3)} (${hits}/${slots})`);
+  assert.ok(precision >= 0.974, `held-out precision@3 ${precision.toFixed(3)} (${hits}/${slots})`);
+
+  let fusedHits = 0;
+  let fusedSlots = 0;
+  for (const item of HELD_OUT) {
+    const ranked = rankObserved(item.query, catalog);
+    const top = ranked.tools.slice(0, 3);
+    for (const tool of top) {
+      fusedSlots += 1;
+      const relevant = item.expect
+        ? !tool.generalPurpose &&
+          (catalog.tools.find((entry) => entry.slug === tool.slug)?.useCaseTags ?? []).some((tag) =>
+            matchTagsFor(item.expect as string).includes(tag),
+          )
+        : tool.generalPurpose;
+      if (relevant) fusedHits += 1;
+    }
+  }
+  const fusedPrecision = fusedHits / fusedSlots;
+  console.log(`fused held-out precision@3: ${fusedPrecision.toFixed(3)} (${fusedHits}/${fusedSlots})`);
+  assert.ok(fusedPrecision >= 0.974, `fused held-out precision@3 ${fusedPrecision.toFixed(3)} (${fusedHits}/${fusedSlots})`);
 });
 
 test("regression report for the pull request", () => {
@@ -1625,8 +1688,9 @@ test("specialists stay inside the query domain", () => {
   const frames = [meal, grocery, baby, club, business];
   for (const ranked of frames) {
     const assistants = ranked.tools.filter((tool) => tool.generalPurpose);
-    assert.equal(assistants.length, 5);
-    assert.equal(new Set(assistants.map((tool) => tool.whyItHelps)).size, 5);
+    const specialists = ranked.tools.filter((tool) => !tool.generalPurpose);
+    assert.equal(assistants.length, specialists.length > 0 ? 3 : 5);
+    assert.equal(new Set(assistants.map((tool) => tool.whyItHelps)).size, assistants.length);
   }
   const mealClaude = meal.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "";
   const groceryClaude = grocery.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "";

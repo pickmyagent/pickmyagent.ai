@@ -10,7 +10,8 @@
     "real-estate"
   ],
   "useCaseTags": [
-    "find-off-market"
+    "find-off-market",
+    "realtor-prospecting"
   ],
   "toolTypes": [
     "agent"
@@ -62,6 +63,7 @@
     "finalUrl": "https://batchleads.io/pricing"
   },
   "useCaseFit": {
-    "find-off-market": "Saves properties with owner phone numbers and emails, and Growth is $119 per month."
+    "find-off-market": "Saves properties with owner phone numbers and emails, and Growth is $119 per month.",
+    "realtor-prospecting": "Saves owner phone numbers and emails for an expired or FSBO list."
   }
 }

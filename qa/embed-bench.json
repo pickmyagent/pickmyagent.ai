@@ -1,0 +1,14 @@
+{
+  "model": "Xenova/bge-small-en-v1.5",
+  "dtype": "q8",
+  "modelBytes": 34014426,
+  "wasmBytes": 26861777,
+  "indexBytes": 1005339,
+  "indexGzipBytes": 737063,
+  "chunkBytes": 2986,
+  "chunkGzipBytes": 1533,
+  "loadMs": 929.8,
+  "queryMedianMs": 44.3,
+  "cpu": "Chrome 156 headless WASM on a 4-core Intel Xeon (KVM), a mid-range laptop stand-in",
+  "laptopNote": "Weights and the WASM runtime are not served by this site. The browser fetches the 34.0 MB q8 weights from the Hugging Face hub and the 26.9 MB onnxruntime-web WASM from jsDelivr, and keeps a Cache API copy if those CDNs fail later. A submitted search on a normal connection also downloads the embedding index from this site (1,005,339 bytes, 737,063 bytes gzipped) and a 2,986-byte script (1,533 bytes gzipped). That is 738,596 bytes gzipped from pickmyagent.ai on the first search, and 0 bytes from this site on a later search once the index is cached. Data Saver, slow-2g, and 2g never start that download and keep the lexical results. Typing, idle time, and other pages do not load the model. The warm-query median above was measured in headless Chrome 156 on this 4-core Intel Xeon KVM host with weights already cached: session init 930 ms, median 44.3 ms across seven queries (15 ms to 101 ms). The same page at DevTools 4× CPU throttle initialized in 4924 ms with a 140.9 ms median. The Node harness uses onnxruntime-node, about 3 ms per query on this host. Visitors see the WASM timings. This is not a physical laptop."
+}

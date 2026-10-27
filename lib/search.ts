@@ -1,6 +1,22 @@
-import { domainAssistantLine, openAssistantLine } from "./assistant-lines.ts";
+import { domainAssistantLine, neutralAssistantLine, openAssistantLine } from "./assistant-lines.ts";
+import { headerEchoBroken, NEUTRAL_INTRO, NEUTRAL_LEAD, pronounFlip, safeHelpWith } from "./header-grammar.ts";
 import { BRIDGE_LINES, isListingMakeQuery, isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
+import { jobCueBlocks, jobCueBonus } from "./job-cues.ts";
+import { EXTRA_SPELLING, phraseMatches, prepareQuery, stemToken } from "./match-text.ts";
+import { semanticHits } from "./semantic.ts";
+import { blockRealEstateConcept, businessValuationQuery, CANONICAL_REAL_ESTATE, CAP_RATE_INTRO, conceptHasSignal, deniesRealEstate, semanticRealEstateBlock } from "./real-estate-match.ts";
+import {
+  SEMANTIC_BROAD_FLOOR,
+  SEMANTIC_CONFIDENT_GAP,
+  SEMANTIC_DISAGREE_GAP,
+  SEMANTIC_FLOOR,
+  SEMANTIC_MARGIN,
+  SEMANTIC_PROFILE_MARGIN,
+  SEMANTIC_SIGNAL_WINDOW,
+  SEMANTIC_UNANCHORED_FLOOR,
+  type SemanticScore,
+} from "./semantic-config.ts";
 import {
   SMB_SPELLING,
   booksBrandQuery,
@@ -20,11 +36,9 @@ import {
 import type { Category, SmokeStatus, Tool, UseCase } from "./types";
 
 /**
- * Matching is BM25 plus a concept lexicon, computed in the page.
- * A MiniLM ONNX model is about 23MB plus the WASM runtime. That download,
- * and the first inference after it is cached, is not reliably under 1.5s
- * on a phone, and embedding on the server would spend a Hobby function.
- * This ranker is the same code the build tests run, with no network call.
+ * The lexicon runs first, in the page, with no download.
+ * A quantized bge-small model can then score meaning in the browser.
+ * Pass those cosines as the third argument. Without them, ranking stays lexical.
  */
 
 const STOPWORDS = new Set([
@@ -82,6 +96,10 @@ const LEADING_GERUNDS: Record<string, string> = {
   water: "watering",
   fold: "folding",
   start: "starting",
+  pull: "pulling",
+  price: "pricing",
+  stage: "staging",
+  nurture: "nurturing",
   triage: "triaging",
   fill: "filling",
   file: "filing",
@@ -112,7 +130,8 @@ const GERUNDS: Record<string, string> = {
   qualify: "qualifying", turn: "turning", run: "running", optimize: "optimizing",
   draft: "drafting", summarize: "summarizing", compare: "comparing", track: "tracking",
   handle: "handling", orchestrate: "orchestrating", design: "designing", cook: "cooking",
-  call: "calling", recommend: "recommending",
+  call: "calling", recommend: "recommending", pull: "pulling", price: "pricing",
+  stage: "staging", nurture: "nurturing",
 };
 
 const ACTION_VERBS = Object.keys(GERUNDS);
@@ -124,6 +143,7 @@ const SPELLING: Record<string, string> = {
   portfolo: "portfolio",
   investmnt: "investment",
   ...SMB_SPELLING,
+  ...EXTRA_SPELLING,
 };
 
 const DO_NOT_CORRECT = new Set([
@@ -135,9 +155,10 @@ const DO_NOT_CORRECT = new Set([
   "shipping", "shipped",
 ]);
 
-const ANCHOR_DICTIONARY = [...new Set(CONCEPTS.flatMap((concept) => concept.anchors))].filter(
-  (word) => word.length >= 5,
-);
+const ANCHOR_DICTIONARY = [...new Set([
+  ...CONCEPTS.flatMap((concept) => concept.anchors),
+  ...Object.values(EXTRA_SPELLING),
+])].filter((word) => word.length >= 5);
 
 function words(text: string): string[] {
   return text.toLowerCase().match(/[a-z0-9]+/g) ?? [];
@@ -165,21 +186,17 @@ function editDistance(a: string, b: string): number {
 }
 
 function correctToken(token: string): string {
-  const spelled = SPELLING[token];
-  if (spelled) return spelled;
-  if (token.length < 6 || STOPWORDS.has(token) || DO_NOT_CORRECT.has(token)) return token;
-  if (ANCHOR_DICTIONARY.includes(token)) return token;
-  let match: string | null = null;
-  for (const candidate of ANCHOR_DICTIONARY) {
-    if (candidate[0] !== token[0]) continue;
-    if (editDistance(token, candidate) !== 1) continue;
-    if (match) return token;
-    match = candidate;
-  }
-  return match ?? token;
+  return SPELLING[token] ?? token;
 }
 
-function correctedQuery(query: string): string {
+/** Job text for the embedding model, without the "I need an AI to" shell. */
+export function textForEmbedding(query: string): string {
+  const corrected = correctedQuery(query);
+  const stripped = stripWrappers(corrected).replace(/\s+/g, " ").trim();
+  return stripped || corrected;
+}
+
+export function correctedQuery(query: string): string {
   return query.replace(/[A-Za-z0-9]+/g, (token) => {
     const fixed = correctToken(token.toLowerCase());
     return fixed === token.toLowerCase() ? token : fixed;
@@ -189,7 +206,7 @@ function correctedQuery(query: string): string {
 export function mentionsLand(query: string): boolean {
   const tokens = words(query);
   if (tokens.some((token) =>
-    ["land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "lots"].includes(token)
+    ["land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "zoned", "lots"].includes(token)
   )) {
     return true;
   }
@@ -200,28 +217,58 @@ export function mentionsLand(query: string): boolean {
 }
 
 function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): number {
+  if (businessValuationQuery(lower)) return 0;
+  if (deniesRealEstate(lower) && concept.categories.includes("real-estate")) return 0;
+  if (deniesRealEstate(lower) && (concept.id === "agent-social" || concept.id === "real-estate" || concept.id === "listing-video")) return 0;
   if (concept.id === "land" && !mentionsLand(lower)) return 0;
   if (concept.id === "real-estate" && !bareRealEstateQuery(lower)) return 0;
   if (concept.id === "resume" && hiringResumeQuery(lower)) return 0;
   if (concept.id === "video" && (videoGenerationQuery(lower) || listingVideoQuery(lower) || avatarQuery(lower))) return 0;
   if ((concept.id === "voice" || concept.id === "image" || concept.id === "three-d") && videoGenerationQuery(lower)) return 0;
   if (concept.id === "image" && threeDQuery(lower)) return 0;
-  if (concept.id === "three-d" && !threeDQuery(lower)) return 0;
+  if (concept.id === "three-d" && !threeDQuery(lower) && !/\bmesh(?:es)?\b/.test(lower)) return 0;
   if (concept.id === "video-generation" && (listingVideoQuery(lower) || avatarQuery(lower))) return 0;
   if (concept.id === "avatar" && (videoGenerationQuery(lower) || listingVideoQuery(lower))) return 0;
   if (concept.id === "listing-video" && avatarQuery(lower)) return 0;
+  if (
+    concept.id === "meetings"
+    && /\b(schedule(?:\s+a)? meetings?|scheduling meetings|calendar management)\b/.test(lower)
+    && !/\b(notes|transcript|action items|transcribe)\b/.test(lower)
+  ) {
+    return 0;
+  }
   if (concept.id === "tutoring" && languageQuery(lower)) return 0;
   if (conceptBlocked(concept.id, lower)) return 0;
+  if (blockRealEstateConcept(concept.id, lower)) return 0;
+  if (jobCueBlocks(concept.id, lower)) return 0;
   let score = 0;
+  score += jobCueBonus(concept.id, lower);
+  if (
+    (concept.id === "cma" || concept.id === "listing-copy" || concept.id === "listing-photos"
+      || concept.id === "realtor-follow-up" || concept.id === "realtor-crm" || concept.id === "showings"
+      || concept.id === "transaction" || concept.id === "market-report" || concept.id === "prospecting"
+      || concept.id === "agent-social" || concept.id === "property-mgmt")
+  ) {
+    score += 12;
+  }
   if (concept.id === "video-generation" && videoGenerationQuery(lower)) score += 12;
+  if (concept.id === "listing-video" && listingVideoQuery(lower)) score += 12;
   const phrases = concept.id === "deals" && !propertyMoneyQuery(lower)
     ? concept.phrases.filter((phrase) => phrase !== "cash flow")
     : concept.phrases;
   for (const phrase of phrases) {
-    if (lower.includes(phrase)) score += 12;
+    if (phraseMatches(lower, phrase)) score += 12;
   }
+  const seenAnchors = new Set<string>();
   for (const anchor of concept.anchors) {
-    if (tokens.has(anchor)) score += 8;
+    if (!tokens.has(anchor)) continue;
+    const key = stemToken(anchor);
+    if (seenAnchors.has(key)) continue;
+    seenAnchors.add(key);
+    score += 8;
+  }
+  for (const bag of concept.bags ?? []) {
+    if (bag.every((term) => tokens.has(term))) score += 12;
   }
   return score;
 }
@@ -251,6 +298,13 @@ const ACRONYM_CASE: Record<string, string> = {
   vat: "VAT",
   gst: "GST",
   fsbo: "FSBO",
+  fsbos: "FSBOs",
+  cma: "CMA",
+  cmas: "CMAs",
+  bpo: "BPO",
+  mls: "MLS",
+  arv: "ARV",
+  qbo: "QBO",
   rag: "RAG",
   soc: "SOC",
   gmail: "Gmail",
@@ -268,7 +322,8 @@ const ACRONYM_CASE: Record<string, string> = {
 
 /** Drop "use an agent for", "is there an AI that can", and the other tool-seeking openers. */
 export function stripWrappers(input: string): string {
-  let text = input.trim().replace(/\s+/g, " ").replace(/^[^A-Za-z0-9]+/, "").replace(/[.?!…]+$/g, "").replace(/\s+please$/i, "");
+  let text = input.trim().replace(/[“”‘’"'`]+/g, "").replace(/\s+/g, " ").replace(/^[^A-Za-z0-9]+/, "").replace(/[.?!…]+$/g, "").replace(/\s+please$/i, "");
+  text = text.replace(/\bfor me to\b/gi, " ");
   text = text.replace(/\band\s+(agent|ai)s?\b/gi, "an $1").replace(/\band\s+tools?\b/gi, "a tool");
   const patterns = [
     /^(?:hey|hi|hello|ok|okay|so)\s+/i,
@@ -374,6 +429,18 @@ const CANONICAL_JOB: Record<string, string> = {
   "make-3d": "making a 3D model",
   "avatar-video": "making an avatar video",
   "listing-videos": "making a real estate listing video",
+  "cma-comps": "pulling comps for a CMA",
+  "listing-copy": "writing an MLS listing description",
+  "listing-photos": "editing listing photos and virtual staging",
+  "realtor-follow-up": "following up with buyers and sellers",
+  "real-estate-crm": "running a real estate CRM",
+  "showing-scheduling": "scheduling showings and open houses",
+  "transaction-coordination": "coordinating contracts and disclosures",
+  "market-reports": "drafting a neighborhood market update",
+  "realtor-prospecting": "prospecting expireds, FSBOs, and your farm",
+  "agent-social": "posting listings on social media",
+  "learn-language": "practicing a language",
+  "property-management": "handling property management tasks",
   "real-estate": "finding AI tools for real estate",
   "write-resume": "writing a resume",
   "coding-agents": "writing and reviewing code",
@@ -463,7 +530,7 @@ function tokenAt(text: string, index: number): string {
   return text.split(/\s+/)[index]?.toLowerCase().replace(/[^a-z]/g, "") ?? "";
 }
 
-function startsWithTaskVerb(text: string): boolean {
+export function startsWithTaskVerb(text: string): boolean {
   const first = tokenAt(text, 0);
   const second = tokenAt(text, 1);
   if (!first) return false;
@@ -489,7 +556,7 @@ function categoryKey(text: string): string {
 
 function personalize(canonical: string, wantsYour: boolean): string {
   if (!wantsYour) return canonical;
-  return canonical.replace(/\b(?:a|an)\b/gi, "your");
+  return canonical.replace(/\b(?:a|an)\b(?!\s+(?:agent|realtor)\b)/gi, "your");
 }
 
 function canonicalHeader(useCase: UseCase | null | undefined, key: string, wantsYour: boolean): string | null {
@@ -505,7 +572,9 @@ function lightArticle(phrase: string): string {
   const first = parts[0]?.toLowerCase().replace(/[^a-z0-9]/g, "") ?? "";
   if ((first === "youtube" || first === "soc") && parts.length > 1) return `a ${phrase}`;
   if (!first || NO_ARTICLE.has(first) || /ing$/i.test(first)) return phrase;
+  if (/^(?:what|how|why|when|where|who|which|whose)$/.test(first)) return phrase;
   if (first === "seo") return `an ${phrase}`;
+  if (headerEchoBroken(`a ${phrase}`) || headerEchoBroken(`an ${phrase}`)) return phrase;
   if (/(?:s|es)$/i.test(first) && !/(?:ss|is|us)$/i.test(first)) return phrase;
   const head = phrase.split(/\s+\b(?:in|for|on|with|from|near|by|to)\b\s+/i)[0] ?? phrase;
   if (head.split(/\s+/).some((part) => {
@@ -519,25 +588,46 @@ function bareGerundPhrase(phrase: string): boolean {
   return /^[a-z]+ing(?:\s+(?:me|you|us|them))?$/i.test(phrase.trim());
 }
 
+function useCaseHeader(useCase: UseCase | null | undefined, wantsYour: boolean): string {
+  if (!useCase) return "";
+  return personalize(CANONICAL_JOB[useCase.slug] ?? "", wantsYour);
+}
+
+function preferCleanHeader(candidate: string, useCase: UseCase | null | undefined, wantsYour: boolean): string {
+  const canonical = useCaseHeader(useCase, wantsYour);
+  if (!canonical || headerEchoBroken(canonical)) return candidate;
+  const nounPhrase = /^help with\b/i.test(candidate) && !safeHelpWith(candidate);
+  if (headerEchoBroken(candidate) || nounPhrase) return canonical;
+  return candidate;
+}
+
 function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, wantsYour: boolean): string {
-  if (!cleaned) return useCase ? personalize(CANONICAL_JOB[useCase.slug] ?? "help with this", wantsYour) : "help with this";
+  if (useCase && CANONICAL_REAL_ESTATE.has(useCase.slug)) {
+    return personalize(CANONICAL_JOB[useCase.slug] ?? "help with this", wantsYour);
+  }
+  if (!cleaned) return useCaseHeader(useCase, wantsYour) || "help with this";
   if (/^(?:tutor(?:ing)?(?:\s+me)?)$/i.test(cleaned)) return "getting tutoring help";
   if (/\bimage[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from an image";
   if (/\btext[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from text";
   if (/\btext[\s-]to[\s-]speech\b/i.test(cleaned)) return "making speech from text";
   if (/\btext[\s-]to[\s-]image\b/i.test(cleaned)) return "making an image from text";
+  if (/^(?:text|image|audio|video|speech)[\s-]to[\s-]/i.test(cleaned)) {
+    return useCaseHeader(useCase, wantsYour) || cleaned;
+  }
   if (/^skip\s+trace\b/i.test(cleaned)) {
     return `skip-tracing ${cleaned.replace(/^skip\s+trace\s+/i, "")}`.replace(/\s+/g, " ").trim();
   }
+  const directKey = categoryKey(cleaned);
+  if (PHRASE_HEADER[directKey]) return PHRASE_HEADER[directKey];
+  const branded = smallBusinessHeader(cleaned);
+  if (branded) return branded;
   if (startsWithTaskVerb(cleaned)) {
     const gerunded = applyHeaderGerunds(cleaned).replace(/\s+/g, " ").trim();
     const key = categoryKey(gerunded);
     const thin = bareGerundPhrase(gerunded) || /^[a-z]+ing\s+(?:from|about)\b/i.test(gerunded);
     if (thin && useCase) return canonicalHeader(useCase, key, wantsYour) ?? gerunded;
-    return gerunded;
+    return preferCleanHeader(gerunded, useCase, wantsYour);
   }
-  const branded = smallBusinessHeader(cleaned);
-  if (branded) return branded;
   if (videoGenerationQuery(cleaned) && /\bwith\b/i.test(cleaned)) {
     return `making ${lightArticle(cleaned)}`;
   }
@@ -546,13 +636,34 @@ function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, want
   if (useCase && (short || CATEGORY_PHRASES.has(key) || PHRASE_HEADER[key])) {
     return canonicalHeader(useCase, key, wantsYour) ?? `help with ${lightArticle(cleaned)}`;
   }
-  return `help with ${lightArticle(cleaned)}`;
+  return preferCleanHeader(`help with ${lightArticle(cleaned)}`, useCase, wantsYour);
+}
+
+const DISPLAY_CONTRACTIONS = new Set([
+  "whats", "dont", "cant", "wont", "isnt", "arent", "wasnt", "werent", "didnt", "doesnt",
+  "havent", "hasnt", "hadnt", "wouldnt", "couldnt", "shouldnt", "thats", "theres", "heres",
+  "lets", "youre", "theyre", "youve", "theyve", "weve", "im", "ive",
+]);
+
+/** Put apostrophes back in the header. Matching still uses the stripped text. */
+function restoreDisplayedContractions(phrase: string, original: string): string {
+  const found = original.match(/[A-Za-z]+['’][A-Za-z]+/g) ?? [];
+  let next = phrase;
+  for (const contraction of found) {
+    const smashed = contraction.replace(/['’]/g, "").toLowerCase();
+    if (!DISPLAY_CONTRACTIONS.has(smashed)) continue;
+    const restored = contraction.replace(/’/g, "'").toLowerCase();
+    const display = restored.startsWith("i'") ? `I${restored.slice(1)}` : restored;
+    next = next.replace(new RegExp(`\\b${smashed}\\b`, "gi"), display);
+  }
+  return next;
 }
 
 export function jobPhrase(query: string, useCase?: UseCase | null): string {
   const wantsYour = /\b(?:my|our)\b/i.test(query);
   let cleaned = stripWrappers(query)
     .replace(/\b(?:my|our)\b/gi, "your")
+    .replace(/\bfor (?:your|the) business\b/gi, " ")
     .replace(/,\s+i\b[\s\S]*$/i, "")
     .replace(/\s+and\s+i\b[\s\S]*$/i, "")
     .replace(/\s+/g, " ")
@@ -560,14 +671,52 @@ export function jobPhrase(query: string, useCase?: UseCase | null): string {
   if (/^automat/i.test(cleaned) && (booksBrandQuery(cleaned) || /\b(?:books|bookkeeping)\b/i.test(cleaned))) {
     cleaned = cleaned.replace(/^automat\w*\s+/i, "").trim();
   }
+  const altPhrase = alternativeGerund(cleaned);
+  if (altPhrase) return altPhrase;
   const phrase = chooseHeader(cleaned, useCase, wantsYour);
-  return lowercasePhrase(phrase, query)
-    .replace(/,\s+and\b/gi, " and")
-    .replace(/\band also\b/gi, "and")
-    .replace(/\bto social\b(?!\s+media)/gi, "to social media")
-    .replace(/\bemail them\b/gi, "emailing them")
-    .replace(/\s+/g, " ")
-    .trim() || "help with this";
+  let display = restoreDisplayedContractions(
+    lowercasePhrase(phrase, query)
+      .replace(/,\s+and\b/gi, " and")
+      .replace(/\band also\b/gi, "and")
+      .replace(/\bto social\b(?!\s+media)/gi, "to social media")
+      .replace(/\bemail them\b/gi, "emailing them")
+      .replace(/\s+/g, " ")
+      .trim(),
+    query,
+  );
+  display = display.replace(/\btutoring for (\d+(?:st|nd|rd|th) grade)\b/gi, "tutoring $1");
+  if (cleanVerbEcho(display, query) || trustedHelp(display, query)) return display;
+  const canonical = useCaseHeader(useCase, wantsYour);
+  if (canonical && !headerEchoBroken(canonical) && !pronounFlip(canonical, query)) return canonical;
+  return "";
+}
+
+const ECHO_DETERMINER = new Set(["a", "an", "the", "your", "my", "our", "this", "that", "these", "those"]);
+
+/** A short "help with …" line that names a brand or a safe noun, not the raw query. */
+function trustedHelp(display: string, query: string): boolean {
+  if (!/^help with\b/i.test(display) || headerEchoBroken(display)) return false;
+  if (!startsWithTaskVerb(stripWrappers(query)) && pronounFlip(display, query)) return false;
+  if (safeHelpWith(display)) return true;
+  const rest = display.replace(/^help with\s+/i, "").trim();
+  return /^[A-Z][\w.]*$/.test(rest);
+}
+
+/**
+ * The phrase may be shown only when it is a grammatical gerund.
+ * A leading gerund that was already in the query ("running shoes") is a noun, not a task.
+ */
+function cleanVerbEcho(phrase: string, query: string): boolean {
+  const display = phrase.trim();
+  if (!/^(?:[a-z]+-)?[a-z]+ing\b/i.test(display)) return false;
+  if (headerEchoBroken(display)) return false;
+  if (!startsWithTaskVerb(stripWrappers(query)) && pronounFlip(display, query)) return false;
+  const phraseWords = display.toLowerCase().match(/[a-z0-9'-]+/g) ?? [];
+  const first = phraseWords[0] ?? "";
+  const second = phraseWords[1] ?? "";
+  const start = stripWrappers(query).split(/\s+/)[0]?.toLowerCase().replace(/[^a-z]/g, "") ?? "";
+  if (start && start === first && !ECHO_DETERMINER.has(second)) return false;
+  return true;
 }
 
 export function cleanUserPhrase(query: string): string {
@@ -575,7 +724,9 @@ export function cleanUserPhrase(query: string): string {
 }
 
 export function jobLead(query: string, useCase?: UseCase | null): string {
-  return `For ${jobPhrase(query, useCase)}, here's how each tool can help:`;
+  const phrase = jobPhrase(query, useCase);
+  if (!phrase) return NEUTRAL_LEAD;
+  return `For ${phrase}, here's how each tool can help:`;
 }
 
 function introVerbs(query: string): string[] {
@@ -614,7 +765,11 @@ const LEARNING_VERBS = new Set(["learn", "study", "tutor", "practice"]);
 
 function bareRealEstateQuery(query: string): boolean {
   const cleaned = stripWrappers(query).toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ").trim();
-  return cleaned === "real estate";
+  if (cleaned === "real estate") return true;
+  const raw = query.toLowerCase();
+  if (/\b(comps?|cma|bpo|crm|expired|fsbo|tenant|showing|disclosure|cap rate|cash flow|deals?|parcel|vacant|staging|walkthrough)\b/.test(raw)) return false;
+  if (/\b(house|home|listing)\b/.test(raw) && !/\breal estate\b/.test(raw)) return false;
+  return /\breal estate\b/.test(raw) && /\b(tools?|software|apps?|platforms?|ai|technology|tech)\b/.test(raw);
 }
 
 function hiringResumeQuery(query: string): boolean {
@@ -630,8 +785,16 @@ function avatarQuery(query: string): boolean {
 }
 
 function listingVideoQuery(query: string): boolean {
-  if (/\b(listing videos?|video tour|property walkthrough|realtor video|listing photos)\b/i.test(query)) return true;
-  return /\b(realtor|listing)\b/i.test(query) && /\b(video|videos|tour|walkthrough)\b/i.test(query);
+  if (/\bschedul\w*/i.test(query) && /\b(tours?|showings?)\b/i.test(query) && !/\b(videos?|reels?|edit|cut|footage)\b/i.test(query)) {
+    return false;
+  }
+  if (/\b(listing videos?|video tours?|property walkthroughs?|realtor videos?|house tours?|home tours?|property reels?)\b/i.test(query)) return true;
+  if (/\bwalkthroughs?\b/i.test(query) && /\b(videos?|reels?|cuts?|edit|footage)\b/i.test(query) && !/\b(code|app|software|bug)\b/i.test(query)) {
+    return true;
+  }
+  if (/\b(listing photos?|property photos?)\b/i.test(query) && /\b(videos?|reels?|tours?)\b/i.test(query)) return true;
+  return /\b(realtors?|listings?|propert(?:y|ies)|houses?|homes?|open houses?)\b/i.test(query)
+    && /\b(videos?|reels?|walkthroughs?|tours?)\b/i.test(query);
 }
 
 function languageQuery(query: string): boolean {
@@ -676,6 +839,22 @@ function luggageQuery(text: string): boolean {
 function roleBonus(conceptId: string, slug: string, query: string): number {
   const smb = smallBusinessRoleBonus(conceptId, slug, query);
   if (smb) return smb;
+  const realEstateOrder: Record<string, string[]> = {
+    cma: ["cloud-cma"],
+    "listing-copy": ["jasper", "copy-ai", "writesonic"],
+    "listing-photos": ["boxbrownie"],
+    "realtor-follow-up": ["follow-up-boss"],
+    "realtor-crm": ["follow-up-boss"],
+    "market-report": ["cloud-cma"],
+    prospecting: ["propstream", "dealmachine", "batchleads", "resimpli", "launch-control"],
+    "agent-social": ["buffer", "hootsuite", "ocoya", "predis"],
+    "property-mgmt": ["doorloop"],
+  };
+  const ordered = realEstateOrder[conceptId];
+  if (ordered) {
+    const index = ordered.indexOf(slug);
+    if (index >= 0) return 400 - index * 40;
+  }
   if (conceptId === "listing-video") {
     const order = isListingPhotoQuery(query) || isListingMakeQuery(query) ? LISTING_PHOTO_ORDER : LISTING_EDITOR_ORDER;
     const index = order.indexOf(slug);
@@ -703,7 +882,9 @@ function videoGenerationQuery(query: string): boolean {
     return false;
   }
   if (/\b(?:text|image)[\s-]to[\s-]video\b/i.test(query)) return true;
-  if (/\bcinematic\b/i.test(query)) return true;
+  if (/\bcinematic\b/i.test(query) || /\bai videos?\b/i.test(query) || /\bvideo generation\b/i.test(query)) return true;
+  if (/\b(dolly|push-ins?|camera moves?)\b/i.test(query)) return true;
+  if (/\bvideos?\b/i.test(query) && /\bprompts?\b/i.test(query)) return true;
   if (/\bcamera\b/i.test(query) && /\b(?:video|videos|film|movie|movies|shot|shots)\b/i.test(query)) return true;
   return /\b(?:generate|generating|make|making|create|creating)\b/i.test(query)
     && /\b(?:video|videos|film|movie|movies)\b/i.test(query);
@@ -715,8 +896,23 @@ function modelChoiceQuery(query: string): boolean {
     || (/\bcheap\b/i.test(query) && /\bcod/i.test(query));
 }
 
+/** A hand-written frame key when the query is not a clean gerund we can echo. */
+function framedTopic(query: string, useCase?: UseCase | null): string {
+  const phrase = jobPhrase(query, useCase).replace(/^help with\s+/i, "");
+  if (phrase) return phrase;
+  const cleaned = stripWrappers(query);
+  if (/\bmeal prep\b/i.test(cleaned)) return "meal prep";
+  if (/\bgrocery list\b/i.test(cleaned)) return "grocery list";
+  if (/\b(?:baby names?|nam(?:e|ing) a baby)\b/i.test(cleaned)) return "naming a baby";
+  if (/\bbook club\b/i.test(cleaned)) return "book club";
+  if (/\bsmall business\b/i.test(cleaned)) return "small business";
+  if (/\b\w+\s+alternatives?\b/i.test(cleaned)) return "finding an alternative";
+  return "";
+}
+
 function openIntro(query: string, useCase?: UseCase | null): string {
-  const topic = jobPhrase(query, useCase).replace(/^help with\s+/i, "");
+  const topic = framedTopic(query, useCase);
+  if (!topic) return NEUTRAL_INTRO;
   if (/\b\w+\s+alternatives?\b/i.test(query)) {
     return "AI assistants can compare other tools for the same job, and you still pick the one to try.";
   }
@@ -771,6 +967,9 @@ export function jobIntro(query: string, useCase: UseCase | undefined, concept: C
   if (useCase?.slug === "listing-videos" || concept?.id === "listing-video") {
     return isListingPhotoQuery(query) ? LISTING_PHOTO_INTRO : LISTING_EDIT_INTRO;
   }
+  if ((useCase?.slug === "rank-property-deals" || concept?.id === "deals") && /\b(cap rates?|arv|after repair|rental comps?)\b/i.test(query)) {
+    return CAP_RATE_INTRO;
+  }
   const smb = smallBusinessIntro(query, useCase?.slug, concept?.id ?? null);
   if (smb) return smb;
   if (useCase?.intro) return useCase.intro;
@@ -793,7 +992,7 @@ function infinitivePhrase(phrase: string): string {
 
 function assistantSlot(query: string, useCase?: UseCase | null): string {
   const phrase = jobPhrase(query, useCase);
-  return phrase.replace(/^help with\s+/i, "").trim() || phrase;
+  return phrase.replace(/^help with\s+/i, "").trim();
 }
 
 function guardSlot(slot: string): string {
@@ -815,8 +1014,15 @@ function assistantWhy(tool: Tool, query: string, useCase: UseCase | null, slotOv
     const written = domainAssistantLine(tool.slug, useCase.slug);
     if (written) return written;
   }
+  if (!slotOverride && !jobPhrase(query, useCase)) {
+    const framed = framedTopic(query, useCase);
+    if (!framed) return neutralAssistantLine(tool.slug, name);
+    return openAssistantLine(tool.slug, name, guardSlot(framed));
+  }
   const slot = slotOverride ?? assistantSlot(query, useCase);
-  return openAssistantLine(tool.slug, name, guardSlot(slot));
+  const guarded = guardSlot(slot || "this");
+  if (!slotOverride && slot.trim() && guarded !== slot.trim()) return neutralAssistantLine(tool.slug, name);
+  return openAssistantLine(tool.slug, name, guarded);
 }
 
 function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general: boolean, index: number): string {
@@ -975,15 +1181,201 @@ function alternativeLead(tool: IndexedTool): string {
   return `For finding ${article} ${name} alternative, here's how each tool can help:`;
 }
 
+/** Gerund for "X alternative", so the why-line can use the compare-tools frame. */
+function alternativeGerund(cleaned: string): string {
+  const match = cleaned.match(/^(?:(?:best|cheap|good|free)\s+)?(?:an?\s+)?(.+?)\s+alternatives?$/i);
+  if (!match) return "";
+  const subject = match[1].replace(/^(?:a|an|the)\s+/i, "").replace(/\s+/g, " ").trim();
+  if (subject.length < 2) return "";
+  const name = subject.split(/\s+/).map((word) => {
+    const bare = word.toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (bare === "chatgpt") return "ChatGPT";
+    return brandCase(bare) ?? ACRONYM_CASE[bare] ?? word.toLowerCase();
+  }).join(" ");
+  const article = /^[aeiou]/i.test(name) ? "an" : "a";
+  const phrase = `finding ${article} ${name} alternative`;
+  return headerEchoBroken(phrase) ? "" : phrase;
+}
+
 type ConceptHit = { concept: Concept; score: number };
 
-function conceptHits(text: string): ConceptHit[] {
-  const lower = text.toLowerCase();
-  const tokens = new Set(words(text).map(correctToken));
+export type { SemanticScore };
+
+function lexiconHits(text: string): ConceptHit[] {
+  const prepared = prepareQuery(text);
   return CONCEPTS
-    .map((concept) => ({ concept, score: scoreConcept(concept, lower, tokens) }))
+    .map((concept) => ({ concept, score: scoreConcept(concept, prepared.text, prepared.tokens) }))
     .filter((item) => item.score >= CONCEPT_THRESHOLD)
     .sort((a, b) => b.score - a.score || a.concept.id.localeCompare(b.concept.id));
+}
+
+/** Concept id used to label a seed in the embedding index. */
+export function labelConceptForSeed(query: string, useCase: string): string {
+  const winner = chooseWinner(lexiconHits(correctedQuery(query)));
+  if (winner && winner.concept.useCase === useCase) return winner.concept.id;
+  const options = CONCEPTS.filter((concept) => concept.useCase === useCase);
+  return (options.find((concept) => !concept.broad) ?? options[0]).id;
+}
+
+function semanticAllowed(concept: Concept, lower: string): boolean {
+  if (businessValuationQuery(lower)) return false;
+  if (deniesRealEstate(lower) && (concept.categories.includes("real-estate") || concept.id === "agent-social" || concept.id === "real-estate" || concept.id === "listing-video")) return false;
+  if (semanticRealEstateBlock(concept.id, lower)) return false;
+  if (conceptBlocked(concept.id, lower)) return false;
+  if (jobCueBlocks(concept.id, lower)) return false;
+  if (concept.id === "resume" && hiringResumeQuery(lower)) return false;
+  if (concept.id === "video" && (videoGenerationQuery(lower) || listingVideoQuery(lower) || avatarQuery(lower))) return false;
+  if ((concept.id === "voice" || concept.id === "image" || concept.id === "three-d") && videoGenerationQuery(lower)) return false;
+  if (concept.id === "image" && threeDQuery(lower)) return false;
+  if (concept.id === "three-d" && !threeDQuery(lower) && !/\bmesh(?:es)?\b/.test(lower)) return false;
+  if (concept.id === "video-generation" && (listingVideoQuery(lower) || avatarQuery(lower))) return false;
+  if (concept.id === "avatar" && (videoGenerationQuery(lower) || listingVideoQuery(lower))) return false;
+  if (concept.id === "listing-video" && avatarQuery(lower)) return false;
+  if (concept.id === "tutoring" && languageQuery(lower)) return false;
+  if (
+    concept.id === "meetings"
+    && /\b(schedule(?:\s+a)? meetings?|scheduling meetings|calendar management)\b/.test(lower)
+    && !/\b(notes|transcript|action items|transcribe)\b/.test(lower)
+  ) {
+    return false;
+  }
+  return true;
+}
+
+function wantsAPerson(lower: string): boolean {
+  if (!/\b(realtors?|brokers?)\b/.test(lower)) return false;
+  if (/\b(ai|tools?|software|crm|comps?|cma|listings?)\b/.test(lower)) return false;
+  return /\bfind\b/.test(lower) || /\bfor (?:my |our )?(?:house|home)\b/.test(lower);
+}
+
+/** Words that show up in many jobs and do not prove the query is about that job. */
+const DOMAIN_GENERIC = new Set([
+  "deal", "business", "thing", "things", "stuff", "good", "work", "job", "jobs",
+  "tool", "tools", "agent", "agents", "help", "need", "want", "best",
+  "plan", "book", "write", "draft", "schedule", "post", "learn", "practice", "send",
+  "create", "update", "check", "call", "text", "run", "pay", "file", "manage", "track",
+  "search", "get", "set", "fix", "clean", "sort", "build", "start", "keep", "ask",
+  "note", "notes", "area", "year", "month", "people", "someone", "place", "list",
+]);
+
+const domainTokens = new Map<string, Set<string>>();
+
+function domainTokenSet(concept: Concept): Set<string> {
+  const cached = domainTokens.get(concept.id);
+  if (cached) return cached;
+  const tokens = new Set<string>();
+  const add = (raw: string) => {
+    for (const token of raw.toLowerCase().match(/[a-z0-9]+/g) ?? []) {
+      for (const expanded of [token, stemToken(token)]) {
+        if (expanded.length < 3) continue;
+        if (STOPWORDS.has(expanded) || GENERIC.has(expanded) || DOMAIN_GENERIC.has(expanded)) continue;
+        tokens.add(expanded);
+      }
+    }
+  };
+  for (const phrase of concept.phrases) add(phrase);
+  for (const anchor of concept.anchors) add(anchor);
+  for (const bag of concept.bags ?? []) for (const word of bag) add(word);
+  domainTokens.set(concept.id, tokens);
+  return tokens;
+}
+
+function semanticAnchored(concept: Concept, preparedText: string, tokens: Set<string>): boolean {
+  const domain = domainTokenSet(concept);
+  for (const token of tokens) {
+    if (token === "lot" || token === "lots") {
+      if (/\ba lots?\b/.test(preparedText)) continue;
+    }
+    if (domain.has(token)) return true;
+  }
+  return false;
+}
+
+function semanticFloor(concept: Concept, preparedText: string, tokens: Set<string>): number {
+  if (concept.broad && !conceptHasSignal(concept.id, preparedText)) return SEMANTIC_BROAD_FLOOR;
+  if (semanticAnchored(concept, preparedText, tokens) || conceptHasSignal(concept.id, preparedText)) return SEMANTIC_FLOOR;
+  return SEMANTIC_UNANCHORED_FLOOR;
+}
+
+function preferSignaledJob(
+  allowed: { concept: Concept; cosine: number; profile: number }[],
+  preparedText: string,
+  tokens: Set<string>,
+): { concept: Concept; cosine: number; profile: number }[] {
+  const top = allowed[0];
+  if (!top || conceptHasSignal(top.concept.id, preparedText)) return allowed;
+  const signaled = allowed.find((item) =>
+    item.concept.id !== top.concept.id
+    && conceptHasSignal(item.concept.id, preparedText)
+    && top.cosine - item.cosine <= SEMANTIC_SIGNAL_WINDOW
+    && item.cosine >= semanticFloor(item.concept, preparedText, tokens)
+  );
+  if (!signaled) return allowed;
+  return [signaled, ...allowed.filter((item) => item.concept.id !== signaled.concept.id)];
+}
+
+function semanticChoice(text: string, scores: SemanticScore[]): { concept: Concept; cosine: number } | null {
+  const prepared = prepareQuery(text);
+  const lower = prepared.text;
+  if (businessValuationQuery(lower) || wantsAPerson(lower)) return null;
+  const allowed: { concept: Concept; cosine: number; profile: number }[] = [];
+  for (const item of scores) {
+    const concept = CONCEPTS.find((entry) => entry.id === item.id);
+    if (!concept || !semanticAllowed(concept, lower)) continue;
+    allowed.push({ concept, cosine: item.cosine, profile: item.profile });
+  }
+  allowed.sort((a, b) => b.cosine - a.cosine || b.profile - a.profile || a.concept.id.localeCompare(b.concept.id));
+  const ordered = preferSignaledJob(allowed, lower, prepared.tokens);
+  const top = ordered[0];
+  if (!top || top.cosine < semanticFloor(top.concept, lower, prepared.tokens)) return null;
+  const rival = ordered[1];
+  if (!rival || rival.cosine < semanticFloor(rival.concept, lower, prepared.tokens)) return top;
+  if (top.cosine - rival.cosine >= SEMANTIC_MARGIN) return top;
+  const anchored = semanticAnchored(top.concept, lower, prepared.tokens) || conceptHasSignal(top.concept.id, lower);
+  if (anchored && !top.concept.broad && top.cosine >= 0.65) return top;
+  if (anchored && top.profile - rival.profile >= SEMANTIC_PROFILE_MARGIN) return top;
+  return null;
+}
+
+function confidentLexicon(hits: ConceptHit[]): boolean {
+  const winner = chooseWinner(hits);
+  if (!winner) return false;
+  const second = hits
+    .filter((item) => item.concept.useCase !== winner.concept.useCase)
+    .reduce((best, item) => Math.max(best, item.score), 0);
+  return winner.score >= 12 && winner.score - second >= 4;
+}
+
+function trigramHits(text: string): ConceptHit[] {
+  return semanticHits(text).flatMap((hit) => {
+    const concept = CONCEPTS.find((item) => item.id === hit.id);
+    return concept ? [{ concept, score: hit.score }] : [];
+  });
+}
+
+function conceptHits(text: string, scores?: SemanticScore[]): ConceptHit[] {
+  const lexicon = lexiconHits(text);
+  const pick = scores ? semanticChoice(text, scores) : null;
+  if (!pick) return lexicon.length > 0 ? lexicon : trigramHits(text);
+  const lexicalWinner = chooseWinner(lexicon);
+  if (!lexicalWinner) return [{ concept: pick.concept, score: CONCEPT_THRESHOLD + 4 }];
+  if (lexicalWinner.concept.id === pick.concept.id) return lexicon;
+  if (pick.concept.broad && lexicon.some((item) => !item.concept.broad)) return lexicon;
+  const lexicalCosine = scores?.find((item) => item.id === lexicalWinner.concept.id)?.cosine ?? 0;
+  const needed = confidentLexicon(lexicon) ? SEMANTIC_CONFIDENT_GAP : SEMANTIC_DISAGREE_GAP;
+  if (pick.cosine - lexicalCosine < needed) return lexicon;
+  return [{ concept: pick.concept, score: CONCEPT_THRESHOLD + 4 }];
+}
+
+function semanticDisplaces(text: string, scores: SemanticScore[] | undefined, concepts: Concept[]): boolean {
+  if (!scores) return false;
+  const pick = semanticChoice(text, scores);
+  if (!pick || concepts.some((concept) => concept.id === pick.concept.id)) return false;
+  const rival = concepts.reduce((best, concept) => {
+    const cosine = scores.find((item) => item.id === concept.id)?.cosine ?? 0;
+    return Math.max(best, cosine);
+  }, 0);
+  return pick.cosine - rival >= SEMANTIC_DISAGREE_GAP;
 }
 
 function chooseWinner(hits: ConceptHit[]): ConceptHit | null {
@@ -1005,7 +1397,7 @@ export function matchTagsForConcept(concept: Concept, useCases: UseCase[]): stri
   return useCase?.matchTags ?? [concept.useCase];
 }
 
-const JOB_SPLIT = /\s*(?:,\s*and\s+|,\s*also\s+|,\s+|\s+&\s+|\s+\bplus\b\s+|\s+\balso\b\s+|\s+\band\b\s+)\s*/i;
+const JOB_SPLIT = /\s*(?:,\s*and\s+|,\s*also\s+|,\s+|\s+&\s+|\s+\bplus\b\s+|\s+\balso\b\s+|\s+\band\b(?!\s+(?:i|we|still)\b)\s+)\s*/i;
 
 function jobParts(query: string): string[] {
   const cleaned = stripWrappers(query).replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
@@ -1018,8 +1410,7 @@ function jobParts(query: string): string[] {
 type CompoundHit = { part: string; concept: Concept; score: number };
 
 function phraseHit(concept: Concept, text: string): boolean {
-  const lower = text.toLowerCase();
-  return concept.phrases.some((phrase) => lower.includes(phrase));
+  return concept.phrases.some((phrase) => phraseMatches(text, phrase));
 }
 
 function absorbed(hit: CompoundHit, hits: CompoundHit[]): boolean {
@@ -1072,8 +1463,14 @@ function polishPart(phrase: string): string {
 function compoundLead(hits: CompoundHit[], useCases: UseCase[]): string {
   const phrases = hits.map((hit) => {
     const useCase = useCases.find((item) => item.slug === hit.concept.useCase) ?? null;
-    return polishPart(jobPhrase(hit.part, useCase));
-  });
+    const phrase = polishPart(jobPhrase(hit.part, useCase));
+    const canonical = polishPart(useCaseHeader(useCase, /\b(?:my|our)\b/i.test(hit.part)));
+    if (phrase && phrase !== canonical) return phrase;
+    const specific = explicitJobForms(hit.part);
+    if (specific && !headerEchoBroken(specific.gerund)) return polishPart(specific.gerund);
+    return phrase;
+  }).filter(Boolean);
+  if (phrases.length === 0) return NEUTRAL_LEAD;
   return `For ${joinAnd(phrases)}, here's how each tool can help:`;
 }
 
@@ -1081,6 +1478,14 @@ type JobForms = { infinitive: string; gerund: string };
 
 /** Infinitive for "plan to …", gerund for "a first pass at …". Same verb, two grammatical shapes. */
 function jobForms(part: string): JobForms {
+  const explicit = explicitJobForms(part);
+  if (explicit) return explicit;
+  const raw = stripWrappers(part).toLowerCase().replace(/\s+/g, " ").trim();
+  const cleaned = raw.replace(/\bmy\b/g, "your");
+  return { infinitive: cleaned, gerund: cleaned };
+}
+
+function explicitJobForms(part: string): JobForms | null {
   const raw = stripWrappers(part).toLowerCase().replace(/\s+/g, " ").trim();
   const mapped: Array<[RegExp, JobForms]> = [
     [/\btrack (?:my |your )?expenses\b/, { infinitive: "track expenses", gerund: "tracking expenses" }],
@@ -1136,9 +1541,7 @@ function jobForms(part: string): JobForms {
     if (pattern.test(raw)) return forms;
   }
   const smb = smallBusinessJobForms(raw);
-  if (smb) return smb;
-  const cleaned = raw.replace(/\bmy\b/g, "your");
-  return { infinitive: cleaned, gerund: cleaned };
+  return smb;
 }
 
 function compoundForms(hits: CompoundHit[]): JobForms[] {
@@ -1277,6 +1680,7 @@ function wantsBridge(hits: CompoundHit[]): boolean {
 export function rankCatalogQuery(
   query: string,
   catalog: { tools: Tool[]; useCases: UseCase[]; categories: Category[] },
+  semanticScores?: SemanticScore[],
 ): RankedSearch {
   const published = catalog.tools.filter((tool) => tool.status === "published");
   const indexedTools: IndexedTool[] = published.map((tool) => {
@@ -1380,7 +1784,7 @@ export function rankCatalogQuery(
   };
 
   const compound = compoundHits(corrected);
-  if (compound) {
+  if (compound && !semanticDisplaces(corrected, semanticScores, compound.map((hit) => hit.concept))) {
     const seen = new Set<string>();
     const specialists: IndexedTool[] = [];
     const bridgeSlugs = new Set<string>();
@@ -1418,6 +1822,7 @@ export function rankCatalogQuery(
       }
     }
     const chosen = specialists.slice(0, 7);
+    const assistantCap = chosen.length > 0 ? 3 : assistants.length;
     const cases = compound.flatMap((hit) => {
       const found = indexedCases.find((item) => item.slug === hit.concept.useCase);
       if (!found) return [];
@@ -1437,7 +1842,7 @@ export function rankCatalogQuery(
     };
     const selected = [
       ...chosen,
-      ...assistants.filter((tool) => !chosen.some((item) => item.slug === tool.slug)),
+      ...assistants.filter((tool) => !chosen.some((item) => item.slug === tool.slug)).slice(0, assistantCap),
     ].filter((tool) => tool.slug !== alt?.slug);
     return {
       tools: selected.map((tool, index) => presentTool(tool, whyFor(tool, index), Boolean(tool.source.generalPurpose))),
@@ -1450,15 +1855,17 @@ export function rankCatalogQuery(
     };
   }
 
-  const winner = chooseWinner(conceptHits(corrected));
+  const winner = chooseWinner(conceptHits(corrected, semanticScores));
   const specialists = winner ? collect(winner.concept, winner.score, corrected, true, false) : [];
   const primaryCase = winner
     ? indexedCases.find((item) => item.slug === winner.concept.useCase) ?? null
     : null;
   if (primaryCase && winner) primaryCase.score = winner.score;
+  const chosenSpecialists = specialists.slice(0, 5);
+  const assistantCap = chosenSpecialists.length > 0 ? 3 : assistants.length;
   const selected = [
-    ...specialists.slice(0, 5),
-    ...assistants.filter((tool) => !specialists.some((item) => item.slug === tool.slug)),
+    ...chosenSpecialists,
+    ...assistants.filter((tool) => !chosenSpecialists.some((item) => item.slug === tool.slug)).slice(0, assistantCap),
   ].filter((tool) => tool.slug !== alt?.slug);
   const lowMatch = !winner;
 

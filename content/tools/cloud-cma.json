@@ -1,0 +1,57 @@
+{
+  "id": "cloud-cma",
+  "slug": "cloud-cma",
+  "name": "Cloud CMA",
+  "websiteUrl": "https://www.lwolf.com/engage/cma",
+  "affiliateUrl": null,
+  "shortDescription": "Branded CMA reports from MLS comps, with a 14-day trial.",
+  "longDescription": "Cloud CMA builds branded CMA reports from MLS comps, comparable sales, and neighborhood stats. Lone Wolf lists Cloud CMA at $49 per month, or $499 annually, and that price includes Homebeat. A 14-day trial is available. Many MLS memberships include Cloud CMA, and access still depends on the board.",
+  "categories": ["real-estate"],
+  "useCaseTags": ["cma-comps", "market-reports"],
+  "toolTypes": ["other"],
+  "platforms": ["web"],
+  "pricingModel": ["subscription"],
+  "pricingNotes": "Cloud CMA is $49 per month or $499 annually, and that price includes Homebeat. A 14-day trial is available. Some MLS memberships include Cloud CMA.",
+  "pricingUrl": "https://www.lwolf.com/resources/cloud-cma-vs-moxiworks-cma-moxipresent-which-cma-tool-wins",
+  "docsUrl": "https://www.lwolf.com/engage/cma",
+  "freeTier": false,
+  "freeTierNotes": null,
+  "startingPrice": 49,
+  "freeTrial": "14 days",
+  "pricingCheckedAt": "2026-10-27",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "A branded CMA built from MLS comps and neighborhood stats"
+  ],
+  "notIdealFor": [
+    "An agent whose board does not include MLS access for Cloud CMA"
+  ],
+  "strength": "Cloud CMA builds a branded CMA from MLS comps and neighborhood stats, and a 14-day trial is available.",
+  "weakness": "The $49 per month price includes Homebeat, and MLS comps are available only when the agent's board provides them.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T12:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and comparison pages reviewed on October 27, 2026.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "sources": [
+    "https://www.lwolf.com/engage/cma",
+    "https://www.lwolf.com/resources/cloud-cma-vs-moxiworks-cma-moxipresent-which-cma-tool-wins"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.lwolf.com/resources/cloud-cma-vs-moxiworks-cma-moxipresent-which-cma-tool-wins"
+  },
+  "useCaseFit": {
+    "cma-comps": "Builds a CMA report from MLS comps and neighborhood stats.",
+    "market-reports": "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity."
+  }
+}

@@ -2,10 +2,12 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { CONCEPTS } from "../lib/concepts.ts";
 import { matchTagsForConcept } from "../lib/search.ts";
 import { smokeLabel } from "../lib/labels.ts";
-import { rankCatalogQuery } from "../lib/search.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
+import { NEUTRAL_LEAD } from "../lib/header-grammar.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
+import { buildHeldOut, buildOtherHeldOut, buildParaphrases, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
+import { rankObserved } from "./rank-observed.ts";
 
 export type QaQuery = {
   query: string;
@@ -16,6 +18,7 @@ export type QaQuery = {
 
 /** Realistic searches: use-case jobs, wrappers, caps, typos, punctuation, questions, and unrelated work. */
 export const QA_QUERIES: QaQuery[] = [
+  { query: 'pull house comparisons for me to make a CMA"', domain: "cma-comps" },
   { query: "find homes for sale by owner", domain: "find-off-market" },
   { query: "use an agent for motivated sellers", domain: "find-off-market" },
   { query: "fsbo near me", domain: "find-off-market" },
@@ -488,7 +491,7 @@ function cardLabel(general: boolean, status: Tool["smokeStatus"]): string {
 
 export function runSearchQa(catalog: Catalog): QaRow[] {
   return QA_QUERIES.map((item) => {
-    const ranked = rankCatalogQuery(item.query, catalog);
+    const ranked = rankObserved(item.query, catalog);
     return {
       query: item.query,
       domain: item.domain,
@@ -504,7 +507,7 @@ export function runSearchQa(catalog: Catalog): QaRow[] {
 }
 
 export function qaProblems(catalog: Catalog): string[] {
-  const problems: string[] = [];
+  const problems: string[] = [...paraphraseProblems(catalog), ...offDomainProblems(catalog)];
   const bySlug = new Map(catalog.tools.map((tool) => [tool.slug, tool]));
   if (QA_QUERIES.length < 200) problems.push(`expected at least 200 queries, found ${QA_QUERIES.length}`);
   const seen = new Set<string>();
@@ -512,14 +515,14 @@ export function qaProblems(catalog: Catalog): string[] {
     const key = item.query.toLowerCase();
     if (seen.has(key)) problems.push(`duplicate query: ${item.query}`);
     seen.add(key);
-    const ranked = rankCatalogQuery(item.query, catalog);
+    const ranked = rankObserved(item.query, catalog);
     const pageTools = ranked.tools
       .map((tool) => bySlug.get(tool.slug))
       .filter((tool): tool is Tool => Boolean(tool));
     const allowed = allowedWords(item.query, pageTools);
     const header = ranked.lead;
     const intro = ranked.intro;
-    if (!/^For [a-z]/.test(header)) problems.push(`${item.query}: header does not start with a lowercase gerund: ${header}`);
+    if (header !== NEUTRAL_LEAD && !/^For [a-z]/.test(header)) problems.push(`${item.query}: header does not start with a lowercase gerund: ${header}`);
     if (!/^AI (?:agents|assistants)\b/.test(intro)) problems.push(`${item.query}: intro does not start with AI agents or AI assistants: ${intro}`);
     for (const text of [header, intro]) {
       if (WRAPPER.test(text)) problems.push(`${item.query}: wrapper text in "${text}"`);
@@ -528,7 +531,7 @@ export function qaProblems(catalog: Catalog): string[] {
       if (INTERNAL.test(text)) problems.push(`${item.query}: internal wording in "${text}"`);
       const caps = capitalIssues(text, allowed);
       if (caps.length > 0) problems.push(`${item.query}: mid-sentence capital ${caps.join(", ")} in "${text}"`);
-      const grammar = grammarProblems(text, text === header ? "header" : "intro");
+      const grammar = grammarProblems(text, text === header ? "header" : "intro", item.query);
       if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in "${text}"`);
     }
     const whys = ranked.tools.map((tool) => tool.whyItHelps);
@@ -547,7 +550,7 @@ export function qaProblems(catalog: Catalog): string[] {
       const queryWords = new Set(item.query.toLowerCase().match(/[a-z0-9]+/g) ?? []);
       const leaked = capitalIssues(why, allowed).filter((word) => queryWords.has(word.toLowerCase()));
       if (leaked.length > 0) problems.push(`${item.query}: query capital ${leaked.join(", ")} in ${tool.name} why: ${why}`);
-      const grammar = grammarProblems(why, "why");
+      const grammar = grammarProblems(why, "why", item.query);
       if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in ${tool.name} why: ${why}`);
       if (!tool.generalPurpose) {
         const specialist = specialistWhyProblems(tool.name, why);
@@ -666,16 +669,10 @@ export function catalogLeakProblems(catalog: Catalog): string[] {
   return problems;
 }
 
-export function renderSearchQaReport(catalog: Catalog): string {
-  const rows = runSearchQa(catalog);
-  const lines = [
-    "# Search QA report",
-    "",
-    `${rows.length} queries through the ranker and the header, intro, and why-line renderers.`,
-    "",
-  ];
+function renderRows(rows: QaRow[], start: number): string[] {
+  const lines: string[] = [];
   rows.forEach((row, index) => {
-    lines.push(`## ${index + 1}. ${row.query}`, "");
+    lines.push(`## ${start + index}. ${row.query}`, "");
     lines.push(`- Header: ${row.header}`);
     lines.push(`- Intro: ${row.intro}`);
     if (row.domain) lines.push(`- Domain: ${row.domain}`);
@@ -686,11 +683,229 @@ export function renderSearchQaReport(catalog: Catalog): string {
     }
     lines.push("");
   });
+  return lines;
+}
+
+function paraphraseRows(catalog: Catalog, items: Paraphrase[]): QaRow[] {
+  return items.map((item) => {
+    const ranked = rankObserved(item.query, catalog);
+    return {
+      query: item.query,
+      domain: item.useCase,
+      header: ranked.lead,
+      intro: ranked.intro,
+      cards: ranked.tools.map((tool) => ({
+        name: tool.name,
+        label: cardLabel(tool.generalPurpose, tool.smokeStatus),
+        why: tool.whyItHelps,
+      })),
+    };
+  });
+}
+
+function sortSeeds(items: Paraphrase[], founderFirst: boolean): Paraphrase[] {
+  return [...items].sort((a, b) => {
+    if (founderFirst) {
+      if (a.query === FOUNDER_QUERY) return -1;
+      if (b.query === FOUNDER_QUERY) return 1;
+    }
+    return a.useCase.localeCompare(b.useCase) || a.query.localeCompare(b.query);
+  });
+}
+
+const SPOT_QUERIES = [
+  "what would this place list at if I were the listing agent",
+  "clients keep asking how the neighborhood is doing",
+  "monthly note on prices in my farm area",
+  "housing figures for the area I farm",
+  "is the neighborhood slower than last spring",
+  "closing is Friday and the paperwork is scattered",
+  "what is still due before we close",
+  "purchase contract is missing the earnest money line",
+  "text the buyers who toured last weekend",
+  "seller has gone quiet since the inspection",
+  "buyers I have not touched in a month",
+  "check in with buyers who lost the last offer",
+  "call the expired on Birch before someone else does",
+  "farm the streets around my last sale",
+  "geographic farm I have been ignoring",
+  "expired owners who have not relisted",
+  "who in the farm might sell this year",
+];
+
+const OFF_DOMAIN = [
+  { query: "plan a wedding", expect: null, echo: /wedding/i, neutral: false },
+  { query: "train my dog", expect: null, echo: /dog/i, neutral: false },
+  { query: "what's my business worth", expect: null, echo: null, neutral: true },
+  { query: "price comparison for headphones", expect: "shop-products", echo: /headphone/i, neutral: false },
+];
+
+export function reportQueries(): string[] {
+  return [
+    ...QA_QUERIES.map((item) => item.query),
+    ...buildParaphrases().map((item) => item.query),
+    ...OFF_DOMAIN.map((item) => item.query),
+    ...SPOT_QUERIES,
+  ];
+}
+
+function benchLines(): string[] {
+  try {
+    const bench = JSON.parse(readFileSync(new URL("../qa/embed-bench.json", import.meta.url), "utf8")) as {
+      model: string;
+      dtype: string;
+      modelBytes: number;
+      wasmBytes: number;
+      indexBytes: number;
+      indexGzipBytes: number;
+      chunkBytes: number;
+      chunkGzipBytes: number;
+      loadMs: number;
+      queryMedianMs: number;
+      cpu: string;
+      laptopNote: string;
+    };
+    const size = (bytes: number) => bytes >= 1_000_000 ? `${(bytes / 1_000_000).toFixed(1)} MB` : `${bytes} bytes`;
+    return [
+      `Model ${bench.model}, ${bench.dtype}. Weights ${size(bench.modelBytes)} from the Hugging Face hub. WASM runtime ${size(bench.wasmBytes)} from jsDelivr. This site does not serve either file.`,
+      `A first submitted search also downloads the embedding index from this site (${bench.indexBytes} bytes, ${bench.indexGzipBytes} bytes gzipped) and the search script (${bench.chunkBytes} bytes, ${bench.chunkGzipBytes} bytes gzipped). Together that is ${bench.indexGzipBytes + bench.chunkGzipBytes} bytes gzipped from this site. Later searches in that browser use the Cache API, so this site sends 0 bytes for the index. Data Saver, slow-2g, and 2g skip the model and the index.`,
+      `Warm query median ${bench.queryMedianMs.toFixed(1)} ms on ${bench.cpu}, with the weights already cached. Session init in that run was ${Math.round(bench.loadMs)} ms.`,
+      bench.laptopNote,
+    ];
+  } catch {
+    return ["Embedding timings were not recorded in qa/embed-bench.json."];
+  }
+}
+
+export function offDomainProblems(catalog: Catalog): string[] {
+  const problems: string[] = [];
+  for (const item of OFF_DOMAIN) {
+    const ranked = rankObserved(item.query, catalog);
+    const got = ranked.useCases[0]?.slug ?? null;
+    if (got !== item.expect) problems.push(`${item.query} landed on ${got ?? "none"}`);
+    if (item.expect === "shop-products" && ranked.tools.some((tool) => tool.slug === "cloud-cma")) {
+      problems.push(`${item.query} surfaced Cloud CMA`);
+    }
+    if (item.neutral && ranked.lead !== NEUTRAL_LEAD) {
+      problems.push(`${item.query} should use the neutral header: ${ranked.lead}`);
+    }
+    if (!item.neutral && got === null && item.echo && !item.echo.test(`${ranked.lead} ${ranked.intro}`)) {
+      problems.push(`${item.query} fallback did not echo the job: ${ranked.intro}`);
+    }
+    const grammar = grammarProblems(ranked.lead, "header", item.query);
+    if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join(", ")}`);
+    for (const tool of ranked.tools) {
+      const why = grammarProblems(tool.whyItHelps, "why", item.query);
+      if (why.length > 0) problems.push(`${item.query}: ${why.join(", ")} in ${tool.name}`);
+    }
+  }
+  return problems;
+}
+
+export function renderSearchQaReport(catalog: Catalog): string {
+  const rows = runSearchQa(catalog);
+  const graded = gradeParaphrases(catalog);
+  const seeds = buildSeeds();
+  const realEstateSeeds = sortSeeds(seeds.filter((item) => item.realEstate), true);
+  const otherSeeds = sortSeeds(seeds.filter((item) => !item.realEstate), false);
+  const heldOut = buildHeldOut();
+  const otherHeldOut = buildOtherHeldOut();
+  const heldOutFail = new Set(graded.heldOutMisses.map((item) => item.replace(/ → .*$/, "")));
+  const otherFail = new Set(graded.otherHeldOutMisses.map((item) => item.replace(/ → .*$/, "")));
+  const lines = [
+    "# Search QA report",
+    "",
+    "Lexical match paints first. Meaning match uses quantized bge-small in the browser and in this harness.",
+    ...benchLines(),
+    "",
+    `Seed pass rate ${(graded.seedPassRate * 100).toFixed(1)}% (${graded.seedCount} natural seeds). Wrapped pass rate ${(graded.wrappedPassRate * 100).toFixed(1)}% (${graded.wrappedCount} template variants).`,
+    `Held-out real estate pass rate ${(graded.heldOutPassRate * 100).toFixed(1)}% (${graded.heldOutCount} queries written independently of the lexicon).`,
+    `Held-out other pass rate ${(graded.otherHeldOutPassRate * 100).toFixed(1)}% (${graded.otherHeldOutCount} small-business, creator, developer, and consumer queries).`,
+    `Seed precision@3 ${graded.precisionAt3.toFixed(3)}. Real-estate held-out precision@3 ${graded.heldOutPrecisionAt3.toFixed(3)}. Other held-out precision@3 ${graded.otherHeldOutPrecisionAt3.toFixed(3)}.`,
+    `Founder demo query: ${FOUNDER_QUERY}`,
+    "",
+    "Per-use-case seed pass rate:",
+    "",
+  ];
+  for (const row of [...graded.byUseCase].sort((a, b) => a.useCase.localeCompare(b.useCase))) {
+    lines.push(`- ${row.useCase}: ${(row.rate * 100).toFixed(1)}% (${row.passed}/${row.total})`);
+  }
+  if (graded.heldOutMisses.length > 0) {
+    lines.push("", "Real-estate held-out misses:", "");
+    for (const miss of graded.heldOutMisses) lines.push(`- ${miss}`);
+  }
+  if (graded.otherHeldOutMisses.length > 0) {
+    lines.push("", "Other held-out misses:", "");
+    for (const miss of graded.otherHeldOutMisses) lines.push(`- ${miss}`);
+  }
+  lines.push("", "# Spot checks", "", "Queries the word-overlap backstop missed. Graded by the same embedding path.", "");
+  for (const query of SPOT_QUERIES) {
+    const grade = graded.grades.find((item) => item.query === query);
+    if (!grade) {
+      lines.push(`- missing from the held-out set: ${query}`);
+      continue;
+    }
+    lines.push(`- ${grade.pass ? "pass" : "miss"} ${grade.useCase}: ${query}`);
+    lines.push(`  ${grade.header}`);
+    lines.push(`  ${grade.intro}`);
+    if (!grade.pass) lines.push(`  ${grade.reason}`);
+  }
+  lines.push("", "# Off-domain checks", "");
+  for (const item of OFF_DOMAIN) {
+    const ranked = rankObserved(item.query, catalog);
+    const got = ranked.useCases[0]?.slug ?? "general assistants";
+    lines.push(`- ${item.query} → ${got}`);
+    lines.push(`  ${ranked.lead}`);
+    lines.push(`  ${ranked.intro}`);
+  }
+  lines.push(
+    "",
+    "# Real estate natural seeds",
+    "",
+    `${realEstateSeeds.length} natural real estate seeds. The founder demo is first. Template wraps are graded in the summary and are not repeated here.`,
+    "",
+  );
+  lines.push(...renderRows(paraphraseRows(catalog, realEstateSeeds), 1));
+  lines.push(
+    "# Held-out real estate queries",
+    "",
+    `${heldOut.length} held-out queries. ${graded.heldOutCount - graded.heldOutMisses.length} passed. These were not used to add one-off phrases.`,
+    "",
+  );
+  const heldRows = paraphraseRows(catalog, heldOut);
+  heldRows.forEach((row, index) => {
+    const key = `${heldOut[index]?.useCase}: ${heldOut[index]?.query}`;
+    if (heldOutFail.has(key)) row.header = `MISS ${row.header}`;
+  });
+  lines.push(...renderRows(heldRows, 1));
+  lines.push(
+    "# Held-out other queries",
+    "",
+    `${otherHeldOut.length} held-out queries outside real estate. ${graded.otherHeldOutCount - graded.otherHeldOutMisses.length} passed. Written before the embedding scores were inspected.`,
+    "",
+  );
+  const otherRows = paraphraseRows(catalog, otherHeldOut);
+  otherRows.forEach((row, index) => {
+    const key = `${otherHeldOut[index]?.useCase}: ${otherHeldOut[index]?.query}`;
+    if (otherFail.has(key)) row.header = `MISS ${row.header}`;
+  });
+  lines.push(...renderRows(otherRows, 1));
+  lines.push("# Other natural seeds", "");
+  lines.push(...renderRows(paraphraseRows(catalog, otherSeeds), 1));
+  lines.push(
+    "# Legacy search QA",
+    "",
+    `${rows.length} queries through the ranker and the header, intro, and why-line renderers.`,
+    "",
+  );
+  lines.push(...renderRows(rows, 1));
   return lines.join("\n");
 }
 
 const invoked = process.argv[1]?.includes("search-qa");
 if (invoked) {
+  const { ensureEmbedded } = await import("./embed-session.ts");
+  await ensureEmbedded(reportQueries());
   const catalog = JSON.parse(readFileSync(new URL("../content/catalog.json", import.meta.url), "utf8")) as Catalog;
   const problems = [...catalogLeakProblems(catalog), ...qaProblems(catalog)];
   const report = renderSearchQaReport(catalog);

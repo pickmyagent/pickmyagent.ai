@@ -35,7 +35,8 @@
     "find-land",
     "find-off-market",
     "rank-property-deals",
-    "real-estate-overview"
+    "real-estate-overview",
+    "realtor-prospecting"
   ],
   "toolTypes": [
     "agent"
@@ -69,6 +70,7 @@
     "find-land": "Searches property records with an AI search box, and Essentials is $99 per month.",
     "find-off-market": "Filters property records, including off-market search, and Essentials is $99 per month.",
     "rank-property-deals": "Filters property records, including off-market ones.",
-    "real-estate": "Searches property records, including off-market listings, from one set of filters."
+    "real-estate": "Searches property records, including off-market listings, from one set of filters.",
+    "realtor-prospecting": "Searches expired, FSBO, and farm-area records in one property list."
   }
 }

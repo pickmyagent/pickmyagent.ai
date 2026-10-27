@@ -4,6 +4,8 @@
  * states only what the directory, or the tool's own site, supports.
  */
 
+import { dealSpecificSignal, propertyOpsSignal } from "./real-estate-match.ts";
+
 export const SMB_SPELLING: Record<string, string> = {
   quickbok: "quickbooks",
   quickboks: "quickbooks",
@@ -45,7 +47,7 @@ export function brandCase(word: string): string | null {
 }
 
 export function propertyMoneyQuery(text: string): boolean {
-  return /\b(houses?|homes?|rentals?|propert(?:y|ies)|flips?|parcels?|real estate|deals?)\b/i.test(text);
+  return /\b(houses?|homes?|rentals?|propert(?:y|ies)|flips?|parcels?|duplex(?:es)?|triplex(?:es)?|fourplex(?:es)?|condos?|townhomes?|real estate|deals?)\b/i.test(text);
 }
 
 export function portfolioQuery(text: string): boolean {
@@ -215,11 +217,15 @@ export function conceptBlocked(id: string, lower: string): boolean {
   if (id === "taxes" && (salesTaxQuery(lower) || vatQuery(lower) || gstQuery(lower) || payrollQuery(lower))) return true;
   if (id === "schedule" && shiftQuery(lower)) return true;
   if (id === "books-reports") {
+    if (dealSpecificSignal(lower)) return true;
     if (propertyMoneyQuery(lower) || portfolioQuery(lower)) return true;
     if (/\b(trips?|travel|vacations?|hotels?|flights?)\b/.test(lower)) return true;
     if (/\bsales\b/.test(lower) && !/\b(cash|profit|budget|expense|p&l)\b/.test(lower)) return true;
   }
   if (id === "bookkeeping") {
+    if (propertyOpsSignal(lower) || dealSpecificSignal(lower)) return true;
+    if (/\bjob descriptions?\b/.test(lower)) return true;
+    if (/\b(accounts payable|accounts receivable|ap ar)\b/.test(lower) && !/\b(quickbooks|qbo|reconcil|categoriz|xero|freshbooks|wave)\b/.test(lower)) return true;
     if (/\b(photos?|images?|videos?)\b/.test(lower)) return true;
     if (/\b(book club|novel|novels|library)\b/.test(lower)) return true;
     if (/\b(file|filing|1040)\b/.test(lower) && /\btax/.test(lower)) return true;
@@ -230,6 +236,17 @@ export function conceptBlocked(id: string, lower: string): boolean {
   if (id === "shopping" && /\b(etsy|shopify|inventory|ecommerce|e-commerce)\b/.test(lower)) return true;
   if (id === "shopping" && /\bamazon\s+(?:store|seller)\b/.test(lower)) return true;
   if (id === "shopping" && (vatQuery(lower) || gstQuery(lower))) return true;
+  if (id === "invest" && dealSpecificSignal(lower) && !/\b(stocks?|etfs?|401k|brokerage|index funds?)\b/.test(lower)) return true;
+  if (id === "sales" && /\b(job descriptions?|the role|candidates?)\b/.test(lower) && !/\b(leads?|crm|pipeline|cold email)\b/.test(lower)) return true;
+  if ((id === "video" || id === "video-generation") && /\b(face videos?|spokespersons?|talking heads?)\b/.test(lower) && !/\b(twitch|vod|streams?|kick)\b/.test(lower)) return true;
+  if (id === "social" && /\b(vods?|twitch|kick|livestreams?)\b/.test(lower)) return true;
+  if (id === "social" && /\boutline\b/.test(lower) && /\bposts?\b/.test(lower) && !/\b(instagram|facebook|tiktok|linkedin)\b/.test(lower)) return true;
+  if (id === "newsletter" && /\b(bury|unread|inbox)\b/.test(lower)) return true;
+  if (id === "email" && /\bcompanies\b/.test(lower) && /\b(e-?mails?|email)\b/.test(lower) && !/\b(inbox|gmail)\b/.test(lower)) return true;
+  if (id === "shopping" && /\bone person\b/.test(lower)) return true;
+  if (id === "quotes" && /\bbrand\b/.test(lower) && !/\b(quotes?|proposals?|estimates?)\b/.test(lower)) return true;
+  if (id === "content" && /\bexports?\b/.test(lower) && !/\b(blog|seo|articles?|copy)\b/.test(lower)) return true;
+  if ((id === "invoices" || id === "books-reports") && /\bhave not heard\b/.test(lower)) return true;
   return false;
 }
 
@@ -284,7 +301,9 @@ export function smallBusinessHeader(cleaned: string): string | null {
     return "running a small business";
   }
   if (/\bbookkeeping\b/.test(lower)) return "help with bookkeeping";
-  if (/\b(?:my|your|the|messy) books\b/.test(lower)) return "help with the books";
+  if (/\b(?:my|your|the|messy) books\b/.test(lower) && !/\b(ap\/ar|a\/p|a\/r|accounts payable|accounts receivable)\b/.test(lower)) {
+    return "help with the books";
+  }
   return null;
 }
 
@@ -503,10 +522,47 @@ const ASK: Record<string, string> = {
   deepseek: "DeepSeek",
 };
 
+function freshenTail(slug: string, tail: string): string {
+  const checklist = tail.match(/^(?:for )?(?:a |an )?(?:[\w-]+ ){0,6}?checklist (?:of |for )?(.+?)\.?$/i);
+  if (slug === "chatgpt" && checklist) {
+    const body = checklist[1];
+    const frames = [
+      `to write ${body} in the order you would actually do the work.`,
+      `to turn ${body} into a note you could hand a coworker.`,
+      `to draft ${body} in plain sentences you can edit.`,
+      `to list ${body} as short lines you can check.`,
+    ];
+    return frames[body.length % frames.length];
+  }
+  const sheet = tail.match(/^to build a sheet (?:of |that |with |for |layout for )?(.+?)\.?$/i);
+  if (slug === "gemini" && sheet) {
+    const body = sheet[1];
+    const frames = [
+      `to line up ${body} so you can scan it in one pass.`,
+      `to put ${body} where you can sort and filter it.`,
+      `to lay out ${body} with one row per item.`,
+      `to organize ${body} so the missing piece is easy to see.`,
+    ];
+    return frames[body.length % frames.length];
+  }
+  const sourced = tail.match(/^for sourced (?:notes|steps|pages|tips|definitions|checklists|writeups) (?:on |about )?(.+?)\.?$/i);
+  if (slug === "perplexity" && sourced) {
+    const body = sourced[1].replace(/, with links you can check$/i, "");
+    const frames = [
+      `to look up ${body} and keep the links beside what you found.`,
+      `to find a public page on ${body} and leave the link you can open.`,
+      `to pull a cited explanation of ${body} and keep the source.`,
+      `to check recent public writeups of ${body} and save the links.`,
+    ];
+    return frames[body.length % frames.length];
+  }
+  return tail;
+}
+
 function ask(slug: string, table: Record<string, string>): string | null {
   const name = ASK[slug];
   const tail = table[slug];
-  return name && tail ? `Ask ${name} ${tail}` : null;
+  return name && tail ? `Ask ${name} ${freshenTail(slug, tail)}` : null;
 }
 
 export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | undefined, query: string): string | null {
@@ -648,7 +704,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
   }
   if (useCaseSlug === "customer-follow-up") {
     return ask(slug, {
-      claude: "to draft a thank-you or a check-in for a customer you already know.",
+      claude: "to draft a thank-you or a check-in for someone already in your contacts.",
       chatgpt: "for a checklist of which customers to thank and what the note should say.",
       gemini: "to build a sheet of customers, the last visit, and whether you followed up.",
       perplexity: "for sourced notes on a short customer thank-you, with links you can check.",

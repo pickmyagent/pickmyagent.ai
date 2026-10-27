@@ -1,8 +1,10 @@
 import nlp from "compromise";
+import { articleVerbProblems, hasLowercaseI, headerEchoProblems, NEUTRAL_LEAD, pronounFlip } from "../lib/header-grammar.ts";
+import { startsWithTaskVerb, stripWrappers } from "../lib/search.ts";
 
 type Term = { text: string; tags: string[] };
 
-const ACRONYM = /\b(seo|fsbo|npcs|npc|rag|soc|crm|gmail)\b|\bq&a\b/;
+const ACRONYM = /\b(seo|fsbo|fsbos|npcs|npc|rag|soc|crm|gmail|cma|cmas|bpo|bpos|mls|arv)\b|\bq&a\b/;
 
 /** Strings from the CEO review. The gate must flag each one. */
 export const BROKEN_HEADERS = [
@@ -121,10 +123,7 @@ function twoVerbsAtStart(phrase: string): boolean {
   const terms = termsOf(phrase);
   if (terms.length < 2 || !isVerb(terms[0])) return false;
   const bridge = terms[1].text.toLowerCase();
-  if (/^(?:on|to)$/.test(bridge)) {
-    const next = terms[2];
-    return Boolean(next && (isVerb(next) || /^[a-z]+$/.test(next.text)) && !tags(next).includes("Determiner"));
-  }
+  if (/^(?:on|to|out|up|off|down|over|through|back|away)$/.test(bridge)) return false;
   const second = terms[1];
   if (!isVerb(second) || tags(second).includes("Noun") || tags(second).includes("Adjective")) return false;
   return tags(second).includes("Infinitive") || tags(second).includes("Imperative");
@@ -134,7 +133,9 @@ export function headerUsesBrokenPhrase(phrase: string): string | null {
   const normalized = phrase.toLowerCase().trim();
   for (const item of BROKEN_HEADERS) {
     if (normalized === item) return item;
-    if (item.includes(" ") && (normalized.startsWith(`${item} `) || normalized.startsWith(`${item},`))) return item;
+    if (item.includes(" ") && !/\b(?:me|you|us|them)$/.test(item) && (normalized.startsWith(`${item} `) || normalized.startsWith(`${item},`))) {
+    return item;
+  }
   }
   return null;
 }
@@ -151,10 +152,11 @@ function bareGerund(phrase: string): boolean {
  * Build-time grammar check for a rendered header, intro, or why-line.
  * Returns short problem labels. Empty means the line passed.
  */
-export function grammarProblems(text: string, kind: "header" | "intro" | "why" = "why"): string[] {
+export function grammarProblems(text: string, kind: "header" | "intro" | "why" = "why", query?: string): string[] {
   const problems: string[] = [];
   const lower = text.toLowerCase();
   const phrase = kind === "header" ? headerPhrase(text) : text;
+  const neutralHeader = kind === "header" && text.trim() === NEUTRAL_LEAD;
   if (kind === "header" && brokenHeaderHit(text)) problems.push("broken header example");
   if (BROKEN_ASSISTANT.some((item) => lower.includes(item))) problems.push("broken assistant example");
   if (yourFollowedByVerb(text)) problems.push("your followed by a verb or determiner");
@@ -162,7 +164,13 @@ export function grammarProblems(text: string, kind: "header" | "intro" | "why" =
   if (/\byour\s+(?:in|into|from|for|about|on)\b/i.test(text)) problems.push("empty noun after your");
   if (/\babout your\s*(?:[.,]|$)/i.test(text)) problems.push("empty noun after about your");
   if (twoVerbsAtStart(phrase)) problems.push("two verbs at the start");
-  if (kind === "header") {
+  problems.push(...articleVerbProblems(text));
+  if (hasLowercaseI(text)) problems.push("lowercase i");
+  if (query && kind !== "intro" && !startsWithTaskVerb(stripWrappers(query)) && pronounFlip(text, query)) {
+    problems.push("pronoun flip");
+  }
+  if (kind === "header" && !neutralHeader) {
+    problems.push(...headerEchoProblems(phrase));
     if (!/^(?:help with\b|(?:[a-z]+-)?[a-z]+ing\b)/i.test(phrase)) problems.push("header does not start with a gerund or help with");
     if (bareGerund(phrase)) problems.push("header is only a gerund");
     if (/\bworking on\b/i.test(phrase)) problems.push("working on header");
@@ -172,10 +180,13 @@ export function grammarProblems(text: string, kind: "header" | "intro" | "why" =
   if (/\bside-by-side\b/i.test(text)) problems.push("side-by-side slot");
   if (/\bsourced summary\b/i.test(text)) problems.push("sourced summary slot");
   if (/\binto a checklist\b/i.test(text)) problems.push("checklist slot");
+  if (kind === "why" && /\b(?:how|what|which|whether)\s+(?:the\s+|a\s+|an\s+)?[a-z]+(?:\s+into\b|\s+with\b|\s+for\b|\.$)/i.test(text)) {
+    problems.push("clipped clause in why-line");
+  }
   if (/\bcalendar plan\b/i.test(text)) problems.push("calendar plan slot");
   if (/\bdraft an email about your\b/i.test(text)) problems.push("email-about slot");
   if (/\bso you can\s+(?:start|keep|finish)\s+\w+ing\b/i.test(text)) problems.push("robotic gerund ending");
-  return problems;
+  return [...new Set(problems)];
 }
 
 /** Internal process notes that must not appear on a card or a tool description. */
