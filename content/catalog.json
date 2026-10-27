@@ -11112,7 +11112,7 @@
       "docsUrl": "https://www.chaos.com/veras",
       "freeTier": false,
       "freeTierNotes": null,
-      "startingPrice": 16.9,
+      "startingPrice": null,
       "bestFor": [
         "A sketch or floor plan that should become a visualization",
         "A Revit, SketchUp, or Rhino view you want to render in place"

@@ -806,7 +806,7 @@ export function floorPlanRenderQuery(query: string): boolean {
   if (/\b(house|home|building)\s+plans?\b/.test(lower)) return true;
   if (/\bplans?\b/.test(lower) && /\b(house|home|blueprint|floor)\b/.test(lower)) return true;
   if (/\blook like\b/.test(lower) && /\bplans?\b/.test(lower)) return true;
-  if (/\b(sketches?)\b/.test(lower) && /\b(renders?|rendering|pictures?|images?|photoreal)\b/.test(lower)) return true;
+  if (/\bsketch(?:es)?\b/.test(lower) && /\b(renders?|rendering|pictures?|images?|photoreal)\b/.test(lower)) return true;
   if (/\b(remodel|renovation|renovate)\b/.test(lower) && /\b(visualiz\w*|renders?|rendering|mock-?ups?|pictures?|images?|look)\b/.test(lower)) {
     return true;
   }
@@ -1473,6 +1473,7 @@ function compoundHits(query: string): CompoundHit[] | null {
   if (parts.length < 2) return null;
   const hits: CompoundHit[] = [];
   for (const part of parts) {
+    if (/^(?:not|no|without)\b/i.test(part)) continue;
     const winner = chooseWinner(conceptHits(part));
     if (!winner) continue;
     hits.push({ part, concept: winner.concept, score: winner.score });
