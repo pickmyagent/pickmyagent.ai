@@ -793,7 +793,7 @@ test("grammar gate flags the broken header and assistant examples", () => {
   const sellers = rankCatalogQuery("use an agent for motivated sellers", catalog);
   assert.equal(sellers.lead, "For finding motivated sellers, here's how each tool can help:");
   const fsbo = rankCatalogQuery("fsbo near me", catalog);
-  assert.equal(fsbo.lead, "For help with FSBO near me, here's how each tool can help:");
+  assert.equal(fsbo.lead, "For finding off-market and for-sale-by-owner deals, here's how each tool can help:");
   const gmail = rankCatalogQuery("triage my gmail", catalog);
   assert.equal(gmail.lead, "For triaging your Gmail, here's how each tool can help:");
   const rag = rankCatalogQuery("rag", catalog);
@@ -1242,7 +1242,7 @@ test("small-business bookkeeping queries stay on the books", () => {
       assert.equal(banned.test(tool.name), false, `${query} showed ${tool.name}`);
       assert.match(tool.whyItHelps, /QuickBooks/, tool.whyItHelps);
     }
-    assert.equal(ranked.tools.filter((tool) => tool.generalPurpose).length, 5, query);
+    assert.equal(ranked.tools.filter((tool) => tool.generalPurpose).length, 3, query);
   }
   const cleanup = rankCatalogQuery(
     "find and agent to help automate my quickbooks clean up for my small business",
@@ -1347,9 +1347,9 @@ test("ceo qa keeps each specialist on the job its data supports", () => {
   const metaview = hire.tools.find((tool) => tool.slug === "metaview");
   assert.ok(gem && metaview);
   assert.equal(/recruiter|enterprise/i.test(`${gem.whyItHelps} ${metaview.whyItHelps}`), false);
-  const deepseek = hire.tools.find((tool) => tool.slug === "deepseek");
-  assert.ok(deepseek);
-  assert.equal(/recruiter/i.test(deepseek.whyItHelps), false);
+  const hireAssistants = hire.tools.filter((tool) => tool.generalPurpose);
+  assert.ok(hireAssistants.length <= 3);
+  assert.equal(hireAssistants.some((tool) => /recruiter/i.test(tool.whyItHelps)), false);
   copyOk("hire staff for my restaurant");
 
   assert.deepEqual(specialistSlugs("quotes and invoices for a remodel"), ["bill-com"]);
@@ -1625,8 +1625,9 @@ test("specialists stay inside the query domain", () => {
   const frames = [meal, grocery, baby, club, business];
   for (const ranked of frames) {
     const assistants = ranked.tools.filter((tool) => tool.generalPurpose);
-    assert.equal(assistants.length, 5);
-    assert.equal(new Set(assistants.map((tool) => tool.whyItHelps)).size, 5);
+    const specialists = ranked.tools.filter((tool) => !tool.generalPurpose);
+    assert.equal(assistants.length, specialists.length > 0 ? 3 : 5);
+    assert.equal(new Set(assistants.map((tool) => tool.whyItHelps)).size, assistants.length);
   }
   const mealClaude = meal.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "";
   const groceryClaude = grocery.tools.find((tool) => tool.slug === "claude")?.whyItHelps ?? "";

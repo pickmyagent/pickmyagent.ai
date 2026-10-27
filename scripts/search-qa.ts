@@ -6,7 +6,7 @@ import { rankCatalogQuery } from "../lib/search.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
-import { buildParaphrases, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems } from "./paraphrases.ts";
+import { buildHeldOut, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
 
 export type QaQuery = {
   query: string;
@@ -685,16 +685,8 @@ function renderRows(rows: QaRow[], start: number): string[] {
   return lines;
 }
 
-function paraphraseRows(catalog: Catalog, realEstate: boolean): QaRow[] {
-  const wanted = buildParaphrases().filter((item) => item.realEstate === realEstate);
-  if (realEstate) {
-    wanted.sort((a, b) => {
-      if (a.query === FOUNDER_QUERY) return -1;
-      if (b.query === FOUNDER_QUERY) return 1;
-      return a.useCase.localeCompare(b.useCase) || a.query.localeCompare(b.query);
-    });
-  }
-  return wanted.map((item) => {
+function paraphraseRows(catalog: Catalog, items: Paraphrase[]): QaRow[] {
+  return items.map((item) => {
     const ranked = rankCatalogQuery(item.query, catalog);
     return {
       query: item.query,
@@ -710,27 +702,64 @@ function paraphraseRows(catalog: Catalog, realEstate: boolean): QaRow[] {
   });
 }
 
+function sortSeeds(items: Paraphrase[], founderFirst: boolean): Paraphrase[] {
+  return [...items].sort((a, b) => {
+    if (founderFirst) {
+      if (a.query === FOUNDER_QUERY) return -1;
+      if (b.query === FOUNDER_QUERY) return 1;
+    }
+    return a.useCase.localeCompare(b.useCase) || a.query.localeCompare(b.query);
+  });
+}
+
 export function renderSearchQaReport(catalog: Catalog): string {
   const rows = runSearchQa(catalog);
   const graded = gradeParaphrases(catalog);
-  const realEstate = paraphraseRows(catalog, true);
-  const other = paraphraseRows(catalog, false);
+  const seeds = buildSeeds();
+  const realEstateSeeds = sortSeeds(seeds.filter((item) => item.realEstate), true);
+  const otherSeeds = sortSeeds(seeds.filter((item) => !item.realEstate), false);
+  const heldOut = buildHeldOut();
+  const heldOutFail = new Set(graded.heldOutMisses.map((item) => item.replace(/ → .*$/, "")));
   const lines = [
     "# Search QA report",
     "",
-    `Paraphrase gate: ${graded.grades.length} variants, pass rate ${(graded.passRate * 100).toFixed(1)}%, precision@3 ${graded.precisionAt3.toFixed(3)}.`,
-    `Real estate variants: ${graded.realEstateCount}. Founder demo query: ${FOUNDER_QUERY}`,
+    `Seed pass rate ${(graded.seedPassRate * 100).toFixed(1)}% (${graded.seedCount} natural seeds). Wrapped pass rate ${(graded.wrappedPassRate * 100).toFixed(1)}% (${graded.wrappedCount} template variants).`,
+    `Held-out real estate pass rate ${(graded.heldOutPassRate * 100).toFixed(1)}% (${graded.heldOutCount} queries written independently of the lexicon).`,
+    `Seed precision@3 ${graded.precisionAt3.toFixed(3)}. Held-out precision@3 ${graded.heldOutPrecisionAt3.toFixed(3)}.`,
+    `Founder demo query: ${FOUNDER_QUERY}`,
     "",
-    "Per-use-case pass rate:",
+    "Per-use-case seed pass rate:",
     "",
   ];
   for (const row of [...graded.byUseCase].sort((a, b) => a.useCase.localeCompare(b.useCase))) {
     lines.push(`- ${row.useCase}: ${(row.rate * 100).toFixed(1)}% (${row.passed}/${row.total})`);
   }
-  lines.push("", "# Real estate paraphrases", "", `${realEstate.length} real estate queries. The founder demo is first.`, "");
-  lines.push(...renderRows(realEstate, 1));
-  lines.push("# Other paraphrases", "");
-  lines.push(...renderRows(other, 1));
+  if (graded.heldOutMisses.length > 0) {
+    lines.push("", "Held-out misses:", "");
+    for (const miss of graded.heldOutMisses) lines.push(`- ${miss}`);
+  }
+  lines.push(
+    "",
+    "# Real estate natural seeds",
+    "",
+    `${realEstateSeeds.length} natural real estate seeds. The founder demo is first. Template wraps are graded in the summary and are not repeated here.`,
+    "",
+  );
+  lines.push(...renderRows(paraphraseRows(catalog, realEstateSeeds), 1));
+  lines.push(
+    "# Held-out real estate queries",
+    "",
+    `${heldOut.length} held-out queries. ${graded.heldOutCount - graded.heldOutMisses.length} passed. These were not used to add one-off phrases.`,
+    "",
+  );
+  const heldRows = paraphraseRows(catalog, heldOut);
+  heldRows.forEach((row, index) => {
+    const key = `${heldOut[index]?.useCase}: ${heldOut[index]?.query}`;
+    if (heldOutFail.has(key)) row.header = `MISS ${row.header}`;
+  });
+  lines.push(...renderRows(heldRows, 1));
+  lines.push("# Other natural seeds", "");
+  lines.push(...renderRows(paraphraseRows(catalog, otherSeeds), 1));
   lines.push(
     "# Legacy search QA",
     "",

@@ -45,7 +45,7 @@ export function brandCase(word: string): string | null {
 }
 
 export function propertyMoneyQuery(text: string): boolean {
-  return /\b(houses?|homes?|rentals?|propert(?:y|ies)|flips?|parcels?|real estate|deals?)\b/i.test(text);
+  return /\b(houses?|homes?|rentals?|propert(?:y|ies)|flips?|parcels?|duplex(?:es)?|triplex(?:es)?|fourplex(?:es)?|condos?|townhomes?|real estate|deals?)\b/i.test(text);
 }
 
 export function portfolioQuery(text: string): boolean {
@@ -506,10 +506,47 @@ const ASK: Record<string, string> = {
   deepseek: "DeepSeek",
 };
 
+function freshenTail(slug: string, tail: string): string {
+  const checklist = tail.match(/^(?:for )?(?:a |an )?(?:[\w-]+ ){0,6}?checklist (?:of |for )?(.+?)\.?$/i);
+  if (slug === "chatgpt" && checklist) {
+    const body = checklist[1];
+    const frames = [
+      `to write ${body} in the order you would actually do the work.`,
+      `to turn ${body} into a note you could hand a coworker.`,
+      `to draft ${body} in plain sentences you can edit.`,
+      `to spell out ${body} without adding a figure you have not checked.`,
+    ];
+    return frames[body.length % frames.length];
+  }
+  const sheet = tail.match(/^to build a sheet (?:of |that |with |for |layout for )?(.+?)\.?$/i);
+  if (slug === "gemini" && sheet) {
+    const body = sheet[1];
+    const frames = [
+      `to line up ${body} so you can scan it in one pass.`,
+      `to put ${body} where you can sort and filter it.`,
+      `to lay out ${body} with one row per item.`,
+      `to organize ${body} so the missing piece is easy to see.`,
+    ];
+    return frames[body.length % frames.length];
+  }
+  const sourced = tail.match(/^for sourced (?:notes|steps|pages|tips|definitions|checklists|writeups) (?:on |about )?(.+?)\.?$/i);
+  if (slug === "perplexity" && sourced) {
+    const body = sourced[1].replace(/, with links you can check$/i, "");
+    const frames = [
+      `to look up ${body} and keep the links beside what you found.`,
+      `to find a public page on ${body} and leave the link you can open.`,
+      `to pull a cited explanation of ${body} and keep the source.`,
+      `to check recent public writeups of ${body} and save the links.`,
+    ];
+    return frames[body.length % frames.length];
+  }
+  return tail;
+}
+
 function ask(slug: string, table: Record<string, string>): string | null {
   const name = ASK[slug];
   const tail = table[slug];
-  return name && tail ? `Ask ${name} ${tail}` : null;
+  return name && tail ? `Ask ${name} ${freshenTail(slug, tail)}` : null;
 }
 
 export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | undefined, query: string): string | null {

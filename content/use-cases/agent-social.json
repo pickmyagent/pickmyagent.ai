@@ -1,21 +1,21 @@
 {
   "slug": "agent-social",
-  "title": "Post social media for an agent",
+  "title": "Post listings on social media",
   "summary": "Draft listing posts and a weekly social calendar. You still approve what gets published.",
   "audienceHints": ["realtors"],
   "matchTags": ["agent-social"],
-  "jobPhrase": "posting social media for an agent",
+  "jobPhrase": "posting listings on social media",
   "assistantTask": "draft listing posts and a weekly social calendar",
-  "assistantContext": "posting for an agent",
-  "searchTopic": "listing posts and an agent social calendar",
+  "assistantContext": "posting listings on social media",
+  "searchTopic": "listing posts and a social calendar",
   "recommended": [
     {
       "toolId": "buffer",
-      "why": "Schedules listing posts and drafts captions for an agent's social channels."
+      "why": "Schedules listing posts and drafts captions for social channels."
     },
     {
       "toolId": "hootsuite",
-      "why": "Publishes an agent's social posts from one suite."
+      "why": "Publishes listing posts from one social suite."
     },
     {
       "toolId": "ocoya",
@@ -26,5 +26,5 @@
       "why": "Generates social posts and ad creatives for a listing."
     }
   ],
-  "intro": "AI agents can draft listing posts and a weekly social calendar for an agent, and you still approve what gets published."
+  "intro": "AI agents can draft listing posts and a weekly social calendar, and you still approve what gets published."
 }

@@ -1,4 +1,5 @@
 import nlp from "compromise";
+import { headerEchoProblems } from "../lib/header-grammar.ts";
 
 type Term = { text: string; tags: string[] };
 
@@ -121,10 +122,7 @@ function twoVerbsAtStart(phrase: string): boolean {
   const terms = termsOf(phrase);
   if (terms.length < 2 || !isVerb(terms[0])) return false;
   const bridge = terms[1].text.toLowerCase();
-  if (/^(?:on|to)$/.test(bridge)) {
-    const next = terms[2];
-    return Boolean(next && (isVerb(next) || /^[a-z]+$/.test(next.text)) && !tags(next).includes("Determiner"));
-  }
+  if (/^(?:on|to|out|up|off|down|over|through|back|away)$/.test(bridge)) return false;
   const second = terms[1];
   if (!isVerb(second) || tags(second).includes("Noun") || tags(second).includes("Adjective")) return false;
   return tags(second).includes("Infinitive") || tags(second).includes("Imperative");
@@ -134,7 +132,9 @@ export function headerUsesBrokenPhrase(phrase: string): string | null {
   const normalized = phrase.toLowerCase().trim();
   for (const item of BROKEN_HEADERS) {
     if (normalized === item) return item;
-    if (item.includes(" ") && (normalized.startsWith(`${item} `) || normalized.startsWith(`${item},`))) return item;
+    if (item.includes(" ") && !/\b(?:me|you|us|them)$/.test(item) && (normalized.startsWith(`${item} `) || normalized.startsWith(`${item},`))) {
+    return item;
+  }
   }
   return null;
 }
@@ -163,6 +163,7 @@ export function grammarProblems(text: string, kind: "header" | "intro" | "why" =
   if (/\babout your\s*(?:[.,]|$)/i.test(text)) problems.push("empty noun after about your");
   if (twoVerbsAtStart(phrase)) problems.push("two verbs at the start");
   if (kind === "header") {
+    problems.push(...headerEchoProblems(phrase));
     if (!/^(?:help with\b|(?:[a-z]+-)?[a-z]+ing\b)/i.test(phrase)) problems.push("header does not start with a gerund or help with");
     if (bareGerund(phrase)) problems.push("header is only a gerund");
     if (/\bworking on\b/i.test(phrase)) problems.push("working on header");

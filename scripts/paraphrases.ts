@@ -1,15 +1,17 @@
-import { CONCEPTS, type Concept } from "../lib/concepts.ts";
+import { CONCEPTS } from "../lib/concepts.ts";
 import { CANONICAL_REAL_ESTATE } from "../lib/real-estate-match.ts";
+import { grammarProblems } from "./grammar-gate.ts";
 import { matchTagsForConcept, rankCatalogQuery } from "../lib/search.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
+import { FOUNDER_QUERY, HELD_OUT_REAL_ESTATE, SEEDS } from "./natural-seeds.ts";
 
 /**
- * Paraphrase gate. Every use case gets at least 25 wording variants.
- * A known job fails when the intro is the generic assistant line, the
- * winning use case changes, or an off-domain specialist lands in the top 3.
+ * Paraphrase gate.
+ * Seeds are natural phrasings (at least 15 per use case). Templates sit on top.
+ * The held-out real-estate set is graded separately and is not used to tune phrases one by one.
  */
 
-export const FOUNDER_QUERY = 'pull house comparisons for me to make a CMA"';
+export { FOUNDER_QUERY };
 
 const REAL_ESTATE = new Set<string>([
   ...CANONICAL_REAL_ESTATE,
@@ -20,223 +22,45 @@ const REAL_ESTATE = new Set<string>([
   "real-estate",
 ]);
 
-const SKIP_PHRASE = new Set([
-  "real estate",
-  "cash flow",
-  "sphere of influence",
-  "listing photos",
-]);
-
-const EXTRA: Record<string, string[]> = {
-  "cma-comps": [
-    FOUNDER_QUERY,
-    "pull house comparisons",
-    "pull house comparsions",
-    "home comps for this listing",
-    "property comps",
-    "BPO for this house",
-    "broker price opinion",
-    "comparable sales",
-    "similar sales for the listing",
-    "recently sold homes",
-    "price a listing",
-    "pricing a listing",
-  ],
-  "listing-copy": [
-    "write an MLS listing description",
-    "lisitng description for the house",
-    "MLS remarks for my listing",
-    "property description for the MLS",
-  ],
-  "listing-photos": [
-    "virtually stage this listing photo",
-    "edit my listing photos",
-    "photo editing for a listing",
-    "day to dusk on the listing photo",
-  ],
-  "listing-videos": [
-    "edit my listing video",
-    "make a house tour video",
-    "turn listing photos into a video",
-    "property reel for this home",
-  ],
-  "realtor-follow-up": [
-    "follow up with my buyers",
-    "nurture sellers after the showing",
-    "stay in touch with past clients",
-    "buyer follow-up drip",
-  ],
-  "real-estate-crm": [
-    "CRM for my buyers",
-    "realtor CRM",
-    "real estate CRM for sellers",
-  ],
-  "showing-scheduling": [
-    "scheduel an open house",
-    "schedule a showing for this house",
-    "showing appointment for the listing",
-    "lockbox for the open house",
-  ],
-  "transaction-coordination": [
-    "transaction coordinator for this closing",
-    "seller disclosure for the house",
-    "discloser for the closing",
-    "purchase agreement for the home",
-  ],
-  "market-reports": [
-    "neighboorhood market update for clients",
-    "housing market update",
-    "market stats for the neighborhood",
-  ],
-  "realtor-prospecting": [
-    "expired listings in my farm",
-    "expireds and a farm area",
-    "farming a neighborhood",
-    "sphere of influence",
-    "circle prospecting",
-  ],
-  "agent-social": [
-    "social media for realtors",
-    "instagram for realtors",
-    "listing posts for my real estate page",
-    "realtor social calendar",
-  ],
-  "property-management": [
-    "maintanance request for a tenant",
-    "collect rent from tenants",
-    "manage my rentals",
-    "lease renewal for the tenant",
-  ],
-  "find-land": [
-    "vacant land in florida",
-    "find a parcel",
-    "acreage with zoning",
-    "vacant lot",
-  ],
-  "find-off-market": [
-    "fsbo near me",
-    "for sale by owner homes",
-    "skip trace an owner",
-    "motivated sellers",
-  ],
-  "rank-property-deals": [
-    "rank rental properties by cash flow",
-    "cap rate for this rental",
-    "ARV after repair value",
-    "rental comps for the property",
-    "score houses to flip",
-  ],
-  bookkeeping: [
-    "help with Ai quickbooks",
-    "find and agent to help automate my quickbooks clean up for my small business",
-    "qbo cleanup",
-    "quikbooks cleanup",
-    "clean up my books",
-    "bookeeping for my shop",
-    "reconcile my bank accounts",
-    "catch up on my books",
-  ],
-  "finance-ops": [
-    "accounts payable invoices",
-    "AP/AR for my books",
-    "process vendor invoices",
-  ],
-  "do-taxes": [
-    "file my 1040",
-    "sort my tax deductions",
-    "do my personal taxes",
-  ],
-  "real-estate": [
-    "real estate",
-    "REAL ESTATE",
-    'real estate"',
-    '"real estate',
-    "help me real estate",
-    "please real estate",
-    "I need an AI to real estate",
-    "I need an AI for real estate",
-    "for me to real estate",
-    "find and agent to real estate",
-    "find an agent for real estate",
-    "best AI tool for real estate",
-    "best AI for real estate",
-    "best tool for real estate",
-    "use an agent for real estate",
-    "is there an AI for real estate",
-    "can you help with real estate",
-    "real estate?",
-    "real estate!!!",
-    "I want an AI tool for real estate",
-    "help with real estate",
-    "looking for an AI tool for real estate",
-    "best agents for real estate",
-    "use an AI for real estate",
-    "tool for real estate",
-  ],
-};
+const TEMPLATES: Array<(seed: string) => string> = [
+  (seed) => `can you ${seed}`,
+  (seed) => `please ${seed}`,
+  (seed) => `${seed}"`,
+  (seed) => `I need an AI to ${seed}`,
+];
 
 export type Paraphrase = {
   query: string;
   useCase: string;
   realEstate: boolean;
+  kind: "seed" | "wrapped" | "held-out";
 };
 
-function coresFor(concept: Concept): string[] {
-  const cores = [
-    ...(EXTRA[concept.useCase] ?? []),
-    ...concept.phrases.filter((phrase) => !SKIP_PHRASE.has(phrase)),
-    ...concept.anchors.filter((anchor) => anchor.length >= 4).slice(0, 4),
-  ];
-  return [...new Set(cores)];
+function row(query: string, useCase: string, kind: Paraphrase["kind"]): Paraphrase {
+  return {
+    query: query.replace(/\s+/g, " ").trim(),
+    useCase,
+    realEstate: REAL_ESTATE.has(useCase),
+    kind,
+  };
 }
 
-function wraps(core: string, concept: Concept): string[] {
-  const out = [
-    core,
-    `help me ${core}`,
-    `I need an AI to ${core}`,
-    `please ${core}`,
-    `${core}"`,
-    `for me to ${core}`,
-    `find and agent to ${core}`,
-    `can you ${core}?`,
-    `I need an AI that can ${core}`,
-  ];
-  if (!concept.broad && concept.id !== "workflow" && concept.useCase !== "real-estate") {
-    out.push(`${core} for my business`);
-  }
-  return out;
+export function buildSeeds(): Paraphrase[] {
+  return Object.entries(SEEDS).flatMap(([useCase, seeds]) => seeds.map((query) => row(query, useCase, "seed")));
+}
+
+export function buildWrapped(): Paraphrase[] {
+  return Object.entries(SEEDS).flatMap(([useCase, seeds]) =>
+    seeds.flatMap((seed) => TEMPLATES.map((template) => row(template(seed), useCase, "wrapped"))),
+  );
+}
+
+export function buildHeldOut(): Paraphrase[] {
+  return HELD_OUT_REAL_ESTATE.map((item) => row(item.query, item.useCase, "held-out"));
 }
 
 export function buildParaphrases(): Paraphrase[] {
-  const rows: Paraphrase[] = [];
-  for (const concept of CONCEPTS) {
-    const queries: string[] = [];
-    const add = (query: string) => {
-      const trimmed = query.replace(/\s+/g, " ").trim();
-      if (!trimmed || queries.includes(trimmed)) return;
-      queries.push(trimmed);
-    };
-    if (concept.useCase === "real-estate") {
-      for (const query of EXTRA["real-estate"]) add(query);
-    } else {
-      for (const core of coresFor(concept)) {
-        for (const query of wraps(core, concept)) {
-          add(query);
-          if (queries.length >= 28) break;
-        }
-        if (queries.length >= 28) break;
-      }
-    }
-    for (const query of queries) {
-      rows.push({
-        query,
-        useCase: concept.useCase,
-        realEstate: REAL_ESTATE.has(concept.useCase),
-      });
-    }
-  }
-  return rows;
+  return [...buildSeeds(), ...buildWrapped(), ...buildHeldOut()];
 }
 
 const GENERIC_INTRO = /^AI assistants\b/;
@@ -260,41 +84,49 @@ export type ParaphraseGrade = {
   query: string;
   useCase: string;
   realEstate: boolean;
+  kind: Paraphrase["kind"];
   got: string | null;
   intro: string;
+  header: string;
   top: string[];
   pass: boolean;
   reason: string;
 };
 
+export type RateBucket = { useCase: string; total: number; passed: number; rate: number };
+
 export type ParaphraseReport = {
   grades: ParaphraseGrade[];
   problems: string[];
+  heldOutMisses: string[];
   passRate: number;
+  seedPassRate: number;
+  wrappedPassRate: number;
+  heldOutPassRate: number;
   precisionAt3: number;
-  byUseCase: Array<{ useCase: string; total: number; passed: number; rate: number }>;
+  heldOutPrecisionAt3: number;
+  byUseCase: RateBucket[];
   realEstateCount: number;
+  seedCount: number;
+  wrappedCount: number;
+  heldOutCount: number;
 };
 
-export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
-  const paraphrases = buildParaphrases();
+function gradeItems(items: Paraphrase[], catalog: Catalog, collectProblems: boolean): {
+  grades: ParaphraseGrade[];
+  problems: string[];
+  passed: number;
+  hits: number;
+  slots: number;
+  byUseCase: Map<string, { total: number; passed: number }>;
+} {
   const grades: ParaphraseGrade[] = [];
   const problems: string[] = [];
   let passed = 0;
   let hits = 0;
   let slots = 0;
   const byUseCase = new Map<string, { total: number; passed: number }>();
-
-  const counts = new Map<string, number>();
-  for (const item of paraphrases) counts.set(item.useCase, (counts.get(item.useCase) ?? 0) + 1);
-  for (const [useCase, total] of counts) {
-    if (total < 25) problems.push(`${useCase}: only ${total} paraphrase variants`);
-  }
-  if (!paraphrases.some((item) => item.query === FOUNDER_QUERY)) {
-    problems.push("founder demo query is missing from the paraphrase set");
-  }
-
-  for (const item of paraphrases) {
+  for (const item of items) {
     const ranked = rankCatalogQuery(item.query, catalog);
     const got = ranked.useCases[0]?.slug ?? null;
     const topTools = ranked.tools.slice(0, 3);
@@ -305,6 +137,7 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
       return !source || !specialistOnDomain(source, item.useCase, catalog);
     });
     const generic = GENERIC_INTRO.test(ranked.intro);
+    const headerProblems = grammarProblems(ranked.lead, "header");
     const reasons: string[] = [];
     if (got !== item.useCase) reasons.push(`ranked ${got ?? "none"}`);
     if (generic) reasons.push("generic intro");
@@ -312,14 +145,18 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
     if (specialists.length === 0 && topTools.some((tool) => !tool.generalPurpose)) {
       reasons.push("specialist on an assistant-only job");
     }
+    if (item.kind === "seed" && headerProblems.length > 0) reasons.push(`header ${headerProblems.join(", ")}`);
+    const cloudFirst = item.useCase === "cma-comps"
+      ? ranked.tools.find((tool) => !tool.generalPurpose)?.slug === "cloud-cma"
+      : true;
+    if (item.useCase === "cma-comps" && !cloudFirst) reasons.push("Cloud CMA is not first");
     const pass = reasons.length === 0;
     if (pass) passed += 1;
-    else if (problems.length < 40) problems.push(`${item.useCase}: ${item.query} → ${reasons.join("; ")}`);
+    else if (collectProblems && problems.length < 40) problems.push(`${item.useCase}: ${item.query} → ${reasons.join("; ")}`);
     const bucket = byUseCase.get(item.useCase) ?? { total: 0, passed: 0 };
     bucket.total += 1;
     if (pass) bucket.passed += 1;
     byUseCase.set(item.useCase, bucket);
-
     for (const tool of topTools) {
       slots += 1;
       const source = catalog.tools.find((entry) => entry.slug === tool.slug);
@@ -330,43 +167,83 @@ export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
       query: item.query,
       useCase: item.useCase,
       realEstate: item.realEstate,
+      kind: item.kind,
       got,
       intro: ranked.intro,
+      header: ranked.lead,
       top: topTools.map((tool) => tool.name),
       pass,
       reason: reasons.join("; "),
     });
   }
+  return { grades, problems, passed, hits, slots, byUseCase };
+}
 
-  const rates = [...byUseCase.entries()]
+function rateOf(passed: number, total: number): number {
+  return total === 0 ? 0 : passed / total;
+}
+
+export function gradeParaphrases(catalog: Catalog): ParaphraseReport {
+  const seeds = buildSeeds();
+  const wrapped = buildWrapped();
+  const heldOut = buildHeldOut();
+  const problems: string[] = [];
+  const counts = new Map<string, number>();
+  for (const item of seeds) counts.set(item.useCase, (counts.get(item.useCase) ?? 0) + 1);
+  const useCases = new Set(CONCEPTS.map((concept) => concept.useCase));
+  for (const useCase of useCases) {
+    const total = counts.get(useCase) ?? 0;
+    if (total < 15) problems.push(`${useCase}: only ${total} natural seeds`);
+  }
+  if (!seeds.some((item) => item.query === FOUNDER_QUERY)) {
+    problems.push("founder demo query is missing from the seed set");
+  }
+  if (heldOut.length < 150) problems.push(`held-out real estate set has ${heldOut.length} queries`);
+
+  const seedGrade = gradeItems(seeds, catalog, true);
+  const wrappedGrade = gradeItems(wrapped, catalog, true);
+  const heldGrade = gradeItems(heldOut, catalog, false);
+  problems.push(...seedGrade.problems, ...wrappedGrade.problems);
+  const heldOutMisses = heldGrade.grades.filter((item) => !item.pass).map((item) => `${item.useCase}: ${item.query} → ${item.reason}`);
+
+  const byUseCase = [...seedGrade.byUseCase.entries()]
     .map(([useCase, bucket]) => ({
       useCase,
       total: bucket.total,
       passed: bucket.passed,
-      rate: bucket.total === 0 ? 0 : bucket.passed / bucket.total,
+      rate: rateOf(bucket.passed, bucket.total),
     }))
     .sort((a, b) => a.rate - b.rate || a.useCase.localeCompare(b.useCase));
 
+  const realEstateSeeds = seeds.filter((item) => item.realEstate).length;
   return {
-    grades,
+    grades: [...seedGrade.grades, ...wrappedGrade.grades, ...heldGrade.grades],
     problems,
-    passRate: paraphrases.length === 0 ? 0 : passed / paraphrases.length,
-    precisionAt3: slots === 0 ? 0 : hits / slots,
-    byUseCase: rates,
-    realEstateCount: paraphrases.filter((item) => item.realEstate).length,
+    heldOutMisses,
+    passRate: rateOf(seedGrade.passed, seeds.length),
+    seedPassRate: rateOf(seedGrade.passed, seeds.length),
+    wrappedPassRate: rateOf(wrappedGrade.passed, wrapped.length),
+    heldOutPassRate: rateOf(heldGrade.passed, heldOut.length),
+    precisionAt3: rateOf(seedGrade.hits, seedGrade.slots),
+    heldOutPrecisionAt3: rateOf(heldGrade.hits, heldGrade.slots),
+    byUseCase,
+    realEstateCount: realEstateSeeds + heldOut.length,
+    seedCount: seeds.length,
+    wrappedCount: wrapped.length,
+    heldOutCount: heldOut.length,
   };
 }
 
 export function paraphraseProblems(catalog: Catalog): string[] {
   const report = gradeParaphrases(catalog);
   const problems = [...report.problems];
-  if (report.realEstateCount < 150) {
-    problems.unshift(`real estate paraphrase section has ${report.realEstateCount} queries`);
-  }
-  if (report.passRate < 1) {
+  if (report.seedPassRate < 1) {
     problems.unshift(
-      `paraphrase pass rate ${report.passRate.toFixed(3)} (${report.byUseCase.filter((item) => item.passed === item.total).length}/${report.byUseCase.length} use cases clean)`,
+      `seed pass rate ${report.seedPassRate.toFixed(3)} (${report.byUseCase.filter((item) => item.passed === item.total).length}/${report.byUseCase.length} use cases clean)`,
     );
+  }
+  if (report.wrappedPassRate < 1) {
+    problems.unshift(`wrapped template pass rate ${report.wrappedPassRate.toFixed(3)}`);
   }
   return problems;
 }
@@ -374,13 +251,16 @@ export function paraphraseProblems(catalog: Catalog): string[] {
 export function paraphraseSummary(catalog: Catalog): string {
   const report = gradeParaphrases(catalog);
   const lines = [
-    `Paraphrase gate: ${report.grades.length} variants, pass rate ${(report.passRate * 100).toFixed(1)}%, precision@3 ${report.precisionAt3.toFixed(3)}.`,
-    `Real estate variants: ${report.realEstateCount}.`,
+    `Seed pass rate ${(report.seedPassRate * 100).toFixed(1)}% (${report.seedCount} natural seeds). Wrapped pass rate ${(report.wrappedPassRate * 100).toFixed(1)}% (${report.wrappedCount}).`,
+    `Held-out real estate pass rate ${(report.heldOutPassRate * 100).toFixed(1)}% (${report.heldOutCount}). Seed precision@3 ${report.precisionAt3.toFixed(3)}. Held-out precision@3 ${report.heldOutPrecisionAt3.toFixed(3)}.`,
     "",
-    "Per-use-case pass rate:",
+    "Per-use-case seed pass rate:",
   ];
   for (const row of [...report.byUseCase].sort((a, b) => a.useCase.localeCompare(b.useCase))) {
     lines.push(`- ${row.useCase}: ${(row.rate * 100).toFixed(1)}% (${row.passed}/${row.total})`);
+  }
+  if (report.heldOutMisses.length > 0) {
+    lines.push("", "Held-out misses:", ...report.heldOutMisses.slice(0, 40).map((item) => `- ${item}`));
   }
   return lines.join("\n");
 }

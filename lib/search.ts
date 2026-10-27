@@ -1,7 +1,9 @@
 import { domainAssistantLine, openAssistantLine } from "./assistant-lines.ts";
+import { headerEchoBroken, safeHelpWith } from "./header-grammar.ts";
 import { BRIDGE_LINES, isListingMakeQuery, isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
-import { EXTRA_SPELLING, prepareQuery } from "./match-text.ts";
+import { jobCueBlocks, jobCueBonus } from "./job-cues.ts";
+import { EXTRA_SPELLING, phraseMatches, prepareQuery, stemToken } from "./match-text.ts";
 import { semanticHits } from "./semantic.ts";
 import { blockRealEstateConcept, CANONICAL_REAL_ESTATE, CAP_RATE_INTRO } from "./real-estate-match.ts";
 import {
@@ -175,19 +177,7 @@ function editDistance(a: string, b: string): number {
 }
 
 function correctToken(token: string): string {
-  const spelled = SPELLING[token];
-  if (spelled) return spelled;
-  if (token.length < 6 || STOPWORDS.has(token) || DO_NOT_CORRECT.has(token)) return token;
-  if (ANCHOR_DICTIONARY.includes(token)) return token;
-  let match: string | null = null;
-  for (const candidate of ANCHOR_DICTIONARY) {
-    if (candidate[0] !== token[0]) continue;
-    if (token === `${candidate}s` || token === `${candidate}es`) continue;
-    if (editDistance(token, candidate) !== 1) continue;
-    if (match) return token;
-    match = candidate;
-  }
-  return match ?? token;
+  return SPELLING[token] ?? token;
 }
 
 function correctedQuery(query: string): string {
@@ -200,7 +190,7 @@ function correctedQuery(query: string): string {
 export function mentionsLand(query: string): boolean {
   const tokens = words(query);
   if (tokens.some((token) =>
-    ["land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "lots"].includes(token)
+    ["land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "zoned", "lots"].includes(token)
   )) {
     return true;
   }
@@ -217,7 +207,7 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   if (concept.id === "video" && (videoGenerationQuery(lower) || listingVideoQuery(lower) || avatarQuery(lower))) return 0;
   if ((concept.id === "voice" || concept.id === "image" || concept.id === "three-d") && videoGenerationQuery(lower)) return 0;
   if (concept.id === "image" && threeDQuery(lower)) return 0;
-  if (concept.id === "three-d" && !threeDQuery(lower)) return 0;
+  if (concept.id === "three-d" && !threeDQuery(lower) && !/\bmesh(?:es)?\b/.test(lower)) return 0;
   if (concept.id === "video-generation" && (listingVideoQuery(lower) || avatarQuery(lower))) return 0;
   if (concept.id === "avatar" && (videoGenerationQuery(lower) || listingVideoQuery(lower))) return 0;
   if (concept.id === "listing-video" && avatarQuery(lower)) return 0;
@@ -231,7 +221,9 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   if (concept.id === "tutoring" && languageQuery(lower)) return 0;
   if (conceptBlocked(concept.id, lower)) return 0;
   if (blockRealEstateConcept(concept.id, lower)) return 0;
+  if (jobCueBlocks(concept.id, lower)) return 0;
   let score = 0;
+  score += jobCueBonus(concept.id, lower);
   if (
     (concept.id === "cma" || concept.id === "listing-copy" || concept.id === "listing-photos"
       || concept.id === "realtor-follow-up" || concept.id === "realtor-crm" || concept.id === "showings"
@@ -246,10 +238,15 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
     ? concept.phrases.filter((phrase) => phrase !== "cash flow")
     : concept.phrases;
   for (const phrase of phrases) {
-    if (lower.includes(phrase)) score += 12;
+    if (phraseMatches(lower, phrase)) score += 12;
   }
+  const seenAnchors = new Set<string>();
   for (const anchor of concept.anchors) {
-    if (tokens.has(anchor)) score += 8;
+    if (!tokens.has(anchor)) continue;
+    const key = stemToken(anchor);
+    if (seenAnchors.has(key)) continue;
+    seenAnchors.add(key);
+    score += 8;
   }
   for (const bag of concept.bags ?? []) {
     if (bag.every((term) => tokens.has(term))) score += 12;
@@ -422,7 +419,8 @@ const CANONICAL_JOB: Record<string, string> = {
   "transaction-coordination": "coordinating contracts and disclosures",
   "market-reports": "drafting a neighborhood market update",
   "realtor-prospecting": "prospecting expireds, FSBOs, and a farm",
-  "agent-social": "posting social media for an agent",
+  "agent-social": "posting listings on social media",
+  "learn-language": "practicing a language",
   "property-management": "handling property management tasks",
   "real-estate": "finding AI tools for real estate",
   "write-resume": "writing a resume",
@@ -539,7 +537,7 @@ function categoryKey(text: string): string {
 
 function personalize(canonical: string, wantsYour: boolean): string {
   if (!wantsYour) return canonical;
-  return canonical.replace(/\b(?:a|an)\b/gi, "your");
+  return canonical.replace(/\b(?:a|an)\b(?!\s+(?:agent|realtor)\b)/gi, "your");
 }
 
 function canonicalHeader(useCase: UseCase | null | undefined, key: string, wantsYour: boolean): string | null {
@@ -556,6 +554,7 @@ function lightArticle(phrase: string): string {
   if ((first === "youtube" || first === "soc") && parts.length > 1) return `a ${phrase}`;
   if (!first || NO_ARTICLE.has(first) || /ing$/i.test(first)) return phrase;
   if (first === "seo") return `an ${phrase}`;
+  if (headerEchoBroken(`a ${phrase}`) || headerEchoBroken(`an ${phrase}`)) return phrase;
   if (/(?:s|es)$/i.test(first) && !/(?:ss|is|us)$/i.test(first)) return phrase;
   const head = phrase.split(/\s+\b(?:in|for|on|with|from|near|by|to)\b\s+/i)[0] ?? phrase;
   if (head.split(/\s+/).some((part) => {
@@ -569,28 +568,46 @@ function bareGerundPhrase(phrase: string): boolean {
   return /^[a-z]+ing(?:\s+(?:me|you|us|them))?$/i.test(phrase.trim());
 }
 
+function useCaseHeader(useCase: UseCase | null | undefined, wantsYour: boolean): string {
+  if (!useCase) return "";
+  return personalize(CANONICAL_JOB[useCase.slug] ?? "", wantsYour);
+}
+
+function preferCleanHeader(candidate: string, useCase: UseCase | null | undefined, wantsYour: boolean): string {
+  const canonical = useCaseHeader(useCase, wantsYour);
+  if (!canonical || headerEchoBroken(canonical)) return candidate;
+  const nounPhrase = /^help with\b/i.test(candidate) && !safeHelpWith(candidate);
+  if (headerEchoBroken(candidate) || nounPhrase) return canonical;
+  return candidate;
+}
+
 function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, wantsYour: boolean): string {
   if (useCase && CANONICAL_REAL_ESTATE.has(useCase.slug)) {
     return personalize(CANONICAL_JOB[useCase.slug] ?? "help with this", wantsYour);
   }
-  if (!cleaned) return useCase ? personalize(CANONICAL_JOB[useCase.slug] ?? "help with this", wantsYour) : "help with this";
+  if (!cleaned) return useCaseHeader(useCase, wantsYour) || "help with this";
   if (/^(?:tutor(?:ing)?(?:\s+me)?)$/i.test(cleaned)) return "getting tutoring help";
   if (/\bimage[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from an image";
   if (/\btext[\s-]to[\s-]video\b/i.test(cleaned)) return "making a video from text";
   if (/\btext[\s-]to[\s-]speech\b/i.test(cleaned)) return "making speech from text";
   if (/\btext[\s-]to[\s-]image\b/i.test(cleaned)) return "making an image from text";
+  if (/^(?:text|image|audio|video|speech)[\s-]to[\s-]/i.test(cleaned)) {
+    return useCaseHeader(useCase, wantsYour) || cleaned;
+  }
   if (/^skip\s+trace\b/i.test(cleaned)) {
     return `skip-tracing ${cleaned.replace(/^skip\s+trace\s+/i, "")}`.replace(/\s+/g, " ").trim();
   }
+  const directKey = categoryKey(cleaned);
+  if (PHRASE_HEADER[directKey]) return PHRASE_HEADER[directKey];
+  const branded = smallBusinessHeader(cleaned);
+  if (branded) return branded;
   if (startsWithTaskVerb(cleaned)) {
     const gerunded = applyHeaderGerunds(cleaned).replace(/\s+/g, " ").trim();
     const key = categoryKey(gerunded);
     const thin = bareGerundPhrase(gerunded) || /^[a-z]+ing\s+(?:from|about)\b/i.test(gerunded);
     if (thin && useCase) return canonicalHeader(useCase, key, wantsYour) ?? gerunded;
-    return gerunded;
+    return preferCleanHeader(gerunded, useCase, wantsYour);
   }
-  const branded = smallBusinessHeader(cleaned);
-  if (branded) return branded;
   if (videoGenerationQuery(cleaned) && /\bwith\b/i.test(cleaned)) {
     return `making ${lightArticle(cleaned)}`;
   }
@@ -599,13 +616,14 @@ function chooseHeader(cleaned: string, useCase: UseCase | null | undefined, want
   if (useCase && (short || CATEGORY_PHRASES.has(key) || PHRASE_HEADER[key])) {
     return canonicalHeader(useCase, key, wantsYour) ?? `help with ${lightArticle(cleaned)}`;
   }
-  return `help with ${lightArticle(cleaned)}`;
+  return preferCleanHeader(`help with ${lightArticle(cleaned)}`, useCase, wantsYour);
 }
 
 export function jobPhrase(query: string, useCase?: UseCase | null): string {
   const wantsYour = /\b(?:my|our)\b/i.test(query);
   let cleaned = stripWrappers(query)
     .replace(/\b(?:my|our)\b/gi, "your")
+    .replace(/\bfor (?:your|the) business\b/gi, " ")
     .replace(/,\s+i\b[\s\S]*$/i, "")
     .replace(/\s+and\s+i\b[\s\S]*$/i, "")
     .replace(/\s+/g, " ")
@@ -667,7 +685,11 @@ const LEARNING_VERBS = new Set(["learn", "study", "tutor", "practice"]);
 
 function bareRealEstateQuery(query: string): boolean {
   const cleaned = stripWrappers(query).toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ").trim();
-  return cleaned === "real estate";
+  if (cleaned === "real estate") return true;
+  const raw = query.toLowerCase();
+  if (/\b(comps?|cma|bpo|crm|expired|fsbo|tenant|showing|disclosure|cap rate|cash flow|deals?|parcel|vacant|staging|walkthrough)\b/.test(raw)) return false;
+  if (/\b(house|home|listing)\b/.test(raw) && !/\breal estate\b/.test(raw)) return false;
+  return /\breal estate\b/.test(raw) && /\b(tools?|software|apps?|platforms?|ai|technology|tech)\b/.test(raw);
 }
 
 function hiringResumeQuery(query: string): boolean {
@@ -683,9 +705,15 @@ function avatarQuery(query: string): boolean {
 }
 
 function listingVideoQuery(query: string): boolean {
+  if (/\bschedul\w*/i.test(query) && /\b(tours?|showings?)\b/i.test(query) && !/\b(videos?|reels?|edit|cut|footage)\b/i.test(query)) {
+    return false;
+  }
   if (/\b(listing videos?|video tours?|property walkthroughs?|realtor videos?|house tours?|home tours?|property reels?)\b/i.test(query)) return true;
+  if (/\bwalkthroughs?\b/i.test(query) && /\b(videos?|reels?|cuts?|edit|footage)\b/i.test(query) && !/\b(code|app|software|bug)\b/i.test(query)) {
+    return true;
+  }
   if (/\b(listing photos?|property photos?)\b/i.test(query) && /\b(videos?|reels?|tours?)\b/i.test(query)) return true;
-  return /\b(realtors?|listings?|propert(?:y|ies)|houses?|homes?)\b/i.test(query)
+  return /\b(realtors?|listings?|propert(?:y|ies)|houses?|homes?|open houses?)\b/i.test(query)
     && /\b(videos?|reels?|walkthroughs?|tours?)\b/i.test(query);
 }
 
@@ -774,7 +802,9 @@ function videoGenerationQuery(query: string): boolean {
     return false;
   }
   if (/\b(?:text|image)[\s-]to[\s-]video\b/i.test(query)) return true;
-  if (/\bcinematic\b/i.test(query)) return true;
+  if (/\bcinematic\b/i.test(query) || /\bai videos?\b/i.test(query) || /\bvideo generation\b/i.test(query)) return true;
+  if (/\b(dolly|push-ins?|camera moves?)\b/i.test(query)) return true;
+  if (/\bvideos?\b/i.test(query) && /\bprompts?\b/i.test(query)) return true;
   if (/\bcamera\b/i.test(query) && /\b(?:video|videos|film|movie|movies|shot|shots)\b/i.test(query)) return true;
   return /\b(?:generate|generating|make|making|create|creating)\b/i.test(query)
     && /\b(?:video|videos|film|movie|movies)\b/i.test(query);
@@ -1097,8 +1127,7 @@ function jobParts(query: string): string[] {
 type CompoundHit = { part: string; concept: Concept; score: number };
 
 function phraseHit(concept: Concept, text: string): boolean {
-  const lower = text.toLowerCase();
-  return concept.phrases.some((phrase) => lower.includes(phrase));
+  return concept.phrases.some((phrase) => phraseMatches(text, phrase));
 }
 
 function absorbed(hit: CompoundHit, hits: CompoundHit[]): boolean {
@@ -1497,6 +1526,7 @@ export function rankCatalogQuery(
       }
     }
     const chosen = specialists.slice(0, 7);
+    const assistantCap = chosen.length > 0 ? 3 : assistants.length;
     const cases = compound.flatMap((hit) => {
       const found = indexedCases.find((item) => item.slug === hit.concept.useCase);
       if (!found) return [];
@@ -1516,7 +1546,7 @@ export function rankCatalogQuery(
     };
     const selected = [
       ...chosen,
-      ...assistants.filter((tool) => !chosen.some((item) => item.slug === tool.slug)),
+      ...assistants.filter((tool) => !chosen.some((item) => item.slug === tool.slug)).slice(0, assistantCap),
     ].filter((tool) => tool.slug !== alt?.slug);
     return {
       tools: selected.map((tool, index) => presentTool(tool, whyFor(tool, index), Boolean(tool.source.generalPurpose))),
@@ -1535,9 +1565,11 @@ export function rankCatalogQuery(
     ? indexedCases.find((item) => item.slug === winner.concept.useCase) ?? null
     : null;
   if (primaryCase && winner) primaryCase.score = winner.score;
+  const chosenSpecialists = specialists.slice(0, 5);
+  const assistantCap = chosenSpecialists.length > 0 ? 3 : assistants.length;
   const selected = [
-    ...specialists.slice(0, 5),
-    ...assistants.filter((tool) => !specialists.some((item) => item.slug === tool.slug)),
+    ...chosenSpecialists,
+    ...assistants.filter((tool) => !chosenSpecialists.some((item) => item.slug === tool.slug)).slice(0, assistantCap),
   ].filter((tool) => tool.slug !== alt?.slug);
   const lowMatch = !winner;
 

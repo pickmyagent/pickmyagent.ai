@@ -67,6 +67,8 @@ export const EXTRA_SPELLING: Record<string, string> = {
   custmer: "customer",
   litrature: "literature",
   emial: "email",
+  folow: "follow",
+  folows: "follows",
   portfolo: "portfolio",
   investmnt: "investment",
 };
@@ -143,6 +145,9 @@ const LEMMAS: Record<string, string> = {
   written: "write",
   drafting: "draft",
   drafted: "draft",
+  deduct: "deduction",
+  deductible: "deduction",
+  deducted: "deduction",
   booking: "book",
   booked: "book",
   planning: "plan",
@@ -206,18 +211,9 @@ const SPELL_TARGETS = [...new Set([
 ])].filter((word) => word.length >= 5 && /^[a-z0-9]+$/.test(word));
 
 function spell(token: string): string {
-  if (SPELLING[token]) return SPELLING[token];
-  if (token.length < 6 || DO_NOT_CORRECT.has(token)) return token;
-  if (PROTECT.has(token)) return token;
-  let match: string | null = null;
-  for (const candidate of SPELL_TARGETS) {
-    if (candidate[0] !== token[0]) continue;
-    if (token === `${candidate}s` || token === `${candidate}es`) continue;
-    if (editDistance(token, candidate) !== 1) continue;
-    if (match) return token;
-    match = candidate;
-  }
-  return match ?? token;
+  // Edit-distance against anchors rewrites real words (contact → contract, expires → expireds).
+  // Misspellings are listed in SPELLING instead.
+  return SPELLING[token] ?? token;
 }
 
 export function stemToken(token: string): string {
@@ -271,6 +267,40 @@ export function prepareQuery(raw: string): PreparedQuery {
     for (const expanded of expandToken(token)) tokens.add(expanded);
   }
   return { text, tokens };
+}
+
+const PHRASE_GAP = new Set(["a", "an", "the", "my", "your", "our"]);
+
+function matchWords(text: string): string[] {
+  return text
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9\s]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .filter(Boolean);
+}
+
+/** Phrase hit that still matches when a, an, or the sits between the words. */
+export function phraseMatches(text: string, phrase: string): boolean {
+  const hay = matchWords(text);
+  const needle = matchWords(phrase).filter((word) => !PHRASE_GAP.has(word));
+  if (needle.length === 0 || hay.length === 0) return false;
+  for (let start = 0; start < hay.length; start++) {
+    if (hay[start] !== needle[0]) continue;
+    let index = 1;
+    for (let cursor = start + 1; cursor < hay.length && index < needle.length; cursor++) {
+      if (hay[cursor] === needle[index]) {
+        index += 1;
+        continue;
+      }
+      if (PHRASE_GAP.has(hay[cursor])) continue;
+      break;
+    }
+    if (index === needle.length) return true;
+  }
+  return false;
 }
 
 /** Character trigrams for the no-model semantic backstop. */

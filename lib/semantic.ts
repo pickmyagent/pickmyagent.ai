@@ -19,7 +19,7 @@ const BROAD = new Set([
 ]);
 
 const GLOSS: Record<string, string> = {
-  cma: "comparable sales comps cma bpo pricing a listing recently sold similar homes broker price opinion",
+  cma: "comparable sales comps cma bpo pricing a listing recently sold similar homes broker price opinion home value house worth listing presentation",
   "listing-copy": "mls listing description remarks property description copy for the listing",
   "listing-photos": "virtual staging listing photo edit enhancement day to dusk empty room",
   "listing-video": "listing video tour walkthrough realtor reel property video",

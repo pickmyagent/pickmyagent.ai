@@ -61,7 +61,7 @@ export const CONCEPTS: Concept[] = [
     useCase: "find-land",
     categories: ["real-estate"],
     phrases: ["vacant lot"],
-    anchors: ["land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "lots", "vacant"],
+    anchors: ["land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "zoned", "lots", "lot", "vacant"],
     coveredVerbs: ["find"],
     covered: [
       "land", "parcel", "parcels", "acre", "acreage", "acres", "zoning", "lots", "lot",
@@ -86,7 +86,7 @@ export const CONCEPTS: Concept[] = [
       "pricing a listing",
       "pull comps",
     ],
-    anchors: ["cma", "cmas", "bpo", "bpos", "comps", "comp", "comparable", "comparables"],
+    anchors: ["cma", "cmas", "bpo", "bpos", "comps", "comp", "comparable", "comparables", "solds", "zestimate"],
     bags: [
       ["comps", "house"],
       ["comps", "home"],
@@ -326,6 +326,8 @@ export const CONCEPTS: Concept[] = [
       ["cap", "rate"],
       ["rental", "comps"],
       ["after", "repair"],
+      ["rank", "deals"],
+      ["rank", "deal"],
     ],
     coveredVerbs: [],
     covered: ["real", "estate", "deal", "deals"],
@@ -743,6 +745,7 @@ export const CONCEPTS: Concept[] = [
     broad: true,
     phrases: [
       "small business", "my business", "whole business", "run my business", "run the business",
+      "running the business", "running a business", "running my business",
       "automate my business",
     ],
     anchors: [],
@@ -884,7 +887,7 @@ export const CONCEPTS: Concept[] = [
     anchors: [
       "video", "videos", "clip", "clips", "clipping", "youtube", "reel", "reels", "shorts",
       "short", "highlight", "highlights", "twitch", "stream", "streams", "streaming", "vod",
-      "tiktok", "caption", "captions",
+      "tiktok", "caption", "captions", "timecode", "timecodes",
     ],
     coveredVerbs: ["clip", "edit", "cut"],
     covered: [
@@ -971,7 +974,7 @@ export const CONCEPTS: Concept[] = [
     useCase: "write-resume",
     categories: ["hiring"],
     phrases: ["my resume", "your resume", "write a resume", "write my resume", "resume writing", "resume review"],
-    anchors: [],
+    anchors: ["resume", "resumes", "cv"],
     coveredVerbs: ["write"],
     covered: ["resume", "cv", "cover", "letter"],
   },
