@@ -62,5 +62,15 @@
     "status": 200,
     "finalUrl": "https://modl.ai/"
   },
-  "useCaseFit": {}
+  "useCaseFit": {},
+  "capabilities": [
+    "test an uploaded game build",
+    "write a bug report with visuals",
+    "score the severity of a game bug",
+    "play through a build with an agent",
+    "write a bug report for a game build",
+    "work from qa team that wants agents to play through an uploaded game build",
+    "work from ai agents that test an uploaded game build and report bugs",
+    "test the uploaded game build"
+  ]
 }

@@ -66,5 +66,19 @@
   },
   "useCaseFit": {
     "find-land": "Sells parcel boundaries and owner fields by county or state, with no single monthly price."
-  }
+  },
+  "capabilities": [
+    "buy parcel boundaries for a county",
+    "pull parcel geometry for a map",
+    "use parcel boundaries and owner fields by county or state, with no single monthly price",
+    "use parcel boundaries",
+    "use owner fields by county",
+    "buy parcel boundaries and owner fields for a county or state",
+    "buy parcel boundaries",
+    "buy owner fields for a county",
+    "use parcel boundaries and owner fields by county or state, so there is no single monthly price",
+    "work from buying parcel boundaries and owner fields for a county or state",
+    "work from nationwide parcel boundaries and owner fields, sold by county or state",
+    "work from sells parcel boundaries and owner fields by county or state, so there is no single monthly price"
+  ]
 }

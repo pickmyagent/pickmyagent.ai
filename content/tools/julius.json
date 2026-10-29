@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "analyze-data": "Chat for data analysis, with Plus at $20 per month and a Free plan listed."
-  }
+  },
+  "capabilities": [
+    "ask a question about a spreadsheet",
+    "ask questions about a spreadsheet",
+    "ask questions about a spreadsheet in chat",
+    "use a free plan and a plus plan at $20 per month for everyday analysis",
+    "use a plus plan at $20 per month for everyday analysis",
+    "work from asking questions about a spreadsheet in chat",
+    "ask the question about a spreadsheet",
+    "ask questions about the spreadsheet"
+  ]
 }

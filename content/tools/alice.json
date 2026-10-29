@@ -1,0 +1,73 @@
+{
+  "id": "alice",
+  "slug": "alice",
+  "name": "ALICE Technologies",
+  "websiteUrl": "https://www.alicetechnologies.com/home",
+  "affiliateUrl": null,
+  "shortDescription": "ALICE Technologies can simulate a construction schedule.",
+  "longDescription": "ALICE Technologies can simulate a construction schedule. It can also optimize a project sequence.",
+  "categories": [
+    "construction"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.alicetechnologies.com/home",
+  "docsUrl": "https://www.alicetechnologies.com/home",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Simulate a construction schedule",
+    "Optimize a project sequence"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "ALICE Technologies can simulate a construction schedule.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.alicetechnologies.com/home"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.alicetechnologies.com/home"
+  },
+  "capabilities": [
+    "simulate a construction schedule",
+    "optimize a project sequence",
+    "see schedule options",
+    "reduce project risk",
+    "plan a build sequence",
+    "make faster decisions with ai-powered scenario simulation",
+    "monitor project and portfolio performance to catch slipping activities and risks early"
+  ]
+}

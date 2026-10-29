@@ -65,5 +65,16 @@
   },
   "useCaseFit": {
     "manage-portfolio": "Lines up accounts on a free plan and adds investing recommendations on paid Gold."
-  }
+  },
+  "capabilities": [
+    "track net worth across accounts",
+    "assess a portfolio on a free plan",
+    "see accounts and a portfolio assessment on the free plan",
+    "see a portfolio assessment on the free plan",
+    "work from seeing accounts and a portfolio assessment on the free plan",
+    "work from tracks net worth and a portfolio. free plan is gold is per month",
+    "work from free plan tracks net worth, and gold is listed at per month, or per month on the annual price",
+    "work from portfoliopilot, from global predictions, tracks accounts and assesses a portfolio",
+    "assess the portfolio on a free plan"
+  ]
 }

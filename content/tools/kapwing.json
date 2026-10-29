@@ -68,5 +68,14 @@
   "useCaseFit": {
     "game-creative": "Browser editor for trimming, captions, and resizing video into social clips.",
     "listing-videos": "Trims a walkthrough, adds captions, and resizes the video."
-  }
+  },
+  "capabilities": [
+    "work from adding captions or resizing a video in the browser",
+    "work from turning a longer video into a social clip",
+    "work from browser editor for trimming, captions, and resizing video into social clips",
+    "work from free browser plan includes 10 credits for trimming, captions, and resizing video",
+    "work from adding captions or resizing the video in the browser",
+    "work from adding captions or resizing a video in a browser",
+    "work from turning the longer video into a social clip"
+  ]
 }

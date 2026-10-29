@@ -63,5 +63,15 @@
   },
   "generalPurpose": true,
   "assistantName": "Gemini",
-  "assistantKind": "draft"
+  "assistantKind": "draft",
+  "capabilities": [
+    "draft text inside google apps",
+    "research comparing, and drafting inside google's apps",
+    "research drafting inside google's apps",
+    "work from researching, comparing, and drafting inside google's apps",
+    "work from general-purpose assistant from google, with a free plan and paid google ai plans",
+    "work from google lists a free gemini plan, and google ai plus starts at per month in the united states",
+    "work from gemini is google's general assistant",
+    "work from general-purpose assistant from google, with the free plan and paid google ai plans"
+  ]
 }

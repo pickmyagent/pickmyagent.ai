@@ -1,0 +1,78 @@
+{
+  "id": "bench",
+  "slug": "bench",
+  "name": "Bench",
+  "websiteUrl": "https://www.bench.co/",
+  "affiliateUrl": null,
+  "shortDescription": "Bench can catch up monthly bookkeeping.",
+  "longDescription": "Bench can catch up monthly bookkeeping. It can also categorize expenses with a bookkeeper.",
+  "categories": [
+    "bookkeeping"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.bench.co/",
+  "docsUrl": "https://www.bench.co/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Catch up monthly bookkeeping",
+    "Categorize expenses with a bookkeeper"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Bench can catch up monthly bookkeeping for this kind of work.",
+  "weakness": "You still review the books before you close the period.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.bench.co/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.bench.co/"
+  },
+  "capabilities": [
+    "catch up monthly bookkeeping",
+    "categorize expenses with a bookkeeper",
+    "reconcile accounts",
+    "reconcile every account, transaction by transaction",
+    "use see how bench works",
+    "use online bookkeeping done for you",
+    "use bench bookkeeping done for you",
+    "use bench services bookkeeping + software ongoing monthly books",
+    "use catch-up bookkeeping clear months of backlog fast",
+    "use free online tools to quickly compute profit margins",
+    "use popular reads debits and credits",
+    "use liabilities in accounting free templates templates to manage"
+  ]
+}

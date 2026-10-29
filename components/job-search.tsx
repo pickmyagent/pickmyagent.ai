@@ -39,6 +39,11 @@ function ToolResultCards({ tools }: { tools: RankedTool[] }) {
                   General-purpose AI assistant
                 </span>
               ) : null}
+              {tool.fallbackAssist ? (
+                <span className="border border-line px-2 py-0.5 font-mono text-[11px] tracking-wide text-muted uppercase">
+                  Fallback
+                </span>
+              ) : null}
               <StatusBadge status={tool.smokeStatus} />
             </span>
             <span className="text-sm text-muted">{tool.shortDescription}</span>

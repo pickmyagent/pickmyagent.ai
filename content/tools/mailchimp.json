@@ -68,5 +68,15 @@
   "useCaseFit": {
     "marketing-promotions": "Free plan sends email campaigns to 250 contacts and 500 sends a month.",
     "run-a-business": "Sends email campaigns to the customers a small business already has."
-  }
+  },
+  "capabilities": [
+    "send email campaigns to the customers a small business already has",
+    "send email campaigns to a small list",
+    "work from sending email campaigns to a small list",
+    "work from email campaigns. the free plan includes 250 contacts and 500 sends a month",
+    "work from mailchimp's help center says the free plan includes up to 250 contacts and 500 sends a month",
+    "work from mailchimp's help center says the free marketing plan includes up to 250 contacts and 500 sends a month, with a daily send limit of 250",
+    "send email campaigns to the customers the small business already has",
+    "send email campaigns to a customers a small business already has"
+  ]
 }

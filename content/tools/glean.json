@@ -64,5 +64,16 @@
   },
   "useCaseFit": {
     "knowledge-qa": "Enterprise search with company context and more than 250 connectors."
-  }
+  },
+  "capabilities": [
+    "search across company documents",
+    "ask questions across a company's connected documents",
+    "use enterprise search over company context and says it offers more than 250 connectors",
+    "use enterprise search over company context",
+    "use says it offers more than 250 connectors",
+    "work from asking questions across a company's connected documents",
+    "work from enterprise search across company context, with 250+ connectors",
+    "work from glean's site describes enterprise search, grounding ai in company context, and more than 250 connectors, plus agents",
+    "ask questions across the company's connected documents"
+  ]
 }

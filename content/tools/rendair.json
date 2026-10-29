@@ -66,5 +66,15 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns an uploaded floor plan into a 3D project and a render."
   },
-  "id": "rendair"
+  "id": "rendair",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "turn an uploaded floor plan into a 3d project and a render",
+    "turn an uploaded floor plan into a 3d project",
+    "work from 2d floor plan that should become a 3d project and a render",
+    "work from sketch you want to revise in chat",
+    "work from uploads a 2d floor plan, builds the 3d project, and generates renders you can revise on a board",
+    "turn the floor plan into a render",
+    "turn an uploaded floor plan into the 3d project and a render"
+  ]
 }

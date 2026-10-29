@@ -1,0 +1,78 @@
+{
+  "id": "column-tax",
+  "slug": "column-tax",
+  "name": "Column Tax",
+  "websiteUrl": "https://www.columntax.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Column Tax can embed tax filing in an app.",
+  "longDescription": "Column Tax can embed tax filing in an app. It can also offer refund advance through a partner.",
+  "categories": [
+    "tax"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.columntax.com/",
+  "docsUrl": "https://www.columntax.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Embed tax filing in an app",
+    "Offer refund advance through a partner"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Column Tax can embed tax filing in an app.",
+  "weakness": "You still review the return before filing, and this is not tax advice.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.columntax.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.columntax.com/"
+  },
+  "capabilities": [
+    "embed tax filing in an app",
+    "offer refund advance through a partner",
+    "use then column tax does the rest",
+    "use learn about tax for banking 20-35",
+    "use review product",
+    "use taxpayers trust column tax",
+    "use filing through column tax is already around 1",
+    "use diy tax software providers",
+    "use lauren myrick ceo",
+    "use moneylion the top-of-wallet relationship",
+    "use cynthia kleinbaum milner cmo",
+    "use varo has created yet another trusted"
+  ]
+}

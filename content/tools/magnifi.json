@@ -65,5 +65,17 @@
   },
   "useCaseFit": {
     "manage-portfolio": "Links brokerage accounts on the $0 plan and adds forecasts on Premium."
-  }
+  },
+  "capabilities": [
+    "read a portfolio summary",
+    "ask a question about a portfolio",
+    "forecast a portfolio on a paid plan",
+    "link a brokerage account for a portfolio view",
+    "link brokerage accounts and reading a portfolio summary on the free plan",
+    "link reading a portfolio summary on the free plan",
+    "work from linking brokerage accounts and reading a portfolio summary on the free plan",
+    "work from links brokerage accounts on a plan. premium is per year",
+    "work from there is a plan that can link accounts, and premium is per year for forecasts",
+    "read the portfolio summary"
+  ]
 }

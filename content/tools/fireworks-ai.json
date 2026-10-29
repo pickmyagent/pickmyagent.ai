@@ -1,0 +1,78 @@
+{
+  "id": "fireworks-ai",
+  "slug": "fireworks-ai",
+  "name": "Fireworks",
+  "websiteUrl": "https://fireworks.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Fireworks can deploy an endpoint.",
+  "longDescription": "Fireworks can deploy an endpoint. It can also build intelligence that sets you apart.",
+  "categories": [
+    "dev-tools"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://fireworks.ai/",
+  "docsUrl": "https://fireworks.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Deploy an endpoint",
+    "Build intelligence that sets you apart"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Fireworks can deploy an endpoint for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://fireworks.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://fireworks.ai/"
+  },
+  "capabilities": [
+    "deploy an endpoint",
+    "build intelligence that sets you apart",
+    "use fireworks fireworks",
+    "use fireworks intelligence is power",
+    "use the specialized intelligence platform trusted by 10",
+    "use the specialized intelligence platform intelligence is power",
+    "use build intelligence that sets you apart",
+    "use start with state-of-the-art open models",
+    "use ensemble them to lower costs",
+    "use register the specialized intelligence platform trusted by 10",
+    "use explore the platform inference ensembling training fireworks",
+    "use lab inference exceptional inference for the multi-model organ"
+  ]
+}

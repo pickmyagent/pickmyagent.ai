@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "scheduling-assistant": "Lists inbox and calendar work and starts with $50 in free credits."
-  }
+  },
+  "capabilities": [
+    "run a calendar task on credits",
+    "use inbox and calendar work and starts with $50 in free credits",
+    "use starts with $50 in free credits",
+    "hand inbox and calendar chores to an assistant that bills in credits",
+    "hand calendar chores to an assistant that bills in credits",
+    "work from handing inbox and calendar chores to an assistant that bills in credits",
+    "work from assistant for inbox and calendar jobs, with in free credits",
+    "run the calendar task on credits"
+  ]
 }

@@ -1,0 +1,78 @@
+{
+  "id": "crowdsec",
+  "slug": "crowdsec",
+  "name": "CrowdSec",
+  "websiteUrl": "https://www.crowdsec.net/",
+  "affiliateUrl": null,
+  "shortDescription": "CrowdSec can block a malicious ip.",
+  "longDescription": "CrowdSec can block a malicious ip. It can also share threat signals.",
+  "categories": [
+    "security"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.crowdsec.net/",
+  "docsUrl": "https://www.crowdsec.net/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Block a malicious ip",
+    "Share threat signals"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "CrowdSec can block a malicious ip for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.crowdsec.net/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.crowdsec.net/"
+  },
+  "capabilities": [
+    "block a malicious ip",
+    "share threat signals",
+    "protect a server",
+    "use we turn crowd-powered intelligence into tactical intelligence",
+    "use curated threat intelligence powered by the crowd",
+    "use crowdsec we turn crowd-powered intelligence into tactical int",
+    "use crowdsec we know the ips attacking you",
+    "use crowdsec is trusted by",
+    "use crowdsec high threat list has 36",
+    "use safeguarded quality top-priority updates curated threat intel",
+    "use powered by the crowd",
+    "use crowdsec download the latest vulnerability & exploitation rep"
+  ]
+}

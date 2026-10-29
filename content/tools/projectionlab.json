@@ -1,0 +1,78 @@
+{
+  "id": "projectionlab",
+  "slug": "projectionlab",
+  "name": "ProjectionLab",
+  "websiteUrl": "https://projectionlab.com/",
+  "affiliateUrl": null,
+  "shortDescription": "ProjectionLab can model retirement cash flow.",
+  "longDescription": "ProjectionLab can model retirement cash flow. It can also compare financial scenarios.",
+  "categories": [
+    "investing"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://projectionlab.com/",
+  "docsUrl": "https://projectionlab.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Model retirement cash flow",
+    "Compare financial scenarios"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "ProjectionLab can model retirement cash flow.",
+  "weakness": "You still decide on any trade, and this is not financial advice.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://projectionlab.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://projectionlab.com/"
+  },
+  "capabilities": [
+    "model retirement cash flow",
+    "compare financial scenarios",
+    "project a portfolio",
+    "test a savings plan",
+    "chart a long term plan",
+    "optimize coordinates roth conversions, capital gain harvesting, drawdown order, and more to find the combination that works best for a plan",
+    "optimize coordinates roth conversions, capital gain harvesting, drawdown order,",
+    "optimize automate advanced tax strategies throughout a plan",
+    "track a progress over time journal and visualize a actual progress over time and compare against a initial projections",
+    "track a progress over time journal",
+    "visualize a actual progress over time",
+    "compare against a initial projections"
+  ]
+}

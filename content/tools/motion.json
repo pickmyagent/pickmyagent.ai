@@ -63,5 +63,15 @@
   },
   "useCaseFit": {
     "scheduling-assistant": "Plans a calendar and tasks, with a listed price of $29 per seat each month."
-  }
+  },
+  "capabilities": [
+    "keep meetings and tasks in one app",
+    "plan tasks on a calendar",
+    "plan a calendar and tasks, with a listed price of $29 per seat each month",
+    "work from auto-planning a calendar and task list in one app",
+    "work from ai calendar and tasks. paid plans are per seat each month",
+    "plan tasks on the calendar",
+    "plan the calendar and tasks, with a listed price of $29 per seat each month",
+    "work from auto-planning the calendar and task list in one app"
+  ]
 }

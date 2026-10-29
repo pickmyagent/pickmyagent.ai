@@ -68,5 +68,14 @@
   },
   "useCaseFit": {
     "game-npcs": "AI game master for Discord that can use an AI subscription you already have."
-  }
+  },
+  "capabilities": [
+    "run a tabletop game in discord",
+    "use the own model subscription to play",
+    "work from tabletop-style games run in discord",
+    "work from groups that already pay for a model subscription",
+    "run the tabletop game in discord",
+    "use a own model subscription to play",
+    "work from groups that already pay for the model subscription"
+  ]
 }

@@ -1,9 +1,17 @@
 {
   "affiliateUrl": null,
-  "categories": ["creative-media"],
-  "useCaseTags": ["floor-plan-rendering"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
   "openSource": false,
   "repoUrl": null,
   "smokeStatus": "verified-docs-only",
@@ -11,7 +19,9 @@
   "checkedAt": "2026-10-27T22:30:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -26,7 +36,9 @@
   "websiteUrl": "https://homedesigns.ai/",
   "shortDescription": "Redesigns a room photo and turns a flat floor plan into a 3D view. Standard is $22 a month.",
   "longDescription": "HomeDesigns AI redesigns a photo of a room, an exterior, or a garden, and it also turns a flat floor plan into a furnished 3D view. Standard is $22 a month, or $9 a month billed yearly, for 100 design credits. Pro is $29 a month, or $11 a month billed yearly, for 1,000 credits. Expert is $37 a month, or $14 a month billed yearly, for 2,000 credits. Each paid plan lists 2D to 3D floor plans.",
-  "pricingModel": ["subscription"],
+  "pricingModel": [
+    "subscription"
+  ],
   "pricingNotes": "Standard is $22 per month or $9 per month billed yearly for 100 credits. Pro is $29 per month or $11 per month billed yearly for 1,000 credits. Expert is $37 per month or $14 per month billed yearly for 2,000 credits.",
   "pricingUrl": "https://homedesigns.ai/pricing",
   "docsUrl": "https://homedesigns.ai/",
@@ -47,9 +59,22 @@
     "https://homedesigns.ai/",
     "https://homedesigns.ai/pricing"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://homedesigns.ai/pricing" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://homedesigns.ai/pricing"
+  },
   "useCaseFit": {
     "floor-plan-rendering": "Redesigns a room photo and turns a flat floor plan into a furnished 3D view."
   },
-  "id": "homedesigns"
+  "id": "homedesigns",
+  "capabilities": [
+    "redesign a room from a photo",
+    "work from room photo that should become an interior redesign",
+    "work from flat floor plan that should become a furnished 3d view",
+    "work from redesigns a room photo and turns a flat floor plan into a 3d view. standard is a month",
+    "work from redesigns a room photo and also turns a flat floor plan into a furnished 3d view",
+    "work from redesigns a photo of a room, an exterior, or a garden, and it also turns a flat floor plan into a furnished 3d view",
+    "redesign the room from a photo",
+    "work from room photo that should become the interior redesign"
+  ]
 }

@@ -1,0 +1,74 @@
+{
+  "id": "bardeen",
+  "slug": "bardeen",
+  "name": "Bardeen",
+  "websiteUrl": "https://www.bardeen.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Bardeen can automate a browser workflow.",
+  "longDescription": "Bardeen can automate a browser workflow. It can also scrape a page into a sheet.",
+  "categories": [
+    "workflow-automation"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.bardeen.ai/",
+  "docsUrl": "https://www.bardeen.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Automate a browser workflow",
+    "Scrape a page into a sheet"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Bardeen can automate a browser workflow.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.bardeen.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.bardeen.ai/"
+  },
+  "capabilities": [
+    "automate a browser workflow",
+    "scrape a page into a sheet",
+    "connect apps without code",
+    "save time on a repeated task",
+    "source leads with a agentic web scraper, qualify them with ai and reach them with contact enrichment",
+    "source leads with a agentic web scraper, qualify them with ai",
+    "find and reach leads no one else can",
+    "extract data from any website"
+  ]
+}

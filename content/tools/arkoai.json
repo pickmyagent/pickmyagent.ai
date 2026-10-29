@@ -65,5 +65,19 @@
   "useCaseFit": {
     "floor-plan-rendering": "Renders the active model view or a screenshot you upload."
   },
-  "id": "arkoai"
+  "id": "arkoai",
+  "capabilities": [
+    "render the active model view or a screenshot you upload",
+    "render the active model view",
+    "render a screenshot you upload",
+    "render the active view in rhino, revit, or sketchup, and the web app accepts a screenshot",
+    "render the active view in rhino",
+    "render the web app accepts a screenshot",
+    "work from model view you want rendered without leaving rhino, revit, or sketchup",
+    "work from screenshot of a model that should become a render",
+    "work from renders a rhino, revit, or sketchup view, or a screenshot. 20 free basic renders",
+    "work from renders the active view in rhino, revit, or sketchup, and the web app accepts a screenshot",
+    "work from renders the active view inside rhino, revit, or sketchup",
+    "render the active model view or the screenshot you upload"
+  ]
 }

@@ -1,0 +1,78 @@
+{
+  "id": "alpha-sense",
+  "slug": "alpha-sense",
+  "name": "AlphaSense",
+  "websiteUrl": "https://www.alphasense.com/",
+  "affiliateUrl": null,
+  "shortDescription": "AlphaSense can monitor industry news.",
+  "longDescription": "AlphaSense can monitor industry news. It can also use welcome to alphasense.",
+  "categories": [
+    "investing"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.alphasense.com/",
+  "docsUrl": "https://www.alphasense.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Monitor industry news",
+    "Use welcome to alphasense"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "AlphaSense can monitor industry news for this kind of work.",
+  "weakness": "You still decide on any trade, and this is not financial advice.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.alphasense.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.alphasense.com/"
+  },
+  "capabilities": [
+    "monitor industry news",
+    "use welcome to alphasense",
+    "use we supply high-quality gas sensors",
+    "use discover more",
+    "use first galvanic lead-free oxygen sensor introducing new advanc",
+    "use pid sensors industry-leading air quality sensors high-quality",
+    "use sensors for gas safety best-in-class particle counting soluti",
+    "use monitors about us overview quality onewebnavigation-new techn",
+    "use onewebnavigation-new responsibility onewebnavigation-new work",
+    "use us onewebnavigation-new events onewebnavigation-new contact o",
+    "use webnavigation-new newsletter onewebnavigation-new webstore pr",
+    "use overview product selector onewebnavigation-new downloads over"
+  ]
+}

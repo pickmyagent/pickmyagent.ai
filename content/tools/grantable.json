@@ -1,0 +1,78 @@
+{
+  "id": "grantable",
+  "slug": "grantable",
+  "name": "Grantable",
+  "websiteUrl": "https://grantable.co/",
+  "affiliateUrl": null,
+  "shortDescription": "Grantable can draft a grant proposal.",
+  "longDescription": "Grantable can draft a grant proposal. It can also answer grant questions.",
+  "categories": [
+    "nonprofit"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://grantable.co/",
+  "docsUrl": "https://grantable.co/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Draft a grant proposal",
+    "Answer grant questions"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Grantable can draft a grant proposal for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://grantable.co/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://grantable.co/"
+  },
+  "capabilities": [
+    "draft a grant proposal",
+    "answer grant questions",
+    "organize a grant application",
+    "rewrite a proposal section",
+    "manage grant deadlines",
+    "find aligned funders, draft proposals in a voice, and manage the full grant lifecycle",
+    "find aligned funders, draft proposals in a voice,",
+    "manage the full grant lifecycle",
+    "find funders a ai grant writer researches funders for you, screening 990 filings",
+    "draft in a voice ai grant writing that starts from a real work, not boilerplate",
+    "edit before it goes out",
+    "manage the lifecycle grant writing software should not stop at the draft"
+  ]
+}

@@ -68,5 +68,14 @@
     "finance-ops": "Captures receipts and invoices and manages business expenses.",
     "bookkeeping": "Captures receipts and invoices so the books have the source documents.",
     "run-a-business": "Captures receipts and invoices a small business can review before they hit the books."
-  }
+  },
+  "capabilities": [
+    "use receipt and invoice capture and business expense management for bookkeeping",
+    "use invoice capture",
+    "use business expense management for bookkeeping",
+    "work from capturing receipts and invoices for bookkeeping",
+    "work from receipt and invoice capture for bookkeeping and expenses",
+    "work from dext's site describes bookkeeping software with receipt and invoice capture and business expense management, and it says ai is part of the product",
+    "work from dext's site describes bookkeeping software with receipt and invoice capture and business expense management, and it says ai is part of a product"
+  ]
 }

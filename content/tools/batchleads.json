@@ -65,5 +65,15 @@
   "useCaseFit": {
     "find-off-market": "Saves properties with owner phone numbers and emails, and Growth is $119 per month.",
     "realtor-prospecting": "Saves owner phone numbers and emails for an expired or FSBO list."
-  }
+  },
+  "capabilities": [
+    "find for sale by owner leads",
+    "build a property list that includes owner phone numbers and emails",
+    "build a property list that includes owner phone numbers",
+    "work from building a property list that includes owner phone numbers and emails",
+    "work from property lists with owner phone numbers and emails. growth is per month",
+    "work from growth is per month, and saved properties include owner phone numbers and emails",
+    "work from searches property records and adds owner phone numbers and emails when a property is saved",
+    "build the property list that includes owner phone numbers and emails"
+  ]
 }

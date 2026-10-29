@@ -1,0 +1,78 @@
+{
+  "id": "lm-studio",
+  "slug": "lm-studio",
+  "name": "LM Studio",
+  "websiteUrl": "https://lmstudio.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "LM Studio can call a model api.",
+  "longDescription": "LM Studio can call a model api. It can also run a model on your own computer.",
+  "categories": [
+    "dev-tools"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://lmstudio.ai/",
+  "docsUrl": "https://lmstudio.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Call a model api",
+    "Run a model on your own computer"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "LM Studio can call a model api for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://lmstudio.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://lmstudio.ai/"
+  },
+  "capabilities": [
+    "call a model api",
+    "run a model on your own computer",
+    "create documents, slides, pdfs, and software with local or frontier open models",
+    "create documents, slides, pdfs,",
+    "use bionic is lm studio",
+    "use create documents",
+    "use agentic power",
+    "use an agent for work and code",
+    "use real-time voice transcription",
+    "use natively local",
+    "use explore the open frontiers",
+    "use get it done with bionic"
+  ]
+}

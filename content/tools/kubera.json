@@ -65,5 +65,16 @@
   },
   "useCaseFit": {
     "manage-portfolio": "Tracks a household balance sheet for $250 a year, with a 14-day trial."
-  }
+  },
+  "capabilities": [
+    "track a household balance sheet for $250 a year, with a 14-day trial",
+    "track a household balance sheet for $250 a year",
+    "track with a 14-day trial",
+    "track a household balance sheet for a flat annual fee",
+    "work from tracking a household balance sheet for a flat annual fee",
+    "work from household balance sheet. essentials is per year, with a 14-day trial",
+    "work from essentials is a flat per year for one household, with a 14-day trial and no asset-based fee",
+    "work from tracks a household balance sheet for a flat annual fee",
+    "track the household balance sheet for $250 a year, with a 14-day trial"
+  ]
 }

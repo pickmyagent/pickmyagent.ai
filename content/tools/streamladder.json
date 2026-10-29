@@ -64,5 +64,17 @@
   },
   "useCaseFit": {
     "game-creative": "Reframes Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks."
-  }
+  },
+  "capabilities": [
+    "clip a twitch stream into a short",
+    "cut a highlight reel from a stream",
+    "help an it reframes twitch, youtube, and kick clips into vertical shorts, reels, and tiktoks",
+    "help an it reframes twitch",
+    "help an it kick clips into vertical shorts",
+    "work from reframing a horizontal stream clip for shorts or reels",
+    "work from streamers posting the same clip to tiktok, reels, and shorts",
+    "work from edits twitch, youtube, and kick clips into vertical shorts, reels, and tiktoks",
+    "work from it reframes twitch, youtube, and kick clips into vertical shorts, reels, and tiktoks",
+    "clip the twitch stream into a short"
+  ]
 }

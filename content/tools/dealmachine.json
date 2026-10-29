@@ -67,5 +67,14 @@
     "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month.",
     "real-estate": "Pulls owner records and tags a property during a drive.",
     "realtor-prospecting": "Pulls owner records for a farm area and tags a property during a drive."
-  }
+  },
+  "capabilities": [
+    "use owner data and a driving app, and basic is $99 per seat per month",
+    "work from pulling owner records and tagging properties while driving",
+    "work from owner data and a driving app for property outreach. basic is per seat per month",
+    "work from basic is per seat per month and includes nationwide owner data plus the driving for dollars app",
+    "use owner data and the driving app, and basic is $99 per seat per month",
+    "work from owner data and the driving app for property outreach. basic is per seat per month",
+    "work from basic is per seat per month and includes nationwide owner data plus a driving for dollars app"
+  ]
 }

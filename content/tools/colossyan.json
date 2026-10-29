@@ -1,0 +1,72 @@
+{
+  "id": "colossyan",
+  "slug": "colossyan",
+  "name": "Colossyan",
+  "websiteUrl": "https://www.colossyan.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Colossyan can create a training video with an avatar.",
+  "longDescription": "Colossyan can create a training video with an avatar. It can also turn a script into an avatar video.",
+  "categories": [
+    "video"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.colossyan.com/",
+  "docsUrl": "https://www.colossyan.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Create a training video with an avatar",
+    "Turn a script into an avatar video"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Colossyan can create a training video with an avatar.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.colossyan.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.colossyan.com/"
+  },
+  "capabilities": [
+    "create a training video with an avatar",
+    "turn a script into an avatar video",
+    "translate a training video",
+    "add captions to a learning video",
+    "generate a spokesperson video",
+    "create ai videos in less than 5 minutes"
+  ]
+}

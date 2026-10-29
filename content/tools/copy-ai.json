@@ -66,5 +66,15 @@
   "useCaseFit": {
     "create-content": "Describes content-creation workflows for marketing teams.",
     "listing-copy": "Drafts MLS remarks you still check against your board's rules."
-  }
+  },
+  "capabilities": [
+    "use content-creation workflows for marketing teams",
+    "draft mls remarks you still check against the board's rules",
+    "draft marketing content inside a workflow tool",
+    "work from drafting marketing content inside a workflow tool",
+    "work from workflows for marketing content and go-to-market writing",
+    "work from copy ai prices page describes workflows for content creation and other go-to-market writing",
+    "draft mls remarks you still check against a board's rules",
+    "draft marketing content inside the workflow tool"
+  ]
 }

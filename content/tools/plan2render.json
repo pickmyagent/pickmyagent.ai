@@ -1,9 +1,17 @@
 {
   "affiliateUrl": null,
-  "categories": ["creative-media"],
-  "useCaseTags": ["floor-plan-rendering"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
   "openSource": false,
   "repoUrl": null,
   "smokeStatus": "verified-docs-only",
@@ -11,7 +19,9 @@
   "checkedAt": "2026-10-27T22:30:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -26,7 +36,11 @@
   "websiteUrl": "https://plan2render.ai/",
   "shortDescription": "Turns floor plans and sketches into photoreal renderings. Discovery is $15.",
   "longDescription": "Plan2Render takes a floor plan, an elevation, a PDF, an image, or a sketch and returns a photorealistic rendering. One credit is one render. Free is one watermarked credit and no card is required. Discovery is $15 for 10 credits on one project. Project Pass is $49 for 75 credits. Professional is $129 a month for 250 credits. Studio is $329 a month for 750 credits. Credit packs are $15 for 10, $25 for 25, $60 for 75, and $120 for 200.",
-  "pricingModel": ["freemium", "subscription", "usage"],
+  "pricingModel": [
+    "freemium",
+    "subscription",
+    "usage"
+  ],
   "pricingNotes": "Free is 1 watermarked credit. Discovery is $15 for 10 credits. Project Pass is $49 for 75 credits. Professional is $129 per month for 250 credits. Studio is $329 per month for 750 credits. Packs are $15, $25, $60, and $120.",
   "pricingUrl": "https://plan2render.ai/",
   "docsUrl": "https://plan2render.ai/",
@@ -43,10 +57,26 @@
   ],
   "strength": "Plan2Render turns a floor plan, an elevation, or a sketch into a photorealistic rendering.",
   "weakness": "The free grant is one watermarked credit, and a monthly plan starts at $129.",
-  "sources": ["https://plan2render.ai/"],
-  "siteLoad": { "status": 200, "finalUrl": "https://plan2render.ai/" },
+  "sources": [
+    "https://plan2render.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://plan2render.ai/"
+  },
   "useCaseFit": {
     "floor-plan-rendering": "Turns a floor plan, an elevation, or a sketch into a photorealistic rendering."
   },
-  "id": "plan2render"
+  "id": "plan2render",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "turn a floor plan photo into an image",
+    "turn a sketch of a floor plan into an image",
+    "render an elevation from a plan",
+    "turn a floor plan, an elevation, or a sketch into a photorealistic rendering",
+    "turn a sketch into a photorealistic rendering",
+    "work from floor plan or elevation that should become an interior or exterior render",
+    "work from sketch or reference photo for a renovation concept",
+    "turn the floor plan into a render"
+  ]
 }

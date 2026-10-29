@@ -66,5 +66,19 @@
   "useCaseFit": {
     "floor-plan-rendering": "Renders a live 3D model and includes AI image tools."
   },
-  "id": "d5-render"
+  "id": "d5-render",
+  "capabilities": [
+    "render a live 3d model",
+    "try ai visualization on a model",
+    "turn a blueprint into a render",
+    "make an image from a blueprint",
+    "render a live 3d model and includes ai image tools",
+    "render includes ai image tools",
+    "render a live 3d model and includes ai image tools, with a free community plan for non-commercial work",
+    "render with a free community plan for non-commercial work",
+    "work from 3d model you want to render in real time",
+    "work from architectural view that already exists in a modeling app",
+    "work from real-time renderer with ai features. the community plan is free for non-commercial work",
+    "work from renders a live 3d model and includes ai image tools, with a free community plan for non-commercial work"
+  ]
 }

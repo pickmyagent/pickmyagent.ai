@@ -63,5 +63,15 @@
   },
   "useCaseFit": {
     "tutoring": "Teaches K-5 math and adapts each lesson to the child."
-  }
+  },
+  "capabilities": [
+    "tutor a child in k-5 math",
+    "adapt a math lesson to the child",
+    "start a math lesson on a trial",
+    "work from family looking for a math tutor for a child aged 5 to 11",
+    "work from math tutor for ages 5 to 11 that adapts the lesson to the child",
+    "work from synthesis tutor's page describes a personal math tutor for ages 5 to 11 that adapts to the child",
+    "work from synthesis tutor's page describes a personal math tutor for ages 5 to 11, covering k-5 math and adapting to the child",
+    "tutor the child in k-5 math"
+  ]
 }

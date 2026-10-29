@@ -1,0 +1,78 @@
+{
+  "id": "helpscout",
+  "slug": "helpscout",
+  "name": "Help Scout",
+  "websiteUrl": "https://www.helpscout.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Help Scout can reply to a customer email.",
+  "longDescription": "Help Scout can reply to a customer email. It can also share a help center article.",
+  "categories": [
+    "customer-support"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.helpscout.com/",
+  "docsUrl": "https://www.helpscout.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Reply to a customer email",
+    "Share a help center article"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Help Scout can reply to a customer email.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.helpscout.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.helpscout.com/"
+  },
+  "capabilities": [
+    "reply to a customer email",
+    "share a help center article",
+    "draft a reply with ai",
+    "collaborate on a support inbox",
+    "use help scout delivers all the powerful",
+    "use help scout",
+    "use the ai-driven support platform for customer-first brands help",
+    "use scout delivers all the powerful",
+    "use iconloadingspin 3s linear infinite",
+    "use content h1 strong",
+    "use content h2 strong",
+    "use content h3 strong"
+  ]
+}

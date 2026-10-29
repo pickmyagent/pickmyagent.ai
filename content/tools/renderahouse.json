@@ -1,9 +1,17 @@
 {
   "affiliateUrl": null,
-  "categories": ["creative-media"],
-  "useCaseTags": ["floor-plan-rendering"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
   "openSource": false,
   "repoUrl": null,
   "smokeStatus": "verified-docs-only",
@@ -11,7 +19,9 @@
   "checkedAt": "2026-10-27T22:30:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -26,7 +36,10 @@
   "websiteUrl": "https://www.renderahouse.com/",
   "shortDescription": "Turns a sketch, a floor plan, or a photo into a photorealistic render.",
   "longDescription": "Render a House takes a sketch, a floor plan, a photo, or a 3D model and returns a photorealistic render. The free start includes 3 credits a day and does not ask for a card. Paid plans list monthly credit grants on the homepage. See their site for current pricing.",
-  "pricingModel": ["freemium", "subscription"],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
   "pricingNotes": "See their site for current pricing. The free start includes 3 credits a day and no card.",
   "pricingUrl": "https://www.renderahouse.com/",
   "docsUrl": "https://www.renderahouse.com/",
@@ -43,10 +56,25 @@
   ],
   "strength": "Render a House turns a sketch, a floor plan, a photo, or a 3D model into a photorealistic render.",
   "weakness": "The free start is 3 credits a day, and a paid monthly dollar amount is not printed with the plan names.",
-  "sources": ["https://www.renderahouse.com/"],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.renderahouse.com/" },
+  "sources": [
+    "https://www.renderahouse.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.renderahouse.com/"
+  },
   "useCaseFit": {
     "floor-plan-rendering": "Turns a sketch, a floor plan, or a photo into a photorealistic render."
   },
-  "id": "renderahouse"
+  "id": "renderahouse",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "turn a sketch, a floor plan, or a photo into a photorealistic render",
+    "turn a photo into a photorealistic render",
+    "turn a sketch, a floor plan, a photo, or a 3d model into a photorealistic render",
+    "turn a 3d model into a photorealistic render",
+    "work from sketch or floor plan that should become a photoreal render",
+    "work from 3d model you orbit and then render from a saved view",
+    "turn the floor plan into a render"
+  ]
 }

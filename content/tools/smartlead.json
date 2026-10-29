@@ -64,5 +64,17 @@
   },
   "useCaseFit": {
     "sales-outreach": "Describes an AI assistant for setting up and fixing cold email outreach."
-  }
+  },
+  "capabilities": [
+    "use an ai assistant for setting up and fixing cold email outreach",
+    "use an ai assistant for setting up",
+    "use fixing cold email outreach",
+    "run cold email campaigns with an assistant that sets them up",
+    "use smartassistant as a cold-email ai assistant that sets up, runs, and fixes outreach",
+    "use smartassistant as a cold-email ai assistant that sets up",
+    "use fixes outreach",
+    "work from running cold email campaigns with an assistant that sets them up",
+    "work from cold email platform whose smartassistant sets up and fixes outreach",
+    "use the ai assistant for setting up and fixing cold email outreach"
+  ]
 }

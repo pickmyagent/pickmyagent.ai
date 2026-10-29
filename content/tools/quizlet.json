@@ -6,11 +6,22 @@
   "affiliateUrl": null,
   "shortDescription": "Turns notes into practice tests and explains a homework step. Free to start. Paid plans are on their site.",
   "longDescription": "Quizlet's AI study tools page says you can turn notes into practice tests, study guides, and flashcards, and that homework help explains a step and adds more practice. The practice-test help page says those tests are currently for science and humanities, with limited free access. Some AI features are free, and Quizlet Plus includes more.",
-  "categories": ["learning"],
-  "useCaseTags": ["tutoring"],
-  "toolTypes": ["agent"],
-  "platforms": ["web"],
-  "pricingModel": ["freemium", "subscription"],
+  "categories": [
+    "learning"
+  ],
+  "useCaseTags": [
+    "tutoring"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
   "pricingNotes": "Some AI features are free. Quizlet Plus includes more. No dollar amount was on the AI tools page.",
   "pricingUrl": "https://quizlet.com/features/ai-study-tools",
   "docsUrl": "https://help.quizlet.com/hc/en-au/articles/25946589648013-Studying-with-Practice-Tests",
@@ -36,7 +47,9 @@
   "checkedAt": "2026-10-20T00:00:00-04:00",
   "checkedDate": "2026-10-20",
   "smokeTestNotes": "AI study tools page and practice-test help page checked on October 20, 2026. No account was created.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -54,5 +67,15 @@
   },
   "useCaseFit": {
     "tutoring": "Turns notes into a practice test and explains a homework step with more practice."
-  }
+  },
+  "capabilities": [
+    "explain a homework step",
+    "turn notes into a practice test and explains a homework step with more practice",
+    "turn notes into a practice test",
+    "turn explains a homework step with more practice",
+    "work from practice tests from notes in science or humanities",
+    "work from homework help that explains a step and adds practice",
+    "explain the homework step",
+    "turn notes into the practice test and explains a homework step with more practice"
+  ]
 }

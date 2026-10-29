@@ -67,5 +67,15 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns a 2D floor plan into a 3D floor plan."
   },
-  "id": "roomsketcher"
+  "id": "roomsketcher",
+  "capabilities": [
+    "turn a sketch of a floor plan into an image",
+    "turn a 2d floor plan into a 3d floor plan",
+    "turn a 2d floor plan into a 3d floor plan, and the free plan includes one ai conversion",
+    "work from 2d plan that should become a 3d floor plan",
+    "work from realtor who wants a floor plan image for a listing",
+    "work from creates a 2d plan or accepts an upload, then generates a 3d floor plan in one step",
+    "turn the sketch of a floor plan into an image",
+    "turn a sketch of a floor plan into the image"
+  ]
 }

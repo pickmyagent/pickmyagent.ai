@@ -1,4 +1,5 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { gzipSync } from "node:zlib";
 import { CONCEPTS } from "../lib/concepts.ts";
 import { matchTagsForConcept } from "../lib/search.ts";
 import { smokeLabel } from "../lib/labels.ts";
@@ -7,6 +8,8 @@ import type { Catalog, Tool } from "../lib/types.ts";
 import { NEUTRAL_LEAD } from "../lib/header-grammar.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
 import { buildHeldOut, buildHomeHeldOut, buildOtherHeldOut, buildParaphrases, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
+import { HELD_OUT_BROAD } from "./held-out-broad.ts";
+import { gradeBroad } from "./grade-broad.ts";
 import { rankObserved } from "./rank-observed.ts";
 
 export type QaQuery = {
@@ -418,13 +421,13 @@ const DOUBLED = /\b([A-Za-z]+)\s+\1\b/i;
 const PROSE_KEYS = new Set([
   "shortDescription", "longDescription", "strength", "weakness", "freeTierNotes",
   "smokeTestNotes", "pricingNotes", "bestFor", "notIdealFor", "problems", "useCaseFit",
-  "why", "summary", "intro", "title", "disclaimer",
+  "why", "summary", "intro", "title", "disclaimer", "capabilities",
 ]);
 
 /** Fields and lists that render on a tool page. Why-lines and intros are not in this set. */
 const TOOL_PAGE_KEYS = new Set([
   "shortDescription", "longDescription", "strength", "weakness", "freeTierNotes", "freeTrial",
-  "smokeTestNotes", "bestFor", "notIdealFor", "problems",
+  "smokeTestNotes", "bestFor", "notIdealFor", "problems", "capabilities",
 ]);
 
 export type QaCard = {
@@ -746,6 +749,20 @@ export function reportQueries(): string[] {
     ...buildParaphrases().map((item) => item.query),
     ...OFF_DOMAIN.map((item) => item.query),
     ...SPOT_QUERIES,
+    ...HELD_OUT_BROAD.map((item) => item.query),
+  ];
+}
+
+function indexSizeLines(): string[] {
+  const jobsPath = new URL("../public/embeddings/use-cases.json", import.meta.url);
+  const capsPath = new URL("../public/embeddings/capabilities.json", import.meta.url);
+  if (!existsSync(jobsPath) || !existsSync(capsPath)) return [];
+  const jobs = readFileSync(jobsPath);
+  const caps = readFileSync(capsPath);
+  const jobsGzip = gzipSync(jobs).length;
+  const capsGzip = gzipSync(caps).length;
+  return [
+    `Embedding indexes served by this site: job index ${jobs.length} bytes (${jobsGzip} gzipped) and capability index ${caps.length} bytes (${capsGzip} gzipped). Together ${jobsGzip + capsGzip} bytes gzipped, under the 2 MB first-search budget. The bge-small weights and the WASM runtime stay on Hugging Face and jsDelivr.`,
   ];
 }
 
@@ -826,6 +843,7 @@ export function renderSearchQaReport(catalog: Catalog): string {
     `Held-out home pass rate ${(graded.homeHeldOutPassRate * 100).toFixed(1)}% (${graded.homeHeldOutCount} home, design, and construction queries, including plain floor-plan wording).`,
     `Seed precision@3 ${graded.precisionAt3.toFixed(3)}. Real-estate held-out precision@3 ${graded.heldOutPrecisionAt3.toFixed(3)}. Other held-out precision@3 ${graded.otherHeldOutPrecisionAt3.toFixed(3)}.`,
     `Founder demo query: ${FOUNDER_QUERY}`,
+    ...indexSizeLines(),
     "",
     "Per-use-case seed pass rate:",
     "",
@@ -918,6 +936,36 @@ export function renderSearchQaReport(catalog: Catalog): string {
     "",
   );
   lines.push(...renderRows(rows, 1));
+  const broad = gradeBroad(catalog);
+  const broadRate = broad.total === 0 ? 0 : broad.passed / broad.total;
+  lines.push(
+    "# Held-out plain-language queries",
+    "",
+    `${broad.total} queries written across the directory before this score was inspected. ${broad.passed} passed (${(broadRate * 100).toFixed(1)}%). A pass puts a fitting specialist in the top 3 and keeps off-domain tools out of the top 5.`,
+    "",
+  );
+  if (broad.misses.length > 0) {
+    lines.push("Misses:", "");
+    for (const miss of broad.misses) {
+      lines.push(`- ${miss.domains.join(", ")}: ${miss.query} → ${miss.reason} [${miss.top.join(", ")}]`);
+    }
+    lines.push("");
+  }
+  const broadRows: QaRow[] = HELD_OUT_BROAD.slice(0, 320).map((item) => {
+    const ranked = rankObserved(item.query, catalog);
+    return {
+      query: item.query,
+      domain: item.domains.join(", "),
+      header: ranked.lead,
+      intro: ranked.intro,
+      cards: ranked.tools.map((tool) => ({
+        name: tool.name,
+        label: cardLabel(tool.generalPurpose, tool.smokeStatus),
+        why: tool.whyItHelps,
+      })),
+    };
+  });
+  lines.push(...renderRows(broadRows, 1));
   return lines.join("\n");
 }
 

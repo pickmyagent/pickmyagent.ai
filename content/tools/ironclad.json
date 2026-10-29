@@ -1,0 +1,78 @@
+{
+  "id": "ironclad",
+  "slug": "ironclad",
+  "name": "Ironclad",
+  "websiteUrl": "https://ironcladapp.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Ironclad can manage a contract workflow.",
+  "longDescription": "Ironclad can manage a contract workflow. It can also generate a contract from a template.",
+  "categories": [
+    "legal"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://ironcladapp.com/",
+  "docsUrl": "https://ironcladapp.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Manage a contract workflow",
+    "Generate a contract from a template"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Ironclad can manage a contract workflow.",
+  "weakness": "A lawyer still reviews the draft before anyone relies on it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://ironcladapp.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://ironcladapp.com/"
+  },
+  "capabilities": [
+    "manage a contract workflow",
+    "generate a contract from a template",
+    "search a contract repository",
+    "design and deploy any type of contract in minutes",
+    "use instantly surface insights from legal agreements",
+    "use get a custom demo",
+    "use ai contract lifecycle management software ironclad",
+    "use ai contract lifecycle management software",
+    "use custom styling",
+    "use monday 27th july 2026 15",
+    "use mega menus",
+    "use tasty css-moving hamburgers"
+  ]
+}

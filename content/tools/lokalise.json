@@ -1,0 +1,78 @@
+{
+  "id": "lokalise",
+  "slug": "lokalise",
+  "name": "Lokalise",
+  "websiteUrl": "https://lokalise.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Lokalise can translate strings with ai.",
+  "longDescription": "Lokalise can translate strings with ai. It can also manage a translation workflow.",
+  "categories": [
+    "translation"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://lokalise.com/",
+  "docsUrl": "https://lokalise.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Translate strings with ai",
+    "Manage a translation workflow"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Lokalise can translate strings with ai for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://lokalise.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://lokalise.com/"
+  },
+  "capabilities": [
+    "translate strings with ai",
+    "manage a translation workflow",
+    "automate the process, integrate with a stack, and keep everything moving smoothly",
+    "automate the process, integrate with a stack,",
+    "automate translation, tm application, qa checks, approvals, and publishing",
+    "automate translation, tm application, qa checks, approvals,",
+    "use lokalise is a continuous localization and translation managem",
+    "use world-class ai localization platform",
+    "use lokalise lokalise is a continuous localization and translatio",
+    "use lokalise language quality",
+    "use turnaround speed",
+    "use one system for the entire business"
+  ]
+}

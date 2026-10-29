@@ -77,5 +77,15 @@
   "useCaseFit": {
     "coding-agents": "Runs an open-source agent loop toward a coding goal, and you review the output.",
     "multi-agent-workflows": "Open-source agent project that can try a multi-step goal you give it."
-  }
+  },
+  "capabilities": [
+    "run an open-source agent loop toward a coding goal, and you review the output",
+    "run an open-source agent loop toward a coding goal",
+    "run you review the output",
+    "help teams watching the platform beta releases",
+    "work from reading an open-source autonomous-agent codebase",
+    "work from teams watching the platform beta releases",
+    "work from open-source agent project with a platform beta. the site and repo were reviewed",
+    "run an open-source agent loop toward the coding goal, and you review the output"
+  ]
 }

@@ -65,5 +65,15 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns a sketch, a photo, or a modeling screenshot into a realistic render."
   },
-  "id": "promeai"
+  "id": "promeai",
+  "capabilities": [
+    "turn a sketch, a photo, or a modeling screenshot into a realistic render",
+    "turn a modeling screenshot into a realistic render",
+    "work from sketch or modeling screenshot that should become a realistic render",
+    "work from photo you want to restyle as an architectural image",
+    "work from sketch rendering takes a hand-drawn sketch, a photo, or a screenshot from modeling software and generates a realistic render",
+    "turn the sketch, a photo, or a modeling screenshot into a realistic render",
+    "turn the modeling screenshot into a realistic render",
+    "work from sketch or modeling screenshot that should become the realistic render"
+  ]
 }

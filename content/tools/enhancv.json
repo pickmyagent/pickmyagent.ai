@@ -1,0 +1,75 @@
+{
+  "id": "enhancv",
+  "slug": "enhancv",
+  "name": "Enhancv",
+  "websiteUrl": "https://enhancv.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Enhancv can design a resume.",
+  "longDescription": "Enhancv can design a resume. It can also tailor a resume to a job.",
+  "categories": [
+    "resumes"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://enhancv.com/",
+  "docsUrl": "https://enhancv.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Design a resume",
+    "Tailor a resume to a job"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Enhancv can design a resume for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://enhancv.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://enhancv.com/"
+  },
+  "capabilities": [
+    "design a resume",
+    "tailor a resume to a job",
+    "get content suggestions",
+    "choose a resume template",
+    "export a resume to pdf",
+    "build a resume in minutes",
+    "build a resume get a resume score excellent 5,363 reviews pick a template and build a resume in minutes",
+    "build a resume get a resume score excellent 5,363 reviews pick a template",
+    "design with intuitive editing"
+  ]
+}

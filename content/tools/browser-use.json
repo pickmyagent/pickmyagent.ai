@@ -80,5 +80,15 @@
   },
   "useCaseFit": {
     "tool-use-browser": "Open-source Python agent that opens pages, clicks, and types in a browser."
-  }
+  },
+  "capabilities": [
+    "control a browser for an agent task",
+    "open pages and click in a browser",
+    "work from agents that need to open pages, click, and type",
+    "work from python projects that can bring their own browser and model",
+    "work from open-source python agent that controls a browser. install it yourself",
+    "work from 0.13.11 is built for agents that open pages, click, and type",
+    "control the browser for an agent task",
+    "control a browser for the agent task"
+  ]
 }

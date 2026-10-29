@@ -64,5 +64,16 @@
   },
   "useCaseFit": {
     "do-taxes": "Lists guided personal tax filing, with a file-yourself range that starts at $0."
-  }
+  },
+  "capabilities": [
+    "use guided personal tax filing, with a file-yourself range that starts at $0",
+    "use guided personal tax filing",
+    "use with a file-yourself range that starts at $0",
+    "use file-yourself pricing from $0 to $139, and says state filing is an additional charge",
+    "use file-yourself pricing from $0 to $139",
+    "use says state filing is an additional charge",
+    "work from filing a personal return with step-by-step software",
+    "work from step-by-step filing. file-yourself prices run from to",
+    "use guided personal tax filing, with the file-yourself range that starts at $0"
+  ]
 }

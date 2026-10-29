@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "knowledge-qa": "Company knowledge base with agents that find and improve information."
-  }
+  },
+  "capabilities": [
+    "find company information with a knowledge agent",
+    "improve company information with a knowledge agent",
+    "answer from verified cards",
+    "find information in a company knowledge base",
+    "work from company wiki with agents that answer from verified cards",
+    "work from knowledge base whose agents find and improve company information",
+    "find company information with the knowledge agent",
+    "improve company information with the knowledge agent"
+  ]
 }

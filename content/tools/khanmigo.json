@@ -63,5 +63,16 @@
   },
   "useCaseFit": {
     "tutoring": "Tutors almost any academic subject and helps a teacher plan a lesson."
-  }
+  },
+  "capabilities": [
+    "tutor an academic subject",
+    "help a teacher plan a lesson",
+    "tutor learners on a subject",
+    "tutor from elementary school through college",
+    "sign a teacher up for the tutor",
+    "work from tutoring and teacher help inside khan academy's assistant",
+    "work from khan academy tutor for almost any subject. learners are a month, and teachers can sign up free",
+    "work from tutors almost any academic subject from elementary school through college, and learners are a month",
+    "tutor the academic subject"
+  ]
 }

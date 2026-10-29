@@ -71,5 +71,18 @@
   "useCaseFit": {
     "game-creative": "Edits video by editing the transcript, with 60 free media minutes a month.",
     "listing-videos": "Edits the video by editing the transcript and adds captions."
-  }
+  },
+  "capabilities": [
+    "edit video by editing the transcript, with 60 free media minutes a month",
+    "edit video by editing the transcript",
+    "edit with 60 free media minutes a month",
+    "edit the video by editing the transcript and adds captions",
+    "edit the video by editing the transcript",
+    "work from cutting and cleaning talking-head or podcast video",
+    "work from creators who edit by editing words",
+    "work from edit video and audio by editing the transcript. free to start. paid plans are on their site",
+    "work from you edit video and audio by editing the transcript, and the free plan includes 60 minutes of media per month",
+    "work from edits audio and video from the transcript",
+    "edit video by editing the transcript, with 60 free media minutes the month"
+  ]
 }

@@ -1,0 +1,78 @@
+{
+  "id": "thoughtspot",
+  "slug": "thoughtspot",
+  "name": "ThoughtSpot",
+  "websiteUrl": "https://www.thoughtspot.com/",
+  "affiliateUrl": null,
+  "shortDescription": "ThoughtSpot can search data in plain language.",
+  "longDescription": "ThoughtSpot can search data in plain language. It can also use thoughtspot agentic analytics platform transform insights int.",
+  "categories": [
+    "data-analysis"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.thoughtspot.com/",
+  "docsUrl": "https://www.thoughtspot.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Search data in plain language",
+    "Use thoughtspot agentic analytics platform transform insights int"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "ThoughtSpot can search data in plain language.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.thoughtspot.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.thoughtspot.com/"
+  },
+  "capabilities": [
+    "search data in plain language",
+    "use thoughtspot agentic analytics platform transform insights int",
+    "use thoughtspot agentic analytics platform",
+    "use thoughtspot agentic analytics platform thoughtspot agentic an",
+    "use platform choose language english deutsch",
+    "use ai analyst spottermodel spotterviz spottercode top ai resourc",
+    "use watch ai-assisted coding with spottercode watch automated sem",
+    "use modeling with thoughtspot watch data to dashboards instantly",
+    "use ai across the data-to-insights workflow",
+    "use agents agentspot spotter",
+    "use product product platform bi agents semantic layer ai-augmente",
+    "use dashboards augmented analytics actionable insights connectors"
+  ]
+}

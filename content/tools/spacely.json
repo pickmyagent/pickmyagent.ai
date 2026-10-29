@@ -67,5 +67,15 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns a sketch, a 3D model, or a room photo into a photoreal render."
   },
-  "id": "spacely"
+  "id": "spacely",
+  "capabilities": [
+    "turn a sketch, a 3d model, or a room photo into a photoreal render",
+    "turn a room photo into a photoreal render",
+    "turn a sketch, a 3d model, or a room photo into a photoreal render, and signup does not require a card",
+    "turn signup does not require a card",
+    "work from sketch or room photo that should become a photoreal render",
+    "work from sketchup view you want to render without leaving the model",
+    "turn the sketch, a 3d model, or a room photo into a photoreal render",
+    "turn the room photo into a photoreal render"
+  ]
 }

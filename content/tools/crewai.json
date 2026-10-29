@@ -83,5 +83,15 @@
   },
   "useCaseFit": {
     "multi-agent-workflows": "Open-source framework that splits one job across role-based agents."
-  }
+  },
+  "capabilities": [
+    "work from multi-step jobs you can split across roles",
+    "work from python teams who want a crew abstraction they can install",
+    "work from open-source framework for crews of role-based agents that split a job into tasks",
+    "work from 1.15.28 is an open-source framework that splits a job across role-based agents",
+    "work from python teams who want the crew abstraction they can install",
+    "work from open-source framework for crews of role-based agents that split the job into tasks",
+    "work from 1.15.28 is an open-source framework that splits the job across role-based agents",
+    "work from 1.15.28 is the open-source framework that splits a job across role-based agents"
+  ]
 }

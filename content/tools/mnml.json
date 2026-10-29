@@ -69,5 +69,17 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns a photo of a floor plan into a furnished view and keeps the walls as drawn."
   },
-  "id": "mnml"
+  "id": "mnml",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "turn a floor plan photo into an image",
+    "turn a sketch of a floor plan into an image",
+    "turn a photo of a floor plan into a furnished view and keeps the walls as drawn",
+    "turn a photo of a floor plan into a furnished view",
+    "turn keeps the walls as drawn",
+    "work from photo or scan of a floor plan that should become a furnished view",
+    "work from hand sketch that should become an architectural render",
+    "work from mnml takes a photo, pdf, or cad screenshot of a floor plan and returns a furnished view while keeping the walls as drawn",
+    "turn the floor plan into a render"
+  ]
 }

@@ -1,0 +1,76 @@
+{
+  "id": "juro",
+  "slug": "juro",
+  "name": "Juro",
+  "websiteUrl": "https://juro.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Juro can draft a contract in the browser.",
+  "longDescription": "Juro can draft a contract in the browser. It can also negotiate a contract with comments.",
+  "categories": [
+    "legal"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://juro.com/",
+  "docsUrl": "https://juro.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Draft a contract in the browser",
+    "Negotiate a contract with comments"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Juro can draft a contract in the browser.",
+  "weakness": "A lawyer still reviews the draft before anyone relies on it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://juro.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://juro.com/"
+  },
+  "capabilities": [
+    "draft a contract in the browser",
+    "negotiate a contract with comments",
+    "approve a contract workflow",
+    "store signed agreements",
+    "generate a contract from a prompt",
+    "manage contracts end-to-end with flexible ai automation that lives where you live",
+    "redline contracts with ai agents ask a contracts anything",
+    "manage contracts from end to end in one ai-native platform",
+    "redline contracts with ai agents no more legal bottlenecks",
+    "manage contracts in the tools a business uses every day"
+  ]
+}

@@ -63,5 +63,15 @@
   },
   "useCaseFit": {
     "shop-products": "Chat shopping agent covering more than 10,000 fashion stores."
-  }
+  },
+  "capabilities": [
+    "ask a fashion agent what to buy",
+    "chat to find fashion products across many stores",
+    "use a personal ai fashion agent for chatting to shop across more than 10,000 stores",
+    "use a personal ai fashion agent for chatting to shop across more than 10",
+    "work from chatting to find fashion products across many stores",
+    "work from ai fashion agent to chat and shop across 10,000+ stores",
+    "ask the fashion agent what to buy",
+    "use the personal ai fashion agent for chatting to shop across more than 10,000 stores"
+  ]
 }

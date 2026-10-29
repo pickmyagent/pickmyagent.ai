@@ -21,7 +21,7 @@
   "pricingModel": [
     "freemium"
   ],
-  "pricingNotes": "Dedicated pricing URL not found; pricing may be embedded on homepage.",
+  "pricingNotes": "Dedicated pricing URL not found, pricing may be embedded on homepage.",
   "pricingUrl": "https://mistscale.com/",
   "docsUrl": "https://mistscale.com/",
   "freeTier": null,
@@ -67,5 +67,15 @@
   },
   "useCaseFit": {
     "game-npcs": "Memory for game NPCs that need to remember the player."
-  }
+  },
+  "capabilities": [
+    "remember the player in a game",
+    "help npcs remember the player",
+    "help teams comparing memory products rather than full character stacks",
+    "work from npcs that need to remember the player",
+    "work from teams comparing memory products rather than full character stacks",
+    "remember the player in the game",
+    "remember a player in a game",
+    "help npcs remember a player"
+  ]
 }

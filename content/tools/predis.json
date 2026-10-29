@@ -66,5 +66,13 @@
   "useCaseFit": {
     "social-media": "Generates social posts and ads with AI, without a clear base price in the fetch.",
     "agent-social": "Generates social posts and ad creatives for a listing."
-  }
+  },
+  "capabilities": [
+    "generate social posts",
+    "generate social posts and ad creatives for a listing",
+    "generate ad creatives for a listing",
+    "work from generating social posts and ad creatives",
+    "work from generates and designs social posts and ads with ai",
+    "work from predis says it generates, designs, and optimizes social media content with ai"
+  ]
 }

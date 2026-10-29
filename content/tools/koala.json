@@ -1,0 +1,73 @@
+{
+  "id": "koala",
+  "slug": "koala",
+  "name": "Koala",
+  "websiteUrl": "https://koala.sh/",
+  "affiliateUrl": null,
+  "shortDescription": "Koala can write an seo article from a keyword.",
+  "longDescription": "Koala can write an seo article from a keyword. It can also generate amazon affiliate content.",
+  "categories": [
+    "seo"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://koala.sh/",
+  "docsUrl": "https://koala.sh/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Write an seo article from a keyword",
+    "Generate amazon affiliate content"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Koala can write an seo article from a keyword.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://koala.sh/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://koala.sh/"
+  },
+  "capabilities": [
+    "write an seo article from a keyword",
+    "generate amazon affiliate content",
+    "optimize a blog post",
+    "add internal links",
+    "publish a long form article",
+    "write it with koala ai",
+    "analyze a site see three articles a site should publish next"
+  ]
+}

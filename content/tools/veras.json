@@ -65,5 +65,17 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns a sketch, a floor plan, or a model view into a visualization."
   },
-  "id": "veras"
+  "id": "veras",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "turn a sketch of a floor plan into an image",
+    "turn a sketch, a floor plan, or a model view into a visualization",
+    "turn a model view into a visualization",
+    "turn a sketch, a floor plan, or an image into a visualization and can build an editable 3d scene from that input",
+    "turn an image into a visualization",
+    "turn can build an editable 3d scene from that input",
+    "work from sketch or floor plan that should become a visualization",
+    "work from revit, sketchup, or rhino view you want to render in place",
+    "turn the floor plan into a render"
+  ]
 }

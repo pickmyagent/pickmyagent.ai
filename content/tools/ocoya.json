@@ -65,5 +65,17 @@
   "useCaseFit": {
     "social-media": "Social content tool with Starter at $29 per month and a 7-day trial.",
     "agent-social": "Creates listing posts and puts them on a social schedule."
-  }
+  },
+  "capabilities": [
+    "create listing posts and puts them on a social schedule",
+    "create listing posts",
+    "create puts them on a social schedule",
+    "create and scheduling social content on a listed monthly plan",
+    "create scheduling social content on a listed monthly plan",
+    "use a starter plan at $29 per month and a 7-day free trial that requires a card",
+    "use a 7-day free trial that requires a card",
+    "work from creating and scheduling social content on a listed monthly plan",
+    "work from social content plans from per month, with a 7-day trial",
+    "create listing posts and puts them on the social schedule"
+  ]
 }

@@ -1,0 +1,78 @@
+{
+  "id": "tractable",
+  "slug": "tractable",
+  "name": "Tractable",
+  "websiteUrl": "https://tractable.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Tractable can estimate vehicle damage from photos.",
+  "longDescription": "Tractable can estimate vehicle damage from photos. It can also assess a property claim from images.",
+  "categories": [
+    "insurance"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://tractable.ai/",
+  "docsUrl": "https://tractable.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Estimate vehicle damage from photos",
+    "Assess a property claim from images"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Tractable can estimate vehicle damage from photos.",
+  "weakness": "You still confirm the policy, and this is not an insurance quote you can bind here.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://tractable.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://tractable.ai/"
+  },
+  "capabilities": [
+    "estimate vehicle damage from photos",
+    "assess a property claim from images",
+    "speed up a repair estimate",
+    "use automation faster",
+    "use request a demo automating the road ahead",
+    "use one scan at a time",
+    "use discover lumascanner",
+    "find the right",
+    "use find the right",
+    "use automation automating the road ahead",
+    "use smart ai solutions to industry challenges insurers dealership",
+    "use tractable industry solutions close industry solutions open in"
+  ]
+}

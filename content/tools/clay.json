@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "sales-outreach": "Pulls sales data from a marketplace of more than 200 providers, with a free trial."
-  }
+  },
+  "capabilities": [
+    "build lead lists from many data providers in one table",
+    "use a data marketplace of more than 200 providers and offers a free trial",
+    "use a data marketplace of more than 200 providers",
+    "use offers a free trial",
+    "work from building lead lists from many data providers in one table",
+    "work from sales data workspace with a marketplace of 200+ providers and a free trial",
+    "use the data marketplace of more than 200 providers and offers a free trial",
+    "use the data marketplace of more than 200 providers"
+  ]
 }

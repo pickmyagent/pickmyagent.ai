@@ -63,5 +63,16 @@
   },
   "useCaseFit": {
     "coding-agents": "AI coding agent that GitHub says writes code and moves work toward a merge."
-  }
+  },
+  "capabilities": [
+    "review a pull request",
+    "request a review from a customer",
+    "write and reviewing code inside github",
+    "write reviewing code inside github",
+    "work from writing and reviewing code inside github",
+    "work from github's ai coding agent for writing code and opening pull requests",
+    "work from github calls copilot an ai coding agent that writes code and can take work from an issue toward a merge",
+    "work from github's copilot page calls it the ai coding agent, says it writes code with ai, and says agents can be directed from issue to merge",
+    "review the pull request"
+  ]
 }

@@ -69,5 +69,17 @@
   "useCaseFit": {
     "game-creative": "Edits video for YouTube, TikTok, and Reels, and the free plan covers basic editing.",
     "listing-videos": "Trims walkthrough footage, adds captions, and resizes it for a vertical reel."
-  }
+  },
+  "capabilities": [
+    "edit video for youtube, tiktok, and reels, and the free plan covers basic editing",
+    "edit video for youtube",
+    "edit the free plan covers basic editing",
+    "edit a youtube video or a short for tiktok and reels",
+    "edit a youtube video",
+    "work from editing a youtube video or a short for tiktok and reels",
+    "work from creators who want templates and captions in one editor",
+    "work from video editor for youtube, tiktok, and reels. pricing lists free and pro at /month",
+    "work from free plan includes templates and basic editing for youtube, tiktok, and reels",
+    "edit video for youtube, tiktok, and reels, and a free plan covers basic editing"
+  ]
 }

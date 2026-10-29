@@ -5,7 +5,7 @@
   "websiteUrl": "https://n8n.io/",
   "affiliateUrl": null,
   "shortDescription": "Workflow automation you can self-host for free, or use n8n Cloud on a paid plan.",
-  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud’s Starter plan was listed at 20€/month on annual billing, with a card-free trial rather than a permanent free cloud tier.",
+  "longDescription": "n8n automates workflows across apps, including agent-style steps. Community Edition is the free self-host path. n8n Cloud\u2019s Starter plan was listed at 20\u20ac/month on annual billing, with a card-free trial rather than a permanent free cloud tier.",
   "categories": [
     "workflow-automation"
   ],
@@ -76,5 +76,15 @@
   },
   "useCaseFit": {
     "workflow-automation": "Self-hosted community edition for multi-step workflows across apps you already use."
-  }
+  },
+  "capabilities": [
+    "automate a workflow across apps",
+    "work from multi-step workflows across apps you already use",
+    "work from workflow automation you can self-host for free, or use n8n cloud on a paid plan",
+    "work from community edition is a free self-host option for multi-step workflows across the apps you already use",
+    "work from automates workflows across apps, including agent-style steps",
+    "automate the workflow across apps",
+    "work from workflow automation you can self-host for free, or use n8n cloud on the paid plan",
+    "work from community edition is the free self-host option for multi-step workflows across the apps you already use"
+  ]
 }

@@ -69,5 +69,18 @@
   },
   "useCaseFit": {
     "video-generation": "Renders video from text, an image, or a reference clip in Dreamina."
-  }
+  },
+  "capabilities": [
+    "generate an image from a prompt",
+    "generate a video from a prompt",
+    "render video from text, an image, or a reference clip in dreamina",
+    "render video from text",
+    "render an image",
+    "render a reference clip in dreamina",
+    "work from generating video from a prompt, an image, or a reference clip",
+    "work from creators using dreamina, or developers calling the modelark api",
+    "work from bytedance video model in dreamina, with a modelark api documented by byteplus",
+    "work from dreamina's documentation names seedance for video and says the creator app includes free daily credits",
+    "generate an image from the prompt"
+  ]
 }

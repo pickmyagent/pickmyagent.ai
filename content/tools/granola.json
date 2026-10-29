@@ -67,5 +67,19 @@
   },
   "useCaseFit": {
     "meetings-knowledge": "Takes meeting notes alongside your calls, and the free plan covers that."
-  }
+  },
+  "capabilities": [
+    "take notes during a meeting",
+    "keep meeting notes on a free plan",
+    "jot notes in a desktop notepad",
+    "take notes in a meeting",
+    "take meeting notes alongside the calls, and the free plan covers that",
+    "take meeting notes alongside the calls",
+    "take notes during meetings you are already in",
+    "help people who want a desktop notepad more than a wiki",
+    "work from notes during meetings you are already in",
+    "work from people who want a desktop notepad more than a wiki",
+    "work from meeting notes that sit alongside the calls. free to start. paid plans are on their site",
+    "work from free plan covers meeting notes, and the paid plan starts at per month"
+  ]
 }

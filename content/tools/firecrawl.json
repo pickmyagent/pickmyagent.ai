@@ -26,7 +26,7 @@
     "freemium",
     "usage"
   ],
-  "pricingNotes": "OSS repo exists; cloud has paid tiers (samples $16/$75 etc.).",
+  "pricingNotes": "OSS repo exists, cloud has paid tiers (samples $16/$75 etc.).",
   "pricingUrl": "https://www.firecrawl.dev/pricing",
   "docsUrl": "https://docs.firecrawl.dev/",
   "freeTier": true,
@@ -80,5 +80,17 @@
   "useCaseFit": {
     "tool-use-browser": "Turns website pages into markdown an agent can read, with a free cloud plan.",
     "research-rag": "Turns source pages into markdown so an agent can quote the page it fetched."
-  }
+  },
+  "capabilities": [
+    "turn website pages into markdown an agent can read, with a free cloud plan",
+    "turn website pages into markdown an agent can read",
+    "help teams that want either a cloud api or an open-source repo",
+    "help teams that want either a cloud api",
+    "help teams an open-source repo",
+    "work from turning pages into clean text for retrieval",
+    "work from teams that want either a cloud api or an open-source repo",
+    "work from free cloud plan includes 1,000 credits per month to turn pages into markdown, and the repo is open source",
+    "work from crawls pages into markdown for language models",
+    "turn website pages into markdown an agent can read, with the free cloud plan"
+  ]
 }

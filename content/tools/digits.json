@@ -1,0 +1,78 @@
+{
+  "id": "digits",
+  "slug": "digits",
+  "name": "Digits",
+  "websiteUrl": "https://digits.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Digits can categorize transactions automatically.",
+  "longDescription": "Digits can categorize transactions automatically. It can also close the books faster.",
+  "categories": [
+    "bookkeeping"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://digits.com/",
+  "docsUrl": "https://digits.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Categorize transactions automatically",
+    "Close the books faster"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Digits can categorize transactions automatically.",
+  "weakness": "You still review the books before you close the period.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://digits.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://digits.com/"
+  },
+  "capabilities": [
+    "categorize transactions automatically",
+    "close the books faster",
+    "see a live profit and loss",
+    "help us provide deeper insights to a clients",
+    "find one through digits' accounting firm directory",
+    "use free trial",
+    "use digits - ai-native accounting software accounting software",
+    "use ai accounting gather data and insights real-time categorizati",
+    "use agentic general ledger",
+    "use multi-entity is here",
+    "use one place to manage every entity",
+    "use separate books"
+  ]
+}

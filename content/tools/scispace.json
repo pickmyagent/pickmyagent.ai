@@ -63,5 +63,14 @@
   },
   "useCaseFit": {
     "deep-research": "Literature review and chat-with-PDF tools for research papers."
-  }
+  },
+  "capabilities": [
+    "do a literature review and chat-with-pdf tools for research papers",
+    "do a literature chat-with-pdf tools for research papers",
+    "work from reading papers with chat and a literature-review tool",
+    "work from literature review and chat with pdf for scientific papers",
+    "do the literature review and chat-with-pdf tools for research papers",
+    "do the literature chat-with-pdf tools for research papers",
+    "work from reading papers with chat and the literature-review tool"
+  ]
 }

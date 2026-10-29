@@ -63,5 +63,14 @@
   },
   "useCaseFit": {
     "manage-inbox": "AI email client at $30 per seat per month with a 14-day trial."
-  }
+  },
+  "capabilities": [
+    "use everyday ai productivity at $30 per seat per month and a 14-day free trial",
+    "use everyday ai productivity at $30 per seat per month",
+    "work from searching an inbox and drafting from an ai email client",
+    "work from email ai at per seat per month, with a 14-day free trial",
+    "use everyday ai productivity at $30 per seat per month and the 14-day free trial",
+    "work from searching the inbox and drafting from an ai email client",
+    "work from email ai at per seat per month, with the 14-day free trial"
+  ]
 }

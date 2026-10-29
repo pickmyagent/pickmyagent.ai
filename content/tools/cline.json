@@ -1,0 +1,74 @@
+{
+  "id": "cline",
+  "slug": "cline",
+  "name": "Cline",
+  "websiteUrl": "https://cline.bot/",
+  "affiliateUrl": null,
+  "shortDescription": "Cline can edit files with an agent in the editor.",
+  "longDescription": "Cline can edit files with an agent in the editor. It can also run a terminal command for a task.",
+  "categories": [
+    "coding-agents"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://cline.bot/",
+  "docsUrl": "https://cline.bot/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Edit files with an agent in the editor",
+    "Run a terminal command for a task"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Cline can edit files with an agent in the editor.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://cline.bot/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://cline.bot/"
+  },
+  "capabilities": [
+    "edit files with an agent in the editor",
+    "run a terminal command for a task",
+    "use a model you bring",
+    "browse docs while coding",
+    "apply a multi file change",
+    "edit across a project coordinated multi-file changes with linter-aware fixes, diffs, checkpoints, and one-click undo on every step",
+    "edit across a project coordinated multi-file changes with linter-aware fixes, diffs, checkpoints,",
+    "plan then act toggle plan mode to align on a strategy, then act to execute"
+  ]
+}

@@ -68,5 +68,15 @@
   },
   "useCaseFit": {
     "make-3d": "Turns text or a picture into a 3D asset."
-  }
+  },
+  "capabilities": [
+    "turn text or a picture into a 3d asset",
+    "turn a picture into a 3d asset",
+    "work from quick 3d assets for a game or prototype",
+    "work from text and image to 3d assets. free to start. paid plans are on their site",
+    "work from free plan includes 100 credits per month, with no credit card needed to try text-to-3d and image-to-3d",
+    "turn text or the picture into a 3d asset",
+    "turn the picture into a 3d asset",
+    "work from quick 3d assets for the game or prototype"
+  ]
 }

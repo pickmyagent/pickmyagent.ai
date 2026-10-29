@@ -1,0 +1,78 @@
+{
+  "id": "ynab",
+  "slug": "ynab",
+  "name": "YNAB",
+  "websiteUrl": "https://www.ynab.com/",
+  "affiliateUrl": null,
+  "shortDescription": "YNAB can plan a monthly budget.",
+  "longDescription": "YNAB can plan a monthly budget. It can also track spending by category.",
+  "categories": [
+    "investing"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.ynab.com/",
+  "docsUrl": "https://www.ynab.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Plan a monthly budget",
+    "Track spending by category"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "YNAB can plan a monthly budget for this kind of work.",
+  "weakness": "You still decide on any trade, and this is not financial advice.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.ynab.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.ynab.com/"
+  },
+  "capabilities": [
+    "plan a monthly budget",
+    "track spending by category",
+    "make a plan ask \u201cwhat\u2019s it for?\u201d",
+    "use have you ever worried about money",
+    "use download ynab",
+    "use ynab do you worry about money",
+    "use tired of worrying about money",
+    "use it takes 20 minutes to start getting good",
+    "use what will you accomplish with ynab",
+    "use ynab it looks like you",
+    "use what is ynab",
+    "use pricing what is ynab"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "layer",
+  "slug": "layer",
+  "name": "Layer AI",
+  "websiteUrl": "https://layer.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Layer AI can generate game art.",
+  "longDescription": "Layer AI can generate game art. It can also train a style for assets.",
+  "categories": [
+    "gaming"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://layer.ai/",
+  "docsUrl": "https://layer.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generate game art",
+    "Train a style for assets"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Layer AI can generate game art for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://layer.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://layer.ai/"
+  },
+  "capabilities": [
+    "generate game art",
+    "train a style for assets",
+    "create consistent characters",
+    "export game art",
+    "produce marketing art for a game",
+    "generate images, video, 3d and audio with 500+ models, train layer on a style, automate production",
+    "generate images, video, 3d",
+    "edit into a pipeline you can rerun new model seedance 2.5 seedance 2.5 seedance 2.5"
+  ]
+}

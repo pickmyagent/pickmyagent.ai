@@ -67,5 +67,15 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns an uploaded floor plan into an editable 3D scene."
   },
-  "id": "coohom"
+  "id": "coohom",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "turn an uploaded floor plan into an editable 3d scene",
+    "turn an uploaded floor plan into an editable 3d scene you can render",
+    "work from uploaded floor plan that should become an editable 3d scene",
+    "work from interior presentation you furnish after the plan is read",
+    "work from uploads a floor plan and builds an editable 3d scene. a free basic account is available",
+    "turn the floor plan into a render",
+    "turn the uploaded floor plan into an editable 3d scene"
+  ]
 }

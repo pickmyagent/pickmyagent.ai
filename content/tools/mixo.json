@@ -1,0 +1,78 @@
+{
+  "id": "mixo",
+  "slug": "mixo",
+  "name": "Mixo",
+  "websiteUrl": "https://www.mixo.io/",
+  "affiliateUrl": null,
+  "shortDescription": "Mixo can publish a site from an idea.",
+  "longDescription": "Mixo can publish a site from an idea. It can also edit a landing page.",
+  "categories": [
+    "ecommerce"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.mixo.io/",
+  "docsUrl": "https://www.mixo.io/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Publish a site from an idea",
+    "Edit a landing page"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Mixo can publish a site from an idea for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.mixo.io/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.mixo.io/"
+  },
+  "capabilities": [
+    "publish a site from an idea",
+    "edit a landing page",
+    "capture customer details from a website and keep everything in one place",
+    "capture customer details from a website",
+    "use mixo mixo",
+    "use built with mixo",
+    "use bosworth law firm mixo",
+    "use free plan available",
+    "use trustpilot built with mixo",
+    "use real websites created by real businesses",
+    "use bosworth law firm professional services business renovate pro",
+    "use home services business craftipanda service based business tem"
+  ]
+}

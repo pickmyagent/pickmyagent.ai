@@ -63,5 +63,15 @@
   },
   "useCaseFit": {
     "it-helpdesk": "IT service desk with Starter at $19 per agent per month billed annually."
-  }
+  },
+  "capabilities": [
+    "help an it service desk with starter at $19 per agent per month billed annually",
+    "help an it help desk with a published annual per-agent price",
+    "use an it starter plan at $19 per agent per month when billed annually",
+    "work from it help desk with a published annual per-agent price",
+    "work from it service desk. starter is per agent per month billed annually",
+    "help the it service desk with starter at $19 per agent per month billed annually",
+    "help an it help desk with the published annual per-agent price",
+    "help the it help desk with a published annual per-agent price"
+  ]
 }

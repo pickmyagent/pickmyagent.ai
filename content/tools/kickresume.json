@@ -6,11 +6,21 @@
   "affiliateUrl": null,
   "shortDescription": "Resume builder whose AI writes bullets from a job title. Free to try. Paid plans are on their site.",
   "longDescription": "Kickresume's homepage says its AI resume writer generates work-experience bullets from a job title, and that you can score a resume and tailor it to a job description. The page says the builder is free to try. It did not list a monthly plan price.",
-  "categories": ["hiring"],
-  "useCaseTags": ["write-resume"],
-  "toolTypes": ["other"],
-  "platforms": ["web"],
-  "pricingModel": ["freemium"],
+  "categories": [
+    "hiring"
+  ],
+  "useCaseTags": [
+    "write-resume"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium"
+  ],
   "pricingNotes": "The homepage says the builder is free to try. It did not list a monthly plan price.",
   "pricingUrl": "https://www.kickresume.com/en/",
   "docsUrl": "https://www.kickresume.com/en/",
@@ -36,7 +46,9 @@
   "checkedAt": "2026-10-19T22:00:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -44,9 +56,25 @@
   "status": "published",
   "publishedAt": "2026-10-19",
   "updatedAt": "2026-10-19",
-  "sources": ["https://www.kickresume.com/en/"],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.kickresume.com/en/" },
+  "sources": [
+    "https://www.kickresume.com/en/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.kickresume.com/en/"
+  },
   "useCaseFit": {
     "write-resume": "Writes resume bullets from a job title and can score the resume."
-  }
+  },
+  "capabilities": [
+    "draft resume bullets for a role",
+    "write resume bullets from a job title and can score the resume",
+    "write resume bullets from a job title",
+    "write can score the resume",
+    "draft resume bullets from a job title",
+    "work from drafting resume bullets from a job title",
+    "work from scoring a resume and tailoring it to a posting",
+    "work from resume builder whose ai writes bullets from a job title. free to try. paid plans are on their site",
+    "draft resume bullets for the role"
+  ]
 }

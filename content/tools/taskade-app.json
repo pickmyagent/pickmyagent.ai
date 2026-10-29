@@ -1,0 +1,78 @@
+{
+  "id": "taskade-app",
+  "slug": "taskade-app",
+  "name": "Taskade",
+  "websiteUrl": "https://www.taskade.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Taskade can automate a workflow.",
+  "longDescription": "Taskade can automate a workflow. It can also track a project.",
+  "categories": [
+    "productivity"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.taskade.com/",
+  "docsUrl": "https://www.taskade.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Automate a workflow",
+    "Track a project"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Taskade can automate a workflow for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.taskade.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.taskade.com/"
+  },
+  "capabilities": [
+    "automate a workflow",
+    "track a project",
+    "turn business processes into live apps",
+    "build and run crms, dashboards, and client portals that use ai agents and automated workflows, all with taskade genesis",
+    "turn business processes into live apps | taskade genesis turn business processes into live apps",
+    "make it yours",
+    "build a complete app ai agents (opens in a new tab) an ai agent with tools",
+    "turn one prompt into a real app with agents and automations included",
+    "turn one prompt into a real app with agents",
+    "build a app free a browser does not support the video tag",
+    "build a app free a workspace, alive",
+    "clone & remix every great app is a seed"
+  ]
+}

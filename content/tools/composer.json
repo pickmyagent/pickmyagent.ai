@@ -65,5 +65,15 @@
   },
   "useCaseFit": {
     "manage-portfolio": "Automates one trading strategy on the $0 Starter plan, and Advanced is $10 a month."
-  }
+  },
+  "capabilities": [
+    "automate one trading strategy on the $0 starter plan, and advanced is $10 a month",
+    "automate one trading strategy on the $0 starter plan",
+    "automate advanced is $10 a month",
+    "work from automating one strategy on the starter plan",
+    "work from automates a trading strategy. starter is advanced is per month",
+    "work from starter is and can automate one strategy, and advanced is per month",
+    "automate one trading strategy on the $0 starter plan, and advanced is $10 the month",
+    "automate one trading strategy on a $0 starter plan, and advanced is $10 a month"
+  ]
 }

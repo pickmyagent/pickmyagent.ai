@@ -63,5 +63,15 @@
   },
   "useCaseFit": {
     "do-taxes": "Offers guided online tax filing and says you can start for free."
-  }
+  },
+  "capabilities": [
+    "file taxes online with guided questions",
+    "start a personal return for free",
+    "get help on a more complex return",
+    "use guided online tax filing and says you can start for free",
+    "use guided online tax filing",
+    "start a personal return online with guided questions",
+    "work from starting a personal return online with guided questions",
+    "start the personal return for free"
+  ]
 }

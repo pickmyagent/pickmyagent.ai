@@ -68,5 +68,16 @@
   },
   "useCaseFit": {
     "video-generation": "Creates a short video from a prompt, a photo, or keyframes."
-  }
+  },
+  "capabilities": [
+    "generate a video from a prompt",
+    "create a short video from a prompt, a photo, or keyframes",
+    "create a short video from a prompt",
+    "create a photo",
+    "work from generating a short video from a prompt or a photo",
+    "work from creators comparing hosted text-to-video tools",
+    "work from generates short videos from prompts, photos, or keyframes. starter is /month",
+    "work from starter is per month for 900 credits, and video studio covers a short clip up to a 30-second multi-shot video",
+    "generate the video from a prompt"
+  ]
 }

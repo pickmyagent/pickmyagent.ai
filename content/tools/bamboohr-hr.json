@@ -1,0 +1,78 @@
+{
+  "id": "bamboohr-hr",
+  "slug": "bamboohr-hr",
+  "name": "BambooHR",
+  "websiteUrl": "https://www.bamboohr.com/",
+  "affiliateUrl": null,
+  "shortDescription": "BambooHR can onboard an employee.",
+  "longDescription": "BambooHR can onboard an employee. It can also manage benefits.",
+  "categories": [
+    "hr"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.bamboohr.com/",
+  "docsUrl": "https://www.bamboohr.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Onboard an employee",
+    "Manage benefits"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "BambooHR can onboard an employee for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.bamboohr.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.bamboohr.com/"
+  },
+  "capabilities": [
+    "onboard an employee",
+    "manage benefits",
+    "manage multi-rate pay, simplify time off requests, streamline benefits enrollment,",
+    "create salary bands, streamline approvals, communicate total rewards,",
+    "make a hr operations more efficient",
+    "use bamboohr makes it easy to simplify hr",
+    "use learn more with a free demo today",
+    "use the complete hr software for people",
+    "use bamboohr announcements meet bamboo ai",
+    "use hiring & onboarding payroll",
+    "use time & benefits employee experience & performance compensatio",
+    "use meet the intelligence layer built into bamboohr"
+  ]
+}

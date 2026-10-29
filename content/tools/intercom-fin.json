@@ -65,5 +65,15 @@
   },
   "useCaseFit": {
     "customer-support": "Sells a customer-support AI agent at $19 per seat per month plus $0.99 per outcome."
-  }
+  },
+  "capabilities": [
+    "run an ai agent on top of the inbox",
+    "use a customer-support ai agent at $19 per seat per month plus $0.99 per outcome",
+    "help a support inbox that wants an ai agent on top of intercom seats",
+    "work from support inbox that wants an ai agent on top of intercom seats",
+    "work from support agent priced from per outcome and per seat each month",
+    "work from intercom lists fin from per outcome and a seat price of per month on the starter plan",
+    "run an ai agent on top of a inbox",
+    "run the ai agent on top of the inbox"
+  ]
 }

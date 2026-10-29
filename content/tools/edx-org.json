@@ -1,0 +1,78 @@
+{
+  "id": "edx-org",
+  "slug": "edx-org",
+  "name": "edX",
+  "websiteUrl": "https://www.edx.org/",
+  "affiliateUrl": null,
+  "shortDescription": "edX can learn a subject.",
+  "longDescription": "edX can learn a subject. It can also solve a problem.",
+  "categories": [
+    "education"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.edx.org/",
+  "docsUrl": "https://www.edx.org/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Learn a subject",
+    "Solve a problem"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "edX can learn a subject for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.edx.org/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.edx.org/"
+  },
+  "capabilities": [
+    "learn a subject",
+    "solve a problem",
+    "follow a course",
+    "find the online learning path for you, delivered by world-class institutions like harvard, google, amazon, and more",
+    "find the online learning path for you, delivered by world-class institutions like harvard, google, amazon,",
+    "find a range of programs covering diverse topics for all types of students",
+    "find the online learning path for you",
+    "use find the online learning path for you",
+    "use certificates & degrees from leading institutions explore top",
+    "use register for a free account edx",
+    "use fall reset",
+    "use use code fall2026 for a limited time"
+  ]
+}

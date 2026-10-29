@@ -1,4 +1,6 @@
+import { projectUnit, quantizeUnit } from "./projection.ts";
 import type { SemanticScore } from "./semantic-config.ts";
+import type { CapabilityCosine } from "./search.ts";
 
 export type StoredEmbeddingIndex = {
   model: string;
@@ -77,6 +79,66 @@ export function decodeStoredIndex(stored: StoredEmbeddingIndex): EmbeddingIndex 
     documents: stored.documents,
     corpusHash: stored.corpusHash,
   };
+}
+
+export type StoredCapabilityIndex = {
+  model: string;
+  dim: number;
+  ids: string[];
+  matrix: string;
+};
+
+export type CapabilityIndex = {
+  model: string;
+  dim: number;
+  ids: string[];
+  matrix: Int8Array;
+};
+
+function bytesToBase64(bytes: Uint8Array): string {
+  let binary = "";
+  const chunk = 0x8000;
+  for (let index = 0; index < bytes.length; index += chunk) {
+    binary += String.fromCharCode(...bytes.subarray(index, index + chunk));
+  }
+  return btoa(binary);
+}
+
+export function encodeInt8Matrix(matrix: Int8Array): string {
+  return bytesToBase64(new Uint8Array(matrix.buffer, matrix.byteOffset, matrix.byteLength));
+}
+
+export function decodeCapabilityIndex(stored: StoredCapabilityIndex): CapabilityIndex {
+  const bytes = base64ToBytes(stored.matrix);
+  return {
+    model: stored.model,
+    dim: stored.dim,
+    ids: stored.ids,
+    matrix: Int8Array.from(bytes),
+  };
+}
+
+/** Cosine of a full bge query vector against every stored capability. */
+export function capabilityCosines(index: CapabilityIndex, vector: Float32Array): CapabilityCosine[] {
+  const query = quantizeUnit(projectUnit(vector));
+  const scores: CapabilityCosine[] = [];
+  const { dim, ids, matrix } = index;
+  let queryNorm = 0;
+  for (const value of query) queryNorm += value * value;
+  queryNorm = Math.sqrt(queryNorm) || 1;
+  for (let row = 0; row < ids.length; row += 1) {
+    let dot = 0;
+    let docNorm = 0;
+    const offset = row * dim;
+    for (let column = 0; column < dim; column += 1) {
+      const value = matrix[offset + column] ?? 0;
+      dot += (query[column] ?? 0) * value;
+      docNorm += value * value;
+    }
+    const cosine = dot / (queryNorm * (Math.sqrt(docNorm) || 1));
+    scores.push({ key: ids[row] ?? "", cosine });
+  }
+  return scores;
 }
 
 function topMean(values: number[]): number {

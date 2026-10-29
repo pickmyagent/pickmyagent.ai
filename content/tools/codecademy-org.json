@@ -1,0 +1,78 @@
+{
+  "id": "codecademy-org",
+  "slug": "codecademy-org",
+  "name": "Codecademy",
+  "websiteUrl": "https://www.codecademy.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Codecademy can learn a subject.",
+  "longDescription": "Codecademy can learn a subject. It can also solve a problem.",
+  "categories": [
+    "education"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.codecademy.com/",
+  "docsUrl": "https://www.codecademy.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Learn a subject",
+    "Solve a problem"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Codecademy can learn a subject for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.codecademy.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.codecademy.com/"
+  },
+  "capabilities": [
+    "learn a subject",
+    "solve a problem",
+    "build real skills through hands-on learning and keep pace with a fast-moving industry",
+    "build real skills through hands-on learning",
+    "track team progress go further together get help when you need it, build a network,",
+    "use learn to code - for free",
+    "use ai entrepreneur checker dense with certificate full-stack dev",
+    "use professional skills java web development data analytics inter",
+    "use game development cloud computing cybersecurity go devops cert",
+    "use top subjects certification prep code foundations python html",
+    "use looking for something else",
+    "use machine learning specialist machine learning data scientists"
+  ]
+}

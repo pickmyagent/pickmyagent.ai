@@ -76,5 +76,17 @@
   },
   "useCaseFit": {
     "tool-use-browser": "Connects agents to third-party apps, with a Hobby plan of tool calls."
-  }
+  },
+  "capabilities": [
+    "connect agents to third-party apps, with a hobby plan of tool calls",
+    "connect agents to third-party apps",
+    "connect with a hobby plan of tool calls",
+    "use agents that need many saas tools without custom oauth for each one",
+    "help teams evaluating a hosted tool layer with an open-source sdk",
+    "work from agents that need many saas tools without custom oauth for each one",
+    "work from teams evaluating a hosted tool layer with an open-source sdk",
+    "work from connects agents to third-party apps and tools. free to start. paid plans are on their site",
+    "work from hobby plan includes 100,000 tool calls per month for connecting agents to third-party apps",
+    "connect agents to third-party apps, with the hobby plan of tool calls"
+  ]
 }

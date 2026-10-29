@@ -1,0 +1,73 @@
+{
+  "id": "calendly",
+  "slug": "calendly",
+  "name": "Calendly",
+  "websiteUrl": "https://calendly.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Calendly can share a scheduling link.",
+  "longDescription": "Calendly can share a scheduling link. It can also book a meeting without email tag.",
+  "categories": [
+    "scheduling"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://calendly.com/",
+  "docsUrl": "https://calendly.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Share a scheduling link",
+    "Book a meeting without email tag"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Calendly can share a scheduling link for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://calendly.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://calendly.com/"
+  },
+  "capabilities": [
+    "share a scheduling link",
+    "book a meeting without email tag",
+    "route a lead to the right calendar",
+    "send invoices with payment features that make it easy to get paid",
+    "help you show up prepared",
+    "capture focus on the conversation",
+    "review a pre-drafted email based on the recap, add an additional invoice link if needed,"
+  ]
+}

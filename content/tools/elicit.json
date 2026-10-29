@@ -64,5 +64,12 @@
   },
   "useCaseFit": {
     "deep-research": "AI research assistant with Plus at $11 per user per month when billed annually."
-  }
+  },
+  "capabilities": [
+    "do a literature review in a research assistant with a published annual price",
+    "work from literature review in a research assistant with a published annual price",
+    "work from ai research assistant. plus is per user per month billed annually",
+    "do the literature review in a research assistant with a published annual price",
+    "work from literature review in the research assistant with a published annual price"
+  ]
 }

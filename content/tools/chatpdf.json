@@ -1,0 +1,77 @@
+{
+  "id": "chatpdf",
+  "slug": "chatpdf",
+  "name": "ChatPDF",
+  "websiteUrl": "https://www.chatpdf.com/",
+  "affiliateUrl": null,
+  "shortDescription": "ChatPDF can summarize a paper.",
+  "longDescription": "ChatPDF can summarize a paper. It can also cite a page in an answer.",
+  "categories": [
+    "research"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.chatpdf.com/",
+  "docsUrl": "https://www.chatpdf.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Summarize a paper",
+    "Cite a page in an answer"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "ChatPDF can summarize a paper for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.chatpdf.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.chatpdf.com/"
+  },
+  "capabilities": [
+    "summarize a paper",
+    "cite a page in an answer",
+    "upload a document",
+    "chat with a research paper",
+    "summarize chat, and analyze",
+    "summarize and answer questions for free",
+    "answer questions for free",
+    "answer multiple choice questions faster than a classmates",
+    "organize multi-file chats bring multiple pdfs into one conversation",
+    "extract the key insights without reading everything",
+    "extract information in seconds, backed up by the latest pdf ai technology"
+  ]
+}

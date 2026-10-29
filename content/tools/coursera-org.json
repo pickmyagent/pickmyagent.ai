@@ -1,0 +1,78 @@
+{
+  "id": "coursera-org",
+  "slug": "coursera-org",
+  "name": "Coursera",
+  "websiteUrl": "https://www.coursera.org/",
+  "affiliateUrl": null,
+  "shortDescription": "Coursera can use learn job-ready skills with online courses.",
+  "longDescription": "Coursera can use learn job-ready skills with online courses. It can also use professional certificates.",
+  "categories": [
+    "education"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.coursera.org/",
+  "docsUrl": "https://www.coursera.org/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Use learn job-ready skills with online courses",
+    "Use professional certificates"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Coursera can use learn job-ready skills with online courses.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.coursera.org/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.coursera.org/"
+  },
+  "capabilities": [
+    "use learn job-ready skills with online courses",
+    "use professional certificates",
+    "use degrees learn job-ready skills with online courses",
+    "use degrees coursera",
+    "use boutros coursera",
+    "source sans pro",
+    "use source sans pro",
+    "use buttontext solid",
+    "use search-inputroot fieldset",
+    "use selectgroup-list div",
+    "use selectgroup-list button",
+    "use selectgroup-divider hr"
+  ]
+}

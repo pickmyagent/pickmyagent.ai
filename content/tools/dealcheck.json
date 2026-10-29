@@ -67,5 +67,19 @@
   "useCaseFit": {
     "rank-property-deals": "Runs rental cash flow, house flipping, and commercial calculators and compares properties side by side.",
     "real-estate": "Calculates rental cash flow, flip profit, and commercial numbers side by side."
-  }
+  },
+  "capabilities": [
+    "compare cash flow on a rental",
+    "run rental cash flow, house flipping, and commercial calculators and compares properties side by side",
+    "run house flipping",
+    "run commercial calculators",
+    "run compares properties side by side",
+    "compare rental cash flow, flip profit, and commercial property numbers side by side",
+    "compare rental cash flow",
+    "compare flip profit",
+    "compare commercial property numbers side by side",
+    "work from comparing rental cash flow, flip profit, and commercial property numbers side by side",
+    "work from deal calculator for rentals, flips, and commercial properties, with a free starter plan",
+    "work from there is a free starter plan, plus is per month, and pro is per month, with a rental, flip, and commercial calculator"
+  ]
 }

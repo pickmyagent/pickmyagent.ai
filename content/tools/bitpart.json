@@ -21,7 +21,7 @@
   "pricingModel": [
     "contact"
   ],
-  "pricingNotes": "Contact/sales likely; do not invent prices.",
+  "pricingNotes": "Contact/sales likely, do not invent prices.",
   "pricingUrl": "https://www.bitpart.ai/product",
   "docsUrl": "https://www.bitpart.ai/",
   "freeTier": null,
@@ -68,5 +68,15 @@
   },
   "useCaseFit": {
     "game-npcs": "NPC engine with SDKs for game characters, and no public price grid."
-  }
+  },
+  "capabilities": [
+    "build for a game teams evaluating an npc engine with sdks",
+    "work from game teams evaluating an npc engine with sdks",
+    "work from projects that can talk to the vendor about price",
+    "work from npc engine for games, with sdks described on the product page. no public price grid was found",
+    "work from product page describes an npc engine with sdks for game characters",
+    "work from builds npcs for games",
+    "build for the game teams evaluating an npc engine with sdks",
+    "build for a game teams evaluating the npc engine with sdks"
+  ]
 }

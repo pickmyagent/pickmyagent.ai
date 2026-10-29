@@ -72,5 +72,19 @@
     "rank-property-deals": "Filters property records, including off-market ones.",
     "real-estate": "Searches property records, including off-market listings, from one set of filters.",
     "realtor-prospecting": "Searches expired, FSBO, and farm-area records in one property list."
-  }
+  },
+  "capabilities": [
+    "find off-market property leads",
+    "search property records with an ai search box, and essentials is $99 per month",
+    "search property records with an ai search box",
+    "search essentials is $99 per month",
+    "search property records, including off-market listings, from one set of filters",
+    "search property records",
+    "search including off-market listings",
+    "search from one set of filters",
+    "search expired, fsbo, and farm-area records in one property list",
+    "search farm-area records in one property list",
+    "work from searching properties with filters and an ai search box during a 7-day trial",
+    "work from property search with an ai search box. essentials is per month"
+  ]
 }

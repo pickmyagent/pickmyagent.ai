@@ -1,0 +1,78 @@
+{
+  "id": "aider",
+  "slug": "aider",
+  "name": "Aider",
+  "websiteUrl": "https://aider.chat/",
+  "affiliateUrl": null,
+  "shortDescription": "Aider can pair program in the terminal.",
+  "longDescription": "Aider can pair program in the terminal. It can also edit a git repo with a model.",
+  "categories": [
+    "coding-agents"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://aider.chat/",
+  "docsUrl": "https://aider.chat/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Pair program in the terminal",
+    "Edit a git repo with a model"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Aider can pair program in the terminal for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://aider.chat/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://aider.chat/"
+  },
+  "capabilities": [
+    "pair program in the terminal",
+    "edit a git repo with a model",
+    "commit a change the agent made",
+    "find additional resources llm leaderboards github repository discord community release notes blog documentation github discord blog",
+    "use github stars 44k",
+    "use tokens/week 15b",
+    "use deepseek r1 & chat v3",
+    "use aider works with most popular programming languages",
+    "use git integration aider automatically commits changes with sens",
+    "use use familiar git tools to easily diff",
+    "use request new features",
+    "use llm via its web chat interface"
+  ]
+}
