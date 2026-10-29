@@ -1,0 +1,70 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "rendair",
+  "name": "Rendair",
+  "websiteUrl": "https://rendair.ai/",
+  "shortDescription": "Turns a sketch or floor plan into a 3D project and a render. Starter is $19 a month.",
+  "longDescription": "Rendair turns a sketch, a floor plan, or a 3D model into a project you can render and revise in chat. Uploading a 2D floor plan builds the 3D project, with walls, rooms, and volumes. Starter is $19 a month for 500 credits, Pro is $49 a month for 1,500 credits, and Studio Pro is $199 a month for 7,500 credits.",
+  "pricingModel": [
+    "subscription"
+  ],
+  "pricingNotes": "Starter is $19 per month for 500 credits. Pro is $49 per month for 1,500 credits and 2 members. Studio Pro is $199 per month for 7,500 credits and 5 members. Annual billing saves 2 months.",
+  "pricingUrl": "https://rendair.ai/pricing",
+  "docsUrl": "https://rendair.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": 19,
+  "bestFor": [
+    "A 2D floor plan that should become a 3D project and a render",
+    "A sketch you want to revise in chat"
+  ],
+  "notIdealFor": [
+    "Virtual staging of a vacant listing photo",
+    "A generic image with no plan or sketch"
+  ],
+  "strength": "Rendair uploads a 2D floor plan, builds the 3D project, and generates renders you can revise on a board.",
+  "weakness": "Starter is $19 per month, and the public pricing page does not list a free credit grant.",
+  "sources": [
+    "https://rendair.ai/",
+    "https://rendair.ai/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://rendair.ai/"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns an uploaded floor plan into a 3D project and a render."
+  },
+  "id": "rendair"
+}

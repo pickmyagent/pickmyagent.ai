@@ -1,0 +1,71 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "spacely",
+  "name": "Spacely AI",
+  "websiteUrl": "https://www.spacely.ai/",
+  "shortDescription": "Turns a sketch, a 3D model, or a room photo into a photoreal render. No card to start.",
+  "longDescription": "Spacely AI turns a sketch, a 3D model, or a room photo into a photoreal render and says the render can finish in under 60 seconds. Plugins are listed for SketchUp, with Rhino and Revit named as well. Creating an account does not require a card. A June 2026 pricing post says a lapsed Personal plan returns at $25 a month for 500 credits, Studio at $50 a month for 1,500 credits, and Agency at $100 a month for 3,500 credits.",
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "No card is required to create an account. A lapsed Personal plan is $25 per month for 500 credits, Studio is $50 per month for 1,500 credits, and Agency is $100 per month for 3,500 credits.",
+  "pricingUrl": "https://www.spacely.ai/blog/spacely-ai-subscription-plans-2026-new-pricing-explained",
+  "docsUrl": "https://www.spacely.ai/",
+  "freeTier": true,
+  "freeTierNotes": "Account creation does not require a card.",
+  "startingPrice": 25,
+  "bestFor": [
+    "A sketch or room photo that should become a photoreal render",
+    "A SketchUp view you want to render without leaving the model"
+  ],
+  "notIdealFor": [
+    "A measured floor plan delivered from a phone scan",
+    "Virtual staging priced per listing photo"
+  ],
+  "strength": "Spacely AI turns a sketch, a 3D model, or a room photo into a photoreal render, and signup does not require a card.",
+  "weakness": "A lapsed Personal plan is $25 per month, and the AutoCAD connection was still described as upcoming on the pricing post.",
+  "sources": [
+    "https://www.spacely.ai/",
+    "https://www.spacely.ai/blog/spacely-ai-subscription-plans-2026-new-pricing-explained"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.spacely.ai/"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a sketch, a 3D model, or a room photo into a photoreal render."
+  },
+  "id": "spacely"
+}

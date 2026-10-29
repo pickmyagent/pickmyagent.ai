@@ -561,6 +561,86 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.",
     ],
   },
+  "floor-plan-rendering": {
+    mnml: [
+      "mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.",
+    ],
+    morphome: [
+      "Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.",
+    ],
+    mnki: [
+      "MNKI turns a floor plan image into a furnished 3D view or a perspective render.",
+    ],
+    rendair: [
+      "Rendair turns a sketch or floor plan into a 3D project and a render.",
+    ],
+    moldaspace: [
+      "MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.",
+    ],
+    plan2render: [
+      "Plan2Render turns a floor plan, an elevation, or a sketch into a photorealistic rendering.",
+    ],
+    renderahouse: [
+      "Render a House turns a sketch, a floor plan, or a photo into a photorealistic render.",
+    ],
+    architectgpt: [
+      "ArchitectGPT turns a room photo into a redesign and a floor plan into a furnished render.",
+    ],
+    homedesigns: [
+      "HomeDesigns AI turns a room photo or a flat floor plan into a redesigned picture.",
+    ],
+    planner5d: [
+      "Planner 5D turns an uploaded floor plan image into an editable 3D project you can render.",
+    ],
+    spacely: [
+      "Spacely AI turns a sketch, a 3D model, or a room photo into a photoreal render.",
+    ],
+    veras: [
+      "Veras turns a sketch, a floor plan, or a model view into a visualization.",
+    ],
+    lookx: [
+      "LookX turns a sketch into an architectural render.",
+    ],
+    roomsketcher: [
+      "RoomSketcher turns a 2D floor plan into a 3D floor plan.",
+    ],
+    promeai: [
+      "PromeAI turns a sketch, a photo, or a modeling screenshot into a realistic render.",
+    ],
+    homestyler: [
+      "Homestyler builds a 3D floor plan in the browser and renders it.",
+    ],
+    cedreo: [
+      "Cedreo draws a floor plan or reads an uploaded plan and produces photoreal renderings.",
+    ],
+    floorplanner: [
+      "Floorplanner draws a floor plan in the browser and exports a 2D or 3D image.",
+    ],
+    reimaginehome: [
+      "REimagineHome turns a room photo into a renovation preview.",
+    ],
+    coohom: [
+      "Coohom turns an uploaded floor plan into an editable 3D scene.",
+    ],
+    "interior-ai": [
+      "Interior AI turns a room photo or an interior sketch into a photoreal redesign.",
+    ],
+    myarchitectai: [
+      "MyArchitectAI renders an uploaded design view or a sketch.",
+    ],
+    arkoai: [
+      "ArkoAI renders the active model view or a screenshot you upload.",
+    ],
+    archivinci: [
+      "ArchiVinci renders a floor plan and furnishes a 2D plan.",
+    ],
+    roomgpt: [
+      "RoomGPT turns one room photo into a restyled picture.",
+    ],
+    "d5-render": [
+      "D5 Render renders a live 3D model and includes AI image tools.",
+    ],
+  },
   "run-a-business": {
     dext: [
       "Dext captures receipts and invoices so a small business can keep the books current.",

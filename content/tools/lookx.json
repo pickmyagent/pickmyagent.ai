@@ -1,0 +1,71 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "lookx",
+  "name": "LookX",
+  "websiteUrl": "https://www.lookx.ai/",
+  "shortDescription": "Turns sketches into architectural renders. The monthly plan is $20.",
+  "longDescription": "LookX turns text and sketches into rendering images and offers plugins for SketchUp and Rhino. You can also train a model on images of a style you want to repeat. The free plan needs no card. The monthly plan is $20 and the annual plan is $199. A team plan for 5 seats is $269.",
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "The free plan needs no card. Monthly is $20. Annual is $199. A team plan for 5 seats is $269.",
+  "pricingUrl": "https://www.lookx.ai/price.html",
+  "docsUrl": "https://www.lookx.ai/",
+  "freeTier": true,
+  "freeTierNotes": "Free plan. No card required.",
+  "startingPrice": 20,
+  "bestFor": [
+    "A sketch that should become an architectural render",
+    "A studio that wants a model trained on its own style"
+  ],
+  "notIdealFor": [
+    "A phone scan that should become a measured floor plan",
+    "Virtual staging of an empty listing photo"
+  ],
+  "strength": "LookX turns a sketch into an architectural render and can train a custom model on a style you upload.",
+  "weakness": "The monthly plan is $20, and the public site describes sketch rendering more clearly than a dedicated floor-plan upload.",
+  "sources": [
+    "https://www.lookx.ai/",
+    "https://www.lookx.ai/price.html"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.lookx.ai/"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a sketch into an architectural render."
+  },
+  "id": "lookx"
+}

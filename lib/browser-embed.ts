@@ -17,7 +17,7 @@ type RemoteEnv = {
   remoteHost: string;
   useBrowserCache: boolean;
   fetch: typeof fetch;
-  backends: { onnx: { wasm: { wasmPaths: { mjs: string; wasm: string } } } };
+  backends: { onnx: { wasm: { wasmPaths: { mjs: string; wasm: string }; numThreads: number } } };
 };
 
 const TRANSFORMERS_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.1/+esm";
@@ -100,7 +100,13 @@ async function loadExtractor(): Promise<Extractor> {
         runtimeUrl("ort-wasm-simd-threaded.asyncify.wasm"),
       ]);
       env.backends.onnx.wasm.wasmPaths = { mjs, wasm };
-      const extractor = await remote.pipeline("feature-extraction", EMBEDDING_MODEL, { dtype: EMBEDDING_DTYPE });
+      // iOS Safari is not cross-origin isolated, so a threaded or WebGPU session can
+      // throw. Pin one WASM thread. A thrown session would otherwise leave lexical results.
+      env.backends.onnx.wasm.numThreads = 1;
+      const extractor = await remote.pipeline("feature-extraction", EMBEDDING_MODEL, {
+        dtype: EMBEDDING_DTYPE,
+        device: "wasm",
+      });
       return extractor as unknown as Extractor;
     })();
   }

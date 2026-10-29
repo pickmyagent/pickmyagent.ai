@@ -6,7 +6,7 @@ import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
 import { NEUTRAL_LEAD } from "../lib/header-grammar.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
-import { buildHeldOut, buildOtherHeldOut, buildParaphrases, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
+import { buildHeldOut, buildHomeHeldOut, buildOtherHeldOut, buildParaphrases, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
 import { rankObserved } from "./rank-observed.ts";
 
 export type QaQuery = {
@@ -810,8 +810,10 @@ export function renderSearchQaReport(catalog: Catalog): string {
   const otherSeeds = sortSeeds(seeds.filter((item) => !item.realEstate), false);
   const heldOut = buildHeldOut();
   const otherHeldOut = buildOtherHeldOut();
+  const homeHeldOut = buildHomeHeldOut();
   const heldOutFail = new Set(graded.heldOutMisses.map((item) => item.replace(/ → .*$/, "")));
   const otherFail = new Set(graded.otherHeldOutMisses.map((item) => item.replace(/ → .*$/, "")));
+  const homeFail = new Set(graded.homeHeldOutMisses.map((item) => item.replace(/ → .*$/, "")));
   const lines = [
     "# Search QA report",
     "",
@@ -821,6 +823,7 @@ export function renderSearchQaReport(catalog: Catalog): string {
     `Seed pass rate ${(graded.seedPassRate * 100).toFixed(1)}% (${graded.seedCount} natural seeds). Wrapped pass rate ${(graded.wrappedPassRate * 100).toFixed(1)}% (${graded.wrappedCount} template variants).`,
     `Held-out real estate pass rate ${(graded.heldOutPassRate * 100).toFixed(1)}% (${graded.heldOutCount} queries written independently of the lexicon).`,
     `Held-out other pass rate ${(graded.otherHeldOutPassRate * 100).toFixed(1)}% (${graded.otherHeldOutCount} small-business, creator, developer, and consumer queries).`,
+    `Held-out home pass rate ${(graded.homeHeldOutPassRate * 100).toFixed(1)}% (${graded.homeHeldOutCount} home, design, and construction queries, including plain floor-plan wording).`,
     `Seed precision@3 ${graded.precisionAt3.toFixed(3)}. Real-estate held-out precision@3 ${graded.heldOutPrecisionAt3.toFixed(3)}. Other held-out precision@3 ${graded.otherHeldOutPrecisionAt3.toFixed(3)}.`,
     `Founder demo query: ${FOUNDER_QUERY}`,
     "",
@@ -837,6 +840,10 @@ export function renderSearchQaReport(catalog: Catalog): string {
   if (graded.otherHeldOutMisses.length > 0) {
     lines.push("", "Other held-out misses:", "");
     for (const miss of graded.otherHeldOutMisses) lines.push(`- ${miss}`);
+  }
+  if (graded.homeHeldOutMisses.length > 0) {
+    lines.push("", "Home held-out misses:", "");
+    for (const miss of graded.homeHeldOutMisses) lines.push(`- ${miss}`);
   }
   lines.push("", "# Spot checks", "", "Queries the word-overlap backstop missed. Graded by the same embedding path.", "");
   for (const query of SPOT_QUERIES) {
@@ -890,6 +897,18 @@ export function renderSearchQaReport(catalog: Catalog): string {
     if (otherFail.has(key)) row.header = `MISS ${row.header}`;
   });
   lines.push(...renderRows(otherRows, 1));
+  lines.push(
+    "# Held-out home, design, and construction queries",
+    "",
+    `${homeHeldOut.length} held-out queries. ${graded.homeHeldOutCount - graded.homeHeldOutMisses.length} passed. Plain floor-plan wording is a release blocker. Written before the scores were inspected.`,
+    "",
+  );
+  const homeRows = paraphraseRows(catalog, homeHeldOut);
+  homeRows.forEach((row, index) => {
+    const key = `${homeHeldOut[index]?.useCase}: ${homeHeldOut[index]?.query}`;
+    if (homeFail.has(key)) row.header = `MISS ${row.header}`;
+  });
+  lines.push(...renderRows(homeRows, 1));
   lines.push("# Other natural seeds", "");
   lines.push(...renderRows(paraphraseRows(catalog, otherSeeds), 1));
   lines.push(

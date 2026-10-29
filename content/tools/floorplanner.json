@@ -1,0 +1,70 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "floorplanner",
+  "name": "Floorplanner",
+  "websiteUrl": "https://floorplanner.com/pricing",
+  "shortDescription": "Draws 2D and 3D floor plans in the browser. Up to 5 projects are free.",
+  "longDescription": "Floorplanner lets you draw a floor plan and export 2D and 3D images. Up to 5 projects stay free, with SD exports that include a watermark. Credit packs start at $8.15 for 5 credits, and credits raise the export resolution up to 8K. See their site for current monthly plan prices.",
+  "pricingModel": [
+    "freemium",
+    "usage"
+  ],
+  "pricingNotes": "Up to 5 projects are free. Credit packs start at $8.15 for 5 credits. See their site for current monthly plan prices.",
+  "pricingUrl": "https://floorplanner.com/pricing",
+  "docsUrl": "https://floorplanner.com/pricing",
+  "freeTier": true,
+  "freeTierNotes": "Up to 5 free projects with watermarked SD exports.",
+  "startingPrice": null,
+  "bestFor": [
+    "A floor plan you draw and then export as a 2D or 3D image",
+    "A free project while you try the layout"
+  ],
+  "notIdealFor": [
+    "A photo of a blueprint with no drawing step",
+    "Virtual staging of a listing photo"
+  ],
+  "strength": "Floorplanner draws a floor plan in the browser and exports 2D and 3D images, with up to 5 projects free.",
+  "weakness": "Free exports are watermarked SD images, and higher resolution spends credits that start at $8.15 for 5.",
+  "sources": [
+    "https://floorplanner.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://floorplanner.com/pricing"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Draws a floor plan in the browser and exports a 2D or 3D image."
+  },
+  "id": "floorplanner"
+}

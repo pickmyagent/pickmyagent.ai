@@ -1,0 +1,40 @@
+{
+  "slug": "floor-plan-rendering",
+  "title": "Turn a floor plan or blueprint into a rendering",
+  "summary": "Upload a floor plan, blueprint, or sketch and get a picture of the space. The short list is the closest fit for that job.",
+  "audienceHints": ["realtors", "architects", "interior designers", "home builders"],
+  "matchTags": ["floor-plan-rendering"],
+  "jobPhrase": "turning floor plans and blueprints into renderings",
+  "assistantTask": "list which drawing to upload and what the rendering should show",
+  "assistantContext": "turning a floor plan into a rendering",
+  "searchTopic": "floor plan and blueprint rendering",
+  "recommended": [
+    {
+      "toolId": "mnml",
+      "why": "Turns a photo of a floor plan into a furnished view."
+    },
+    {
+      "toolId": "morphome",
+      "why": "Turns a blueprint or floor plan image into a photoreal render."
+    },
+    {
+      "toolId": "mnki",
+      "why": "Turns a floor plan image into a furnished 3D view or a render."
+    },
+    {
+      "toolId": "rendair",
+      "why": "Turns a floor plan or sketch into a 3D project and a render."
+    },
+    {
+      "toolId": "moldaspace",
+      "why": "Turns a floor plan, a sketch, or a room photo into a photoreal render."
+    }
+  ],
+  "intro": "AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.",
+  "related": [
+    {
+      "slug": "listing-photos",
+      "label": "Virtual staging of a listing photo is a separate job."
+    }
+  ]
+}

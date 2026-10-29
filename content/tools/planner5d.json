@@ -1,0 +1,71 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "planner5d",
+  "name": "Planner 5D",
+  "websiteUrl": "https://planner5d.com/ai/floor-plan-to-3d-model",
+  "shortDescription": "Turns an uploaded floor plan image into an editable 3D project. Premium is $19.99 a month.",
+  "longDescription": "Planner 5D converts a plan image into an editable 3D project, then you furnish it and render it. AI floor plan recognition is included on Premium. The free plan is $0 and covers 2D and 3D design with half the catalog. Premium is $19.99 a month or $59.99 a year. Professional is $49.99 a month or $399.99 a year and adds watermark-free 4K renders.",
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Free is $0. Premium is $19.99 per month or $59.99 per year and includes AI floor plan recognition. Professional is $49.99 per month or $399.99 per year.",
+  "pricingUrl": "https://planner5d.com/pricing",
+  "docsUrl": "https://planner5d.com/ai/floor-plan-to-3d-model",
+  "freeTier": true,
+  "freeTierNotes": "Free plan with 2D and 3D design. AI floor plan recognition starts on Premium.",
+  "startingPrice": 19.99,
+  "bestFor": [
+    "An uploaded plan image that should become an editable 3D project",
+    "A homeowner who wants to furnish the plan and then render it"
+  ],
+  "notIdealFor": [
+    "A one-click render that never opens an editor",
+    "Virtual staging of an MLS photo"
+  ],
+  "strength": "Planner 5D turns an uploaded floor plan image into an editable 3D project you can furnish and render.",
+  "weakness": "AI floor plan recognition starts on Premium at $19.99 per month, and the free plan does not include it.",
+  "sources": [
+    "https://planner5d.com/ai/floor-plan-to-3d-model",
+    "https://planner5d.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://planner5d.com/pricing"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns an uploaded floor plan image into an editable 3D project."
+  },
+  "id": "planner5d"
+}

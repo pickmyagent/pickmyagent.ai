@@ -229,7 +229,8 @@ export function shiftCue(text: string): boolean {
 }
 
 export function hireCue(text: string): boolean {
-  return has(text, /\b(hiring|interviews?|job descriptions?|candidates?|applicants?|screen|onboard\w*|recruit\w*)\b/);
+  if (has(text, /\b(hiring|interviews?|job descriptions?|candidates?|applicants?|onboard\w*|recruit\w*)\b/)) return true;
+  return has(text, /\bscreen(?:s|ing)?\b/) && has(text, /\b(resumes?|cvs?|candidates?|applicants?|hires?)\b/);
 }
 
 export function reviewCue(text: string): boolean {

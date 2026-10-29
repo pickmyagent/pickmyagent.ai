@@ -1,0 +1,71 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "roomsketcher",
+  "name": "RoomSketcher",
+  "websiteUrl": "https://www.roomsketcher.com/features/3d-floor-plans/",
+  "shortDescription": "Turns a 2D floor plan into a 3D floor plan. Pro is $144 a year.",
+  "longDescription": "RoomSketcher creates a 2D plan or accepts an upload, then generates a 3D floor plan in one step. The free plan includes 2 starter credits and 1 AI floor plan conversion, and no card is required. Pro is billed as $144 per year, shown as $12 per month. Team is billed as $420 per year for 5 users.",
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "Free includes 2 credits and 1 AI floor plan conversion. Pro is billed as $144 per year. Team is billed as $420 per year for 5 users.",
+  "pricingUrl": "https://www.roomsketcher.com/pricing/",
+  "docsUrl": "https://www.roomsketcher.com/features/3d-floor-plans/",
+  "freeTier": true,
+  "freeTierNotes": "1 free AI floor plan conversion and 2 starter credits. No card required.",
+  "startingPrice": 12,
+  "bestFor": [
+    "A 2D plan that should become a 3D floor plan",
+    "A realtor who wants a floor plan image for a listing"
+  ],
+  "notIdealFor": [
+    "A photoreal interior from a single room photo only",
+    "Virtual staging priced per photo"
+  ],
+  "strength": "RoomSketcher turns a 2D floor plan into a 3D floor plan, and the free plan includes one AI conversion.",
+  "weakness": "Pro is billed as $144 per year, and many 3D outputs spend the monthly credits.",
+  "sources": [
+    "https://www.roomsketcher.com/features/3d-floor-plans/",
+    "https://www.roomsketcher.com/pricing/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.roomsketcher.com/pricing/"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a 2D floor plan into a 3D floor plan."
+  },
+  "id": "roomsketcher"
+}

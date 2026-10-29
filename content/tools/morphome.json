@@ -1,0 +1,55 @@
+{
+  "affiliateUrl": null,
+  "categories": ["creative-media"],
+  "useCaseTags": ["floor-plan-rendering"],
+  "toolTypes": ["creative"],
+  "platforms": ["web"],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:30:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "morphome",
+  "name": "Morphome",
+  "websiteUrl": "https://morphome.app/",
+  "shortDescription": "Turns a floor plan, sketch, or blueprint image into a photorealistic render.",
+  "longDescription": "Morphome takes a JPG, PNG, or PDF of a floor plan, an architectural sketch, or a blueprint and returns a photorealistic render. You pick a preset for time of day, season, and materials. New accounts get 3 free credits. Dollar amounts for monthly plans load in the app, so see their site for current pricing.",
+  "pricingModel": ["freemium", "subscription"],
+  "pricingNotes": "See their site for current pricing. New accounts get 3 free credits.",
+  "pricingUrl": "https://morphome.app/pricing",
+  "docsUrl": "https://morphome.app/",
+  "freeTier": true,
+  "freeTierNotes": "3 free credits for new accounts.",
+  "startingPrice": null,
+  "bestFor": [
+    "A photo or scan of a floor plan or blueprint that should become a render",
+    "A hand sketch that should become a photoreal exterior or interior"
+  ],
+  "notIdealFor": [
+    "An editable measured model you correct wall by wall",
+    "Virtual staging of an empty listing photo as the only job"
+  ],
+  "strength": "Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render without a written prompt.",
+  "weakness": "The pricing page confirms 3 free credits, and the monthly dollar amounts load after the page opens.",
+  "sources": [
+    "https://morphome.app/",
+    "https://morphome.app/pricing"
+  ],
+  "siteLoad": { "status": 200, "finalUrl": "https://morphome.app/" },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a floor plan, sketch, or blueprint image into a photorealistic render."
+  },
+  "id": "morphome"
+}

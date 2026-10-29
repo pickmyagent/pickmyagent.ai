@@ -407,6 +407,13 @@ export const DOMAIN_TAILS: Record<string, Record<string, string>> = {
     perplexity: "to find notes on real estate social posts and keep the links.",
     deepseek: "to cut a listing caption down to facts you already checked, with no price you did not set.",
   },
+  "floor-plan-rendering": {
+    claude: "to list which drawing to upload and what the rendering should show.",
+    chatgpt: "to compare two renderings and say which one still matches the plan.",
+    gemini: "to track each plan, the rendering, and whether you will show it.",
+    perplexity: "to find practical notes on floor plan rendering and keep the links.",
+    deepseek: "to flag a rendering that moves a wall the plan did not show.",
+  },
   "property-management": {
     claude: "to draft a tenant reply and sort a maintenance request you still approve.",
     chatgpt: "to draft a tenant reply that states what is known and what you still decide.",

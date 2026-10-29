@@ -6,9 +6,10 @@ A first submitted search also downloads the embedding index from this site (1005
 Warm query median 44.3 ms on Chrome 156 headless WASM on a 4-core Intel Xeon (KVM), a mid-range laptop stand-in, with the weights already cached. Session init in that run was 930 ms.
 Weights and the WASM runtime are not served by this site. The browser fetches the 34.0 MB q8 weights from the Hugging Face hub and the 26.9 MB onnxruntime-web WASM from jsDelivr, and keeps a Cache API copy if those CDNs fail later. A submitted search on a normal connection also downloads the embedding index from this site (1,005,339 bytes, 737,063 bytes gzipped) and a 2,986-byte script (1,533 bytes gzipped). That is 738,596 bytes gzipped from pickmyagent.ai on the first search, and 0 bytes from this site on a later search once the index is cached. Data Saver, slow-2g, and 2g never start that download and keep the lexical results. Typing, idle time, and other pages do not load the model. The warm-query median above was measured in headless Chrome 156 on this 4-core Intel Xeon KVM host with weights already cached: session init 930 ms, median 44.3 ms across seven queries (15 ms to 101 ms). The same page at DevTools 4× CPU throttle initialized in 4924 ms with a 140.9 ms median. The Node harness uses onnxruntime-node, about 3 ms per query on this host. Visitors see the WASM timings. This is not a physical laptop.
 
-Seed pass rate 100.0% (889 natural seeds). Wrapped pass rate 100.0% (3556 template variants).
+Seed pass rate 100.0% (905 natural seeds). Wrapped pass rate 100.0% (3620 template variants).
 Held-out real estate pass rate 98.1% (160 queries written independently of the lexicon).
 Held-out other pass rate 90.2% (153 small-business, creator, developer, and consumer queries).
+Held-out home pass rate 100.0% (120 home, design, and construction queries, including plain floor-plan wording).
 Seed precision@3 0.987. Real-estate held-out precision@3 0.988. Other held-out precision@3 0.941.
 Founder demo query: pull house comparisons for me to make a CMA"
 
@@ -29,6 +30,7 @@ Per-use-case seed pass rate:
 - finance-ops: 100.0% (15/15)
 - find-land: 100.0% (15/15)
 - find-off-market: 100.0% (15/15)
+- floor-plan-rendering: 100.0% (16/16)
 - game-creative: 100.0% (15/15)
 - game-npcs: 100.0% (15/15)
 - hire-candidates: 100.0% (15/15)
@@ -171,7 +173,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 
 # Real estate natural seeds
 
-244 natural real estate seeds. The founder demo is first. Template wraps are graded in the summary and are not repeated here.
+260 natural real estate seeds. The founder demo is first. Template wraps are graded in the summary and are not repeated here.
 
 ## 1. pull house comparisons for me to make a CMA"
 
@@ -825,8 +827,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -840,8 +842,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -855,8 +857,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -991,8 +993,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to group each owner, the property address, and whether you already made contact.
@@ -1006,8 +1008,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to group each owner, the property address, and whether you already made contact.
@@ -1027,7 +1029,247 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to group each owner, the property address, and whether you already made contact.
 
-## 65. draft listing remarks from the feature list
+## 65. blueprint to realistic picture
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 66. floor plan to 3D tour
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 67. Generate renderings from floor plans
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 68. I want to submit a photo of my house blueprints and generate an image
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 69. interior design mockup from a photo
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 70. make an image from my floor plan photo
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 71. photo of the plans into a rendering
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 72. photoreal rendering of a house from blueprints
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 73. render my floor plan
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 74. show me the finished house from the floor plan
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 75. sketch to render
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 76. turn a 2D floor plan into 3D
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 77. turn house plans into a picture
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 78. upload my blueprint and make a picture of the house
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 79. visualize a remodel
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 80. what will my house look like from the plans
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 81. draft listing remarks from the feature list
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1040,7 +1282,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 66. draft the remarks for this listing
+## 82. draft the remarks for this listing
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1053,7 +1295,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 67. help me describe this house for the MLS
+## 83. help me describe this house for the MLS
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1066,7 +1308,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 68. lisitng description for the condo
+## 84. lisitng description for the condo
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1079,7 +1321,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 69. listing copy for the brochure
+## 85. listing copy for the brochure
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1092,7 +1334,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 70. listing description that stays on the facts
+## 86. listing description that stays on the facts
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1105,7 +1347,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 71. listing writeup from these facts
+## 87. listing writeup from these facts
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1118,7 +1360,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 72. make the listing remarks shorter
+## 88. make the listing remarks shorter
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1131,7 +1373,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 73. MLS remarks for my listing
+## 89. MLS remarks for my listing
 
 - Header: For writing your MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1144,7 +1386,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 74. property blurb for this home
+## 90. property blurb for this home
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1157,7 +1399,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 75. property description for the MLS
+## 91. property description for the MLS
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1170,7 +1412,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 76. rewrite the listing blurb
+## 92. rewrite the listing blurb
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1183,7 +1425,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 77. what should the MLS description say
+## 93. what should the MLS description say
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1196,7 +1438,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 78. write an MLS listing description
+## 94. write an MLS listing description
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1209,7 +1451,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 79. write the public remarks
+## 95. write the public remarks
 
 - Header: For writing an MLS listing description, here's how each tool can help:
 - Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
@@ -1222,7 +1464,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
 
-## 80. brighten the listing images
+## 96. brighten the listing images
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1233,7 +1475,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 81. day to dusk on the listing photo
+## 97. day to dusk on the listing photo
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1244,7 +1486,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 82. declutter the listing pictures
+## 98. declutter the listing pictures
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1255,7 +1497,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 83. edit my listing photos
+## 99. edit my listing photos
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1266,7 +1508,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 84. enhance the listing photo before it goes live
+## 100. enhance the listing photo before it goes live
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1277,7 +1519,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 85. fix the listing pictures for the MLS
+## 101. fix the listing pictures for the MLS
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1288,7 +1530,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 86. photo editing for a listing
+## 102. photo editing for a listing
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1299,7 +1541,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 87. property pictures look dark
+## 103. property pictures look dark
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1310,7 +1552,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 88. sky replacement on the exterior photo
+## 104. sky replacement on the exterior photo
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1321,7 +1563,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 89. stage an empty living room in the photo
+## 105. stage an empty living room in the photo
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1332,7 +1574,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 90. twilight photo for the front of the house
+## 106. twilight photo for the front of the house
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1343,7 +1585,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 91. virtual staging for the vacant house
+## 107. virtual staging for the vacant house
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1354,7 +1596,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 92. virtually stage the kitchen photo
+## 108. virtually stage the kitchen photo
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1365,7 +1607,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 93. virtually stage this empty room
+## 109. virtually stage this empty room
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1376,7 +1618,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 94. which listing photos should I edit
+## 110. which listing photos should I edit
 
 - Header: For editing listing photos and virtual staging, here's how each tool can help:
 - Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
@@ -1387,7 +1629,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
 
-## 95. cut the long walkthrough into a short reel
+## 111. cut the long walkthrough into a short reel
 
 - Header: For cutting the long walkthrough into a short reel, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1401,7 +1643,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 96. edit my listing video
+## 112. edit my listing video
 
 - Header: For editing your listing video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1416,7 +1658,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 97. home tour from the walkthrough
+## 113. home tour from the walkthrough
 
 - Header: For making a real estate listing video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1431,7 +1673,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 98. house tour from my phone clips
+## 114. house tour from my phone clips
 
 - Header: For making your real estate listing video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1445,7 +1687,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 99. listing video with room captions
+## 115. listing video with room captions
 
 - Header: For making a real estate listing video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1460,7 +1702,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 100. make a house tour video
+## 116. make a house tour video
 
 - Header: For making a house tour video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1475,7 +1717,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 101. make a property walkthrough video
+## 117. make a property walkthrough video
 
 - Header: For making a property walkthrough video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1490,7 +1732,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 102. property reel for this home
+## 118. property reel for this home
 
 - Header: For making a real estate listing video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1504,36 +1746,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 103. realtor video of the open house
-
-- Header: For making a real estate listing video, here's how each tool can help:
-- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
-- Domain: listing-videos
-- Cards:
-  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
-  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
-  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
-  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
-  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
-
-## 104. reel for this listing
-
-- Header: For making a real estate listing video, here's how each tool can help:
-- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
-- Domain: listing-videos
-- Cards:
-  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
-  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
-  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
-  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
-  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
-  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
-  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
-
-## 105. trim the property walkthrough
+## 119. realtor video of the open house
 
 - Header: For making a real estate listing video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1548,7 +1761,36 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 106. turn listing photos into a video
+## 120. reel for this listing
+
+- Header: For making a real estate listing video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
+
+## 121. trim the property walkthrough
+
+- Header: For making a real estate listing video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
+
+## 122. turn listing photos into a video
 
 - Header: For turning listing photos into a video, here's how each tool can help:
 - Intro: AI agents can turn listing photos into a home tour, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1563,7 +1805,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 107. vertical reel of the listing
+## 123. vertical reel of the listing
 
 - Header: For making a real estate listing video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1577,7 +1819,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 108. video tour of 18 Oak Street
+## 124. video tour of 18 Oak Street
 
 - Header: For making a real estate listing video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1592,7 +1834,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 109. walkthrough video for the new listing
+## 125. walkthrough video for the new listing
 
 - Header: For making a real estate listing video, here's how each tool can help:
 - Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
@@ -1607,7 +1849,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
 
-## 110. client market update
+## 126. client market update
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1618,7 +1860,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 111. draft a market update
+## 127. draft a market update
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1629,7 +1871,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 112. housing market update
+## 128. housing market update
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1640,7 +1882,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 113. housing stats for this neighborhood
+## 129. housing stats for this neighborhood
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1651,7 +1893,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 114. how is the market in this neighborhood
+## 130. how is the market in this neighborhood
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1662,7 +1904,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 115. market report for the subdivision
+## 131. market report for the subdivision
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1673,7 +1915,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 116. market stats for the neighborhood
+## 132. market stats for the neighborhood
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1684,7 +1926,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 117. market update I can send clients
+## 133. market update I can send clients
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1695,7 +1937,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 118. monthly market report for my farm
+## 134. monthly market report for my farm
 
 - Header: For drafting your neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1706,7 +1948,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 119. neighboorhood market stats
+## 135. neighboorhood market stats
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1717,7 +1959,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 120. neighborhood market update for clients
+## 136. neighborhood market update for clients
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1728,7 +1970,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 121. neighborhood report on prices
+## 137. neighborhood report on prices
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1739,7 +1981,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 122. neighborhood statistics for the email
+## 138. neighborhood statistics for the email
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1750,7 +1992,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 123. what changed in the local market
+## 139. what changed in the local market
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1761,7 +2003,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 124. write the monthly market note
+## 140. write the monthly market note
 
 - Header: For drafting a neighborhood market update, here's how each tool can help:
 - Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
@@ -1772,10 +2014,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
 
-## 125. collect rent from tenants
+## 141. collect rent from tenants
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1783,10 +2025,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 126. landlord maintenance queue
+## 142. landlord maintenance queue
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1794,10 +2036,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 127. lease renewal for the tenant
+## 143. lease renewal for the tenant
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1805,10 +2047,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 128. maintanance request from unit 4
+## 144. maintanance request from unit 4
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1816,10 +2058,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 129. maintenance request for a tenant
+## 145. maintenance request for a tenant
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1827,10 +2069,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 130. manage my rentals
+## 146. manage my rentals
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1838,10 +2080,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 131. property management for my duplex
+## 147. property management for my duplex
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1849,10 +2091,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 132. property management tasks
+## 148. property management tasks
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1860,10 +2102,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 133. renew the tenant lease
+## 149. renew the tenant lease
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1871,10 +2113,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 134. rent collection this month
+## 150. rent collection this month
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1882,10 +2124,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 135. tenant has not paid rent
+## 151. tenant has not paid rent
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1893,10 +2135,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 136. tenant work order
+## 152. tenant work order
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1904,10 +2146,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 137. track rent for my units
+## 153. track rent for my units
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1915,10 +2157,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 138. who owes rent
+## 154. who owes rent
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1926,10 +2168,10 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 139. work order for the leaking sink
+## 155. work order for the leaking sink
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -1937,7 +2179,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
 
-## 140. after repair value on this house
+## 156. after repair value on this house
 
 - Header: For finding and ranking real estate deals, here's how each tool can help:
 - Intro: AI agents can line up cap rate, rent, and after-repair value from the numbers you enter, and you still decide which property to pursue.
@@ -1950,7 +2192,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 141. ARV after repair value
+## 157. ARV after repair value
 
 - Header: For finding and ranking real estate deals, here's how each tool can help:
 - Intro: AI agents can line up cap rate, rent, and after-repair value from the numbers you enter, and you still decide which property to pursue.
@@ -1963,7 +2205,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 142. cap rate for this rental
+## 158. cap rate for this rental
 
 - Header: For finding and ranking real estate deals, here's how each tool can help:
 - Intro: AI agents can line up cap rate, rent, and after-repair value from the numbers you enter, and you still decide which property to pursue.
@@ -1976,7 +2218,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 143. capitalization rate on the fourplex
+## 159. capitalization rate on the fourplex
 
 - Header: For finding and ranking real estate deals, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -1989,7 +2231,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 144. cash flow on the duplex
+## 160. cash flow on the duplex
 
 - Header: For reading your cash flow, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -2002,7 +2244,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 145. compare two flip deals
+## 161. compare two flip deals
 
 - Header: For comparing two flip deals, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -2015,7 +2257,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 146. Find real estate deals and rank them
+## 162. Find real estate deals and rank them
 
 - Header: For finding real estate deals and ranking them, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -2028,7 +2270,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 147. fix and flip numbers
+## 163. fix and flip numbers
 
 - Header: For fixing and flip numbers, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -2041,7 +2283,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 148. houses to flip in this zip
+## 164. houses to flip in this zip
 
 - Header: For finding and ranking real estate deals, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -2054,7 +2296,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 149. rank rental properties by cash flow
+## 165. rank rental properties by cash flow
 
 - Header: For reading your cash flow, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -2067,7 +2309,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 150. rank these deals
+## 166. rank these deals
 
 - Header: For ranking these deals, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -2080,7 +2322,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 151. rental comps for the property
+## 167. rental comps for the property
 
 - Header: For finding and ranking real estate deals, here's how each tool can help:
 - Intro: AI agents can line up cap rate, rent, and after-repair value from the numbers you enter, and you still decide which property to pursue.
@@ -2093,7 +2335,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 152. score houses to flip
+## 168. score houses to flip
 
 - Header: For scoring houses to flip, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -2106,7 +2348,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 153. score this rental deal
+## 169. score this rental deal
 
 - Header: For scoring this rental deal, here's how each tool can help:
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
@@ -2119,7 +2361,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 154. which rental has the better cap rate
+## 170. which rental has the better cap rate
 
 - Header: For finding and ranking real estate deals, here's how each tool can help:
 - Intro: AI agents can line up cap rate, rent, and after-repair value from the numbers you enter, and you still decide which property to pursue.
@@ -2132,7 +2374,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
 
-## 155. AI software for real estate
+## 171. AI software for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2147,7 +2389,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 156. AI tools for real estate
+## 172. AI tools for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2162,7 +2404,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 157. apps for real estate
+## 173. apps for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2177,7 +2419,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 158. best AI tool for real estate
+## 174. best AI tool for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2192,7 +2434,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 159. best software for real estate
+## 175. best software for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2207,7 +2449,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 160. platforms for real estate
+## 176. platforms for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2222,7 +2464,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 161. real estate
+## 177. real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2237,7 +2479,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 162. real estate AI tools
+## 178. real estate AI tools
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2252,7 +2494,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 163. real estate platforms
+## 179. real estate platforms
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2267,7 +2509,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 164. real estate tech tools
+## 180. real estate tech tools
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2282,7 +2524,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 165. software for real estate
+## 181. software for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2297,7 +2539,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 166. technology for real estate
+## 182. technology for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2312,7 +2554,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 167. tools for real estate
+## 183. tools for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2327,7 +2569,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 168. what AI tools fit real estate
+## 184. what AI tools fit real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2342,7 +2584,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 169. which AI for real estate
+## 185. which AI for real estate
 
 - Header: For finding AI tools for real estate, here's how each tool can help:
 - Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
@@ -2357,7 +2599,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
-## 170. buyer database for my team
+## 186. buyer database for my team
 
 - Header: For running your real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2368,7 +2610,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 171. contact manager for real estate
+## 187. contact manager for real estate
 
 - Header: For running a real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2379,7 +2621,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 172. CRM for my buyers
+## 188. CRM for my buyers
 
 - Header: For running your real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2390,7 +2632,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 173. CRM for my listings
+## 189. CRM for my listings
 
 - Header: For running your real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2401,7 +2643,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 174. crm for real estate agents
+## 190. crm for real estate agents
 
 - Header: For running a real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2412,7 +2654,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 175. database of my buyer leads
+## 191. database of my buyer leads
 
 - Header: For running your real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2423,7 +2665,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 176. pipeline for my sellers
+## 192. pipeline for my sellers
 
 - Header: For running your real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2434,7 +2676,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 177. real estate contact database
+## 193. real estate contact database
 
 - Header: For running a real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2445,7 +2687,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 178. real estate CRM
+## 194. real estate CRM
 
 - Header: For running a real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2456,7 +2698,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 179. real estate CRM for sellers
+## 195. real estate CRM for sellers
 
 - Header: For running a real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2467,7 +2709,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 180. realtor CRM
+## 196. realtor CRM
 
 - Header: For running a real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2478,7 +2720,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 181. seller pipeline in the CRM
+## 197. seller pipeline in the CRM
 
 - Header: For running a real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2489,7 +2731,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 182. track my buyers in a CRM
+## 198. track my buyers in a CRM
 
 - Header: For running your real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2500,7 +2742,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 183. where should buyer contacts live
+## 199. where should buyer contacts live
 
 - Header: For running a real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2511,7 +2753,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 184. which CRM for my sellers
+## 200. which CRM for my sellers
 
 - Header: For running your real estate CRM, here's how each tool can help:
 - Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
@@ -2522,7 +2764,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
 
-## 185. a check in for the seller after inspection
+## 201. a check in for the seller after inspection
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2533,7 +2775,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 186. buyer drip after the first tour
+## 202. buyer drip after the first tour
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2544,7 +2786,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 187. buyer follow-up drip
+## 203. buyer follow-up drip
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2555,7 +2797,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 188. check in with my sellers
+## 204. check in with my sellers
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2566,7 +2808,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 189. drip for buyers who are still looking
+## 205. drip for buyers who are still looking
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2577,7 +2819,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 190. follow up with my buyers
+## 206. follow up with my buyers
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2588,7 +2830,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 191. follow up with the sphere
+## 207. follow up with the sphere
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2599,7 +2841,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 192. folow up with my buyers
+## 208. folow up with my buyers
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2610,7 +2852,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 193. keep in touch with last year's buyers
+## 209. keep in touch with last year's buyers
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2621,7 +2863,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 194. nurture my buyer list
+## 210. nurture my buyer list
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2632,7 +2874,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 195. nurture sellers after the showing
+## 211. nurture sellers after the showing
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2643,7 +2885,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 196. past client check-in
+## 212. past client check-in
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2654,7 +2896,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 197. seller nurture sequence
+## 213. seller nurture sequence
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2665,7 +2907,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 198. stay in touch with my sphere of influence
+## 214. stay in touch with my sphere of influence
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2676,7 +2918,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 199. stay in touch with past clients
+## 215. stay in touch with past clients
 
 - Header: For following up with buyers and sellers, here's how each tool can help:
 - Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
@@ -2687,7 +2929,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
 
-## 200. circle prospecting
+## 216. circle prospecting
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2702,7 +2944,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 201. door knock script for the farm
+## 217. door knock script for the farm
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2717,7 +2959,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 202. door knock the farm area
+## 218. door knock the farm area
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2732,7 +2974,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 203. expired listing leads
+## 219. expired listing leads
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2747,7 +2989,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 204. expired listings in my farm
+## 220. expired listings in my farm
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2762,7 +3004,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 205. expireds to call this week
+## 221. expireds to call this week
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2777,7 +3019,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 206. farm area owners
+## 222. farm area owners
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2792,7 +3034,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 207. farming a neighborhood
+## 223. farming a neighborhood
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2807,7 +3049,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 208. find expired listings
+## 224. find expired listings
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2822,7 +3064,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 209. geographic farm list
+## 225. geographic farm list
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2837,7 +3079,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 210. I want more listings
+## 226. I want more listings
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2852,7 +3094,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 211. need new listings this quarter
+## 227. need new listings this quarter
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2867,7 +3109,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 212. prospect the expireds
+## 228. prospect the expireds
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2882,7 +3124,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 213. sphere of influence prospecting
+## 229. sphere of influence prospecting
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2897,7 +3139,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 214. who should I prospect for listings
+## 230. who should I prospect for listings
 
 - Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
 - Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
@@ -2912,7 +3154,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
 
-## 215. book a showing for the buyer
+## 231. book a showing for the buyer
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -2924,7 +3166,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 216. book the open house slot
+## 232. book the open house slot
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -2936,7 +3178,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 217. lock box for the open house
+## 233. lock box for the open house
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -2948,7 +3190,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 218. lockbox code for the showing
+## 234. lockbox code for the showing
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -2960,7 +3202,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 219. move the showing to 5
+## 235. move the showing to 5
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -2972,7 +3214,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 220. open house this Saturday
+## 236. open house this Saturday
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -2984,7 +3226,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 221. open houses this weekend
+## 237. open houses this weekend
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -2996,7 +3238,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 222. scheduel an open house
+## 238. scheduel an open house
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -3008,7 +3250,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 223. schedule a showing for this house
+## 239. schedule a showing for this house
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -3020,7 +3262,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 224. schedule the listing tour
+## 240. schedule the listing tour
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -3032,7 +3274,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 225. showing appointment at 4
+## 241. showing appointment at 4
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -3044,7 +3286,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 226. showing for 22 Pine Street
+## 242. showing for 22 Pine Street
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -3056,7 +3298,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 227. showing request for the condo
+## 243. showing request for the condo
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -3068,7 +3310,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 228. showing schedule for tomorrow
+## 244. showing schedule for tomorrow
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -3080,7 +3322,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 229. what time is the showing
+## 245. what time is the showing
 
 - Header: For scheduling showings and open houses, here's how each tool can help:
 - Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
@@ -3092,7 +3334,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
 
-## 230. closing checklist for the buyer
+## 246. closing checklist for the buyer
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3104,7 +3346,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 231. closing paperwork checklist
+## 247. closing paperwork checklist
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3116,7 +3358,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 232. coordinate the transaction
+## 248. coordinate the transaction
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3128,7 +3370,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 233. discloser for the closing
+## 249. discloser for the closing
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3140,7 +3382,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 234. escrow papers for the condo
+## 250. escrow papers for the condo
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3152,7 +3394,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 235. escrow timeline for the sale
+## 251. escrow timeline for the sale
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3164,7 +3406,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 236. property disclosure still unsigned
+## 252. property disclosure still unsigned
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3176,7 +3418,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 237. purchase agreement for the home
+## 253. purchase agreement for the home
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3188,7 +3430,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 238. purchase agreement missing a date
+## 254. purchase agreement missing a date
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3200,7 +3442,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 239. seller disclosure for the house
+## 255. seller disclosure for the house
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3212,7 +3454,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 240. seller disclosures for the listing
+## 256. seller disclosures for the listing
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3224,7 +3466,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 241. settlement statement questions
+## 257. settlement statement questions
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3236,7 +3478,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 242. transaction coordinator for this closing
+## 258. transaction coordinator for this closing
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3248,7 +3490,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 243. under contract checklist
+## 259. under contract checklist
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -3260,7 +3502,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
   - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
 
-## 244. what documents are due before closing
+## 260. what documents are due before closing
 
 - Header: For coordinating contracts and disclosures, here's how each tool can help:
 - Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
@@ -4632,7 +4874,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 111. tenant says the heat is out in unit 2
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4643,7 +4885,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 112. who is late on rent this month
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4654,7 +4896,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 113. lease is up in 45 days for the duplex
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4665,7 +4907,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 114. work order for the broken disposal
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4676,7 +4918,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 115. landlord side of a maintenance ticket
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4687,7 +4929,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 116. collect the rent that is still outstanding
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4698,7 +4940,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 117. renewal offer for the tenant in 3B
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4709,7 +4951,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 118. rental I manage needs a repair logged
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4720,7 +4962,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 119. property books for the four units
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4731,7 +4973,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 ## 120. tenant request about the leaking window
 
 - Header: For handling property management tasks, here's how each tool can help:
-- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check.
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
 - Domain: property-management
 - Cards:
   - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
@@ -4887,8 +5129,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -4947,8 +5189,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -4962,8 +5204,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -4977,8 +5219,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -4992,8 +5234,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -5819,8 +6061,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can sort tax records, list deductions, and draft questions for a tax pro so you still decide what to file.
 - Domain: do-taxes
 - Cards:
-  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
   - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
+  - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
   - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
   - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to sort income and possible deductions into questions for a tax pro.
@@ -6363,8 +6605,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
+  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
@@ -6564,8 +6806,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can split a job into steps and hand each step to another agent, while you still approve what gets sent.
 - Domain: multi-agent-workflows
 - Cards:
-  - CrewAI — Specialist · Smoke-tested — CrewAI splits one job across agents that each have a role.
   - AutoGen (Microsoft) — Specialist · Smoke-tested — AutoGen (Microsoft) runs conversations between several agents in Python.
+  - CrewAI — Specialist · Smoke-tested — CrewAI splits one job across agents that each have a role.
   - LangChain — Specialist · Smoke-tested — LangChain composes agents that call tools in code you write.
   - Dify — Specialist · Docs checked — Dify lays out agent workflows on a visual canvas you can host.
   - Flowise — Specialist · Docs checked — Flowise assembles low-code model flows for agents on a server you run.
@@ -7291,6 +7533,1599 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline a retrieval pipeline from source pages to a short answer you can trace.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which part of a retrieved answer is not backed by the passages you paste in.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track source URLs, the passage used, and the answer it supports.
+
+# Held-out home, design, and construction queries
+
+120 held-out queries. 120 passed. Plain floor-plan wording is a release blocker. Written before the scores were inspected.
+
+## 1. Generate renderings from floor plans
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 2. I want to submit a photo of my house blueprints and generate an image
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 3. upload my blueprint and make a picture of the house
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 4. turn house plans into a picture
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 5. what will my house look like from the plans
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 6. make an image from my floor plan photo
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 7. blueprint to realistic picture
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 8. render my floor plan
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 9. turn a 2D floor plan into 3D
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 10. photoreal rendering of a house from blueprints
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 11. visualize a remodel
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 12. interior design mockup from a photo
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 13. sketch to render
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 14. floor plan to 3D tour
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 15. take a picture of the plans and show me the house
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 16. I have a photo of the floor plan, make it look real
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 17. turn this sketch of the kitchen into a render
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 18. what would the remodel look like
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 19. make a realistic picture from the blueprint
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 20. house plans to a photo
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 21. upload the architectural drawings and get an image of the house
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 22. show me the finished house from the floor plan
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 23. convert my 2d plan into a picture of the rooms
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 24. blueprint photo to a rendering of the exterior
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 25. I snapped the house plans, now make an image
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 26. from the blueprints, what does the living room look like
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 27. generate a picture of the home from the floorplan
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 28. turn my hand sketch into a photoreal room
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 29. make the floor plan look like a real house
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 30. photo of blueprints to an exterior image
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 31. render the construction drawings so the buyer can see the house
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 32. building plans into a picture of the front elevation
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 33. I photographed the blueprint, make a rendering
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 34. sketch of the addition, render the exterior
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 35. what will the renovation look like in a picture
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 36. turn the PDF floor plan into a furnished image
+
+- Header: For turning floor plans and blueprints into renderings, here's how each tool can help:
+- Intro: AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.
+- Domain: floor-plan-rendering
+- Cards:
+  - mnml.ai — Specialist · Docs checked — mnml.ai turns a photo or scan of a floor plan into a furnished view and keeps the walls as drawn.
+  - Morphome — Specialist · Docs checked — Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render.
+  - MNKI — Specialist · Docs checked — MNKI turns a floor plan image into a furnished 3D view or a perspective render.
+  - Rendair — Specialist · Docs checked — Rendair turns a sketch or floor plan into a 3D project and a render.
+  - MoldaSpace — Specialist · Docs checked — MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list which drawing to upload and what the rendering should show.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two renderings and say which one still matches the plan.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each plan, the rendering, and whether you will show it.
+
+## 37. sold homes I can drop into a CMA before the appointment
+
+- Header: For pulling comps for a CMA, here's how each tool can help:
+- Intro: AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
+- Domain: cma-comps
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to gather the sold homes you paste in and draft a CMA you still edit before naming a price.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write which sold homes are close to the subject and which you should drop.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each sold home on its own row with price, beds, and how far it sits from the subject.
+
+## 38. broker price opinion for the listing consult
+
+- Header: For pulling comps for a CMA, here's how each tool can help:
+- Intro: AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
+- Domain: cma-comps
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to gather the sold homes you paste in and draft a CMA you still edit before naming a price.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write which sold homes are close to the subject and which you should drop.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each sold home on its own row with price, beds, and how far it sits from the subject.
+
+## 39. comparable sales within a few blocks of this house
+
+- Header: For pulling comps for a CMA, here's how each tool can help:
+- Intro: AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
+- Domain: cma-comps
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to gather the sold homes you paste in and draft a CMA you still edit before naming a price.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write which sold homes are close to the subject and which you should drop.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each sold home on its own row with price, beds, and how far it sits from the subject.
+
+## 40. what should I list this house for after the solds
+
+- Header: For pulling comps for a CMA, here's how each tool can help:
+- Intro: AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
+- Domain: cma-comps
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to gather the sold homes you paste in and draft a CMA you still edit before naming a price.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write which sold homes are close to the subject and which you should drop.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each sold home on its own row with price, beds, and how far it sits from the subject.
+
+## 41. pull comps for the subject before I quote a price
+
+- Header: For pulling comps for a CMA, here's how each tool can help:
+- Intro: AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
+- Domain: cma-comps
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to gather the sold homes you paste in and draft a CMA you still edit before naming a price.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write which sold homes are close to the subject and which you should drop.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each sold home on its own row with price, beds, and how far it sits from the subject.
+
+## 42. comparative market analysis the seller can follow
+
+- Header: For pulling comps for a CMA, here's how each tool can help:
+- Intro: AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
+- Domain: cma-comps
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to gather the sold homes you paste in and draft a CMA you still edit before naming a price.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write which sold homes are close to the subject and which you should drop.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each sold home on its own row with price, beds, and how far it sits from the subject.
+
+## 43. BPO numbers for tomorrow's pricing talk
+
+- Header: For pulling comps for a CMA, here's how each tool can help:
+- Intro: AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
+- Domain: cma-comps
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to gather the sold homes you paste in and draft a CMA you still edit before naming a price.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write which sold homes are close to the subject and which you should drop.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each sold home on its own row with price, beds, and how far it sits from the subject.
+
+## 44. recently sold homes that actually match this one
+
+- Header: For pulling comps for a CMA, here's how each tool can help:
+- Intro: AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board.
+- Domain: cma-comps
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to gather the sold homes you paste in and draft a CMA you still edit before naming a price.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write which sold homes are close to the subject and which you should drop.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put each sold home on its own row with price, beds, and how far it sits from the subject.
+
+## 45. MLS remarks from the feature sheet I typed
+
+- Header: For writing an MLS listing description, here's how each tool can help:
+- Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
+- Domain: listing-copy
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts a listing description from the property facts you give it.
+  - Copy.ai — Specialist · Docs checked — Copy.ai drafts MLS remarks you still check against your board's rules.
+  - Writesonic — Specialist · Docs checked — Writesonic drafts a property description you can edit before it goes on the MLS.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an MLS listing description from the facts you paste in.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
+
+## 46. listing description that stays inside the facts
+
+- Header: For writing an MLS listing description, here's how each tool can help:
+- Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
+- Domain: listing-copy
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts a listing description from the property facts you give it.
+  - Copy.ai — Specialist · Docs checked — Copy.ai drafts MLS remarks you still check against your board's rules.
+  - Writesonic — Specialist · Docs checked — Writesonic drafts a property description you can edit before it goes on the MLS.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an MLS listing description from the facts you paste in.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
+
+## 47. public remarks for the new condo listing
+
+- Header: For writing an MLS listing description, here's how each tool can help:
+- Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
+- Domain: listing-copy
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts a listing description from the property facts you give it.
+  - Copy.ai — Specialist · Docs checked — Copy.ai drafts MLS remarks you still check against your board's rules.
+  - Writesonic — Specialist · Docs checked — Writesonic drafts a property description you can edit before it goes on the MLS.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an MLS listing description from the facts you paste in.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
+
+## 48. property description for the brochure, nothing extra
+
+- Header: For writing an MLS listing description, here's how each tool can help:
+- Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
+- Domain: listing-copy
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts a listing description from the property facts you give it.
+  - Copy.ai — Specialist · Docs checked — Copy.ai drafts MLS remarks you still check against your board's rules.
+  - Writesonic — Specialist · Docs checked — Writesonic drafts a property description you can edit before it goes on the MLS.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an MLS listing description from the facts you paste in.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
+
+## 49. shorten the listing remarks before they go on the MLS
+
+- Header: For writing an MLS listing description, here's how each tool can help:
+- Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
+- Domain: listing-copy
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts a listing description from the property facts you give it.
+  - Copy.ai — Specialist · Docs checked — Copy.ai drafts MLS remarks you still check against your board's rules.
+  - Writesonic — Specialist · Docs checked — Writesonic drafts a property description you can edit before it goes on the MLS.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an MLS listing description from the facts you paste in.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
+
+## 50. draft the MLS description from these room notes
+
+- Header: For writing an MLS listing description, here's how each tool can help:
+- Intro: AI agents can draft an MLS listing description from the facts you provide, and you still check the wording against your board's rules before it goes live.
+- Domain: listing-copy
+- Cards:
+  - Jasper — Specialist · Docs checked — Jasper drafts a listing description from the property facts you give it.
+  - Copy.ai — Specialist · Docs checked — Copy.ai drafts MLS remarks you still check against your board's rules.
+  - Writesonic — Specialist · Docs checked — Writesonic drafts a property description you can edit before it goes on the MLS.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an MLS listing description from the facts you paste in.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a listing description so it stays inside the facts you provided.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to keep the listing facts in one column and the draft remarks in the next.
+
+## 51. virtually stage the empty dining room photo
+
+- Header: For editing listing photos and virtual staging, here's how each tool can help:
+- Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
+- Domain: listing-photos
+- Cards:
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie edits a listing photo and virtually stages an empty room.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan which listing photos to edit and which empty room to stage in a picture.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
+
+## 52. day to dusk on the front listing photo
+
+- Header: For editing listing photos and virtual staging, here's how each tool can help:
+- Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
+- Domain: listing-photos
+- Cards:
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie edits a listing photo and virtually stages an empty room.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan which listing photos to edit and which empty room to stage in a picture.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
+
+## 53. edit the listing photos before the listing goes live
+
+- Header: For editing listing photos and virtual staging, here's how each tool can help:
+- Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
+- Domain: listing-photos
+- Cards:
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie edits a listing photo and virtually stages an empty room.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan which listing photos to edit and which empty room to stage in a picture.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
+
+## 54. sky replacement on the exterior listing picture
+
+- Header: For editing listing photos and virtual staging, here's how each tool can help:
+- Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
+- Domain: listing-photos
+- Cards:
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie edits a listing photo and virtually stages an empty room.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan which listing photos to edit and which empty room to stage in a picture.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
+
+## 55. virtual staging for a vacant living room
+
+- Header: For editing listing photos and virtual staging, here's how each tool can help:
+- Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
+- Domain: listing-photos
+- Cards:
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie edits a listing photo and virtually stages an empty room.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan which listing photos to edit and which empty room to stage in a picture.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
+
+## 56. brighten the listing pictures without changing the room
+
+- Header: For editing listing photos and virtual staging, here's how each tool can help:
+- Intro: AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.
+- Domain: listing-photos
+- Cards:
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie edits a listing photo and virtually stages an empty room.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to plan which listing photos to edit and which empty room to stage in a picture.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to compare two photo edits and say which one still looks like the real room.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each listing photo, the edit, and whether you will use the image.
+
+## 57. make a listing video from the walkthrough clips
+
+- Header: For making a real estate listing video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Canva — Specialist · Docs checked — Canva turns listing photos into a video from a real estate template and can add music.
+  - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough-style video with music and text.
+  - CapCut — Specialist · Docs checked — CapCut turns property photos into a realtor slideshow with captions and music.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
+
+## 58. property reel for this house tour
+
+- Header: For making a real estate listing video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
+
+## 59. turn listing photos into a video tour
+
+- Header: For turning listing photos into a video tour, here's how each tool can help:
+- Intro: AI agents can turn listing photos into a home tour, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Canva — Specialist · Docs checked — Canva turns listing photos into a video from a real estate template and can add music.
+  - Kapwing — Specialist · Docs checked — Kapwing turns listing photos into a walkthrough-style video with music and text.
+  - CapCut — Specialist · Docs checked — CapCut turns property photos into a realtor slideshow with captions and music.
+  - BoxBrownie — Specialist · Docs checked — BoxBrownie builds a virtual tour of the home from 360 photos.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
+
+## 60. cut the long property walkthrough into a short reel
+
+- Header: For cutting the long property walkthrough into a short reel, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
+
+## 61. realtor video of the new listing
+
+- Header: For making a real estate listing video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
+
+## 62. home tour video with room captions
+
+- Header: For making a real estate listing video, here's how each tool can help:
+- Intro: AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.
+- Domain: listing-videos
+- Cards:
+  - CapCut — Specialist · Docs checked — CapCut trims walkthrough footage, adds captions, and resizes it for a vertical reel.
+  - Kapwing — Specialist · Docs checked — Kapwing trims a walkthrough, adds captions, and resizes the video.
+  - Descript — Specialist · Docs checked — Descript edits the video by editing the transcript and adds captions.
+  - Canva — Specialist · Docs checked — Canva trims listing clips, adds captions, and can add music.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to order the rooms in a home tour and draft the captions a realtor puts on screen.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to order the rooms in a walkthrough and draft the captions and a music note.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each room, the on-screen caption, and whether the reel is vertical.
+
+## 63. follow up with the buyers who toured on Saturday
+
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- Domain: realtor-follow-up
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
+
+## 64. nurture sellers after the listing appointment
+
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- Domain: realtor-follow-up
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
+
+## 65. buyer follow-up that does not promise a price
+
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- Domain: realtor-follow-up
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
+
+## 66. past clients I should check in with this month
+
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- Domain: realtor-follow-up
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
+
+## 67. sphere of influence notes for a Sunday call
+
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- Domain: realtor-follow-up
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
+
+## 68. seller follow-up after the open house
+
+- Header: For following up with buyers and sellers, here's how each tool can help:
+- Intro: AI agents can draft buyer and seller follow-ups and remind you who to contact next, and you still decide what gets sent.
+- Domain: realtor-follow-up
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a buyer or seller follow-up and mark what you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a short check-in and list what you should not promise a client.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track contacts, the last touch, and the next follow-up.
+
+## 69. real estate CRM for my buyer leads
+
+- Header: For running your real estate CRM, here's how each tool can help:
+- Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
+- Domain: real-estate-crm
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss keeps buyer and seller leads in one real estate CRM.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to organize buyer and seller contacts and draft the next touch in a real estate CRM.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
+
+## 70. realtor CRM so seller contacts are not in a spreadsheet
+
+- Header: For running a real estate CRM, here's how each tool can help:
+- Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
+- Domain: real-estate-crm
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss keeps buyer and seller leads in one real estate CRM.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to organize buyer and seller contacts and draft the next touch in a real estate CRM.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
+
+## 71. CRM for my listings and the people attached to them
+
+- Header: For running your real estate CRM, here's how each tool can help:
+- Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
+- Domain: real-estate-crm
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss keeps buyer and seller leads in one real estate CRM.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to organize buyer and seller contacts and draft the next touch in a real estate CRM.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
+
+## 72. keep buyer and seller contacts in one real estate CRM
+
+- Header: For running a real estate CRM, here's how each tool can help:
+- Intro: AI agents can organize buyer and seller contacts in a real estate CRM and draft the next touch, and you still choose what goes out.
+- Domain: real-estate-crm
+- Cards:
+  - Follow Up Boss — Specialist · Docs checked — Follow Up Boss keeps buyer and seller leads in one real estate CRM.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to organize buyer and seller contacts and draft the next touch in a real estate CRM.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list which leads have gone quiet and what you might send next.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track buyers, sellers, and the stage of each lead.
+
+## 73. schedule a showing for the couple on Thursday
+
+- Header: For scheduling showings and open houses, here's how each tool can help:
+- Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
+- Domain: showing-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an open-house schedule and the reminder you still confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of showing requests into two or three times you could offer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each showing, the address, and the time you still confirm.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
+
+## 74. open house schedule for this Saturday
+
+- Header: For scheduling showings and open houses, here's how each tool can help:
+- Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
+- Domain: showing-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an open-house schedule and the reminder you still confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of showing requests into two or three times you could offer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each showing, the address, and the time you still confirm.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
+
+## 75. showing appointment at 2 and another at 4
+
+- Header: For scheduling showings and open houses, here's how each tool can help:
+- Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
+- Domain: showing-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an open-house schedule and the reminder you still confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of showing requests into two or three times you could offer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each showing, the address, and the time you still confirm.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
+
+## 76. lockbox code and the showing time on one note
+
+- Header: For scheduling showings and open houses, here's how each tool can help:
+- Intro: AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system.
+- Domain: showing-scheduling
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft an open-house schedule and the reminder you still confirm.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of showing requests into two or three times you could offer.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list each showing, the address, and the time you still confirm.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find tips on open-house scheduling and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to drop a showing time that overlaps another appointment.
+
+## 77. seller disclosures still missing from the transaction file
+
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
+- Domain: transaction-coordination
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
+
+## 78. earnest money and the escrow timeline
+
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
+- Domain: transaction-coordination
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
+
+## 79. coordinate this transaction through closing
+
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
+- Domain: transaction-coordination
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
+
+## 80. purchase agreement checklist before we are under contract
+
+- Header: For coordinating contracts and disclosures, here's how each tool can help:
+- Intro: AI agents can list closing documents and draft a disclosure summary, and you still have your broker or attorney review every contract.
+- Domain: transaction-coordination
+- Cards:
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list closing documents and draft a disclosure summary a broker still reviews.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to flag which contract lines are still blank before a broker or attorney reads them.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each closing document, the owner, and whether a person has reviewed it.
+  - Perplexity — General-purpose AI assistant · Not fully checked — Ask Perplexity to find notes on common closing documents and keep the links.
+  - DeepSeek — General-purpose AI assistant · Docs checked — Ask DeepSeek to mark a disclosure that is still unsigned.
+
+## 81. neighborhood market update for the homeowners I farm
+
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
+- Domain: market-reports
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
+
+## 82. client market update with this month's sales
+
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
+- Domain: market-reports
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
+
+## 83. market report I can send to the sphere
+
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
+- Domain: market-reports
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
+
+## 84. housing market update for the subdivision
+
+- Header: For drafting a neighborhood market update, here's how each tool can help:
+- Intro: AI agents can draft a neighborhood market update from figures you supply or a report you upload, and you still check the numbers before a client sees them.
+- Domain: market-reports
+- Cards:
+  - Cloud CMA — Specialist · Docs checked — Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a neighborhood market update from the figures you supply.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to say which figures in a market update do not support the sentence someone wrote.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up neighborhood stats and the sentence you might send a client.
+
+## 85. expired listings in my farm area
+
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- Domain: realtor-prospecting
+- Cards:
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
+
+## 86. circle prospecting the streets behind the listing
+
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- Domain: realtor-prospecting
+- Cards:
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
+
+## 87. geographic farm list of owners
+
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- Domain: realtor-prospecting
+- Cards:
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
+
+## 88. circle prospecting the FSBO streets this weekend
+
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- Domain: realtor-prospecting
+- Cards:
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
+
+## 89. prospect expireds before the weekend
+
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- Domain: realtor-prospecting
+- Cards:
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
+
+## 90. door knock list for the farm area
+
+- Header: For prospecting expireds, FSBOs and your farm, here's how each tool can help:
+- Intro: AI agents can list expired, FSBO, and farm-area owners and draft the first outreach, and you still decide who to contact.
+- Domain: realtor-prospecting
+- Cards:
+  - PropStream — Specialist · Docs checked — PropStream searches expired, FSBO, and farm-area records in one property list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records for a farm area and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails for an expired or FSBO list.
+  - REsimpli — Specialist · Docs checked — REsimpli contacts owners by phone, text, and email from a prospecting list.
+  - Launch Control — Specialist · Docs checked — Launch Control messages owners whose numbers are already on a prospecting list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list expired, FSBO, and farm-area owners and draft the first note you still send.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft one outreach line and list the owners you should skip.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track owners, the list they came from, and whether you contacted them.
+
+## 91. listing posts for Instagram this week
+
+- Header: For posting listings on social media, here's how each tool can help:
+- Intro: AI agents can draft listing posts and a weekly social calendar, and you still approve what gets published.
+- Domain: agent-social
+- Cards:
+  - Buffer — Specialist · Docs checked — Buffer schedules listing posts and drafts captions for an agent's social channels.
+  - Hootsuite — Specialist · Docs checked — Hootsuite publishes an agent's social posts from one suite.
+  - Ocoya — Specialist · Docs checked — Ocoya creates listing posts and puts them on a social schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives for a listing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a listing post and a weekly social calendar you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a listing caption so it names the address, the bed count, and one feature you verified.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out posts, the listing, and the day they go out.
+
+## 92. realtor social captions for the new listing
+
+- Header: For posting listings on social media, here's how each tool can help:
+- Intro: AI agents can draft listing posts and a weekly social calendar, and you still approve what gets published.
+- Domain: agent-social
+- Cards:
+  - Buffer — Specialist · Docs checked — Buffer schedules listing posts and drafts captions for an agent's social channels.
+  - Hootsuite — Specialist · Docs checked — Hootsuite publishes an agent's social posts from one suite.
+  - Ocoya — Specialist · Docs checked — Ocoya creates listing posts and puts them on a social schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives for a listing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a listing post and a weekly social calendar you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a listing caption so it names the address, the bed count, and one feature you verified.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out posts, the listing, and the day they go out.
+
+## 93. instagram for realtors, one post per listing
+
+- Header: For posting listings on social media, here's how each tool can help:
+- Intro: AI agents can draft listing posts and a weekly social calendar, and you still approve what gets published.
+- Domain: agent-social
+- Cards:
+  - Buffer — Specialist · Docs checked — Buffer schedules listing posts and drafts captions for an agent's social channels.
+  - Hootsuite — Specialist · Docs checked — Hootsuite publishes an agent's social posts from one suite.
+  - Ocoya — Specialist · Docs checked — Ocoya creates listing posts and puts them on a social schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives for a listing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a listing post and a weekly social calendar you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a listing caption so it names the address, the bed count, and one feature you verified.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out posts, the listing, and the day they go out.
+
+## 94. social media for agents who need a weekly listing post
+
+- Header: For posting listings on social media, here's how each tool can help:
+- Intro: AI agents can draft listing posts and a weekly social calendar, and you still approve what gets published.
+- Domain: agent-social
+- Cards:
+  - Buffer — Specialist · Docs checked — Buffer schedules listing posts and drafts captions for an agent's social channels.
+  - Hootsuite — Specialist · Docs checked — Hootsuite publishes an agent's social posts from one suite.
+  - Ocoya — Specialist · Docs checked — Ocoya creates listing posts and puts them on a social schedule.
+  - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives for a listing.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a listing post and a weekly social calendar you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a listing caption so it names the address, the bed count, and one feature you verified.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out posts, the listing, and the day they go out.
+
+## 95. maintenance request from the tenant in unit 4
+
+- Header: For handling property management tasks, here's how each tool can help:
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
+- Domain: property-management
+- Cards:
+  - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a tenant reply and sort a maintenance request you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
+
+## 96. collect rent and see who still owes
+
+- Header: For handling property management tasks, here's how each tool can help:
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
+- Domain: property-management
+- Cards:
+  - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a tenant reply and sort a maintenance request you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
+
+## 97. lease renewal for the duplex
+
+- Header: For handling property management tasks, here's how each tool can help:
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
+- Domain: property-management
+- Cards:
+  - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a tenant reply and sort a maintenance request you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
+
+## 98. property management tasks for the rentals I own
+
+- Header: For handling property management tasks, here's how each tool can help:
+- Intro: AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.
+- Domain: property-management
+- Cards:
+  - DoorLoop — Specialist · Docs checked — DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft a tenant reply and sort a maintenance request you still approve.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft a tenant reply that states what is known and what you still decide.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track units, rent status, and the next maintenance step.
+
+## 99. for sale by owner leads with a phone number
+
+- Header: For finding off-market and for-sale-by-owner deals, here's how each tool can help:
+- Intro: AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach.
+- Domain: find-off-market
+- Cards:
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to group each owner, the property address, and whether you already made contact.
+
+## 100. off-market houses before they hit the MLS
+
+- Header: For finding off-market and for-sale-by-owner deals, here's how each tool can help:
+- Intro: AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach.
+- Domain: find-off-market
+- Cards:
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
+  - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to group each owner, the property address, and whether you already made contact.
+
+## 101. skip trace the absentee owner
+
+- Header: For skip-tracing the absentee owner, here's how each tool can help:
+- Intro: AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach.
+- Domain: find-off-market
+- Cards:
+  - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
+  - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to group each owner, the property address, and whether you already made contact.
+
+## 102. motivated sellers who do not have a listing yet
+
+- Header: For finding off-market and for-sale-by-owner deals, here's how each tool can help:
+- Intro: AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach.
+- Domain: find-off-market
+- Cards:
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
+  - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to group each owner, the property address, and whether you already made contact.
+
+## 103. acreage with zoning that allows a house
+
+- Header: For finding potentially viable land deals, here's how each tool can help:
+- Intro: AI agents can screen parcels, pull zoning and comps, and track listings so you spend time only on land deals worth pursuing.
+- Domain: find-land
+- Cards:
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
+  - PropStream — Specialist · Docs checked — PropStream searches property records for land parcels.
+  - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the zoning, access, and flood questions to settle before you pursue a parcel.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the facts you still need on a vacant parcel, starting with access and zoning.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out acreage, zoning, and which parcels you have already screened.
+
+## 104. find a parcel I could split
+
+- Header: For finding potentially viable land deals, here's how each tool can help:
+- Intro: AI agents can screen parcels, pull zoning and comps, and track listings so you spend time only on land deals worth pursuing.
+- Domain: find-land
+- Cards:
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
+  - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
+  - PropStream — Specialist · Docs checked — PropStream searches property records for land parcels.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the zoning, access, and flood questions to settle before you pursue a parcel.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the facts you still need on a vacant parcel, starting with access and zoning.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out acreage, zoning, and which parcels you have already screened.
+
+## 105. find the parcel and read the zoning before I offer
+
+- Header: For finding potentially viable land deals, here's how each tool can help:
+- Intro: AI agents can screen parcels, pull zoning and comps, and track listings so you spend time only on land deals worth pursuing.
+- Domain: find-land
+- Cards:
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
+  - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
+  - PropStream — Specialist · Docs checked — PropStream searches property records for land parcels.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the zoning, access, and flood questions to settle before you pursue a parcel.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the facts you still need on a vacant parcel, starting with access and zoning.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out acreage, zoning, and which parcels you have already screened.
+
+## 106. zoning on this lot before I make an offer
+
+- Header: For finding potentially viable land deals, here's how each tool can help:
+- Intro: AI agents can screen parcels, pull zoning and comps, and track listings so you spend time only on land deals worth pursuing.
+- Domain: find-land
+- Cards:
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - Land id — Specialist · Docs checked — Land id looks up parcel boundaries and owner names on land across the country.
+  - PropStream — Specialist · Docs checked — PropStream searches property records for land parcels.
+  - Regrid — Specialist · Docs checked — Regrid sells parcel boundaries and owner fields for one county or one state.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to list the zoning, access, and flood questions to settle before you pursue a parcel.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to draft the facts you still need on a vacant parcel, starting with access and zoning.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to lay out acreage, zoning, and which parcels you have already screened.
+
+## 107. cap rate on this rental before I write an offer
+
+- Header: For finding and ranking real estate deals, here's how each tool can help:
+- Intro: AI agents can line up cap rate, rent, and after-repair value from the numbers you enter, and you still decide which property to pursue.
+- Domain: rank-property-deals
+- Cards:
+  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - DealCheck — Specialist · Docs checked — DealCheck runs a rental, flip, or commercial calculator and lines the deals up together.
+  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate price, rent, and rehab on one deal so you can compare it with the next.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
+
+## 108. rank these flips by after repair value
+
+- Header: For ranking these flips by after repair value, here's how each tool can help:
+- Intro: AI agents can line up cap rate, rent, and after-repair value from the numbers you enter, and you still decide which property to pursue.
+- Domain: rank-property-deals
+- Cards:
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
+  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate price, rent, and rehab on one deal so you can compare it with the next.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
+
+## 109. which investment property has the better cash flow
+
+- Header: For reading your cash flow, here's how each tool can help:
+- Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
+- Domain: rank-property-deals
+- Cards:
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
+  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate price, rent, and rehab on one deal so you can compare it with the next.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
+
+## 110. fix and flip numbers for the house on Pine
+
+- Header: For fixing and flip numbers for the house on Pine, here's how each tool can help:
+- Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
+- Domain: rank-property-deals
+- Cards:
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
+  - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate price, rent, and rehab on one deal so you can compare it with the next.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to line up price, rent, and rehab in columns so the stronger deal is obvious.
+
+## 111. make a 3d model of a chair for the game
+
+- Header: For making a 3D model of a chair for the game, here's how each tool can help:
+- Intro: AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: make-3d
+- Cards:
+  - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a 3D prompt so the subject, scale, and style are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each 3D prompt, the result, and what you would change.
+
+## 112. text to 3d for a helmet asset
+
+- Header: For making a 3D model, here's how each tool can help:
+- Intro: AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: make-3d
+- Cards:
+  - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a 3D prompt so the subject, scale, and style are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each 3D prompt, the result, and what you would change.
+
+## 113. image to 3d of this product photo
+
+- Header: For making a 3D model, here's how each tool can help:
+- Intro: AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: make-3d
+- Cards:
+  - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a 3D prompt so the subject, scale, and style are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each 3D prompt, the result, and what you would change.
+
+## 114. I need a 3d asset, not a picture of a house
+
+- Header: For making a 3D model, here's how each tool can help:
+- Intro: AI agents can describe the 3D asset you want and list what to change, so you generate it and check it yourself.
+- Domain: make-3d
+- Cards:
+  - Meshy — Specialist · Docs checked — Meshy turns text or a picture into a 3D asset.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the 3D asset you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten a 3D prompt so the subject, scale, and style are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each 3D prompt, the result, and what you would change.
+
+## 115. concept art of a dragon in a cave
+
+- Header: For making an image, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten an image prompt so the subject, style, and framing are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each image prompt, the result, and what you would change.
+
+## 116. text to image of a travel poster
+
+- Header: For making an image from text, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten an image prompt so the subject, style, and framing are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each image prompt, the result, and what you would change.
+
+## 117. game art for the loading screen
+
+- Header: For making an image, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten an image prompt so the subject, style, and framing are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each image prompt, the result, and what you would change.
+
+## 118. draw concept art of a spaceship
+
+- Header: For making an image, here's how each tool can help:
+- Intro: AI agents can describe the image you want and list what to change, so you generate it and check it yourself.
+- Domain: make-images
+- Cards:
+  - Midjourney — Specialist · Docs checked — Midjourney draws images from a text prompt.
+  - Scenario — Specialist · Docs checked — Scenario draws game art from a prompt.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to describe the image you want and list what to change after you generate it.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to tighten an image prompt so the subject, style, and framing are specific.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to track each image prompt, the result, and what you would change.
+
+## 119. AI tools for real estate
+
+- Header: For finding AI tools for real estate, here's how each tool can help:
+- Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
+- Domain: real-estate
+- Cards:
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
+
+## 120. real estate software for an agent
+
+- Header: For finding AI tools for real estate, here's how each tool can help:
+- Intro: AI agents can compare a property deal, plan a listing video, and draft owner outreach, and you still decide which home to pursue.
+- Domain: real-estate
+- Cards:
+  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
+  - AutoReel — Specialist · Docs checked — AutoReel turns listing photos into a property video with music and captions.
+  - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
+  - Acres — Specialist · Docs checked — Acres shows parcel maps and basic land insights before an owner lookup.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
+  - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn the property facts you paste in into a short note you can edit.
+  - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to list what is still missing from the property facts you paste in.
+  - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to put the property facts you paste in on one row so you can check them.
 
 # Other natural seeds
 
@@ -9077,8 +10912,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: do-taxes
 - Cards:
   - TaxAct — Specialist · Docs checked — TaxAct walks a personal return through guided questions so the taxes get filed online.
-  - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
   - Keeper — Specialist · Docs checked — Keeper tracks expenses and files federal and state taxes, including quarterly payments.
+  - TurboTax — Specialist · Docs checked — TurboTax guides a personal tax return from the first question to the filed form.
   - FlyFin — Specialist · Docs checked — FlyFin finds deductions and has a CPA file self-employed taxes.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to sort income and possible deductions into questions for a tax pro.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the forms and receipts you still need to gather before you file.
@@ -9261,8 +11096,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.
 - Domain: finance-ops
 - Cards:
-  - Vic.ai — Specialist · Docs checked — Vic.ai reads invoices for an accounts-payable team.
   - BILL — Specialist · Docs checked — BILL sends invoices and pays bills inside one finance product.
+  - Vic.ai — Specialist · Docs checked — Vic.ai reads invoices for an accounts-payable team.
   - Ramp — Specialist · Docs checked — Ramp runs cards and expenses together in one finance platform.
   - Dext — Specialist · Docs checked — Dext captures receipts and invoices so bookkeeping can process them.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to pull invoice fields into a list and flag lines that do not match a purchase order.
@@ -9476,8 +11311,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can find moments in a long video, reframe them, and draft captions so you can publish clips without watching the whole file again.
 - Domain: game-creative
 - Cards:
-  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
+  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
   - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
   - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
@@ -9628,8 +11463,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
-  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
   - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
+  - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to pick which moments in a long video are worth cutting into a short clip.
@@ -9642,8 +11477,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: game-creative
 - Cards:
   - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
-  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
+  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
   - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
@@ -11260,8 +13095,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can help you manage an investment portfolio by lining up accounts, comparing fees, and drafting questions about risk.
 - Domain: manage-portfolio
 - Cards:
-  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - PortfolioPilot — Specialist · Docs checked — PortfolioPilot tracks your accounts and assesses the portfolio.
+  - Magnifi — Specialist · Docs checked — Magnifi links brokerage accounts and shows a portfolio summary.
   - Composer — Specialist · Docs checked — Composer automates a trading strategy on an investment account.
   - Kubera — Specialist · Docs checked — Kubera tracks a household balance sheet next to the rest of an investment portfolio.
   - Range — Specialist · Docs checked — Range tracks portfolio, tax, and equity details with Rai, the assistant inside its advisory membership.
@@ -13714,8 +15549,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can propose times on the calendar and draft the follow-up once you pick one.
 - Domain: scheduling-assistant
 - Cards:
-  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
   - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
+  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
   - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to propose two meeting times and a short prep list from a messy calendar note.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to turn a pile of constraints into the times you could actually offer.
@@ -14531,8 +16366,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path.
 - Domain: tool-use-browser
 - Cards:
-  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Skyvern — Specialist · Docs checked — Skyvern automates clicks and form steps inside a browser.
+  - Browser Use — Specialist · Smoke-tested — Browser Use opens pages and clicks through the steps in a browser.
   - Composio — Specialist · Docs checked — Composio connects an agent to outside apps when the job needs more than browser steps.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to write browser steps for a repeated web task and mark where a login should stop you.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to read the browser steps and mark the one a person should do.
@@ -15681,8 +17516,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -15756,8 +17591,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Cards:
   - DealMachine — Specialist · Docs checked — DealMachine pulls owner records and tags a property during a drive.
   - BatchLeads — Specialist · Docs checked — BatchLeads saves owner phone numbers and emails beside each property on a list.
-  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - Launch Control — Specialist · Docs checked — Launch Control sends texts to owners whose numbers are already on a list.
+  - PropStream — Specialist · Docs checked — PropStream searches property records, including off-market listings, from one set of filters.
   - REsimpli — Specialist · Docs checked — REsimpli calls, texts, and emails owners from the same CRM.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to turn a for-sale-by-owner lead into a short call script you can edit before you dial.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite an owner outreach note so it names the property and asks for one reply.
@@ -15905,8 +17740,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Intro: AI agents can compare property records and rental or flip numbers so you sort the deals yourself.
 - Domain: rank-property-deals
 - Cards:
-  - DealCheck — Specialist · Docs checked — DealCheck calculates rental cash flow, flip profit, and commercial numbers side by side.
   - Mashvisor — Specialist · Docs checked — Mashvisor estimates rental income on a property you are ranking against others.
+  - DealCheck — Specialist · Docs checked — DealCheck runs a rental, flip, or commercial calculator and lines the deals up together.
   - PropStream — Specialist · Docs checked — PropStream filters property records, including off-market ones, before the deals get ranked.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to separate price, rent, and rehab on one deal so you can compare it with the next.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to write the rental or flip figures you still need before you sort a stack of deals.
@@ -17229,8 +19064,8 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Domain: game-creative
 - Cards:
   - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
-  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
+  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - Eklipse — Specialist · Docs checked — Eklipse finds vertical highlight clips from Twitch, YouTube, and Kick.
   - Captions — Specialist · Docs checked — Captions trims a video and adds on-screen words for a social clip.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to outline short-clip moments from a long video and draft captions you can edit.
@@ -17651,7 +19486,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
   - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
   - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
-  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
+  - Bitpart — Specialist · Docs checked — Bitpart supplies an engine and SDKs for a character that talks in a game.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a character line so it stays in the voice you described.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list lines, the trigger, and whether the game may say them.
@@ -17696,7 +19531,7 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
   - Inworld — Specialist · Docs checked — Inworld writes dialogue for a game character on a hosted stack.
   - Convai — Specialist · Docs checked — Convai runs characters that talk with the player inside a game.
   - NVIDIA ACE for Games — Specialist · Docs checked — NVIDIA ACE for Games offers downloads and plugins for an in-game character.
-  - Tavernbard — Specialist · Docs checked — Tavernbard plays a game master in Discord and can speak character lines there.
+  - Bitpart — Specialist · Docs checked — Bitpart supplies an engine and SDKs for a character that talks in a game.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude to draft dialogue for an in-game character, and you decide which lines are allowed.
   - ChatGPT — General-purpose AI assistant · Docs checked — Ask ChatGPT to rewrite a character line so it stays in the voice you described.
   - Google Gemini — General-purpose AI assistant · Docs checked — Ask Gemini to list lines, the trigger, and whether the game may say them.
@@ -18900,9 +20735,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Header: For scheduling meetings and taking notes, here's how each tool can help:
 - Intro: AI agents can find a meeting time that works for everyone and write up notes and action items once the call ends.
 - Cards:
-  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
-  - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
   - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
+  - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
+  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
   - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
   - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to schedule meetings and take notes.
@@ -19045,9 +20880,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Header: For clipping a YouTube short and posting it to Instagram, here's how each tool can help:
 - Intro: AI agents can cut the YouTube video into a short and draft the Instagram caption to post with it.
 - Cards:
-  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
-  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
   - StreamLadder — Specialist · Docs checked — StreamLadder reframes a horizontal stream clip into a vertical short for Reels or TikTok.
+  - Buffer — Specialist · Docs checked — Buffer schedules social posts and drafts captions for a channel.
+  - Opus Clip — Specialist · Docs checked — Opus Clip cuts a long video into short clips.
   - Ocoya — Specialist · Docs checked — Ocoya creates social posts and puts them on a schedule.
   - CapCut — Specialist · Docs checked — CapCut edits video for YouTube, TikTok, and Reels, including basic cuts.
   - Predis.ai — Specialist · Docs checked — Predis.ai generates social posts and ad creatives.
@@ -19286,9 +21121,9 @@ Queries the word-overlap backstop missed. Graded by the same embedding path.
 - Header: For scheduling meetings and taking notes, here's how each tool can help:
 - Intro: AI agents can find a meeting time that works for everyone and write up notes and action items once the call ends.
 - Cards:
-  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
-  - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
   - Reclaim — Specialist · Docs checked — Reclaim shares scheduling links and holds focus blocks on the calendar.
+  - Granola — Specialist · Docs checked — Granola takes meeting notes alongside the call.
+  - Motion — Specialist · Docs checked — Motion plans a calendar and a task list in the same scheduling view.
   - Notion — Specialist · Docs checked — Notion keeps meeting notes and the docs around them in one workspace.
   - Lindy — Specialist · Docs checked — Lindy schedules meetings and clears inbox follow-ups.
   - Claude (Anthropic) — General-purpose AI assistant · Docs checked — Ask Claude for a step-by-step plan to schedule meetings and take notes.

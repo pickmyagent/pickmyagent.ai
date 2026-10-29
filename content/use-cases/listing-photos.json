@@ -14,5 +14,11 @@
       "why": "Edits a listing photo and virtually stages an empty room."
     }
   ],
-  "intro": "AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing."
+  "intro": "AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.",
+  "related": [
+    {
+      "slug": "floor-plan-rendering",
+      "label": "Turning a floor plan or blueprint into a rendering is a separate job."
+    }
+  ]
 }

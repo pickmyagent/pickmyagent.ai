@@ -1,0 +1,71 @@
+{
+  "affiliateUrl": null,
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:00:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "reimaginehome",
+  "name": "REimagineHome",
+  "websiteUrl": "https://www.reimaginehome.ai/interior-home-renovation",
+  "shortDescription": "Turns a room photo into a renovation preview. New accounts get 5 free designs.",
+  "longDescription": "REimagineHome interior renovation takes a room photo and a description, then changes surfaces, colors, and decor while leaving the architecture in place. New accounts get 5 free designs with no card. Paid plans are monthly credit allowances. See their site for current pricing.",
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
+  "pricingNotes": "New accounts get 5 free designs. Paid plans are monthly credit allowances. See their site for current pricing.",
+  "pricingUrl": "https://www.reimaginehome.ai/pricing",
+  "docsUrl": "https://www.reimaginehome.ai/interior-home-renovation",
+  "freeTier": true,
+  "freeTierNotes": "5 free designs. No card required.",
+  "startingPrice": null,
+  "bestFor": [
+    "A room photo that should become a renovation preview",
+    "An interior mockup that keeps the existing walls"
+  ],
+  "notIdealFor": [
+    "A blueprint that should become a whole-house 3D model",
+    "A measured floor plan for a listing"
+  ],
+  "strength": "REimagineHome turns a room photo into a renovation preview and keeps the room structure unless you ask to change it.",
+  "weakness": "The free allowance is 5 designs, and the pricing page lists credit plans without a dollar amount in the plan body.",
+  "sources": [
+    "https://www.reimaginehome.ai/interior-home-renovation",
+    "https://www.reimaginehome.ai/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.reimaginehome.ai/interior-home-renovation"
+  },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a room photo into a renovation preview."
+  },
+  "id": "reimaginehome"
+}

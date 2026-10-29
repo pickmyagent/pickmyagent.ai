@@ -307,6 +307,7 @@ export const CANONICAL_REAL_ESTATE = new Set([
   "realtor-prospecting",
   "agent-social",
   "property-management",
+  "floor-plan-rendering",
 ]);
 
 export const CAP_RATE_INTRO =

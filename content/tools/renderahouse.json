@@ -1,0 +1,52 @@
+{
+  "affiliateUrl": null,
+  "categories": ["creative-media"],
+  "useCaseTags": ["floor-plan-rendering"],
+  "toolTypes": ["creative"],
+  "platforms": ["web"],
+  "openSource": false,
+  "repoUrl": null,
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-27T22:30:00-04:00",
+  "checkedDate": "2026-10-27",
+  "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+  "handsOn": { "performed": false },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "pricingCheckedAt": "2026-10-27",
+  "freeTrial": null,
+  "slug": "renderahouse",
+  "name": "Render a House",
+  "websiteUrl": "https://www.renderahouse.com/",
+  "shortDescription": "Turns a sketch, a floor plan, or a photo into a photorealistic render.",
+  "longDescription": "Render a House takes a sketch, a floor plan, a photo, or a 3D model and returns a photorealistic render. The free start includes 3 credits a day and does not ask for a card. Paid plans list monthly credit grants on the homepage. See their site for current pricing.",
+  "pricingModel": ["freemium", "subscription"],
+  "pricingNotes": "See their site for current pricing. The free start includes 3 credits a day and no card.",
+  "pricingUrl": "https://www.renderahouse.com/",
+  "docsUrl": "https://www.renderahouse.com/",
+  "freeTier": true,
+  "freeTierNotes": "3 credits a day. No card required.",
+  "startingPrice": null,
+  "bestFor": [
+    "A sketch or floor plan that should become a photoreal render",
+    "A 3D model you orbit and then render from a saved view"
+  ],
+  "notIdealFor": [
+    "A quote that needs a published monthly dollar amount",
+    "Virtual staging of a listing photo as the only job"
+  ],
+  "strength": "Render a House turns a sketch, a floor plan, a photo, or a 3D model into a photorealistic render.",
+  "weakness": "The free start is 3 credits a day, and a paid monthly dollar amount is not printed with the plan names.",
+  "sources": ["https://www.renderahouse.com/"],
+  "siteLoad": { "status": 200, "finalUrl": "https://www.renderahouse.com/" },
+  "useCaseFit": {
+    "floor-plan-rendering": "Turns a sketch, a floor plan, or a photo into a photorealistic render."
+  },
+  "id": "renderahouse"
+}

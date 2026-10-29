@@ -122,6 +122,8 @@ export type UseCase = {
   disclaimer?: string;
   /** One sentence on how AI agents help with this job. No outcome claim. */
   intro?: string;
+  /** Other jobs a reader should open, with the link text. */
+  related?: { slug: string; label: string }[];
 };
 
 export type Category = {

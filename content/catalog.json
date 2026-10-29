@@ -405,6 +405,214 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:30:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "architectgpt",
+      "name": "ArchitectGPT",
+      "websiteUrl": "https://www.architectgpt.io/",
+      "shortDescription": "Turns a room photo or a floor plan into a photoreal render. Basic is $29 a month.",
+      "longDescription": "ArchitectGPT restyles a room photo or an exterior photo, and on Pro it turns a plan image or a DWG or DXF file into a furnished top-down render. Basic is $29 a month for 300 generations. Standard is $59 a month for 1,000 generations. Pro is $99 a month and is the plan that includes floor plan rendering. Premium is $149 a month.",
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Basic is $29 per month for 300 generations. Standard is $59 per month for 1,000 generations. Pro is $99 per month and includes floor plan rendering. Premium is $149 per month.",
+      "pricingUrl": "https://www.architectgpt.io/pricing",
+      "docsUrl": "https://www.architectgpt.io/",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 29,
+      "bestFor": [
+        "A room or exterior photo that should become a redesign",
+        "A plan image that should become a furnished top-down render"
+      ],
+      "notIdealFor": [
+        "Floor plan rendering on the $29 Basic plan",
+        "An editable measured floor plan you export to CAD"
+      ],
+      "strength": "ArchitectGPT turns a room photo into a redesign and, on Pro, a floor plan image into a furnished render.",
+      "weakness": "Floor plan rendering is listed on Pro at $99 per month, not on the $29 Basic plan.",
+      "sources": [
+        "https://www.architectgpt.io/",
+        "https://www.architectgpt.io/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.architectgpt.io/pricing"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a room photo into a redesign and a floor plan image into a furnished render on Pro."
+      },
+      "id": "architectgpt"
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "archivinci",
+      "name": "ArchiVinci",
+      "websiteUrl": "https://www.archivinci.com/pricing",
+      "shortDescription": "Renders floor plans and furnishes a 2D plan. Monthly access is $79.",
+      "longDescription": "ArchiVinci lists interior, exterior, landscape, floor plan, and masterplan renders, plus furnishing a 2D floor plan and image-to-3D floor plan generation. A monthly subscription is $79. A yearly subscription is $549. A 3-day pass is $49.",
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Monthly subscription is $79. Yearly subscription is $549. A 3-day pass is $49. A 1-month pass is $99.",
+      "pricingUrl": "https://www.archivinci.com/pricing",
+      "docsUrl": "https://www.archivinci.com/pricing",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 79,
+      "bestFor": [
+        "A 2D floor plan you want furnished and rendered",
+        "Floor plan, exterior, and masterplan renders in one suite"
+      ],
+      "notIdealFor": [
+        "A free trial with no payment",
+        "Virtual staging of one listing photo"
+      ],
+      "strength": "ArchiVinci renders floor plans, furnishes a 2D floor plan, and can generate a 3D floor plan from an image.",
+      "weakness": "The monthly subscription is $79, and the pricing page does not list a free tier.",
+      "sources": [
+        "https://www.archivinci.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.archivinci.com/pricing"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Renders a floor plan and furnishes a 2D plan."
+      },
+      "id": "archivinci"
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "arkoai",
+      "name": "ArkoAI",
+      "websiteUrl": "https://arko.ai/",
+      "shortDescription": "Renders a Rhino, Revit, or SketchUp view, or a screenshot. 20 free basic renders.",
+      "longDescription": "ArkoAI renders the active view inside Rhino, Revit, or SketchUp. If you do not use a plugin, you upload a screenshot in the web app. The basic model includes 20 free renders. See their site for current pricing.",
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "The basic model includes 20 free renders. See their site for current pricing.",
+      "pricingUrl": "https://arko.ai/",
+      "docsUrl": "https://arko.ai/",
+      "freeTier": true,
+      "freeTierNotes": "20 free renders on the basic model.",
+      "startingPrice": null,
+      "bestFor": [
+        "A model view you want rendered without leaving Rhino, Revit, or SketchUp",
+        "A screenshot of a model that should become a render"
+      ],
+      "notIdealFor": [
+        "A paper blueprint with no model screenshot",
+        "Virtual staging of a listing photo"
+      ],
+      "strength": "ArkoAI renders the active view in Rhino, Revit, or SketchUp, and the web app accepts a screenshot.",
+      "weakness": "The public site lists 20 free basic renders and does not publish a dollar plan.",
+      "sources": [
+        "https://arko.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://arko.ai/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Renders the active model view or a screenshot you upload."
+      },
+      "id": "arkoai"
+    },
+    {
       "id": "autogen",
       "slug": "autogen",
       "name": "AutoGen (Microsoft)",
@@ -1303,6 +1511,77 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "cedreo",
+      "name": "Cedreo",
+      "websiteUrl": "https://cedreo.com/compare/",
+      "shortDescription": "Home design with photoreal interior and exterior renderings. Plans from $129 a month.",
+      "longDescription": "Cedreo is cloud home-design software for builders and remodelers. You draw a floor plan or start from an existing plan, then produce photoreal interior and exterior renderings. The comparison page lists plans from $129 a month and a Personal plan at $139 per project. A free plan covers one project.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Plans are listed from $129 per month. Personal is a one-time $139 per project. A free plan covers one project.",
+      "pricingUrl": "https://cedreo.com/compare/",
+      "docsUrl": "https://cedreo.com/3d-rendering",
+      "freeTier": true,
+      "freeTierNotes": "Free plan with one project.",
+      "startingPrice": 129,
+      "bestFor": [
+        "A builder who wants photoreal interior and exterior renderings from a house plan",
+        "A remodel presentation with a plan and a picture"
+      ],
+      "notIdealFor": [
+        "A single listing-photo staging job",
+        "A game-style 3D asset from a text prompt"
+      ],
+      "strength": "Cedreo produces photoreal interior and exterior renderings from a house plan you draw or upload.",
+      "weakness": "Paid plans are listed from $129 per month, with a one-project Personal option at $139.",
+      "sources": [
+        "https://cedreo.com/compare/",
+        "https://cedreo.com/3d-rendering"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://cedreo.com/compare/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Produces photoreal interior and exterior renderings from a house plan."
+      },
+      "id": "cedreo"
+    },
+    {
       "id": "charlotte-ai",
       "slug": "charlotte-ai",
       "name": "Charlotte AI",
@@ -1952,6 +2231,77 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "coohom",
+      "name": "Coohom",
+      "websiteUrl": "https://www.coohom.com/2D-Design-Tool/",
+      "shortDescription": "Uploads a floor plan and builds an editable 3D scene. A free Basic account is available.",
+      "longDescription": "Coohom lets you upload a floor plan you already have, or describe one, and then builds a 3D scene you can edit and render. The help center says a free Basic account is available. See their site for paid plan prices.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "A free Basic account is available. See their site for paid plan prices.",
+      "pricingUrl": "https://www.coohom.com/pricing",
+      "docsUrl": "https://www.coohom.com/2D-Design-Tool/",
+      "freeTier": true,
+      "freeTierNotes": "Free Basic account.",
+      "startingPrice": null,
+      "bestFor": [
+        "An uploaded floor plan that should become an editable 3D scene",
+        "An interior presentation you furnish after the plan is read"
+      ],
+      "notIdealFor": [
+        "A one-photo staging job with no plan",
+        "A construction quantity takeoff"
+      ],
+      "strength": "Coohom turns an uploaded floor plan into an editable 3D scene you can render.",
+      "weakness": "A free basic account is listed, and the public price text does not include a paid dollar amount.",
+      "sources": [
+        "https://www.coohom.com/2D-Design-Tool/",
+        "https://www.coohom.com/helpcenter/pricing%2C-subscription%2C-and-payment"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.coohom.com/2D-Design-Tool/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns an uploaded floor plan into an editable 3D scene."
+      },
+      "id": "coohom"
+    },
+    {
       "id": "copy-ai",
       "slug": "copy-ai",
       "name": "Copy.ai",
@@ -2253,6 +2603,76 @@
       "useCaseFit": {
         "avatar-video": "Turns a photo and a script into a talking-head video."
       }
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "windows",
+        "mac"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "d5-render",
+      "name": "D5 Render",
+      "websiteUrl": "https://www.d5render.com/",
+      "shortDescription": "Real-time renderer with AI features. The Community plan is free for non-commercial work.",
+      "longDescription": "D5 Render is a real-time renderer for a 3D model, with image, panorama, and video output plus AI features. D5 Lite is the AI visualization plugin. The Community plan is free for non-commercial use and includes a limited AI trial. See their site for Pro pricing.",
+      "pricingModel": [
+        "freemium"
+      ],
+      "pricingNotes": "The Community plan is free for non-commercial use. See their site for Pro pricing.",
+      "pricingUrl": "https://www.d5render.com/pricing",
+      "docsUrl": "https://www.d5render.com/pricing",
+      "freeTier": true,
+      "freeTierNotes": "Community plan is free for non-commercial use.",
+      "startingPrice": null,
+      "bestFor": [
+        "A 3D model you want to render in real time",
+        "An architectural view that already exists in a modeling app"
+      ],
+      "notIdealFor": [
+        "A phone photo of paper blueprints with no 3D model",
+        "Virtual staging of a listing photo"
+      ],
+      "strength": "D5 Render renders a live 3D model and includes AI image tools, with a free Community plan for non-commercial work.",
+      "weakness": "You start from a 3D model rather than a photo of a blueprint, and Pro pricing is listed on the site.",
+      "sources": [
+        "https://www.d5render.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.d5render.com/pricing"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Renders a live 3D model and includes AI image tools."
+      },
+      "id": "d5-render"
     },
     {
       "id": "daydream",
@@ -3338,6 +3758,76 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "floorplanner",
+      "name": "Floorplanner",
+      "websiteUrl": "https://floorplanner.com/pricing",
+      "shortDescription": "Draws 2D and 3D floor plans in the browser. Up to 5 projects are free.",
+      "longDescription": "Floorplanner lets you draw a floor plan and export 2D and 3D images. Up to 5 projects stay free, with SD exports that include a watermark. Credit packs start at $8.15 for 5 credits, and credits raise the export resolution up to 8K. See their site for current monthly plan prices.",
+      "pricingModel": [
+        "freemium",
+        "usage"
+      ],
+      "pricingNotes": "Up to 5 projects are free. Credit packs start at $8.15 for 5 credits. See their site for current monthly plan prices.",
+      "pricingUrl": "https://floorplanner.com/pricing",
+      "docsUrl": "https://floorplanner.com/pricing",
+      "freeTier": true,
+      "freeTierNotes": "Up to 5 free projects with watermarked SD exports.",
+      "startingPrice": null,
+      "bestFor": [
+        "A floor plan you draw and then export as a 2D or 3D image",
+        "A free project while you try the layout"
+      ],
+      "notIdealFor": [
+        "A photo of a blueprint with no drawing step",
+        "Virtual staging of a listing photo"
+      ],
+      "strength": "Floorplanner draws a floor plan in the browser and exports 2D and 3D images, with up to 5 projects free.",
+      "weakness": "Free exports are watermarked SD images, and higher resolution spends credits that start at $8.15 for 5.",
+      "sources": [
+        "https://floorplanner.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://floorplanner.com/pricing"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Draws a floor plan in the browser and exports a 2D or 3D image."
+      },
+      "id": "floorplanner"
+    },
+    {
       "id": "flowise",
       "slug": "flowise",
       "name": "Flowise",
@@ -4375,6 +4865,146 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:30:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "homedesigns",
+      "name": "HomeDesigns AI",
+      "websiteUrl": "https://homedesigns.ai/",
+      "shortDescription": "Redesigns a room photo and turns a flat floor plan into a 3D view. Standard is $22 a month.",
+      "longDescription": "HomeDesigns AI redesigns a photo of a room, an exterior, or a garden, and it also turns a flat floor plan into a furnished 3D view. Standard is $22 a month, or $9 a month billed yearly, for 100 design credits. Pro is $29 a month, or $11 a month billed yearly, for 1,000 credits. Expert is $37 a month, or $14 a month billed yearly, for 2,000 credits. Each paid plan lists 2D to 3D floor plans.",
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Standard is $22 per month or $9 per month billed yearly for 100 credits. Pro is $29 per month or $11 per month billed yearly for 1,000 credits. Expert is $37 per month or $14 per month billed yearly for 2,000 credits.",
+      "pricingUrl": "https://homedesigns.ai/pricing",
+      "docsUrl": "https://homedesigns.ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": 22,
+      "bestFor": [
+        "A room photo that should become an interior redesign",
+        "A flat floor plan that should become a furnished 3D view"
+      ],
+      "notIdealFor": [
+        "A blueprint photo when you need the walls locked to the drawing",
+        "Virtual staging quoted as a separate listing service"
+      ],
+      "strength": "HomeDesigns AI redesigns a room photo and also turns a flat floor plan into a furnished 3D view.",
+      "weakness": "Standard is $22 per month, and a public free credit grant is not stated on the pricing page.",
+      "sources": [
+        "https://homedesigns.ai/",
+        "https://homedesigns.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://homedesigns.ai/pricing"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Redesigns a room photo and turns a flat floor plan into a furnished 3D view."
+      },
+      "id": "homedesigns"
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "homestyler",
+      "name": "Homestyler",
+      "websiteUrl": "https://www.homestyler.com/pricing",
+      "shortDescription": "Browser 3D floor planner with rendering. Pro+ starts at $6.80 a month.",
+      "longDescription": "Homestyler is a cloud 3D floor planner with more than 100,000 free models. The Basic plan is free and includes unlimited 1K rendering. Pro+ starts at $6.80 a month and includes 75 renders each at 2K and 4K plus 180 AI credits a month. Master+ starts at $11.80 a month with unlimited 4K image rendering.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Basic is free with unlimited 1K rendering. Pro+ starts at $6.80 per month. Master+ starts at $11.80 per month. Team starts at $19.90 per seat per month.",
+      "pricingUrl": "https://www.homestyler.com/pricing",
+      "docsUrl": "https://www.homestyler.com/pricing",
+      "freeTier": true,
+      "freeTierNotes": "Free Basic plan with unlimited 1K rendering.",
+      "startingPrice": 6.8,
+      "bestFor": [
+        "A floor plan you draw in the browser and then render",
+        "A free 1K render while you check a layout"
+      ],
+      "notIdealFor": [
+        "A one-photo blueprint with no drawing step",
+        "Virtual staging of an existing listing photo"
+      ],
+      "strength": "Homestyler is a browser 3D floor planner with free unlimited 1K rendering and paid higher-resolution renders.",
+      "weakness": "Pro+ starts at $6.80 per month, and a presentation-resolution render needs that paid allowance or a per-render purchase.",
+      "sources": [
+        "https://www.homestyler.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.homestyler.com/pricing"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Builds a 3D floor plan in the browser and renders it."
+      },
+      "id": "homestyler"
+    },
+    {
       "id": "hootsuite",
       "slug": "hootsuite",
       "name": "Hootsuite",
@@ -4579,6 +5209,75 @@
       "useCaseFit": {
         "customer-support": "Sells a customer-support AI agent at $19 per seat per month plus $0.99 per outcome."
       }
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "interior-ai",
+      "name": "Interior AI",
+      "websiteUrl": "https://interiorai.com/",
+      "shortDescription": "Turns a room photo or an interior sketch into a photoreal redesign. Pro is $49 a month.",
+      "longDescription": "Interior AI restyles a room photo and includes Sketch2Image, which turns an interior sketch or a SketchUp screenshot into a photoreal render. Pro is $49 a month for 1,000 designs. Premium is $99 a month and adds virtual staging. Ultra is $199 a month.",
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Pro is $49 per month for 1,000 designs. Premium is $99 per month. Ultra is $199 per month.",
+      "pricingUrl": "https://interiorai.com/",
+      "docsUrl": "https://interiorai.com/",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": 49,
+      "bestFor": [
+        "A room photo that should become an interior mockup",
+        "An interior sketch that should become a photoreal render"
+      ],
+      "notIdealFor": [
+        "A whole-house blueprint with no interior photo or sketch",
+        "The only tool you use to virtually stage a listing"
+      ],
+      "strength": "Interior AI turns a room photo or an interior sketch into a photoreal redesign, including a SketchUp screenshot.",
+      "weakness": "Pro is $49 per month, and virtual staging is listed on the $99 Premium plan rather than on Pro.",
+      "sources": [
+        "https://interiorai.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://interiorai.com/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a room photo or an interior sketch into a photoreal redesign."
+      },
+      "id": "interior-ai"
     },
     {
       "id": "inworld",
@@ -5585,6 +6284,77 @@
     },
     {
       "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "lookx",
+      "name": "LookX",
+      "websiteUrl": "https://www.lookx.ai/",
+      "shortDescription": "Turns sketches into architectural renders. The monthly plan is $20.",
+      "longDescription": "LookX turns text and sketches into rendering images and offers plugins for SketchUp and Rhino. You can also train a model on images of a style you want to repeat. The free plan needs no card. The monthly plan is $20 and the annual plan is $199. A team plan for 5 seats is $269.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "The free plan needs no card. Monthly is $20. Annual is $199. A team plan for 5 seats is $269.",
+      "pricingUrl": "https://www.lookx.ai/price.html",
+      "docsUrl": "https://www.lookx.ai/",
+      "freeTier": true,
+      "freeTierNotes": "Free plan. No card required.",
+      "startingPrice": 20,
+      "bestFor": [
+        "A sketch that should become an architectural render",
+        "A studio that wants a model trained on its own style"
+      ],
+      "notIdealFor": [
+        "A phone scan that should become a measured floor plan",
+        "Virtual staging of an empty listing photo"
+      ],
+      "strength": "LookX turns a sketch into an architectural render and can train a custom model on a style you upload.",
+      "weakness": "The monthly plan is $20, and the public site describes sketch rendering more clearly than a dedicated floor-plan upload.",
+      "sources": [
+        "https://www.lookx.ai/",
+        "https://www.lookx.ai/price.html"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.lookx.ai/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a sketch into an architectural render."
+      },
+      "id": "lookx"
+    },
+    {
+      "affiliateUrl": null,
       "platforms": [
         "web"
       ],
@@ -6235,6 +7005,151 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:30:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "mnki",
+      "name": "MNKI",
+      "websiteUrl": "https://mnki.ai/floor-plan-rendering",
+      "shortDescription": "Turns a floor plan image into a furnished 3D view or a render. Basic is $28.99 a month.",
+      "longDescription": "MNKI takes a PNG, JPEG, or WebP of a 2D floor plan and returns a furnished 3D plan view or a perspective render. A standard render costs 4 credits. Basic is $28.99 a month for 500 credits. Pro is $148.99 a month for 3,000 credits. New accounts start with 40 trial credits and no watermark. A top-up is $10 for 150 credits.",
+      "pricingModel": [
+        "freemium",
+        "subscription",
+        "usage"
+      ],
+      "pricingNotes": "Basic is $28.99 per month for 500 credits. Pro is $148.99 per month for 3,000 credits. A top-up is $10 for 150 credits. New accounts start with 40 trial credits.",
+      "pricingUrl": "https://mnki.ai/pricing",
+      "docsUrl": "https://mnki.ai/floor-plan-rendering",
+      "freeTier": true,
+      "freeTierNotes": "40 trial credits on signup. No watermark.",
+      "startingPrice": 28.99,
+      "bestFor": [
+        "A clean floor plan image that should become a furnished 3D view",
+        "A plan you want rendered in more than one material style"
+      ],
+      "notIdealFor": [
+        "A measured drawing a builder stamps",
+        "Virtual staging of a listing photo with no plan"
+      ],
+      "strength": "MNKI turns a floor plan image into a furnished 3D view or a perspective render.",
+      "weakness": "Basic is $28.99 per month, and a standard render spends 4 of the monthly credits.",
+      "sources": [
+        "https://mnki.ai/floor-plan-rendering",
+        "https://mnki.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://mnki.ai/floor-plan-rendering"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a floor plan image into a furnished 3D view or a perspective render."
+      },
+      "id": "mnki"
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "mnml",
+      "name": "mnml.ai",
+      "websiteUrl": "https://mnml.ai/floor-plan-to-render-ai",
+      "shortDescription": "Turns a floor plan photo into a furnished 2D or 3D view. Lite is $29 a month.",
+      "longDescription": "mnml.ai Floor Plan AI takes a PDF, a CAD screenshot, or a photo of a 2D plan and returns a colored plan or a furnished 3D view. The walls stay as drawn. Sketch to Image does the same from a hand sketch. Lite is $29 a month for 1,000 credits, Plus is $49, and Studio is $119. A one-time pack is $149 for 10,000 credits. New accounts get 100 credits and no card is required.",
+      "pricingModel": [
+        "freemium",
+        "subscription",
+        "usage"
+      ],
+      "pricingNotes": "Lite is $29 per month for 1,000 credits. Plus is $49 per month for 3,000 credits. Studio is $119 per month for 10,000 credits. A one-time pack is $149 for 10,000 credits. New accounts get 100 credits with no card.",
+      "pricingUrl": "https://mnml.ai/pricing",
+      "docsUrl": "https://mnml.ai/floor-plan-to-render-ai",
+      "freeTier": true,
+      "freeTierNotes": "100 credits on signup. No card required.",
+      "startingPrice": 29,
+      "bestFor": [
+        "A photo or scan of a floor plan that should become a furnished view",
+        "A hand sketch that should become an architectural render"
+      ],
+      "notIdealFor": [
+        "Virtual staging of an empty listing photo",
+        "A measured construction set a builder stamps"
+      ],
+      "strength": "mnml takes a photo, PDF, or CAD screenshot of a floor plan and returns a furnished view while keeping the walls as drawn.",
+      "weakness": "Lite is $29 per month, and each render spends credits from that monthly grant or from a $149 credit pack.",
+      "sources": [
+        "https://mnml.ai/floor-plan-to-render-ai",
+        "https://mnml.ai/pricing",
+        "https://mnml.ai/app/sketch2img"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://mnml.ai/floor-plan-to-render-ai"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a photo of a floor plan into a furnished view and keeps the walls as drawn."
+      },
+      "id": "mnml"
+    },
+    {
       "id": "modl",
       "slug": "modl",
       "name": "modl.ai",
@@ -6299,6 +7214,148 @@
         "finalUrl": "https://modl.ai/"
       },
       "useCaseFit": {}
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:30:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "moldaspace",
+      "name": "MoldaSpace",
+      "websiteUrl": "https://www.moldaspace.com/",
+      "shortDescription": "Turns a floor plan, sketch, or photo into a photoreal render. Creator is $19 a month.",
+      "longDescription": "MoldaSpace takes a photo, a floor plan, a sketch, or a 3D export and returns a photoreal render. Creator is $19 a month for 50 credits. Studio is $99 a month for 300 credits. Scale is $499 a month for 2,000 credits. A one-time pack is $6 for 10 credits or $19 for 40 credits. Eligible new accounts get 5 free credits and no card is required. A 2K generation uses 1 credit and a 4K generation uses 2.",
+      "pricingModel": [
+        "freemium",
+        "subscription",
+        "usage"
+      ],
+      "pricingNotes": "Creator is $19 per month for 50 credits. Studio is $99 per month for 300 credits. Scale is $499 per month for 2,000 credits. One-time packs are $6 for 10 credits and $19 for 40 credits. Eligible new accounts get 5 free credits.",
+      "pricingUrl": "https://www.moldaspace.com/",
+      "docsUrl": "https://www.moldaspace.com/",
+      "freeTier": true,
+      "freeTierNotes": "5 free credits for eligible new accounts. No card required.",
+      "startingPrice": 19,
+      "bestFor": [
+        "A floor plan or sketch that should become a client render in one meeting",
+        "A room photo you want restyled before a design approval"
+      ],
+      "notIdealFor": [
+        "A dimensioned model you edit room by room",
+        "Final construction documentation"
+      ],
+      "strength": "MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render in the browser.",
+      "weakness": "Creator is $19 per month for 50 credits, and each new version spends another credit.",
+      "sources": [
+        "https://www.moldaspace.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.moldaspace.com/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a floor plan, a sketch, or a room photo into a photoreal render."
+      },
+      "id": "moldaspace"
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:30:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "morphome",
+      "name": "Morphome",
+      "websiteUrl": "https://morphome.app/",
+      "shortDescription": "Turns a floor plan, sketch, or blueprint image into a photorealistic render.",
+      "longDescription": "Morphome takes a JPG, PNG, or PDF of a floor plan, an architectural sketch, or a blueprint and returns a photorealistic render. You pick a preset for time of day, season, and materials. New accounts get 3 free credits. Dollar amounts for monthly plans load in the app, so see their site for current pricing.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "See their site for current pricing. New accounts get 3 free credits.",
+      "pricingUrl": "https://morphome.app/pricing",
+      "docsUrl": "https://morphome.app/",
+      "freeTier": true,
+      "freeTierNotes": "3 free credits for new accounts.",
+      "startingPrice": null,
+      "bestFor": [
+        "A photo or scan of a floor plan or blueprint that should become a render",
+        "A hand sketch that should become a photoreal exterior or interior"
+      ],
+      "notIdealFor": [
+        "An editable measured model you correct wall by wall",
+        "Virtual staging of an empty listing photo as the only job"
+      ],
+      "strength": "Morphome turns a floor plan, sketch, or blueprint image into a photorealistic render without a written prompt.",
+      "weakness": "The pricing page confirms 3 free credits, and the monthly dollar amounts load after the page opens.",
+      "sources": [
+        "https://morphome.app/",
+        "https://morphome.app/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://morphome.app/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a floor plan, sketch, or blueprint image into a photorealistic render."
+      },
+      "id": "morphome"
     },
     {
       "id": "motion",
@@ -6434,6 +7491,77 @@
       "useCaseFit": {
         "it-helpdesk": "Employee assistant for IT service management and self-service requests."
       }
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "myarchitectai",
+      "name": "MyArchitectAI",
+      "websiteUrl": "https://www.myarchitectai.com/",
+      "shortDescription": "Renders an uploaded design or a sketch. Plans start at $29 a month, with 10 renders free.",
+      "longDescription": "MyArchitectAI renders an uploaded SketchUp or Archicad design and also lists sketch rendering. The homepage offers 10 renders free. The pricing page says plans start at $29 a month.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "10 renders are free. Plans start at $29 per month.",
+      "pricingUrl": "https://www.myarchitectai.com/pricing",
+      "docsUrl": "https://www.myarchitectai.com/",
+      "freeTier": true,
+      "freeTierNotes": "10 renders free.",
+      "startingPrice": 29,
+      "bestFor": [
+        "A SketchUp or Archicad view that should become a render",
+        "A sketch you want rendered in a few seconds"
+      ],
+      "notIdealFor": [
+        "A phone photo of paper blueprints with no model",
+        "Virtual staging of a listing photo"
+      ],
+      "strength": "MyArchitectAI renders an uploaded design view or a sketch, and the free testing plan includes 10 renders.",
+      "weakness": "Paid plans start at $29 per month, and the homepage is clearest when you already have a SketchUp or Archicad view.",
+      "sources": [
+        "https://www.myarchitectai.com/",
+        "https://www.myarchitectai.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.myarchitectai.com/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Renders an uploaded design view or a sketch."
+      },
+      "id": "myarchitectai"
     },
     {
       "id": "n8n",
@@ -7151,6 +8279,148 @@
     },
     {
       "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:30:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "plan2render",
+      "name": "Plan2Render",
+      "websiteUrl": "https://plan2render.ai/",
+      "shortDescription": "Turns floor plans and sketches into photoreal renderings. Discovery is $15.",
+      "longDescription": "Plan2Render takes a floor plan, an elevation, a PDF, an image, or a sketch and returns a photorealistic rendering. One credit is one render. Free is one watermarked credit and no card is required. Discovery is $15 for 10 credits on one project. Project Pass is $49 for 75 credits. Professional is $129 a month for 250 credits. Studio is $329 a month for 750 credits. Credit packs are $15 for 10, $25 for 25, $60 for 75, and $120 for 200.",
+      "pricingModel": [
+        "freemium",
+        "subscription",
+        "usage"
+      ],
+      "pricingNotes": "Free is 1 watermarked credit. Discovery is $15 for 10 credits. Project Pass is $49 for 75 credits. Professional is $129 per month for 250 credits. Studio is $329 per month for 750 credits. Packs are $15, $25, $60, and $120.",
+      "pricingUrl": "https://plan2render.ai/",
+      "docsUrl": "https://plan2render.ai/",
+      "freeTier": true,
+      "freeTierNotes": "1 watermarked credit. No card required.",
+      "startingPrice": 15,
+      "bestFor": [
+        "A floor plan or elevation that should become an interior or exterior render",
+        "A sketch or reference photo for a renovation concept"
+      ],
+      "notIdealFor": [
+        "A free unlimited editor for drawing the plan yourself",
+        "Virtual staging of a listing photo as the only job"
+      ],
+      "strength": "Plan2Render turns a floor plan, an elevation, or a sketch into a photorealistic rendering.",
+      "weakness": "The free grant is one watermarked credit, and a monthly plan starts at $129.",
+      "sources": [
+        "https://plan2render.ai/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://plan2render.ai/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a floor plan, an elevation, or a sketch into a photorealistic rendering."
+      },
+      "id": "plan2render"
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "planner5d",
+      "name": "Planner 5D",
+      "websiteUrl": "https://planner5d.com/ai/floor-plan-to-3d-model",
+      "shortDescription": "Turns an uploaded floor plan image into an editable 3D project. Premium is $19.99 a month.",
+      "longDescription": "Planner 5D converts a plan image into an editable 3D project, then you furnish it and render it. AI floor plan recognition is included on Premium. The free plan is $0 and covers 2D and 3D design with half the catalog. Premium is $19.99 a month or $59.99 a year. Professional is $49.99 a month or $399.99 a year and adds watermark-free 4K renders.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Free is $0. Premium is $19.99 per month or $59.99 per year and includes AI floor plan recognition. Professional is $49.99 per month or $399.99 per year.",
+      "pricingUrl": "https://planner5d.com/pricing",
+      "docsUrl": "https://planner5d.com/ai/floor-plan-to-3d-model",
+      "freeTier": true,
+      "freeTierNotes": "Free plan with 2D and 3D design. AI floor plan recognition starts on Premium.",
+      "startingPrice": 19.99,
+      "bestFor": [
+        "An uploaded plan image that should become an editable 3D project",
+        "A homeowner who wants to furnish the plan and then render it"
+      ],
+      "notIdealFor": [
+        "A one-click render that never opens an editor",
+        "Virtual staging of an MLS photo"
+      ],
+      "strength": "Planner 5D turns an uploaded floor plan image into an editable 3D project you can furnish and render.",
+      "weakness": "AI floor plan recognition starts on Premium at $19.99 per month, and the free plan does not include it.",
+      "sources": [
+        "https://planner5d.com/ai/floor-plan-to-3d-model",
+        "https://planner5d.com/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://planner5d.com/pricing"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns an uploaded floor plan image into an editable 3D project."
+      },
+      "id": "planner5d"
+    },
+    {
+      "affiliateUrl": null,
       "platforms": [
         "web"
       ],
@@ -7287,6 +8557,75 @@
         "social-media": "Generates social posts and ads with AI, without a clear base price in the fetch.",
         "agent-social": "Generates social posts and ad creatives for a listing."
       }
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "promeai",
+      "name": "PromeAI",
+      "websiteUrl": "https://www.promeai.pro/",
+      "shortDescription": "Turns a sketch, a photo, or a modeling screenshot into a realistic render.",
+      "longDescription": "PromeAI Sketch Rendering takes a hand-drawn sketch, a photo, or a screenshot from modeling software and generates a realistic render. The same site also lists texture-lock rendering and region edits. See their site for current pricing.",
+      "pricingModel": [
+        "contact"
+      ],
+      "pricingNotes": "See their site for current pricing.",
+      "pricingUrl": "https://www.promeai.pro/",
+      "docsUrl": "https://www.promeai.pro/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "bestFor": [
+        "A sketch or modeling screenshot that should become a realistic render",
+        "A photo you want to restyle as an architectural image"
+      ],
+      "notIdealFor": [
+        "A measured editable floor plan with dimensions",
+        "Virtual staging of a listing photo as the only job"
+      ],
+      "strength": "PromeAI turns a sketch, a photo, or a modeling screenshot into a realistic render.",
+      "weakness": "The public homepage describes the sketch workflow and does not list a dollar plan.",
+      "sources": [
+        "https://www.promeai.pro/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.promeai.pro/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a sketch, a photo, or a modeling screenshot into a realistic render."
+      },
+      "id": "promeai"
     },
     {
       "affiliateUrl": null,
@@ -7713,6 +9052,217 @@
       }
     },
     {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "reimaginehome",
+      "name": "REimagineHome",
+      "websiteUrl": "https://www.reimaginehome.ai/interior-home-renovation",
+      "shortDescription": "Turns a room photo into a renovation preview. New accounts get 5 free designs.",
+      "longDescription": "REimagineHome interior renovation takes a room photo and a description, then changes surfaces, colors, and decor while leaving the architecture in place. New accounts get 5 free designs with no card. Paid plans are monthly credit allowances. See their site for current pricing.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "New accounts get 5 free designs. Paid plans are monthly credit allowances. See their site for current pricing.",
+      "pricingUrl": "https://www.reimaginehome.ai/pricing",
+      "docsUrl": "https://www.reimaginehome.ai/interior-home-renovation",
+      "freeTier": true,
+      "freeTierNotes": "5 free designs. No card required.",
+      "startingPrice": null,
+      "bestFor": [
+        "A room photo that should become a renovation preview",
+        "An interior mockup that keeps the existing walls"
+      ],
+      "notIdealFor": [
+        "A blueprint that should become a whole-house 3D model",
+        "A measured floor plan for a listing"
+      ],
+      "strength": "REimagineHome turns a room photo into a renovation preview and keeps the room structure unless you ask to change it.",
+      "weakness": "The free allowance is 5 designs, and the pricing page lists credit plans without a dollar amount in the plan body.",
+      "sources": [
+        "https://www.reimaginehome.ai/interior-home-renovation",
+        "https://www.reimaginehome.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.reimaginehome.ai/interior-home-renovation"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a room photo into a renovation preview."
+      },
+      "id": "reimaginehome"
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "rendair",
+      "name": "Rendair",
+      "websiteUrl": "https://rendair.ai/",
+      "shortDescription": "Turns a sketch or floor plan into a 3D project and a render. Starter is $19 a month.",
+      "longDescription": "Rendair turns a sketch, a floor plan, or a 3D model into a project you can render and revise in chat. Uploading a 2D floor plan builds the 3D project, with walls, rooms, and volumes. Starter is $19 a month for 500 credits, Pro is $49 a month for 1,500 credits, and Studio Pro is $199 a month for 7,500 credits.",
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "Starter is $19 per month for 500 credits. Pro is $49 per month for 1,500 credits and 2 members. Studio Pro is $199 per month for 7,500 credits and 5 members. Annual billing saves 2 months.",
+      "pricingUrl": "https://rendair.ai/pricing",
+      "docsUrl": "https://rendair.ai/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": 19,
+      "bestFor": [
+        "A 2D floor plan that should become a 3D project and a render",
+        "A sketch you want to revise in chat"
+      ],
+      "notIdealFor": [
+        "Virtual staging of a vacant listing photo",
+        "A generic image with no plan or sketch"
+      ],
+      "strength": "Rendair uploads a 2D floor plan, builds the 3D project, and generates renders you can revise on a board.",
+      "weakness": "Starter is $19 per month, and the public pricing page does not list a free credit grant.",
+      "sources": [
+        "https://rendair.ai/",
+        "https://rendair.ai/pricing"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://rendair.ai/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns an uploaded floor plan into a 3D project and a render."
+      },
+      "id": "rendair"
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:30:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "renderahouse",
+      "name": "Render a House",
+      "websiteUrl": "https://www.renderahouse.com/",
+      "shortDescription": "Turns a sketch, a floor plan, or a photo into a photorealistic render.",
+      "longDescription": "Render a House takes a sketch, a floor plan, a photo, or a 3D model and returns a photorealistic render. The free start includes 3 credits a day and does not ask for a card. Paid plans list monthly credit grants on the homepage. See their site for current pricing.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "See their site for current pricing. The free start includes 3 credits a day and no card.",
+      "pricingUrl": "https://www.renderahouse.com/",
+      "docsUrl": "https://www.renderahouse.com/",
+      "freeTier": true,
+      "freeTierNotes": "3 credits a day. No card required.",
+      "startingPrice": null,
+      "bestFor": [
+        "A sketch or floor plan that should become a photoreal render",
+        "A 3D model you orbit and then render from a saved view"
+      ],
+      "notIdealFor": [
+        "A quote that needs a published monthly dollar amount",
+        "Virtual staging of a listing photo as the only job"
+      ],
+      "strength": "Render a House turns a sketch, a floor plan, a photo, or a 3D model into a photorealistic render.",
+      "weakness": "The free start is 3 credits a day, and a paid monthly dollar amount is not printed with the plan names.",
+      "sources": [
+        "https://www.renderahouse.com/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.renderahouse.com/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a sketch, a floor plan, or a photo into a photorealistic render."
+      },
+      "id": "renderahouse"
+    },
+    {
       "id": "replit",
       "slug": "replit",
       "name": "Replit",
@@ -7920,6 +9470,146 @@
       "useCaseFit": {
         "write-resume": "Builds a resume, scores the sections, and pulls keywords from a job description."
       }
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "roomgpt",
+      "name": "RoomGPT",
+      "websiteUrl": "https://roomgpt.io/",
+      "shortDescription": "Turns one room photo into a restyled picture.",
+      "longDescription": "RoomGPT asks for one photo of a room and returns that room in a different theme, so you can see a restyle before a renovation. See their site for current pricing.",
+      "pricingModel": [
+        "contact"
+      ],
+      "pricingNotes": "See their site for current pricing.",
+      "pricingUrl": "https://roomgpt.io/",
+      "docsUrl": "https://roomgpt.io/",
+      "freeTier": null,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "bestFor": [
+        "One room photo that should become an interior mockup",
+        "A quick restyle before you renovate"
+      ],
+      "notIdealFor": [
+        "A blueprint or floor plan photo",
+        "A measured 3D model of the whole house"
+      ],
+      "strength": "RoomGPT turns one room photo into a restyled picture.",
+      "weakness": "The public homepage does not list a dollar plan, and the tool starts from a room photo rather than a floor plan.",
+      "sources": [
+        "https://roomgpt.io/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://roomgpt.io/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns one room photo into a restyled picture."
+      },
+      "id": "roomgpt"
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "roomsketcher",
+      "name": "RoomSketcher",
+      "websiteUrl": "https://www.roomsketcher.com/features/3d-floor-plans/",
+      "shortDescription": "Turns a 2D floor plan into a 3D floor plan. Pro is $144 a year.",
+      "longDescription": "RoomSketcher creates a 2D plan or accepts an upload, then generates a 3D floor plan in one step. The free plan includes 2 starter credits and 1 AI floor plan conversion, and no card is required. Pro is billed as $144 per year, shown as $12 per month. Team is billed as $420 per year for 5 users.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "Free includes 2 credits and 1 AI floor plan conversion. Pro is billed as $144 per year. Team is billed as $420 per year for 5 users.",
+      "pricingUrl": "https://www.roomsketcher.com/pricing/",
+      "docsUrl": "https://www.roomsketcher.com/features/3d-floor-plans/",
+      "freeTier": true,
+      "freeTierNotes": "1 free AI floor plan conversion and 2 starter credits. No card required.",
+      "startingPrice": 12,
+      "bestFor": [
+        "A 2D plan that should become a 3D floor plan",
+        "A realtor who wants a floor plan image for a listing"
+      ],
+      "notIdealFor": [
+        "A photoreal interior from a single room photo only",
+        "Virtual staging priced per photo"
+      ],
+      "strength": "RoomSketcher turns a 2D floor plan into a 3D floor plan, and the free plan includes one AI conversion.",
+      "weakness": "Pro is billed as $144 per year, and many 3D outputs spend the monthly credits.",
+      "sources": [
+        "https://www.roomsketcher.com/features/3d-floor-plans/",
+        "https://www.roomsketcher.com/pricing/"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.roomsketcher.com/pricing/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a 2D floor plan into a 3D floor plan."
+      },
+      "id": "roomsketcher"
     },
     {
       "id": "rows",
@@ -8608,6 +10298,77 @@
       "useCaseFit": {
         "sales-outreach": "Describes an AI assistant for setting up and fixing cold email outreach."
       }
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": null,
+      "slug": "spacely",
+      "name": "Spacely AI",
+      "websiteUrl": "https://www.spacely.ai/",
+      "shortDescription": "Turns a sketch, a 3D model, or a room photo into a photoreal render. No card to start.",
+      "longDescription": "Spacely AI turns a sketch, a 3D model, or a room photo into a photoreal render and says the render can finish in under 60 seconds. Plugins are listed for SketchUp, with Rhino and Revit named as well. Creating an account does not require a card. A June 2026 pricing post says a lapsed Personal plan returns at $25 a month for 500 credits, Studio at $50 a month for 1,500 credits, and Agency at $100 a month for 3,500 credits.",
+      "pricingModel": [
+        "freemium",
+        "subscription"
+      ],
+      "pricingNotes": "No card is required to create an account. A lapsed Personal plan is $25 per month for 500 credits, Studio is $50 per month for 1,500 credits, and Agency is $100 per month for 3,500 credits.",
+      "pricingUrl": "https://www.spacely.ai/blog/spacely-ai-subscription-plans-2026-new-pricing-explained",
+      "docsUrl": "https://www.spacely.ai/",
+      "freeTier": true,
+      "freeTierNotes": "Account creation does not require a card.",
+      "startingPrice": 25,
+      "bestFor": [
+        "A sketch or room photo that should become a photoreal render",
+        "A SketchUp view you want to render without leaving the model"
+      ],
+      "notIdealFor": [
+        "A measured floor plan delivered from a phone scan",
+        "Virtual staging priced per listing photo"
+      ],
+      "strength": "Spacely AI turns a sketch, a 3D model, or a room photo into a photoreal render, and signup does not require a card.",
+      "weakness": "A lapsed Personal plan is $25 per month, and the AutoCAD connection was still described as upcoming on the pricing post.",
+      "sources": [
+        "https://www.spacely.ai/",
+        "https://www.spacely.ai/blog/spacely-ai-subscription-plans-2026-new-pricing-explained"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.spacely.ai/"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a sketch, a 3D model, or a room photo into a photoreal render."
+      },
+      "id": "spacely"
     },
     {
       "id": "spark-mail",
@@ -9304,6 +11065,75 @@
       "useCaseFit": {
         "do-taxes": "Lists guided personal tax filing, with a file-yourself range that starts at $0."
       }
+    },
+    {
+      "affiliateUrl": null,
+      "categories": [
+        "creative-media"
+      ],
+      "useCaseTags": [
+        "floor-plan-rendering"
+      ],
+      "toolTypes": [
+        "creative"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "openSource": false,
+      "repoUrl": null,
+      "smokeStatus": "verified-docs-only",
+      "smokeTested": false,
+      "checkedAt": "2026-10-27T22:00:00-04:00",
+      "checkedDate": "2026-10-27",
+      "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
+      "handsOn": {
+        "performed": false
+      },
+      "latestRelease": null,
+      "problems": [],
+      "featured": false,
+      "featuredPaid": false,
+      "status": "published",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "pricingCheckedAt": "2026-10-27",
+      "freeTrial": "14 days",
+      "slug": "veras",
+      "name": "Veras",
+      "websiteUrl": "https://www.chaos.com/veras",
+      "shortDescription": "Turns a sketch, a floor plan, or a model view into a visualization. From $202.80 a year.",
+      "longDescription": "Veras, from Chaos, turns a sketch, an image, or a prompt into a visualization, and it can turn a sketch, floor plan, or image into an editable 3D scene for Revit, Rhino, or SketchUp. It also renders from a 3D model inside Revit, SketchUp, Rhino, Archicad, Vectorworks, Forma, and Allplan. One license is $202.80 billed annually. Veras Pro is $29 a month billed annually at $348. A trial can create up to 4 scenes.",
+      "pricingModel": [
+        "subscription"
+      ],
+      "pricingNotes": "One license is $202.80 billed annually. Veras Pro is $29 per month billed annually at $348. The trial can create up to 4 scenes.",
+      "pricingUrl": "https://www.chaos.com/veras",
+      "docsUrl": "https://www.chaos.com/veras",
+      "freeTier": false,
+      "freeTierNotes": null,
+      "startingPrice": null,
+      "bestFor": [
+        "A sketch or floor plan that should become a visualization",
+        "A Revit, SketchUp, or Rhino view you want to render in place"
+      ],
+      "notIdealFor": [
+        "Someone who only has a phone photo and no design app",
+        "Virtual staging of a listing photo"
+      ],
+      "strength": "Veras turns a sketch, a floor plan, or an image into a visualization and can build an editable 3D scene from that input.",
+      "weakness": "The published license is $202.80 billed annually, and the workflow is aimed at people who already model in a design app.",
+      "sources": [
+        "https://www.chaos.com/veras"
+      ],
+      "siteLoad": {
+        "status": 200,
+        "finalUrl": "https://www.chaos.com/veras"
+      },
+      "useCaseFit": {
+        "floor-plan-rendering": "Turns a sketch, a floor plan, or a model view into a visualization."
+      },
+      "id": "veras"
     },
     {
       "id": "vic-ai",
@@ -10102,6 +11932,53 @@
       "intro": "AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach."
     },
     {
+      "slug": "floor-plan-rendering",
+      "title": "Turn a floor plan or blueprint into a rendering",
+      "summary": "Upload a floor plan, blueprint, or sketch and get a picture of the space. The short list is the closest fit for that job.",
+      "audienceHints": [
+        "realtors",
+        "architects",
+        "interior designers",
+        "home builders"
+      ],
+      "matchTags": [
+        "floor-plan-rendering"
+      ],
+      "jobPhrase": "turning floor plans and blueprints into renderings",
+      "assistantTask": "list which drawing to upload and what the rendering should show",
+      "assistantContext": "turning a floor plan into a rendering",
+      "searchTopic": "floor plan and blueprint rendering",
+      "recommended": [
+        {
+          "toolId": "mnml",
+          "why": "Turns a photo of a floor plan into a furnished view."
+        },
+        {
+          "toolId": "morphome",
+          "why": "Turns a blueprint or floor plan image into a photoreal render."
+        },
+        {
+          "toolId": "mnki",
+          "why": "Turns a floor plan image into a furnished 3D view or a render."
+        },
+        {
+          "toolId": "rendair",
+          "why": "Turns a floor plan or sketch into a 3D project and a render."
+        },
+        {
+          "toolId": "moldaspace",
+          "why": "Turns a floor plan, a sketch, or a room photo into a photoreal render."
+        }
+      ],
+      "intro": "AI agents can turn a photo of your floor plan or blueprint into a realistic picture of the finished home, so you can see it before it's built.",
+      "related": [
+        {
+          "slug": "listing-photos",
+          "label": "Virtual staging of a listing photo is a separate job."
+        }
+      ]
+    },
+    {
       "slug": "game-creative",
       "title": "Turn long videos into short clips",
       "summary": "Find moments in a long video, reframe them, and add captions.",
@@ -10341,7 +12218,13 @@
           "why": "Edits a listing photo and virtually stages an empty room."
         }
       ],
-      "intro": "AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing."
+      "intro": "AI agents can edit a listing photo or stage an empty room in a picture, and you still choose which image goes on the listing.",
+      "related": [
+        {
+          "slug": "floor-plan-rendering",
+          "label": "Turning a floor plan or blueprint into a rendering is a separate job."
+        }
+      ]
     },
     {
       "slug": "listing-videos",
@@ -10660,7 +12543,7 @@
     {
       "slug": "property-management",
       "title": "Handle property management tasks",
-      "summary": "Draft a tenant reply, sort a maintenance request, and list the rent roll you still check.",
+      "summary": "Draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it.",
       "audienceHints": [
         "landlords",
         "property managers"
@@ -10678,7 +12561,7 @@
           "why": "Tracks rent, maintenance, and leases and includes an assistant for tenant questions."
         }
       ],
-      "intro": "AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll you still check."
+      "intro": "AI agents can draft a tenant reply, sort a maintenance request, and list the rent roll. You still check it."
     },
     {
       "slug": "quotes",
