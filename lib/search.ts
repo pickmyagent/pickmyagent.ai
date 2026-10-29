@@ -1940,7 +1940,7 @@ export function rankCatalogQuery(
     const cosineMap = new Map((capabilityCosines ?? []).map((item) => [item.key, item.cosine]));
     const picks = pickCapabilities(corrected, catalog.tools, capabilityCosines ? cosineMap : undefined).slice(0, 5);
     if (picks.length > 0) {
-      const ranked = capabilityRanking(picks, indexedTools, assistants, alt?.slug);
+      const ranked = capabilityRanking(picks, indexedTools, assistants);
       if (ranked) return ranked;
     }
   }
