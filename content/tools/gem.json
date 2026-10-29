@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "hire-candidates": "Recruiting workspace for sourcing, reviewing, and reporting on candidates."
-  }
+  },
+  "capabilities": [
+    "source candidates in a recruiting workspace",
+    "review candidates in a recruiting workspace",
+    "report on candidates in a recruiting workspace",
+    "hire from a recruiting workspace",
+    "source and review candidates together",
+    "work from sourcing and reporting on candidates in one recruiting workspace",
+    "work from recruiting platform to source, review, hire, and report with ai",
+    "source candidates in the recruiting workspace"
+  ]
 }

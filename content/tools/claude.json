@@ -36,7 +36,7 @@
   "openSource": false,
   "repoUrl": null,
   "bestFor": [
-    "Chat and coding help through Claude’s product or API",
+    "Chat and coding help through Claude\u2019s product or API",
     "Teams already comparing model providers"
   ],
   "notIdealFor": [
@@ -71,5 +71,15 @@
   },
   "generalPurpose": true,
   "assistantName": "Claude",
-  "assistantKind": "draft"
+  "assistantKind": "draft",
+  "capabilities": [
+    "help teams already comparing model providers",
+    "work from chat and coding help through claude\u2019s product or api",
+    "work from teams already comparing model providers",
+    "work from anthropic claude product and api for chat and coding",
+    "work from there is a free plan, and the paid plan starts at per month, with the api billed separately",
+    "work from claude is anthropic's model product, used for chat and coding",
+    "work from there is the free plan, and the paid plan starts at per month, with the api billed separately",
+    "work from there is a free plan, and a paid plan starts at per month, with the api billed separately"
+  ]
 }

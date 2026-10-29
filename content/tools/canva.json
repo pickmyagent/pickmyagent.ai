@@ -6,11 +6,21 @@
   "affiliateUrl": null,
   "shortDescription": "Real estate video templates and a video editor for listing clips. Free to start. Paid plans are on their site.",
   "longDescription": "Canva's real estate video gallery says you can start from a listing template and customize it. The real estate solutions page says the video editor can create listing videos and walk-throughs and add music. Those pages do not list a monthly plan price.",
-  "categories": ["creative-media"],
-  "useCaseTags": ["listing-videos"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
-  "pricingModel": ["freemium"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "listing-videos"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium"
+  ],
   "pricingNotes": "The real estate video gallery is presented as free to start. No monthly plan price was on the pages we read.",
   "pricingUrl": "https://www.canva.com/video-editor/templates/real-estate/",
   "docsUrl": "https://www.canva.com/solutions/real-estate/",
@@ -21,8 +31,14 @@
   "pricingCheckedAt": "2026-10-19",
   "openSource": false,
   "repoUrl": null,
-  "bestFor": ["A listing video started from a real estate template", "Adding photos, captions, and music in one editor"],
-  "notIdealFor": ["A published monthly price", "Skip tracing or deal ranking"],
+  "bestFor": [
+    "A listing video started from a real estate template",
+    "Adding photos, captions, and music in one editor"
+  ],
+  "notIdealFor": [
+    "A published monthly price",
+    "Skip tracing or deal ranking"
+  ],
   "strength": "Canva's real estate pages say you can start a listing video or walk-through from a template and add music.",
   "weakness": "The real estate pages do not list a monthly plan price, so this card states none.",
   "smokeStatus": "verified-docs-only",
@@ -30,7 +46,9 @@
   "checkedAt": "2026-10-19T23:40:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Real estate video gallery and solutions page reviewed on October 19, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -42,8 +60,21 @@
     "https://www.canva.com/video-editor/templates/real-estate/",
     "https://www.canva.com/solutions/real-estate/"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.canva.com/video-editor/templates/real-estate/" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.canva.com/video-editor/templates/real-estate/"
+  },
   "useCaseFit": {
     "listing-videos": "Trims listing clips, adds captions, and can add music."
-  }
+  },
+  "capabilities": [
+    "edit a listing photo",
+    "make a listing video from photos",
+    "work from listing video started from a real estate template",
+    "work from adding photos, captions, and music in one editor",
+    "work from real estate video templates and a video editor for listing clips. free to start. paid plans are on their site",
+    "work from canva's real estate pages say you can start a listing video or walk-through from a template and add music",
+    "work from canva's real estate video gallery says you can start from a listing template and customize it",
+    "edit the listing photo"
+  ]
 }

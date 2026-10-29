@@ -67,5 +67,15 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns a sketch into an architectural render."
   },
-  "id": "lookx"
+  "id": "lookx",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "turn a sketch of a floor plan into an image",
+    "turn a sketch into an architectural render",
+    "turn a sketch into an architectural render and can train a custom model on a style you upload",
+    "turn can train a custom model on a style you upload",
+    "work from sketch that should become an architectural render",
+    "work from studio that wants a model trained on its own style",
+    "turn the floor plan into a render"
+  ]
 }

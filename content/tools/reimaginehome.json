@@ -67,5 +67,15 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns a room photo into a renovation preview."
   },
-  "id": "reimaginehome"
+  "id": "reimaginehome",
+  "capabilities": [
+    "turn a room photo into a renovation preview",
+    "turn a room photo into a renovation preview and keeps the room structure unless you ask to change it",
+    "turn keeps the room structure unless you ask to change it",
+    "work from room photo that should become a renovation preview",
+    "work from interior mockup that keeps the existing walls",
+    "work from interior renovation takes a room photo and a description, then changes surfaces, colors, and decor while leaving the architecture in place",
+    "turn the room photo into a renovation preview",
+    "turn the room photo into a renovation preview and keeps the room structure unless you ask to change it"
+  ]
 }

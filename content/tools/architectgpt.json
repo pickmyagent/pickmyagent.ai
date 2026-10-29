@@ -1,9 +1,17 @@
 {
   "affiliateUrl": null,
-  "categories": ["creative-media"],
-  "useCaseTags": ["floor-plan-rendering"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
   "openSource": false,
   "repoUrl": null,
   "smokeStatus": "verified-docs-only",
@@ -11,7 +19,9 @@
   "checkedAt": "2026-10-27T22:30:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -26,7 +36,9 @@
   "websiteUrl": "https://www.architectgpt.io/",
   "shortDescription": "Turns a room photo or a floor plan into a photoreal render. Basic is $29 a month.",
   "longDescription": "ArchitectGPT restyles a room photo or an exterior photo, and on Pro it turns a plan image or a DWG or DXF file into a furnished top-down render. Basic is $29 a month for 300 generations. Standard is $59 a month for 1,000 generations. Pro is $99 a month and is the plan that includes floor plan rendering. Premium is $149 a month.",
-  "pricingModel": ["subscription"],
+  "pricingModel": [
+    "subscription"
+  ],
   "pricingNotes": "Basic is $29 per month for 300 generations. Standard is $59 per month for 1,000 generations. Pro is $99 per month and includes floor plan rendering. Premium is $149 per month.",
   "pricingUrl": "https://www.architectgpt.io/pricing",
   "docsUrl": "https://www.architectgpt.io/",
@@ -47,9 +59,26 @@
     "https://www.architectgpt.io/",
     "https://www.architectgpt.io/pricing"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.architectgpt.io/pricing" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.architectgpt.io/pricing"
+  },
   "useCaseFit": {
     "floor-plan-rendering": "Turns a room photo into a redesign and a floor plan image into a furnished render on Pro."
   },
-  "id": "architectgpt"
+  "id": "architectgpt",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "turn a floor plan photo into an image",
+    "redesign a room from a photo",
+    "restyle a room from a photo",
+    "turn a room photo into a redesign and a floor plan image into a furnished render on pro",
+    "turn a room photo into a redesign",
+    "turn a floor plan image into a furnished render on pro",
+    "turn a room photo into a redesign and, on pro, a floor plan image into a furnished render",
+    "turn a floor plan image into a furnished render",
+    "work from room or exterior photo that should become a redesign",
+    "work from plan image that should become a furnished top-down render",
+    "work from restyles a room photo or an exterior photo, and on pro it turns a plan image or a dwg or dxf file into a furnished top-down render"
+  ]
 }

@@ -67,5 +67,16 @@
   "useCaseFit": {
     "create-content": "Marketing content workspace with agents and a free-trial offer.",
     "listing-copy": "Drafts a listing description from the property facts you give it."
-  }
+  },
+  "capabilities": [
+    "draft a listing description",
+    "draft a listing description from the property facts you give it",
+    "use agents and a marketer workspace for content, and the site offers a free trial",
+    "use a marketer workspace for content",
+    "use the site offers a free trial",
+    "work from marketing teams drafting content in a dedicated workspace",
+    "work from marketing workspace with agents for content. a free trial is offered",
+    "work from jasper's site describes a platform for marketers with agents, a canvas, and ai optimization for search",
+    "draft the listing description"
+  ]
 }

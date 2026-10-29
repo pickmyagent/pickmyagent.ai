@@ -65,5 +65,14 @@
   },
   "useCaseFit": {
     "do-taxes": "Lists federal and state tax filing, quarterly payments, and a free start on the homepage."
-  }
+  },
+  "capabilities": [
+    "track expenses for taxes",
+    "file federal and state taxes",
+    "track quarterly tax payments",
+    "file self-employed taxes",
+    "use state tax filing",
+    "use quarterly payments",
+    "work from filing self-employed taxes with expense tracking and quarterly payments"
+  ]
 }

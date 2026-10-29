@@ -63,5 +63,15 @@
   },
   "useCaseFit": {
     "plan-travel": "Plans trips and says it covers flights, stays, restaurants, and experiences."
-  }
+  },
+  "capabilities": [
+    "plan trips and says it covers flights, stays, restaurants, and experiences",
+    "plan says it covers flights",
+    "draft a trip that needs flights, stays, and activities in one chat",
+    "draft a trip that needs flights",
+    "draft activities in one chat",
+    "work from drafting a trip that needs flights, stays, and activities in one chat",
+    "work from ai trip planner for flights, stays, restaurants, and experiences",
+    "draft the trip that needs flights, stays, and activities in one chat"
+  ]
 }

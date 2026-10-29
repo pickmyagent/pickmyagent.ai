@@ -63,5 +63,15 @@
   },
   "useCaseFit": {
     "find-land": "Looks up parcel and owner info nationwide, with a 7-day trial on the paid plan."
-  }
+  },
+  "capabilities": [
+    "look up parcel boundaries and owner info across the united states",
+    "look up parcel boundaries",
+    "look owner info across the united states",
+    "work from looking up parcel boundaries and owner info across the united states",
+    "work from nationwide parcel and owner info. from per month, or billed annually",
+    "work from base plan is per month billed monthly, or per month billed annually, with a 7-day trial",
+    "work from maps parcels and owner info",
+    "look up parcel boundaries and owner info across a united states"
+  ]
 }

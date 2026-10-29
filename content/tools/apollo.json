@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "sales-outreach": "Offers a large contact database and an AI assistant for sales research."
-  }
+  },
+  "capabilities": [
+    "use a large contact database and an ai assistant for sales research",
+    "use a large contact database",
+    "use an ai assistant for sales research",
+    "look up contacts and companies before writing outreach",
+    "look companies before writing outreach",
+    "work from looking up contacts and companies before writing outreach",
+    "work from sales data and an ai assistant. the page cites 240 million contacts",
+    "use the large contact database and an ai assistant for sales research"
+  ]
 }

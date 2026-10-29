@@ -64,5 +64,19 @@
   },
   "useCaseFit": {
     "customer-support": "Describes chat, email, and voice agents for customer conversations."
-  }
+  },
+  "capabilities": [
+    "run a support workflow for an agent",
+    "handle a customer conversation across channels",
+    "use chat, email, and voice agents for customer conversations",
+    "use voice agents for customer conversations",
+    "help a support teams that want chat, email, and voice in one agent",
+    "help a support teams that want chat",
+    "help a support voice in one agent",
+    "use an ai concierge that handles chat, email, and voice customer conversations",
+    "use an ai concierge that handles chat",
+    "use voice customer conversations",
+    "work from support teams that want chat, email, and voice in one agent",
+    "work from ai concierge for chat, email, and voice customer conversations"
+  ]
 }

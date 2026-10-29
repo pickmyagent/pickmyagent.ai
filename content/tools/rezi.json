@@ -6,11 +6,22 @@
   "affiliateUrl": null,
   "shortDescription": "AI resume builder that scores a resume and targets keywords. Pro is $29 a month.",
   "longDescription": "Rezi's homepage says it builds a resume, scores it section by section, and pulls missing keywords from a pasted job description. The same page lists a Free plan at $0 a month for one resume, limited AI tools, and up to three PDF downloads, and Pro at $29 a month.",
-  "categories": ["hiring"],
-  "useCaseTags": ["write-resume"],
-  "toolTypes": ["agent"],
-  "platforms": ["web"],
-  "pricingModel": ["freemium", "subscription"],
+  "categories": [
+    "hiring"
+  ],
+  "useCaseTags": [
+    "write-resume"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
   "pricingNotes": "The homepage lists Free at $0 a month for one resume and three PDF downloads, and Pro at $29 a month.",
   "pricingUrl": "https://www.rezi.ai/",
   "docsUrl": "https://www.rezi.ai/",
@@ -34,7 +45,9 @@
   "checkedAt": "2026-10-19T22:00:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -42,9 +55,25 @@
   "status": "published",
   "publishedAt": "2026-10-19",
   "updatedAt": "2026-10-19",
-  "sources": ["https://www.rezi.ai/"],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.rezi.ai/" },
+  "sources": [
+    "https://www.rezi.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.rezi.ai/"
+  },
   "useCaseFit": {
     "write-resume": "Builds a resume, scores the sections, and pulls keywords from a job description."
-  }
+  },
+  "capabilities": [
+    "build a resume, scores the sections, and pulls keywords from a job description",
+    "build a resume",
+    "build scores the sections",
+    "build pulls keywords from a job description",
+    "build a resume and scoring it against a job description",
+    "build scoring it against a job description",
+    "work from building a resume and scoring it against a job description",
+    "work from ai resume builder that scores a resume and targets keywords. pro is a month",
+    "build the resume, scores the sections, and pulls keywords from a job description"
+  ]
 }

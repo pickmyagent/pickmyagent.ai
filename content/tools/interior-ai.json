@@ -65,5 +65,17 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns a room photo or an interior sketch into a photoreal redesign."
   },
-  "id": "interior-ai"
+  "id": "interior-ai",
+  "capabilities": [
+    "redesign a room from a photo",
+    "restyle a room from a photo",
+    "turn a room photo or an interior sketch into a photoreal redesign",
+    "turn an interior sketch into a photoreal redesign",
+    "turn a room photo or an interior sketch into a photoreal redesign, including a sketchup screenshot",
+    "turn including a sketchup screenshot",
+    "work from room photo that should become an interior mockup",
+    "work from interior sketch that should become a photoreal render",
+    "work from restyles a room photo and includes sketch2image, which turns an interior sketch or a sketchup screenshot into a photoreal render",
+    "redesign the room from a photo"
+  ]
 }

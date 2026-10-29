@@ -66,5 +66,14 @@
   "useCaseFit": {
     "find-off-market": "Sends texts to owner lists, and the pricing page lists skip tracing at $0.13.",
     "realtor-prospecting": "Messages owners whose numbers are already on a prospecting list."
-  }
+  },
+  "capabilities": [
+    "send texts to owner lists",
+    "send texts to a list of property owners you already have",
+    "work from sending texts to a list of property owners you already have",
+    "work from texting for real estate owner lists. skip tracing is",
+    "work from skip tracing is and one plan is provider fees plus for 12,500 monthly texts",
+    "send texts to the list of property owners you already have",
+    "work from sending texts to the list of property owners you already have"
+  ]
 }

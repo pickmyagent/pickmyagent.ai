@@ -64,5 +64,16 @@
   },
   "useCaseFit": {
     "manage-inbox": "Organizes an inbox and drafts email, with a 14-day trial on the site."
-  }
+  },
+  "capabilities": [
+    "draft replies and organizing an inbox from the tools fyxer lists",
+    "draft organizing an inbox from the tools fyxer lists",
+    "use an inbox organizer and an email draft writer, with a 14-day free trial and a start-for-free option",
+    "use an inbox organizer",
+    "use an email draft writer",
+    "work from drafting replies and organizing an inbox from the tools fyxer lists",
+    "work from inbox organizer and email draft writer with a 14-day free trial",
+    "work from fyxer's site lists an inbox organizer, an email draft writer, a meeting notetaker, and a scheduling assistant",
+    "draft replies and organizing an inbox from a tools fyxer lists"
+  ]
 }

@@ -1,0 +1,78 @@
+{
+  "id": "submagic",
+  "slug": "submagic",
+  "name": "Submagic",
+  "websiteUrl": "https://www.submagic.co/",
+  "affiliateUrl": null,
+  "shortDescription": "Submagic can add moving captions to a short.",
+  "longDescription": "Submagic can add moving captions to a short. It can also generate b roll for a clip.",
+  "categories": [
+    "social"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.submagic.co/",
+  "docsUrl": "https://www.submagic.co/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Add moving captions to a short",
+    "Generate b roll for a clip"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Submagic can add moving captions to a short.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.submagic.co/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.submagic.co/"
+  },
+  "capabilities": [
+    "add moving captions to a short",
+    "generate b roll for a clip",
+    "trim a video into a short",
+    "export a captioned reel",
+    "edit faster than ever before",
+    "publish video across channels create shorts without filming with ai avatars stay on brand",
+    "automate a video editing workflow",
+    "turn one video into multiple shorts instantly automatically repurpose videos into shorts with magic clips",
+    "extract key moments, cuts clips, and post content at scale",
+    "extract key moments, cuts clips,",
+    "edit any video instantly with ai edit videos in one click",
+    "publish shorts content 10x faster without spending hours in editing"
+  ]
+}

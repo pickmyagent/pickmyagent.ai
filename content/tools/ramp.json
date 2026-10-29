@@ -66,5 +66,15 @@
   "useCaseFit": {
     "finance-ops": "Finance platform with a free plan at $0 per user and Plus at $15 per user.",
     "bookkeeping": "Keeps card charges and expenses together for the books."
-  }
+  },
+  "capabilities": [
+    "run finance workflows on a free plan",
+    "keep expenses together for the books",
+    "work from card, expense, and finance workflows on a listed free plan",
+    "work from finance platform with a free plan at and plus at per user",
+    "run finance workflows on the free plan",
+    "keep expenses together for a books",
+    "work from card, expense, and finance workflows on the listed free plan",
+    "work from finance platform with the free plan at and plus at per user"
+  ]
 }

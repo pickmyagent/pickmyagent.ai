@@ -63,5 +63,15 @@
   },
   "useCaseFit": {
     "plan-travel": "AI itinerary planner that says you can start for free."
-  }
+  },
+  "capabilities": [
+    "create a custom itinerary",
+    "build an itinerary for a trip",
+    "draft a custom itinerary",
+    "draft a trip itinerary",
+    "work from ai trip planner that builds itineraries. the site says you can start free",
+    "create the custom itinerary",
+    "build an itinerary for the trip",
+    "build the itinerary for a trip"
+  ]
 }

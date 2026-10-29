@@ -1,0 +1,78 @@
+{
+  "id": "groq-ai",
+  "slug": "groq-ai",
+  "name": "Groq",
+  "websiteUrl": "https://groq.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Groq can use groq is the premier neocloud for fast inference.",
+  "longDescription": "Groq can use groq is the premier neocloud for fast inference. It can also use one fully integrated platform for infrastructure.",
+  "categories": [
+    "dev-tools"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://groq.com/",
+  "docsUrl": "https://groq.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Use groq is the premier neocloud for fast inference",
+    "Use one fully integrated platform for infrastructure"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Groq can use groq is the premier neocloud for fast inference.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://groq.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://groq.com/"
+  },
+  "capabilities": [
+    "use groq is the premier neocloud for fast inference",
+    "use one fully integrated platform for infrastructure",
+    "use groq closes",
+    "use building the world",
+    "use leading ai inference cloud read more",
+    "use every customer served",
+    "use every product sold",
+    "use every commit merged",
+    "use every agent task completed",
+    "use training creates the possibility",
+    "use inference creates the value",
+    "use and inference is becoming the bottleneck"
+  ]
+}

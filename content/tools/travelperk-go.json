@@ -1,0 +1,78 @@
+{
+  "id": "travelperk-go",
+  "slug": "travelperk-go",
+  "name": "TravelPerk",
+  "websiteUrl": "https://www.perk.com/",
+  "affiliateUrl": null,
+  "shortDescription": "TravelPerk can find a hotel.",
+  "longDescription": "TravelPerk can find a hotel. It can also use the intelligent platform for travel and spend.",
+  "categories": [
+    "travel"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.perk.com/",
+  "docsUrl": "https://www.perk.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Find a hotel",
+    "Use the intelligent platform for travel and spend"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "TravelPerk can find a hotel for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.perk.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.perk.com/"
+  },
+  "capabilities": [
+    "find a hotel",
+    "use the intelligent platform for travel and spend",
+    "use perk perk offers the freedom travelers want",
+    "use enjoy an industry-leading travel inventory",
+    "use perk the intelligent platform for travel and spend",
+    "use apple color emoji",
+    "use segoe ui emoji",
+    "use segoe ui symbol",
+    "use noto color emoji",
+    "use liberation mono",
+    "use csvg width",
+    "use cg clip-path"
+  ]
+}

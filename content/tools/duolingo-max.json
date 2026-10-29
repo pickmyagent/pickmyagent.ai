@@ -63,5 +63,15 @@
   },
   "useCaseFit": {
     "learn-language": "Practices a language with the GPT-4 features Duolingo added for Max."
-  }
+  },
+  "capabilities": [
+    "practice a language practice in the max experience duolingo introduced in that post",
+    "work from language practice in the max experience duolingo introduced in that post",
+    "work from language practice. a 2023 duolingo post introduces max with gpt-4",
+    "work from duolingo's march 14, 2023 post introduces max as a learning experience powered by gpt-4",
+    "work from duolingo's official post dated march 14, 2023 introduces duolingo max as a learning experience powered by gpt-4",
+    "practice the language practice in the max experience duolingo introduced in that post",
+    "practice a language practice in a max experience duolingo introduced in that post",
+    "work from language practice in a max experience duolingo introduced in that post"
+  ]
 }

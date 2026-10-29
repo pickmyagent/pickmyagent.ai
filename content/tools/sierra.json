@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "customer-support": "Describes AI agents aimed at customer service and customer experiences."
-  }
+  },
+  "capabilities": [
+    "build a customer service agent",
+    "use ai agents aimed at customer service and customer experiences",
+    "use ai agents aimed at customer service",
+    "work from brand that wants a customer-service agent built with sierra",
+    "work from ai agents for customer service and customer experiences",
+    "work from sierra's site says it helps companies build ai agents for customer experiences and customer service, including voice",
+    "build the customer service agent",
+    "work from brand that wants the customer-service agent built with sierra"
+  ]
 }

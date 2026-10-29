@@ -65,5 +65,15 @@
   "useCaseFit": {
     "create-content": "Content plans with Starter listed at $79 per month when billed annually.",
     "listing-copy": "Drafts a property description you can edit before it goes on the MLS."
-  }
+  },
+  "capabilities": [
+    "draft a property description you can edit before it goes on the mls",
+    "draft content on a plan that also tracks brand mentions",
+    "use a starter plan at $79 per month when that plan is billed annually",
+    "work from drafting content on a plan that also tracks brand mentions",
+    "work from content and brand-tracking plans. starter is per month billed annually",
+    "draft the property description you can edit before it goes on the mls",
+    "draft a property description you can edit before it goes on a mls",
+    "draft content on the plan that also tracks brand mentions"
+  ]
 }

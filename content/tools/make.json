@@ -68,5 +68,15 @@
   },
   "useCaseFit": {
     "workflow-automation": "Visual automations across apps, and the pricing FAQ describes 1,000 free credits a month."
-  }
+  },
+  "capabilities": [
+    "help teams that want a hosted builder rather than a library",
+    "work from teams that want a hosted builder rather than a library",
+    "work from visual automation across apps. the free plan includes 1,000 credits a month",
+    "work from official pricing faq describes a free plan with 1,000 credits per month for visual automations",
+    "help teams that want the hosted builder rather than a library",
+    "work from teams that want the hosted builder rather than a library",
+    "work from visual automation across apps. the free plan includes 1,000 credits the month",
+    "work from visual automation across apps. a free plan includes 1,000 credits a month"
+  ]
 }

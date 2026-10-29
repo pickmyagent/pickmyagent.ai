@@ -1,0 +1,78 @@
+{
+  "id": "espocrm",
+  "slug": "espocrm",
+  "name": "EspoCRM",
+  "websiteUrl": "https://www.espocrm.com/",
+  "affiliateUrl": null,
+  "shortDescription": "EspoCRM can manage contacts.",
+  "longDescription": "EspoCRM can manage contacts. It can also automate a workflow.",
+  "categories": [
+    "it-support"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.espocrm.com/",
+  "docsUrl": "https://www.espocrm.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Manage contacts",
+    "Automate a workflow"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "EspoCRM can manage contacts for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.espocrm.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.espocrm.com/"
+  },
+  "capabilities": [
+    "manage contacts",
+    "automate a workflow",
+    "find out the advantages of cloud-hosted and on-premise solutions and choose the right one for a business",
+    "find out the advantages of cloud-hosted",
+    "use customize workflows",
+    "use open source crm what is this",
+    "use wholesale and retail trade e-commerce banking call-centers ma",
+    "use open source crm",
+    "use toggle navigation features cloud extensions support forum dem",
+    "use emo what is this",
+    "use read more get started now",
+    "use languages api documentation community forum video tutorials h"
+  ]
+}

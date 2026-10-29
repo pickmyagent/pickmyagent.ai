@@ -1,0 +1,78 @@
+{
+  "id": "avoma-meet",
+  "slug": "avoma-meet",
+  "name": "Avoma",
+  "websiteUrl": "https://www.avoma.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Avoma can transcribe a meeting.",
+  "longDescription": "Avoma can transcribe a meeting. It can also summarize a call.",
+  "categories": [
+    "meetings"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.avoma.com/",
+  "docsUrl": "https://www.avoma.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Transcribe a meeting",
+    "Summarize a call"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Avoma can transcribe a meeting for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.avoma.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.avoma.com/"
+  },
+  "capabilities": [
+    "transcribe a meeting",
+    "summarize a call",
+    "capture action items",
+    "record a conversation",
+    "schedule 2x more qualified meetings with effortless scheduling and instant lead routing",
+    "schedule 2x more qualified meetings with effortless scheduling",
+    "schedule a demo sign up for free no credit card is required",
+    "use automate note-taking",
+    "use pay only for what you need",
+    "use ai platform for note-taking",
+    "use revenue intelligence ai meeting assistant real-time transcrip",
+    "use ai-generated note-taking al-generated smart chapters avoma"
+  ]
+}

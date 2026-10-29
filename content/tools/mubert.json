@@ -1,0 +1,78 @@
+{
+  "id": "mubert",
+  "slug": "mubert",
+  "name": "Mubert",
+  "websiteUrl": "https://mubert.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Mubert can generate background music from a prompt.",
+  "longDescription": "Mubert can generate background music from a prompt. It can also stream music for a video.",
+  "categories": [
+    "music"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://mubert.com/",
+  "docsUrl": "https://mubert.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generate background music from a prompt",
+    "Stream music for a video"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Mubert can generate background music from a prompt.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://mubert.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://mubert.com/"
+  },
+  "capabilities": [
+    "generate background music from a prompt",
+    "stream music for a video",
+    "create a soundtrack for an app",
+    "pick a genre and duration",
+    "license a generated track",
+    "make a track now chat to music for anyone with an idea describe a track and shape it in a conversation",
+    "make a track now chat to music for anyone with an idea describe a track",
+    "create with mubert render the music you've been searching for, generated in seconds",
+    "generate extraordinary music right away",
+    "create a track for free need more inspiration",
+    "generate ai soundtracks that suit a brand and bring an infinite amount of quality audio material to a platform",
+    "generate ai soundtracks that suit a brand"
+  ]
+}

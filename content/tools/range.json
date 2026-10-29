@@ -65,5 +65,15 @@
   },
   "useCaseFit": {
     "manage-portfolio": "Advisory membership with an AI assistant, listed at $3,950 per year for Premium."
-  }
+  },
+  "capabilities": [
+    "ask an assistant about a financial plan",
+    "join a flat-fee advisory membership",
+    "use an ai assistant inside the membership",
+    "work from flat annual advisory membership that includes range's ai assistant",
+    "work from advisory membership with an ai assistant. premium is per year",
+    "work from range's form adv lists premium at per year, with no separate assets-under-management advisory fee",
+    "ask an assistant about the financial plan",
+    "ask the assistant about a financial plan"
+  ]
 }

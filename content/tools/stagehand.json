@@ -1,0 +1,72 @@
+{
+  "id": "stagehand",
+  "slug": "stagehand",
+  "name": "Stagehand",
+  "websiteUrl": "https://www.stagehand.dev/",
+  "affiliateUrl": null,
+  "shortDescription": "Stagehand can control a browser with natural language.",
+  "longDescription": "Stagehand can control a browser with natural language. It can also click an element from a prompt.",
+  "categories": [
+    "browser-agents"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.stagehand.dev/",
+  "docsUrl": "https://www.stagehand.dev/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Control a browser with natural language",
+    "Click an element from a prompt"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Stagehand can control a browser with natural language.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.stagehand.dev/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.stagehand.dev/"
+  },
+  "capabilities": [
+    "control a browser with natural language",
+    "click an element from a prompt",
+    "extract data from a page",
+    "build a browser agent",
+    "combine code with ai actions",
+    "extract with natural language to automate pages"
+  ]
+}

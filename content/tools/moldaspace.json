@@ -1,9 +1,17 @@
 {
   "affiliateUrl": null,
-  "categories": ["creative-media"],
-  "useCaseTags": ["floor-plan-rendering"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
   "openSource": false,
   "repoUrl": null,
   "smokeStatus": "verified-docs-only",
@@ -11,7 +19,9 @@
   "checkedAt": "2026-10-27T22:30:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -26,7 +36,11 @@
   "websiteUrl": "https://www.moldaspace.com/",
   "shortDescription": "Turns a floor plan, sketch, or photo into a photoreal render. Creator is $19 a month.",
   "longDescription": "MoldaSpace takes a photo, a floor plan, a sketch, or a 3D export and returns a photoreal render. Creator is $19 a month for 50 credits. Studio is $99 a month for 300 credits. Scale is $499 a month for 2,000 credits. A one-time pack is $6 for 10 credits or $19 for 40 credits. Eligible new accounts get 5 free credits and no card is required. A 2K generation uses 1 credit and a 4K generation uses 2.",
-  "pricingModel": ["freemium", "subscription", "usage"],
+  "pricingModel": [
+    "freemium",
+    "subscription",
+    "usage"
+  ],
   "pricingNotes": "Creator is $19 per month for 50 credits. Studio is $99 per month for 300 credits. Scale is $499 per month for 2,000 credits. One-time packs are $6 for 10 credits and $19 for 40 credits. Eligible new accounts get 5 free credits.",
   "pricingUrl": "https://www.moldaspace.com/",
   "docsUrl": "https://www.moldaspace.com/",
@@ -43,10 +57,26 @@
   ],
   "strength": "MoldaSpace turns a floor plan, a sketch, or a room photo into a photoreal render in the browser.",
   "weakness": "Creator is $19 per month for 50 credits, and each new version spends another credit.",
-  "sources": ["https://www.moldaspace.com/"],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.moldaspace.com/" },
+  "sources": [
+    "https://www.moldaspace.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.moldaspace.com/"
+  },
   "useCaseFit": {
     "floor-plan-rendering": "Turns a floor plan, a sketch, or a room photo into a photoreal render."
   },
-  "id": "moldaspace"
+  "id": "moldaspace",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "restyle a room from a photo",
+    "turn a floor plan, a sketch, or a room photo into a photoreal render",
+    "turn a room photo into a photoreal render",
+    "turn a floor plan, a sketch, or a room photo into a photoreal render in the browser",
+    "turn a room photo into a photoreal render in the browser",
+    "work from floor plan or sketch that should become a client render in one meeting",
+    "work from room photo you want restyled before a design approval",
+    "turn the floor plan into a render"
+  ]
 }

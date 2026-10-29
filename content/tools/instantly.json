@@ -63,5 +63,18 @@
   },
   "useCaseFit": {
     "sales-outreach": "Lists sales email outreach from $47 per month and an AI sales agent."
-  }
+  },
+  "capabilities": [
+    "send a cold email sequence",
+    "use sales email outreach from $47 per month and an ai sales agent",
+    "use sales email outreach from $47 per month",
+    "use an ai sales agent",
+    "send sales email sequences from more than one inbox",
+    "use an outreach growth plan at $47 per month and describes an ai sales agent",
+    "use an outreach growth plan at $47 per month",
+    "use describes an ai sales agent",
+    "work from sending sales email sequences from more than one inbox",
+    "work from cold email outreach. the growth plan is listed at per month",
+    "send the cold email sequence"
+  ]
 }

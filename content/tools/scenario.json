@@ -68,5 +68,15 @@
   },
   "useCaseFit": {
     "make-images": "Draws game art from a prompt."
-  }
+  },
+  "capabilities": [
+    "generate an image from a prompt",
+    "work from game-specific image styles and asset sets",
+    "work from game art generation. free to start. paid plans are on their site",
+    "work from free plan includes 50 credits per day for game art, and the paid plan starts at per month",
+    "work from generates art aimed at games",
+    "generate an image from the prompt",
+    "generate the image from a prompt",
+    "work from free plan includes 50 credits per day for game art, and a paid plan starts at per month"
+  ]
 }

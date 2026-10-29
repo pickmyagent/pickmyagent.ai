@@ -65,5 +65,15 @@
   },
   "useCaseFit": {
     "analyze-data": "Data workspace with a Hex agent, listed at $36 per editor per month."
-  }
+  },
+  "capabilities": [
+    "use $36 per editor per month and includes a hex agent above the community plan",
+    "use includes a hex agent above the community plan",
+    "work from team notebook that includes a hex agent on the listed editor price",
+    "work from collaborative data workspace. the page lists per editor each month",
+    "use $36 per editor per month and includes the hex agent above the community plan",
+    "use $36 per editor per month and includes a hex agent above a community plan",
+    "use includes the hex agent above the community plan",
+    "use includes a hex agent above a community plan"
+  ]
 }

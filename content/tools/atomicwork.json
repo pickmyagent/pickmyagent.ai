@@ -1,0 +1,78 @@
+{
+  "id": "atomicwork",
+  "slug": "atomicwork",
+  "name": "Atomicwork",
+  "websiteUrl": "https://www.atomicwork.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Atomicwork can answer employee requests with ai.",
+  "longDescription": "Atomicwork can answer employee requests with ai. It can also automate a service request.",
+  "categories": [
+    "it-support"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.atomicwork.com/",
+  "docsUrl": "https://www.atomicwork.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Answer employee requests with ai",
+    "Automate a service request"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Atomicwork can answer employee requests with ai.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.atomicwork.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.atomicwork.com/"
+  },
+  "capabilities": [
+    "answer employee requests with ai",
+    "automate a service request",
+    "chat with employees in slack",
+    "design and deploy ai coworkers that handle work end-to-end, from it operations to enterprise support",
+    "use atomicwork is the ai workforce platform for it",
+    "use itsm & esm that lets enterprises deploy",
+    "use ai coworkers alongside their people",
+    "use ai workforce for enterprise it",
+    "use agentic itsm & esm",
+    "use atomicwork ai workforce for enterprise it delightful employee",
+    "use govern the ai workforce",
+    "use identity and access governance modern cmdb leverage enterpris"
+  ]
+}

@@ -24,7 +24,7 @@
     "freemium",
     "usage"
   ],
-  "pricingNotes": "Usage samples also showed paid figures; confirm free credit allotment on page.",
+  "pricingNotes": "Usage samples also showed paid figures, confirm free credit allotment on page.",
   "pricingUrl": "https://tavily.com/pricing",
   "docsUrl": "https://docs.tavily.com/",
   "freeTier": true,
@@ -71,5 +71,12 @@
   "useCaseFit": {
     "tool-use-browser": "Search API that gives an agent web results, with 1,000 free credits a month.",
     "research-rag": "Search API for agents that need web results, with a free credit plan."
-  }
+  },
+  "capabilities": [
+    "work from agent retrieval that starts with web search",
+    "work from apps that want search results without a full browser",
+    "work from search api for agents that need web results. free to start. paid plans are on their site",
+    "work from free plan includes 1,000 api credits per month for agent web search",
+    "work from apps that want search results without the full browser"
+  ]
 }

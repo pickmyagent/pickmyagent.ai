@@ -1,0 +1,77 @@
+{
+  "id": "openspace",
+  "slug": "openspace",
+  "name": "OpenSpace",
+  "websiteUrl": "https://www.openspace.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "OpenSpace can capture a jobsite with a 360 camera.",
+  "longDescription": "OpenSpace can capture a jobsite with a 360 camera. It can also compare progress to a plan.",
+  "categories": [
+    "construction"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.openspace.ai/",
+  "docsUrl": "https://www.openspace.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Capture a jobsite with a 360 camera",
+    "Compare progress to a plan"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "OpenSpace can capture a jobsite with a 360 camera.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.openspace.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.openspace.ai/"
+  },
+  "capabilities": [
+    "capture a jobsite with a 360 camera",
+    "compare progress to a plan",
+    "track a construction site",
+    "share a site walk",
+    "document field conditions",
+    "turn jobsite imagery into real-time insights that drive better decisions, faster",
+    "capture where visual intelligence starts",
+    "capture a site from ground to sky, day one through turnover",
+    "turn images into intelligence",
+    "make better decisions, faster",
+    "turn images into proof"
+  ]
+}

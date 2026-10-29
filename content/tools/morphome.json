@@ -1,9 +1,17 @@
 {
   "affiliateUrl": null,
-  "categories": ["creative-media"],
-  "useCaseTags": ["floor-plan-rendering"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "floor-plan-rendering"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
   "openSource": false,
   "repoUrl": null,
   "smokeStatus": "verified-docs-only",
@@ -11,7 +19,9 @@
   "checkedAt": "2026-10-27T22:30:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Product and pricing pages reviewed in October 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -26,7 +36,10 @@
   "websiteUrl": "https://morphome.app/",
   "shortDescription": "Turns a floor plan, sketch, or blueprint image into a photorealistic render.",
   "longDescription": "Morphome takes a JPG, PNG, or PDF of a floor plan, an architectural sketch, or a blueprint and returns a photorealistic render. You pick a preset for time of day, season, and materials. New accounts get 3 free credits. Dollar amounts for monthly plans load in the app, so see their site for current pricing.",
-  "pricingModel": ["freemium", "subscription"],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
   "pricingNotes": "See their site for current pricing. New accounts get 3 free credits.",
   "pricingUrl": "https://morphome.app/pricing",
   "docsUrl": "https://morphome.app/",
@@ -47,9 +60,26 @@
     "https://morphome.app/",
     "https://morphome.app/pricing"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://morphome.app/" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://morphome.app/"
+  },
   "useCaseFit": {
     "floor-plan-rendering": "Turns a floor plan, sketch, or blueprint image into a photorealistic render."
   },
-  "id": "morphome"
+  "id": "morphome",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "turn a floor plan photo into an image",
+    "turn a sketch of a floor plan into an image",
+    "turn a blueprint into a render",
+    "make an image from a blueprint",
+    "turn a floor plan, sketch, or blueprint image into a photorealistic render",
+    "turn blueprint image into a photorealistic render",
+    "turn a floor plan, sketch, or blueprint image into a photorealistic render without a written prompt",
+    "turn blueprint image into a photorealistic render without a written prompt",
+    "work from photo or scan of a floor plan or blueprint that should become a render",
+    "work from hand sketch that should become a photoreal exterior or interior",
+    "turn the floor plan into a render"
+  ]
 }

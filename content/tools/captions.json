@@ -67,5 +67,15 @@
   },
   "useCaseFit": {
     "game-creative": "Trims video and adds captions, and the free plan includes some of those edits."
-  }
+  },
+  "capabilities": [
+    "edit footage into a shorter captioned clip",
+    "work from captioning a talking-head or social video",
+    "work from editing footage into a shorter captioned clip",
+    "work from ai video editor and caption tool. the paid max plan is listed at /month",
+    "work from free plan includes trimming, transitions, and some media-library assets for captioned social video",
+    "edit footage into the shorter captioned clip",
+    "work from captioning the talking-head or social video",
+    "work from editing footage into the shorter captioned clip"
+  ]
 }

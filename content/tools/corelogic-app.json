@@ -1,0 +1,78 @@
+{
+  "id": "corelogic-app",
+  "slug": "corelogic-app",
+  "name": "CoreLogic",
+  "websiteUrl": "https://www.cotality.com/",
+  "affiliateUrl": null,
+  "shortDescription": "CoreLogic can estimate a value.",
+  "longDescription": "CoreLogic can estimate a value. It can also research a property.",
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.cotality.com/",
+  "docsUrl": "https://www.cotality.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Estimate a value",
+    "Research a property"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "CoreLogic can estimate a value for this kind of work.",
+  "weakness": "You still confirm the records before you make an offer.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.cotality.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.cotality.com/"
+  },
+  "capabilities": [
+    "estimate a value",
+    "research a property",
+    "clip achieve property data clarity with clip ai-ready data artificial intelligence that evolves with the property ecosystem",
+    "use intelligence beyond bounds",
+    "use it looks like you",
+    "use where to access araya",
+    "use model context protocol",
+    "use server the universal ai connector for property intelligence",
+    "use neighborhoodscout high-accuracy neighborhood data",
+    "use securitygauge high-precision crime risk data made simple",
+    "use trestle data feeds for businesses",
+    "use access real-time property and location intelligence directly"
+  ]
+}

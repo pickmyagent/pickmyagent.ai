@@ -63,5 +63,17 @@
   },
   "useCaseFit": {
     "rank-property-deals": "Compares rental comps and income estimates on a property."
-  }
+  },
+  "capabilities": [
+    "compare rental comps",
+    "compare rental income estimates",
+    "compare rental comps on a property",
+    "estimate rental income on a property",
+    "analyze a rental property",
+    "compare rental income estimates on individual properties",
+    "work from comparing rental income estimates on individual properties",
+    "work from rental comps and property analysis. lite is per month, billed annually",
+    "work from analyzes traditional and short-term rental comps",
+    "compare rental comps on the property"
+  ]
 }

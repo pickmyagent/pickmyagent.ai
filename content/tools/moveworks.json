@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "it-helpdesk": "Employee assistant for IT service management and self-service requests."
-  }
+  },
+  "capabilities": [
+    "use it service-management automation, employee self-service, and an ai agent marketplace",
+    "use it service-management automation",
+    "use an ai agent marketplace",
+    "work from routing it requests with an employee assistant",
+    "work from employee ai for it service management and self-service",
+    "work from moveworks' site describes itsm automation, employee self-service, employee onboarding, and an ai agent marketplace, including servicenow workflows",
+    "use it service-management automation, employee self-service, and the ai agent marketplace",
+    "use the ai agent marketplace"
+  ]
 }

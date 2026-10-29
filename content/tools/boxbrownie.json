@@ -6,11 +6,22 @@
   "affiliateUrl": null,
   "shortDescription": "Edits listing photos, virtually stages rooms, and builds 360 tours. Priced per image.",
   "longDescription": "BoxBrownie edits listing photos and virtually stages empty rooms, and it can stitch 360 photos into a tour a buyer can pan through. Image enhancement is US$2 per photo. Virtual staging is US$30 per photo. A virtual tour of up to 15 photos is US$20, a tour of 16 to 25 photos is US$30, and 360 virtual staging is US$60 per photo. There is no monthly subscription.",
-  "categories": ["creative-media"],
-  "useCaseTags": ["listing-videos", "listing-photos"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
-  "pricingModel": ["usage"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "listing-videos",
+    "listing-photos"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "usage"
+  ],
   "pricingNotes": "Image enhancement is US$2 per photo. Virtual staging is US$30 per photo. A virtual tour of up to 15 photos is US$20, and 16 to 25 photos is US$30. 360 virtual staging is US$60 per photo. There is no monthly subscription.",
   "pricingUrl": "https://www.boxbrownie.com/pricing",
   "docsUrl": "https://www.boxbrownie.com/b/how-to-easily-create-a-virtual-tour-for-real-estate-listings",
@@ -21,8 +32,14 @@
   "pricingCheckedAt": "2026-10-27",
   "openSource": false,
   "repoUrl": null,
-  "bestFor": ["Editing a listing photo or virtually staging an empty room", "A 360 virtual tour a buyer can pan through"],
-  "notIdealFor": ["A vertical Instagram reel from ordinary listing photos", "A monthly subscription price"],
+  "bestFor": [
+    "Editing a listing photo or virtually staging an empty room",
+    "A 360 virtual tour a buyer can pan through"
+  ],
+  "notIdealFor": [
+    "A vertical Instagram reel from ordinary listing photos",
+    "A monthly subscription price"
+  ],
   "strength": "BoxBrownie edits a listing photo, virtually stages an empty room, and can stitch 360 photos into a tour a buyer can pan through.",
   "weakness": "Image work is priced per photo, with enhancement at US$2, virtual staging at US$30, and no monthly plan.",
   "smokeStatus": "verified-docs-only",
@@ -30,7 +47,9 @@
   "checkedAt": "2026-10-27T12:00:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Pricing and virtual tour pages reviewed on October 27, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -43,9 +62,26 @@
     "https://www.boxbrownie.com/360-virtual-tours",
     "https://www.boxbrownie.com/b/how-to-easily-create-a-virtual-tour-for-real-estate-listings"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.boxbrownie.com/pricing" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.boxbrownie.com/pricing"
+  },
   "useCaseFit": {
     "listing-videos": "Builds a virtual tour of the home from 360 photos.",
     "listing-photos": "Edits a listing photo and virtually stages an empty room."
-  }
+  },
+  "capabilities": [
+    "virtually stage a listing photo",
+    "edit a listing photo",
+    "build a virtual tour of the home from 360 photos",
+    "edit a listing photo and virtually stages an empty room",
+    "edit virtually stages an empty room",
+    "edit a listing photo or virtually staging an empty room",
+    "edit virtually staging an empty room",
+    "edit a listing photo, virtually stages an empty room, and can stitch 360 photos into a tour a buyer can pan through",
+    "edit can stitch 360 photos into a tour a buyer can pan through",
+    "work from editing a listing photo or virtually staging an empty room",
+    "work from 360 virtual tour a buyer can pan through",
+    "work from edits listing photos, virtually stages rooms, and builds 360 tours. priced per image"
+  ]
 }

@@ -1,0 +1,78 @@
+{
+  "id": "reflect-app",
+  "slug": "reflect-app",
+  "name": "Reflect",
+  "websiteUrl": "https://reflect.app/",
+  "affiliateUrl": null,
+  "shortDescription": "Reflect can search notes.",
+  "longDescription": "Reflect can search notes. It can also capture a note.",
+  "categories": [
+    "knowledge"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://reflect.app/",
+  "docsUrl": "https://reflect.app/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Search notes",
+    "Capture a note"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Reflect can search notes for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://reflect.app/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://reflect.app/"
+  },
+  "capabilities": [
+    "search notes",
+    "capture a note",
+    "journal daily",
+    "capture ideas, connect notes, and keep a files in markdown",
+    "capture ideas, connect notes,",
+    "record audio memos",
+    "transcribe voice notes with a transcription provider ask a notes answers linked to source notes",
+    "record a ideas and to-do\u2019s easily, so you never miss a thing",
+    "record a ideas",
+    "write on mac, iphone,",
+    "use capture ideas",
+    "use phone and ipad"
+  ]
+}

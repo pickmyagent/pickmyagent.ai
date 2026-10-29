@@ -83,5 +83,14 @@
   "useCaseFit": {
     "multi-agent-workflows": "Open-source framework for agents that retrieve from documents you provide.",
     "research-rag": "Retrieves passages from documents you provide and can hand them to an agent."
-  }
+  },
+  "capabilities": [
+    "work from rag pipelines over documents you already have",
+    "work from python teams building retrieval into an agent",
+    "work from open-source framework for retrieval and agents. the cloud free plan includes 10,000 credits",
+    "work from 0.14.25 is the open-source library, and the cloud free plan includes 10,000 credits",
+    "work from python teams building retrieval into the agent",
+    "work from open-source framework for retrieval and agents. a cloud free plan includes 10,000 credits",
+    "work from 0.14.25 is a open-source library, and the cloud free plan includes 10,000 credits"
+  ]
 }

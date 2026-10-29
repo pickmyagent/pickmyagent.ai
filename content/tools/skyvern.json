@@ -65,5 +65,12 @@
   },
   "useCaseFit": {
     "tool-use-browser": "Automates browser steps, with a free plan and a $29 per month plan."
-  }
+  },
+  "capabilities": [
+    "automate browser steps, with a free plan and a $29 per month plan",
+    "automate browser steps",
+    "work from automating clicks and form steps on websites",
+    "work from automates browsers on websites",
+    "automate browser steps, with the free plan and a $29 per month plan"
+  ]
 }

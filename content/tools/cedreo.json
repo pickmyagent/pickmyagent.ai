@@ -67,5 +67,15 @@
   "useCaseFit": {
     "floor-plan-rendering": "Produces photoreal interior and exterior renderings from a house plan."
   },
-  "id": "cedreo"
+  "id": "cedreo",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "work from builder who wants photoreal interior and exterior renderings from a house plan",
+    "work from remodel presentation with a plan and a picture",
+    "work from home design with photoreal interior and exterior renderings. plans from a month",
+    "work from produces photoreal interior and exterior renderings from a house plan you draw or upload",
+    "turn the floor plan into a render",
+    "work from builder who wants photoreal interior and exterior renderings from the house plan",
+    "work from remodel presentation with the plan and a picture"
+  ]
 }

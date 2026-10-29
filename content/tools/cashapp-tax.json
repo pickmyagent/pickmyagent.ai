@@ -1,0 +1,78 @@
+{
+  "id": "cashapp-tax",
+  "slug": "cashapp-tax",
+  "name": "Cash App Taxes",
+  "websiteUrl": "https://cash.app/taxes",
+  "affiliateUrl": null,
+  "shortDescription": "Cash App Taxes can file a tax return.",
+  "longDescription": "Cash App Taxes can file a tax return. It can also estimate a refund.",
+  "categories": [
+    "tax"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://cash.app/taxes",
+  "docsUrl": "https://cash.app/taxes",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "File a tax return",
+    "Estimate a refund"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Cash App Taxes can file a tax return for this kind of work.",
+  "weakness": "You still review the return before filing, and this is not tax advice.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://cash.app/taxes"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://cash.app/taxes"
+  },
+  "capabilities": [
+    "file a tax return",
+    "estimate a refund",
+    "answer tax questions",
+    "create an account to get started",
+    "use secure & free tax filing online",
+    "use cash app taxes",
+    "use is cash app taxes really free",
+    "use is cash app taxes accurate",
+    "use how long does it take to file",
+    "use do i need to download cash app",
+    "use what about security",
+    "use banking services are provided by cash app"
+  ]
+}

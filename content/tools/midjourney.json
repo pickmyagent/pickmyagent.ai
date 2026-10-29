@@ -71,5 +71,15 @@
   },
   "useCaseFit": {
     "make-images": "Draws images from a text prompt."
-  }
+  },
+  "capabilities": [
+    "generate an image from a prompt",
+    "work from image generation when a paid subscription is acceptable",
+    "work from game concept art exploration",
+    "work from image generation from a text prompt. the plans on their site are paid subscriptions",
+    "work from plan comparison lists basic at standard at pro at and mega at per month",
+    "generate an image from the prompt",
+    "generate the image from a prompt",
+    "work from image generation when the paid subscription is acceptable"
+  ]
 }

@@ -65,5 +65,17 @@
   },
   "useCaseFit": {
     "video-generation": "Generates footage from a prompt and edits that video."
-  }
+  },
+  "capabilities": [
+    "generate a video from a prompt",
+    "generate footage from a prompt and edits that video",
+    "generate footage from a prompt",
+    "generate edits that video",
+    "work from generating or editing video for a game or a stream",
+    "work from creators comparing hosted video tools",
+    "work from video generation and editing",
+    "work from video generation and editing start at per month",
+    "work from generates and edits video",
+    "generate the video from a prompt"
+  ]
 }

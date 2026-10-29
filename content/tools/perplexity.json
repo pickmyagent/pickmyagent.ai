@@ -20,7 +20,7 @@
     "web"
   ],
   "pricingModel": [],
-  "pricingNotes": "Use docs.perplexity.ai pricing guide; confirm Free tier in browser.",
+  "pricingNotes": "Use docs.perplexity.ai pricing guide, confirm Free tier in browser.",
   "pricingUrl": "https://docs.perplexity.ai/docs/getting-started/pricing",
   "docsUrl": "https://docs.perplexity.ai/",
   "freeTier": null,
@@ -67,5 +67,18 @@
   },
   "generalPurpose": true,
   "assistantName": "Perplexity",
-  "assistantKind": "search"
+  "assistantKind": "search",
+  "capabilities": [
+    "answer a question from the web",
+    "show linked sources for an answer",
+    "do web research, once you confirm the current plan in a browser",
+    "search docs describe a web-research product, with api pricing written up on the official docs site",
+    "search docs describe a web-research product",
+    "search docs with api pricing written up on the official docs site",
+    "work from web research, once you confirm the current plan in a browser",
+    "work from ai search that answers questions with linked sources",
+    "work from docs describe a web-research product, with api pricing written up on the official docs site",
+    "work from answers questions from the web and shows linked sources",
+    "answer the question from the web"
+  ]
 }

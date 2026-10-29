@@ -1,0 +1,77 @@
+{
+  "id": "equals",
+  "slug": "equals",
+  "name": "Equals",
+  "websiteUrl": "https://equals.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Equals can analyze data in a spreadsheet.",
+  "longDescription": "Equals can analyze data in a spreadsheet. It can also connect live data.",
+  "categories": [
+    "spreadsheets"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://equals.com/",
+  "docsUrl": "https://equals.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Analyze data in a spreadsheet",
+    "Connect live data"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Equals can analyze data in a spreadsheet.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://equals.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://equals.com/"
+  },
+  "capabilities": [
+    "analyze data in a spreadsheet",
+    "connect live data",
+    "build a chart",
+    "query a warehouse",
+    "share an analysis",
+    "build expert workbooks, trust every answer, and deploy them across a company",
+    "build expert workbooks, trust every answer,",
+    "build once, iterate for years",
+    "write a message\u2026 opus 5 high 2",
+    "build understand a pipeline, arr, engagement, and more",
+    "build understand a pipeline, arr, engagement,"
+  ]
+}

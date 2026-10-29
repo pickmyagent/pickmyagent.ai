@@ -63,5 +63,16 @@
   },
   "useCaseFit": {
     "knowledge-qa": "Docs with Ask, described as AI search and answers, priced at $10 per user billed yearly."
-  }
+  },
+  "capabilities": [
+    "search docs with an ai answer",
+    "search docs with ask, described as ai search and answers, priced at $10 per user billed yearly",
+    "search docs described as ai search",
+    "search docs priced at $10 per user billed yearly",
+    "use ask, its ai search and answers, at $10 per user per month when billed yearly",
+    "use at $10 per user per month when billed yearly",
+    "work from asking questions over a team's docs",
+    "work from team docs with ask, ai search and answers, at per user billed yearly",
+    "search docs with the ai answer"
+  ]
 }

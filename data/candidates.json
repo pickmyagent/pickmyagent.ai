@@ -1,0 +1,5948 @@
+[
+  {
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "url": "https://www.grammarly.com/",
+    "category": "writing",
+    "drafts": [
+      "rewrite a sentence for clarity",
+      "check grammar in a document",
+      "generate text with an ai assistant",
+      "improve the tone of an email",
+      "write more clearly on a web page"
+    ]
+  },
+  {
+    "slug": "quillbot",
+    "name": "QuillBot",
+    "url": "https://quillbot.com/",
+    "category": "writing",
+    "drafts": [
+      "paraphrase a paragraph",
+      "summarize a long article",
+      "check grammar in a draft",
+      "rewrite a sentence in another tone",
+      "cite a source in a paper"
+    ]
+  },
+  {
+    "slug": "wordtune",
+    "name": "Wordtune",
+    "url": "https://www.wordtune.com/",
+    "category": "writing",
+    "drafts": [
+      "rewrite a sentence",
+      "shorten a paragraph",
+      "expand a short note into a paragraph",
+      "change the tone of an email",
+      "summarize a document"
+    ]
+  },
+  {
+    "slug": "prowritingaid",
+    "name": "ProWritingAid",
+    "url": "https://prowritingaid.com/",
+    "category": "writing",
+    "drafts": [
+      "edit a manuscript for style",
+      "check grammar across a document",
+      "find repeated words in a draft",
+      "improve readability of a chapter",
+      "rewrite a sentence for clarity"
+    ]
+  },
+  {
+    "slug": "sudowrite",
+    "name": "Sudowrite",
+    "url": "https://www.sudowrite.com/",
+    "category": "writing",
+    "drafts": [
+      "continue a fiction scene",
+      "brainstorm story ideas",
+      "rewrite a paragraph of prose",
+      "describe a character in a novel",
+      "expand a story outline"
+    ]
+  },
+  {
+    "slug": "novelai",
+    "name": "NovelAI",
+    "url": "https://novelai.net/",
+    "category": "writing",
+    "drafts": [
+      "generate fiction from a prompt",
+      "continue a story in a chosen style",
+      "build a lorebook for a story",
+      "write dialogue for a character",
+      "illustrate a scene with an image"
+    ]
+  },
+  {
+    "slug": "rytr",
+    "name": "Rytr",
+    "url": "https://rytr.me/",
+    "category": "writing",
+    "drafts": [
+      "draft a blog post",
+      "write marketing copy",
+      "generate an email",
+      "rewrite content in another tone",
+      "create social captions"
+    ]
+  },
+  {
+    "slug": "anyword",
+    "name": "Anyword",
+    "url": "https://anyword.com/",
+    "category": "writing",
+    "drafts": [
+      "score marketing copy before you publish",
+      "generate ad copy variations",
+      "predict which headline performs",
+      "write landing page copy",
+      "test copy for a campaign"
+    ]
+  },
+  {
+    "slug": "writer",
+    "name": "Writer",
+    "url": "https://writer.com/",
+    "category": "writing",
+    "drafts": [
+      "draft on-brand marketing content",
+      "check copy against a style guide",
+      "generate content with company context",
+      "review a draft for brand voice",
+      "build a knowledge graph for writers"
+    ]
+  },
+  {
+    "slug": "hyperwrite",
+    "name": "HyperWrite",
+    "url": "https://www.hyperwriteai.com/",
+    "category": "writing",
+    "drafts": [
+      "draft an email from a short prompt",
+      "rewrite a paragraph",
+      "summarize a page in the browser",
+      "continue a document",
+      "brainstorm ideas in a document"
+    ]
+  },
+  {
+    "slug": "photoroom",
+    "name": "PhotoRoom",
+    "url": "https://www.photoroom.com/",
+    "category": "image",
+    "drafts": [
+      "remove the background from a product photo",
+      "generate a product scene",
+      "turn product photos into listing images",
+      "create a product image for ecommerce",
+      "make a video ad from a product photo"
+    ]
+  },
+  {
+    "slug": "leonardo",
+    "name": "Leonardo.Ai",
+    "url": "https://leonardo.ai/",
+    "category": "image",
+    "drafts": [
+      "generate an image from a text prompt",
+      "train a model on your own images",
+      "edit an image with ai",
+      "create game art from a prompt",
+      "upscale a generated image"
+    ]
+  },
+  {
+    "slug": "ideogram",
+    "name": "Ideogram",
+    "url": "https://ideogram.ai/",
+    "category": "image",
+    "drafts": [
+      "generate an image from a prompt",
+      "render text inside an image",
+      "edit a generated image",
+      "create a poster from a description",
+      "remix an image you upload"
+    ]
+  },
+  {
+    "slug": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "url": "https://www.adobe.com/products/firefly.html",
+    "category": "image",
+    "drafts": [
+      "generate an image from a text prompt",
+      "fill part of an image with generative fill",
+      "create text effects in an image",
+      "generate a vector from a prompt",
+      "edit a photo with generative ai"
+    ]
+  },
+  {
+    "slug": "stability",
+    "name": "Stability AI",
+    "url": "https://stability.ai/",
+    "category": "image",
+    "drafts": [
+      "generate an image from a text prompt",
+      "edit an image with a stable diffusion model",
+      "create video from an image",
+      "use an open image model through an api",
+      "upscale an image with a diffusion model"
+    ]
+  },
+  {
+    "slug": "krea",
+    "name": "Krea",
+    "url": "https://www.krea.ai/",
+    "category": "image",
+    "drafts": [
+      "generate an image from a prompt",
+      "enhance a generated image in real time",
+      "upscale an image",
+      "edit a region of an image",
+      "train a style for image generation"
+    ]
+  },
+  {
+    "slug": "recraft",
+    "name": "Recraft",
+    "url": "https://www.recraft.ai/",
+    "category": "image",
+    "drafts": [
+      "generate a vector illustration",
+      "create a brand icon from a prompt",
+      "edit an image in a consistent style",
+      "export a design as svg",
+      "generate a mockup from a description"
+    ]
+  },
+  {
+    "slug": "clipdrop",
+    "name": "Clipdrop",
+    "url": "https://clipdrop.co/",
+    "category": "image",
+    "drafts": [
+      "remove the background from a photo",
+      "upscale an image",
+      "relight a product photo",
+      "cleanup an object in a photo",
+      "replace the background of an image"
+    ]
+  },
+  {
+    "slug": "removebg",
+    "name": "remove.bg",
+    "url": "https://www.remove.bg/",
+    "category": "image",
+    "drafts": [
+      "remove the background from a photo",
+      "cut out a person from a picture",
+      "replace a background with a color",
+      "download a transparent png",
+      "batch remove backgrounds from product photos"
+    ]
+  },
+  {
+    "slug": "magnific",
+    "name": "Magnific",
+    "url": "https://magnific.ai/",
+    "category": "image",
+    "drafts": [
+      "upscale an image and add detail",
+      "reimagine a photo at higher resolution",
+      "enhance a low resolution picture",
+      "increase detail in a portrait",
+      "upscale a product photo"
+    ]
+  },
+  {
+    "slug": "kling",
+    "name": "Kling AI",
+    "url": "https://kling.ai/",
+    "category": "video",
+    "drafts": [
+      "generate a video from a text prompt",
+      "turn an image into a video",
+      "create a clip with camera motion",
+      "generate audio with a video",
+      "edit a generated video in the studio"
+    ]
+  },
+  {
+    "slug": "luma-dream",
+    "name": "Luma Dream Machine",
+    "url": "https://lumalabs.ai/dream-machine",
+    "category": "video",
+    "drafts": [
+      "generate a video from a text prompt",
+      "turn an image into a video",
+      "create a cinematic clip",
+      "modify a video with a prompt",
+      "render a short video from a keyframe"
+    ]
+  },
+  {
+    "slug": "invideo",
+    "name": "invideo AI",
+    "url": "https://invideo.io/",
+    "category": "video",
+    "drafts": [
+      "turn a prompt into a video",
+      "edit a video with text commands",
+      "add a voiceover to a video",
+      "generate captions for a video",
+      "make a social video from a script"
+    ]
+  },
+  {
+    "slug": "veed",
+    "name": "VEED",
+    "url": "https://www.veed.io/",
+    "category": "video",
+    "drafts": [
+      "edit a video in the browser",
+      "add captions to a video",
+      "remove the background from a video",
+      "generate a voiceover",
+      "translate subtitles on a video"
+    ]
+  },
+  {
+    "slug": "pictory",
+    "name": "Pictory",
+    "url": "https://pictory.ai/",
+    "category": "video",
+    "drafts": [
+      "turn a blog post into a video",
+      "create a video from a script",
+      "add captions to a video",
+      "extract highlights from a long video",
+      "add a voiceover to a video"
+    ]
+  },
+  {
+    "slug": "fliki",
+    "name": "Fliki",
+    "url": "https://fliki.ai/",
+    "category": "video",
+    "drafts": [
+      "turn text into a video with a voiceover",
+      "generate an avatar video",
+      "add captions to a video",
+      "convert a blog post into a video",
+      "create a social clip from a script"
+    ]
+  },
+  {
+    "slug": "colossyan",
+    "name": "Colossyan",
+    "url": "https://www.colossyan.com/",
+    "category": "video",
+    "drafts": [
+      "create a training video with an avatar",
+      "turn a script into an avatar video",
+      "translate a training video",
+      "add captions to a learning video",
+      "generate a spokesperson video"
+    ]
+  },
+  {
+    "slug": "hedra",
+    "name": "Hedra",
+    "url": "https://www.hedra.com/",
+    "category": "video",
+    "drafts": [
+      "animate a character from an image",
+      "generate a talking video from audio",
+      "create a character performance",
+      "turn a portrait into a video",
+      "lip sync a character to a voice"
+    ]
+  },
+  {
+    "slug": "ltx-studio",
+    "name": "LTX Studio",
+    "url": "https://ltx.studio/",
+    "category": "video",
+    "drafts": [
+      "storyboard a video from a script",
+      "generate shots from a prompt",
+      "edit a scene in a timeline",
+      "control camera and character in a shot",
+      "turn a storyboard into a video"
+    ]
+  },
+  {
+    "slug": "runway-ml",
+    "name": "Runway",
+    "url": "https://runwayml.com/",
+    "category": "video",
+    "drafts": [
+      "generate a video from a text prompt",
+      "edit a video with a generative tool",
+      "remove an object from a video",
+      "extend a clip with ai",
+      "create an image and turn it into video"
+    ]
+  },
+  {
+    "slug": "playht",
+    "name": "PlayHT",
+    "url": "https://play.ht/",
+    "category": "audio-voice",
+    "drafts": [
+      "convert text to speech",
+      "clone a voice from a sample recording",
+      "generate a voiceover for a video",
+      "add emotion to a narration",
+      "create an ultra realistic voice"
+    ]
+  },
+  {
+    "slug": "murf",
+    "name": "Murf",
+    "url": "https://murf.ai/",
+    "category": "audio-voice",
+    "drafts": [
+      "create a voiceover from a script",
+      "change the voice in a video",
+      "translate a voiceover",
+      "collaborate on a voice project",
+      "generate speech from text"
+    ]
+  },
+  {
+    "slug": "speechify",
+    "name": "Speechify",
+    "url": "https://speechify.com/",
+    "category": "audio-voice",
+    "drafts": [
+      "listen to a document read aloud",
+      "convert text to speech",
+      "scan a page and hear it",
+      "change the reading voice",
+      "listen to a pdf"
+    ]
+  },
+  {
+    "slug": "wellsaid",
+    "name": "WellSaid",
+    "url": "https://wellsaidlabs.com/",
+    "category": "audio-voice",
+    "drafts": [
+      "generate a voiceover for training",
+      "turn a script into studio speech",
+      "share a voice clip with a team",
+      "revise a narration without a studio",
+      "create an on brand voice"
+    ]
+  },
+  {
+    "slug": "resemble",
+    "name": "Resemble AI",
+    "url": "https://www.resemble.ai/",
+    "category": "audio-voice",
+    "drafts": [
+      "clone a voice",
+      "generate speech from text",
+      "detect a deepfake voice",
+      "localize a voice into another language",
+      "build a real time voice agent"
+    ]
+  },
+  {
+    "slug": "podcastle",
+    "name": "Podcastle",
+    "url": "https://podcastle.ai/",
+    "category": "audio-voice",
+    "drafts": [
+      "record a podcast in the browser",
+      "remove noise from a recording",
+      "transcribe a podcast",
+      "generate a voiceover",
+      "edit audio with text"
+    ]
+  },
+  {
+    "slug": "adobe-podcast",
+    "name": "Adobe Podcast",
+    "url": "https://podcast.adobe.com/",
+    "category": "audio-voice",
+    "drafts": [
+      "enhance a voice recording",
+      "remove echo from speech",
+      "record a remote interview",
+      "edit a podcast transcript",
+      "clean up audio for a show"
+    ]
+  },
+  {
+    "slug": "krisp",
+    "name": "Krisp",
+    "url": "https://krisp.ai/",
+    "category": "audio-voice",
+    "drafts": [
+      "remove background noise from a call",
+      "transcribe a meeting",
+      "summarize a call",
+      "cancel echo on a call",
+      "record a meeting with clean audio"
+    ]
+  },
+  {
+    "slug": "auphonic",
+    "name": "Auphonic",
+    "url": "https://auphonic.com/",
+    "category": "audio-voice",
+    "drafts": [
+      "level audio for a podcast",
+      "remove noise from a recording",
+      "add chapters to a podcast",
+      "export a loudness compliant file",
+      "process an interview automatically"
+    ]
+  },
+  {
+    "slug": "lalal",
+    "name": "LALAL.AI",
+    "url": "https://www.lalal.ai/",
+    "category": "audio-voice",
+    "drafts": [
+      "split vocals from a music track",
+      "extract a drum stem",
+      "remove a voice from a song",
+      "isolate an instrument",
+      "clean a vocal stem"
+    ]
+  },
+  {
+    "slug": "suno",
+    "name": "Suno",
+    "url": "https://suno.com/",
+    "category": "music",
+    "drafts": [
+      "generate a song from a prompt",
+      "write lyrics and a melody",
+      "create music in a chosen genre",
+      "extend a song you started",
+      "share a generated track"
+    ]
+  },
+  {
+    "slug": "udio",
+    "name": "Udio",
+    "url": "https://www.udio.com/",
+    "category": "music",
+    "drafts": [
+      "generate a song from a text prompt",
+      "remix a track",
+      "extend a piece of music",
+      "create lyrics with a melody",
+      "download a generated song"
+    ]
+  },
+  {
+    "slug": "aiva",
+    "name": "AIVA",
+    "url": "https://www.aiva.ai/",
+    "category": "music",
+    "drafts": [
+      "compose a soundtrack from a style",
+      "edit a generated score",
+      "export midi from a composition",
+      "create music for a video",
+      "choose instruments for a piece"
+    ]
+  },
+  {
+    "slug": "soundraw",
+    "name": "Soundraw",
+    "url": "https://soundraw.io/",
+    "category": "music",
+    "drafts": [
+      "generate a royalty free beat",
+      "customize the length of a track",
+      "pick a mood for background music",
+      "download a track for a video",
+      "edit the energy of a song"
+    ]
+  },
+  {
+    "slug": "mubert",
+    "name": "Mubert",
+    "url": "https://mubert.com/",
+    "category": "music",
+    "drafts": [
+      "generate background music from a prompt",
+      "stream music for a video",
+      "create a soundtrack for an app",
+      "pick a genre and duration",
+      "license a generated track"
+    ]
+  },
+  {
+    "slug": "boomy",
+    "name": "Boomy",
+    "url": "https://boomy.com/",
+    "category": "music",
+    "drafts": [
+      "create a song in a few clicks",
+      "release a track to streaming",
+      "generate music from a style",
+      "edit a generated song",
+      "save a song to a library"
+    ]
+  },
+  {
+    "slug": "beatoven",
+    "name": "Beatoven.ai",
+    "url": "https://www.beatoven.ai/",
+    "category": "music",
+    "drafts": [
+      "compose background music for a video",
+      "set the mood of a soundtrack",
+      "download a royalty free track",
+      "regenerate a section of music",
+      "match music to a scene"
+    ]
+  },
+  {
+    "slug": "loudly",
+    "name": "Loudly",
+    "url": "https://www.loudly.com/",
+    "category": "music",
+    "drafts": [
+      "generate a music track from a prompt",
+      "customize genre and tempo",
+      "download a track for content",
+      "remix a generated song",
+      "create music for a video"
+    ]
+  },
+  {
+    "slug": "moises",
+    "name": "Moises",
+    "url": "https://moises.ai/",
+    "category": "music",
+    "drafts": [
+      "separate stems from a song",
+      "remove vocals for practice",
+      "change the tempo of a track",
+      "transpose a song",
+      "practice with an isolated instrument"
+    ]
+  },
+  {
+    "slug": "landr",
+    "name": "LANDR",
+    "url": "https://www.landr.com/",
+    "category": "music",
+    "drafts": [
+      "master a track with ai",
+      "distribute a release",
+      "create a sample pack",
+      "learn mixing feedback on a song",
+      "prepare audio for streaming"
+    ]
+  },
+  {
+    "slug": "tripo",
+    "name": "Tripo",
+    "url": "https://www.tripo3d.ai/",
+    "category": "3d",
+    "drafts": [
+      "generate a 3d model from text",
+      "turn an image into a 3d model",
+      "download a mesh",
+      "texture a generated model",
+      "create a 3d asset for a game"
+    ]
+  },
+  {
+    "slug": "csm",
+    "name": "CSM",
+    "url": "https://csm.ai/",
+    "category": "3d",
+    "drafts": [
+      "turn an image into a 3d model",
+      "generate a 3d asset from a photo",
+      "export a mesh",
+      "create a game ready model",
+      "preview a 3d object in the browser"
+    ]
+  },
+  {
+    "slug": "spline",
+    "name": "Spline",
+    "url": "https://spline.design/",
+    "category": "3d",
+    "drafts": [
+      "design a 3d scene in the browser",
+      "animate a 3d object",
+      "generate 3d from a prompt",
+      "export a 3d scene to the web",
+      "collaborate on a 3d design"
+    ]
+  },
+  {
+    "slug": "polycam",
+    "name": "Polycam",
+    "url": "https://poly.cam/",
+    "category": "3d",
+    "drafts": [
+      "scan a room into a 3d model",
+      "capture an object with lidar",
+      "export a mesh or gaussian splat",
+      "share a 3d scan",
+      "measure a space from a scan"
+    ]
+  },
+  {
+    "slug": "luma-capture",
+    "name": "Luma AI",
+    "url": "https://lumalabs.ai/",
+    "category": "3d",
+    "drafts": [
+      "capture a scene as a 3d gaussian splat",
+      "generate a video from a prompt",
+      "create a 3d scan from photos",
+      "share an interactive scene",
+      "render a nerf or splat"
+    ]
+  },
+  {
+    "slug": "kaedim",
+    "name": "Kaedim",
+    "url": "https://www.kaedim3d.com/",
+    "category": "3d",
+    "drafts": [
+      "turn concept art into a 3d model",
+      "generate a game asset from an image",
+      "review a model with an artist",
+      "export a production ready mesh",
+      "request a 3d model from a drawing"
+    ]
+  },
+  {
+    "slug": "masterpiece",
+    "name": "Masterpiece X",
+    "url": "https://www.masterpiecestudio.com/",
+    "category": "3d",
+    "drafts": [
+      "generate a 3d model from a prompt",
+      "sculpt a model with ai",
+      "export a game asset",
+      "texture a 3d object",
+      "create a character model"
+    ]
+  },
+  {
+    "slug": "blockade",
+    "name": "Blockade Labs",
+    "url": "https://www.blockadelabs.com/",
+    "category": "3d",
+    "drafts": [
+      "generate a skybox from a prompt",
+      "create a 360 environment",
+      "export a skybox to a game engine",
+      "restyle a panorama",
+      "make an immersive background"
+    ]
+  },
+  {
+    "slug": "rodin",
+    "name": "Rodin",
+    "url": "https://hyper3d.ai/",
+    "category": "3d",
+    "drafts": [
+      "generate a 3d model from an image",
+      "create a textured mesh from text",
+      "export a model for a game",
+      "control the topology of a mesh",
+      "turn a photo into a 3d asset"
+    ]
+  },
+  {
+    "slug": "alpha3d",
+    "name": "Alpha3D",
+    "url": "https://www.alpha3d.io/",
+    "category": "3d",
+    "drafts": [
+      "generate a 3d model from a product photo",
+      "create an ecommerce 3d asset",
+      "export a glb model",
+      "preview a product in 3d",
+      "batch generate models from images"
+    ]
+  },
+  {
+    "slug": "figma",
+    "name": "Figma",
+    "url": "https://www.figma.com/",
+    "category": "design",
+    "drafts": [
+      "design an interface in the browser",
+      "generate a design from a prompt",
+      "prototype a user flow",
+      "share a design with a team",
+      "edit a component in a design system"
+    ]
+  },
+  {
+    "slug": "framer",
+    "name": "Framer",
+    "url": "https://www.framer.com/",
+    "category": "design",
+    "drafts": [
+      "design a website with ai",
+      "generate a landing page from a prompt",
+      "publish a site from a canvas",
+      "localize a website",
+      "add a cms to a site"
+    ]
+  },
+  {
+    "slug": "uizard",
+    "name": "Uizard",
+    "url": "https://uizard.io/",
+    "category": "design",
+    "drafts": [
+      "turn a sketch into a user interface",
+      "generate a wireframe from a prompt",
+      "convert a screenshot into an editable design",
+      "prototype an app screen",
+      "export a design to code"
+    ]
+  },
+  {
+    "slug": "relume",
+    "name": "Relume",
+    "url": "https://www.relume.io/",
+    "category": "design",
+    "drafts": [
+      "generate a sitemap for a website",
+      "write wireframe copy",
+      "export a design to figma or webflow",
+      "build a landing page structure",
+      "plan a website from a prompt"
+    ]
+  },
+  {
+    "slug": "looka",
+    "name": "Looka",
+    "url": "https://looka.com/",
+    "category": "design",
+    "drafts": [
+      "design a logo from a business name",
+      "generate a brand kit",
+      "create a business card from a logo",
+      "pick colors and fonts for a brand",
+      "download logo files"
+    ]
+  },
+  {
+    "slug": "brandmark",
+    "name": "Brandmark",
+    "url": "https://brandmark.io/",
+    "category": "design",
+    "drafts": [
+      "generate a logo from a name",
+      "create a brand color palette",
+      "design a business card",
+      "export logo files",
+      "get a brand kit from a keyword"
+    ]
+  },
+  {
+    "slug": "kittl",
+    "name": "Kittl",
+    "url": "https://www.kittl.com/",
+    "category": "design",
+    "drafts": [
+      "design a poster with ai",
+      "generate a print graphic",
+      "edit typography on a design",
+      "remove a background in a design",
+      "export a print ready file"
+    ]
+  },
+  {
+    "slug": "galileo",
+    "name": "Galileo AI",
+    "url": "https://www.usegalileo.ai/",
+    "category": "design",
+    "drafts": [
+      "generate a user interface from a prompt",
+      "edit a generated screen",
+      "create a mobile app mockup",
+      "describe a screen and get a design",
+      "export a ui design"
+    ]
+  },
+  {
+    "slug": "visily",
+    "name": "Visily",
+    "url": "https://www.visily.ai/",
+    "category": "design",
+    "drafts": [
+      "turn a screenshot into a wireframe",
+      "generate a user flow",
+      "sketch a screen and convert it",
+      "collaborate on a wireframe",
+      "export a design"
+    ]
+  },
+  {
+    "slug": "motiff",
+    "name": "Motiff",
+    "url": "https://motiff.com/",
+    "category": "design",
+    "drafts": [
+      "design a ui with an ai assistant",
+      "generate a layout from a prompt",
+      "edit a component",
+      "inspect a design for handoff",
+      "create a design system"
+    ]
+  },
+  {
+    "slug": "maket",
+    "name": "Maket",
+    "url": "https://www.maket.ai/",
+    "category": "architecture",
+    "drafts": [
+      "generate a floor plan from requirements",
+      "explore plan options for a house",
+      "edit a generated floor plan",
+      "export a plan",
+      "design a layout from a brief"
+    ]
+  },
+  {
+    "slug": "testfit",
+    "name": "TestFit",
+    "url": "https://www.testfit.io/",
+    "category": "architecture",
+    "drafts": [
+      "test a building massing on a site",
+      "generate a feasibility layout",
+      "compare unit mixes",
+      "export a site plan",
+      "evaluate a deal with a configurator"
+    ]
+  },
+  {
+    "slug": "hypar",
+    "name": "Hypar",
+    "url": "https://hypar.io/",
+    "category": "architecture",
+    "drafts": [
+      "generate a building design from parameters",
+      "explore design options",
+      "share a generative model",
+      "export a building model",
+      "automate a design workflow"
+    ]
+  },
+  {
+    "slug": "higharc",
+    "name": "Higharc",
+    "url": "https://www.higharc.com/",
+    "category": "architecture",
+    "drafts": [
+      "configure a home design",
+      "generate construction documents",
+      "visualize a home option",
+      "manage a home plan library",
+      "price a configured home"
+    ]
+  },
+  {
+    "slug": "getfloorplan",
+    "name": "GetFloorPlan",
+    "url": "https://getfloorplan.com/",
+    "category": "architecture",
+    "drafts": [
+      "turn a floor plan into a 3d tour",
+      "create a 2d plan rendering",
+      "generate a 360 tour from a plan",
+      "order a 3d floor plan",
+      "share a virtual tour"
+    ]
+  },
+  {
+    "slug": "architechtures",
+    "name": "ARCHITEChTURES",
+    "url": "https://architechtures.com/",
+    "category": "architecture",
+    "drafts": [
+      "generate a residential floor plan",
+      "optimize a building layout",
+      "edit a plan with constraints",
+      "export a bim model",
+      "explore design alternatives"
+    ]
+  },
+  {
+    "slug": "swapp",
+    "name": "SWAPP",
+    "url": "https://www.swapp.ai/",
+    "category": "architecture",
+    "drafts": [
+      "generate construction documents from a model",
+      "automate a drawing set",
+      "produce a permit set",
+      "coordinate a revit model",
+      "speed up documentation"
+    ]
+  },
+  {
+    "slug": "qbiq",
+    "name": "qbiq",
+    "url": "https://qbiq.ai/",
+    "category": "architecture",
+    "drafts": [
+      "test fit an office layout",
+      "generate a space plan",
+      "compare fit options for a tenant",
+      "visualize an office layout",
+      "share a test fit"
+    ]
+  },
+  {
+    "slug": "finch3d",
+    "name": "Finch",
+    "url": "https://www.finch3d.com/",
+    "category": "architecture",
+    "drafts": [
+      "generate floor plans in grasshopper",
+      "optimize an apartment layout",
+      "explore plan variations",
+      "connect a generative model to bim",
+      "evaluate a residential plan"
+    ]
+  },
+  {
+    "slug": "autodesk-forma",
+    "name": "Autodesk Forma",
+    "url": "https://www.autodesk.com/products/forma/overview",
+    "category": "architecture",
+    "drafts": [
+      "analyze a site for wind and sun",
+      "model a building massing",
+      "run an early stage feasibility study",
+      "collaborate on a site design",
+      "import context for a project"
+    ]
+  },
+  {
+    "slug": "collov",
+    "name": "Collov AI",
+    "url": "https://collov.ai/",
+    "category": "interior",
+    "drafts": [
+      "redesign a room from a photo",
+      "generate an interior style",
+      "stage a room virtually",
+      "create a design concept",
+      "visualize furniture in a room"
+    ]
+  },
+  {
+    "slug": "reroom",
+    "name": "REroom",
+    "url": "https://reroom.ai/",
+    "category": "interior",
+    "drafts": [
+      "restyle a room from a photo",
+      "generate an interior design",
+      "change the style of a space",
+      "visualize a renovation",
+      "create a room concept"
+    ]
+  },
+  {
+    "slug": "decorilla",
+    "name": "Decorilla",
+    "url": "https://www.decorilla.com/",
+    "category": "interior",
+    "drafts": [
+      "get an online interior design",
+      "receive a 3d room concept",
+      "shop a furniture list",
+      "work with a designer online",
+      "plan a room layout"
+    ]
+  },
+  {
+    "slug": "havenly",
+    "name": "Havenly",
+    "url": "https://havenly.com/",
+    "category": "interior",
+    "drafts": [
+      "design a room with a designer",
+      "get a furniture plan",
+      "visualize a room online",
+      "shop recommended furniture",
+      "create a mood board"
+    ]
+  },
+  {
+    "slug": "planner5d-ai",
+    "name": "Planner 5D",
+    "url": "https://planner5d.com/",
+    "category": "interior",
+    "drafts": [
+      "draw a floor plan",
+      "render a room in 3d",
+      "design an interior layout",
+      "place furniture in a room",
+      "create a home design"
+    ]
+  },
+  {
+    "slug": "roomstyler",
+    "name": "Roomstyler",
+    "url": "https://roomstyler.com/",
+    "category": "interior",
+    "drafts": [
+      "design a room in 3d",
+      "place products from catalogs",
+      "render an interior",
+      "share a room design",
+      "plan a furniture layout"
+    ]
+  },
+  {
+    "slug": "homestory",
+    "name": "Homestyler AI",
+    "url": "https://www.homestyler.com/",
+    "category": "interior",
+    "drafts": [
+      "design a room in the browser",
+      "render an interior",
+      "use a furniture library",
+      "create a floor plan",
+      "share a 3d design"
+    ]
+  },
+  {
+    "slug": "airoomplanner",
+    "name": "AI Room Planner",
+    "url": "https://airoomplanner.com/",
+    "category": "interior",
+    "drafts": [
+      "redesign a room from a photo",
+      "generate an interior concept",
+      "change furniture style",
+      "visualize a room makeover",
+      "create a design from a prompt"
+    ]
+  },
+  {
+    "slug": "interiorai",
+    "name": "Interior AI",
+    "url": "https://interiorai.com/",
+    "category": "interior",
+    "drafts": [
+      "redesign a room from a photo",
+      "generate a virtual staging",
+      "restyle an interior",
+      "visualize a renovation",
+      "create multiple room concepts"
+    ]
+  },
+  {
+    "slug": "reimagine-ai",
+    "name": "REimagine Home",
+    "url": "https://www.reimaginehome.ai/",
+    "category": "interior",
+    "drafts": [
+      "redesign a room from a photo",
+      "visualize a renovation",
+      "stage a listing photo",
+      "generate an exterior concept",
+      "try landscaping ideas"
+    ]
+  },
+  {
+    "slug": "spellbook",
+    "name": "Spellbook",
+    "url": "https://www.spellbook.com/",
+    "category": "legal",
+    "drafts": [
+      "review a contract in word",
+      "redline a contract",
+      "draft a clause from a library",
+      "catch a risk in an agreement",
+      "compare a contract to a playbook"
+    ]
+  },
+  {
+    "slug": "harvey",
+    "name": "Harvey",
+    "url": "https://www.harvey.ai/",
+    "category": "legal",
+    "drafts": [
+      "research a legal question",
+      "draft a legal memo",
+      "review a contract",
+      "analyze a set of documents",
+      "assist a lawyer with a brief"
+    ]
+  },
+  {
+    "slug": "robin-ai",
+    "name": "Robin AI",
+    "url": "https://www.robinai.com/",
+    "category": "legal",
+    "drafts": [
+      "review a contract",
+      "extract key terms from an agreement",
+      "redline a document",
+      "ask a question about a contract",
+      "compare clauses across contracts"
+    ]
+  },
+  {
+    "slug": "ironclad",
+    "name": "Ironclad",
+    "url": "https://ironcladapp.com/",
+    "category": "legal",
+    "drafts": [
+      "manage a contract workflow",
+      "generate a contract from a template",
+      "track obligations in an agreement",
+      "redline with a legal team",
+      "search a contract repository"
+    ]
+  },
+  {
+    "slug": "juro",
+    "name": "Juro",
+    "url": "https://juro.com/",
+    "category": "legal",
+    "drafts": [
+      "draft a contract in the browser",
+      "negotiate a contract with comments",
+      "approve a contract workflow",
+      "store signed agreements",
+      "generate a contract from a prompt"
+    ]
+  },
+  {
+    "slug": "luminance",
+    "name": "Luminance",
+    "url": "https://www.luminance.com/",
+    "category": "legal",
+    "drafts": [
+      "review a contract with ai",
+      "find anomalies in an agreement",
+      "support a due diligence review",
+      "extract clauses from documents",
+      "monitor a contract portfolio"
+    ]
+  },
+  {
+    "slug": "donotpay",
+    "name": "DoNotPay",
+    "url": "https://donotpay.com/",
+    "category": "legal",
+    "drafts": [
+      "fight a parking ticket",
+      "draft a demand letter",
+      "cancel a subscription",
+      "generate a legal letter",
+      "appeal a fee"
+    ]
+  },
+  {
+    "slug": "paxton",
+    "name": "Paxton",
+    "url": "https://www.paxton.ai/",
+    "category": "legal",
+    "drafts": [
+      "research case law",
+      "draft a legal document",
+      "ask a legal research question",
+      "summarize a case",
+      "cite sources in a memo"
+    ]
+  },
+  {
+    "slug": "evenup",
+    "name": "EvenUp",
+    "url": "https://www.evenuplaw.com/",
+    "category": "legal",
+    "drafts": [
+      "draft a demand package",
+      "summarize medical records for a case",
+      "build a personal injury demand",
+      "organize case documents",
+      "generate a settlement demand"
+    ]
+  },
+  {
+    "slug": "gavel",
+    "name": "Gavel",
+    "url": "https://www.gavel.io/",
+    "category": "legal",
+    "drafts": [
+      "automate a legal document",
+      "build a client intake workflow",
+      "generate a form from questions",
+      "draft documents for a law firm",
+      "route a client questionnaire"
+    ]
+  },
+  {
+    "slug": "clio",
+    "name": "Clio",
+    "url": "https://www.clio.com/",
+    "category": "legal",
+    "drafts": [
+      "manage a law practice",
+      "track time and billing",
+      "store matter documents",
+      "use an ai assistant on a matter",
+      "schedule a client meeting"
+    ]
+  },
+  {
+    "slug": "darrow",
+    "name": "Darrow",
+    "url": "https://www.darrow.ai/",
+    "category": "legal",
+    "drafts": [
+      "find a legal violation in public data",
+      "surface a potential case",
+      "investigate a claim",
+      "monitor litigation signals",
+      "brief a legal team on a lead"
+    ]
+  },
+  {
+    "slug": "quickbooks",
+    "name": "QuickBooks",
+    "url": "https://quickbooks.intuit.com/",
+    "category": "bookkeeping",
+    "drafts": [
+      "categorize expenses in quickbooks",
+      "reconcile a bank account",
+      "send an invoice",
+      "track receipts",
+      "run a profit and loss report"
+    ]
+  },
+  {
+    "slug": "xero",
+    "name": "Xero",
+    "url": "https://www.xero.com/",
+    "category": "bookkeeping",
+    "drafts": [
+      "reconcile bank transactions",
+      "send an invoice",
+      "capture a receipt",
+      "track bills to pay",
+      "run a financial report"
+    ]
+  },
+  {
+    "slug": "freshbooks",
+    "name": "FreshBooks",
+    "url": "https://www.freshbooks.com/",
+    "category": "bookkeeping",
+    "drafts": [
+      "send an invoice to a client",
+      "track expenses",
+      "capture a receipt",
+      "track time for a project",
+      "see who still owes you"
+    ]
+  },
+  {
+    "slug": "wave",
+    "name": "Wave",
+    "url": "https://www.waveapps.com/",
+    "category": "bookkeeping",
+    "drafts": [
+      "send a free invoice",
+      "track income and expenses",
+      "connect a bank account",
+      "scan a receipt",
+      "run a profit and loss"
+    ]
+  },
+  {
+    "slug": "digits",
+    "name": "Digits",
+    "url": "https://digits.com/",
+    "category": "bookkeeping",
+    "drafts": [
+      "categorize transactions automatically",
+      "close the books faster",
+      "ask a question about the books",
+      "reconcile accounts",
+      "see a live profit and loss"
+    ]
+  },
+  {
+    "slug": "bench",
+    "name": "Bench",
+    "url": "https://www.bench.co/",
+    "category": "bookkeeping",
+    "drafts": [
+      "catch up monthly bookkeeping",
+      "categorize expenses with a bookkeeper",
+      "reconcile accounts",
+      "get financial statements",
+      "upload receipts for the books"
+    ]
+  },
+  {
+    "slug": "pilot",
+    "name": "Pilot",
+    "url": "https://pilot.com/",
+    "category": "bookkeeping",
+    "drafts": [
+      "outsource monthly bookkeeping",
+      "close the books each month",
+      "get tax ready financials",
+      "categorize transactions",
+      "talk to a bookkeeping team"
+    ]
+  },
+  {
+    "slug": "expensify",
+    "name": "Expensify",
+    "url": "https://www.expensify.com/",
+    "category": "bookkeeping",
+    "drafts": [
+      "scan a receipt",
+      "submit an expense report",
+      "reimburse an employee",
+      "categorize a card charge",
+      "track expenses for the books"
+    ]
+  },
+  {
+    "slug": "melio",
+    "name": "Melio",
+    "url": "https://www.meliopayments.com/",
+    "category": "finance-ops",
+    "drafts": [
+      "pay a vendor bill",
+      "schedule a bill payment",
+      "sync payments to accounting",
+      "pay an international vendor",
+      "track accounts payable"
+    ]
+  },
+  {
+    "slug": "stampli",
+    "name": "Stampli",
+    "url": "https://www.stampli.com/",
+    "category": "finance-ops",
+    "drafts": [
+      "capture an invoice",
+      "route an invoice for approval",
+      "match an invoice to a purchase order",
+      "code an invoice to the general ledger",
+      "track accounts payable"
+    ]
+  },
+  {
+    "slug": "hrblock",
+    "name": "H&R Block",
+    "url": "https://www.hrblock.com/",
+    "category": "tax",
+    "drafts": [
+      "file a tax return online",
+      "get help from a tax pro",
+      "import tax documents",
+      "claim a deduction",
+      "start a return for free"
+    ]
+  },
+  {
+    "slug": "freetaxusa",
+    "name": "FreeTaxUSA",
+    "url": "https://www.freetaxusa.com/",
+    "category": "tax",
+    "drafts": [
+      "file a federal return for free",
+      "prepare a state return",
+      "enter w2 income",
+      "claim a deduction",
+      "efile a personal return"
+    ]
+  },
+  {
+    "slug": "column-tax",
+    "name": "Column Tax",
+    "url": "https://www.columntax.com/",
+    "category": "tax",
+    "drafts": [
+      "embed tax filing in an app",
+      "import wage data into a return",
+      "file a 1040",
+      "prefill a tax return",
+      "offer refund advance through a partner"
+    ]
+  },
+  {
+    "slug": "april-tax",
+    "name": "april",
+    "url": "https://www.getapril.com/",
+    "category": "tax",
+    "drafts": [
+      "file taxes inside another app",
+      "estimate a refund",
+      "import income documents",
+      "guide a user through a return",
+      "connect payroll data to a filing"
+    ]
+  },
+  {
+    "slug": "keeper-tax",
+    "name": "Keeper",
+    "url": "https://www.keepertax.com/",
+    "category": "tax",
+    "drafts": [
+      "find deductions for a freelancer",
+      "track expenses for taxes",
+      "file a self employed return",
+      "categorize write offs",
+      "estimate quarterly taxes"
+    ]
+  },
+  {
+    "slug": "monarch",
+    "name": "Monarch Money",
+    "url": "https://www.monarchmoney.com/",
+    "category": "investing",
+    "drafts": [
+      "track a budget and net worth",
+      "link bank and investment accounts",
+      "see a portfolio in one place",
+      "categorize spending",
+      "share finances with a partner"
+    ]
+  },
+  {
+    "slug": "copilot-money",
+    "name": "Copilot Money",
+    "url": "https://copilot.money/",
+    "category": "investing",
+    "drafts": [
+      "track spending against a budget",
+      "link accounts",
+      "see recurring subscriptions",
+      "categorize transactions",
+      "review cash flow"
+    ]
+  },
+  {
+    "slug": "ynab",
+    "name": "YNAB",
+    "url": "https://www.ynab.com/",
+    "category": "investing",
+    "drafts": [
+      "give every dollar a job",
+      "plan a monthly budget",
+      "track spending by category",
+      "reconcile accounts",
+      "see the age of your money"
+    ]
+  },
+  {
+    "slug": "projectionlab",
+    "name": "ProjectionLab",
+    "url": "https://projectionlab.com/",
+    "category": "investing",
+    "drafts": [
+      "model retirement cash flow",
+      "compare financial scenarios",
+      "project a portfolio",
+      "test a savings plan",
+      "chart a long term plan"
+    ]
+  },
+  {
+    "slug": "koyfin",
+    "name": "Koyfin",
+    "url": "https://www.koyfin.com/",
+    "category": "investing",
+    "drafts": [
+      "chart a stock",
+      "screen financial data",
+      "build a market dashboard",
+      "compare company fundamentals",
+      "read earnings transcripts"
+    ]
+  },
+  {
+    "slug": "finchat",
+    "name": "FinChat",
+    "url": "https://finchat.io/",
+    "category": "investing",
+    "drafts": [
+      "ask a question about a company filing",
+      "compare financials across companies",
+      "read an earnings transcript",
+      "build a chart from fundamentals",
+      "research a stock with sources"
+    ]
+  },
+  {
+    "slug": "alpha-sense",
+    "name": "AlphaSense",
+    "url": "https://www.alphasense.com/",
+    "category": "investing",
+    "drafts": [
+      "search earnings transcripts",
+      "research a company filing",
+      "monitor industry news",
+      "ask a question across documents",
+      "find an expert insight"
+    ]
+  },
+  {
+    "slug": "trendspider",
+    "name": "TrendSpider",
+    "url": "https://trendspider.com/",
+    "category": "investing",
+    "drafts": [
+      "scan charts for a setup",
+      "backtest a trading strategy",
+      "set an alert on a chart",
+      "analyze technical indicators",
+      "automate a chart scan"
+    ]
+  },
+  {
+    "slug": "gong",
+    "name": "Gong",
+    "url": "https://www.gong.io/",
+    "category": "sales",
+    "drafts": [
+      "record a sales call",
+      "coach a rep from a call",
+      "forecast a pipeline",
+      "summarize a customer conversation",
+      "search call transcripts"
+    ]
+  },
+  {
+    "slug": "salesloft",
+    "name": "Salesloft",
+    "url": "https://www.salesloft.com/",
+    "category": "sales",
+    "drafts": [
+      "run a sales cadence",
+      "dial from a cadence",
+      "email a prospect",
+      "coach a sales conversation",
+      "track engagement on outreach"
+    ]
+  },
+  {
+    "slug": "outreach-io",
+    "name": "Outreach",
+    "url": "https://www.outreach.io/",
+    "category": "sales",
+    "drafts": [
+      "build a sales sequence",
+      "automate follow up with a prospect",
+      "forecast revenue",
+      "coach a deal",
+      "sync outreach to a crm"
+    ]
+  },
+  {
+    "slug": "lemlist",
+    "name": "lemlist",
+    "url": "https://www.lemlist.com/",
+    "category": "sales",
+    "drafts": [
+      "send a personalized cold email",
+      "warm up an email inbox",
+      "add a linkedin step to a sequence",
+      "personalize an image in an email",
+      "track replies to outreach"
+    ]
+  },
+  {
+    "slug": "lavender",
+    "name": "Lavender",
+    "url": "https://www.lavender.ai/",
+    "category": "sales",
+    "drafts": [
+      "score a sales email before you send it",
+      "rewrite a cold email",
+      "get coaching on an email",
+      "personalize an email to a buyer",
+      "improve a subject line"
+    ]
+  },
+  {
+    "slug": "seamless",
+    "name": "Seamless.AI",
+    "url": "https://seamless.ai/",
+    "category": "sales",
+    "drafts": [
+      "find a contact email",
+      "search for a decision maker",
+      "build a lead list",
+      "enrich a prospect",
+      "export contacts to a crm"
+    ]
+  },
+  {
+    "slug": "hunter",
+    "name": "Hunter",
+    "url": "https://hunter.io/",
+    "category": "sales",
+    "drafts": [
+      "find an email address from a domain",
+      "verify an email address",
+      "build a lead list",
+      "discover contacts at a company",
+      "export emails to a campaign"
+    ]
+  },
+  {
+    "slug": "regie",
+    "name": "Regie.ai",
+    "url": "https://www.regie.ai/",
+    "category": "sales",
+    "drafts": [
+      "generate a sales sequence",
+      "write a cold email",
+      "personalize outreach at scale",
+      "create a linkedin message",
+      "coach a rep on messaging"
+    ]
+  },
+  {
+    "slug": "elevenx",
+    "name": "11x",
+    "url": "https://www.11x.ai/",
+    "category": "sales",
+    "drafts": [
+      "run an ai sales agent",
+      "book meetings from outbound",
+      "research a prospect",
+      "send autonomous outreach",
+      "qualify a lead"
+    ]
+  },
+  {
+    "slug": "hubspot",
+    "name": "HubSpot",
+    "url": "https://www.hubspot.com/",
+    "category": "sales",
+    "drafts": [
+      "track a crm pipeline",
+      "send a marketing email",
+      "score a lead",
+      "draft content with an ai assistant",
+      "manage contacts and deals"
+    ]
+  },
+  {
+    "slug": "surfer",
+    "name": "Surfer",
+    "url": "https://surferseo.com/",
+    "category": "seo",
+    "drafts": [
+      "optimize a page for a keyword",
+      "write an seo article",
+      "audit content against competitors",
+      "plan a content brief",
+      "track search rankings"
+    ]
+  },
+  {
+    "slug": "clearscope",
+    "name": "Clearscope",
+    "url": "https://www.clearscope.io/",
+    "category": "seo",
+    "drafts": [
+      "grade content for a keyword",
+      "find related terms to cover",
+      "brief a writer",
+      "optimize an existing page",
+      "compare content to top results"
+    ]
+  },
+  {
+    "slug": "frase",
+    "name": "Frase",
+    "url": "https://www.frase.io/",
+    "category": "seo",
+    "drafts": [
+      "build an seo content brief",
+      "research questions people ask",
+      "optimize an article",
+      "generate an outline",
+      "answer questions from your content"
+    ]
+  },
+  {
+    "slug": "marketmuse",
+    "name": "MarketMuse",
+    "url": "https://www.marketmuse.com/",
+    "category": "seo",
+    "drafts": [
+      "plan a content inventory",
+      "find topic gaps",
+      "brief a writer",
+      "score content for coverage",
+      "optimize a page for search"
+    ]
+  },
+  {
+    "slug": "semrush",
+    "name": "Semrush",
+    "url": "https://www.semrush.com/",
+    "category": "seo",
+    "drafts": [
+      "research a keyword",
+      "audit a website for seo",
+      "track rankings",
+      "analyze a competitor",
+      "find backlink opportunities"
+    ]
+  },
+  {
+    "slug": "ahrefs",
+    "name": "Ahrefs",
+    "url": "https://ahrefs.com/",
+    "category": "seo",
+    "drafts": [
+      "research keywords",
+      "analyze backlinks",
+      "audit a site",
+      "track search rankings",
+      "see what competitors rank for"
+    ]
+  },
+  {
+    "slug": "scalenut",
+    "name": "Scalenut",
+    "url": "https://www.scalenut.com/",
+    "category": "seo",
+    "drafts": [
+      "write an seo article",
+      "plan a topic cluster",
+      "generate a content brief",
+      "optimize a draft",
+      "create a cruise mode article"
+    ]
+  },
+  {
+    "slug": "koala",
+    "name": "Koala",
+    "url": "https://koala.sh/",
+    "category": "seo",
+    "drafts": [
+      "write an seo article from a keyword",
+      "generate amazon affiliate content",
+      "optimize a blog post",
+      "add internal links",
+      "publish a long form article"
+    ]
+  },
+  {
+    "slug": "neuronwriter",
+    "name": "NeuronWriter",
+    "url": "https://neuronwriter.com/",
+    "category": "seo",
+    "drafts": [
+      "optimize content with nlp terms",
+      "write an article from a brief",
+      "score a draft against competitors",
+      "plan content",
+      "generate an outline"
+    ]
+  },
+  {
+    "slug": "alliai",
+    "name": "Alli AI",
+    "url": "https://www.alliai.com/",
+    "category": "seo",
+    "drafts": [
+      "optimize on page seo in bulk",
+      "deploy title and description changes",
+      "automate seo fixes on a site",
+      "approve an optimization",
+      "roll back an seo change"
+    ]
+  },
+  {
+    "slug": "adcreative",
+    "name": "AdCreative.ai",
+    "url": "https://www.adcreative.ai/",
+    "category": "ads",
+    "drafts": [
+      "generate an ad creative",
+      "score an ad before you launch it",
+      "create a social ad variation",
+      "write ad copy",
+      "export creatives for a campaign"
+    ]
+  },
+  {
+    "slug": "pencil",
+    "name": "Pencil",
+    "url": "https://www.trypencil.com/",
+    "category": "ads",
+    "drafts": [
+      "generate video ads",
+      "predict ad performance",
+      "create ad variations",
+      "brief a creative from a product",
+      "test a concept before spend"
+    ]
+  },
+  {
+    "slug": "madgicx",
+    "name": "Madgicx",
+    "url": "https://madgicx.com/",
+    "category": "ads",
+    "drafts": [
+      "optimize facebook ads",
+      "find a winning audience",
+      "automate budget rules",
+      "audit an ad account",
+      "create ad creatives"
+    ]
+  },
+  {
+    "slug": "smartly",
+    "name": "Smartly",
+    "url": "https://www.smartly.io/",
+    "category": "ads",
+    "drafts": [
+      "produce ad variations at scale",
+      "launch ads across channels",
+      "optimize creative performance",
+      "automate a campaign",
+      "report on ad results"
+    ]
+  },
+  {
+    "slug": "omneky",
+    "name": "Omneky",
+    "url": "https://www.omneky.com/",
+    "category": "ads",
+    "drafts": [
+      "generate brand consistent ads",
+      "launch creative across channels",
+      "learn which creative performs",
+      "create a video ad",
+      "personalize an ad for an audience"
+    ]
+  },
+  {
+    "slug": "creatify",
+    "name": "Creatify",
+    "url": "https://creatify.ai/",
+    "category": "ads",
+    "drafts": [
+      "turn a product url into a video ad",
+      "generate an avatar ad",
+      "create ugc style ads",
+      "add captions to an ad",
+      "export ads for tiktok and meta"
+    ]
+  },
+  {
+    "slug": "later",
+    "name": "Later",
+    "url": "https://later.com/",
+    "category": "social",
+    "drafts": [
+      "schedule an instagram post",
+      "plan a social calendar",
+      "write a caption",
+      "preview a grid",
+      "publish to tiktok and instagram"
+    ]
+  },
+  {
+    "slug": "sprout",
+    "name": "Sprout Social",
+    "url": "https://sproutsocial.com/",
+    "category": "social",
+    "drafts": [
+      "schedule social posts",
+      "reply to comments in one inbox",
+      "report on social performance",
+      "draft a caption with ai",
+      "listen for brand mentions"
+    ]
+  },
+  {
+    "slug": "typefully",
+    "name": "Typefully",
+    "url": "https://typefully.com/",
+    "category": "social",
+    "drafts": [
+      "draft a twitter thread",
+      "schedule a post",
+      "rewrite a hook",
+      "preview a thread",
+      "publish to linkedin and x"
+    ]
+  },
+  {
+    "slug": "taplio",
+    "name": "Taplio",
+    "url": "https://taplio.com/",
+    "category": "social",
+    "drafts": [
+      "generate a linkedin post",
+      "schedule linkedin content",
+      "find post ideas",
+      "grow a linkedin audience",
+      "analyze which posts perform"
+    ]
+  },
+  {
+    "slug": "hypefury",
+    "name": "Hypefury",
+    "url": "https://hypefury.com/",
+    "category": "social",
+    "drafts": [
+      "schedule tweets and threads",
+      "recycle evergreen posts",
+      "draft a thread with ai",
+      "auto plug a newsletter",
+      "publish to linkedin"
+    ]
+  },
+  {
+    "slug": "publer",
+    "name": "Publer",
+    "url": "https://publer.io/",
+    "category": "social",
+    "drafts": [
+      "schedule posts to many networks",
+      "bulk schedule a calendar",
+      "recycle content",
+      "preview a post",
+      "collaborate on a social calendar"
+    ]
+  },
+  {
+    "slug": "socialbee",
+    "name": "SocialBee",
+    "url": "https://socialbee.com/",
+    "category": "social",
+    "drafts": [
+      "categorize and recycle posts",
+      "schedule a social calendar",
+      "generate a caption",
+      "publish to several networks",
+      "keep evergreen content posting"
+    ]
+  },
+  {
+    "slug": "feedhive",
+    "name": "FeedHive",
+    "url": "https://www.feedhive.com/",
+    "category": "social",
+    "drafts": [
+      "schedule social posts",
+      "generate post ideas",
+      "recycle content",
+      "preview a calendar",
+      "write captions with ai"
+    ]
+  },
+  {
+    "slug": "opusclip",
+    "name": "Opus Clip",
+    "url": "https://www.opus.pro/",
+    "category": "social",
+    "drafts": [
+      "turn a long video into clips",
+      "add captions to a short",
+      "score a clip for virality",
+      "reframe a video for tiktok",
+      "export shorts from a podcast"
+    ]
+  },
+  {
+    "slug": "submagic",
+    "name": "Submagic",
+    "url": "https://www.submagic.co/",
+    "category": "social",
+    "drafts": [
+      "add animated captions to a short",
+      "generate b roll for a clip",
+      "trim a video into a short",
+      "translate captions",
+      "export a captioned reel"
+    ]
+  },
+  {
+    "slug": "vizard",
+    "name": "Vizard",
+    "url": "https://vizard.ai/",
+    "category": "social",
+    "drafts": [
+      "clip a long video into shorts",
+      "add captions automatically",
+      "resize a video for tiktok",
+      "find highlights in a podcast",
+      "export a social clip"
+    ]
+  },
+  {
+    "slug": "beehiiv",
+    "name": "beehiiv",
+    "url": "https://www.beehiiv.com/",
+    "category": "email",
+    "drafts": [
+      "write a newsletter",
+      "grow an email list",
+      "send a newsletter campaign",
+      "recommend other newsletters",
+      "see which links readers click"
+    ]
+  },
+  {
+    "slug": "kit",
+    "name": "Kit",
+    "url": "https://kit.com/",
+    "category": "email",
+    "drafts": [
+      "send an email newsletter",
+      "automate a sequence",
+      "tag a subscriber",
+      "sell a digital product",
+      "grow an email list"
+    ]
+  },
+  {
+    "slug": "customerio",
+    "name": "Customer.io",
+    "url": "https://customer.io/",
+    "category": "email",
+    "drafts": [
+      "send a behavior based email",
+      "build a campaign journey",
+      "personalize a message from data",
+      "trigger an email from an event",
+      "test a message"
+    ]
+  },
+  {
+    "slug": "brevo",
+    "name": "Brevo",
+    "url": "https://www.brevo.com/",
+    "category": "email",
+    "drafts": [
+      "send an email campaign",
+      "automate a marketing workflow",
+      "send an sms",
+      "build a signup form",
+      "track email performance"
+    ]
+  },
+  {
+    "slug": "omnisend",
+    "name": "Omnisend",
+    "url": "https://www.omnisend.com/",
+    "category": "email",
+    "drafts": [
+      "send an ecommerce email flow",
+      "recover an abandoned cart",
+      "segment customers",
+      "send an sms campaign",
+      "personalize a product email"
+    ]
+  },
+  {
+    "slug": "activecampaign",
+    "name": "ActiveCampaign",
+    "url": "https://www.activecampaign.com/",
+    "category": "email",
+    "drafts": [
+      "automate an email sequence",
+      "score a lead",
+      "send a campaign",
+      "build a crm automation",
+      "personalize a message"
+    ]
+  },
+  {
+    "slug": "superhuman",
+    "name": "Superhuman",
+    "url": "https://superhuman.com/",
+    "category": "email",
+    "drafts": [
+      "triage an inbox faster",
+      "write an email with ai",
+      "snooze an email",
+      "see when an email is opened",
+      "split the inbox"
+    ]
+  },
+  {
+    "slug": "sanebox",
+    "name": "SaneBox",
+    "url": "https://www.sanebox.com/",
+    "category": "email",
+    "drafts": [
+      "filter unimportant email",
+      "snooze an email",
+      "remind you if nobody replies",
+      "unsubscribe from a newsletter",
+      "train the inbox on what matters"
+    ]
+  },
+  {
+    "slug": "ada",
+    "name": "Ada",
+    "url": "https://www.ada.cx/",
+    "category": "customer-support",
+    "drafts": [
+      "answer customer questions automatically",
+      "resolve a support conversation",
+      "hand off a chat to an agent",
+      "deflect a repeated question",
+      "personalize a support reply"
+    ]
+  },
+  {
+    "slug": "forethought",
+    "name": "Forethought",
+    "url": "https://forethought.ai/",
+    "category": "customer-support",
+    "drafts": [
+      "triage a support ticket",
+      "suggest a reply to an agent",
+      "deflect a ticket with a bot",
+      "classify a support request",
+      "route a ticket to the right team"
+    ]
+  },
+  {
+    "slug": "gorgias",
+    "name": "Gorgias",
+    "url": "https://www.gorgias.com/",
+    "category": "customer-support",
+    "drafts": [
+      "answer an ecommerce support ticket",
+      "automate a shopify reply",
+      "track an order in the helpdesk",
+      "suggest a macro",
+      "handle a refund request"
+    ]
+  },
+  {
+    "slug": "tidio",
+    "name": "Tidio",
+    "url": "https://www.tidio.com/",
+    "category": "customer-support",
+    "drafts": [
+      "chat with visitors on a site",
+      "answer questions with a chatbot",
+      "capture a lead in chat",
+      "automate a reply",
+      "hand a chat to a human"
+    ]
+  },
+  {
+    "slug": "helpscout",
+    "name": "Help Scout",
+    "url": "https://www.helpscout.com/",
+    "category": "customer-support",
+    "drafts": [
+      "reply to a customer email",
+      "share a help center article",
+      "draft a reply with ai",
+      "track a conversation",
+      "collaborate on a support inbox"
+    ]
+  },
+  {
+    "slug": "chatbase",
+    "name": "Chatbase",
+    "url": "https://www.chatbase.co/",
+    "category": "customer-support",
+    "drafts": [
+      "train a chatbot on your documents",
+      "embed a chat on a site",
+      "answer questions from a knowledge base",
+      "upload a pdf for a bot",
+      "customize a support bot"
+    ]
+  },
+  {
+    "slug": "customgpt",
+    "name": "CustomGPT",
+    "url": "https://customgpt.ai/",
+    "category": "customer-support",
+    "drafts": [
+      "build a chatbot from your content",
+      "answer questions from a sitemap",
+      "embed a gpt on a site",
+      "cite sources in an answer",
+      "update a bot when content changes"
+    ]
+  },
+  {
+    "slug": "kore",
+    "name": "Kore.ai",
+    "url": "https://kore.ai/",
+    "category": "customer-support",
+    "drafts": [
+      "build a virtual assistant",
+      "automate a customer conversation",
+      "design a dialog",
+      "connect a bot to enterprise systems",
+      "deploy an assistant on several channels"
+    ]
+  },
+  {
+    "slug": "eightfold",
+    "name": "Eightfold",
+    "url": "https://eightfold.ai/",
+    "category": "hr",
+    "drafts": [
+      "match a candidate to a job",
+      "rediscover talent in a database",
+      "plan workforce skills",
+      "personalize a career path",
+      "source candidates with ai"
+    ]
+  },
+  {
+    "slug": "hireez",
+    "name": "hireEZ",
+    "url": "https://hireez.com/",
+    "category": "hr",
+    "drafts": [
+      "source candidates from the open web",
+      "build a talent pool",
+      "engage a candidate by email",
+      "rediscover a past applicant",
+      "search for a skill"
+    ]
+  },
+  {
+    "slug": "seekout",
+    "name": "SeekOut",
+    "url": "https://www.seekout.com/",
+    "category": "hr",
+    "drafts": [
+      "search for diverse candidates",
+      "find a candidate by skill",
+      "engage talent with outreach",
+      "rediscover internal talent",
+      "build a recruiting pipeline"
+    ]
+  },
+  {
+    "slug": "ashby",
+    "name": "Ashby",
+    "url": "https://www.ashbyhq.com/",
+    "category": "hr",
+    "drafts": [
+      "run an applicant tracking system",
+      "schedule an interview",
+      "score a candidate",
+      "build a hiring report",
+      "automate a recruiting workflow"
+    ]
+  },
+  {
+    "slug": "greenhouse",
+    "name": "Greenhouse",
+    "url": "https://www.greenhouse.com/",
+    "category": "hr",
+    "drafts": [
+      "track applicants",
+      "structure an interview",
+      "score a candidate",
+      "report on a hiring funnel",
+      "schedule an interview panel"
+    ]
+  },
+  {
+    "slug": "lever",
+    "name": "Lever",
+    "url": "https://www.lever.co/",
+    "category": "hr",
+    "drafts": [
+      "track candidates in a pipeline",
+      "source and nurture talent",
+      "schedule interviews",
+      "collaborate on a hire",
+      "report on recruiting"
+    ]
+  },
+  {
+    "slug": "workable",
+    "name": "Workable",
+    "url": "https://www.workable.com/",
+    "category": "hr",
+    "drafts": [
+      "post a job to job boards",
+      "screen applicants",
+      "schedule an interview",
+      "use an ai recruiter",
+      "track a hiring pipeline"
+    ]
+  },
+  {
+    "slug": "textio",
+    "name": "Textio",
+    "url": "https://textio.com/",
+    "category": "hr",
+    "drafts": [
+      "improve a job post",
+      "remove bias from a job description",
+      "score language in a listing",
+      "write an inclusive job post",
+      "see which phrases perform"
+    ]
+  },
+  {
+    "slug": "jobscan",
+    "name": "Jobscan",
+    "url": "https://www.jobscan.co/",
+    "category": "resumes",
+    "drafts": [
+      "match a resume to a job description",
+      "find missing keywords",
+      "optimize a resume for an applicant tracking system",
+      "compare a resume to a posting",
+      "improve a linkedin profile"
+    ]
+  },
+  {
+    "slug": "tealhq",
+    "name": "Teal",
+    "url": "https://www.tealhq.com/",
+    "category": "resumes",
+    "drafts": [
+      "tailor a resume to a job",
+      "track job applications",
+      "match keywords in a posting",
+      "build a resume",
+      "organize a job search"
+    ]
+  },
+  {
+    "slug": "enhancv",
+    "name": "Enhancv",
+    "url": "https://enhancv.com/",
+    "category": "resumes",
+    "drafts": [
+      "design a resume",
+      "tailor a resume to a job",
+      "get content suggestions",
+      "choose a resume template",
+      "export a resume to pdf"
+    ]
+  },
+  {
+    "slug": "zety",
+    "name": "Zety",
+    "url": "https://zety.com/",
+    "category": "resumes",
+    "drafts": [
+      "build a resume with guidance",
+      "choose a resume template",
+      "write a cover letter",
+      "see resume examples",
+      "download a resume"
+    ]
+  },
+  {
+    "slug": "resume-worded",
+    "name": "Resume Worded",
+    "url": "https://resumeworded.com/",
+    "category": "resumes",
+    "drafts": [
+      "score a resume",
+      "improve resume bullets",
+      "optimize a linkedin profile",
+      "tailor a resume to a job",
+      "see line by line feedback"
+    ]
+  },
+  {
+    "slug": "tealh",
+    "name": "Teal HQ",
+    "url": "https://www.tealhq.com/",
+    "category": "resumes",
+    "drafts": [
+      "tailor a resume",
+      "track a job search",
+      "match a resume to a description",
+      "save jobs from boards",
+      "write resume bullets"
+    ]
+  },
+  {
+    "slug": "photomath",
+    "name": "Photomath",
+    "url": "https://photomath.com/",
+    "category": "education",
+    "drafts": [
+      "scan a math problem",
+      "see step by step solutions",
+      "learn how a problem is solved",
+      "practice math with explanations",
+      "check homework with a photo"
+    ]
+  },
+  {
+    "slug": "brainly",
+    "name": "Brainly",
+    "url": "https://brainly.com/",
+    "category": "education",
+    "drafts": [
+      "ask a homework question",
+      "get a step by step answer",
+      "practice with a tutor",
+      "scan a problem",
+      "learn from explanations"
+    ]
+  },
+  {
+    "slug": "consensus",
+    "name": "Consensus",
+    "url": "https://consensus.app/",
+    "category": "research",
+    "drafts": [
+      "search scientific papers",
+      "see a consensus across studies",
+      "ask a research question",
+      "filter peer reviewed results",
+      "cite a paper"
+    ]
+  },
+  {
+    "slug": "scite",
+    "name": "scite",
+    "url": "https://scite.ai/",
+    "category": "research",
+    "drafts": [
+      "see if a paper was supported or contrasted",
+      "search citations in context",
+      "check a reference",
+      "find smart citations",
+      "evaluate a paper"
+    ]
+  },
+  {
+    "slug": "researchrabbit",
+    "name": "ResearchRabbit",
+    "url": "https://www.researchrabbit.ai/",
+    "category": "research",
+    "drafts": [
+      "discover related papers",
+      "map a citation network",
+      "follow a collection of papers",
+      "find authors in a field",
+      "build a reading list"
+    ]
+  },
+  {
+    "slug": "connectedpapers",
+    "name": "Connected Papers",
+    "url": "https://www.connectedpapers.com/",
+    "category": "research",
+    "drafts": [
+      "map papers related to a seed paper",
+      "explore a prior works graph",
+      "find a derivative work",
+      "build a reading graph",
+      "discover similar papers"
+    ]
+  },
+  {
+    "slug": "chatpdf",
+    "name": "ChatPDF",
+    "url": "https://www.chatpdf.com/",
+    "category": "research",
+    "drafts": [
+      "ask a question about a pdf",
+      "summarize a paper",
+      "cite a page in an answer",
+      "upload a document",
+      "chat with a research paper"
+    ]
+  },
+  {
+    "slug": "jenni",
+    "name": "Jenni AI",
+    "url": "https://jenni.ai/",
+    "category": "research",
+    "drafts": [
+      "draft a research paragraph",
+      "cite a source while writing",
+      "autocomplete an academic sentence",
+      "outline a paper",
+      "rewrite a literature review"
+    ]
+  },
+  {
+    "slug": "scholarcy",
+    "name": "Scholarcy",
+    "url": "https://www.scholarcy.com/",
+    "category": "research",
+    "drafts": [
+      "summarize a research paper",
+      "extract key facts from a pdf",
+      "build a flashcard from a paper",
+      "see referenced papers",
+      "highlight important claims"
+    ]
+  },
+  {
+    "slug": "explainpaper",
+    "name": "Explainpaper",
+    "url": "https://www.explainpaper.com/",
+    "category": "research",
+    "drafts": [
+      "explain a passage in a paper",
+      "upload a pdf",
+      "ask what a paragraph means",
+      "highlight confusing text",
+      "get a plain language explanation"
+    ]
+  },
+  {
+    "slug": "typeset",
+    "name": "SciSpace",
+    "url": "https://typeset.io/",
+    "category": "research",
+    "drafts": [
+      "chat with a paper",
+      "explain math in a paper",
+      "search a literature review",
+      "ask a question across papers",
+      "summarize a pdf"
+    ]
+  },
+  {
+    "slug": "otter",
+    "name": "Otter.ai",
+    "url": "https://otter.ai/",
+    "category": "meetings",
+    "drafts": [
+      "transcribe a meeting in real time",
+      "summarize a meeting",
+      "capture action items",
+      "chat with meeting notes",
+      "sync notes to a crm"
+    ]
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "url": "https://fireflies.ai/",
+    "category": "meetings",
+    "drafts": [
+      "record and transcribe a meeting",
+      "summarize a call",
+      "search across transcripts",
+      "ask a question about a meeting",
+      "log notes to a crm"
+    ]
+  },
+  {
+    "slug": "fathom",
+    "name": "Fathom",
+    "url": "https://fathom.video/",
+    "category": "meetings",
+    "drafts": [
+      "record a zoom call",
+      "summarize a meeting",
+      "highlight a moment",
+      "share clips from a call",
+      "draft a follow up"
+    ]
+  },
+  {
+    "slug": "tldv",
+    "name": "tl;dv",
+    "url": "https://tldv.io/",
+    "category": "meetings",
+    "drafts": [
+      "record a meeting",
+      "clip a moment from a call",
+      "summarize a transcript",
+      "share a timestamp",
+      "transcribe a google meet"
+    ]
+  },
+  {
+    "slug": "grain",
+    "name": "Grain",
+    "url": "https://grain.com/",
+    "category": "meetings",
+    "drafts": [
+      "record a customer call",
+      "clip a highlight",
+      "share a meeting moment",
+      "transcribe a conversation",
+      "tag a theme across calls"
+    ]
+  },
+  {
+    "slug": "fellow",
+    "name": "Fellow",
+    "url": "https://fellow.app/",
+    "category": "meetings",
+    "drafts": [
+      "build a meeting agenda",
+      "take collaborative notes",
+      "track action items",
+      "record a meeting",
+      "share a recap"
+    ]
+  },
+  {
+    "slug": "clockwise",
+    "name": "Clockwise",
+    "url": "https://www.getclockwise.com/",
+    "category": "scheduling",
+    "drafts": [
+      "protect focus time on a calendar",
+      "reschedule flexible meetings",
+      "create a focus block",
+      "coordinate a team calendar",
+      "hold time for deep work"
+    ]
+  },
+  {
+    "slug": "calendly",
+    "name": "Calendly",
+    "url": "https://calendly.com/",
+    "category": "scheduling",
+    "drafts": [
+      "share a scheduling link",
+      "book a meeting without email tag",
+      "route a lead to the right calendar",
+      "collect questions before a meeting",
+      "avoid double booking"
+    ]
+  },
+  {
+    "slug": "cal",
+    "name": "Cal.com",
+    "url": "https://cal.com/",
+    "category": "scheduling",
+    "drafts": [
+      "share an open source scheduling link",
+      "book a meeting",
+      "embed a booking page",
+      "route a meeting by team",
+      "customize availability"
+    ]
+  },
+  {
+    "slug": "sunsama",
+    "name": "Sunsama",
+    "url": "https://www.sunsama.com/",
+    "category": "scheduling",
+    "drafts": [
+      "plan a daily schedule",
+      "pull tasks onto a calendar",
+      "shutdown a workday with a review",
+      "timebox tasks",
+      "focus on a realistic plan"
+    ]
+  },
+  {
+    "slug": "akiflow",
+    "name": "Akiflow",
+    "url": "https://akiflow.com/",
+    "category": "scheduling",
+    "drafts": [
+      "collect tasks from many apps",
+      "timeblock a calendar",
+      "plan a day",
+      "snooze a task",
+      "schedule focus time"
+    ]
+  },
+  {
+    "slug": "savvycal",
+    "name": "SavvyCal",
+    "url": "https://savvycal.com/",
+    "category": "scheduling",
+    "drafts": [
+      "share a scheduling link that overlays calendars",
+      "book a meeting",
+      "avoid back to back meetings",
+      "collect scheduling preferences",
+      "send a personalized booking page"
+    ]
+  },
+  {
+    "slug": "myfitnesspal",
+    "name": "MyFitnessPal",
+    "url": "https://www.myfitnesspal.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "log a meal",
+      "track calories",
+      "scan a barcode",
+      "set a nutrition goal",
+      "see macros for a day"
+    ]
+  },
+  {
+    "slug": "fitbod",
+    "name": "Fitbod",
+    "url": "https://fitbod.me/",
+    "category": "health-fitness",
+    "drafts": [
+      "generate a workout",
+      "adapt a strength plan",
+      "track sets and reps",
+      "target a muscle group",
+      "build a gym routine"
+    ]
+  },
+  {
+    "slug": "whoop",
+    "name": "WHOOP",
+    "url": "https://www.whoop.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "track recovery and strain",
+      "see sleep performance",
+      "log a workout",
+      "get a strain target",
+      "monitor heart rate variability"
+    ]
+  },
+  {
+    "slug": "oura",
+    "name": "Oura",
+    "url": "https://ouraring.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "track sleep with a ring",
+      "see readiness each morning",
+      "monitor activity",
+      "log a workout",
+      "review heart rate trends"
+    ]
+  },
+  {
+    "slug": "calm",
+    "name": "Calm",
+    "url": "https://www.calm.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "listen to a sleep story",
+      "start a meditation",
+      "follow a breathing exercise",
+      "play relaxing music",
+      "build a daily calm habit"
+    ]
+  },
+  {
+    "slug": "headspace",
+    "name": "Headspace",
+    "url": "https://www.headspace.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "start a guided meditation",
+      "follow a sleep exercise",
+      "learn a breathing technique",
+      "track a mindfulness streak",
+      "choose a focus session"
+    ]
+  },
+  {
+    "slug": "strava",
+    "name": "Strava",
+    "url": "https://www.strava.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "record a run or ride",
+      "see segment efforts",
+      "share a workout",
+      "follow a training route",
+      "analyze pace and heart rate"
+    ]
+  },
+  {
+    "slug": "runna",
+    "name": "Runna",
+    "url": "https://www.runna.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "get a personalized running plan",
+      "adapt a training week",
+      "follow a workout",
+      "train for a race",
+      "adjust pace targets"
+    ]
+  },
+  {
+    "slug": "cronometer",
+    "name": "Cronometer",
+    "url": "https://cronometer.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "track micronutrients",
+      "log food",
+      "see vitamin intake",
+      "set a nutrition target",
+      "scan a barcode"
+    ]
+  },
+  {
+    "slug": "future",
+    "name": "Future",
+    "url": "https://www.future.co/",
+    "category": "health-fitness",
+    "drafts": [
+      "train with a remote coach",
+      "follow a custom workout",
+      "message a coach",
+      "track workouts",
+      "adjust a training plan"
+    ]
+  },
+  {
+    "slug": "numerous",
+    "name": "Numerous.ai",
+    "url": "https://numerous.ai/",
+    "category": "spreadsheets",
+    "drafts": [
+      "use a spreadsheet formula with ai",
+      "generate text in a cell",
+      "classify rows in a sheet",
+      "write a formula from a prompt",
+      "enrich a column"
+    ]
+  },
+  {
+    "slug": "formulabot",
+    "name": "Formula Bot",
+    "url": "https://formulabot.com/",
+    "category": "spreadsheets",
+    "drafts": [
+      "explain a spreadsheet formula",
+      "generate an excel formula",
+      "query a sheet in plain language",
+      "create a chart from data",
+      "convert a question into sql"
+    ]
+  },
+  {
+    "slug": "equals",
+    "name": "Equals",
+    "url": "https://equals.com/",
+    "category": "spreadsheets",
+    "drafts": [
+      "analyze data in a spreadsheet",
+      "connect live data",
+      "build a chart",
+      "query a warehouse",
+      "share an analysis"
+    ]
+  },
+  {
+    "slug": "pigment",
+    "name": "Pigment",
+    "url": "https://www.pigment.com/",
+    "category": "spreadsheets",
+    "drafts": [
+      "plan a budget",
+      "build a forecast model",
+      "collaborate on a business plan",
+      "connect actuals to a plan",
+      "create a scenario"
+    ]
+  },
+  {
+    "slug": "causal",
+    "name": "Causal",
+    "url": "https://causal.app/",
+    "category": "spreadsheets",
+    "drafts": [
+      "build a financial model",
+      "run a scenario",
+      "visualize a forecast",
+      "connect a model to data",
+      "share a business model"
+    ]
+  },
+  {
+    "slug": "gigasheet",
+    "name": "Gigasheet",
+    "url": "https://www.gigasheet.com/",
+    "category": "spreadsheets",
+    "drafts": [
+      "open a huge csv",
+      "filter millions of rows",
+      "group data without a database",
+      "share a big spreadsheet",
+      "analyze a large file"
+    ]
+  },
+  {
+    "slug": "akkio",
+    "name": "Akkio",
+    "url": "https://www.akkio.com/",
+    "category": "data-analysis",
+    "drafts": [
+      "predict a column in a table",
+      "build a no code model",
+      "chat with business data",
+      "forecast a metric",
+      "deploy a prediction"
+    ]
+  },
+  {
+    "slug": "obviously",
+    "name": "Obviously AI",
+    "url": "https://www.obviously.ai/",
+    "category": "data-analysis",
+    "drafts": [
+      "predict an outcome from a csv",
+      "build a model without code",
+      "see which features matter",
+      "forecast a business metric",
+      "share a prediction"
+    ]
+  },
+  {
+    "slug": "thoughtspot",
+    "name": "ThoughtSpot",
+    "url": "https://www.thoughtspot.com/",
+    "category": "data-analysis",
+    "drafts": [
+      "search data in plain language",
+      "build a live dashboard",
+      "ask a follow up about a chart",
+      "spot a change in a metric",
+      "share an insight"
+    ]
+  },
+  {
+    "slug": "sigma",
+    "name": "Sigma",
+    "url": "https://www.sigmacomputing.com/",
+    "category": "data-analysis",
+    "drafts": [
+      "explore warehouse data in a spreadsheet",
+      "build a dashboard",
+      "write a query visually",
+      "share an analysis",
+      "ask a question about live data"
+    ]
+  },
+  {
+    "slug": "mode",
+    "name": "Mode",
+    "url": "https://mode.com/",
+    "category": "data-analysis",
+    "drafts": [
+      "query a warehouse",
+      "build a report",
+      "notebook an analysis",
+      "share a dashboard",
+      "collaborate on sql"
+    ]
+  },
+  {
+    "slug": "codeium",
+    "name": "Windsurf",
+    "url": "https://codeium.com/",
+    "category": "coding-agents",
+    "drafts": [
+      "autocomplete code in an editor",
+      "chat about a codebase",
+      "edit multiple files with an agent",
+      "run a coding agent",
+      "refactor a function"
+    ]
+  },
+  {
+    "slug": "amazon-q",
+    "name": "Amazon Q Developer",
+    "url": "https://aws.amazon.com/q/developer/",
+    "category": "coding-agents",
+    "drafts": [
+      "ask a question about your code",
+      "get a code suggestion in the ide",
+      "transform a java upgrade",
+      "chat about aws",
+      "review a pull request"
+    ]
+  },
+  {
+    "slug": "tabnine",
+    "name": "Tabnine",
+    "url": "https://www.tabnine.com/",
+    "category": "coding-agents",
+    "drafts": [
+      "complete code in the editor",
+      "chat with a private model",
+      "keep code inside your environment",
+      "suggest a function",
+      "learn from your repository"
+    ]
+  },
+  {
+    "slug": "aider",
+    "name": "Aider",
+    "url": "https://aider.chat/",
+    "category": "coding-agents",
+    "drafts": [
+      "pair program in the terminal",
+      "edit a git repo with a model",
+      "commit a change the agent made",
+      "map a codebase",
+      "refactor files from a prompt"
+    ]
+  },
+  {
+    "slug": "cline",
+    "name": "Cline",
+    "url": "https://cline.bot/",
+    "category": "coding-agents",
+    "drafts": [
+      "edit files with an agent in the editor",
+      "run a terminal command for a task",
+      "use a model you bring",
+      "browse docs while coding",
+      "apply a multi file change"
+    ]
+  },
+  {
+    "slug": "devin",
+    "name": "Devin",
+    "url": "https://devin.ai/",
+    "category": "coding-agents",
+    "drafts": [
+      "assign a coding task to an agent",
+      "open a pull request",
+      "plan a software task",
+      "run tests in a sandbox",
+      "browse the web while coding"
+    ]
+  },
+  {
+    "slug": "sourcegraph",
+    "name": "Sourcegraph Cody",
+    "url": "https://sourcegraph.com/cody",
+    "category": "dev-tools",
+    "drafts": [
+      "chat with a codebase",
+      "explain a function",
+      "write a unit test",
+      "search code across repositories",
+      "autocomplete in the editor"
+    ]
+  },
+  {
+    "slug": "sentry",
+    "name": "Sentry",
+    "url": "https://sentry.io/",
+    "category": "dev-tools",
+    "drafts": [
+      "see an application error",
+      "group issues by stack trace",
+      "trace a slow request",
+      "alert on a new error",
+      "replay a user session"
+    ]
+  },
+  {
+    "slug": "linear",
+    "name": "Linear",
+    "url": "https://linear.app/",
+    "category": "dev-tools",
+    "drafts": [
+      "track an issue",
+      "plan a cycle",
+      "triage a bug",
+      "write a project update",
+      "use an ai assistant on an issue"
+    ]
+  },
+  {
+    "slug": "postman",
+    "name": "Postman",
+    "url": "https://www.postman.com/",
+    "category": "dev-tools",
+    "drafts": [
+      "test an api request",
+      "document an api",
+      "mock an endpoint",
+      "automate an api test",
+      "generate a request from a description"
+    ]
+  },
+  {
+    "slug": "mintlify",
+    "name": "Mintlify",
+    "url": "https://mintlify.com/",
+    "category": "dev-tools",
+    "drafts": [
+      "write api docs",
+      "generate a docs site",
+      "keep docs in sync with code",
+      "search documentation",
+      "customize a docs theme"
+    ]
+  },
+  {
+    "slug": "readme",
+    "name": "ReadMe",
+    "url": "https://readme.com/",
+    "category": "dev-tools",
+    "drafts": [
+      "publish api documentation",
+      "let users try an endpoint",
+      "personalize docs with an api key",
+      "track which pages developers read",
+      "write a guide"
+    ]
+  },
+  {
+    "slug": "gitbook",
+    "name": "GitBook",
+    "url": "https://www.gitbook.com/",
+    "category": "dev-tools",
+    "drafts": [
+      "publish product documentation",
+      "ask a question over docs",
+      "sync docs from git",
+      "search a knowledge base",
+      "customize a docs site"
+    ]
+  },
+  {
+    "slug": "browserbase",
+    "name": "Browserbase",
+    "url": "https://www.browserbase.com/",
+    "category": "browser-agents",
+    "drafts": [
+      "run a headless browser for an agent",
+      "manage browser sessions",
+      "connect a playwright script",
+      "scale browser automation",
+      "keep a session for an agent"
+    ]
+  },
+  {
+    "slug": "stagehand",
+    "name": "Stagehand",
+    "url": "https://stagehand.dev/",
+    "category": "browser-agents",
+    "drafts": [
+      "control a browser with natural language",
+      "click an element from a prompt",
+      "extract data from a page",
+      "build a browser agent",
+      "combine code with ai actions"
+    ]
+  },
+  {
+    "slug": "multion",
+    "name": "MultiOn",
+    "url": "https://www.multion.ai/",
+    "category": "browser-agents",
+    "drafts": [
+      "ask an agent to browse the web",
+      "complete a task in a browser",
+      "book or research through an agent",
+      "watch the agent use a site",
+      "delegate a web task"
+    ]
+  },
+  {
+    "slug": "induced",
+    "name": "Induced AI",
+    "url": "https://www.induced.ai/",
+    "category": "browser-agents",
+    "drafts": [
+      "automate a workflow in the browser",
+      "teach an agent a web task",
+      "run a browser workflow",
+      "extract data from a logged in site",
+      "delegate repetitive web work"
+    ]
+  },
+  {
+    "slug": "bardeen",
+    "name": "Bardeen",
+    "url": "https://www.bardeen.ai/",
+    "category": "workflow-automation",
+    "drafts": [
+      "automate a browser workflow",
+      "scrape a page into a sheet",
+      "connect apps without code",
+      "run a playbook",
+      "save time on a repeated task"
+    ]
+  },
+  {
+    "slug": "activepieces",
+    "name": "Activepieces",
+    "url": "https://www.activepieces.com/",
+    "category": "workflow-automation",
+    "drafts": [
+      "automate a workflow",
+      "connect apps with an open source tool",
+      "build a flow",
+      "self host an automation",
+      "add an ai step to a flow"
+    ]
+  },
+  {
+    "slug": "windmill",
+    "name": "Windmill",
+    "url": "https://www.windmill.dev/",
+    "category": "workflow-automation",
+    "drafts": [
+      "turn a script into a workflow",
+      "build an internal tool",
+      "schedule a job",
+      "self host an automation platform",
+      "connect an approval step"
+    ]
+  },
+  {
+    "slug": "pipedream",
+    "name": "Pipedream",
+    "url": "https://pipedream.com/",
+    "category": "workflow-automation",
+    "drafts": [
+      "connect apis in a workflow",
+      "run code in a workflow step",
+      "trigger a workflow from an event",
+      "build an event driven automation",
+      "inspect a workflow log"
+    ]
+  },
+  {
+    "slug": "shopify-magic",
+    "name": "Shopify Magic",
+    "url": "https://www.shopify.com/magic",
+    "category": "ecommerce",
+    "drafts": [
+      "write a product description",
+      "generate a store theme section",
+      "edit a product image background",
+      "draft an email for a store",
+      "answer a question about store data"
+    ]
+  },
+  {
+    "slug": "durable",
+    "name": "Durable",
+    "url": "https://durable.co/",
+    "category": "ecommerce",
+    "drafts": [
+      "generate a small business website",
+      "write service descriptions",
+      "publish a site in minutes",
+      "edit a website with ai",
+      "add a contact form"
+    ]
+  },
+  {
+    "slug": "10web",
+    "name": "10Web",
+    "url": "https://10web.io/",
+    "category": "ecommerce",
+    "drafts": [
+      "build a wordpress site with ai",
+      "generate a website from a prompt",
+      "optimize site speed",
+      "host a wordpress site",
+      "recreate a site from a url"
+    ]
+  },
+  {
+    "slug": "mixo",
+    "name": "Mixo",
+    "url": "https://mixo.io/",
+    "category": "ecommerce",
+    "drafts": [
+      "generate a startup landing page",
+      "write website copy",
+      "publish a site from an idea",
+      "edit a landing page",
+      "collect emails on a page"
+    ]
+  },
+  {
+    "slug": "describely",
+    "name": "Describely",
+    "url": "https://describely.ai/",
+    "category": "ecommerce",
+    "drafts": [
+      "write a product description",
+      "generate bullets for a catalog",
+      "optimize a product title",
+      "bulk write descriptions",
+      "match a brand voice"
+    ]
+  },
+  {
+    "slug": "prediss",
+    "name": "Predis.ai",
+    "url": "https://predis.ai/",
+    "category": "ecommerce",
+    "drafts": [
+      "create a product post",
+      "generate an ad creative",
+      "write a caption",
+      "schedule a social post",
+      "turn a product url into content"
+    ]
+  },
+  {
+    "slug": "vue-ai",
+    "name": "Vue.ai",
+    "url": "https://vue.ai/",
+    "category": "ecommerce",
+    "drafts": [
+      "tag a product catalog",
+      "generate an on model image",
+      "automate catalog imagery",
+      "personalize a product recommendation",
+      "create a virtual try on"
+    ]
+  },
+  {
+    "slug": "pixelcut",
+    "name": "Pixelcut",
+    "url": "https://www.pixelcut.ai/",
+    "category": "ecommerce",
+    "drafts": [
+      "remove a background from a product photo",
+      "generate a product scene",
+      "create an ad from a photo",
+      "retouch a product image",
+      "batch edit catalog photos"
+    ]
+  },
+  {
+    "slug": "deepl",
+    "name": "DeepL",
+    "url": "https://www.deepl.com/",
+    "category": "translation",
+    "drafts": [
+      "translate a document",
+      "improve a translation",
+      "translate a pdf",
+      "use a glossary",
+      "write in another language with ai"
+    ]
+  },
+  {
+    "slug": "lokalise",
+    "name": "Lokalise",
+    "url": "https://lokalise.com/",
+    "category": "translation",
+    "drafts": [
+      "localize an app",
+      "translate strings with ai",
+      "manage a translation workflow",
+      "order a professional translation",
+      "keep a glossary"
+    ]
+  },
+  {
+    "slug": "smartling",
+    "name": "Smartling",
+    "url": "https://www.smartling.com/",
+    "category": "translation",
+    "drafts": [
+      "translate a website",
+      "manage a localization workflow",
+      "use a translation memory",
+      "automate a content translation",
+      "review a translation"
+    ]
+  },
+  {
+    "slug": "phrase",
+    "name": "Phrase",
+    "url": "https://phrase.com/",
+    "category": "translation",
+    "drafts": [
+      "localize software strings",
+      "machine translate a key",
+      "manage a translation job",
+      "use a glossary",
+      "automate a localization workflow"
+    ]
+  },
+  {
+    "slug": "reverso",
+    "name": "Reverso",
+    "url": "https://www.reverso.net/",
+    "category": "translation",
+    "drafts": [
+      "translate a phrase in context",
+      "see example sentences",
+      "conjugate a verb",
+      "improve a translation",
+      "look up a word"
+    ]
+  },
+  {
+    "slug": "modernmt",
+    "name": "ModernMT",
+    "url": "https://www.modernmt.com/",
+    "category": "translation",
+    "drafts": [
+      "translate with context",
+      "adapt a translation to a domain",
+      "use an api for translation",
+      "improve quality from corrections",
+      "translate a document"
+    ]
+  },
+  {
+    "slug": "unbabel",
+    "name": "Unbabel",
+    "url": "https://unbabel.com/",
+    "category": "translation",
+    "drafts": [
+      "translate customer support messages",
+      "combine ai and a human reviewer",
+      "localize a help center",
+      "measure translation quality",
+      "support customers in another language"
+    ]
+  },
+  {
+    "slug": "smartcat",
+    "name": "Smartcat",
+    "url": "https://www.smartcat.com/",
+    "category": "translation",
+    "drafts": [
+      "translate a file",
+      "collaborate with translators",
+      "use ai translation",
+      "manage a localization project",
+      "pay a translator in one workspace"
+    ]
+  },
+  {
+    "slug": "gamma",
+    "name": "Gamma",
+    "url": "https://gamma.app/",
+    "category": "presentations",
+    "drafts": [
+      "generate a presentation from a prompt",
+      "turn a document into slides",
+      "edit a card in a deck",
+      "share a presentation as a link",
+      "restyle a deck"
+    ]
+  },
+  {
+    "slug": "beautiful",
+    "name": "Beautiful.ai",
+    "url": "https://www.beautiful.ai/",
+    "category": "presentations",
+    "drafts": [
+      "design a slide that stays on brand",
+      "start a presentation from a template",
+      "add a smart slide",
+      "share a deck",
+      "keep layouts consistent"
+    ]
+  },
+  {
+    "slug": "tome",
+    "name": "Tome",
+    "url": "https://tome.app/",
+    "category": "presentations",
+    "drafts": [
+      "generate a presentation from a prompt",
+      "tell a story in a deck",
+      "add an image to a page",
+      "share a presentation",
+      "edit a narrative page"
+    ]
+  },
+  {
+    "slug": "plus-ai",
+    "name": "Plus AI",
+    "url": "https://plusai.com/",
+    "category": "presentations",
+    "drafts": [
+      "generate slides inside google slides",
+      "remix a presentation",
+      "create a slide from a prompt",
+      "edit a deck with ai",
+      "keep a template"
+    ]
+  },
+  {
+    "slug": "slidesgo",
+    "name": "Slidesgo",
+    "url": "https://slidesgo.com/",
+    "category": "presentations",
+    "drafts": [
+      "download a presentation template",
+      "customize a slide",
+      "find a themed deck",
+      "edit a template in powerpoint",
+      "start a presentation"
+    ]
+  },
+  {
+    "slug": "pitch",
+    "name": "Pitch",
+    "url": "https://pitch.com/",
+    "category": "presentations",
+    "drafts": [
+      "build a collaborative deck",
+      "generate a slide",
+      "use a brand template",
+      "present live",
+      "comment on a slide"
+    ]
+  },
+  {
+    "slug": "decktopus",
+    "name": "Decktopus",
+    "url": "https://www.decktopus.com/",
+    "category": "presentations",
+    "drafts": [
+      "generate a presentation from a prompt",
+      "design a pitch deck",
+      "add speaker notes",
+      "choose a slide layout",
+      "export a deck"
+    ]
+  },
+  {
+    "slug": "sendsteps",
+    "name": "Sendsteps",
+    "url": "https://www.sendsteps.com/",
+    "category": "presentations",
+    "drafts": [
+      "add a poll to a presentation",
+      "generate slides with ai",
+      "collect audience responses",
+      "present interactively",
+      "create a quiz slide"
+    ]
+  },
+  {
+    "slug": "rosebud",
+    "name": "Rosebud AI",
+    "url": "https://www.rosebud.ai/",
+    "category": "gaming",
+    "drafts": [
+      "generate a game from a prompt",
+      "edit a game in the browser",
+      "describe a mechanic and see it",
+      "publish a small game",
+      "iterate on a game idea"
+    ]
+  },
+  {
+    "slug": "ludo",
+    "name": "Ludo.ai",
+    "url": "https://ludo.ai/",
+    "category": "gaming",
+    "drafts": [
+      "research game ideas",
+      "analyze a game market",
+      "generate a game concept",
+      "see trends in games",
+      "brainstorm mechanics"
+    ]
+  },
+  {
+    "slug": "layer",
+    "name": "Layer AI",
+    "url": "https://www.layer.ai/",
+    "category": "gaming",
+    "drafts": [
+      "generate game art",
+      "train a style for assets",
+      "create consistent characters",
+      "export game art",
+      "produce marketing art for a game"
+    ]
+  },
+  {
+    "slug": "promethean",
+    "name": "Promethean AI",
+    "url": "https://www.prometheanai.com/",
+    "category": "gaming",
+    "drafts": [
+      "dress a game environment",
+      "place assets in a level",
+      "speed up world building",
+      "search an art library",
+      "set dress a scene"
+    ]
+  },
+  {
+    "slug": "charisma",
+    "name": "Charisma",
+    "url": "https://charisma.ai/",
+    "category": "gaming",
+    "drafts": [
+      "create an interactive character",
+      "branch a conversation",
+      "add a character to a game",
+      "control a story with ai",
+      "deploy a conversational experience"
+    ]
+  },
+  {
+    "slug": "rct",
+    "name": "rct AI",
+    "url": "https://rct.ai/",
+    "category": "gaming",
+    "drafts": [
+      "create an ai npc",
+      "generate character behavior",
+      "add memory to a character",
+      "prototype a game agent",
+      "deploy an interactive character"
+    ]
+  },
+  {
+    "slug": "topaz",
+    "name": "Topaz Photo AI",
+    "url": "https://www.topazlabs.com/topaz-photo-ai",
+    "category": "photography",
+    "drafts": [
+      "upscale a photo",
+      "sharpen a blurry picture",
+      "reduce noise in a raw file",
+      "enhance a portrait",
+      "recover detail in an image"
+    ]
+  },
+  {
+    "slug": "aftershoot",
+    "name": "AfterShoot",
+    "url": "https://aftershoot.com/",
+    "category": "photography",
+    "drafts": [
+      "cull a wedding shoot",
+      "pick the best photos",
+      "edit a batch of photos",
+      "sort portraits",
+      "speed up a photo selection"
+    ]
+  },
+  {
+    "slug": "imagen",
+    "name": "Imagen AI",
+    "url": "https://imagen-ai.com/",
+    "category": "photography",
+    "drafts": [
+      "edit a photo in your style",
+      "cull a shoot",
+      "apply a personal ai profile",
+      "batch edit a wedding",
+      "export edited photos"
+    ]
+  },
+  {
+    "slug": "evoto",
+    "name": "Evoto",
+    "url": "https://www.evoto.ai/",
+    "category": "photography",
+    "drafts": [
+      "retouch a portrait",
+      "batch edit photos",
+      "smooth skin in a portrait",
+      "adjust color across a set",
+      "export a retouched image"
+    ]
+  },
+  {
+    "slug": "luminar",
+    "name": "Luminar Neo",
+    "url": "https://skylum.com/luminar",
+    "category": "photography",
+    "drafts": [
+      "replace a sky in a photo",
+      "relight a portrait",
+      "remove an object",
+      "enhance a landscape",
+      "edit a photo with ai tools"
+    ]
+  },
+  {
+    "slug": "photolemur",
+    "name": "Photolemur",
+    "url": "https://photolemur.com/",
+    "category": "photography",
+    "drafts": [
+      "auto enhance a photo",
+      "fix exposure",
+      "improve color automatically",
+      "edit a batch of pictures",
+      "export an enhanced photo"
+    ]
+  },
+  {
+    "slug": "fotor",
+    "name": "Fotor",
+    "url": "https://www.fotor.com/",
+    "category": "photography",
+    "drafts": [
+      "edit a photo online",
+      "remove a background",
+      "enhance a portrait",
+      "design a collage",
+      "generate an image from a prompt"
+    ]
+  },
+  {
+    "slug": "picsart",
+    "name": "Picsart",
+    "url": "https://picsart.com/",
+    "category": "photography",
+    "drafts": [
+      "edit a photo on the web",
+      "remove a background",
+      "generate an image",
+      "add an effect",
+      "design a social graphic"
+    ]
+  },
+  {
+    "slug": "cutout",
+    "name": "Cutout.pro",
+    "url": "https://www.cutout.pro/",
+    "category": "photography",
+    "drafts": [
+      "remove a background",
+      "enhance a face",
+      "colorize a photo",
+      "retouch a portrait",
+      "generate an image"
+    ]
+  },
+  {
+    "slug": "takeoff",
+    "name": "Togal.AI",
+    "url": "https://www.togal.ai/",
+    "category": "construction",
+    "drafts": [
+      "take off quantities from a plan",
+      "measure a floor plan",
+      "automate a construction estimate",
+      "export quantities",
+      "review a drawing"
+    ]
+  },
+  {
+    "slug": "kreo",
+    "name": "Kreo",
+    "url": "https://www.kreo.net/",
+    "category": "construction",
+    "drafts": [
+      "measure quantities from drawings",
+      "automate a takeoff",
+      "estimate from a plan",
+      "collaborate on a measurement",
+      "export a bill of quantities"
+    ]
+  },
+  {
+    "slug": "openspace",
+    "name": "OpenSpace",
+    "url": "https://www.openspace.ai/",
+    "category": "construction",
+    "drafts": [
+      "capture a jobsite with a 360 camera",
+      "compare progress to a plan",
+      "track a construction site",
+      "share a site walk",
+      "document field conditions"
+    ]
+  },
+  {
+    "slug": "buildots",
+    "name": "Buildots",
+    "url": "https://buildots.com/",
+    "category": "construction",
+    "drafts": [
+      "track construction progress",
+      "compare a site to the bim model",
+      "see delay risks",
+      "document a jobsite",
+      "report progress to a team"
+    ]
+  },
+  {
+    "slug": "alice",
+    "name": "ALICE Technologies",
+    "url": "https://www.alicetechnologies.com/",
+    "category": "construction",
+    "drafts": [
+      "simulate a construction schedule",
+      "optimize a project sequence",
+      "see schedule options",
+      "reduce project risk",
+      "plan a build sequence"
+    ]
+  },
+  {
+    "slug": "procore",
+    "name": "Procore",
+    "url": "https://www.procore.com/",
+    "category": "construction",
+    "drafts": [
+      "manage a construction project",
+      "track rfis and submittals",
+      "log a daily report",
+      "coordinate drawings",
+      "manage project financials"
+    ]
+  },
+  {
+    "slug": "autodesk-takeoff",
+    "name": "Autodesk Takeoff",
+    "url": "https://www.autodesk.com/products/autodesk-takeoff/overview",
+    "category": "construction",
+    "drafts": [
+      "quantify a 2d drawing",
+      "take off a 3d model",
+      "combine 2d and 3d quantities",
+      "estimate from a model",
+      "publish quantities to a team"
+    ]
+  },
+  {
+    "slug": "bluebeam",
+    "name": "Bluebeam",
+    "url": "https://www.bluebeam.com/",
+    "category": "construction",
+    "drafts": [
+      "mark up a pdf drawing",
+      "measure a plan",
+      "collaborate on a document",
+      "take off quantities",
+      "manage a drawing set"
+    ]
+  },
+  {
+    "slug": "ravical",
+    "name": "Ravical",
+    "url": "https://www.ravical.com/",
+    "category": "mortgage",
+    "drafts": [
+      "read a mortgage guideline",
+      "check a loan scenario",
+      "ask a lending question",
+      "compare an overlay",
+      "help a loan officer with a scenario"
+    ]
+  },
+  {
+    "slug": "blend",
+    "name": "Blend",
+    "url": "https://blend.com/",
+    "category": "mortgage",
+    "drafts": [
+      "take a digital mortgage application",
+      "collect borrower documents",
+      "move a loan through origination",
+      "offer a consumer banking workflow",
+      "track a mortgage file"
+    ]
+  },
+  {
+    "slug": "icedam",
+    "name": "Maxwell",
+    "url": "https://www.himaxwell.com/",
+    "category": "mortgage",
+    "drafts": [
+      "match a borrower to a loan scenario",
+      "price a mortgage scenario",
+      "compare lender guidelines",
+      "help a loan officer",
+      "run a scenario"
+    ]
+  },
+  {
+    "slug": "empower",
+    "name": "Empower Loan Origination",
+    "url": "https://www.darkmatter.com/",
+    "category": "mortgage",
+    "drafts": [
+      "originate a mortgage",
+      "process a loan file",
+      "track underwriting conditions",
+      "manage a mortgage pipeline",
+      "document a loan"
+    ]
+  },
+  {
+    "slug": "ncino",
+    "name": "nCino",
+    "url": "https://www.ncino.com/",
+    "category": "mortgage",
+    "drafts": [
+      "originate a commercial loan",
+      "automate a credit workflow",
+      "onboard a banking customer",
+      "track a loan portfolio",
+      "manage a financial workflow"
+    ]
+  },
+  {
+    "slug": "mortgage-coach",
+    "name": "Mortgage Coach",
+    "url": "https://www.mortgagecoach.com/",
+    "category": "mortgage",
+    "drafts": [
+      "present a loan comparison",
+      "educate a borrower",
+      "show a total cost analysis",
+      "build a mortgage presentation",
+      "compare loan options"
+    ]
+  },
+  {
+    "slug": "underwrite-ai",
+    "name": "Underwrite.ai",
+    "url": "https://www.underwrite.ai/",
+    "category": "mortgage",
+    "drafts": [
+      "assess credit risk",
+      "score an applicant",
+      "automate a credit decision",
+      "explain a risk score",
+      "review an application"
+    ]
+  },
+  {
+    "slug": "ocrolus",
+    "name": "Ocrolus",
+    "url": "https://www.ocrolus.com/",
+    "category": "mortgage",
+    "drafts": [
+      "read a bank statement",
+      "extract income from documents",
+      "analyze a mortgage document",
+      "detect a tampered file",
+      "classify a loan document"
+    ]
+  },
+  {
+    "slug": "loan-complete",
+    "name": "Inscribe",
+    "url": "https://www.inscribe.ai/",
+    "category": "mortgage",
+    "drafts": [
+      "detect document fraud",
+      "review a loan file",
+      "flag a suspicious document",
+      "extract data from a file",
+      "speed up underwriting review"
+    ]
+  },
+  {
+    "slug": "levity-ins",
+    "name": "Lemonade",
+    "url": "https://www.lemonade.com/",
+    "category": "insurance",
+    "drafts": [
+      "get a renters insurance quote",
+      "file a claim in an app",
+      "manage a policy",
+      "chat with an insurance ai",
+      "buy a policy online"
+    ]
+  },
+  {
+    "slug": "hippo",
+    "name": "Hippo",
+    "url": "https://www.hippo.com/",
+    "category": "insurance",
+    "drafts": [
+      "get a home insurance quote",
+      "manage a homeowners policy",
+      "see coverage details",
+      "file a home claim",
+      "understand a policy"
+    ]
+  },
+  {
+    "slug": "root",
+    "name": "Root Insurance",
+    "url": "https://www.joinroot.com/",
+    "category": "insurance",
+    "drafts": [
+      "get a car insurance quote",
+      "price a policy from driving",
+      "manage a policy in an app",
+      "file an auto claim",
+      "see a personalized rate"
+    ]
+  },
+  {
+    "slug": "clearcover",
+    "name": "Clearcover",
+    "url": "https://clearcover.com/",
+    "category": "insurance",
+    "drafts": [
+      "get a car insurance quote",
+      "manage a policy",
+      "file a claim",
+      "see coverage",
+      "buy insurance online"
+    ]
+  },
+  {
+    "slug": "bold-penguin",
+    "name": "Bold Penguin",
+    "url": "https://www.boldpenguin.com/",
+    "category": "insurance",
+    "drafts": [
+      "quote commercial insurance",
+      "exchange a small business application",
+      "compare carrier quotes",
+      "submit an insurance application",
+      "speed up a commercial quote"
+    ]
+  },
+  {
+    "slug": "kalepa",
+    "name": "Kalepa",
+    "url": "https://www.kalepa.com/",
+    "category": "insurance",
+    "drafts": [
+      "underwrite a commercial account",
+      "see risk on a submission",
+      "triage an insurance submission",
+      "research a business for underwriting",
+      "prioritize a quote"
+    ]
+  },
+  {
+    "slug": "shift",
+    "name": "Shift Technology",
+    "url": "https://www.shift-technology.com/",
+    "category": "insurance",
+    "drafts": [
+      "detect an insurance claim fraud",
+      "triage a claim",
+      "score a suspicious claim",
+      "investigate a claim",
+      "automate a claims decision"
+    ]
+  },
+  {
+    "slug": "tractable",
+    "name": "Tractable",
+    "url": "https://tractable.ai/",
+    "category": "insurance",
+    "drafts": [
+      "estimate vehicle damage from photos",
+      "assess a property claim from images",
+      "triage a claim",
+      "speed up a repair estimate",
+      "review accident photos"
+    ]
+  },
+  {
+    "slug": "instrumental",
+    "name": "Snapsheet",
+    "url": "https://www.snapsheetclaims.com/",
+    "category": "insurance",
+    "drafts": [
+      "settle an auto claim virtually",
+      "estimate damage from photos",
+      "manage a claim",
+      "assign a repair shop",
+      "communicate with a claimant"
+    ]
+  },
+  {
+    "slug": "grantable",
+    "name": "Grantable",
+    "url": "https://www.grantable.co/",
+    "category": "nonprofit",
+    "drafts": [
+      "draft a grant proposal",
+      "answer grant questions",
+      "organize a grant application",
+      "rewrite a proposal section",
+      "manage grant deadlines"
+    ]
+  },
+  {
+    "slug": "instrumentl",
+    "name": "Instrumentl",
+    "url": "https://www.instrumentl.com/",
+    "category": "nonprofit",
+    "drafts": [
+      "find a grant",
+      "track a grant deadline",
+      "manage a prospect",
+      "save a funder",
+      "get a grant match"
+    ]
+  },
+  {
+    "slug": "fluxx",
+    "name": "Fluxx",
+    "url": "https://www.fluxx.io/",
+    "category": "nonprofit",
+    "drafts": [
+      "manage grants",
+      "track a grantee report",
+      "run a foundation workflow",
+      "review an application",
+      "report on grantmaking"
+    ]
+  },
+  {
+    "slug": "bonterra",
+    "name": "Bonterra",
+    "url": "https://www.bonterratech.com/",
+    "category": "nonprofit",
+    "drafts": [
+      "manage donors",
+      "send a fundraising email",
+      "track a campaign",
+      "engage supporters",
+      "report on fundraising"
+    ]
+  },
+  {
+    "slug": "givebutter",
+    "name": "Givebutter",
+    "url": "https://givebutter.com/",
+    "category": "nonprofit",
+    "drafts": [
+      "run a fundraising campaign",
+      "accept a donation",
+      "text supporters",
+      "host an event page",
+      "track donors"
+    ]
+  },
+  {
+    "slug": "donorbox",
+    "name": "Donorbox",
+    "url": "https://donorbox.org/",
+    "category": "nonprofit",
+    "drafts": [
+      "embed a donation form",
+      "accept recurring donations",
+      "run a crowdfunding page",
+      "email donors",
+      "track a campaign"
+    ]
+  },
+  {
+    "slug": "funraise",
+    "name": "Funraise",
+    "url": "https://www.funraise.org/",
+    "category": "nonprofit",
+    "drafts": [
+      "build a donation page",
+      "manage donors",
+      "send a fundraising email",
+      "host a peer to peer campaign",
+      "report on gifts"
+    ]
+  },
+  {
+    "slug": "mightycause",
+    "name": "Mightycause",
+    "url": "https://www.mightycause.com/",
+    "category": "nonprofit",
+    "drafts": [
+      "create a fundraising page",
+      "accept donations",
+      "run a peer campaign",
+      "embed a form",
+      "tell a nonprofit story"
+    ]
+  },
+  {
+    "slug": "substack",
+    "name": "Substack",
+    "url": "https://substack.com/",
+    "category": "small-business",
+    "drafts": [
+      "publish a newsletter",
+      "grow a paid subscription",
+      "write a post",
+      "see reader stats",
+      "recommend other publications"
+    ]
+  },
+  {
+    "slug": "honeybook",
+    "name": "HoneyBook",
+    "url": "https://www.honeybook.com/",
+    "category": "small-business",
+    "drafts": [
+      "send a proposal",
+      "collect a payment",
+      "automate a client workflow",
+      "send a contract",
+      "manage a small business pipeline"
+    ]
+  },
+  {
+    "slug": "dubsado",
+    "name": "Dubsado",
+    "url": "https://www.dubsado.com/",
+    "category": "small-business",
+    "drafts": [
+      "send a client proposal",
+      "automate a workflow",
+      "use a contract",
+      "collect a form",
+      "schedule a project"
+    ]
+  },
+  {
+    "slug": "bonsai",
+    "name": "Bonsai",
+    "url": "https://www.hellobonsai.com/",
+    "category": "small-business",
+    "drafts": [
+      "send a freelance contract",
+      "create an invoice",
+      "track a project",
+      "use a proposal",
+      "manage taxes for a freelancer"
+    ]
+  },
+  {
+    "slug": "jobber",
+    "name": "Jobber",
+    "url": "https://www.getjobber.com/",
+    "category": "small-business",
+    "drafts": [
+      "schedule a field job",
+      "invoice a customer",
+      "quote a home service",
+      "track a crew",
+      "request a review"
+    ]
+  },
+  {
+    "slug": "housecall",
+    "name": "Housecall Pro",
+    "url": "https://www.housecallpro.com/",
+    "category": "small-business",
+    "drafts": [
+      "schedule a home service job",
+      "send an estimate",
+      "invoice a customer",
+      "dispatch a technician",
+      "request a review"
+    ]
+  },
+  {
+    "slug": "servicetitan",
+    "name": "ServiceTitan",
+    "url": "https://www.servicetitan.com/",
+    "category": "small-business",
+    "drafts": [
+      "dispatch a technician",
+      "price a job",
+      "manage memberships",
+      "track a call center",
+      "invoice a home service job"
+    ]
+  },
+  {
+    "slug": "gohighlevel",
+    "name": "HighLevel",
+    "url": "https://www.gohighlevel.com/",
+    "category": "small-business",
+    "drafts": [
+      "build a sales funnel",
+      "send an sms campaign",
+      "automate a follow up",
+      "manage a crm",
+      "book an appointment"
+    ]
+  },
+  {
+    "slug": "podium",
+    "name": "Podium",
+    "url": "https://www.podium.com/",
+    "category": "small-business",
+    "drafts": [
+      "text a customer",
+      "request a review",
+      "manage a webchat",
+      "collect a payment by text",
+      "see a local inbox"
+    ]
+  },
+  {
+    "slug": "birdeye",
+    "name": "Birdeye",
+    "url": "https://birdeye.com/",
+    "category": "small-business",
+    "drafts": [
+      "request a customer review",
+      "respond to a review",
+      "send a survey",
+      "manage listings",
+      "see a reputation dashboard"
+    ]
+  },
+  {
+    "slug": "layla",
+    "name": "Layla",
+    "url": "https://layla.ai/",
+    "category": "travel",
+    "drafts": [
+      "plan a trip in chat",
+      "build an itinerary",
+      "find a hotel",
+      "compare places to stay",
+      "save a trip plan"
+    ]
+  },
+  {
+    "slug": "tripnotes",
+    "name": "Roam Around",
+    "url": "https://roamaround.app/",
+    "category": "travel",
+    "drafts": [
+      "generate a travel itinerary",
+      "plan days in a city",
+      "customize a trip",
+      "see a map of a plan",
+      "export an itinerary"
+    ]
+  },
+  {
+    "slug": "tripplanner",
+    "name": "TripPlanner.ai",
+    "url": "https://tripplanner.ai/",
+    "category": "travel",
+    "drafts": [
+      "build an itinerary from a prompt",
+      "plan a multi city trip",
+      "see a day by day plan",
+      "customize activities",
+      "save a trip"
+    ]
+  },
+  {
+    "slug": "mindtrip",
+    "name": "Mindtrip",
+    "url": "https://mindtrip.ai/",
+    "category": "travel",
+    "drafts": [
+      "chat to plan a trip",
+      "build an itinerary",
+      "save places on a map",
+      "find hotels and activities",
+      "share a trip plan"
+    ]
+  },
+  {
+    "slug": "iplan",
+    "name": "iplan.ai",
+    "url": "https://iplan.ai/",
+    "category": "travel",
+    "drafts": [
+      "generate a travel itinerary",
+      "plan a trip with ai",
+      "customize a schedule",
+      "see recommendations",
+      "save a trip"
+    ]
+  },
+  {
+    "slug": "where",
+    "name": "Where To",
+    "url": "https://whereto.ai/",
+    "category": "travel",
+    "drafts": [
+      "find a place to go",
+      "plan a trip",
+      "compare destinations",
+      "build an itinerary",
+      "get travel ideas"
+    ]
+  },
+  {
+    "slug": "phind",
+    "name": "Phind",
+    "url": "https://www.phind.com/",
+    "category": "search-rag",
+    "drafts": [
+      "ask a coding question",
+      "see sourced answers",
+      "search developer docs",
+      "compare technical options",
+      "get a code example"
+    ]
+  },
+  {
+    "slug": "youcom",
+    "name": "You.com",
+    "url": "https://you.com/",
+    "category": "search-rag",
+    "drafts": [
+      "search the web with ai",
+      "ask a follow up",
+      "see sources for an answer",
+      "use apps in a search",
+      "research a topic"
+    ]
+  },
+  {
+    "slug": "kagi",
+    "name": "Kagi",
+    "url": "https://kagi.com/",
+    "category": "search-rag",
+    "drafts": [
+      "search the web without ads",
+      "summarize a result",
+      "ask a quick answer",
+      "customize a search ranking",
+      "research with privacy"
+    ]
+  },
+  {
+    "slug": "exa",
+    "name": "Exa",
+    "url": "https://exa.ai/",
+    "category": "search-rag",
+    "drafts": [
+      "search the web with an api",
+      "find similar pages",
+      "retrieve content for an agent",
+      "run a neural search",
+      "get clean page contents"
+    ]
+  },
+  {
+    "slug": "brave-search",
+    "name": "Brave Search",
+    "url": "https://search.brave.com/",
+    "category": "search-rag",
+    "drafts": [
+      "search the web privately",
+      "summarize a result",
+      "ask a question",
+      "see an independent index",
+      "avoid a search profile"
+    ]
+  },
+  {
+    "slug": "crowdsec",
+    "name": "CrowdSec",
+    "url": "https://www.crowdsec.net/",
+    "category": "security",
+    "drafts": [
+      "block a malicious ip",
+      "share threat signals",
+      "protect a server",
+      "detect a brute force attack",
+      "deploy a security agent"
+    ]
+  },
+  {
+    "slug": "sublime",
+    "name": "Sublime Security",
+    "url": "https://sublime.security/",
+    "category": "security",
+    "drafts": [
+      "detect a phishing email",
+      "write a detection rule",
+      "review an email threat",
+      "automate a mailbox response",
+      "hunt in email"
+    ]
+  },
+  {
+    "slug": "material",
+    "name": "Material Security",
+    "url": "https://material.security/",
+    "category": "security",
+    "drafts": [
+      "protect a cloud mailbox",
+      "stop data loss in email",
+      "review a risky email",
+      "secure an account",
+      "automate an email control"
+    ]
+  },
+  {
+    "slug": "hunters",
+    "name": "Hunters",
+    "url": "https://www.hunters.security/",
+    "category": "security",
+    "drafts": [
+      "investigate a security alert",
+      "correlate siem data",
+      "automate a threat hunt",
+      "triage an incident",
+      "see a detection"
+    ]
+  },
+  {
+    "slug": "torq",
+    "name": "Torq",
+    "url": "https://torq.io/",
+    "category": "security",
+    "drafts": [
+      "automate a security workflow",
+      "enrich an alert",
+      "orchestrate a response",
+      "build a no code playbook",
+      "respond to an incident"
+    ]
+  },
+  {
+    "slug": "aisera",
+    "name": "Aisera",
+    "url": "https://aisera.com/",
+    "category": "it-support",
+    "drafts": [
+      "resolve an it ticket automatically",
+      "answer an employee question",
+      "automate a service desk workflow",
+      "deflect a ticket",
+      "integrate with itsm"
+    ]
+  },
+  {
+    "slug": "espocrm",
+    "name": "EspoCRM",
+    "url": "https://www.espocrm.com/",
+    "category": "it-support",
+    "drafts": [
+      "track a support case",
+      "manage contacts",
+      "automate a workflow",
+      "customize an entity",
+      "self host a crm"
+    ]
+  },
+  {
+    "slug": "atomicwork",
+    "name": "Atomicwork",
+    "url": "https://www.atomicwork.com/",
+    "category": "it-support",
+    "drafts": [
+      "run a modern it helpdesk",
+      "answer employee requests with ai",
+      "automate a service request",
+      "chat with employees in slack",
+      "manage assets"
+    ]
+  },
+  {
+    "slug": "console",
+    "name": "Console",
+    "url": "https://www.console.com/",
+    "category": "it-support",
+    "drafts": [
+      "automate it support",
+      "resolve a ticket with an agent",
+      "connect a service desk",
+      "deflect employee questions",
+      "route an it request"
+    ]
+  },
+  {
+    "slug": "lakeside",
+    "name": "Lakeside",
+    "url": "https://www.lakesidesoftware.com/",
+    "category": "it-support",
+    "drafts": [
+      "see digital experience scores",
+      "troubleshoot an endpoint",
+      "find the cause of a slow pc",
+      "report on it performance",
+      "support a remote employee"
+    ]
+  },
+  {
+    "slug": "nudge",
+    "name": "Nudge Security",
+    "url": "https://www.nudgesecurity.com/",
+    "category": "it-support",
+    "drafts": [
+      "discover saas apps employees use",
+      "nudge an employee to secure an account",
+      "see oauth grants",
+      "govern shadow it",
+      "reduce saas risk"
+    ]
+  },
+  {
+    "slug": "perplexity-shop",
+    "name": "Phia",
+    "url": "https://www.phia.com/",
+    "category": "shopping",
+    "drafts": [
+      "compare fashion prices",
+      "find a lower price on clothing",
+      "shop across stores",
+      "see a resale price",
+      "discover a similar item"
+    ]
+  },
+  {
+    "slug": "klarna",
+    "name": "Klarna",
+    "url": "https://www.klarna.com/",
+    "category": "shopping",
+    "drafts": [
+      "compare prices while you shop",
+      "pay over time",
+      "track a delivery",
+      "shop with a virtual card",
+      "see stores in one app"
+    ]
+  },
+  {
+    "slug": "honey",
+    "name": "PayPal Honey",
+    "url": "https://www.joinhoney.com/",
+    "category": "shopping",
+    "drafts": [
+      "apply a coupon at checkout",
+      "see a price history",
+      "find a promo code",
+      "droplist a product",
+      "compare a price"
+    ]
+  },
+  {
+    "slug": "slickdeals",
+    "name": "Slickdeals",
+    "url": "https://slickdeals.net/",
+    "category": "shopping",
+    "drafts": [
+      "find a deal",
+      "see a community posted discount",
+      "compare a sale",
+      "set a deal alert",
+      "browse coupons"
+    ]
+  },
+  {
+    "slug": "wirecutter",
+    "name": "Wirecutter",
+    "url": "https://www.nytimes.com/wirecutter/",
+    "category": "shopping",
+    "drafts": [
+      "read a product recommendation",
+      "compare products that were tested",
+      "see a best pick",
+      "find a budget alternative",
+      "read how a product was tested"
+    ]
+  },
+  {
+    "slug": "ralfh",
+    "name": "CamelCamelCamel",
+    "url": "https://camelcamelcamel.com/",
+    "category": "shopping",
+    "drafts": [
+      "see amazon price history",
+      "set a price drop alert",
+      "track a product price",
+      "compare a current price to the past",
+      "watch a deal"
+    ]
+  },
+  {
+    "slug": "bolt-new",
+    "name": "Bolt",
+    "url": "https://bolt.new/",
+    "category": "coding-agents",
+    "drafts": [
+      "edit code with an agent",
+      "chat about a codebase",
+      "autocomplete code",
+      "review a diff",
+      "build an app from a prompt",
+      "refactor a function"
+    ]
+  },
+  {
+    "slug": "lovable-dev",
+    "name": "Lovable",
+    "url": "https://lovable.dev/",
+    "category": "coding-agents",
+    "drafts": [
+      "edit code with an agent",
+      "chat about a codebase",
+      "autocomplete code",
+      "review a diff",
+      "build an app from a prompt",
+      "refactor a function"
+    ]
+  },
+  {
+    "slug": "v0-dev",
+    "name": "v0",
+    "url": "https://v0.dev/",
+    "category": "design",
+    "drafts": [
+      "design an interface",
+      "generate a page",
+      "publish a site",
+      "edit a layout",
+      "create a mockup",
+      "share a design"
+    ]
+  },
+  {
+    "slug": "nightcafe-studio",
+    "name": "NightCafe",
+    "url": "https://nightcafe.studio/",
+    "category": "image",
+    "drafts": [
+      "generate an image from a prompt",
+      "edit an image",
+      "upscale a picture",
+      "remove a background",
+      "create art from text",
+      "vary an image"
+    ]
+  },
+  {
+    "slug": "seaart-ai",
+    "name": "SeaArt",
+    "url": "https://www.seaart.ai/",
+    "category": "image",
+    "drafts": [
+      "generate an image from a prompt",
+      "edit an image",
+      "upscale a picture",
+      "remove a background",
+      "create art from text",
+      "vary an image"
+    ]
+  },
+  {
+    "slug": "craiyon-ai",
+    "name": "Craiyon",
+    "url": "https://www.craiyon.com/",
+    "category": "image",
+    "drafts": [
+      "generate an image from a prompt",
+      "edit an image",
+      "upscale a picture",
+      "remove a background",
+      "create art from text",
+      "vary an image"
+    ]
+  },
+  {
+    "slug": "getimg-ai",
+    "name": "getimg.ai",
+    "url": "https://getimg.ai/",
+    "category": "image",
+    "drafts": [
+      "generate an image from a prompt",
+      "edit an image",
+      "upscale a picture",
+      "remove a background",
+      "create art from text",
+      "vary an image"
+    ]
+  },
+  {
+    "slug": "starry-ai",
+    "name": "starryai",
+    "url": "https://starryai.com/",
+    "category": "image",
+    "drafts": [
+      "generate an image from a prompt",
+      "edit an image",
+      "upscale a picture",
+      "remove a background",
+      "create art from text",
+      "vary an image"
+    ]
+  },
+  {
+    "slug": "logseq-app",
+    "name": "Logseq",
+    "url": "https://logseq.com/",
+    "category": "knowledge",
+    "drafts": [
+      "search notes",
+      "link ideas",
+      "ask a question over docs",
+      "organize a wiki",
+      "capture a note",
+      "journal daily"
+    ]
+  },
+  {
+    "slug": "roam-research",
+    "name": "Roam Research",
+    "url": "https://roamresearch.com/",
+    "category": "knowledge",
+    "drafts": [
+      "search notes",
+      "link ideas",
+      "ask a question over docs",
+      "organize a wiki",
+      "capture a note",
+      "journal daily"
+    ]
+  },
+  {
+    "slug": "browse-ai",
+    "name": "Browse AI",
+    "url": "https://www.browse.ai/",
+    "category": "browser-agents",
+    "drafts": [
+      "automate a browser task",
+      "scrape a page",
+      "click through a workflow",
+      "extract a table",
+      "run a bot on a site",
+      "monitor a page"
+    ]
+  },
+  {
+    "slug": "axiom-ai",
+    "name": "Axiom",
+    "url": "https://axiom.ai/",
+    "category": "browser-agents",
+    "drafts": [
+      "automate a browser task",
+      "scrape a page",
+      "click through a workflow",
+      "extract a table",
+      "run a bot on a site",
+      "monitor a page"
+    ]
+  },
+  {
+    "slug": "harpa-ai",
+    "name": "HARPA",
+    "url": "https://harpa.ai/",
+    "category": "browser-agents",
+    "drafts": [
+      "automate a browser task",
+      "scrape a page",
+      "click through a workflow",
+      "extract a table",
+      "run a bot on a site",
+      "monitor a page"
+    ]
+  },
+  {
+    "slug": "ollama-ai",
+    "name": "Ollama",
+    "url": "https://ollama.com/",
+    "category": "dev-tools",
+    "drafts": [
+      "call a model api",
+      "run a model locally",
+      "search documentation",
+      "debug an error",
+      "deploy an endpoint",
+      "fine tune a model"
+    ]
+  },
+  {
+    "slug": "groq-ai",
+    "name": "Groq",
+    "url": "https://groq.com/",
+    "category": "dev-tools",
+    "drafts": [
+      "call a model api",
+      "run a model locally",
+      "search documentation",
+      "debug an error",
+      "deploy an endpoint",
+      "fine tune a model"
+    ]
+  },
+  {
+    "slug": "together-ai",
+    "name": "Together AI",
+    "url": "https://www.together.ai/",
+    "category": "dev-tools",
+    "drafts": [
+      "call a model api",
+      "run a model locally",
+      "search documentation",
+      "debug an error",
+      "deploy an endpoint",
+      "fine tune a model"
+    ]
+  },
+  {
+    "slug": "fireworks-ai",
+    "name": "Fireworks",
+    "url": "https://fireworks.ai/",
+    "category": "dev-tools",
+    "drafts": [
+      "call a model api",
+      "run a model locally",
+      "search documentation",
+      "debug an error",
+      "deploy an endpoint",
+      "fine tune a model"
+    ]
+  },
+  {
+    "slug": "replicate-ai",
+    "name": "Replicate",
+    "url": "https://replicate.com/",
+    "category": "dev-tools",
+    "drafts": [
+      "call a model api",
+      "run a model locally",
+      "search documentation",
+      "debug an error",
+      "deploy an endpoint",
+      "fine tune a model"
+    ]
+  },
+  {
+    "slug": "huggingface-hub",
+    "name": "Hugging Face",
+    "url": "https://huggingface.co/",
+    "category": "dev-tools",
+    "drafts": [
+      "call a model api",
+      "run a model locally",
+      "search documentation",
+      "debug an error",
+      "deploy an endpoint",
+      "fine tune a model"
+    ]
+  },
+  {
+    "slug": "lm-studio",
+    "name": "LM Studio",
+    "url": "https://lmstudio.ai/",
+    "category": "dev-tools",
+    "drafts": [
+      "call a model api",
+      "run a model locally",
+      "search documentation",
+      "debug an error",
+      "deploy an endpoint",
+      "fine tune a model"
+    ]
+  },
+  {
+    "slug": "openrouter-ai",
+    "name": "OpenRouter",
+    "url": "https://openrouter.ai/",
+    "category": "dev-tools",
+    "drafts": [
+      "call a model api",
+      "run a model locally",
+      "search documentation",
+      "debug an error",
+      "deploy an endpoint",
+      "fine tune a model"
+    ]
+  },
+  {
+    "slug": "zed-editor",
+    "name": "Zed",
+    "url": "https://zed.dev/",
+    "category": "coding-agents",
+    "drafts": [
+      "edit code with an agent",
+      "chat about a codebase",
+      "autocomplete code",
+      "review a diff",
+      "build an app from a prompt",
+      "refactor a function"
+    ]
+  },
+  {
+    "slug": "clickup-app",
+    "name": "ClickUp",
+    "url": "https://clickup.com/",
+    "category": "productivity",
+    "drafts": [
+      "plan tasks",
+      "automate a workflow",
+      "write a doc",
+      "track a project",
+      "summarize work",
+      "assign a task"
+    ]
+  },
+  {
+    "slug": "asana-app",
+    "name": "Asana",
+    "url": "https://asana.com/",
+    "category": "productivity",
+    "drafts": [
+      "plan tasks",
+      "automate a workflow",
+      "write a doc",
+      "track a project",
+      "summarize work",
+      "assign a task"
+    ]
+  },
+  {
+    "slug": "monday-app",
+    "name": "monday.com",
+    "url": "https://monday.com/",
+    "category": "productivity",
+    "drafts": [
+      "plan tasks",
+      "automate a workflow",
+      "write a doc",
+      "track a project",
+      "summarize work",
+      "assign a task"
+    ]
+  },
+  {
+    "slug": "todoist-app",
+    "name": "Todoist",
+    "url": "https://todoist.com/",
+    "category": "productivity",
+    "drafts": [
+      "plan tasks",
+      "automate a workflow",
+      "write a doc",
+      "track a project",
+      "summarize work",
+      "assign a task"
+    ]
+  },
+  {
+    "slug": "coda-app",
+    "name": "Coda",
+    "url": "https://coda.io/",
+    "category": "productivity",
+    "drafts": [
+      "plan tasks",
+      "automate a workflow",
+      "write a doc",
+      "track a project",
+      "summarize work",
+      "assign a task"
+    ]
+  },
+  {
+    "slug": "taskade-app",
+    "name": "Taskade",
+    "url": "https://www.taskade.com/",
+    "category": "productivity",
+    "drafts": [
+      "plan tasks",
+      "automate a workflow",
+      "write a doc",
+      "track a project",
+      "summarize work",
+      "assign a task"
+    ]
+  },
+  {
+    "slug": "gusto-hr",
+    "name": "Gusto",
+    "url": "https://gusto.com/",
+    "category": "hr",
+    "drafts": [
+      "run payroll",
+      "onboard an employee",
+      "track applicants",
+      "write a job post",
+      "manage benefits",
+      "schedule an interview"
+    ]
+  },
+  {
+    "slug": "rippling-hr",
+    "name": "Rippling",
+    "url": "https://www.rippling.com/",
+    "category": "hr",
+    "drafts": [
+      "run payroll",
+      "onboard an employee",
+      "track applicants",
+      "write a job post",
+      "manage benefits",
+      "schedule an interview"
+    ]
+  },
+  {
+    "slug": "deel-hr",
+    "name": "Deel",
+    "url": "https://www.deel.com/",
+    "category": "hr",
+    "drafts": [
+      "run payroll",
+      "onboard an employee",
+      "track applicants",
+      "write a job post",
+      "manage benefits",
+      "schedule an interview"
+    ]
+  },
+  {
+    "slug": "remote-hr",
+    "name": "Remote",
+    "url": "https://remote.com/",
+    "category": "hr",
+    "drafts": [
+      "run payroll",
+      "onboard an employee",
+      "track applicants",
+      "write a job post",
+      "manage benefits",
+      "schedule an interview"
+    ]
+  },
+  {
+    "slug": "bamboohr-hr",
+    "name": "BambooHR",
+    "url": "https://www.bamboohr.com/",
+    "category": "hr",
+    "drafts": [
+      "run payroll",
+      "onboard an employee",
+      "track applicants",
+      "write a job post",
+      "manage benefits",
+      "schedule an interview"
+    ]
+  },
+  {
+    "slug": "lattice-hr",
+    "name": "Lattice",
+    "url": "https://lattice.com/",
+    "category": "hr",
+    "drafts": [
+      "run payroll",
+      "onboard an employee",
+      "track applicants",
+      "write a job post",
+      "manage benefits",
+      "schedule an interview"
+    ]
+  },
+  {
+    "slug": "deepgram-ai",
+    "name": "Deepgram",
+    "url": "https://deepgram.com/",
+    "category": "audio-voice",
+    "drafts": [
+      "transcribe audio",
+      "convert text to speech",
+      "remove noise",
+      "clone a voice",
+      "edit a podcast",
+      "generate a voiceover"
+    ]
+  },
+  {
+    "slug": "assemblyai",
+    "name": "AssemblyAI",
+    "url": "https://www.assemblyai.com/",
+    "category": "audio-voice",
+    "drafts": [
+      "transcribe audio",
+      "convert text to speech",
+      "remove noise",
+      "clone a voice",
+      "edit a podcast",
+      "generate a voiceover"
+    ]
+  },
+  {
+    "slug": "rev-com",
+    "name": "Rev",
+    "url": "https://www.rev.com/",
+    "category": "audio-voice",
+    "drafts": [
+      "transcribe audio",
+      "convert text to speech",
+      "remove noise",
+      "clone a voice",
+      "edit a podcast",
+      "generate a voiceover"
+    ]
+  },
+  {
+    "slug": "sonix-ai",
+    "name": "Sonix",
+    "url": "https://sonix.ai/",
+    "category": "audio-voice",
+    "drafts": [
+      "transcribe audio",
+      "convert text to speech",
+      "remove noise",
+      "clone a voice",
+      "edit a podcast",
+      "generate a voiceover"
+    ]
+  },
+  {
+    "slug": "riverside-fm",
+    "name": "Riverside",
+    "url": "https://riverside.com/",
+    "category": "audio-voice",
+    "drafts": [
+      "transcribe audio",
+      "convert text to speech",
+      "remove noise",
+      "clone a voice",
+      "edit a podcast",
+      "generate a voiceover"
+    ]
+  },
+  {
+    "slug": "kaiber-ai",
+    "name": "Kaiber",
+    "url": "https://kaiber.ai/",
+    "category": "video",
+    "drafts": [
+      "generate a video from a prompt",
+      "edit a video",
+      "add captions",
+      "turn an image into a video",
+      "export a clip",
+      "animate a photo"
+    ]
+  },
+  {
+    "slug": "viggle-ai",
+    "name": "Viggle",
+    "url": "https://viggle.ai/",
+    "category": "video",
+    "drafts": [
+      "generate a video from a prompt",
+      "edit a video",
+      "add captions",
+      "turn an image into a video",
+      "export a clip",
+      "animate a photo"
+    ]
+  },
+  {
+    "slug": "hailuo-ai",
+    "name": "Hailuo",
+    "url": "https://hailuoai.video/",
+    "category": "video",
+    "drafts": [
+      "generate a video from a prompt",
+      "edit a video",
+      "add captions",
+      "turn an image into a video",
+      "export a clip",
+      "animate a photo"
+    ]
+  },
+  {
+    "slug": "steve-ai",
+    "name": "Steve AI",
+    "url": "https://www.steve.ai/",
+    "category": "video",
+    "drafts": [
+      "generate a video from a prompt",
+      "edit a video",
+      "add captions",
+      "turn an image into a video",
+      "export a clip",
+      "animate a photo"
+    ]
+  },
+  {
+    "slug": "animoto-video",
+    "name": "Animoto",
+    "url": "https://animoto.com/",
+    "category": "video",
+    "drafts": [
+      "generate a video from a prompt",
+      "edit a video",
+      "add captions",
+      "turn an image into a video",
+      "export a clip",
+      "animate a photo"
+    ]
+  },
+  {
+    "slug": "wisecut-video",
+    "name": "Wisecut",
+    "url": "https://www.wisecut.video/",
+    "category": "video",
+    "drafts": [
+      "generate a video from a prompt",
+      "edit a video",
+      "add captions",
+      "turn an image into a video",
+      "export a clip",
+      "animate a photo"
+    ]
+  },
+  {
+    "slug": "avoma-meet",
+    "name": "Avoma",
+    "url": "https://www.avoma.com/",
+    "category": "meetings",
+    "drafts": [
+      "transcribe a meeting",
+      "summarize a call",
+      "capture action items",
+      "record a conversation",
+      "share notes",
+      "highlight a moment"
+    ]
+  },
+  {
+    "slug": "readai",
+    "name": "Read AI",
+    "url": "https://www.read.ai/",
+    "category": "meetings",
+    "drafts": [
+      "transcribe a meeting",
+      "summarize a call",
+      "capture action items",
+      "record a conversation",
+      "share notes",
+      "highlight a moment"
+    ]
+  },
+  {
+    "slug": "meetgeek-ai",
+    "name": "MeetGeek",
+    "url": "https://meetgeek.ai/",
+    "category": "meetings",
+    "drafts": [
+      "transcribe a meeting",
+      "summarize a call",
+      "capture action items",
+      "record a conversation",
+      "share notes",
+      "highlight a moment"
+    ]
+  },
+  {
+    "slug": "jamie-meet",
+    "name": "Jamie",
+    "url": "https://www.meetjamie.ai/",
+    "category": "meetings",
+    "drafts": [
+      "transcribe a meeting",
+      "summarize a call",
+      "capture action items",
+      "record a conversation",
+      "share notes",
+      "highlight a moment"
+    ]
+  },
+  {
+    "slug": "limitless-ai",
+    "name": "Limitless",
+    "url": "https://www.limitless.ai/",
+    "category": "meetings",
+    "drafts": [
+      "transcribe a meeting",
+      "summarize a call",
+      "capture action items",
+      "record a conversation",
+      "share notes",
+      "highlight a moment"
+    ]
+  },
+  {
+    "slug": "mem-notes",
+    "name": "Mem",
+    "url": "https://mem.ai/",
+    "category": "knowledge",
+    "drafts": [
+      "search notes",
+      "link ideas",
+      "ask a question over docs",
+      "organize a wiki",
+      "capture a note",
+      "journal daily"
+    ]
+  },
+  {
+    "slug": "reflect-app",
+    "name": "Reflect",
+    "url": "https://reflect.app/",
+    "category": "knowledge",
+    "drafts": [
+      "search notes",
+      "link ideas",
+      "ask a question over docs",
+      "organize a wiki",
+      "capture a note",
+      "journal daily"
+    ]
+  },
+  {
+    "slug": "tana-app",
+    "name": "Tana",
+    "url": "https://tana.inc/",
+    "category": "knowledge",
+    "drafts": [
+      "search notes",
+      "link ideas",
+      "ask a question over docs",
+      "organize a wiki",
+      "capture a note",
+      "journal daily"
+    ]
+  },
+  {
+    "slug": "capacities-app",
+    "name": "Capacities",
+    "url": "https://capacities.io/",
+    "category": "knowledge",
+    "drafts": [
+      "search notes",
+      "link ideas",
+      "ask a question over docs",
+      "organize a wiki",
+      "capture a note",
+      "journal daily"
+    ]
+  },
+  {
+    "slug": "heptabase-app",
+    "name": "Heptabase",
+    "url": "https://heptabase.com/",
+    "category": "knowledge",
+    "drafts": [
+      "search notes",
+      "link ideas",
+      "ask a question over docs",
+      "organize a wiki",
+      "capture a note",
+      "journal daily"
+    ]
+  },
+  {
+    "slug": "expedia-travel",
+    "name": "Expedia",
+    "url": "https://www.expedia.com/",
+    "category": "travel",
+    "drafts": [
+      "plan a trip",
+      "compare flights",
+      "find a hotel",
+      "build an itinerary",
+      "book travel",
+      "see a route"
+    ]
+  },
+  {
+    "slug": "kayak-travel",
+    "name": "KAYAK",
+    "url": "https://www.kayak.com/",
+    "category": "travel",
+    "drafts": [
+      "plan a trip",
+      "compare flights",
+      "find a hotel",
+      "build an itinerary",
+      "book travel",
+      "see a route"
+    ]
+  },
+  {
+    "slug": "hopper-travel",
+    "name": "Hopper",
+    "url": "https://www.hopper.com/",
+    "category": "travel",
+    "drafts": [
+      "plan a trip",
+      "compare flights",
+      "find a hotel",
+      "build an itinerary",
+      "book travel",
+      "see a route"
+    ]
+  },
+  {
+    "slug": "tripadvisor-go",
+    "name": "Tripadvisor",
+    "url": "https://www.tripadvisor.com/",
+    "category": "travel",
+    "drafts": [
+      "plan a trip",
+      "compare flights",
+      "find a hotel",
+      "build an itinerary",
+      "book travel",
+      "see a route"
+    ]
+  },
+  {
+    "slug": "rome2rio-go",
+    "name": "Rome2Rio",
+    "url": "https://www.rome2rio.com/",
+    "category": "travel",
+    "drafts": [
+      "plan a trip",
+      "compare flights",
+      "find a hotel",
+      "build an itinerary",
+      "book travel",
+      "see a route"
+    ]
+  },
+  {
+    "slug": "wanderlog-go",
+    "name": "Wanderlog",
+    "url": "https://wanderlog.com/",
+    "category": "travel",
+    "drafts": [
+      "plan a trip",
+      "compare flights",
+      "find a hotel",
+      "build an itinerary",
+      "book travel",
+      "see a route"
+    ]
+  },
+  {
+    "slug": "alltrails-fit",
+    "name": "AllTrails",
+    "url": "https://www.alltrails.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "log a workout",
+      "track sleep",
+      "follow a meditation",
+      "record a run",
+      "find a trail",
+      "take a class"
+    ]
+  },
+  {
+    "slug": "peloton-fit",
+    "name": "Peloton",
+    "url": "https://www.onepeloton.com/",
+    "category": "health-fitness",
+    "drafts": [
+      "log a workout",
+      "track sleep",
+      "follow a meditation",
+      "record a run",
+      "find a trail",
+      "take a class"
+    ]
+  },
+  {
+    "slug": "brex-card",
+    "name": "Brex",
+    "url": "https://www.brex.com/",
+    "category": "finance-ops",
+    "drafts": [
+      "pay a bill",
+      "issue a card",
+      "track spend",
+      "approve an expense",
+      "sync accounting",
+      "close the books"
+    ]
+  },
+  {
+    "slug": "freshdesk-help",
+    "name": "Freshdesk",
+    "url": "https://freshdesk.com/",
+    "category": "customer-support",
+    "drafts": [
+      "answer a ticket",
+      "deflect a question",
+      "draft a reply",
+      "build a help center",
+      "route a chat",
+      "suggest a macro"
+    ]
+  },
+  {
+    "slug": "safetyculture-app",
+    "name": "SafetyCulture",
+    "url": "https://safetyculture.com/",
+    "category": "construction",
+    "drafts": [
+      "measure a plan",
+      "document a jobsite",
+      "estimate a job",
+      "schedule a crew",
+      "mark up a drawing",
+      "photo a project"
+    ]
+  },
+  {
+    "slug": "fieldwire-app",
+    "name": "Fieldwire",
+    "url": "https://www.fieldwire.com/",
+    "category": "construction",
+    "drafts": [
+      "measure a plan",
+      "document a jobsite",
+      "estimate a job",
+      "schedule a crew",
+      "mark up a drawing",
+      "photo a project"
+    ]
+  },
+  {
+    "slug": "buildertrend-app",
+    "name": "Buildertrend",
+    "url": "https://www.buildertrend.com/",
+    "category": "construction",
+    "drafts": [
+      "measure a plan",
+      "document a jobsite",
+      "estimate a job",
+      "schedule a crew",
+      "mark up a drawing",
+      "photo a project"
+    ]
+  },
+  {
+    "slug": "hover-app",
+    "name": "Hover",
+    "url": "https://hover.to/",
+    "category": "construction",
+    "drafts": [
+      "measure a plan",
+      "document a jobsite",
+      "estimate a job",
+      "schedule a crew",
+      "mark up a drawing",
+      "photo a project"
+    ]
+  },
+  {
+    "slug": "roofr-app",
+    "name": "Roofr",
+    "url": "https://roofr.com/",
+    "category": "construction",
+    "drafts": [
+      "measure a plan",
+      "document a jobsite",
+      "estimate a job",
+      "schedule a crew",
+      "mark up a drawing",
+      "photo a project"
+    ]
+  },
+  {
+    "slug": "companycam-app",
+    "name": "CompanyCam",
+    "url": "https://companycam.com/",
+    "category": "construction",
+    "drafts": [
+      "measure a plan",
+      "document a jobsite",
+      "estimate a job",
+      "schedule a crew",
+      "mark up a drawing",
+      "photo a project"
+    ]
+  },
+  {
+    "slug": "magicplan-app",
+    "name": "magicplan",
+    "url": "https://www.magicplan.app/",
+    "category": "construction",
+    "drafts": [
+      "measure a plan",
+      "document a jobsite",
+      "estimate a job",
+      "schedule a crew",
+      "mark up a drawing",
+      "photo a project"
+    ]
+  },
+  {
+    "slug": "navan-go",
+    "name": "Navan",
+    "url": "https://navan.com/",
+    "category": "travel",
+    "drafts": [
+      "plan a trip",
+      "compare flights",
+      "find a hotel",
+      "build an itinerary",
+      "book travel",
+      "see a route"
+    ]
+  },
+  {
+    "slug": "travelperk-go",
+    "name": "TravelPerk",
+    "url": "https://www.travelperk.com/",
+    "category": "travel",
+    "drafts": [
+      "plan a trip",
+      "compare flights",
+      "find a hotel",
+      "build an itinerary",
+      "book travel",
+      "see a route"
+    ]
+  },
+  {
+    "slug": "merlin-app",
+    "name": "Merlin",
+    "url": "https://www.getmerlin.in/",
+    "category": "productivity",
+    "drafts": [
+      "plan tasks",
+      "automate a workflow",
+      "write a doc",
+      "track a project",
+      "summarize work",
+      "assign a task"
+    ]
+  },
+  {
+    "slug": "monica-app",
+    "name": "Monica",
+    "url": "https://monica.im/",
+    "category": "productivity",
+    "drafts": [
+      "plan tasks",
+      "automate a workflow",
+      "write a doc",
+      "track a project",
+      "summarize work",
+      "assign a task"
+    ]
+  },
+  {
+    "slug": "typingmind-app",
+    "name": "TypingMind",
+    "url": "https://www.typingmind.com/",
+    "category": "productivity",
+    "drafts": [
+      "plan tasks",
+      "automate a workflow",
+      "write a doc",
+      "track a project",
+      "summarize work",
+      "assign a task"
+    ]
+  },
+  {
+    "slug": "spellbook-app",
+    "name": "Spellbook",
+    "url": "https://www.spellbook.legal/",
+    "category": "legal",
+    "drafts": [
+      "review a contract",
+      "draft a clause",
+      "research a question",
+      "redline a document",
+      "manage a matter",
+      "extract terms"
+    ]
+  },
+  {
+    "slug": "corelogic-app",
+    "name": "CoreLogic",
+    "url": "https://www.corelogic.com/",
+    "category": "real-estate",
+    "drafts": [
+      "search homes",
+      "estimate a value",
+      "research a property",
+      "see a listing",
+      "analyze a market",
+      "find comps"
+    ]
+  },
+  {
+    "slug": "zillow-app",
+    "name": "Zillow",
+    "url": "https://www.zillow.com/",
+    "category": "real-estate",
+    "drafts": [
+      "search homes",
+      "estimate a value",
+      "research a property",
+      "see a listing",
+      "analyze a market",
+      "find comps"
+    ]
+  },
+  {
+    "slug": "redfin-app",
+    "name": "Redfin",
+    "url": "https://www.redfin.com/",
+    "category": "real-estate",
+    "drafts": [
+      "search homes",
+      "estimate a value",
+      "research a property",
+      "see a listing",
+      "analyze a market",
+      "find comps"
+    ]
+  },
+  {
+    "slug": "crexi-app",
+    "name": "Crexi",
+    "url": "https://www.crexi.com/",
+    "category": "real-estate",
+    "drafts": [
+      "search homes",
+      "estimate a value",
+      "research a property",
+      "see a listing",
+      "analyze a market",
+      "find comps"
+    ]
+  },
+  {
+    "slug": "housecanary-app",
+    "name": "HouseCanary",
+    "url": "https://www.housecanary.com/",
+    "category": "real-estate",
+    "drafts": [
+      "search homes",
+      "estimate a value",
+      "research a property",
+      "see a listing",
+      "analyze a market",
+      "find comps"
+    ]
+  }
+]

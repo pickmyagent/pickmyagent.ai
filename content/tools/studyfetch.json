@@ -6,11 +6,22 @@
   "affiliateUrl": null,
   "shortDescription": "AI tutor that builds a study plan and practice from your materials. Free to start. Paid plans are on their site.",
   "longDescription": "StudyFetch says you upload course materials and Sparky, its AI tutor, explains a concept and builds a study plan, flashcards, and practice from them. The FAQ says it can help with any subject, including professional exams, and that getting started is free. The same FAQ does not list one monthly price for premium.",
-  "categories": ["learning"],
-  "useCaseTags": ["tutoring"],
-  "toolTypes": ["agent"],
-  "platforms": ["web"],
-  "pricingModel": ["freemium", "subscription"],
+  "categories": [
+    "learning"
+  ],
+  "useCaseTags": [
+    "tutoring"
+  ],
+  "toolTypes": [
+    "agent"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
   "pricingNotes": "Getting started is free. The FAQ does not list one monthly price for premium.",
   "pricingUrl": "https://www.studyfetch.com/",
   "docsUrl": "https://www.studyfetch.com/",
@@ -36,7 +47,9 @@
   "checkedAt": "2026-10-20T00:00:00-04:00",
   "checkedDate": "2026-10-20",
   "smokeTestNotes": "Homepage and FAQ reviewed on October 20, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -53,5 +66,15 @@
   },
   "useCaseFit": {
     "tutoring": "Explains a subject from your materials and builds practice from them."
-  }
+  },
+  "capabilities": [
+    "explain a subject from the materials",
+    "make flashcards from course materials",
+    "work from study plan and practice built from the own materials",
+    "work from tutoring help on a subject you name",
+    "work from ai tutor that builds a study plan and practice from the materials. free to start. paid plans are on their site",
+    "work from studyfetch's sparky tutors a subject from the materials and builds a study plan and practice from them",
+    "explain the subject from the materials",
+    "explain a subject from a materials"
+  ]
 }

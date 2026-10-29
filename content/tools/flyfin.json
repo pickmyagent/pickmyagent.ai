@@ -63,5 +63,17 @@
   },
   "useCaseFit": {
     "do-taxes": "Describes an AI and CPA flow that finds deductions and files self-employed taxes."
-  }
+  },
+  "capabilities": [
+    "find deductions for a freelancer",
+    "sort deductions before a tax return",
+    "use an ai and cpa flow that finds deductions and files self-employed taxes",
+    "use cpa flow that finds deductions",
+    "use files self-employed taxes",
+    "help a self-employed filers who want deduction sorting and a cpa to file",
+    "help a self-employed filers who want deduction sorting",
+    "work from self-employed filers who want deduction sorting and a cpa to file",
+    "work from ai and cpa service that finds deductions and files self-employed taxes",
+    "find deductions for the freelancer"
+  ]
 }

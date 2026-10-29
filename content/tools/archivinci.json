@@ -65,5 +65,19 @@
   "useCaseFit": {
     "floor-plan-rendering": "Renders a floor plan and furnishes a 2D plan."
   },
-  "id": "archivinci"
+  "id": "archivinci",
+  "capabilities": [
+    "turn a floor plan into a render",
+    "render a floor plan and furnishes a 2d plan",
+    "render a floor plan",
+    "render furnishes a 2d plan",
+    "render floor plans, furnishes a 2d floor plan, and can generate a 3d floor plan from an image",
+    "render floor plans",
+    "render furnishes a 2d floor plan",
+    "render can generate a 3d floor plan from an image",
+    "work from 2d floor plan you want furnished and rendered",
+    "work from floor plan, exterior, and masterplan renders in one suite",
+    "work from renders floor plans and furnishes a 2d plan. monthly access is",
+    "work from renders floor plans, furnishes a 2d floor plan, and can generate a 3d floor plan from an image"
+  ]
 }

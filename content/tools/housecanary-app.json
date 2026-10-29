@@ -1,0 +1,78 @@
+{
+  "id": "housecanary-app",
+  "slug": "housecanary-app",
+  "name": "HouseCanary",
+  "websiteUrl": "https://www.housecanary.com/",
+  "affiliateUrl": null,
+  "shortDescription": "HouseCanary can estimate a value.",
+  "longDescription": "HouseCanary can estimate a value. It can also analyze a market.",
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.housecanary.com/",
+  "docsUrl": "https://www.housecanary.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Estimate a value",
+    "Analyze a market"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "HouseCanary can estimate a value for this kind of work.",
+  "weakness": "You still confirm the records before you make an offer.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.housecanary.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.housecanary.com/"
+  },
+  "capabilities": [
+    "estimate a value",
+    "analyze a market",
+    "make smarter real estate decisions with housecanary",
+    "make smarter decisions with the most accurate avms, valuations",
+    "use make smarter real estate decisions with housecanary",
+    "use access ai-powered valuations",
+    "make smarter decisions with the most accurate avms",
+    "use make smarter decisions with the most accurate avms",
+    "use david george andrew luong chad collishaw california-based reg",
+    "use bank housecanary",
+    "use solutions & services canaryai first-of-its-kind generative ai",
+    "use programmatic data streamline and improve decision making acro"
+  ]
+}

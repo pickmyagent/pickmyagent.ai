@@ -1,0 +1,78 @@
+{
+  "id": "olt-tax",
+  "slug": "olt-tax",
+  "name": "OLT",
+  "websiteUrl": "https://www.olt.com/main/home/default.php",
+  "affiliateUrl": null,
+  "shortDescription": "OLT can file a tax return.",
+  "longDescription": "OLT can file a tax return. It can also find a deduction.",
+  "categories": [
+    "tax"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.olt.com/main/home/default.php",
+  "docsUrl": "https://www.olt.com/main/home/default.php",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "File a tax return",
+    "Find a deduction"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "OLT can file a tax return for this kind of work.",
+  "weakness": "You still review the return before filing, and this is not tax advice.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.olt.com/main/home/default.php"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.olt.com/main/home/default.php"
+  },
+  "capabilities": [
+    "file a tax return",
+    "find a deduction",
+    "estimate a refund",
+    "answer tax questions",
+    "schedule c and all business forms included",
+    "track all property-related expenses",
+    "use state returns only",
+    "use free federal tax filing",
+    "use irs authorized e-file privacy settings 100",
+    "use free federal what you",
+    "use crypto self-employed rental property retirement income deduct",
+    "use federal free edition free federal tax filing"
+  ]
+}

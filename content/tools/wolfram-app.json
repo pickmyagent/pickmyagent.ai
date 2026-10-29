@@ -1,0 +1,78 @@
+{
+  "id": "wolfram-app",
+  "slug": "wolfram-app",
+  "name": "Wolfram Alpha",
+  "websiteUrl": "https://www.wolframalpha.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Wolfram Alpha can use compute answers using wolfram.",
+  "longDescription": "Wolfram Alpha can use compute answers using wolfram. It can also use making the world.",
+  "categories": [
+    "education"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.wolframalpha.com/",
+  "docsUrl": "https://www.wolframalpha.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Use compute answers using wolfram",
+    "Use making the world"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Wolfram Alpha can use compute answers using wolfram.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.wolframalpha.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.wolframalpha.com/"
+  },
+  "capabilities": [
+    "use compute answers using wolfram",
+    "use making the world",
+    "use computational intelligence mathematics",
+    "use science & technology",
+    "use society & culture",
+    "use everyday life",
+    "use computational intelligence uh oh",
+    "use alpha doesn",
+    "use please enable javascript",
+    "use math input compute verified",
+    "use step-by-step solutions elementary math algebra plotting & gra",
+    "use calculus & analysis geometry differential equations statistic"
+  ]
+}

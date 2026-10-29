@@ -68,5 +68,17 @@
     "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content.",
     "run-a-business": "Schedules social posts a small business can publish through the week.",
     "agent-social": "Schedules listing posts and drafts captions for an agent's social channels."
-  }
+  },
+  "capabilities": [
+    "draft and schedule a social post",
+    "schedule social posts with a listed $5 plan and an ai writing assistant",
+    "schedule social posts with a listed $5 plan",
+    "schedule an ai writing assistant",
+    "use essentials at $5 per month for one channel, a 14-day trial, and an ai assistant for content",
+    "use essentials at $5 per month for one channel",
+    "use an ai assistant for content",
+    "work from scheduling social posts with a listed plan and an ai writing assistant",
+    "work from social scheduling. essentials is per month, with a 14-day trial",
+    "draft and schedule the social post"
+  ]
 }

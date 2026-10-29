@@ -1,0 +1,78 @@
+{
+  "id": "swapp",
+  "slug": "swapp",
+  "name": "SWAPP",
+  "websiteUrl": "https://swapp.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "SWAPP can generate construction documents from a model.",
+  "longDescription": "SWAPP can generate construction documents from a model. It can also coordinate a revit model.",
+  "categories": [
+    "architecture"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://swapp.ai/",
+  "docsUrl": "https://swapp.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generate construction documents from a model",
+    "Coordinate a revit model"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "SWAPP can generate construction documents from a model.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://swapp.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://swapp.ai/"
+  },
+  "capabilities": [
+    "generate construction documents from a model",
+    "coordinate a revit model",
+    "use swapp helps architecture firms automate documentation and mod",
+    "use ai architectural documentation & bim automation",
+    "use ai swapp helps architecture firms automate documentation and",
+    "use ai complete construction documents",
+    "use revit and archicad",
+    "use an intelligence layer",
+    "use save hours",
+    "use succession insurance",
+    "use the ai architect inside revit",
+    "use from design to delivery and back"
+  ]
+}

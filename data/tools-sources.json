@@ -1,0 +1,3753 @@
+[
+  {
+    "slug": "10web",
+    "name": "10Web",
+    "category": "ecommerce",
+    "websiteUrl": "https://10web.io/",
+    "sources": [
+      "https://10web.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "activecampaign",
+    "name": "ActiveCampaign",
+    "category": "email",
+    "websiteUrl": "https://www.activecampaign.com/",
+    "sources": [
+      "https://www.activecampaign.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "activepieces",
+    "name": "Activepieces",
+    "category": "workflow-automation",
+    "websiteUrl": "https://www.activepieces.com/",
+    "sources": [
+      "https://www.activepieces.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "adobe-podcast",
+    "name": "Adobe Podcast",
+    "category": "audio-voice",
+    "websiteUrl": "https://podcast.adobe.com/",
+    "sources": [
+      "https://podcast.adobe.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "aftershoot",
+    "name": "AfterShoot",
+    "category": "photography",
+    "websiteUrl": "https://aftershoot.com/",
+    "sources": [
+      "https://aftershoot.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ahrefs",
+    "name": "Ahrefs",
+    "category": "seo",
+    "websiteUrl": "https://ahrefs.com/",
+    "sources": [
+      "https://ahrefs.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "aider",
+    "name": "Aider",
+    "category": "coding-agents",
+    "websiteUrl": "https://aider.chat/",
+    "sources": [
+      "https://aider.chat/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "aiva",
+    "name": "AIVA",
+    "category": "music",
+    "websiteUrl": "https://www.aiva.ai/",
+    "sources": [
+      "https://www.aiva.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "akiflow",
+    "name": "Akiflow",
+    "category": "scheduling",
+    "websiteUrl": "https://akiflow.com/",
+    "sources": [
+      "https://akiflow.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "akkio",
+    "name": "Akkio",
+    "category": "data-analysis",
+    "websiteUrl": "https://www.akkio.com/",
+    "sources": [
+      "https://www.akkio.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "alice",
+    "name": "ALICE Technologies",
+    "category": "construction",
+    "websiteUrl": "https://www.alicetechnologies.com/home",
+    "sources": [
+      "https://www.alicetechnologies.com/home"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "alltrails-fit",
+    "name": "AllTrails",
+    "category": "health-fitness",
+    "websiteUrl": "https://www.alltrails.com/",
+    "sources": [
+      "https://www.alltrails.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "alpha-sense",
+    "name": "AlphaSense",
+    "category": "investing",
+    "websiteUrl": "https://www.alphasense.com/",
+    "sources": [
+      "https://www.alphasense.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "amazon-q",
+    "name": "Amazon Q Developer",
+    "category": "coding-agents",
+    "websiteUrl": "https://aws.amazon.com/q/developer/",
+    "sources": [
+      "https://aws.amazon.com/q/developer/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "animoto-video",
+    "name": "Animoto",
+    "category": "video",
+    "websiteUrl": "https://animoto.com/",
+    "sources": [
+      "https://animoto.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "anyword",
+    "name": "Anyword",
+    "category": "writing",
+    "websiteUrl": "https://www.anyword.com/",
+    "sources": [
+      "https://www.anyword.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "april-tax",
+    "name": "april",
+    "category": "tax",
+    "websiteUrl": "https://www.getapril.com/",
+    "sources": [
+      "https://www.getapril.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "architechtures",
+    "name": "ARCHITEChTURES",
+    "category": "architecture",
+    "websiteUrl": "https://architechtures.com/en",
+    "sources": [
+      "https://architechtures.com/en"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "asana-app",
+    "name": "Asana",
+    "category": "productivity",
+    "websiteUrl": "https://asana.com/",
+    "sources": [
+      "https://asana.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ashby",
+    "name": "Ashby",
+    "category": "hr",
+    "websiteUrl": "https://www.ashbyhq.com/",
+    "sources": [
+      "https://www.ashbyhq.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "assemblyai",
+    "name": "AssemblyAI",
+    "category": "audio-voice",
+    "websiteUrl": "https://www.assemblyai.com/",
+    "sources": [
+      "https://www.assemblyai.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "atomicwork",
+    "name": "Atomicwork",
+    "category": "it-support",
+    "websiteUrl": "https://www.atomicwork.com/",
+    "sources": [
+      "https://www.atomicwork.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "auphonic",
+    "name": "Auphonic",
+    "category": "audio-voice",
+    "websiteUrl": "https://auphonic.com/",
+    "sources": [
+      "https://auphonic.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "avoma-meet",
+    "name": "Avoma",
+    "category": "meetings",
+    "websiteUrl": "https://www.avoma.com/",
+    "sources": [
+      "https://www.avoma.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "axiom-ai",
+    "name": "Axiom",
+    "category": "browser-agents",
+    "websiteUrl": "https://axiom.ai/",
+    "sources": [
+      "https://axiom.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "babbel-lang",
+    "name": "Babbel",
+    "category": "education",
+    "websiteUrl": "https://www.babbel.com/",
+    "sources": [
+      "https://www.babbel.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "bamboohr-hr",
+    "name": "BambooHR",
+    "category": "hr",
+    "websiteUrl": "https://www.bamboohr.com/",
+    "sources": [
+      "https://www.bamboohr.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "bardeen",
+    "name": "Bardeen",
+    "category": "workflow-automation",
+    "websiteUrl": "https://www.bardeen.ai/",
+    "sources": [
+      "https://www.bardeen.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "beehiiv",
+    "name": "beehiiv",
+    "category": "email",
+    "websiteUrl": "https://www.beehiiv.com/",
+    "sources": [
+      "https://www.beehiiv.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "bench",
+    "name": "Bench",
+    "category": "bookkeeping",
+    "websiteUrl": "https://www.bench.co/",
+    "sources": [
+      "https://www.bench.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "birdeye",
+    "name": "Birdeye",
+    "category": "small-business",
+    "websiteUrl": "https://birdeye.com/",
+    "sources": [
+      "https://birdeye.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "blend",
+    "name": "Blend",
+    "category": "mortgage",
+    "websiteUrl": "https://blend.com/",
+    "sources": [
+      "https://blend.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "blockade",
+    "name": "Blockade Labs",
+    "category": "3d",
+    "websiteUrl": "https://www.blockadelabs.com/",
+    "sources": [
+      "https://www.blockadelabs.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "bolt-new",
+    "name": "Bolt",
+    "category": "coding-agents",
+    "websiteUrl": "https://bolt.new/",
+    "sources": [
+      "https://bolt.new/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "bonsai",
+    "name": "Bonsai",
+    "category": "small-business",
+    "websiteUrl": "https://www.hellobonsai.com/",
+    "sources": [
+      "https://www.hellobonsai.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "brandmark",
+    "name": "Brandmark",
+    "category": "design",
+    "websiteUrl": "https://brandmark.io/",
+    "sources": [
+      "https://brandmark.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "brevo",
+    "name": "Brevo",
+    "category": "email",
+    "websiteUrl": "https://www.brevo.com/",
+    "sources": [
+      "https://www.brevo.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "brilliant-org",
+    "name": "Brilliant",
+    "category": "education",
+    "websiteUrl": "https://brilliant.org/",
+    "sources": [
+      "https://brilliant.org/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "browse-ai",
+    "name": "Browse AI",
+    "category": "browser-agents",
+    "websiteUrl": "https://www.browse.ai/",
+    "sources": [
+      "https://www.browse.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "browserbase",
+    "name": "Browserbase",
+    "category": "browser-agents",
+    "websiteUrl": "https://www.browserbase.com/",
+    "sources": [
+      "https://www.browserbase.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "buildots",
+    "name": "Buildots",
+    "category": "construction",
+    "websiteUrl": "https://buildots.com/",
+    "sources": [
+      "https://buildots.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "busuu-lang",
+    "name": "Busuu",
+    "category": "education",
+    "websiteUrl": "https://www.busuu.com/",
+    "sources": [
+      "https://www.busuu.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "calendly",
+    "name": "Calendly",
+    "category": "scheduling",
+    "websiteUrl": "https://calendly.com/",
+    "sources": [
+      "https://calendly.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "capacities-app",
+    "name": "Capacities",
+    "category": "knowledge",
+    "websiteUrl": "https://capacities.io/",
+    "sources": [
+      "https://capacities.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "cashapp-tax",
+    "name": "Cash App Taxes",
+    "category": "tax",
+    "websiteUrl": "https://cash.app/taxes",
+    "sources": [
+      "https://cash.app/taxes"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "causal",
+    "name": "Causal",
+    "category": "spreadsheets",
+    "websiteUrl": "https://www.lucanet.com/en/solutions/extended-planning-and-analysis/",
+    "sources": [
+      "https://www.lucanet.com/en/solutions/extended-planning-and-analysis/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "charisma",
+    "name": "Charisma",
+    "category": "gaming",
+    "websiteUrl": "https://charisma.ai/",
+    "sources": [
+      "https://charisma.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "chatbase",
+    "name": "Chatbase",
+    "category": "customer-support",
+    "websiteUrl": "https://www.chatbase.co/",
+    "sources": [
+      "https://www.chatbase.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "chatpdf",
+    "name": "ChatPDF",
+    "category": "research",
+    "websiteUrl": "https://www.chatpdf.com/",
+    "sources": [
+      "https://www.chatpdf.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "clearcover",
+    "name": "Clearcover",
+    "category": "insurance",
+    "websiteUrl": "https://clearcover.com/",
+    "sources": [
+      "https://clearcover.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "clearscope",
+    "name": "Clearscope",
+    "category": "seo",
+    "websiteUrl": "https://www.clearscope.io/",
+    "sources": [
+      "https://www.clearscope.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "clickup-app",
+    "name": "ClickUp",
+    "category": "productivity",
+    "websiteUrl": "https://clickup.com/",
+    "sources": [
+      "https://clickup.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "cline",
+    "name": "Cline",
+    "category": "coding-agents",
+    "websiteUrl": "https://cline.bot/",
+    "sources": [
+      "https://cline.bot/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "clipdrop",
+    "name": "Clipdrop",
+    "category": "image",
+    "websiteUrl": "https://clipdrop.co/",
+    "sources": [
+      "https://clipdrop.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "clockwise",
+    "name": "Clockwise",
+    "category": "scheduling",
+    "websiteUrl": "https://getclockwise.com/",
+    "sources": [
+      "https://getclockwise.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "coda-app",
+    "name": "Coda",
+    "category": "productivity",
+    "websiteUrl": "https://coda.io/",
+    "sources": [
+      "https://coda.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "codecademy-org",
+    "name": "Codecademy",
+    "category": "education",
+    "websiteUrl": "https://www.codecademy.com/",
+    "sources": [
+      "https://www.codecademy.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "codeium",
+    "name": "Windsurf",
+    "category": "coding-agents",
+    "websiteUrl": "https://devin.ai/desktop",
+    "sources": [
+      "https://devin.ai/desktop"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "collov",
+    "name": "Collov AI",
+    "category": "interior",
+    "websiteUrl": "https://collov.ai/",
+    "sources": [
+      "https://collov.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "colossyan",
+    "name": "Colossyan",
+    "category": "video",
+    "websiteUrl": "https://www.colossyan.com/",
+    "sources": [
+      "https://www.colossyan.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "column-tax",
+    "name": "Column Tax",
+    "category": "tax",
+    "websiteUrl": "https://www.columntax.com/",
+    "sources": [
+      "https://www.columntax.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "companycam-app",
+    "name": "CompanyCam",
+    "category": "construction",
+    "websiteUrl": "https://companycam.com/",
+    "sources": [
+      "https://companycam.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "connectedpapers",
+    "name": "Connected Papers",
+    "category": "research",
+    "websiteUrl": "https://www.connectedpapers.com/",
+    "sources": [
+      "https://www.connectedpapers.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "console",
+    "name": "Console",
+    "category": "it-support",
+    "websiteUrl": "https://www.console.com/",
+    "sources": [
+      "https://www.console.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "copilot-money",
+    "name": "Copilot Money",
+    "category": "investing",
+    "websiteUrl": "https://www.copilot.money/",
+    "sources": [
+      "https://www.copilot.money/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "corelogic-app",
+    "name": "CoreLogic",
+    "category": "real-estate",
+    "websiteUrl": "https://www.cotality.com/",
+    "sources": [
+      "https://www.cotality.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "coursera-org",
+    "name": "Coursera",
+    "category": "education",
+    "websiteUrl": "https://www.coursera.org/",
+    "sources": [
+      "https://www.coursera.org/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "creatify",
+    "name": "Creatify",
+    "category": "ads",
+    "websiteUrl": "https://creatify.ai/",
+    "sources": [
+      "https://creatify.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "cronometer",
+    "name": "Cronometer",
+    "category": "health-fitness",
+    "websiteUrl": "https://cronometer.com/",
+    "sources": [
+      "https://cronometer.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "crowdsec",
+    "name": "CrowdSec",
+    "category": "security",
+    "websiteUrl": "https://www.crowdsec.net/",
+    "sources": [
+      "https://www.crowdsec.net/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "customgpt",
+    "name": "CustomGPT",
+    "category": "customer-support",
+    "websiteUrl": "https://customgpt.ai/",
+    "sources": [
+      "https://customgpt.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "darrow",
+    "name": "Darrow",
+    "category": "legal",
+    "websiteUrl": "https://www.darrow.ai/",
+    "sources": [
+      "https://www.darrow.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "decktopus",
+    "name": "Decktopus",
+    "category": "presentations",
+    "websiteUrl": "https://www.decktopus.com/",
+    "sources": [
+      "https://www.decktopus.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "deel-hr",
+    "name": "Deel",
+    "category": "hr",
+    "websiteUrl": "https://www.deel.com/",
+    "sources": [
+      "https://www.deel.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "deepgram-ai",
+    "name": "Deepgram",
+    "category": "audio-voice",
+    "websiteUrl": "https://deepgram.com/",
+    "sources": [
+      "https://deepgram.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "deepl",
+    "name": "DeepL",
+    "category": "translation",
+    "websiteUrl": "https://www.deepl.com/en",
+    "sources": [
+      "https://www.deepl.com/en"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "describely",
+    "name": "Describely",
+    "category": "ecommerce",
+    "websiteUrl": "https://describely.ai/",
+    "sources": [
+      "https://describely.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "devin",
+    "name": "Devin",
+    "category": "coding-agents",
+    "websiteUrl": "https://devin.ai/",
+    "sources": [
+      "https://devin.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "digits",
+    "name": "Digits",
+    "category": "bookkeeping",
+    "websiteUrl": "https://digits.com/",
+    "sources": [
+      "https://digits.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "donorbox",
+    "name": "Donorbox",
+    "category": "nonprofit",
+    "websiteUrl": "https://donorbox.org/",
+    "sources": [
+      "https://donorbox.org/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "donotpay",
+    "name": "DoNotPay",
+    "category": "legal",
+    "websiteUrl": "https://donotpay.com/",
+    "sources": [
+      "https://donotpay.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "dubsado",
+    "name": "Dubsado",
+    "category": "small-business",
+    "websiteUrl": "https://www.dubsado.com/",
+    "sources": [
+      "https://www.dubsado.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "durable",
+    "name": "Durable",
+    "category": "ecommerce",
+    "websiteUrl": "https://durable.com/",
+    "sources": [
+      "https://durable.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "edx-org",
+    "name": "edX",
+    "category": "education",
+    "websiteUrl": "https://www.edx.org/",
+    "sources": [
+      "https://www.edx.org/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "efile-tax",
+    "name": "eFile",
+    "category": "tax",
+    "websiteUrl": "https://www.efile.com/",
+    "sources": [
+      "https://www.efile.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "elevenx",
+    "name": "11x",
+    "category": "sales",
+    "websiteUrl": "https://www.11x.ai/",
+    "sources": [
+      "https://www.11x.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "empower",
+    "name": "Empower Loan Origination",
+    "category": "mortgage",
+    "websiteUrl": "https://www.darkmatter.com/",
+    "sources": [
+      "https://www.darkmatter.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "enhancv",
+    "name": "Enhancv",
+    "category": "resumes",
+    "websiteUrl": "https://enhancv.com/",
+    "sources": [
+      "https://enhancv.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "equals",
+    "name": "Equals",
+    "category": "spreadsheets",
+    "websiteUrl": "https://equals.com/",
+    "sources": [
+      "https://equals.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "espocrm",
+    "name": "EspoCRM",
+    "category": "it-support",
+    "websiteUrl": "https://www.espocrm.com/",
+    "sources": [
+      "https://www.espocrm.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "evoto",
+    "name": "Evoto",
+    "category": "photography",
+    "websiteUrl": "https://www.evoto.ai/",
+    "sources": [
+      "https://www.evoto.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "exa",
+    "name": "Exa",
+    "category": "search-rag",
+    "websiteUrl": "https://exa.ai/",
+    "sources": [
+      "https://exa.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "expensify",
+    "name": "Expensify",
+    "category": "bookkeeping",
+    "websiteUrl": "https://www.expensify.com/",
+    "sources": [
+      "https://www.expensify.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "explainpaper",
+    "name": "Explainpaper",
+    "category": "research",
+    "websiteUrl": "https://www.explainpaper.com/",
+    "sources": [
+      "https://www.explainpaper.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "fathom",
+    "name": "Fathom",
+    "category": "meetings",
+    "websiteUrl": "https://www.fathom.ai/",
+    "sources": [
+      "https://www.fathom.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "feedhive",
+    "name": "FeedHive",
+    "category": "social",
+    "websiteUrl": "https://www.feedhive.com/",
+    "sources": [
+      "https://www.feedhive.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "fellow",
+    "name": "Fellow",
+    "category": "meetings",
+    "websiteUrl": "https://fellow.ai/",
+    "sources": [
+      "https://fellow.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "fieldwire-app",
+    "name": "Fieldwire",
+    "category": "construction",
+    "websiteUrl": "https://www.fieldwire.com/",
+    "sources": [
+      "https://www.fieldwire.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "figma",
+    "name": "Figma",
+    "category": "design",
+    "websiteUrl": "https://www.figma.com/",
+    "sources": [
+      "https://www.figma.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "finch3d",
+    "name": "Finch",
+    "category": "architecture",
+    "websiteUrl": "https://www.finch3d.com/",
+    "sources": [
+      "https://www.finch3d.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "fireworks-ai",
+    "name": "Fireworks",
+    "category": "dev-tools",
+    "websiteUrl": "https://fireworks.ai/",
+    "sources": [
+      "https://fireworks.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "fitbod",
+    "name": "Fitbod",
+    "category": "health-fitness",
+    "websiteUrl": "https://fitbod.me/",
+    "sources": [
+      "https://fitbod.me/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "fliki",
+    "name": "Fliki",
+    "category": "video",
+    "websiteUrl": "https://fliki.ai/",
+    "sources": [
+      "https://fliki.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "flowcv",
+    "name": "FlowCV",
+    "category": "resumes",
+    "websiteUrl": "https://flowcv.com/",
+    "sources": [
+      "https://flowcv.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "fluxx",
+    "name": "Fluxx",
+    "category": "nonprofit",
+    "websiteUrl": "https://www.fluxx.io/",
+    "sources": [
+      "https://www.fluxx.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "forethought",
+    "name": "Forethought",
+    "category": "customer-support",
+    "websiteUrl": "https://forethought.ai/",
+    "sources": [
+      "https://forethought.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "formulabot",
+    "name": "Formula Bot",
+    "category": "spreadsheets",
+    "websiteUrl": "https://betteranalyst.com/",
+    "sources": [
+      "https://betteranalyst.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "fotor",
+    "name": "Fotor",
+    "category": "photography",
+    "websiteUrl": "https://www.fotor.com/",
+    "sources": [
+      "https://www.fotor.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "framer",
+    "name": "Framer",
+    "category": "design",
+    "websiteUrl": "https://www.framer.com/",
+    "sources": [
+      "https://www.framer.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "frase",
+    "name": "Frase",
+    "category": "seo",
+    "websiteUrl": "https://www.frase.io/",
+    "sources": [
+      "https://www.frase.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "freshbooks",
+    "name": "FreshBooks",
+    "category": "bookkeeping",
+    "websiteUrl": "https://www.freshbooks.com/",
+    "sources": [
+      "https://www.freshbooks.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "freshdesk-help",
+    "name": "Freshdesk",
+    "category": "customer-support",
+    "websiteUrl": "https://www.freshworks.com/freshdesk/",
+    "sources": [
+      "https://www.freshworks.com/freshdesk/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "funraise",
+    "name": "Funraise",
+    "category": "nonprofit",
+    "websiteUrl": "https://www.funraise.org/",
+    "sources": [
+      "https://www.funraise.org/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "future",
+    "name": "Future",
+    "category": "health-fitness",
+    "websiteUrl": "https://future.co/",
+    "sources": [
+      "https://future.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "gavel",
+    "name": "Gavel",
+    "category": "legal",
+    "websiteUrl": "https://www.gavel.io/",
+    "sources": [
+      "https://www.gavel.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "getfloorplan",
+    "name": "GetFloorPlan",
+    "category": "architecture",
+    "websiteUrl": "https://getfloorplan.com/",
+    "sources": [
+      "https://getfloorplan.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "gigasheet",
+    "name": "Gigasheet",
+    "category": "spreadsheets",
+    "websiteUrl": "https://www.gigasheet.com/",
+    "sources": [
+      "https://www.gigasheet.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "gitbook",
+    "name": "GitBook",
+    "category": "dev-tools",
+    "websiteUrl": "https://www.gitbook.com/",
+    "sources": [
+      "https://www.gitbook.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "givebutter",
+    "name": "Givebutter",
+    "category": "nonprofit",
+    "websiteUrl": "https://givebutter.com/",
+    "sources": [
+      "https://givebutter.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "gong",
+    "name": "Gong",
+    "category": "sales",
+    "websiteUrl": "https://www.gong.io/",
+    "sources": [
+      "https://www.gong.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "gorgias",
+    "name": "Gorgias",
+    "category": "customer-support",
+    "websiteUrl": "https://www.gorgias.com/",
+    "sources": [
+      "https://www.gorgias.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "grain",
+    "name": "Grain",
+    "category": "meetings",
+    "websiteUrl": "https://grain.com/",
+    "sources": [
+      "https://grain.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "category": "writing",
+    "websiteUrl": "https://www.grammarly.com/",
+    "sources": [
+      "https://www.grammarly.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "grantable",
+    "name": "Grantable",
+    "category": "nonprofit",
+    "websiteUrl": "https://grantable.co/",
+    "sources": [
+      "https://grantable.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "greenhouse",
+    "name": "Greenhouse",
+    "category": "hr",
+    "websiteUrl": "https://www.greenhouse.com/",
+    "sources": [
+      "https://www.greenhouse.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "groq-ai",
+    "name": "Groq",
+    "category": "dev-tools",
+    "websiteUrl": "https://groq.com/",
+    "sources": [
+      "https://groq.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hailuo-ai",
+    "name": "Hailuo",
+    "category": "video",
+    "websiteUrl": "https://hailuoai.video/",
+    "sources": [
+      "https://hailuoai.video/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "harpa-ai",
+    "name": "HARPA",
+    "category": "browser-agents",
+    "websiteUrl": "https://harpa.ai/",
+    "sources": [
+      "https://harpa.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "harvey",
+    "name": "Harvey",
+    "category": "legal",
+    "websiteUrl": "https://www.harvey.ai/",
+    "sources": [
+      "https://www.harvey.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "havenly",
+    "name": "Havenly",
+    "category": "interior",
+    "websiteUrl": "https://havenly.com/",
+    "sources": [
+      "https://havenly.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "headspace",
+    "name": "Headspace",
+    "category": "health-fitness",
+    "websiteUrl": "https://www.headspace.com/",
+    "sources": [
+      "https://www.headspace.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hedra",
+    "name": "Hedra",
+    "category": "video",
+    "websiteUrl": "https://www.hedra.com/",
+    "sources": [
+      "https://www.hedra.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "helpscout",
+    "name": "Help Scout",
+    "category": "customer-support",
+    "websiteUrl": "https://www.helpscout.com/",
+    "sources": [
+      "https://www.helpscout.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "heptabase-app",
+    "name": "Heptabase",
+    "category": "knowledge",
+    "websiteUrl": "https://heptabase.com/",
+    "sources": [
+      "https://heptabase.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "higharc",
+    "name": "Higharc",
+    "category": "architecture",
+    "websiteUrl": "https://www.higharc.com/",
+    "sources": [
+      "https://www.higharc.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hippo",
+    "name": "Hippo",
+    "category": "insurance",
+    "websiteUrl": "https://www.hippo.com/",
+    "sources": [
+      "https://www.hippo.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hireez",
+    "name": "hireEZ",
+    "category": "hr",
+    "websiteUrl": "https://hireez.com/ez-agent/",
+    "sources": [
+      "https://hireez.com/ez-agent/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "honey",
+    "name": "PayPal Honey",
+    "category": "shopping",
+    "websiteUrl": "https://www.joinhoney.com/",
+    "sources": [
+      "https://www.joinhoney.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "honeybook",
+    "name": "HoneyBook",
+    "category": "small-business",
+    "websiteUrl": "https://www.honeybook.com/",
+    "sources": [
+      "https://www.honeybook.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "housecall",
+    "name": "Housecall Pro",
+    "category": "small-business",
+    "websiteUrl": "https://www.housecallpro.com/",
+    "sources": [
+      "https://www.housecallpro.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "housecanary-app",
+    "name": "HouseCanary",
+    "category": "real-estate",
+    "websiteUrl": "https://www.housecanary.com/",
+    "sources": [
+      "https://www.housecanary.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hover-app",
+    "name": "Hover",
+    "category": "construction",
+    "websiteUrl": "https://hover.to/",
+    "sources": [
+      "https://hover.to/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hubspot",
+    "name": "HubSpot",
+    "category": "sales",
+    "websiteUrl": "https://www.hubspot.com/",
+    "sources": [
+      "https://www.hubspot.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "huggingface-hub",
+    "name": "Hugging Face",
+    "category": "dev-tools",
+    "websiteUrl": "https://huggingface.co/",
+    "sources": [
+      "https://huggingface.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hunter",
+    "name": "Hunter",
+    "category": "sales",
+    "websiteUrl": "https://hunter.io/",
+    "sources": [
+      "https://hunter.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hunters",
+    "name": "Hunters",
+    "category": "security",
+    "websiteUrl": "https://www.hunters.security/",
+    "sources": [
+      "https://www.hunters.security/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hypar",
+    "name": "Hypar",
+    "category": "architecture",
+    "websiteUrl": "https://hypar.io/",
+    "sources": [
+      "https://hypar.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hyperwrite",
+    "name": "HyperWrite",
+    "category": "writing",
+    "websiteUrl": "https://www.hyperwriteai.com/",
+    "sources": [
+      "https://www.hyperwriteai.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "icedam",
+    "name": "Maxwell",
+    "category": "mortgage",
+    "websiteUrl": "https://himaxwell.com/",
+    "sources": [
+      "https://himaxwell.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "instrumental",
+    "name": "Snapsheet",
+    "category": "insurance",
+    "websiteUrl": "https://www.snapsheetclaims.com/",
+    "sources": [
+      "https://www.snapsheetclaims.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "instrumentl",
+    "name": "Instrumentl",
+    "category": "nonprofit",
+    "websiteUrl": "https://www.instrumentl.com/",
+    "sources": [
+      "https://www.instrumentl.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "invideo",
+    "name": "invideo AI",
+    "category": "video",
+    "websiteUrl": "https://invideo.io/",
+    "sources": [
+      "https://invideo.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ironclad",
+    "name": "Ironclad",
+    "category": "legal",
+    "websiteUrl": "https://ironcladapp.com/",
+    "sources": [
+      "https://ironcladapp.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "jacksonhewitt",
+    "name": "Jackson Hewitt",
+    "category": "tax",
+    "websiteUrl": "https://www.jacksonhewitt.com/",
+    "sources": [
+      "https://www.jacksonhewitt.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "jamie-meet",
+    "name": "Jamie",
+    "category": "meetings",
+    "websiteUrl": "https://www.meetjamie.ai/",
+    "sources": [
+      "https://www.meetjamie.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "juro",
+    "name": "Juro",
+    "category": "legal",
+    "websiteUrl": "https://juro.com/",
+    "sources": [
+      "https://juro.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kaedim",
+    "name": "Kaedim",
+    "category": "3d",
+    "websiteUrl": "https://www.kaedim3d.com/",
+    "sources": [
+      "https://www.kaedim3d.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kagi",
+    "name": "Kagi",
+    "category": "search-rag",
+    "websiteUrl": "https://kagi.com/",
+    "sources": [
+      "https://kagi.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kalepa",
+    "name": "Kalepa",
+    "category": "insurance",
+    "websiteUrl": "https://kalepa.com/",
+    "sources": [
+      "https://kalepa.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kayak-travel",
+    "name": "KAYAK",
+    "category": "travel",
+    "websiteUrl": "https://www.kayak.com/",
+    "sources": [
+      "https://www.kayak.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kittl",
+    "name": "Kittl",
+    "category": "design",
+    "websiteUrl": "https://www.kittl.com/",
+    "sources": [
+      "https://www.kittl.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "klarna",
+    "name": "Klarna",
+    "category": "shopping",
+    "websiteUrl": "https://www.klarna.com/us/?grs=%2F&grr=empty",
+    "sources": [
+      "https://www.klarna.com/us/?grs=%2F&grr=empty"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kling",
+    "name": "Kling AI",
+    "category": "video",
+    "websiteUrl": "https://kling.ai/",
+    "sources": [
+      "https://kling.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "knowt-app",
+    "name": "Knowt",
+    "category": "education",
+    "websiteUrl": "https://knowt.com/",
+    "sources": [
+      "https://knowt.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "koala",
+    "name": "Koala",
+    "category": "seo",
+    "websiteUrl": "https://koala.sh/",
+    "sources": [
+      "https://koala.sh/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "koyfin",
+    "name": "Koyfin",
+    "category": "investing",
+    "websiteUrl": "https://www.koyfin.com/",
+    "sources": [
+      "https://www.koyfin.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "krea",
+    "name": "Krea",
+    "category": "image",
+    "websiteUrl": "https://www.krea.ai/",
+    "sources": [
+      "https://www.krea.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kreo",
+    "name": "Kreo",
+    "category": "construction",
+    "websiteUrl": "https://www.kreo.net/",
+    "sources": [
+      "https://www.kreo.net/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "krisp",
+    "name": "Krisp",
+    "category": "audio-voice",
+    "websiteUrl": "https://krisp.ai/",
+    "sources": [
+      "https://krisp.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "landr",
+    "name": "LANDR",
+    "category": "music",
+    "websiteUrl": "https://www.landr.com/",
+    "sources": [
+      "https://www.landr.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "later",
+    "name": "Later",
+    "category": "social",
+    "websiteUrl": "https://later.com/",
+    "sources": [
+      "https://later.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lattice-hr",
+    "name": "Lattice",
+    "category": "hr",
+    "websiteUrl": "https://lattice.com/",
+    "sources": [
+      "https://lattice.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lavender",
+    "name": "Lavender",
+    "category": "sales",
+    "websiteUrl": "https://lavender.ai/",
+    "sources": [
+      "https://lavender.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "layer",
+    "name": "Layer AI",
+    "category": "gaming",
+    "websiteUrl": "https://layer.ai/",
+    "sources": [
+      "https://layer.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "layla",
+    "name": "Layla",
+    "category": "travel",
+    "websiteUrl": "https://layla.ai/",
+    "sources": [
+      "https://layla.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lemlist",
+    "name": "lemlist",
+    "category": "sales",
+    "websiteUrl": "https://www.lemlist.com/",
+    "sources": [
+      "https://www.lemlist.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lever",
+    "name": "Lever",
+    "category": "hr",
+    "websiteUrl": "https://www.lever.co/",
+    "sources": [
+      "https://www.lever.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "levity-ins",
+    "name": "Lemonade",
+    "category": "insurance",
+    "websiteUrl": "https://www.lemonade.com/",
+    "sources": [
+      "https://www.lemonade.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "limitless-ai",
+    "name": "Limitless",
+    "category": "meetings",
+    "websiteUrl": "https://www.limitless.ai/",
+    "sources": [
+      "https://www.limitless.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "linear",
+    "name": "Linear",
+    "category": "dev-tools",
+    "websiteUrl": "https://linear.app/",
+    "sources": [
+      "https://linear.app/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lm-studio",
+    "name": "LM Studio",
+    "category": "dev-tools",
+    "websiteUrl": "https://lmstudio.ai/",
+    "sources": [
+      "https://lmstudio.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "loan-complete",
+    "name": "Inscribe",
+    "category": "mortgage",
+    "websiteUrl": "https://www.inscribe.ai/",
+    "sources": [
+      "https://www.inscribe.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lokalise",
+    "name": "Lokalise",
+    "category": "translation",
+    "websiteUrl": "https://lokalise.com/",
+    "sources": [
+      "https://lokalise.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "loudly",
+    "name": "Loudly",
+    "category": "music",
+    "websiteUrl": "https://www.loudly.com/",
+    "sources": [
+      "https://www.loudly.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ltx-studio",
+    "name": "LTX Studio",
+    "category": "video",
+    "websiteUrl": "https://ltx.io/studio",
+    "sources": [
+      "https://ltx.io/studio"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "luma-dream",
+    "name": "Luma Dream Machine",
+    "category": "video",
+    "websiteUrl": "https://lumalabs.ai/app",
+    "sources": [
+      "https://lumalabs.ai/app"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "luminance",
+    "name": "Luminance",
+    "category": "legal",
+    "websiteUrl": "https://www.luminance.com/",
+    "sources": [
+      "https://www.luminance.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "luminar",
+    "name": "Luminar Neo",
+    "category": "photography",
+    "websiteUrl": "https://skylum.com/luminar",
+    "sources": [
+      "https://skylum.com/luminar"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "madgicx",
+    "name": "Madgicx",
+    "category": "ads",
+    "websiteUrl": "https://madgicx.com/",
+    "sources": [
+      "https://madgicx.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "magicplan-app",
+    "name": "magicplan",
+    "category": "construction",
+    "websiteUrl": "https://magicplan.app/",
+    "sources": [
+      "https://magicplan.app/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "maket",
+    "name": "Maket",
+    "category": "architecture",
+    "websiteUrl": "https://www.maket.ai/",
+    "sources": [
+      "https://www.maket.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "marketmuse",
+    "name": "MarketMuse",
+    "category": "seo",
+    "websiteUrl": "https://www.marketmuse.com/",
+    "sources": [
+      "https://www.marketmuse.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "material",
+    "name": "Material Security",
+    "category": "security",
+    "websiteUrl": "https://material.security/",
+    "sources": [
+      "https://material.security/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "meetgeek-ai",
+    "name": "MeetGeek",
+    "category": "meetings",
+    "websiteUrl": "https://meetgeek.ai/",
+    "sources": [
+      "https://meetgeek.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "melio",
+    "name": "Melio",
+    "category": "finance-ops",
+    "websiteUrl": "https://melio.com/",
+    "sources": [
+      "https://melio.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "memrise-lang",
+    "name": "Memrise",
+    "category": "education",
+    "websiteUrl": "https://www.memrise.com/",
+    "sources": [
+      "https://www.memrise.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mightycause",
+    "name": "Mightycause",
+    "category": "nonprofit",
+    "websiteUrl": "https://www.mightycause.com/",
+    "sources": [
+      "https://www.mightycause.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mintlify",
+    "name": "Mintlify",
+    "category": "dev-tools",
+    "websiteUrl": "https://www.mintlify.com/",
+    "sources": [
+      "https://www.mintlify.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mixo",
+    "name": "Mixo",
+    "category": "ecommerce",
+    "websiteUrl": "https://www.mixo.io/",
+    "sources": [
+      "https://www.mixo.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mode",
+    "name": "Mode",
+    "category": "data-analysis",
+    "websiteUrl": "https://mode.com/",
+    "sources": [
+      "https://mode.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "modernmt",
+    "name": "ModernMT",
+    "category": "translation",
+    "websiteUrl": "https://www.modernmt.com/",
+    "sources": [
+      "https://www.modernmt.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "moises",
+    "name": "Moises",
+    "category": "music",
+    "websiteUrl": "https://moises.ai/",
+    "sources": [
+      "https://moises.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "monarch",
+    "name": "Monarch Money",
+    "category": "investing",
+    "websiteUrl": "https://www.monarch.com/",
+    "sources": [
+      "https://www.monarch.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "monica-app",
+    "name": "Monica",
+    "category": "productivity",
+    "websiteUrl": "https://monica.im/",
+    "sources": [
+      "https://monica.im/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "motiff",
+    "name": "Motiff",
+    "category": "design",
+    "websiteUrl": "https://motiff.com/",
+    "sources": [
+      "https://motiff.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mubert",
+    "name": "Mubert",
+    "category": "music",
+    "websiteUrl": "https://mubert.com/",
+    "sources": [
+      "https://mubert.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "multion",
+    "name": "MultiOn",
+    "category": "browser-agents",
+    "websiteUrl": "https://theagi.company/",
+    "sources": [
+      "https://theagi.company/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "murf",
+    "name": "Murf",
+    "category": "audio-voice",
+    "websiteUrl": "https://murf.ai/",
+    "sources": [
+      "https://murf.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "myfitnesspal",
+    "name": "MyFitnessPal",
+    "category": "health-fitness",
+    "websiteUrl": "https://www.myfitnesspal.com/",
+    "sources": [
+      "https://www.myfitnesspal.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "navan-go",
+    "name": "Navan",
+    "category": "travel",
+    "websiteUrl": "https://navan.com/",
+    "sources": [
+      "https://navan.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "neuronwriter",
+    "name": "NeuronWriter",
+    "category": "seo",
+    "websiteUrl": "https://neuronwriter.com/",
+    "sources": [
+      "https://neuronwriter.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "novelai",
+    "name": "NovelAI",
+    "category": "writing",
+    "websiteUrl": "https://novelai.net/",
+    "sources": [
+      "https://novelai.net/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "novoresume",
+    "name": "Novoresume",
+    "category": "resumes",
+    "websiteUrl": "https://novoresume.com/",
+    "sources": [
+      "https://novoresume.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "nudge",
+    "name": "Nudge Security",
+    "category": "it-support",
+    "websiteUrl": "https://www.nudgesecurity.com/",
+    "sources": [
+      "https://www.nudgesecurity.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "obviously",
+    "name": "Obviously AI",
+    "category": "data-analysis",
+    "websiteUrl": "https://obviously.ai/",
+    "sources": [
+      "https://obviously.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ollama-ai",
+    "name": "Ollama",
+    "category": "dev-tools",
+    "websiteUrl": "https://ollama.com/",
+    "sources": [
+      "https://ollama.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "olt-tax",
+    "name": "OLT",
+    "category": "tax",
+    "websiteUrl": "https://www.olt.com/main/home/default.php",
+    "sources": [
+      "https://www.olt.com/main/home/default.php"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "omneky",
+    "name": "Omneky",
+    "category": "ads",
+    "websiteUrl": "https://www.omneky.com/",
+    "sources": [
+      "https://www.omneky.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "openrouter-ai",
+    "name": "OpenRouter",
+    "category": "dev-tools",
+    "websiteUrl": "https://openrouter.ai/",
+    "sources": [
+      "https://openrouter.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "openspace",
+    "name": "OpenSpace",
+    "category": "construction",
+    "websiteUrl": "https://www.openspace.ai/",
+    "sources": [
+      "https://www.openspace.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "oura",
+    "name": "Oura",
+    "category": "health-fitness",
+    "websiteUrl": "https://ouraring.com/",
+    "sources": [
+      "https://ouraring.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "outreach-io",
+    "name": "Outreach",
+    "category": "sales",
+    "websiteUrl": "https://www.outreach.ai/",
+    "sources": [
+      "https://www.outreach.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "paxton",
+    "name": "Paxton",
+    "category": "legal",
+    "websiteUrl": "https://www.paxton.ai/",
+    "sources": [
+      "https://www.paxton.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "peloton-fit",
+    "name": "Peloton",
+    "category": "health-fitness",
+    "websiteUrl": "https://www.onepeloton.com/",
+    "sources": [
+      "https://www.onepeloton.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pencil",
+    "name": "Pencil",
+    "category": "ads",
+    "websiteUrl": "https://trypencil.com/",
+    "sources": [
+      "https://trypencil.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "perplexity-shop",
+    "name": "Phia",
+    "category": "shopping",
+    "websiteUrl": "https://phia.com/",
+    "sources": [
+      "https://phia.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "photomath",
+    "name": "Photomath",
+    "category": "education",
+    "websiteUrl": "https://photomath.com/",
+    "sources": [
+      "https://photomath.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "photoroom",
+    "name": "PhotoRoom",
+    "category": "image",
+    "websiteUrl": "https://www.photoroom.com/",
+    "sources": [
+      "https://www.photoroom.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "phrase",
+    "name": "Phrase",
+    "category": "translation",
+    "websiteUrl": "https://phrase.com/",
+    "sources": [
+      "https://phrase.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "picsart",
+    "name": "Picsart",
+    "category": "photography",
+    "websiteUrl": "https://picsart.com/",
+    "sources": [
+      "https://picsart.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pigment",
+    "name": "Pigment",
+    "category": "spreadsheets",
+    "websiteUrl": "https://www.pigment.com/",
+    "sources": [
+      "https://www.pigment.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pilot",
+    "name": "Pilot",
+    "category": "bookkeeping",
+    "websiteUrl": "https://pilot.com/",
+    "sources": [
+      "https://pilot.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pipedream",
+    "name": "Pipedream",
+    "category": "workflow-automation",
+    "websiteUrl": "https://pipedream.com/",
+    "sources": [
+      "https://pipedream.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pitch",
+    "name": "Pitch",
+    "category": "presentations",
+    "websiteUrl": "https://pitch.com/",
+    "sources": [
+      "https://pitch.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pixelcut",
+    "name": "Pixelcut",
+    "category": "ecommerce",
+    "websiteUrl": "https://www.pixelcut.ai/",
+    "sources": [
+      "https://www.pixelcut.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "plus-ai",
+    "name": "Plus AI",
+    "category": "presentations",
+    "websiteUrl": "https://plusai.com/",
+    "sources": [
+      "https://plusai.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "podcastle",
+    "name": "Podcastle",
+    "category": "audio-voice",
+    "websiteUrl": "https://async.com/",
+    "sources": [
+      "https://async.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "podium",
+    "name": "Podium",
+    "category": "small-business",
+    "websiteUrl": "https://www.podium.com/",
+    "sources": [
+      "https://www.podium.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "polycam",
+    "name": "Polycam",
+    "category": "3d",
+    "websiteUrl": "https://poly.cam/",
+    "sources": [
+      "https://poly.cam/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "postman",
+    "name": "Postman",
+    "category": "dev-tools",
+    "websiteUrl": "https://www.postman.com/",
+    "sources": [
+      "https://www.postman.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "procore",
+    "name": "Procore",
+    "category": "construction",
+    "websiteUrl": "https://www.procore.com/",
+    "sources": [
+      "https://www.procore.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "projectionlab",
+    "name": "ProjectionLab",
+    "category": "investing",
+    "websiteUrl": "https://projectionlab.com/",
+    "sources": [
+      "https://projectionlab.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "promethean",
+    "name": "Promethean AI",
+    "category": "gaming",
+    "websiteUrl": "https://www.prometheanai.com/",
+    "sources": [
+      "https://www.prometheanai.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "prowritingaid",
+    "name": "ProWritingAid",
+    "category": "writing",
+    "websiteUrl": "https://prowritingaid.com/",
+    "sources": [
+      "https://prowritingaid.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "qbiq",
+    "name": "qbiq",
+    "category": "architecture",
+    "websiteUrl": "https://www.qbiq.ai/",
+    "sources": [
+      "https://www.qbiq.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "readai",
+    "name": "Read AI",
+    "category": "meetings",
+    "websiteUrl": "https://www.read.ai/",
+    "sources": [
+      "https://www.read.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "readme",
+    "name": "ReadMe",
+    "category": "dev-tools",
+    "websiteUrl": "https://readme.com/",
+    "sources": [
+      "https://readme.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "recraft",
+    "name": "Recraft",
+    "category": "image",
+    "websiteUrl": "https://www.recraft.ai/",
+    "sources": [
+      "https://www.recraft.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "reflect-app",
+    "name": "Reflect",
+    "category": "knowledge",
+    "websiteUrl": "https://reflect.app/",
+    "sources": [
+      "https://reflect.app/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "relume",
+    "name": "Relume",
+    "category": "design",
+    "websiteUrl": "https://www.relume.ai/",
+    "sources": [
+      "https://www.relume.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "remote-hr",
+    "name": "Remote",
+    "category": "hr",
+    "websiteUrl": "https://remote.com/",
+    "sources": [
+      "https://remote.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "replicate-ai",
+    "name": "Replicate",
+    "category": "dev-tools",
+    "websiteUrl": "https://replicate.com/",
+    "sources": [
+      "https://replicate.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "researchrabbit",
+    "name": "ResearchRabbit",
+    "category": "research",
+    "websiteUrl": "https://www.researchrabbit.ai/",
+    "sources": [
+      "https://www.researchrabbit.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "resemble",
+    "name": "Resemble AI",
+    "category": "audio-voice",
+    "websiteUrl": "https://www.resemble.ai/",
+    "sources": [
+      "https://www.resemble.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "resume-worded",
+    "name": "Resume Worded",
+    "category": "resumes",
+    "websiteUrl": "https://resumeworded.com/",
+    "sources": [
+      "https://resumeworded.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rev-com",
+    "name": "Rev",
+    "category": "audio-voice",
+    "websiteUrl": "https://www.rev.com/",
+    "sources": [
+      "https://www.rev.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rippling-hr",
+    "name": "Rippling",
+    "category": "hr",
+    "websiteUrl": "https://www.rippling.com/",
+    "sources": [
+      "https://www.rippling.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "riverside-fm",
+    "name": "Riverside",
+    "category": "audio-voice",
+    "websiteUrl": "https://riverside.com/",
+    "sources": [
+      "https://riverside.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rodin",
+    "name": "Rodin",
+    "category": "3d",
+    "websiteUrl": "https://hyper3d.ai/",
+    "sources": [
+      "https://hyper3d.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "roofr-app",
+    "name": "Roofr",
+    "category": "construction",
+    "websiteUrl": "https://roofr.com/",
+    "sources": [
+      "https://roofr.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "roomstyler",
+    "name": "Roomstyler",
+    "category": "interior",
+    "websiteUrl": "https://roomstyler.com/",
+    "sources": [
+      "https://roomstyler.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "root",
+    "name": "Root Insurance",
+    "category": "insurance",
+    "websiteUrl": "https://www.joinroot.com/",
+    "sources": [
+      "https://www.joinroot.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rosebud",
+    "name": "Rosebud AI",
+    "category": "gaming",
+    "websiteUrl": "https://rosebud.ai/",
+    "sources": [
+      "https://rosebud.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "runna",
+    "name": "Runna",
+    "category": "health-fitness",
+    "websiteUrl": "https://www.runna.com/",
+    "sources": [
+      "https://www.runna.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rytr",
+    "name": "Rytr",
+    "category": "writing",
+    "websiteUrl": "https://rytr.me/",
+    "sources": [
+      "https://rytr.me/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "safetyculture-app",
+    "name": "SafetyCulture",
+    "category": "construction",
+    "websiteUrl": "https://mitti.com/",
+    "sources": [
+      "https://mitti.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "salesloft",
+    "name": "Salesloft",
+    "category": "sales",
+    "websiteUrl": "https://www.salesloft.com/",
+    "sources": [
+      "https://www.salesloft.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sanebox",
+    "name": "SaneBox",
+    "category": "email",
+    "websiteUrl": "https://www.sanebox.com/",
+    "sources": [
+      "https://www.sanebox.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "savvycal",
+    "name": "SavvyCal",
+    "category": "scheduling",
+    "websiteUrl": "https://savvycal.com/",
+    "sources": [
+      "https://savvycal.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "scalenut",
+    "name": "Scalenut",
+    "category": "seo",
+    "websiteUrl": "https://www.scalenut.com/",
+    "sources": [
+      "https://www.scalenut.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "scite",
+    "name": "scite",
+    "category": "research",
+    "websiteUrl": "https://scite.ai/",
+    "sources": [
+      "https://scite.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "seaart-ai",
+    "name": "SeaArt",
+    "category": "image",
+    "websiteUrl": "https://www.seaart.ai/",
+    "sources": [
+      "https://www.seaart.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "semrush",
+    "name": "Semrush",
+    "category": "seo",
+    "websiteUrl": "https://www.semrush.com/",
+    "sources": [
+      "https://www.semrush.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sendsteps",
+    "name": "Sendsteps",
+    "category": "presentations",
+    "websiteUrl": "https://www.sendsteps.com/en/",
+    "sources": [
+      "https://www.sendsteps.com/en/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sentry",
+    "name": "Sentry",
+    "category": "dev-tools",
+    "websiteUrl": "https://sentry.io/welcome/",
+    "sources": [
+      "https://sentry.io/welcome/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "servicetitan",
+    "name": "ServiceTitan",
+    "category": "small-business",
+    "websiteUrl": "https://www.servicetitan.com/",
+    "sources": [
+      "https://www.servicetitan.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "shift",
+    "name": "Shift Technology",
+    "category": "insurance",
+    "websiteUrl": "https://www.shift-technology.com/",
+    "sources": [
+      "https://www.shift-technology.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "shopify-magic",
+    "name": "Shopify Magic",
+    "category": "ecommerce",
+    "websiteUrl": "https://www.shopify.com/sidekick",
+    "sources": [
+      "https://www.shopify.com/sidekick"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sigma",
+    "name": "Sigma",
+    "category": "data-analysis",
+    "websiteUrl": "https://www.sigmacomputing.com/",
+    "sources": [
+      "https://www.sigmacomputing.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "slickdeals",
+    "name": "Slickdeals",
+    "category": "shopping",
+    "websiteUrl": "https://slickdeals.net/",
+    "sources": [
+      "https://slickdeals.net/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "slidesgo",
+    "name": "Slidesgo",
+    "category": "presentations",
+    "websiteUrl": "https://slidesgo.com/",
+    "sources": [
+      "https://slidesgo.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "smartling",
+    "name": "Smartling",
+    "category": "translation",
+    "websiteUrl": "https://www.smartling.com/",
+    "sources": [
+      "https://www.smartling.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "smartly",
+    "name": "Smartly",
+    "category": "ads",
+    "websiteUrl": "https://www.smartly.io/",
+    "sources": [
+      "https://www.smartly.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "socialbee",
+    "name": "SocialBee",
+    "category": "social",
+    "websiteUrl": "https://socialbee.com/",
+    "sources": [
+      "https://socialbee.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sonix-ai",
+    "name": "Sonix",
+    "category": "audio-voice",
+    "websiteUrl": "https://sonix.ai/",
+    "sources": [
+      "https://sonix.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "soundraw",
+    "name": "Soundraw",
+    "category": "music",
+    "websiteUrl": "https://soundraw.io/",
+    "sources": [
+      "https://soundraw.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sourcegraph",
+    "name": "Sourcegraph Cody",
+    "category": "dev-tools",
+    "websiteUrl": "https://sourcegraph.com/docs/cody",
+    "sources": [
+      "https://sourcegraph.com/docs/cody"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "speak-lang",
+    "name": "Speak",
+    "category": "education",
+    "websiteUrl": "https://www.speak.com/",
+    "sources": [
+      "https://www.speak.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "speechify",
+    "name": "Speechify",
+    "category": "audio-voice",
+    "websiteUrl": "https://speechify.com/",
+    "sources": [
+      "https://speechify.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "spellbook",
+    "name": "Spellbook",
+    "category": "legal",
+    "websiteUrl": "https://spellbook.com/",
+    "sources": [
+      "https://spellbook.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "spline",
+    "name": "Spline",
+    "category": "3d",
+    "websiteUrl": "https://spline.design/",
+    "sources": [
+      "https://spline.design/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sprout",
+    "name": "Sprout Social",
+    "category": "social",
+    "websiteUrl": "https://sproutsocial.com/",
+    "sources": [
+      "https://sproutsocial.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "stability",
+    "name": "Stability AI",
+    "category": "image",
+    "websiteUrl": "https://stability.ai/",
+    "sources": [
+      "https://stability.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "stagehand",
+    "name": "Stagehand",
+    "category": "browser-agents",
+    "websiteUrl": "https://www.stagehand.dev/",
+    "sources": [
+      "https://www.stagehand.dev/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "starry-ai",
+    "name": "starryai",
+    "category": "image",
+    "websiteUrl": "https://starryai.com/",
+    "sources": [
+      "https://starryai.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "steve-ai",
+    "name": "Steve AI",
+    "category": "video",
+    "websiteUrl": "https://www.steve.ai/",
+    "sources": [
+      "https://www.steve.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "strava",
+    "name": "Strava",
+    "category": "health-fitness",
+    "websiteUrl": "https://www.strava.com/",
+    "sources": [
+      "https://www.strava.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "submagic",
+    "name": "Submagic",
+    "category": "social",
+    "websiteUrl": "https://www.submagic.co/",
+    "sources": [
+      "https://www.submagic.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "substack",
+    "name": "Substack",
+    "category": "small-business",
+    "websiteUrl": "https://substack.com/",
+    "sources": [
+      "https://substack.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sudowrite",
+    "name": "Sudowrite",
+    "category": "writing",
+    "websiteUrl": "https://sudowrite.com/",
+    "sources": [
+      "https://sudowrite.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "suno",
+    "name": "Suno",
+    "category": "music",
+    "websiteUrl": "https://suno.com/",
+    "sources": [
+      "https://suno.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sunsama",
+    "name": "Sunsama",
+    "category": "scheduling",
+    "websiteUrl": "https://www.sunsama.com/",
+    "sources": [
+      "https://www.sunsama.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "surfer",
+    "name": "Surfer",
+    "category": "seo",
+    "websiteUrl": "https://surfer.ai/",
+    "sources": [
+      "https://surfer.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "swapp",
+    "name": "SWAPP",
+    "category": "architecture",
+    "websiteUrl": "https://swapp.ai/",
+    "sources": [
+      "https://swapp.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "symbolab-app",
+    "name": "Symbolab",
+    "category": "education",
+    "websiteUrl": "https://www.symbolab.com/",
+    "sources": [
+      "https://www.symbolab.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "tabnine",
+    "name": "Tabnine",
+    "category": "coding-agents",
+    "websiteUrl": "https://www.tricentis.com/products?utm_source=www.tabnine.com&utm_medium=referral&utm_campaign=redirect",
+    "sources": [
+      "https://www.tricentis.com/products?utm_source=www.tabnine.com&utm_medium=referral&utm_campaign=redirect"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "tana-app",
+    "name": "Tana",
+    "category": "knowledge",
+    "websiteUrl": "https://tana.inc/",
+    "sources": [
+      "https://tana.inc/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "taplio",
+    "name": "Taplio",
+    "category": "social",
+    "websiteUrl": "https://taplio.com/",
+    "sources": [
+      "https://taplio.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "taskade-app",
+    "name": "Taskade",
+    "category": "productivity",
+    "websiteUrl": "https://www.taskade.com/",
+    "sources": [
+      "https://www.taskade.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "testfit",
+    "name": "TestFit",
+    "category": "architecture",
+    "websiteUrl": "https://www.testfit.io/",
+    "sources": [
+      "https://www.testfit.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "textio",
+    "name": "Textio",
+    "category": "hr",
+    "websiteUrl": "https://textio.com/",
+    "sources": [
+      "https://textio.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "thoughtspot",
+    "name": "ThoughtSpot",
+    "category": "data-analysis",
+    "websiteUrl": "https://www.thoughtspot.com/",
+    "sources": [
+      "https://www.thoughtspot.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "tidio",
+    "name": "Tidio",
+    "category": "customer-support",
+    "websiteUrl": "https://www.tidio.com/",
+    "sources": [
+      "https://www.tidio.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "tldv",
+    "name": "tl;dv",
+    "category": "meetings",
+    "websiteUrl": "https://tldv.io/",
+    "sources": [
+      "https://tldv.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "todoist-app",
+    "name": "Todoist",
+    "category": "productivity",
+    "websiteUrl": "https://www.todoist.com/",
+    "sources": [
+      "https://www.todoist.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "together-ai",
+    "name": "Together AI",
+    "category": "dev-tools",
+    "websiteUrl": "https://www.together.ai/",
+    "sources": [
+      "https://www.together.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "topaz",
+    "name": "Topaz Photo AI",
+    "category": "photography",
+    "websiteUrl": "https://www.topazlabs.com/topaz-photo",
+    "sources": [
+      "https://www.topazlabs.com/topaz-photo"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "tractable",
+    "name": "Tractable",
+    "category": "insurance",
+    "websiteUrl": "https://tractable.ai/",
+    "sources": [
+      "https://tractable.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "travelperk-go",
+    "name": "TravelPerk",
+    "category": "travel",
+    "websiteUrl": "https://www.perk.com/",
+    "sources": [
+      "https://www.perk.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "trendspider",
+    "name": "TrendSpider",
+    "category": "investing",
+    "websiteUrl": "https://trendspider.com/",
+    "sources": [
+      "https://trendspider.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "tripnotes",
+    "name": "Roam Around",
+    "category": "travel",
+    "websiteUrl": "https://roamaround.app/",
+    "sources": [
+      "https://roamaround.app/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "typefully",
+    "name": "Typefully",
+    "category": "social",
+    "websiteUrl": "https://typefully.com/",
+    "sources": [
+      "https://typefully.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "typingmind-app",
+    "name": "TypingMind",
+    "category": "productivity",
+    "websiteUrl": "https://www.typingmind.com/",
+    "sources": [
+      "https://www.typingmind.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "uizard",
+    "name": "Uizard",
+    "category": "design",
+    "websiteUrl": "https://uizard.io/",
+    "sources": [
+      "https://uizard.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "unbabel",
+    "name": "Unbabel",
+    "category": "translation",
+    "websiteUrl": "https://unbabel.com/",
+    "sources": [
+      "https://unbabel.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "v0-dev",
+    "name": "v0",
+    "category": "design",
+    "websiteUrl": "https://v0.app/",
+    "sources": [
+      "https://v0.app/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "veed",
+    "name": "VEED",
+    "category": "video",
+    "websiteUrl": "https://www.veed.io/",
+    "sources": [
+      "https://www.veed.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "viggle-ai",
+    "name": "Viggle",
+    "category": "video",
+    "websiteUrl": "https://viggle.ai/",
+    "sources": [
+      "https://viggle.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "vizard",
+    "name": "Vizard",
+    "category": "social",
+    "websiteUrl": "https://vizard.ai/",
+    "sources": [
+      "https://vizard.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wanderlog-go",
+    "name": "Wanderlog",
+    "category": "travel",
+    "websiteUrl": "https://wanderlog.com/",
+    "sources": [
+      "https://wanderlog.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wave",
+    "name": "Wave",
+    "category": "bookkeeping",
+    "websiteUrl": "https://www.waveapps.com/",
+    "sources": [
+      "https://www.waveapps.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wellsaid",
+    "name": "WellSaid",
+    "category": "audio-voice",
+    "websiteUrl": "https://www.wellsaid.io/",
+    "sources": [
+      "https://www.wellsaid.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "windmill",
+    "name": "Windmill",
+    "category": "workflow-automation",
+    "websiteUrl": "https://www.windmill.dev/",
+    "sources": [
+      "https://www.windmill.dev/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wisecut-video",
+    "name": "Wisecut",
+    "category": "video",
+    "websiteUrl": "https://wisecut.ai/",
+    "sources": [
+      "https://wisecut.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wolfram-app",
+    "name": "Wolfram Alpha",
+    "category": "education",
+    "websiteUrl": "https://www.wolframalpha.com/",
+    "sources": [
+      "https://www.wolframalpha.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wordtune",
+    "name": "Wordtune",
+    "category": "writing",
+    "websiteUrl": "https://www.wordtune.com/",
+    "sources": [
+      "https://www.wordtune.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "workable",
+    "name": "Workable",
+    "category": "hr",
+    "websiteUrl": "https://www.workable.com/",
+    "sources": [
+      "https://www.workable.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "writer",
+    "name": "Writer",
+    "category": "writing",
+    "websiteUrl": "https://writer.com/",
+    "sources": [
+      "https://writer.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "xero",
+    "name": "Xero",
+    "category": "bookkeeping",
+    "websiteUrl": "https://www.xero.com/us/",
+    "sources": [
+      "https://www.xero.com/us/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ynab",
+    "name": "YNAB",
+    "category": "investing",
+    "websiteUrl": "https://www.ynab.com/",
+    "sources": [
+      "https://www.ynab.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "zed-editor",
+    "name": "Zed",
+    "category": "coding-agents",
+    "websiteUrl": "https://zed.dev/",
+    "sources": [
+      "https://zed.dev/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  }
+]

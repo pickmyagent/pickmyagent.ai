@@ -22,7 +22,7 @@
     "free",
     "subscription"
   ],
-  "pricingNotes": "Catalyst $25 one-time optional; Commercial $50/user/year optional.",
+  "pricingNotes": "Catalyst $25 one-time optional, Commercial $50/user/year optional.",
   "pricingUrl": "https://obsidian.md/pricing",
   "docsUrl": "https://help.obsidian.md/",
   "freeTier": true,
@@ -68,5 +68,15 @@
   },
   "useCaseFit": {
     "meetings-knowledge": "Local-first notes app that the official pricing page says is free without limits."
-  }
+  },
+  "capabilities": [
+    "help people who want the app itself without a subscription",
+    "work from personal or team notes that live in local files",
+    "work from people who want the app itself without a subscription",
+    "work from local-first notes app. official pricing says the app is free without limits. sync and publish are paid",
+    "help people who want the app itself without the subscription",
+    "help people who want a app itself without a subscription",
+    "work from people who want the app itself without the subscription",
+    "work from people who want a app itself without a subscription"
+  ]
 }

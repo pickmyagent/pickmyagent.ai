@@ -1,0 +1,78 @@
+{
+  "id": "viggle-ai",
+  "slug": "viggle-ai",
+  "name": "Viggle",
+  "websiteUrl": "https://viggle.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Viggle can generate a video from a prompt.",
+  "longDescription": "Viggle can generate a video from a prompt. It can also edit a video.",
+  "categories": [
+    "video"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://viggle.ai/",
+  "docsUrl": "https://viggle.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generate a video from a prompt",
+    "Edit a video"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Viggle can generate a video from a prompt.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://viggle.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://viggle.ai/"
+  },
+  "capabilities": [
+    "generate a video from a prompt",
+    "edit a video",
+    "turn an image into a video",
+    "create what moves you",
+    "create videos, memes, and social content built to be shared",
+    "create videos, memes,",
+    "turn a ideas into expressive videos that feel timely, entertaining,",
+    "mix multi-editor live games play games play games play it",
+    "build character swapping, motion capture, and interactive experiences into games, creative tools, and applications with viggle's api",
+    "build character swapping, motion capture,",
+    "use the spatial genai platform behind pinoc",
+    "use meme maker"
+  ]
+}

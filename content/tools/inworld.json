@@ -21,7 +21,7 @@
   "pricingModel": [
     "freemium"
   ],
-  "pricingNotes": "Paid usage samples also present; confirm free allotment.",
+  "pricingNotes": "Paid usage samples also present, confirm free allotment.",
   "pricingUrl": "https://inworld.ai/pricing",
   "docsUrl": "https://docs.inworld.ai/",
   "freeTier": true,
@@ -67,5 +67,16 @@
   },
   "useCaseFit": {
     "game-npcs": "Character dialogue for games, with an On-Demand plan that starts at $0."
-  }
+  },
+  "capabilities": [
+    "build for a game characters with dialogue",
+    "help teams that want a hosted character stack and docs",
+    "help teams that want a hosted character stack",
+    "work from game characters with dialogue",
+    "work from teams that want a hosted character stack and docs",
+    "work from character ai for games and interactive agents",
+    "work from on-demand plan is to start, then you pay as you go for game character dialogue",
+    "work from builds character ai for games and interactive experiences",
+    "build for the game characters with dialogue"
+  ]
 }

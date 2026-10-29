@@ -68,5 +68,19 @@
     "finance-ops": "Lists invoicing, accounts-payable controls, and spend and expense tools.",
     "bookkeeping": "Sends invoices and tracks bills next to the books.",
     "run-a-business": "Sends customer invoices and pays vendor bills for a small business."
-  }
+  },
+  "capabilities": [
+    "use invoicing, accounts-payable controls, and spend and expense tools",
+    "use accounts-payable controls",
+    "use expense tools",
+    "send invoices and tracks bills next to the books",
+    "send tracks bills next to the books",
+    "send customer invoices and pays vendor bills for a small business",
+    "send pays vendor bills for a small business",
+    "work from paying bills and sending invoices in one payables product",
+    "work from invoicing, ap controls, and spend tools, plus an ai api",
+    "work from bill's product page lists invoicing, ap controls, spend and expense, and an ai api",
+    "work from bill's product page lists invoicing, ap controls, spend and expense, payments, and an ai api",
+    "send invoices and tracks bills next to a books"
+  ]
 }

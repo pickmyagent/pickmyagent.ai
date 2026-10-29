@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "hire-candidates": "Free hiring plan with AI sourcing for the first 100 profiles and a notetaker."
-  }
+  },
+  "capabilities": [
+    "use a free plan at $0 per user per month and ai sourcing with the first 100 profiles free",
+    "use ai sourcing with the first 100 profiles free",
+    "work from sourcing profiles and taking interview notes on a free plan",
+    "work from hiring agents for sourcing and interview notes. free is per user",
+    "use the free plan at $0 per user per month and ai sourcing with the first 100 profiles free",
+    "use a free plan at $0 per user per month and ai sourcing with a first 100 profiles free",
+    "use ai sourcing with a first 100 profiles free",
+    "work from sourcing profiles and taking interview notes on the free plan"
+  ]
 }

@@ -66,5 +66,17 @@
   "useCaseFit": {
     "find-land": "Shows parcel maps and basic insights on a free account, with owner lookup on Plus.",
     "real-estate": "Shows parcel maps and basic land insights before an owner lookup."
-  }
+  },
+  "capabilities": [
+    "show parcel maps and basic insights on a free account, with owner lookup on plus",
+    "show with owner lookup on plus",
+    "show parcel maps and basic land insights before an owner lookup",
+    "show basic land insights before an owner lookup",
+    "look up parcels and basic property insights before a paid owner search",
+    "look basic property insights before a paid owner search",
+    "work from looking up parcels and basic property insights before a paid owner search",
+    "work from parcel maps for land. a free account exists. plus is per month",
+    "work from free account can view basic parcel insights, and plus is listed at per month",
+    "show parcel maps and basic insights on the free account, with owner lookup on plus"
+  ]
 }

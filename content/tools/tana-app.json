@@ -1,0 +1,78 @@
+{
+  "id": "tana-app",
+  "slug": "tana-app",
+  "name": "Tana",
+  "websiteUrl": "https://tana.inc/",
+  "affiliateUrl": null,
+  "shortDescription": "Tana can ask a question over docs.",
+  "longDescription": "Tana can ask a question over docs. It can also capture a note.",
+  "categories": [
+    "knowledge"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://tana.inc/",
+  "docsUrl": "https://tana.inc/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Ask a question over docs",
+    "Capture a note"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Tana can ask a question over docs for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://tana.inc/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://tana.inc/"
+  },
+  "capabilities": [
+    "ask a question over docs",
+    "capture a note",
+    "send when you're happy with it",
+    "draft frame in paper \u00b7 shared in the meeting priya\u2019s claude \u00b7 figma landing page \u00b7 hero",
+    "find out why the csv export failed this morning",
+    "use tana is an agentic meeting platform",
+    "use work gets done in the meeting",
+    "use agents create documents",
+    "use and each meeting makes future meetings smarter",
+    "use always up to date context private by default",
+    "use it is a separate product from tana outliner",
+    "use the work gets done while you"
+  ]
+}

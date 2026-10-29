@@ -1,0 +1,73 @@
+{
+  "id": "melio",
+  "slug": "melio",
+  "name": "Melio",
+  "websiteUrl": "https://melio.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Melio can pay a vendor bill.",
+  "longDescription": "Melio can pay a vendor bill. It can also schedule a bill payment.",
+  "categories": [
+    "finance-ops"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://melio.com/",
+  "docsUrl": "https://melio.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Pay a vendor bill",
+    "Schedule a bill payment"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Melio can pay a vendor bill for this kind of work.",
+  "weakness": "You still review the books before you close the period.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://melio.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://melio.com/"
+  },
+  "capabilities": [
+    "pay a vendor bill",
+    "schedule a bill payment",
+    "sync payments to accounting",
+    "pay an international vendor",
+    "track accounts payable",
+    "capture receipts in real time",
+    "send invoices and receive payments online"
+  ]
+}

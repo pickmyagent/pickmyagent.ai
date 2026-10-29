@@ -81,5 +81,12 @@
   },
   "useCaseFit": {
     "multi-agent-workflows": "Open-source library for agents that call tools in code you write."
-  }
+  },
+  "capabilities": [
+    "help teams that want run traces via langsmith",
+    "work from developers composing agent workflows in code",
+    "work from teams that want run traces via langsmith",
+    "work from open-source libraries for agents, chains, and tool calling, plus optional langsmith traces",
+    "work from 1.4.6 includes composing tool-calling workflows in code"
+  ]
 }

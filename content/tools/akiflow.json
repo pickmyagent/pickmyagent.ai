@@ -1,0 +1,78 @@
+{
+  "id": "akiflow",
+  "slug": "akiflow",
+  "name": "Akiflow",
+  "websiteUrl": "https://akiflow.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Akiflow can schedule focus time.",
+  "longDescription": "Akiflow can schedule focus time. It can also use akiflow brings tasks.",
+  "categories": [
+    "scheduling"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://akiflow.com/",
+  "docsUrl": "https://akiflow.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Schedule focus time",
+    "Use akiflow brings tasks"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Akiflow can schedule focus time for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://akiflow.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://akiflow.com/"
+  },
+  "capabilities": [
+    "schedule focus time",
+    "use akiflow brings tasks",
+    "use ai into one time-blocking planner",
+    "use time-blocking digital planner & calendar akiflow brings tasks",
+    "use time-blocking digital planner & calendar akiflow",
+    "use time-blocking digital planner & calendar html",
+    "use inter placeholder",
+    "use current a div span",
+    "use current a span span span",
+    "use current a p span span",
+    "use current a h1 span span",
+    "use current a h2 span span"
+  ]
+}

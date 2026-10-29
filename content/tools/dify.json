@@ -78,5 +78,15 @@
   },
   "useCaseFit": {
     "multi-agent-workflows": "Visual builder for agent workflows, with a self-hosted community edition."
-  }
+  },
+  "capabilities": [
+    "help teams who want a visual agent builder they can self-host",
+    "work from teams who want a visual agent builder they can self-host",
+    "work from projects that need a product ui, not only a library",
+    "work from open-source platform to build agent workflows visually, with a self-hosted community edition",
+    "work from there is a self-hosted community edition, and the cloud free plan includes 200 message credits",
+    "help teams who want the visual agent builder they can self-host",
+    "work from teams who want the visual agent builder they can self-host",
+    "work from projects that need the product ui, not only a library"
+  ]
 }

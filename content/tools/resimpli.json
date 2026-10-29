@@ -65,5 +65,16 @@
   "useCaseFit": {
     "find-off-market": "Includes calling, texting, and email on every plan, with a 14-day trial.",
     "realtor-prospecting": "Contacts owners by phone, text, and email from a prospecting list."
-  }
+  },
+  "capabilities": [
+    "call owners from a prospecting list",
+    "text owners from a prospecting list",
+    "email owners from a prospecting list",
+    "contact owners by phone",
+    "use calling, texting, and email on every plan, with a 14-day trial",
+    "work from calling and texting owner lists from one crm",
+    "work from real estate crm with calling, texting, and email on every plan, plus a 14-day trial",
+    "work from every plan includes unlimited calling, sms, and email, with a 14-day trial",
+    "call owners from the prospecting list"
+  ]
 }

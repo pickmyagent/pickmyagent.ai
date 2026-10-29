@@ -66,5 +66,15 @@
   "useCaseFit": {
     "social-media": "Plans and publishes social content, and the plans page says the suite is connected by AI.",
     "agent-social": "Publishes an agent's social posts from one suite."
-  }
+  },
+  "capabilities": [
+    "plan and publishes social content, and the plans page says the suite is connected by ai",
+    "plan publishes social content",
+    "plan the plans page says the suite is connected by ai",
+    "work from planning and publishing social content",
+    "work from social planning and publishing. the plans page says it is connected by ai",
+    "work from hootsuite's plans page describes social content creation, planning, and publishing, and says the suite is connected by ai",
+    "work from hootsuite's plans page describes content creation, planning, and publishing for social, and says the suite is connected by ai",
+    "plan and publishes social content, and a plans page says the suite is connected by ai"
+  ]
 }

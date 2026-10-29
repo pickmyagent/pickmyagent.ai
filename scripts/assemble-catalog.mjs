@@ -159,6 +159,20 @@ for (const tool of tools) {
   if (tool.openSource === true && !tool.pricingModel.includes("open_source")) {
     fail(`${tool.id} is open source but pricingModel omits open_source`);
   }
+  if (!Array.isArray(tool.capabilities) || tool.capabilities.length < 5 || tool.capabilities.length > 15) {
+    fail(`${tool.id} needs 5 to 15 capabilities`);
+  } else {
+    const seenCaps = new Set();
+    for (const capability of tool.capabilities) {
+      if (typeof capability !== "string" || capability.length < 12 || capability.length > 160) {
+        fail(`${tool.id} capability must be 12–160 characters`);
+        continue;
+      }
+      const key = capability.toLowerCase();
+      if (seenCaps.has(key)) fail(`${tool.id} repeats a capability`);
+      seenCaps.add(key);
+    }
+  }
 }
 
 for (const useCase of useCases) {

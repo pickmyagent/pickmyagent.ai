@@ -9,7 +9,9 @@
   "categories": [
     "creative-media"
   ],
-  "useCaseTags": ["avatar-video"],
+  "useCaseTags": [
+    "avatar-video"
+  ],
   "toolTypes": [
     "creative"
   ],
@@ -66,5 +68,17 @@
   },
   "useCaseFit": {
     "avatar-video": "Generates an avatar or spokesperson video from a script."
-  }
+  },
+  "capabilities": [
+    "make an avatar video from a script",
+    "generate an avatar or spokesperson video from a script",
+    "generate an avatar",
+    "generate spokesperson video from a script",
+    "help teams that want a hosted avatar tool with a free plan",
+    "work from spokesperson or avatar videos",
+    "work from teams that want a hosted avatar tool with a free plan",
+    "work from avatar and spokesperson video from a script. free to start. paid plans are on their site",
+    "work from free plan includes 3 avatar videos per month, up to 1 minute each",
+    "make an avatar video from the script"
+  ]
 }

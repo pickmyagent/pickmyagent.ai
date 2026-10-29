@@ -64,5 +64,15 @@
   },
   "generalPurpose": true,
   "assistantName": "ChatGPT",
-  "assistantKind": "draft"
+  "assistantKind": "draft",
+  "capabilities": [
+    "research comparing, and drafting in a general chat",
+    "research drafting in a general chat",
+    "work from researching, comparing, and drafting in a general chat",
+    "work from general-purpose chat assistant from openai, with a free plan and paid go and plus plans",
+    "work from openai lists a free chatgpt plan, with go at per month and plus at per month",
+    "research comparing, and drafting in the general chat",
+    "research drafting in the general chat",
+    "work from researching, comparing, and drafting in the general chat"
+  ]
 }

@@ -21,7 +21,7 @@
   "pricingModel": [
     "open_source"
   ],
-  "pricingNotes": "Confirm any Continue cloud/team pricing on site; OSS install is IDE extension (not pip-tested here).",
+  "pricingNotes": "Confirm any Continue cloud/team pricing on site, OSS install is IDE extension (not pip-tested here).",
   "pricingUrl": "https://www.continue.dev/",
   "docsUrl": "https://docs.continue.dev/",
   "freeTier": null,
@@ -76,5 +76,15 @@
   },
   "useCaseFit": {
     "coding-agents": "Open-source coding agent you install in the IDE you already use."
-  }
+  },
+  "capabilities": [
+    "help teams that would rather extend the editor they already use",
+    "work from developers who want an open-source copilot in the ide",
+    "work from teams that would rather extend the editor they already use",
+    "work from open-source coding agent and ide extension",
+    "help teams that would rather extend a editor they already use",
+    "work from developers who want an open-source copilot in a ide",
+    "work from developers who want the open-source copilot in the ide",
+    "work from teams that would rather extend a editor they already use"
+  ]
 }

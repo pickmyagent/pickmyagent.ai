@@ -75,5 +75,15 @@
   },
   "useCaseFit": {
     "multi-agent-workflows": "Open-source low-code builder for model flows you can self-host."
-  }
+  },
+  "capabilities": [
+    "help teams already comfortable with a node service",
+    "work from visual flows on infrastructure you run yourself",
+    "work from teams already comfortable with a node service",
+    "work from open-source, low-code builder for llm flows you can self-host",
+    "work from open-source npm project flowise 3.1.4 is a low-code builder you can self-host",
+    "help teams already comfortable with the node service",
+    "work from teams already comfortable with the node service",
+    "work from open-source npm project flowise 3.1.4 is the low-code builder you can self-host"
+  ]
 }

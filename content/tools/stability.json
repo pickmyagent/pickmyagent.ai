@@ -1,0 +1,71 @@
+{
+  "id": "stability",
+  "slug": "stability",
+  "name": "Stability AI",
+  "websiteUrl": "https://stability.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Stability AI can edit an image with a stable diffusion model.",
+  "longDescription": "Stability AI can edit an image with a stable diffusion model. It can also create video from an image.",
+  "categories": [
+    "image"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://stability.ai/",
+  "docsUrl": "https://stability.ai/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Edit an image with a stable diffusion model",
+    "Create video from an image"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Stability AI can edit an image with a stable diffusion model.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://stability.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://stability.ai/"
+  },
+  "capabilities": [
+    "edit an image with a stable diffusion model",
+    "create video from an image",
+    "use an open image model through an api",
+    "upscale an image with a diffusion model",
+    "create and ideate with the audio toolkit and commercially-safe models built for a process"
+  ]
+}

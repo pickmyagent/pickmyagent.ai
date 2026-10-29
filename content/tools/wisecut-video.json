@@ -1,0 +1,78 @@
+{
+  "id": "wisecut-video",
+  "slug": "wisecut-video",
+  "name": "Wisecut",
+  "websiteUrl": "https://wisecut.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Wisecut can generate a video from a prompt.",
+  "longDescription": "Wisecut can generate a video from a prompt. It can also edit a video.",
+  "categories": [
+    "video"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://wisecut.ai/",
+  "docsUrl": "https://wisecut.ai/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generate a video from a prompt",
+    "Edit a video"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Wisecut can generate a video from a prompt.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://wisecut.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://wisecut.ai/"
+  },
+  "capabilities": [
+    "generate a video from a prompt",
+    "edit a video",
+    "turn an image into a video",
+    "export a clip",
+    "turn long videos into ai-edited clips",
+    "track a results",
+    "turn long videos into ai-edited clips | wisecut turn long videos into ai-edited clips",
+    "turn long videos into ai-edited clips | wisecut long videos become ready-to-post clips",
+    "edit what you want, however you prefer",
+    "remove silences and unwanted takes, and customize each segment a way",
+    "create clips edit with wish text editing clean edit customize captions create a thumbnail export",
+    "edit with wish text editing clean edit explore wish 0 3 / finish every detail, ready to share"
+  ]
+}

@@ -64,5 +64,16 @@
   },
   "useCaseFit": {
     "security-ops": "SOC analyst agent for alert triage and threat hunting."
-  }
+  },
+  "capabilities": [
+    "investigate a security alert end to end",
+    "triage a soc alert",
+    "triage a security alert",
+    "help a security team that wants alert investigations with the reasoning shown",
+    "work from security team that wants alert investigations with the reasoning shown",
+    "work from ai soc analyst for alert triage and threat hunting",
+    "work from dropzone describes an ai soc analyst that investigates alerts end to end and shows its reasoning",
+    "work from dropzone's site describes an ai soc analyst that investigates alerts end to end and shows its reasoning, plus an ai threat hunter",
+    "investigate the security alert end to end"
+  ]
 }

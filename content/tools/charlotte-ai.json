@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "security-ops": "Agentic security analyst described on CrowdStrike's Charlotte AI page."
-  }
+  },
+  "capabilities": [
+    "assist a cybersecurity analyst on a case",
+    "help a security teams already in the crowdstrike platform who want its analyst assistant",
+    "work from security teams already in the crowdstrike platform who want its analyst assistant",
+    "work from crowdstrike's agentic analyst for cybersecurity. no public price was listed",
+    "work from crowdstrike titles charlotte ai an agentic analyst for cybersecurity on its official platform page",
+    "assist the cybersecurity analyst on a case",
+    "help the security teams already in the crowdstrike platform who want its analyst assistant",
+    "help a security teams already in a crowdstrike platform who want its analyst assistant"
+  ]
 }

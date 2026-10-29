@@ -1,0 +1,78 @@
+{
+  "id": "durable",
+  "slug": "durable",
+  "name": "Durable",
+  "websiteUrl": "https://durable.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Durable can generate a small business website.",
+  "longDescription": "Durable can generate a small business website. It can also write service descriptions.",
+  "categories": [
+    "ecommerce"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://durable.com/",
+  "docsUrl": "https://durable.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generate a small business website",
+    "Write service descriptions"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Durable can generate a small business website.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://durable.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://durable.com/"
+  },
+  "capabilities": [
+    "generate a small business website",
+    "write service descriptions",
+    "publish a site in minutes",
+    "edit a website with ai",
+    "add a contact form",
+    "build a business with durable",
+    "create a website with ai, get discovered with seo and geo, manage customers and grow faster with ai marketing tools",
+    "create a website with ai, get discovered with seo",
+    "build a coaching business, fast",
+    "build a handyman business, fast",
+    "build a cleaning business, fast",
+    "build a marketing agency business, fast"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "spellbook",
+  "slug": "spellbook",
+  "name": "Spellbook",
+  "websiteUrl": "https://spellbook.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Spellbook can review a contract in word.",
+  "longDescription": "Spellbook can review a contract in word. It can also redline a contract.",
+  "categories": [
+    "legal"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://spellbook.com/",
+  "docsUrl": "https://spellbook.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Review a contract in word",
+    "Redline a contract"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Spellbook can review a contract in word.",
+  "weakness": "A lawyer still reviews the draft before anyone relies on it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://spellbook.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://spellbook.com/"
+  },
+  "capabilities": [
+    "review a contract in word",
+    "redline a contract",
+    "draft a clause from a library",
+    "catch a risk in an agreement",
+    "compare a contract to a playbook"
+  ]
+}

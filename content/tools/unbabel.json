@@ -1,0 +1,78 @@
+{
+  "id": "unbabel",
+  "slug": "unbabel",
+  "name": "Unbabel",
+  "websiteUrl": "https://unbabel.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Unbabel can translate customer support messages.",
+  "longDescription": "Unbabel can translate customer support messages. It can also localize a help center.",
+  "categories": [
+    "translation"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://unbabel.com/",
+  "docsUrl": "https://unbabel.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Translate customer support messages",
+    "Localize a help center"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Unbabel can translate customer support messages.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://unbabel.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://unbabel.com/"
+  },
+  "capabilities": [
+    "translate customer support messages",
+    "localize a help center",
+    "measure translation quality",
+    "support customers in another language",
+    "use language operations platform gives businesses the ability to",
+    "use seamless multilingual translation services - unbabel unbabel",
+    "use seamless multilingual translation services - unbabel",
+    "use what is unbabel",
+    "use reduce costs with ai driven",
+    "use unbabel language operations language operations see how unbab",
+    "use languages explore the languages that unbabel supports privacy",
+    "use integrations salesforce zendesk intercom see all resources re"
+  ]
+}

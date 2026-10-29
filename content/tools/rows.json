@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "analyze-data": "Spreadsheet analysis with a free plan and Plus at $8 per user per month."
-  }
+  },
+  "capabilities": [
+    "ask an analyst about a spreadsheet",
+    "use a spreadsheet for analysis",
+    "start spreadsheet analysis on a free plan",
+    "work from analyzing a spreadsheet with an ai assistant on a listed free plan",
+    "work from spreadsheet with an ai analyst. plus is per user each month",
+    "ask an analyst about the spreadsheet",
+    "ask the analyst about a spreadsheet",
+    "use the spreadsheet for analysis"
+  ]
 }

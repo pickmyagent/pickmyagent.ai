@@ -6,11 +6,22 @@
   "affiliateUrl": null,
   "shortDescription": "Real estate CRM with action plans. Grow is $69 per user per month.",
   "longDescription": "Follow Up Boss is a real estate CRM whose action plans automate follow-up with buyers and sellers. Grow is $69 per user per month plus tax, or $58 per user per month when billed annually. Pro is $499 per month and includes 10 users. Platform is $1000 per month and includes 30 users. A free trial is offered with no contract, and the pricing page does not state how long the trial lasts. AI features are included, and many of them rely on FUB Calling, a paid add-on on Grow.",
-  "categories": ["real-estate"],
-  "useCaseTags": ["realtor-follow-up", "real-estate-crm"],
-  "toolTypes": ["other"],
-  "platforms": ["web"],
-  "pricingModel": ["subscription"],
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "realtor-follow-up",
+    "real-estate-crm"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
   "pricingNotes": "Grow is $69 per user per month plus tax, or $58 per user per month billed annually. Pro is $499 per month and includes 10 users. Platform is $1000 per month and includes 30 users. A free trial is offered with no contract and no stated length. Many AI features rely on FUB Calling, a paid add-on on Grow.",
   "pricingUrl": "https://www.followupboss.com/pricing",
   "docsUrl": "https://www.followupboss.com/pricing",
@@ -34,7 +45,9 @@
   "checkedAt": "2026-10-27T12:00:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Pricing page reviewed on October 27, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -42,10 +55,23 @@
   "status": "published",
   "publishedAt": "2026-10-27",
   "updatedAt": "2026-10-27",
-  "sources": ["https://www.followupboss.com/pricing"],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.followupboss.com/pricing" },
+  "sources": [
+    "https://www.followupboss.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.followupboss.com/pricing"
+  },
   "useCaseFit": {
     "realtor-follow-up": "Runs action plans that remind you to follow up with buyers and sellers.",
     "real-estate-crm": "Keeps buyer and seller leads in one real estate CRM."
-  }
+  },
+  "capabilities": [
+    "run action plans that remind you to follow up with buyers and sellers",
+    "run action plans that remind you to follow up with buyers",
+    "work from real estate crm that runs follow-up action plans for buyers and sellers",
+    "work from real estate crm with action plans. grow is per user per month",
+    "work from keeps a real estate crm and action plans for follow-up, and grow is per user per month",
+    "work from keeps the real estate crm and action plans for follow-up, and grow is per user per month"
+  ]
 }

@@ -1,0 +1,78 @@
+{
+  "id": "socialbee",
+  "slug": "socialbee",
+  "name": "SocialBee",
+  "websiteUrl": "https://socialbee.com/",
+  "affiliateUrl": null,
+  "shortDescription": "SocialBee can categorize and recycle posts.",
+  "longDescription": "SocialBee can categorize and recycle posts. It can also schedule a social calendar.",
+  "categories": [
+    "social"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://socialbee.com/",
+  "docsUrl": "https://socialbee.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Categorize and recycle posts",
+    "Schedule a social calendar"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "SocialBee can categorize and recycle posts.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://socialbee.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://socialbee.com/"
+  },
+  "capabilities": [
+    "categorize and recycle posts",
+    "schedule a social calendar",
+    "generate a caption",
+    "publish to several networks",
+    "keep evergreen content posting",
+    "manage schedule, and grow a social media with socialbee",
+    "manage a social media help quickly find solutions within a intuitive help documentation all resources get access to free templates, guides, videos",
+    "schedule plan a social media posts with a visual content calendar, organize content into categories, and find the best times to publish",
+    "schedule plan a social media posts with a visual content calendar, organize content into categories,",
+    "find the best times to publish",
+    "analyze track social media performance across platforms, discover a best-performing content, and create shareable pdf reports",
+    "analyze track social media performance across platforms, discover a best-performing content,"
+  ]
+}

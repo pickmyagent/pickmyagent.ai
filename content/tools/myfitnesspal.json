@@ -1,0 +1,78 @@
+{
+  "id": "myfitnesspal",
+  "slug": "myfitnesspal",
+  "name": "MyFitnessPal",
+  "websiteUrl": "https://www.myfitnesspal.com/",
+  "affiliateUrl": null,
+  "shortDescription": "MyFitnessPal can track calories.",
+  "longDescription": "MyFitnessPal can track calories. It can also scan a barcode.",
+  "categories": [
+    "health-fitness"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.myfitnesspal.com/",
+  "docsUrl": "https://www.myfitnesspal.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Track calories",
+    "Scan a barcode"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "MyFitnessPal can track calories for this kind of work.",
+  "weakness": "It helps with habits and workouts, and it does not diagnose a condition.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.myfitnesspal.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.myfitnesspal.com/"
+  },
+  "capabilities": [
+    "track calories",
+    "scan a barcode",
+    "set a nutrition goal",
+    "manage a glp-1 progress log doses",
+    "use macro & calorie calculator",
+    "use myfitnesspal the world",
+    "use million 5-star reviews nutrition tracking made effortless get",
+    "use snap a photo",
+    "use sync steps",
+    "use restaurant menus",
+    "use nutrition tracking works",
+    "use myfitnesspal reviews apps advertise with us the world"
+  ]
+}

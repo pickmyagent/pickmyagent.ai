@@ -6,11 +6,21 @@
   "affiliateUrl": null,
   "shortDescription": "Talking-head video from a photo and a script. A 14-day trial is listed.",
   "longDescription": "D-ID's docs say a photo and a script become a talking-head video, and the studio page says text, audio, or a still image can become an avatar video without a camera crew. There is a 14-day free trial and paid Studio plans. See the D-ID site for the monthly price.",
-  "categories": ["creative-media"],
-  "useCaseTags": ["avatar-video"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
-  "pricingModel": ["subscription"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "avatar-video"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
   "pricingNotes": "The help center lists a 14-day trial and paid Studio plans. No single monthly price was readable on the page we fetched.",
   "pricingUrl": "https://www.d-id.com/pricing/studio/",
   "docsUrl": "https://docs.d-id.com/docs/v2-photo-avatar-quickstart",
@@ -21,8 +31,14 @@
   "pricingCheckedAt": "2026-10-19",
   "openSource": false,
   "repoUrl": null,
-  "bestFor": ["A talking-head video from a photo and a script", "A spokesperson clip without filming"],
-  "notIdealFor": ["A published monthly price", "Cutting gameplay into shorts"],
+  "bestFor": [
+    "A talking-head video from a photo and a script",
+    "A spokesperson clip without filming"
+  ],
+  "notIdealFor": [
+    "A published monthly price",
+    "Cutting gameplay into shorts"
+  ],
   "strength": "The official talking-head docs say a photo and a script become a video, and the help center lists a 14-day trial.",
   "weakness": "The studio pricing page names paid plans but does not show one monthly dollar amount.",
   "smokeStatus": "verified-docs-only",
@@ -30,7 +46,9 @@
   "checkedAt": "2026-10-19T23:40:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Studio, API, and help-center pages reviewed on October 19, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -44,8 +62,21 @@
     "https://www.d-id.com/pricing/studio/",
     "https://help.d-id.com/hc/en-us/articles/31234293852433-Understanding-subscriptions-key-information-you-should-know"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.d-id.com/ai-videos/" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.d-id.com/ai-videos/"
+  },
   "useCaseFit": {
     "avatar-video": "Turns a photo and a script into a talking-head video."
-  }
+  },
+  "capabilities": [
+    "make an avatar video from a script",
+    "turn a photo and a script into a talking-head video",
+    "turn a script into a talking-head video",
+    "work from talking-head video from a photo and a script",
+    "work from spokesperson clip without filming",
+    "work from talking-head video from a photo and a script. a 14-day trial is listed",
+    "work from official talking-head docs say a photo and a script become a video, and the help center lists a 14-day trial",
+    "make an avatar video from the script"
+  ]
 }

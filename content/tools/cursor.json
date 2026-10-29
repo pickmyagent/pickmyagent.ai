@@ -24,7 +24,7 @@
     "freemium",
     "subscription"
   ],
-  "pricingNotes": "Paid plans present; confirm current inclusions on cursor.com/pricing.",
+  "pricingNotes": "Paid plans present, confirm current inclusions on cursor.com/pricing.",
   "pricingUrl": "https://cursor.com/pricing",
   "docsUrl": "https://cursor.com/docs",
   "freeTier": true,
@@ -70,5 +70,15 @@
   },
   "useCaseFit": {
     "coding-agents": "Desktop IDE agent that can edit the repo, with a free plan of limited requests."
-  }
+  },
+  "capabilities": [
+    "request a review from a customer",
+    "work from developers who want an agent inside the editor",
+    "work from day-to-day coding where the agent should touch the repo",
+    "work from desktop ide with an agent that can edit, run, and review code",
+    "work from free plan includes limited agent and chat requests in a desktop ide that can edit the repo",
+    "request the review from a customer",
+    "work from developers who want an agent inside a editor",
+    "work from developers who want the agent inside the editor"
+  ]
 }

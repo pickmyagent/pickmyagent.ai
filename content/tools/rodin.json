@@ -1,0 +1,76 @@
+{
+  "id": "rodin",
+  "slug": "rodin",
+  "name": "Rodin",
+  "websiteUrl": "https://hyper3d.ai/",
+  "affiliateUrl": null,
+  "shortDescription": "Rodin can generate a 3d model from an image.",
+  "longDescription": "Rodin can generate a 3d model from an image. It can also create a textured mesh from text.",
+  "categories": [
+    "3d"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://hyper3d.ai/",
+  "docsUrl": "https://hyper3d.ai/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generate a 3d model from an image",
+    "Create a textured mesh from text"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Rodin can generate a 3d model from an image.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://hyper3d.ai/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://hyper3d.ai/"
+  },
+  "capabilities": [
+    "generate a 3d model from an image",
+    "create a textured mesh from text",
+    "export a model for a game",
+    "control the topology of a mesh",
+    "turn a photo into a 3d asset",
+    "turn them into detailed 3d models in seconds",
+    "turn images, sketches, or illustrations into detailed 3d models with hyper3d rodin",
+    "turn it into a high-quality 3d asset in seconds",
+    "generate a short preview",
+    "manage 3d assets programmatically with hyper3d rodin\u2019s api"
+  ]
+}

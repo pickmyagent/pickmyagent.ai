@@ -64,5 +64,17 @@
   },
   "useCaseFit": {
     "security-ops": "Email and identity security product described as behavioral AI."
-  }
+  },
+  "capabilities": [
+    "flag a phishing email from behavior",
+    "use email and identity security product described as behavioral ai",
+    "use email identity security product described as behavioral ai",
+    "use email security teams looking at behavioral ai for phishing and account risk",
+    "use email security teams looking at behavioral ai for phishing",
+    "use behavioral ai for email, identity, and ai security",
+    "use behavioral ai for email",
+    "work from email security teams looking at behavioral ai for phishing and account risk",
+    "work from behavioral ai for email, identity, and ai security",
+    "flag the phishing email from behavior"
+  ]
 }

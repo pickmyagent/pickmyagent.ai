@@ -4,6 +4,16 @@ import { BRIDGE_LINES, isListingMakeQuery, isListingPhotoQuery, listingSpecialis
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
 import { jobCueBlocks, jobCueBonus } from "./job-cues.ts";
 import { EXTRA_SPELLING, phraseMatches, prepareQuery, stemToken } from "./match-text.ts";
+import {
+  capabilityDisclaimer,
+  capabilityIntro,
+  capabilityLead,
+  capabilityWhy,
+  fallbackAssistantWhy,
+  pickCapabilities,
+  toolFamily,
+  type CapabilityPick,
+} from "./capability-match.ts";
 import { semanticHits } from "./semantic.ts";
 import { blockRealEstateConcept, businessValuationQuery, CANONICAL_REAL_ESTATE, CAP_RATE_INTRO, conceptHasSignal, deniesRealEstate, semanticRealEstateBlock } from "./real-estate-match.ts";
 import {
@@ -1111,6 +1121,8 @@ export type RankedTool = {
   score: number;
   whyItHelps: string;
   generalPurpose: boolean;
+  /** General assistant added because fewer than three specialists cleared the bar. */
+  fallbackAssist?: boolean;
 };
 
 export type RankedUseCase = {
@@ -1728,10 +1740,26 @@ function wantsBridge(hits: CompoundHit[]): boolean {
   return ids.has("marketing-promotions") && ids.has("finance-ops");
 }
 
+export type CapabilityCosine = { key: string; cosine: number };
+
+function keepAssistantFallback(text: string): boolean {
+  const lower = text.toLowerCase();
+  if (businessValuationQuery(lower) || wantsAPerson(lower)) return true;
+  if (/\bweddings?\b/.test(lower)) return true;
+  if (/\bdogs?\b/.test(lower)) return true;
+  if (/\bcookbooks?\b/.test(lower)) return true;
+  if (/\bgarages?\b/.test(lower)) return true;
+  if (/\b(bake|baking)\b/.test(lower) && /\bcakes?\b/.test(lower)) return true;
+  if (/\bcakes?\b/.test(lower)) return true;
+  if (/\ba lot of deals\b/.test(lower)) return true;
+  return false;
+}
+
 export function rankCatalogQuery(
   query: string,
   catalog: { tools: Tool[]; useCases: UseCase[]; categories: Category[] },
   semanticScores?: SemanticScore[],
+  capabilityCosines?: CapabilityCosine[],
 ): RankedSearch {
   const published = catalog.tools.filter((tool) => tool.status === "published");
   const indexedTools: IndexedTool[] = published.map((tool) => {
@@ -1908,6 +1936,14 @@ export function rankCatalogQuery(
 
   const winner = chooseWinner(conceptHits(corrected, semanticScores));
   const specialists = winner ? collect(winner.concept, winner.score, corrected, true, false) : [];
+  if (!winner && !alt && !keepAssistantFallback(corrected)) {
+    const cosineMap = new Map((capabilityCosines ?? []).map((item) => [item.key, item.cosine]));
+    const picks = pickCapabilities(corrected, catalog.tools, capabilityCosines ? cosineMap : undefined).slice(0, 5);
+    if (picks.length > 0) {
+      const ranked = capabilityRanking(picks, indexedTools, assistants, alt?.slug);
+      if (ranked) return ranked;
+    }
+  }
   const primaryCase = winner
     ? indexedCases.find((item) => item.slug === winner.concept.useCase) ?? null
     : null;
@@ -1945,7 +1981,50 @@ export function rankCatalogQuery(
   };
 }
 
-function presentTool(tool: IndexedTool, why: string, generalPurpose: boolean): RankedTool {
+function capabilityRanking(
+  picks: CapabilityPick[],
+  indexedTools: IndexedTool[],
+  assistants: IndexedTool[],
+  skipSlug?: string,
+): RankedSearch | null {
+  const chosen = picks
+    .map((pick) => {
+      const tool = indexedTools.find((item) => item.slug === pick.slug);
+      return tool ? { tool, pick } : null;
+    })
+    .filter((item): item is { tool: IndexedTool; pick: CapabilityPick } => item !== null)
+    .filter((item) => item.tool.slug !== skipSlug);
+  if (chosen.length === 0) return null;
+  const assistantCap = chosen.length >= 3 ? 0 : 3;
+  const fill = assistants
+    .filter((tool) => !chosen.some((item) => item.tool.slug === tool.slug) && tool.slug !== skipSlug)
+    .slice(0, assistantCap);
+  const family = toolFamily(chosen[0].tool.source);
+  const leadCapability = chosen[0].pick.capability;
+  return {
+    tools: [
+      ...chosen.map(({ tool, pick }) => presentTool(tool, capabilityWhy(tool.name, pick.capability), false, false)),
+      ...fill.map((tool) => presentTool(
+        tool,
+        fallbackAssistantWhy(
+          tool.source.assistantName ?? tool.name.split("(")[0].trim(),
+          leadCapability,
+          neutralAssistantLine(tool.slug, tool.source.assistantName ?? tool.name.split("(")[0].trim()),
+        ),
+        true,
+        true,
+      )),
+    ],
+    useCases: [],
+    fallback: false,
+    lowMatch: false,
+    lead: capabilityLead(leadCapability),
+    intro: capabilityIntro(chosen.map((item) => item.pick.capability)),
+    disclaimer: capabilityDisclaimer(family),
+  };
+}
+
+function presentTool(tool: IndexedTool, why: string, generalPurpose: boolean, fallbackAssist = false): RankedTool {
   return {
     slug: tool.slug,
     name: tool.name,
@@ -1955,6 +2034,7 @@ function presentTool(tool: IndexedTool, why: string, generalPurpose: boolean): R
     score: tool.score,
     whyItHelps: why,
     generalPurpose,
+    fallbackAssist,
   };
 }
 

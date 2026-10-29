@@ -24,7 +24,7 @@
     "open_source",
     "free"
   ],
-  "pricingNotes": "No SaaS pricing page for the framework. Latest GitHub python release python-v0.7.5 dated 2025-09-30 — older than peers; industry notes mention Microsoft Agent Framework as successor — flag for catalog freshness.",
+  "pricingNotes": "No SaaS pricing page for the framework. Latest GitHub python release python-v0.7.5 dated 2025-09-30 older than peers, industry notes mention Microsoft Agent Framework as successor flag for catalog freshness.",
   "pricingUrl": "https://microsoft.github.io/autogen/stable/index.html",
   "docsUrl": "https://microsoft.github.io/autogen/stable/index.html",
   "freeTier": null,
@@ -83,5 +83,15 @@
   },
   "useCaseFit": {
     "multi-agent-workflows": "Open-source Python library for conversations between more than one agent."
-  }
+  },
+  "capabilities": [
+    "help teams that want an open-source library with no product paywall",
+    "work from python experiments with multi-agent conversations",
+    "work from teams that want an open-source library with no product paywall",
+    "work from microsoft open-source python library for multi-agent conversations. the newest recorded release is from 2025",
+    "work from autogen 0.7.5 is open source with no product paywall",
+    "work from autogen is microsoft's open-source python library and framework for multi-agent conversations",
+    "help teams that want the open-source library with no product paywall",
+    "work from teams that want the open-source library with no product paywall"
+  ]
 }

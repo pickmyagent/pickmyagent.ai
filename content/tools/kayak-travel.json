@@ -1,0 +1,78 @@
+{
+  "id": "kayak-travel",
+  "slug": "kayak-travel",
+  "name": "KAYAK",
+  "websiteUrl": "https://www.kayak.com/",
+  "affiliateUrl": null,
+  "shortDescription": "KAYAK can compare flights.",
+  "longDescription": "KAYAK can compare flights. It can also find a hotel.",
+  "categories": [
+    "travel"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.kayak.com/",
+  "docsUrl": "https://www.kayak.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Compare flights",
+    "Find a hotel"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "KAYAK can compare flights for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.kayak.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.kayak.com/"
+  },
+  "capabilities": [
+    "compare flights",
+    "find a hotel",
+    "search flights, hotels & rental cars | kayak ${e} find the right flight from 100s of sites",
+    "make booking seamless",
+    "search flights , hotels , rental cars , travel guides , cruises and more with kayak",
+    "use search flights",
+    "use hotels & rental cars",
+    "find the right flight from 100s of sites",
+    "use find the right flight from 100s of sites",
+    "use tokyo chicago phoenix india search flights",
+    "use new trips language currency argentina",
+    "use costa rica"
+  ]
+}

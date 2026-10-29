@@ -67,5 +67,19 @@
   },
   "useCaseFit": {
     "voice-audio": "Generates voice and audio from a prompt."
-  }
+  },
+  "capabilities": [
+    "generate speech from text",
+    "generate a video from a prompt",
+    "cut a highlight reel from a stream",
+    "generate voice and audio from a prompt",
+    "generate audio from a prompt",
+    "help teams comparing hosted speech tools",
+    "work from voice for characters, trailers, or streams",
+    "work from teams comparing hosted speech tools",
+    "work from voice and audio generation. the free plan includes 10,000 credits per month",
+    "work from free plan includes 10,000 credits per month for voice and audio, and starter is per month",
+    "work from generates voice and audio",
+    "generate the video from a prompt"
+  ]
 }

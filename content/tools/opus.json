@@ -65,5 +65,15 @@
   },
   "useCaseFit": {
     "game-creative": "Cuts a long video into short clips, and the free plan includes 60 credits a month."
-  }
+  },
+  "capabilities": [
+    "work from cutting a stream vod or long video into shorts",
+    "work from creators who want a hosted clipper",
+    "work from cuts long videos into short clips. the free plan lists 60 credits per month",
+    "work from free plan includes 60 credits per month for cutting a long video into short clips",
+    "work from cutting the stream vod or long video into shorts",
+    "work from creators who want the hosted clipper",
+    "work from cuts long videos into short clips. a free plan lists 60 credits per month",
+    "work from free plan includes 60 credits per month for cutting the long video into short clips"
+  ]
 }

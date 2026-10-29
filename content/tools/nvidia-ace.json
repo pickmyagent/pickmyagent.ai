@@ -32,7 +32,7 @@
   "openSource": null,
   "repoUrl": null,
   "bestFor": [
-    "Game teams already on NVIDIA’s developer stack",
+    "Game teams already on NVIDIA\u2019s developer stack",
     "In-game characters where a local or OEM runtime matters"
   ],
   "notIdealFor": [
@@ -66,5 +66,15 @@
   },
   "useCaseFit": {
     "game-npcs": "Developer downloads and plugins for in-game characters on NVIDIA's stack."
-  }
+  },
+  "capabilities": [
+    "add a plugin for game characters",
+    "work from game teams already on nvidia\u2019s developer stack",
+    "work from in-game characters where a local or oem runtime matters",
+    "work from nvidia ace toolkit for in-game characters, including developer downloads",
+    "work from developer page describes downloads and plugins for in-game characters on nvidia's stack",
+    "add the plugin for game characters",
+    "work from in-game characters where the local or oem runtime matters",
+    "work from nvidia ace toolkit for in-game characters and developer downloads"
+  ]
 }

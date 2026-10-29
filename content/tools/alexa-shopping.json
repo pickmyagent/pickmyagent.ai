@@ -63,5 +63,17 @@
   },
   "useCaseFit": {
     "shop-products": "Answers shopping questions, compares products, and recommends items in Amazon's app."
-  }
+  },
+  "capabilities": [
+    "compare products while you shop",
+    "answer shopping questions, compares products, and recommends items in amazon's app",
+    "answer shopping questions",
+    "answer compares products",
+    "answer recommends items in amazon's app",
+    "work from product questions and comparisons inside amazon shopping",
+    "work from amazon shopping assistant, renamed from rufus on may 13, 2026",
+    "work from amazon's article says alexa for shopping, formerly rufus, answers product questions, compares items, and makes recommendations in the shopping app",
+    "work from amazon's news article says that on may 13, 2026 rufus was renamed alexa for shopping",
+    "work from amazon's article says alexa for shopping, formerly rufus, answers product questions, compares items, and makes recommendations in a shopping app"
+  ]
 }

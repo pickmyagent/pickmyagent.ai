@@ -64,5 +64,19 @@
   },
   "useCaseFit": {
     "manage-inbox": "Lists an AI assistant and a smart inbox that drafts email replies."
-  }
+  },
+  "capabilities": [
+    "sort a smart inbox",
+    "snooze an email for later",
+    "use an ai assistant and a smart inbox that drafts email replies",
+    "use a smart inbox that drafts email replies",
+    "use email app that drafts replies and sorts the inbox",
+    "use email app that drafts replies",
+    "use email sorts the inbox",
+    "use an ai assistant, a smart inbox, and replies that are already drafted",
+    "use a smart inbox",
+    "use replies that are already drafted",
+    "work from email app that drafts replies and sorts the inbox",
+    "work from email app with an ai assistant, a smart inbox, and drafted replies"
+  ]
 }

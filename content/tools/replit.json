@@ -68,5 +68,15 @@
   },
   "useCaseFit": {
     "coding-agents": "Browser IDE with a coding agent, and a recorded free plan of 30 chat hours."
-  }
+  },
+  "capabilities": [
+    "use a coding agent in the browser",
+    "work from coding in the browser, once you confirm the current product yourself",
+    "work from browser ide with a coding agent",
+    "work from recorded free plan includes up to 30 hours of chat and 60 projects in the browser ide",
+    "use the coding agent in the browser",
+    "use a coding agent in a browser",
+    "work from coding in a browser, once you confirm the current product yourself",
+    "work from browser ide with the coding agent"
+  ]
 }

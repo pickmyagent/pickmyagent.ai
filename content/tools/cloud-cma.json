@@ -6,11 +6,22 @@
   "affiliateUrl": null,
   "shortDescription": "Branded CMA reports from MLS comps, with a 14-day trial.",
   "longDescription": "Cloud CMA builds branded CMA reports from MLS comps, comparable sales, and neighborhood stats. Lone Wolf lists Cloud CMA at $49 per month, or $499 annually, and that price includes Homebeat. A 14-day trial is available. Many MLS memberships include Cloud CMA, and access still depends on the board.",
-  "categories": ["real-estate"],
-  "useCaseTags": ["cma-comps", "market-reports"],
-  "toolTypes": ["other"],
-  "platforms": ["web"],
-  "pricingModel": ["subscription"],
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "cma-comps",
+    "market-reports"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
   "pricingNotes": "Cloud CMA is $49 per month or $499 annually, and that price includes Homebeat. A 14-day trial is available. Some MLS memberships include Cloud CMA.",
   "pricingUrl": "https://www.lwolf.com/resources/cloud-cma-vs-moxiworks-cma-moxipresent-which-cma-tool-wins",
   "docsUrl": "https://www.lwolf.com/engage/cma",
@@ -34,7 +45,9 @@
   "checkedAt": "2026-10-27T12:00:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Product and comparison pages reviewed on October 27, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -53,5 +66,19 @@
   "useCaseFit": {
     "cma-comps": "Builds a CMA report from MLS comps and neighborhood stats.",
     "market-reports": "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity."
-  }
+  },
+  "capabilities": [
+    "pull comparable sales for a home",
+    "build a cma from comparable sales",
+    "build a cma report from mls comps and neighborhood stats",
+    "build a cma report from mls comps",
+    "build neighborhood stats",
+    "use homebeat, which sends homeowners an automated update on their home's value and neighborhood activity",
+    "use which sends homeowners an automated update on their home's value",
+    "use neighborhood activity",
+    "build a branded cma from mls comps and neighborhood stats, and a 14-day trial is available",
+    "build a branded cma from mls comps",
+    "build a 14-day trial is available",
+    "work from branded cma built from mls comps and neighborhood stats"
+  ]
 }

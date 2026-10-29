@@ -64,5 +64,13 @@
   },
   "useCaseFit": {
     "finance-ops": "Invoice and accounts-payable software described as AI-first."
-  }
+  },
+  "capabilities": [
+    "process an invoice",
+    "use accounts payable software",
+    "work from accounts payable teams that want invoice processing software",
+    "work from ai-first invoice processing and accounts payable software",
+    "work from vic ai describes ai-first invoice processing and accounts payable software",
+    "process the invoice"
+  ]
 }

@@ -66,5 +66,18 @@
   "useCaseFit": {
     "floor-plan-rendering": "Builds a 3D floor plan in the browser and renders it."
   },
-  "id": "homestyler"
+  "id": "homestyler",
+  "capabilities": [
+    "render a floor plan at 1k",
+    "render a layout at higher resolution",
+    "check a floor plan before you build",
+    "turn a floor plan into a render",
+    "build a 3d floor plan in the browser and renders it",
+    "build a 3d floor plan in the browser",
+    "build renders it",
+    "work from floor plan you draw in the browser and then render",
+    "work from free 1k render while you check a layout",
+    "work from browser 3d floor planner with rendering. pro+ starts at a month",
+    "render the floor plan at 1k"
+  ]
 }

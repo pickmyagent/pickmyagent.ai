@@ -66,5 +66,16 @@
   },
   "useCaseFit": {
     "video-generation": "Generates cinematic clips with camera presets such as a POV or a helicopter shot."
-  }
+  },
+  "capabilities": [
+    "generate a clip with a camera move",
+    "generate cinematic clips with camera presets such as a pov or a helicopter shot",
+    "generate cinematic clips with camera presets such as a pov",
+    "generate a helicopter shot",
+    "work from cinematic video with camera-motion presets",
+    "work from short clips for a game, a stream, or a sizzle reel",
+    "work from ai video app with cinema studio camera-motion presets for cinematic clips",
+    "work from cinema studio 4.0, described on the official blog, offers 30+ camera-movement presets and clips up to 30 seconds",
+    "generate the clip with a camera move"
+  ]
 }

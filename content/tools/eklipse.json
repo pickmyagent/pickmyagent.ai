@@ -65,5 +65,19 @@
   },
   "useCaseFit": {
     "game-creative": "Finds highlight clips from Twitch, YouTube, and Kick and exports them vertical."
-  }
+  },
+  "capabilities": [
+    "clip a twitch stream into a short",
+    "cut a highlight reel from a stream",
+    "find highlight clips from twitch, youtube, and kick and exports them vertical",
+    "find highlight clips from twitch",
+    "find exports them vertical",
+    "help an it connects a twitch, youtube, or kick channel and returns vertical highlight clips for shorts, reels, and tiktok",
+    "help an it connects a twitch",
+    "help an it returns vertical highlight clips for shorts",
+    "work from turning a twitch or kick stream into highlight clips",
+    "work from vertical clips for shorts, reels, and tiktok",
+    "work from finds highlight clips from twitch, youtube, and kick streams and exports them vertical",
+    "work from it connects a twitch, youtube, or kick channel and returns vertical highlight clips for shorts, reels, and tiktok"
+  ]
 }

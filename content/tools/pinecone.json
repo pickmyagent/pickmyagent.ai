@@ -65,5 +65,16 @@
   },
   "useCaseFit": {
     "research-rag": "Hosts vectors for search over your documents, with a free Starter plan."
-  }
+  },
+  "capabilities": [
+    "host vectors for search",
+    "search vectors over documents",
+    "try hosted vector search",
+    "search documents with vectors",
+    "start with a free vector database",
+    "work from hosted vector search inside a rag stack",
+    "work from managed vector database. starter is free, and builder is per month",
+    "work from starter is free for hosted vector search, and builder is per month with a 3-week trial",
+    "start with the free vector database"
+  ]
 }

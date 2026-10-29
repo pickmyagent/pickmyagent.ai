@@ -65,5 +65,15 @@
   "useCaseFit": {
     "customer-support": "Prices a support platform from $19 per month and describes Zendesk AI for service teams.",
     "run-a-business": "Runs the customer support inbox for a small business."
-  }
+  },
+  "capabilities": [
+    "run a customer support inbox",
+    "use ai in a support suite",
+    "run the customer support inbox for a small business",
+    "help teams that already want a support suite with ai",
+    "work from teams that already want a support suite with ai",
+    "work from ai-first support platform. plans start at per month",
+    "run the customer support inbox",
+    "use ai in the support suite"
+  ]
 }

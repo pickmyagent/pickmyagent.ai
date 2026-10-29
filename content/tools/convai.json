@@ -67,5 +67,15 @@
   },
   "useCaseFit": {
     "game-npcs": "Conversational characters that talk with the player inside a game."
-  }
+  },
+  "capabilities": [
+    "help teams comparing hosted npc platforms",
+    "work from in-game characters that talk with the player",
+    "work from teams comparing hosted npc platforms",
+    "work from conversational characters for games",
+    "work from site describes conversational characters that talk with the player inside a game",
+    "work from in-game characters that talk with a player",
+    "work from site describes conversational characters that talk with the player inside the game",
+    "work from site describes conversational characters that talk with a player inside a game"
+  ]
 }

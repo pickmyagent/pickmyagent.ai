@@ -66,5 +66,15 @@
   },
   "useCaseFit": {
     "marketing-promotions": "Describes email and SMS campaigns, flows, and a free email plan for small lists."
-  }
+  },
+  "capabilities": [
+    "use email and sms campaigns, flows, and a free email plan for small lists",
+    "use a free email plan for small lists",
+    "work from scheduling promo email and text campaigns",
+    "work from email and sms campaigns with flows, plus an ai subject-line generator",
+    "work from klaviyo's help center describes a free email plan with up to 250 active profiles and 500 email sends a month",
+    "work from sends email and text campaigns with flows and an ai subject-line generator",
+    "use email and sms campaigns, flows, and the free email plan for small lists",
+    "use the free email plan for small lists"
+  ]
 }

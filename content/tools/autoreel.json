@@ -6,11 +6,23 @@
   "affiliateUrl": null,
   "shortDescription": "Turns listing photos into a property video. The free plan includes 2 videos a month.",
   "longDescription": "AutoReel's homepage says it turns property photos into portrait or landscape listing videos, and that you can add captions, music, and branding. Its FAQ says the free plan includes 2 watermarked videos a month with no credit card, and that Essential is $124 per quarter.",
-  "categories": ["creative-media"],
-  "useCaseTags": ["listing-videos", "real-estate-overview"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
-  "pricingModel": ["freemium", "subscription"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "listing-videos",
+    "real-estate-overview"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
   "pricingNotes": "FAQ: free plan is 2 watermarked videos a month. Essential is $124 per quarter, not a monthly price.",
   "pricingUrl": "https://www.autoreelapp.com/faq/cost-effective-realtor-tools/does-autoreel-offer-a-free-plan-or-free-trial",
   "docsUrl": "https://www.autoreelapp.com/",
@@ -21,8 +33,14 @@
   "pricingCheckedAt": "2026-10-19",
   "openSource": false,
   "repoUrl": null,
-  "bestFor": ["A realtor turning listing photos into a video", "A vertical reel for Instagram or TikTok"],
-  "notIdealFor": ["A confirmed monthly price", "Ranking a deal or skip tracing an owner"],
+  "bestFor": [
+    "A realtor turning listing photos into a video",
+    "A vertical reel for Instagram or TikTok"
+  ],
+  "notIdealFor": [
+    "A confirmed monthly price",
+    "Ranking a deal or skip tracing an owner"
+  ],
   "strength": "AutoReel's homepage says it turns property photos into listing videos with captions and music, and the free plan includes 2 videos a month.",
   "weakness": "Paid plans are billed quarterly, and the free videos are watermarked.",
   "smokeStatus": "verified-docs-only",
@@ -30,7 +48,9 @@
   "checkedAt": "2026-10-19T23:40:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Homepage and FAQ reviewed on October 19, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -43,9 +63,22 @@
     "https://www.autoreelapp.com/faq/creating-listing-videos/how-do-i-create-my-first-autoreel-listing-video-as-a-new-user",
     "https://www.autoreelapp.com/faq/cost-effective-realtor-tools/does-autoreel-offer-a-free-plan-or-free-trial"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.autoreelapp.com/" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.autoreelapp.com/"
+  },
   "useCaseFit": {
     "listing-videos": "Turns listing photos into a property video with music and captions.",
     "real-estate": "Turns listing photos into a property video with music and captions."
-  }
+  },
+  "capabilities": [
+    "edit a listing photo",
+    "make a listing video from photos",
+    "turn listing photos into a property video with music and captions",
+    "turn listing photos into a property video with music",
+    "work from realtor turning listing photos into a video",
+    "work from vertical reel for instagram or tiktok",
+    "edit the listing photo",
+    "make the listing video from photos"
+  ]
 }

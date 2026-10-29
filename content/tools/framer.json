@@ -1,0 +1,78 @@
+{
+  "id": "framer",
+  "slug": "framer",
+  "name": "Framer",
+  "websiteUrl": "https://www.framer.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Framer can design a website with ai.",
+  "longDescription": "Framer can design a website with ai. It can also generate a landing page from a prompt.",
+  "categories": [
+    "design"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.framer.com/",
+  "docsUrl": "https://www.framer.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Design a website with ai",
+    "Generate a landing page from a prompt"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Framer can design a website with ai for this kind of work.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.framer.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.framer.com/"
+  },
+  "capabilities": [
+    "design a website with ai",
+    "generate a landing page from a prompt",
+    "publish a site from a canvas",
+    "use changes stay editable",
+    "use free website builder and ai design agent framer",
+    "use free website builder and ai design agent html",
+    "use current a div span",
+    "use current a span span span",
+    "use current a p span span",
+    "use current a h1 span span",
+    "use current a h2 span span",
+    "use current a h3 span span"
+  ]
+}

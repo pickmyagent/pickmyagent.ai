@@ -65,5 +65,16 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns one room photo into a restyled picture."
   },
-  "id": "roomgpt"
+  "id": "roomgpt",
+  "capabilities": [
+    "turn one room photo into a new style",
+    "restyle a room from a single photo",
+    "mock up an interior from one photo",
+    "restyle a room from a photo",
+    "turn one room photo into a restyled picture",
+    "use one room photo that should become an interior mockup",
+    "work from one room photo that should become an interior mockup",
+    "work from quick restyle before you renovate",
+    "turn one room photo into the new style"
+  ]
 }

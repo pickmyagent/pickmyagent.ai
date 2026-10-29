@@ -23,7 +23,7 @@
     "freemium",
     "subscription"
   ],
-  "pricingNotes": "AI features may require paid Notion plans — confirm which AI/agent features are on Free.",
+  "pricingNotes": "AI features may require paid Notion plans confirm which AI/agent features are on Free.",
   "pricingUrl": "https://www.notion.com/pricing",
   "docsUrl": "https://developers.notion.com/",
   "freeTier": true,
@@ -70,5 +70,15 @@
   "useCaseFit": {
     "meetings-knowledge": "Team workspace for docs and wikis, with a free plan that trials Notion AI.",
     "knowledge-qa": "The pricing page lists a trial of Notion AI and says you can capture and organize responses in the workspace."
-  }
+  },
+  "capabilities": [
+    "organize a wiki in a workspace",
+    "work from groups already writing in notion",
+    "work from docs, wikis, and agents in a team workspace. free to start. paid plans are on their site",
+    "work from free workspace plan includes a trial of notion ai, and the next plan starts at per month",
+    "organize the wiki in a workspace",
+    "work from docs, wikis, and agents in the team workspace. free to start. paid plans are on their site",
+    "work from free workspace plan includes the trial of notion ai, and the next plan starts at per month",
+    "work from free workspace plan includes a trial of notion ai, and a next plan starts at per month"
+  ]
 }

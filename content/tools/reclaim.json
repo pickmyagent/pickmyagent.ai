@@ -64,5 +64,14 @@
   },
   "useCaseFit": {
     "scheduling-assistant": "Offers smart meetings, scheduling links, and calendar sync."
-  }
+  },
+  "capabilities": [
+    "plan tasks on a calendar",
+    "use smart meetings, scheduling links, and calendar sync",
+    "use smart meetings",
+    "use scheduling links",
+    "work from protecting calendar time and sharing scheduling links",
+    "work from scheduling links, smart meetings, and calendar sync",
+    "plan tasks on the calendar"
+  ]
 }

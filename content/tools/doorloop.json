@@ -6,11 +6,21 @@
   "affiliateUrl": null,
   "shortDescription": "Property management for rent, leasing, and maintenance. One starts at a $199 monthly minimum.",
   "longDescription": "DoorLoop's One plan is $2.50 per unit per month with a $199 monthly minimum, and $1.50 per unit after 100 units. Connect is $4 per unit per month with a $299 minimum, and Multiply is $5 per unit per month with a $399 minimum. The One plan includes an AI assistant for listings, summaries, and inspection reports, along with accounting, leasing, maintenance, and rent collection. Tenant screening is $35 on every plan.",
-  "categories": ["real-estate"],
-  "useCaseTags": ["property-management"],
-  "toolTypes": ["other"],
-  "platforms": ["web"],
-  "pricingModel": ["subscription"],
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "property-management"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
   "pricingNotes": "One is $2.50 per unit per month ($1.50 per unit above 100) with a $199 monthly minimum. Connect is $4 per unit with a $299 minimum. Multiply is $5 per unit with a $399 minimum. The One plan includes an AI assistant, accounting, leasing, maintenance, and rent collection. Tenant screening is $35 on every plan. No trial length is shown.",
   "pricingUrl": "https://www.doorloop.com/pricing",
   "docsUrl": "https://www.doorloop.com/pricing",
@@ -34,7 +44,9 @@
   "checkedAt": "2026-10-27T12:00:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Pricing page reviewed on October 27, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -42,9 +54,27 @@
   "status": "published",
   "publishedAt": "2026-10-27",
   "updatedAt": "2026-10-27",
-  "sources": ["https://www.doorloop.com/pricing"],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.doorloop.com/pricing" },
+  "sources": [
+    "https://www.doorloop.com/pricing"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.doorloop.com/pricing"
+  },
   "useCaseFit": {
     "property-management": "Tracks rent, maintenance, and leases and includes an assistant for tenant questions."
-  }
+  },
+  "capabilities": [
+    "collect rent from a tenant",
+    "manage a lease for a unit",
+    "track rent and a lease",
+    "track rent, maintenance, and leases and includes an assistant for tenant questions",
+    "track includes an assistant for tenant questions",
+    "track rent collection, leasing, and maintenance with an assistant on the one plan",
+    "track rent maintenance with an assistant on the one plan",
+    "work from rent collection, leasing, and maintenance with an assistant on the one plan",
+    "work from property management for rent, leasing, and maintenance. one starts at a monthly minimum",
+    "work from doorloop's one plan includes an ai assistant for listings, summaries, and inspection reports, plus rent collection, leasing, and maintenance",
+    "collect rent from the tenant"
+  ]
 }

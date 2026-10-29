@@ -64,5 +64,15 @@
   },
   "useCaseFit": {
     "hire-candidates": "Candidate agent that the site says can schedule and take applications conversationally."
-  }
+  },
+  "capabilities": [
+    "use a candidate experience agent with conversational scheduling and apply flows",
+    "use a candidate experience agent with conversational scheduling",
+    "use apply flows",
+    "work from high-volume hiring that wants conversational scheduling",
+    "work from candidate experience agent with conversational scheduling and apply flows",
+    "work from paradox's site describes a candidate experience agent, conversational apply, conversational scheduling, and a conversational crm",
+    "use the candidate experience agent with conversational scheduling and apply flows",
+    "use the candidate experience agent with conversational scheduling"
+  ]
 }

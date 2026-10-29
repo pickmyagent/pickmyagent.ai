@@ -1,0 +1,78 @@
+{
+  "id": "activecampaign",
+  "slug": "activecampaign",
+  "name": "ActiveCampaign",
+  "websiteUrl": "https://www.activecampaign.com/",
+  "affiliateUrl": null,
+  "shortDescription": "ActiveCampaign can automate an email sequence.",
+  "longDescription": "ActiveCampaign can automate an email sequence. It can also send a campaign.",
+  "categories": [
+    "email"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.activecampaign.com/",
+  "docsUrl": "https://www.activecampaign.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Automate an email sequence",
+    "Send a campaign"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "ActiveCampaign can automate an email sequence.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.activecampaign.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.activecampaign.com/"
+  },
+  "capabilities": [
+    "automate an email sequence",
+    "send a campaign",
+    "build a crm automation",
+    "personalize a message",
+    "build the segment",
+    "use go beyond marketing automation with activecampaign",
+    "use whatsapp and more for you",
+    "use marketing automation for any business",
+    "build the flow that",
+    "use build the flow that",
+    "make every message count with smarter segmentation here",
+    "use make every message count with smarter segmentation here"
+  ]
+}

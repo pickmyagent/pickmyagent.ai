@@ -67,5 +67,18 @@
   "useCaseFit": {
     "floor-plan-rendering": "Renders an uploaded design view or a sketch."
   },
-  "id": "myarchitectai"
+  "id": "myarchitectai",
+  "capabilities": [
+    "render an uploaded design view or a sketch",
+    "render an uploaded design view",
+    "render a sketch",
+    "render an uploaded design view or a sketch, and the free testing plan includes 10 renders",
+    "render the free testing plan includes 10 renders",
+    "work from sketchup or archicad view that should become a render",
+    "work from sketch you want rendered in a few seconds",
+    "work from renders an uploaded design or a sketch. plans start at a month, with 10 renders free",
+    "work from renders an uploaded design view or a sketch, and the free testing plan includes 10 renders",
+    "work from renders an uploaded sketchup or archicad design and also lists sketch rendering",
+    "render an uploaded design view or the sketch"
+  ]
 }
