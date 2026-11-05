@@ -787,7 +787,7 @@ function bareToken(token: string): string {
 }
 
 const VIDEO_GENERATION_INTRO =
-  "AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself.";
+  "AI agents can outline a cinematic shot, name the camera move, and draft the prompt you check.";
 
 const MODEL_CHOICE_INTRO =
   "AI agents can compare coding models by what the docs say each one does, so you pick one and still review the code it writes.";
@@ -1012,7 +1012,7 @@ function openIntro(query: string, useCase?: UseCase | null): string {
     return `AI assistants can help with ${topic} by laying out the steps, comparing options, and drafting the messages you still send yourself.`;
   }
   if (verb && LEARNING_VERBS.has(verb)) {
-    return `AI assistants can help with ${topic} by explaining the next idea, drafting a little practice, and keeping a list of what you still want to review.`;
+    return `AI assistants can help with ${topic} by explaining the next idea and drafting a little practice.`;
   }
   return `AI assistants can help with ${topic} by turning it into a plan, answering questions as you go, and drafting anything you need to write.`;
 }
@@ -1024,7 +1024,7 @@ export function templatedIntro(query: string, useCase?: UseCase | null): string 
 const LISTING_EDIT_INTRO =
   "AI agents can trim your walkthrough footage, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.";
 const LISTING_PHOTO_INTRO =
-  "AI agents can turn listing photos into a home tour, add room labels and captions, pick music, and resize it into a vertical reel for Instagram or TikTok.";
+  "AI agents can turn listing photos into a home tour, add captions, and resize the reel.";
 
 export function jobIntro(query: string, useCase: UseCase | undefined, concept: Concept | null): string {
   if (/\bcold email\b/i.test(query) && /\bcrm\b/i.test(query)) {
@@ -1520,7 +1520,7 @@ function compoundHits(query: string): CompoundHit[] | null {
 
 const PAIR_INTRO: Record<string, string> = {
   "finance-ops+marketing-promotions":
-    "AI agents can schedule promo emails and posts, and draft and send invoices on a schedule, often from one workflow that connects your marketing and billing apps.",
+    "AI agents can schedule promo emails and posts, and draft and send invoices from one workflow.",
 };
 
 function joinAnd(phrases: string[]): string {

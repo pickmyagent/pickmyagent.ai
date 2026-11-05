@@ -1209,7 +1209,7 @@ test("compound marketing and invoice query names both jobs", () => {
   );
   assert.equal(
     ranked.intro,
-    "AI agents can schedule promo emails and posts, and draft and send invoices on a schedule, often from one workflow that connects your marketing and billing apps.",
+    "AI agents can schedule promo emails and posts, and draft and send invoices from one workflow.",
   );
   assert.equal(/,\s+and\b/i.test(ranked.lead), false);
   const slugs = ranked.useCases.map((useCase) => useCase.slug);

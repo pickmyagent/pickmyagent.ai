@@ -52987,7 +52987,7 @@
           "why": "Builds a CMA report from MLS comps and leaves the list price with the agent."
         }
       ],
-      "intro": "AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board."
+      "intro": "AI agents can gather comparable sales and draft a CMA. You still pick the comps and set the price."
     },
     {
       "slug": "coding-agents",
@@ -53038,7 +53038,7 @@
       "assistantContext": "drafting a contract",
       "searchTopic": "which contract lines a person should review",
       "recommended": [],
-      "intro": "AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording."
+      "intro": "AI agents can draft a contract from the terms you list and mark lines to review. A lawyer still reads it."
     },
     {
       "slug": "create-content",
@@ -53215,7 +53215,7 @@
           "why": "Invoicing and AP controls."
         }
       ],
-      "intro": "AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.",
+      "intro": "AI agents can read an invoice, pull out the fields, and flag a purchase order mismatch.",
       "disclaimer": "PickMyAgent is not tax or financial advice."
     },
     {
@@ -53290,7 +53290,7 @@
           "why": "Texting for owner lists. The pricing page lists skip tracing at $0.13."
         }
       ],
-      "intro": "AI agents can look through for-sale-by-owner and off-market records, then draft a note or text so you choose which owner to reach."
+      "intro": "AI agents can look through for-sale-by-owner and off-market records, then draft a note you send."
     },
     {
       "slug": "floor-plan-rendering",
@@ -53872,7 +53872,7 @@
       "assistantContext": "checking a payroll run",
       "searchTopic": "which payroll figures a person still confirms",
       "recommended": [],
-      "intro": "AI agents can turn hours, rates, and deductions into a payroll checklist and draft the questions you still ask a payroll service. You approve what gets paid.",
+      "intro": "AI agents can turn hours and rates into a payroll checklist. You approve what gets paid.",
       "disclaimer": "PickMyAgent is not tax or financial advice."
     },
     {
@@ -53939,7 +53939,7 @@
       "assistantContext": "writing a customer quote",
       "searchTopic": "what a simple quote should include",
       "recommended": [],
-      "intro": "AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers before it goes out."
+      "intro": "AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers."
     },
     {
       "slug": "rank-property-deals",
@@ -54185,7 +54185,7 @@
           "why": "A customer support inbox."
         }
       ],
-      "intro": "AI agents can capture receipts, send invoices, schedule the week's posts, and draft customer replies for a small business. You still approve the money and the messages.",
+      "intro": "AI agents can capture receipts, send invoices, schedule posts, and draft customer replies. You still approve them.",
       "disclaimer": "PickMyAgent is not tax or financial advice."
     },
     {
@@ -54237,7 +54237,7 @@
       "assistantContext": "preparing a sales-tax filing",
       "searchTopic": "which sales are taxable",
       "recommended": [],
-      "intro": "AI agents can separate taxable sales from the receipts you already have, list the rate and the filing date to confirm, and draft questions for the state form. You still file it.",
+      "intro": "AI agents can separate taxable sales from receipts and list the rate to confirm. You still file it.",
       "disclaimer": "PickMyAgent is not tax or financial advice."
     },
     {
@@ -54315,7 +54315,7 @@
       "assistantContext": "building a shift schedule",
       "searchTopic": "how a weekly shift schedule is usually laid out",
       "recommended": [],
-      "intro": "AI agents can draft a weekly shift schedule from who is available and write the text you send the team. You still post the final schedule."
+      "intro": "AI agents can draft a weekly shift schedule from who is available. You still post the final schedule."
     },
     {
       "slug": "shop-products",
@@ -54346,7 +54346,7 @@
     {
       "slug": "showing-scheduling",
       "title": "Schedule showings and open houses",
-      "summary": "Draft an open-house schedule and reminder messages. You still confirm the time in your showing system.",
+      "summary": "Draft an open-house schedule and reminder messages. You still confirm the time in the showing system.",
       "audienceHints": [
         "realtors"
       ],
@@ -54358,7 +54358,7 @@
       "assistantContext": "scheduling showings",
       "searchTopic": "showing and open-house schedules",
       "recommended": [],
-      "intro": "AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in your showing system."
+      "intro": "AI agents can draft an open-house schedule and reminder messages, and you still confirm the time in the showing system."
     },
     {
       "slug": "social-media",
@@ -54430,7 +54430,7 @@
       "assistantTask": "write the click-by-click steps and flag where a login or captcha can stop them",
       "assistantContext": "automating steps in a web browser",
       "searchTopic": "what the site allows an automated browser to do",
-      "intro": "AI agents can follow steps in a browser you direct, and stop when a login or captcha appears, so a repeated web task has a written path."
+      "intro": "AI agents can follow steps in a browser you direct, and stop when a login or captcha appears."
     },
     {
       "slug": "transaction-coordination",
@@ -54516,7 +54516,7 @@
       "assistantTask": "outline a shot list, name the camera move, and draft the prompt",
       "assistantContext": "generating a video from a prompt",
       "searchTopic": "the shot and camera move you want",
-      "intro": "AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself."
+      "intro": "AI agents can outline a cinematic shot, name the camera move, and draft the prompt you check."
     },
     {
       "slug": "voice-audio",

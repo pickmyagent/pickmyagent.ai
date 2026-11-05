@@ -13,6 +13,6 @@
   "assistantContext": "preparing a sales-tax filing",
   "searchTopic": "which sales are taxable",
   "recommended": [],
-  "intro": "AI agents can separate taxable sales from the receipts you already have, list the rate and the filing date to confirm, and draft questions for the state form. You still file it.",
+  "intro": "AI agents can separate taxable sales from receipts and list the rate to confirm. You still file it.",
   "disclaimer": "PickMyAgent is not tax or financial advice."
 }

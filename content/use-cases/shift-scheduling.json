@@ -13,5 +13,5 @@
   "assistantContext": "building a shift schedule",
   "searchTopic": "how a weekly shift schedule is usually laid out",
   "recommended": [],
-  "intro": "AI agents can draft a weekly shift schedule from who is available and write the text you send the team. You still post the final schedule."
+  "intro": "AI agents can draft a weekly shift schedule from who is available. You still post the final schedule."
 }
