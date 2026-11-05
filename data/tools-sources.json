@@ -3749,5 +3749,2776 @@
     ],
     "siteStatus": 200,
     "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "7shifts",
+    "name": "7shifts",
+    "category": "scheduling",
+    "websiteUrl": "https://www.7shifts.com/",
+    "sources": [
+      "https://www.7shifts.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "abnormal",
+    "name": "Abnormal",
+    "category": "security",
+    "websiteUrl": "https://abnormal.ai/",
+    "sources": [
+      "https://abnormal.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "acres",
+    "name": "Acres",
+    "category": "real-estate",
+    "websiteUrl": "https://www.acres.com/",
+    "sources": [
+      "https://www.acres.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "adcreative-ai",
+    "name": "AdCreative",
+    "category": "ads",
+    "websiteUrl": "https://www.adcreative.ai/",
+    "sources": [
+      "https://www.adcreative.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "adespresso",
+    "name": "AdEspresso",
+    "category": "ads",
+    "websiteUrl": "https://adespresso.com/",
+    "sources": [
+      "https://adespresso.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "alexa-shopping",
+    "name": "Alexa for Shopping",
+    "category": "shopping",
+    "websiteUrl": "https://www.amazon.com/",
+    "sources": [
+      "https://www.aboutamazon.com/news/retail/amazon-rufus"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "alpha3d",
+    "name": "Alpha3D",
+    "category": "3d",
+    "websiteUrl": "https://www.alpha3d.io/",
+    "sources": [
+      "https://www.alpha3d.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "anchor-browser",
+    "name": "Anchor Browser",
+    "category": "browser-agents",
+    "websiteUrl": "https://anchorbrowser.io/",
+    "sources": [
+      "https://anchorbrowser.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "angellist",
+    "name": "AngelList",
+    "category": "investing",
+    "websiteUrl": "https://www.angellist.com/",
+    "sources": [
+      "https://www.angellist.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "anki",
+    "name": "Anki",
+    "category": "learning",
+    "websiteUrl": "https://apps.ankiweb.net/",
+    "sources": [
+      "https://apps.ankiweb.net/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "apollo",
+    "name": "Apollo",
+    "category": "sales",
+    "websiteUrl": "https://www.apollo.io/",
+    "sources": [
+      "https://www.apollo.io/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "apply-design",
+    "name": "Apply Design",
+    "category": "interior",
+    "websiteUrl": "https://www.applydesign.io/",
+    "sources": [
+      "https://www.applydesign.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "architectgpt",
+    "name": "ArchitectGPT",
+    "category": "creative-media",
+    "websiteUrl": "https://www.architectgpt.io/",
+    "sources": [
+      "https://www.architectgpt.io/",
+      "https://www.architectgpt.io/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "archivinci",
+    "name": "ArchiVinci",
+    "category": "creative-media",
+    "websiteUrl": "https://www.archivinci.com/pricing",
+    "sources": [
+      "https://www.archivinci.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "arkoai",
+    "name": "ArkoAI",
+    "category": "creative-media",
+    "websiteUrl": "https://arko.ai/",
+    "sources": [
+      "https://arko.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "autogen",
+    "name": "AutoGen (Microsoft)",
+    "category": "agent-frameworks",
+    "websiteUrl": "https://github.com/microsoft/autogen",
+    "sources": [
+      "https://github.com/microsoft/autogen",
+      "https://microsoft.github.io/autogen/stable/index.html",
+      "https://github.com/microsoft/autogen/releases/tag/python-v0.7.5"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "tested-hands-on"
+  },
+  {
+    "slug": "autogpt",
+    "name": "AutoGPT",
+    "category": "agent-frameworks",
+    "websiteUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+    "sources": [
+      "https://github.com/Significant-Gravitas/AutoGPT",
+      "https://agpt.co/pricing",
+      "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.8.4"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "autoreel",
+    "name": "AutoReel",
+    "category": "creative-media",
+    "websiteUrl": "https://www.autoreelapp.com/",
+    "sources": [
+      "https://www.autoreelapp.com/",
+      "https://www.autoreelapp.com/faq/creating-listing-videos/how-do-i-create-my-first-autoreel-listing-video-as-a-new-user",
+      "https://www.autoreelapp.com/faq/cost-effective-realtor-tools/does-autoreel-offer-a-free-plan-or-free-trial"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "avalara",
+    "name": "Avalara",
+    "category": "tax",
+    "websiteUrl": "https://www.avalara.com/",
+    "sources": [
+      "https://www.avalara.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "batchleads",
+    "name": "BatchLeads",
+    "category": "real-estate",
+    "websiteUrl": "https://batchleads.io/",
+    "sources": [
+      "https://batchleads.io/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "category": "presentations",
+    "websiteUrl": "https://www.beautiful.ai/",
+    "sources": [
+      "https://www.beautiful.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "bill-com",
+    "name": "BILL",
+    "category": "finance-ops",
+    "websiteUrl": "https://www.bill.com/",
+    "sources": [
+      "https://www.bill.com/product"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "bitpart",
+    "name": "Bitpart",
+    "category": "game-ai",
+    "websiteUrl": "https://www.bitpart.ai/",
+    "sources": [
+      "https://www.bitpart.ai/",
+      "https://www.bitpart.ai/product"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "boxbrownie",
+    "name": "BoxBrownie",
+    "category": "creative-media",
+    "websiteUrl": "https://www.boxbrownie.com/",
+    "sources": [
+      "https://www.boxbrownie.com/pricing",
+      "https://www.boxbrownie.com/360-virtual-tours",
+      "https://www.boxbrownie.com/b/how-to-easily-create-a-virtual-tour-for-real-estate-listings"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "browser-use",
+    "name": "Browser Use",
+    "category": "tool-use",
+    "websiteUrl": "https://browser-use.com/",
+    "sources": [
+      "https://browser-use.com/",
+      "https://docs.browser-use.com/",
+      "https://github.com/browser-use/browser-use/releases/tag/0.13.11"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "tested-hands-on"
+  },
+  {
+    "slug": "buffer",
+    "name": "Buffer",
+    "category": "content",
+    "websiteUrl": "https://buffer.com/",
+    "sources": [
+      "https://buffer.com/pricing",
+      "https://buffer.com/ai-assistant"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "cake-resume",
+    "name": "Cake",
+    "category": "resumes",
+    "websiteUrl": "https://www.cake.me/",
+    "sources": [
+      "https://www.cake.me/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "cal-com",
+    "name": "Cal.com",
+    "category": "scheduling",
+    "websiteUrl": "https://cal.com/",
+    "sources": [
+      "https://cal.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "canva",
+    "name": "Canva",
+    "category": "creative-media",
+    "websiteUrl": "https://www.canva.com/",
+    "sources": [
+      "https://www.canva.com/video-editor/templates/real-estate/",
+      "https://www.canva.com/solutions/real-estate/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "capcut",
+    "name": "CapCut",
+    "category": "creative-media",
+    "websiteUrl": "https://www.capcut.com/",
+    "sources": [
+      "https://www.capcut.com/",
+      "https://www.capcut.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "capital-one-shopping",
+    "name": "Capital One Shopping",
+    "category": "shopping",
+    "websiteUrl": "https://capitaloneshopping.com/",
+    "sources": [
+      "https://capitaloneshopping.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "captions",
+    "name": "Captions",
+    "category": "creative-media",
+    "websiteUrl": "https://captions.ai/",
+    "sources": [
+      "https://captions.ai/",
+      "https://captions.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "capture-one",
+    "name": "Capture One",
+    "category": "photography",
+    "websiteUrl": "https://www.captureone.com/",
+    "sources": [
+      "https://www.captureone.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "cascadeur",
+    "name": "Cascadeur",
+    "category": "gaming",
+    "websiteUrl": "https://cascadeur.com/",
+    "sources": [
+      "https://cascadeur.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "cedreo",
+    "name": "Cedreo",
+    "category": "creative-media",
+    "websiteUrl": "https://cedreo.com/compare/",
+    "sources": [
+      "https://cedreo.com/compare/",
+      "https://cedreo.com/3d-rendering"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "charlotte-ai",
+    "name": "Charlotte AI",
+    "category": "security",
+    "websiteUrl": "https://www.crowdstrike.com/platform/charlotte-ai/",
+    "sources": [
+      "https://www.crowdstrike.com/en-us/platform/charlotte-ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "chatgpt",
+    "name": "ChatGPT",
+    "category": "general-assistants",
+    "websiteUrl": "https://chatgpt.com/",
+    "sources": [
+      "https://chatgpt.com/pricing",
+      "https://openai.com/index/introducing-chatgpt-go/",
+      "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "classy",
+    "name": "Classy",
+    "category": "nonprofit",
+    "websiteUrl": "https://www.classy.org/",
+    "sources": [
+      "https://www.classy.org/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "claude",
+    "name": "Claude (Anthropic)",
+    "category": "coding-agents",
+    "websiteUrl": "https://www.anthropic.com/claude",
+    "sources": [
+      "https://www.anthropic.com/claude",
+      "https://www.anthropic.com/pricing",
+      "https://docs.claude.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "clay",
+    "name": "Clay",
+    "category": "sales",
+    "websiteUrl": "https://www.clay.com/",
+    "sources": [
+      "https://www.clay.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "cloud-cma",
+    "name": "Cloud CMA",
+    "category": "real-estate",
+    "websiteUrl": "https://www.lwolf.com/engage/cma",
+    "sources": [
+      "https://www.lwolf.com/engage/cma",
+      "https://www.lwolf.com/resources/cloud-cma-vs-moxiworks-cma-moxipresent-which-cma-tool-wins"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "coefficient",
+    "name": "Coefficient",
+    "category": "spreadsheets",
+    "websiteUrl": "https://coefficient.io/",
+    "sources": [
+      "https://coefficient.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "composer",
+    "name": "Composer",
+    "category": "personal-finance",
+    "websiteUrl": "https://www.composer.trade/",
+    "sources": [
+      "https://www.composer.trade/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "composio",
+    "name": "Composio",
+    "category": "tool-use",
+    "websiteUrl": "https://composio.dev/",
+    "sources": [
+      "https://composio.dev/",
+      "https://composio.dev/pricing",
+      "https://docs.composio.dev/",
+      "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.4"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "continue",
+    "name": "Continue",
+    "category": "coding-agents",
+    "websiteUrl": "https://continue.dev/",
+    "sources": [
+      "https://continue.dev/",
+      "https://www.continue.dev/",
+      "https://docs.continue.dev/",
+      "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "convai",
+    "name": "Convai",
+    "category": "game-ai",
+    "websiteUrl": "https://convai.com/",
+    "sources": [
+      "https://convai.com/",
+      "https://convai.com/pricing",
+      "https://docs.convai.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "coohom",
+    "name": "Coohom",
+    "category": "creative-media",
+    "websiteUrl": "https://www.coohom.com/2D-Design-Tool/",
+    "sources": [
+      "https://www.coohom.com/2D-Design-Tool/",
+      "https://www.coohom.com/helpcenter/pricing%2C-subscription%2C-and-payment"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "category": "content",
+    "websiteUrl": "https://www.copy.ai/",
+    "sources": [
+      "https://www.copy.ai/prices"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "crewai",
+    "name": "CrewAI",
+    "category": "agent-frameworks",
+    "websiteUrl": "https://crewai.com/",
+    "sources": [
+      "https://crewai.com/",
+      "https://www.crewai.com/pricing",
+      "https://docs.crewai.com/",
+      "https://github.com/crewAIInc/crewAI/releases/tag/1.15.28"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "tested-hands-on"
+  },
+  {
+    "slug": "crowdin",
+    "name": "Crowdin",
+    "category": "translation",
+    "websiteUrl": "https://crowdin.com/",
+    "sources": [
+      "https://crowdin.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "category": "coding-agents",
+    "websiteUrl": "https://cursor.com/",
+    "sources": [
+      "https://cursor.com/",
+      "https://cursor.com/pricing",
+      "https://cursor.com/docs"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "customer-io",
+    "name": "Customer.io",
+    "category": "email",
+    "websiteUrl": "https://customer.io/",
+    "sources": [
+      "https://customer.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "d-id",
+    "name": "D-ID",
+    "category": "creative-media",
+    "websiteUrl": "https://www.d-id.com/",
+    "sources": [
+      "https://www.d-id.com/ai-videos/",
+      "https://docs.d-id.com/docs/v2-photo-avatar-quickstart",
+      "https://www.d-id.com/pricing/studio/",
+      "https://help.d-id.com/hc/en-us/articles/31234293852433-Understanding-subscriptions-key-information-you-should-know"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "d5-render",
+    "name": "D5 Render",
+    "category": "creative-media",
+    "websiteUrl": "https://www.d5render.com/",
+    "sources": [
+      "https://www.d5render.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "daydream",
+    "name": "Daydream",
+    "category": "shopping",
+    "websiteUrl": "https://daydream.ing/",
+    "sources": [
+      "https://daydream.ing/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "dealcheck",
+    "name": "DealCheck",
+    "category": "real-estate",
+    "websiteUrl": "https://dealcheck.io/",
+    "sources": [
+      "https://dealcheck.io/pricing/",
+      "https://help.dealcheck.io/en/articles/4471054-how-much-does-dealcheck-cost-can-i-try-it-for-free"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "dealmachine",
+    "name": "DealMachine",
+    "category": "real-estate",
+    "websiteUrl": "https://www.dealmachine.com/",
+    "sources": [
+      "https://www.dealmachine.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "decagon",
+    "name": "Decagon",
+    "category": "customer-support",
+    "websiteUrl": "https://decagon.ai/",
+    "sources": [
+      "https://decagon.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "deepseek",
+    "name": "DeepSeek",
+    "category": "general-assistants",
+    "websiteUrl": "https://www.deepseek.com/",
+    "sources": [
+      "https://www.deepseek.com/en/news/deepseek-app/",
+      "https://www.deepseek.com/en/download/",
+      "https://api-docs.deepseek.com/",
+      "https://api-docs.deepseek.com/quick_start/pricing/",
+      "https://api-docs.deepseek.com/guides/fim_completion"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "descript",
+    "name": "Descript",
+    "category": "creative-media",
+    "websiteUrl": "https://www.descript.com/",
+    "sources": [
+      "https://www.descript.com/",
+      "https://www.descript.com/pricing",
+      "https://help.descript.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "dext",
+    "name": "Dext",
+    "category": "finance-ops",
+    "websiteUrl": "https://dext.com/",
+    "sources": [
+      "https://dext.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "dify",
+    "name": "Dify",
+    "category": "agent-frameworks",
+    "websiteUrl": "https://dify.ai/",
+    "sources": [
+      "https://dify.ai/",
+      "https://dify.ai/pricing",
+      "https://docs.dify.ai/",
+      "https://github.com/langgenius/dify/releases/tag/1.17.1"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "doorloop",
+    "name": "DoorLoop",
+    "category": "real-estate",
+    "websiteUrl": "https://www.doorloop.com/",
+    "sources": [
+      "https://www.doorloop.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "dotloop",
+    "name": "Dotloop",
+    "category": "real-estate",
+    "websiteUrl": "https://www.dotloop.com/",
+    "sources": [
+      "https://www.dotloop.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "dropzone",
+    "name": "Dropzone AI",
+    "category": "security",
+    "websiteUrl": "https://www.dropzone.ai/",
+    "sources": [
+      "https://www.dropzone.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "duolingo-max",
+    "name": "Duolingo Max",
+    "category": "learning",
+    "websiteUrl": "https://blog.duolingo.com/duolingo-max/",
+    "sources": [
+      "https://blog.duolingo.com/duolingo-max/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ecwid",
+    "name": "Ecwid",
+    "category": "ecommerce",
+    "websiteUrl": "https://www.ecwid.com/",
+    "sources": [
+      "https://www.ecwid.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "eklipse",
+    "name": "Eklipse",
+    "category": "creative-media",
+    "websiteUrl": "https://eklipse.gg/",
+    "sources": [
+      "https://eklipse.gg/",
+      "https://eklipse.gg/pricing",
+      "https://eklipse.gg/help/clip-twitch-vod-after-stream/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "creative-media",
+    "websiteUrl": "https://elevenlabs.io/",
+    "sources": [
+      "https://elevenlabs.io/",
+      "https://elevenlabs.io/pricing",
+      "https://elevenlabs.io/docs"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "elicit",
+    "name": "Elicit",
+    "category": "research",
+    "websiteUrl": "https://elicit.com/",
+    "sources": [
+      "https://elicit.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "finta",
+    "name": "Finta",
+    "category": "bookkeeping",
+    "websiteUrl": "https://www.finta.com/",
+    "sources": [
+      "https://www.finta.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "firecrawl",
+    "name": "Firecrawl",
+    "category": "tool-use",
+    "websiteUrl": "https://www.firecrawl.dev/",
+    "sources": [
+      "https://www.firecrawl.dev/",
+      "https://www.firecrawl.dev/pricing",
+      "https://docs.firecrawl.dev/",
+      "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.0"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "floorplanner",
+    "name": "Floorplanner",
+    "category": "creative-media",
+    "websiteUrl": "https://floorplanner.com/pricing",
+    "sources": [
+      "https://floorplanner.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "flowise",
+    "name": "Flowise",
+    "category": "agent-frameworks",
+    "websiteUrl": "https://flowiseai.com/",
+    "sources": [
+      "https://flowiseai.com/",
+      "https://flowiseai.com/pricing",
+      "https://docs.flowiseai.com/",
+      "https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.4"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "flyfin",
+    "name": "FlyFin",
+    "category": "personal-finance",
+    "websiteUrl": "https://flyfin.tax/",
+    "sources": [
+      "https://flyfin.tax/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "follow-up-boss",
+    "name": "Follow Up Boss",
+    "category": "real-estate",
+    "websiteUrl": "https://www.followupboss.com/",
+    "sources": [
+      "https://www.followupboss.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "freshservice",
+    "name": "Freshservice",
+    "category": "it-support",
+    "websiteUrl": "https://www.freshworks.com/freshservice/",
+    "sources": [
+      "https://www.freshworks.com/freshservice/pricing/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "front-inbox",
+    "name": "Front",
+    "category": "email",
+    "websiteUrl": "https://front.com/",
+    "sources": [
+      "https://front.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "fyxer",
+    "name": "Fyxer",
+    "category": "productivity",
+    "websiteUrl": "https://www.fyxer.com/",
+    "sources": [
+      "https://www.fyxer.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "gem",
+    "name": "Gem",
+    "category": "hiring",
+    "websiteUrl": "https://www.gem.com/",
+    "sources": [
+      "https://www.gem.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "gemini",
+    "name": "Google Gemini",
+    "category": "general-assistants",
+    "websiteUrl": "https://gemini.google.com/",
+    "sources": [
+      "https://one.google.com/about/google-ai-plans/",
+      "https://gemini.google/subscriptions/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "getresponse",
+    "name": "GetResponse",
+    "category": "email",
+    "websiteUrl": "https://www.getresponse.com/",
+    "sources": [
+      "https://www.getresponse.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "coding-agents",
+    "websiteUrl": "https://github.com/features/copilot",
+    "sources": [
+      "https://github.com/features/copilot"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "glean",
+    "name": "Glean",
+    "category": "knowledge",
+    "websiteUrl": "https://www.glean.com/",
+    "sources": [
+      "https://www.glean.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "grade-us",
+    "name": "Grade.us",
+    "category": "small-business",
+    "websiteUrl": "https://www.grade.us/",
+    "sources": [
+      "https://www.grade.us/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "granola",
+    "name": "Granola",
+    "category": "knowledge",
+    "websiteUrl": "https://www.granola.ai/",
+    "sources": [
+      "https://www.granola.ai/",
+      "https://www.granola.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "guidegeek",
+    "name": "GuideGeek",
+    "category": "travel",
+    "websiteUrl": "https://guidegeek.com/",
+    "sources": [
+      "https://guidegeek.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "guru",
+    "name": "Guru",
+    "category": "knowledge",
+    "websiteUrl": "https://www.getguru.com/",
+    "sources": [
+      "https://www.getguru.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hex",
+    "name": "Hex",
+    "category": "data-analysis",
+    "websiteUrl": "https://hex.tech/",
+    "sources": [
+      "https://hex.tech/pricing/",
+      "https://hex.tech/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "category": "creative-media",
+    "websiteUrl": "https://www.heygen.com/",
+    "sources": [
+      "https://www.heygen.com/",
+      "https://www.heygen.com/pricing",
+      "https://docs.heygen.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hidden-door",
+    "name": "Hidden Door",
+    "category": "gaming",
+    "websiteUrl": "https://www.hiddendoor.co/",
+    "sources": [
+      "https://www.hiddendoor.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "higgsfield",
+    "name": "Higgsfield",
+    "category": "creative-media",
+    "websiteUrl": "https://higgsfield.ai/",
+    "sources": [
+      "https://higgsfield.ai/",
+      "https://higgsfield.ai/blog/cinema-studio-4-0",
+      "https://higgsfield.ai/creator-hub/help-center/tools/how-do-i-use-cinema-studio",
+      "https://higgsfield.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "homedesigns",
+    "name": "HomeDesigns AI",
+    "category": "creative-media",
+    "websiteUrl": "https://homedesigns.ai/",
+    "sources": [
+      "https://homedesigns.ai/",
+      "https://homedesigns.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "homestyler",
+    "name": "Homestyler",
+    "category": "creative-media",
+    "websiteUrl": "https://www.homestyler.com/pricing",
+    "sources": [
+      "https://www.homestyler.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "hootsuite",
+    "name": "Hootsuite",
+    "category": "content",
+    "websiteUrl": "https://www.hootsuite.com/",
+    "sources": [
+      "https://www.hootsuite.com/plans"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "huntr",
+    "name": "Huntr",
+    "category": "resumes",
+    "websiteUrl": "https://huntr.co/",
+    "sources": [
+      "https://huntr.co/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "instantly",
+    "name": "Instantly",
+    "category": "sales",
+    "websiteUrl": "https://instantly.ai/",
+    "sources": [
+      "https://instantly.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "intercom-fin",
+    "name": "Intercom Fin",
+    "category": "customer-support",
+    "websiteUrl": "https://www.intercom.com/fin",
+    "sources": [
+      "https://www.intercom.com/pricing",
+      "https://www.intercom.com/fin"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "interior-ai",
+    "name": "Interior AI",
+    "category": "creative-media",
+    "websiteUrl": "https://interiorai.com/",
+    "sources": [
+      "https://interiorai.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "inworld",
+    "name": "Inworld",
+    "category": "game-ai",
+    "websiteUrl": "https://inworld.ai/",
+    "sources": [
+      "https://inworld.ai/",
+      "https://inworld.ai/pricing",
+      "https://docs.inworld.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "jasper",
+    "name": "Jasper",
+    "category": "content",
+    "websiteUrl": "https://www.jasper.ai/",
+    "sources": [
+      "https://www.jasper.ai/",
+      "https://www.jasper.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "julius",
+    "name": "Julius",
+    "category": "data-analysis",
+    "websiteUrl": "https://julius.ai/",
+    "sources": [
+      "https://julius.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kapwing",
+    "name": "Kapwing",
+    "category": "creative-media",
+    "websiteUrl": "https://www.kapwing.com/",
+    "sources": [
+      "https://www.kapwing.com/",
+      "https://www.kapwing.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "keeper",
+    "name": "Keeper",
+    "category": "personal-finance",
+    "websiteUrl": "https://www.keepertax.com/",
+    "sources": [
+      "https://www.keepertax.com/",
+      "https://www.keepertax.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "khanmigo",
+    "name": "Khanmigo",
+    "category": "learning",
+    "websiteUrl": "https://www.khanmigo.ai/",
+    "sources": [
+      "https://www.khanmigo.ai/learners"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kickresume",
+    "name": "Kickresume",
+    "category": "hiring",
+    "websiteUrl": "https://www.kickresume.com/en/",
+    "sources": [
+      "https://www.kickresume.com/en/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "klaviyo",
+    "name": "Klaviyo",
+    "category": "content",
+    "websiteUrl": "https://www.klaviyo.com/",
+    "sources": [
+      "https://www.klaviyo.com/",
+      "https://www.klaviyo.com/pricing",
+      "https://help.klaviyo.com/hc/en-us/articles/360050759151"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "kubera",
+    "name": "Kubera",
+    "category": "personal-finance",
+    "websiteUrl": "https://www.kubera.com/",
+    "sources": [
+      "https://www.kubera.com/wealth-tracker",
+      "https://help.kubera.com/article/129-what-is-kubera-black"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "land-id",
+    "name": "Land id",
+    "category": "real-estate",
+    "websiteUrl": "https://id.land/",
+    "sources": [
+      "https://id.land/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "langchain",
+    "name": "LangChain",
+    "category": "agent-frameworks",
+    "websiteUrl": "https://www.langchain.com/",
+    "sources": [
+      "https://www.langchain.com/",
+      "https://www.langchain.com/pricing",
+      "https://docs.langchain.com/",
+      "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.10"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "tested-hands-on"
+  },
+  {
+    "slug": "launch-control",
+    "name": "Launch Control",
+    "category": "real-estate",
+    "websiteUrl": "https://launchcontrol.us/",
+    "sources": [
+      "https://launchcontrol.us/pricing/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lendingtree",
+    "name": "LendingTree",
+    "category": "mortgage",
+    "websiteUrl": "https://www.lendingtree.com/",
+    "sources": [
+      "https://www.lendingtree.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "letta",
+    "name": "Letta",
+    "category": "agent-frameworks",
+    "websiteUrl": "https://www.letta.com/",
+    "sources": [
+      "https://www.letta.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lindy",
+    "name": "Lindy",
+    "category": "productivity",
+    "websiteUrl": "https://www.lindy.ai/",
+    "sources": [
+      "https://www.lindy.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "livspace",
+    "name": "Livspace",
+    "category": "interior",
+    "websiteUrl": "https://www.livspace.com/",
+    "sources": [
+      "https://www.livspace.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "llamaindex",
+    "name": "LlamaIndex",
+    "category": "agent-frameworks",
+    "websiteUrl": "https://www.llamaindex.ai/",
+    "sources": [
+      "https://www.llamaindex.ai/",
+      "https://www.llamaindex.ai/pricing",
+      "https://docs.llamaindex.ai/en/stable/",
+      "https://github.com/run-llama/llama_index/releases/tag/v0.14.25"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "tested-hands-on"
+  },
+  {
+    "slug": "loansifter",
+    "name": "LoanSifter",
+    "category": "mortgage",
+    "websiteUrl": "https://www.loansifter.com/",
+    "sources": [
+      "https://www.loansifter.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lodasoft",
+    "name": "LodaSoft",
+    "category": "mortgage",
+    "websiteUrl": "https://www.lodasoft.com/",
+    "sources": [
+      "https://www.lodasoft.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lookx",
+    "name": "LookX",
+    "category": "creative-media",
+    "websiteUrl": "https://www.lookx.ai/",
+    "sources": [
+      "https://www.lookx.ai/",
+      "https://www.lookx.ai/price.html"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ludo-ai",
+    "name": "Ludo.ai",
+    "category": "gaming",
+    "websiteUrl": "https://ludo.ai/",
+    "sources": [
+      "https://ludo.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "magnifi",
+    "name": "Magnifi",
+    "category": "personal-finance",
+    "websiteUrl": "https://magnifi.com/",
+    "sources": [
+      "https://magnifi.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mailchimp",
+    "name": "Mailchimp",
+    "category": "content",
+    "websiteUrl": "https://mailchimp.com/",
+    "sources": [
+      "https://mailchimp.com/",
+      "https://mailchimp.com/pricing/marketing/",
+      "https://mailchimp.com/help/about-mailchimp-pricing-plans/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mailerlite",
+    "name": "MailerLite",
+    "category": "email",
+    "websiteUrl": "https://www.mailerlite.com/",
+    "sources": [
+      "https://www.mailerlite.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "make",
+    "name": "Make",
+    "category": "workflow-automation",
+    "websiteUrl": "https://www.make.com/",
+    "sources": [
+      "https://www.make.com/",
+      "https://www.make.com/en/pricing",
+      "https://www.make.com/en/help"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mashvisor",
+    "name": "Mashvisor",
+    "category": "real-estate",
+    "websiteUrl": "https://www.mashvisor.com/",
+    "sources": [
+      "https://www.mashvisor.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "masterpiece-x",
+    "name": "Masterpiece X",
+    "category": "3d",
+    "websiteUrl": "https://www.masterpiecex.com/",
+    "sources": [
+      "https://www.masterpiecex.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mem0",
+    "name": "Mem0",
+    "category": "search-rag",
+    "websiteUrl": "https://mem0.ai/",
+    "sources": [
+      "https://mem0.ai/",
+      "https://mem0.ai/pricing",
+      "https://docs.mem0.ai/",
+      "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.1"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "tested-hands-on"
+  },
+  {
+    "slug": "mentimeter",
+    "name": "Mentimeter",
+    "category": "presentations",
+    "websiteUrl": "https://www.mentimeter.com/",
+    "sources": [
+      "https://www.mentimeter.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mercury",
+    "name": "Mercury",
+    "category": "finance-ops",
+    "websiteUrl": "https://mercury.com/",
+    "sources": [
+      "https://mercury.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "meshy",
+    "name": "Meshy",
+    "category": "creative-media",
+    "websiteUrl": "https://www.meshy.ai/",
+    "sources": [
+      "https://www.meshy.ai/",
+      "https://www.meshy.ai/pricing",
+      "https://docs.meshy.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "metaview",
+    "name": "Metaview",
+    "category": "hiring",
+    "websiteUrl": "https://www.metaview.ai/",
+    "sources": [
+      "https://www.metaview.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "category": "creative-media",
+    "websiteUrl": "https://www.midjourney.com/",
+    "sources": [
+      "https://www.midjourney.com/",
+      "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+      "https://docs.midjourney.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mistscale",
+    "name": "MistScale",
+    "category": "game-ai",
+    "websiteUrl": "https://mistscale.com/",
+    "sources": [
+      "https://mistscale.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mnki",
+    "name": "MNKI",
+    "category": "creative-media",
+    "websiteUrl": "https://mnki.ai/floor-plan-rendering",
+    "sources": [
+      "https://mnki.ai/floor-plan-rendering",
+      "https://mnki.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "mnml",
+    "name": "mnml.ai",
+    "category": "creative-media",
+    "websiteUrl": "https://mnml.ai/floor-plan-to-render-ai",
+    "sources": [
+      "https://mnml.ai/floor-plan-to-render-ai",
+      "https://mnml.ai/pricing",
+      "https://mnml.ai/app/sketch2img"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "modl",
+    "name": "modl.ai",
+    "category": "game-ai",
+    "websiteUrl": "https://modl.ai/",
+    "sources": [
+      "https://modl.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "moldaspace",
+    "name": "MoldaSpace",
+    "category": "creative-media",
+    "websiteUrl": "https://www.moldaspace.com/",
+    "sources": [
+      "https://www.moldaspace.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "morphome",
+    "name": "Morphome",
+    "category": "creative-media",
+    "websiteUrl": "https://morphome.app/",
+    "sources": [
+      "https://morphome.app/",
+      "https://morphome.app/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "motion",
+    "name": "Motion",
+    "category": "productivity",
+    "websiteUrl": "https://www.usemotion.com/",
+    "sources": [
+      "https://www.usemotion.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "moveworks",
+    "name": "Moveworks",
+    "category": "it-support",
+    "websiteUrl": "https://www.moveworks.com/",
+    "sources": [
+      "https://www.moveworks.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "myarchitectai",
+    "name": "MyArchitectAI",
+    "category": "creative-media",
+    "websiteUrl": "https://www.myarchitectai.com/",
+    "sources": [
+      "https://www.myarchitectai.com/",
+      "https://www.myarchitectai.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n",
+    "category": "workflow-automation",
+    "websiteUrl": "https://n8n.io/",
+    "sources": [
+      "https://n8n.io/",
+      "https://n8n.io/pricing/",
+      "https://docs.n8n.io/",
+      "https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "notion",
+    "name": "Notion",
+    "category": "knowledge",
+    "websiteUrl": "https://www.notion.com/",
+    "sources": [
+      "https://www.notion.com/",
+      "https://www.notion.com/pricing",
+      "https://developers.notion.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "nvidia-ace",
+    "name": "NVIDIA ACE for Games",
+    "category": "game-ai",
+    "websiteUrl": "https://developer.nvidia.com/ace-for-games",
+    "sources": [
+      "https://developer.nvidia.com/ace-for-games",
+      "https://docs.nvidia.com/ace/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "obsidian",
+    "name": "Obsidian",
+    "category": "knowledge",
+    "websiteUrl": "https://obsidian.md/",
+    "sources": [
+      "https://obsidian.md/",
+      "https://obsidian.md/pricing",
+      "https://help.obsidian.md/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ocoya",
+    "name": "Ocoya",
+    "category": "content",
+    "websiteUrl": "https://www.ocoya.com/",
+    "sources": [
+      "https://www.ocoya.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "on1",
+    "name": "ON1",
+    "category": "photography",
+    "websiteUrl": "https://www.on1.com/",
+    "sources": [
+      "https://www.on1.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "optimal-blue",
+    "name": "Optimal Blue",
+    "category": "mortgage",
+    "websiteUrl": "https://www.optimalblue.com/",
+    "sources": [
+      "https://www.optimalblue.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "optmyzr",
+    "name": "Optmyzr",
+    "category": "ads",
+    "websiteUrl": "https://www.optmyzr.com/",
+    "sources": [
+      "https://www.optmyzr.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "opus",
+    "name": "Opus Clip",
+    "category": "creative-media",
+    "websiteUrl": "https://www.opus.pro/",
+    "sources": [
+      "https://www.opus.pro/",
+      "https://www.opus.pro/pricing",
+      "https://help.opus.pro/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pagerduty",
+    "name": "PagerDuty",
+    "category": "it-support",
+    "websiteUrl": "https://www.pagerduty.com/",
+    "sources": [
+      "https://www.pagerduty.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "palazzo",
+    "name": "Palazzo",
+    "category": "interior",
+    "websiteUrl": "https://www.palazzo.ai/",
+    "sources": [
+      "https://www.palazzo.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "paradox",
+    "name": "Paradox",
+    "category": "hiring",
+    "websiteUrl": "https://www.paradox.ai/",
+    "sources": [
+      "https://www.paradox.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "perplexity",
+    "name": "Perplexity",
+    "category": "search-rag",
+    "websiteUrl": "https://www.perplexity.ai/",
+    "sources": [
+      "https://www.perplexity.ai/",
+      "https://docs.perplexity.ai/guides/pricing",
+      "https://docs.perplexity.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "untested"
+  },
+  {
+    "slug": "pika",
+    "name": "Pika",
+    "category": "creative-media",
+    "websiteUrl": "https://pika.art/",
+    "sources": [
+      "https://pika.art/",
+      "https://pika.art/pricing",
+      "https://pika.art/faq"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pinecone",
+    "name": "Pinecone",
+    "category": "search-rag",
+    "websiteUrl": "https://www.pinecone.io/",
+    "sources": [
+      "https://www.pinecone.io/",
+      "https://www.pinecone.io/pricing/",
+      "https://docs.pinecone.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pinpoint",
+    "name": "Pinpoint",
+    "category": "hiring",
+    "websiteUrl": "https://www.pinpointhq.com/",
+    "sources": [
+      "https://www.pinpointhq.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pixellab",
+    "name": "PixelLab",
+    "category": "gaming",
+    "websiteUrl": "https://www.pixellab.ai/",
+    "sources": [
+      "https://www.pixellab.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "plan2render",
+    "name": "Plan2Render",
+    "category": "creative-media",
+    "websiteUrl": "https://plan2render.ai/",
+    "sources": [
+      "https://plan2render.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "planner5d",
+    "name": "Planner 5D",
+    "category": "creative-media",
+    "websiteUrl": "https://planner5d.com/ai/floor-plan-to-3d-model",
+    "sources": [
+      "https://planner5d.com/ai/floor-plan-to-3d-model",
+      "https://planner5d.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "pluralsight",
+    "name": "Pluralsight",
+    "category": "learning",
+    "websiteUrl": "https://www.pluralsight.com/",
+    "sources": [
+      "https://www.pluralsight.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "polly",
+    "name": "Polly",
+    "category": "mortgage",
+    "websiteUrl": "https://www.pollyex.com/",
+    "sources": [
+      "https://www.pollyex.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "portfolio-pilot",
+    "name": "PortfolioPilot",
+    "category": "personal-finance",
+    "websiteUrl": "https://portfoliopilot.com/",
+    "sources": [
+      "https://portfoliopilot.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "predis",
+    "name": "Predis.ai",
+    "category": "content",
+    "websiteUrl": "https://predis.ai/",
+    "sources": [
+      "https://predis.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "printful",
+    "name": "Printful",
+    "category": "ecommerce",
+    "websiteUrl": "https://www.printful.com/",
+    "sources": [
+      "https://www.printful.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "promeai",
+    "name": "PromeAI",
+    "category": "creative-media",
+    "websiteUrl": "https://www.promeai.pro/",
+    "sources": [
+      "https://www.promeai.pro/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "propstream",
+    "name": "PropStream",
+    "category": "real-estate",
+    "websiteUrl": "https://www.propstream.com/",
+    "sources": [
+      "https://www.propstream.com/pricing",
+      "https://www.propstream.com/news/how-much-does-propstream-cost"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "quizlet",
+    "name": "Quizlet",
+    "category": "learning",
+    "websiteUrl": "https://quizlet.com/features/ai-study-tools",
+    "sources": [
+      "https://quizlet.com/features/ai-study-tools",
+      "https://help.quizlet.com/hc/en-au/articles/25946589648013-Studying-with-Practice-Tests"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rakuten",
+    "name": "Rakuten",
+    "category": "shopping",
+    "websiteUrl": "https://www.rakuten.com/",
+    "sources": [
+      "https://www.rakuten.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "ramp",
+    "name": "Ramp",
+    "category": "finance-ops",
+    "websiteUrl": "https://ramp.com/",
+    "sources": [
+      "https://ramp.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "range",
+    "name": "Range",
+    "category": "personal-finance",
+    "websiteUrl": "https://www.range.com/",
+    "sources": [
+      "https://www.range.com/pricing",
+      "https://www.range.com/compliance/range-advisory-form-adv-part-2a.pdf"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "reclaim",
+    "name": "Reclaim",
+    "category": "productivity",
+    "websiteUrl": "https://reclaim.ai/",
+    "sources": [
+      "https://reclaim.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "reducto",
+    "name": "Reducto",
+    "category": "tool-use",
+    "websiteUrl": "https://reducto.ai/",
+    "sources": [
+      "https://reducto.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "regrid",
+    "name": "Regrid",
+    "category": "real-estate",
+    "websiteUrl": "https://regrid.com/",
+    "sources": [
+      "https://regrid.com/data-store",
+      "https://app.regrid.com/store",
+      "https://support.regrid.com/docs/general-faqs"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "reimaginehome",
+    "name": "REimagineHome",
+    "category": "creative-media",
+    "websiteUrl": "https://www.reimaginehome.ai/interior-home-renovation",
+    "sources": [
+      "https://www.reimaginehome.ai/interior-home-renovation",
+      "https://www.reimaginehome.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "relay",
+    "name": "Relay",
+    "category": "finance-ops",
+    "websiteUrl": "https://relayfi.com/",
+    "sources": [
+      "https://relayfi.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "remove-bg",
+    "name": "remove.bg",
+    "category": "image",
+    "websiteUrl": "https://www.remove.bg/",
+    "sources": [
+      "https://www.remove.bg/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rendair",
+    "name": "Rendair",
+    "category": "creative-media",
+    "websiteUrl": "https://rendair.ai/",
+    "sources": [
+      "https://rendair.ai/",
+      "https://rendair.ai/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "renderahouse",
+    "name": "Render a House",
+    "category": "creative-media",
+    "websiteUrl": "https://www.renderahouse.com/",
+    "sources": [
+      "https://www.renderahouse.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "replit",
+    "name": "Replit",
+    "category": "coding-agents",
+    "websiteUrl": "https://replit.com/",
+    "sources": [
+      "https://replit.com/",
+      "https://replit.com/pricing",
+      "https://docs.replit.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "untested"
+  },
+  {
+    "slug": "resimpli",
+    "name": "REsimpli",
+    "category": "real-estate",
+    "websiteUrl": "https://resimpli.com/",
+    "sources": [
+      "https://resimpli.com/pricing/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "resume-builder",
+    "name": "ResumeBuilder",
+    "category": "resumes",
+    "websiteUrl": "https://www.resumebuilder.com/",
+    "sources": [
+      "https://www.resumebuilder.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "resume-io",
+    "name": "Resume.io",
+    "category": "resumes",
+    "websiteUrl": "https://resume.io/",
+    "sources": [
+      "https://resume.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rezi",
+    "name": "Rezi",
+    "category": "hiring",
+    "websiteUrl": "https://www.rezi.ai/",
+    "sources": [
+      "https://www.rezi.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "room-ai",
+    "name": "Room AI",
+    "category": "interior",
+    "websiteUrl": "https://www.roomai.com/",
+    "sources": [
+      "https://www.roomai.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "roomgpt",
+    "name": "RoomGPT",
+    "category": "creative-media",
+    "websiteUrl": "https://roomgpt.io/",
+    "sources": [
+      "https://roomgpt.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "roomsketcher",
+    "name": "RoomSketcher",
+    "category": "creative-media",
+    "websiteUrl": "https://www.roomsketcher.com/features/3d-floor-plans/",
+    "sources": [
+      "https://www.roomsketcher.com/features/3d-floor-plans/",
+      "https://www.roomsketcher.com/pricing/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rows",
+    "name": "Rows",
+    "category": "data-analysis",
+    "websiteUrl": "https://rows.com/",
+    "sources": [
+      "https://rows.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "runway",
+    "name": "Runway",
+    "category": "creative-media",
+    "websiteUrl": "https://runway.com/",
+    "sources": [
+      "https://runway.com/",
+      "https://runwayml.com/pricing",
+      "https://help.runwayml.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "scenario",
+    "name": "Scenario",
+    "category": "creative-media",
+    "websiteUrl": "https://www.scenario.com/",
+    "sources": [
+      "https://www.scenario.com/",
+      "https://www.scenario.com/pricing",
+      "https://docs.scenario.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "scispace",
+    "name": "SciSpace",
+    "category": "research",
+    "websiteUrl": "https://scispace.com/",
+    "sources": [
+      "https://scispace.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "seedance",
+    "name": "Seedance",
+    "category": "creative-media",
+    "websiteUrl": "https://dreamina.capcut.com/",
+    "sources": [
+      "https://dreamina.capcut.com/documentation",
+      "https://ai.byteplus.com/ark/region:ap-southeast-1/docs/video-generation-tutorial",
+      "https://docs.byteplus.com/en/docs/ModelArk/seedance"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sharpapi",
+    "name": "SharpAPI",
+    "category": "tool-use",
+    "websiteUrl": "https://sharpapi.com/",
+    "sources": [
+      "https://sharpapi.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sheetai",
+    "name": "SheetAI",
+    "category": "spreadsheets",
+    "websiteUrl": "https://www.sheetai.app/",
+    "sources": [
+      "https://www.sheetai.app/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "shortwave",
+    "name": "Shortwave",
+    "category": "productivity",
+    "websiteUrl": "https://www.shortwave.com/",
+    "sources": [
+      "https://www.shortwave.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "showingtime",
+    "name": "ShowingTime",
+    "category": "real-estate",
+    "websiteUrl": "https://showingtime.com/",
+    "sources": [
+      "https://showingtime.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sierra",
+    "name": "Sierra",
+    "category": "customer-support",
+    "websiteUrl": "https://sierra.ai/",
+    "sources": [
+      "https://sierra.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "skyslope",
+    "name": "SkySlope",
+    "category": "real-estate",
+    "websiteUrl": "https://skyslope.com/",
+    "sources": [
+      "https://skyslope.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "skyvern",
+    "name": "Skyvern",
+    "category": "tool-use",
+    "websiteUrl": "https://www.skyvern.com/",
+    "sources": [
+      "https://www.skyvern.com/",
+      "https://www.skyvern.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "slidesai",
+    "name": "SlidesAI",
+    "category": "presentations",
+    "websiteUrl": "https://www.slidesai.io/",
+    "sources": [
+      "https://www.slidesai.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "slite",
+    "name": "Slite",
+    "category": "knowledge",
+    "websiteUrl": "https://slite.com/",
+    "sources": [
+      "https://slite.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sloyd",
+    "name": "Sloyd",
+    "category": "3d",
+    "websiteUrl": "https://www.sloyd.ai/",
+    "sources": [
+      "https://www.sloyd.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "smartlead",
+    "name": "Smartlead",
+    "category": "sales",
+    "websiteUrl": "https://www.smartlead.ai/",
+    "sources": [
+      "https://www.smartlead.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "snapdocs",
+    "name": "Snapdocs",
+    "category": "mortgage",
+    "websiteUrl": "https://www.snapdocs.com/",
+    "sources": [
+      "https://www.snapdocs.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "snyk",
+    "name": "Snyk",
+    "category": "security",
+    "websiteUrl": "https://snyk.io/",
+    "sources": [
+      "https://snyk.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "soul-machines",
+    "name": "Soul Machines",
+    "category": "game-ai",
+    "websiteUrl": "https://www.soulmachines.com/",
+    "sources": [
+      "https://www.soulmachines.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sourcetable",
+    "name": "Sourcetable",
+    "category": "spreadsheets",
+    "websiteUrl": "https://www.sourcetable.com/",
+    "sources": [
+      "https://www.sourcetable.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "spacely",
+    "name": "Spacely AI",
+    "category": "creative-media",
+    "websiteUrl": "https://www.spacely.ai/",
+    "sources": [
+      "https://www.spacely.ai/",
+      "https://www.spacely.ai/blog/spacely-ai-subscription-plans-2026-new-pricing-explained"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "spark-mail",
+    "name": "Spark",
+    "category": "productivity",
+    "websiteUrl": "https://sparkmailapp.com/",
+    "sources": [
+      "https://sparkmailapp.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "steel-dev",
+    "name": "Steel",
+    "category": "browser-agents",
+    "websiteUrl": "https://steel.dev/",
+    "sources": [
+      "https://steel.dev/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "streamladder",
+    "name": "StreamLadder",
+    "category": "creative-media",
+    "websiteUrl": "https://www.streamladder.com/",
+    "sources": [
+      "https://www.streamladder.com/",
+      "https://www.streamladder.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "studyfetch",
+    "name": "StudyFetch",
+    "category": "learning",
+    "websiteUrl": "https://www.studyfetch.com/",
+    "sources": [
+      "https://www.studyfetch.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "category": "creative-media",
+    "websiteUrl": "https://www.synthesia.io/",
+    "sources": [
+      "https://www.synthesia.io/",
+      "https://www.synthesia.io/pricing",
+      "https://www.synthesia.io/features/avatars"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "synthesis-tutor",
+    "name": "Synthesis Tutor",
+    "category": "learning",
+    "websiteUrl": "https://www.synthesis.com/tutor",
+    "sources": [
+      "https://www.synthesis.com/tutor"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "sysaid",
+    "name": "SysAid",
+    "category": "it-support",
+    "websiteUrl": "https://www.sysaid.com/",
+    "sources": [
+      "https://www.sysaid.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "tavernbard",
+    "name": "Tavernbard",
+    "category": "game-ai",
+    "websiteUrl": "https://www.tavernbard.com/",
+    "sources": [
+      "https://www.tavernbard.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "tavily",
+    "name": "Tavily",
+    "category": "tool-use",
+    "websiteUrl": "https://www.tavily.com/",
+    "sources": [
+      "https://www.tavily.com/",
+      "https://tavily.com/pricing",
+      "https://docs.tavily.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "taxact",
+    "name": "TaxAct",
+    "category": "personal-finance",
+    "websiteUrl": "https://www.taxact.com/",
+    "sources": [
+      "https://www.taxact.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "taxjar",
+    "name": "TaxJar",
+    "category": "tax",
+    "websiteUrl": "https://www.taxjar.com/",
+    "sources": [
+      "https://www.taxjar.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "teal",
+    "name": "Teal",
+    "category": "hiring",
+    "websiteUrl": "https://www.tealhq.com/",
+    "sources": [
+      "https://www.tealhq.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "teamtailor",
+    "name": "Teamtailor",
+    "category": "hiring",
+    "websiteUrl": "https://www.teamtailor.com/",
+    "sources": [
+      "https://www.teamtailor.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "transifex",
+    "name": "Transifex",
+    "category": "translation",
+    "websiteUrl": "https://www.transifex.com/",
+    "sources": [
+      "https://www.transifex.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "tray",
+    "name": "Tray",
+    "category": "workflow-automation",
+    "websiteUrl": "https://tray.io/",
+    "sources": [
+      "https://tray.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "turbotax",
+    "name": "TurboTax",
+    "category": "personal-finance",
+    "websiteUrl": "https://turbotax.intuit.com/",
+    "sources": [
+      "https://turbotax.intuit.com/personal-taxes/online/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "udacity",
+    "name": "Udacity",
+    "category": "learning",
+    "websiteUrl": "https://www.udacity.com/",
+    "sources": [
+      "https://www.udacity.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "udio",
+    "name": "Udio",
+    "category": "music",
+    "websiteUrl": "https://www.udio.com/",
+    "sources": [
+      "https://www.udio.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "unstructured",
+    "name": "Unstructured",
+    "category": "tool-use",
+    "websiteUrl": "https://unstructured.io/",
+    "sources": [
+      "https://unstructured.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "veras",
+    "name": "Veras",
+    "category": "creative-media",
+    "websiteUrl": "https://www.chaos.com/veras",
+    "sources": [
+      "https://www.chaos.com/veras"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "vertex",
+    "name": "Vertex",
+    "category": "tax",
+    "websiteUrl": "https://www.vertexinc.com/",
+    "sources": [
+      "https://www.vertexinc.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "vic-ai",
+    "name": "Vic.ai",
+    "category": "finance-ops",
+    "websiteUrl": "https://www.vic.ai/",
+    "sources": [
+      "https://www.vic.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "virtual-staging-ai",
+    "name": "Virtual Staging AI",
+    "category": "interior",
+    "websiteUrl": "https://www.virtualstagingai.app/",
+    "sources": [
+      "https://www.virtualstagingai.app/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "when-i-work",
+    "name": "When I Work",
+    "category": "scheduling",
+    "websiteUrl": "https://wheniwork.com/",
+    "sources": [
+      "https://wheniwork.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wise",
+    "name": "Wise",
+    "category": "finance-ops",
+    "websiteUrl": "https://wise.com/",
+    "sources": [
+      "https://wise.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wiz",
+    "name": "Wiz",
+    "category": "security",
+    "websiteUrl": "https://www.wiz.io/",
+    "sources": [
+      "https://www.wiz.io/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wonderplan",
+    "name": "Wonderplan",
+    "category": "travel",
+    "websiteUrl": "https://wonderplan.ai/",
+    "sources": [
+      "https://wonderplan.ai/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "woocommerce",
+    "name": "WooCommerce",
+    "category": "ecommerce",
+    "websiteUrl": "https://woocommerce.com/",
+    "sources": [
+      "https://woocommerce.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "writesonic",
+    "name": "Writesonic",
+    "category": "content",
+    "websiteUrl": "https://writesonic.com/",
+    "sources": [
+      "https://writesonic.com/pricing"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "zapier",
+    "name": "Zapier",
+    "category": "workflow-automation",
+    "websiteUrl": "https://zapier.com/",
+    "sources": [
+      "https://zapier.com/",
+      "https://zapier.com/pricing",
+      "https://docs.zapier.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "zendesk",
+    "name": "Zendesk",
+    "category": "customer-support",
+    "websiteUrl": "https://www.zendesk.com/",
+    "sources": [
+      "https://www.zendesk.com/pricing/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
   }
 ]

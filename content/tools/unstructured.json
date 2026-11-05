@@ -1,0 +1,88 @@
+{
+  "id": "unstructured",
+  "slug": "unstructured",
+  "name": "Unstructured",
+  "websiteUrl": "https://unstructured.io/",
+  "affiliateUrl": null,
+  "shortDescription": "Unstructured extracts text and tables from documents.",
+  "longDescription": "Unstructured extracts text and tables from documents.",
+  "categories": [
+    "tool-use"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://unstructured.io/",
+  "docsUrl": "https://unstructured.io/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Extract text from a document",
+    "Parse a PDF"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "The product covers the jobs described on its official site, and you still review the result.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://unstructured.io/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://unstructured.io/"
+  },
+  "capabilities": [
+    "connect an agent to a tool",
+    "call an api from an agent",
+    "search the web for an agent",
+    "fill a browser form for an agent",
+    "pass a page to a model",
+    "run a tool with structured input",
+    "chain two tools in one task",
+    "return a source with the answer"
+  ],
+  "searchPhrases": [
+    "connect an agent to a tool",
+    "help me connect an agent to a tool",
+    "can you connect an agent to a tool",
+    "call an api from an agent",
+    "help me call an api from an agent",
+    "can you call an api from an agent",
+    "search the web for an agent",
+    "help me search the web for an agent",
+    "can you search the web for an agent",
+    "fill a browser form for an agent",
+    "help me fill a browser form for an agent",
+    "can you fill a browser form for an agent"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "taxjar",
+  "slug": "taxjar",
+  "name": "TaxJar",
+  "websiteUrl": "https://www.taxjar.com/",
+  "affiliateUrl": null,
+  "shortDescription": "TaxJar calculates and files sales tax.",
+  "longDescription": "TaxJar calculates and files sales tax.",
+  "categories": [
+    "tax"
+  ],
+  "useCaseTags": [
+    "sales-tax"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.taxjar.com/",
+  "docsUrl": "https://www.taxjar.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Calculate sales tax",
+    "Prepare a sales tax filing"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "The product covers the jobs described on its official site, and you still review the result.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.taxjar.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.taxjar.com/"
+  },
+  "capabilities": [
+    "calculate sales tax on an order",
+    "prepare a sales tax filing",
+    "separate taxable sales from receipts",
+    "file a vat return",
+    "check a gst return",
+    "list a rate and a filing date to confirm",
+    "start a tax return",
+    "file a personal tax return"
+  ],
+  "searchPhrases": [
+    "calculate sales tax on an order",
+    "help me calculate sales tax on an order",
+    "can you calculate sales tax on an order",
+    "prepare a sales tax filing",
+    "help me prepare a sales tax filing",
+    "can you prepare a sales tax filing",
+    "separate taxable sales from receipts",
+    "help me separate taxable sales from receipts",
+    "can you separate taxable sales from receipts",
+    "file a vat return",
+    "help me file a vat return",
+    "can you file a vat return",
+    "file my 1040",
+    "quarterly estimated taxes",
+    "where do these deductions go"
+  ]
+}

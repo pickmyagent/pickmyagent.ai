@@ -662,8 +662,13 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
     "follow-up-boss": ["Follow Up Boss keeps a showing follow-up on the contact record."],
     "launch-control": ["Launch Control texts a buyer to confirm a showing time."],
     resimpli: ["REsimpli logs a showing and the follow-up on the property."],
+    showingtime: ["ShowingTime schedules a showing and sends a reminder."],
   },
-  "transaction-coordination": {},
+  "transaction-coordination": {
+    showingtime: ["ShowingTime keeps the listing file moving toward closing."],
+    skyslope: ["SkySlope tracks a transaction checklist through closing."],
+    dotloop: ["Dotloop stores the purchase documents in one file."],
+  },
   payroll: {
     "deel-hr": ["Deel runs payroll for a team the company pays."],
     "remote-hr": ["Remote runs payroll for employees in other countries."],
@@ -677,6 +682,7 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   "review-requests": {
     birdeye: ["Birdeye asks a customer for a review after a visit."],
     podium: ["Podium texts a request for a review after the job."],
+    "grade-us": ["Grade.us asks a customer for a public review."],
   },
   quotes: {
     bonsai: ["Bonsai drafts a proposal for a freelance job."],
@@ -688,10 +694,16 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
     spellbook: ["Spellbook reviews a contract in a Word document."],
     ironclad: ["Ironclad tracks a contract through review."],
   },
-  "sales-tax": {},
+  "sales-tax": {
+    taxjar: ["TaxJar calculates sales tax on an order."],
+    avalara: ["Avalara calculates the sales tax for a sale."],
+    vertex: ["Vertex calculates indirect tax for a filing."],
+  },
   "shift-scheduling": {
     housecall: ["Housecall Pro schedules a crew onto a job."],
     servicetitan: ["ServiceTitan schedules technicians onto the day's jobs."],
+    "when-i-work": ["When I Work schedules shifts and tracks who can work."],
+    "7shifts": ["7shifts schedules restaurant shifts for the week."],
   },
 };
 
