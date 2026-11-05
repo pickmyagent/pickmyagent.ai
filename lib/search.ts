@@ -1424,9 +1424,11 @@ function confidentLexicon(hits: ConceptHit[]): boolean {
 }
 
 function trigramHits(text: string): ConceptHit[] {
+  const lower = prepareQuery(text).text;
   return semanticHits(text).flatMap((hit) => {
     const concept = CONCEPTS.find((item) => item.id === hit.id);
-    return concept ? [{ concept, score: hit.score }] : [];
+    if (!concept || !semanticAllowed(concept, lower)) return [];
+    return [{ concept, score: hit.score }];
   });
 }
 

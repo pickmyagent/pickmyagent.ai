@@ -68,6 +68,7 @@ export function gstQuery(text: string): boolean {
 }
 
 export function ten99Query(text: string): boolean {
+  if (/\bw-?2\b/i.test(text) && /\bincome\b/i.test(text)) return false;
   return /\b1099s?\b/i.test(text);
 }
 
@@ -264,6 +265,24 @@ export function conceptBlocked(id: string, lower: string): boolean {
   if ((id === "content" || id === "social") && /\b(ad creatives?|ad variations|ugc|google ads)\b/.test(lower)) return true;
   if (id === "shifts" && !shiftQuery(lower) && !/\b(who can work|nobody assigned|who is available)\b/.test(lower)) return true;
   if ((id === "video" || id === "video-generation") && /\b(short story|cold email|newsletter|google slides|build an app)\b/.test(lower) && !/\b(clip|clips|reel|reels|twitch)\b/.test(lower)) return true;
+  if ((id === "video" || id === "video-generation") && /\binterview\b/.test(lower) && /\b(highlight|clip|notes?)\b/.test(lower) && !/\b(twitch|reel|game|vod)\b/.test(lower)) return true;
+  if ((id === "video" || id === "video-generation") && /\b(beats?|soundtrack|songs?)\b/.test(lower) && !/\b(clip|clips|reel|reels|twitch)\b/.test(lower)) return true;
+  if (id === "meetings" && /\bearnings\b/.test(lower)) return true;
+  if (id === "hiring" && /\b(transcrib\w*|clips?|highlights?|captions?)\b/.test(lower) && !/\b(candidates?|hiring|resumes?|screen)\b/.test(lower)) return true;
+  if ((id === "transaction" || id === "contracts") && /\btranslat\w*\b/.test(lower)) return true;
+  if (id === "email" && /\btone\b/.test(lower)) return true;
+  if (id === "sales" && /\btone\b/.test(lower)) return true;
+  if (id === "social" && /\bcaptions?\b/.test(lower) && /\binterview\b/.test(lower)) return true;
+  if (id === "meetings" && /\b(speaker notes|deck)\b/.test(lower)) return true;
+  if (id === "language" && /\b(support replies|customer)\b/.test(lower)) return true;
+  if (id === "listing-photos" && /\bcatalog\b/.test(lower)) return true;
+  if ((id === "schedule" || id === "content") && /\brecurring job\b/.test(lower)) return true;
+  if (id === "meetings" && /\b(zoom|customer call)\b/.test(lower)) return true;
+  if (id === "meetings" && /\b(clip|highlight)\b/.test(lower)) return true;
+  if (id === "meetings" && /\btranscrib/.test(lower) && /\binterview\b/.test(lower) && !/\b(meeting|notes|zoom)\b/.test(lower)) return true;
+  if ((id === "taxes" || id === "bookkeeping") && /\b(presentation|slides|slide deck)\b/.test(lower)) return true;
+  if (id === "content" && /\blanding page\b/.test(lower) && !/\b(copy|brief)\b/.test(lower)) return true;
+  if (id === "customer-follow-up" && /\b(notes?|call|meeting)\b/.test(lower) && !/\b(follow|review|bought|purchase)\b/.test(lower)) return true;
   if (id === "knowledge" && /\b(case law|nda\b|lawsuit|parking ticket)\b/.test(lower)) return true;
   if (id === "support" && /\b(parking ticket|case law|nda\b)\b/.test(lower)) return true;
   if (id === "commerce" && /\b(product descriptions?|product titles|catalog photos|support macros)\b/.test(lower) && !/\b(inventory|shipping)\b/.test(lower)) return true;

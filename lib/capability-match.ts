@@ -187,7 +187,7 @@ const QUERY_CUES: Array<{ family: string; pattern: RegExp }> = [
   { family: "legal", pattern: /\b(contracts?|redlines?|clauses?|nda\b|lawsuit|deposition|attorney|lawyers?|legal brief|terms of service|demand letter|case law|playbook|due diligence|parking ticket)\b/i },
   { family: "tax", pattern: /\b(tax returns?|1040|deductions?|irs\b|vat return|sales tax|quarterly taxes|w-?2\b|1099)\b/i },
   { family: "books", pattern: /\b(quickbooks|qbo\b|bookkeeping|bookkeep|reconcil\w*|general ledger|accounts payable|accounts receivable|invoices?|receipts?|xero|freshbooks)\b/i },
-  { family: "investing", pattern: /\b(portfolios?|brokerage|401k|etfs?|stocks?|tickers?|rebalance)\b/i },
+  { family: "investing", pattern: /\b(portfolios?|brokerage|401k|etfs?|stocks?|tickers?|rebalance|earnings)\b/i },
   { family: "sales", pattern: /\b(cold emails?|outbound|sales (?:sequence|pipeline|outreach)|lead lists?|prospects?)\b/i },
   { family: "seo", pattern: /\b(seo\b|backlinks?|keyword research|search ranking|serp\b)\b/i },
   { family: "ads", pattern: /\b(google ads|facebook ads|meta ads|ad creatives?|roas\b|ppc\b)\b/i },
@@ -198,28 +198,28 @@ const QUERY_CUES: Array<{ family: string; pattern: RegExp }> = [
   { family: "resumes", pattern: /\b(resumes?|cvs?\b|cover letters?)\b/i },
   { family: "education", pattern: /\b(tutors?|tutoring|homework|flashcards?|study (?:plan|guide)|lesson plan)\b/i },
   { family: "fitness", pattern: /\b(workouts?|meal plans?|calories|fitness|meditation|running plan|strength training|half marathon|sleep)\b/i },
-  { family: "meetings", pattern: /\b(meeting notes|transcripts?|action items|notetaker|transcribe)\b/i },
+  { family: "meetings", pattern: /\b(meeting notes|transcripts?|action items|notetaker|transcribe|zoom\b|customer call|interview)\b/i },
   { family: "scheduling", pattern: /\b(calendars?|appointments?|schedule (?:a|my) meeting|time block)\b/i },
   { family: "research", pattern: /\b(literature review|peer-reviewed|citations?|academic papers?|systematic review)\b/i },
   { family: "data", pattern: /\b(spreadsheets?|dashboards?|pivot tables?|csv\b|sql\b|charts?|vlookup|excel|formula)\b/i },
-  { family: "code", pattern: /\b(pull requests?|codebase|refactor|github|debug(?:ging)? (?:this|a|the) (?:function|code|bug)|unit tests?|ide\b)\b/i },
+  { family: "code", pattern: /\b(pull requests?|codebase|refactor|github|debug(?:ging)? (?:this|a|the) (?:function|code|bug)|unit tests?|ide\b|build an app|autocomplete|failing tests?)\b/i },
   { family: "browser", pattern: /\b(browser agents?|computer use|fill (?:out )?forms?|web scraping agent)\b/i },
   { family: "agents", pattern: /\b(multi-agent|agent crew|agent framework|orchestrat\w* agents)\b/i },
-  { family: "automation", pattern: /\b(zapier|workflow automation|automate (?:my|a|the) workflow)\b/i },
+  { family: "automation", pattern: /\b(zapier|workflow automation|automate (?:my|a|the) workflow|recurring job)\b/i },
   { family: "security", pattern: /\b(phishing|soc alerts?|malware|vulnerabilit\w*|siem\b)\b/i },
   { family: "it", pattern: /\b(password resets?|it tickets?|service desk|mdm\b|vpn\b|help ?desk ticket)\b/i },
   { family: "commerce", pattern: /\b(shopify|ecommerce|e-commerce|product listings?|sku\b|inventory)\b/i },
   { family: "translation", pattern: /\b(translat\w*|dubbing|subtitles?|localization)\b/i },
-  { family: "slides", pattern: /\b(slide decks?|powerpoint|pitch decks?|keynote|presentation|google slides)\b/i },
+  { family: "slides", pattern: /\b(slides?\b|slide decks?|powerpoint|pitch decks?|keynote|presentation|google slides|speaker notes)\b/i },
   { family: "travel", pattern: /\b(itinerar\w*|flights?|hotels?|trip plan|lisbon|tokyo|florence|rome)\b/i },
   { family: "games", pattern: /\b(npcs?|game characters?|unity|unreal|twitch|game assets?|vod\b)\b/i },
   { family: "music", pattern: /\b(songs?|beats?|soundtracks?|stem separation|lyrics|lofi|vocal stem)\b/i },
-  { family: "audio", pattern: /\b(voice clones?|text to speech|voiceover|podcast (?:edit|intro)|text-to-speech|tts\b)\b/i },
-  { family: "video", pattern: /\b(text to video|text-to-video|ai videos?|avatar videos?|caption (?:a|the) video|b-?roll)\b/i },
+  { family: "audio", pattern: /\b(voice clones?|text to speech|voiceover|podcast (?:edit|intro)|text-to-speech|tts\b|transcribe)\b/i },
+  { family: "video", pattern: /\b(text to video|text-to-video|ai videos?|avatar videos?|caption (?:a|the) video|captions?\b|b-?roll)\b/i },
   { family: "image", pattern: /\b(text to image|text-to-image|remove (?:the )?background|background remov\w*|upscale (?:a |the )?(?:photo|image)|logos?|product photos?)\b/i },
-  { family: "design", pattern: /\b(logos?|brand kits?|ui mockups?|figma|wireframes?)\b/i },
+  { family: "design", pattern: /\b(logos?|brand kits?|ui mockups?|figma|wireframes?|landing pages?)\b/i },
   { family: "photo", pattern: /\b(photo retouch|raw photos?|headshots?|portrait edit|wedding photos|cull)\b/i },
-  { family: "writing", pattern: /\b(blog posts?|copywriting|grammar|rewrite|essay|newsletter copy)\b/i },
+  { family: "writing", pattern: /\b(blog posts?|copywriting|grammar|rewrite|essay|newsletter copy|tone of)\b/i },
   { family: "nonprofit", pattern: /\b(grant proposals?|donors?|fundraising|nonprofit|food pantry)\b/i },
   { family: "3d", pattern: /\b(3d models?|text to 3d|text-to-3d|mesh(?:es)?)\b/i },
   { family: "shopping", pattern: /\b(price comparison|running shoes|headphones|shop for)\b/i },
@@ -532,7 +532,7 @@ export function capabilityLead(capability: string, categories: string[] = []): s
   const words = body.split(/\s+/);
   const stem = (words[0] ?? "").replace(/ing$/, "");
   const twoVerbs = ["test", "fit", "set", "cut", "run", "turn", "text"].includes(stem)
-    && ["fit", "test", "up", "out", "text", "to", "into"].includes(words[1] ?? "");
+    && ["fit", "test", "up", "out", "text", "to", "into", "dress"].includes(words[1] ?? "");
   if (
     twoVerbs
     || headerEchoBroken(body)
@@ -661,6 +661,25 @@ export function pickCapabilities(
     const current = best.get(doc.slug);
     if (!current || fused > current.score || (fused === current.score && doc.display.length > current.capability.length)) {
       best.set(doc.slug, { slug: doc.slug, capability: doc.display, score: fused, cosine });
+    }
+  }
+
+  if (cosines && best.size < 3 && allowed) {
+    for (const [id, cosine] of cosines) {
+      if (!id.startsWith("cat#") || cosine < 0.64) continue;
+      const category = id.slice(4);
+      const family = CATEGORY_FAMILY[category];
+      if (!family || !allowed.has(family)) continue;
+      let added = 0;
+      for (const tool of tools) {
+        if (tool.generalPurpose || tool.status !== "published") continue;
+        if (!tool.categories.includes(category) || best.has(tool.slug)) continue;
+        const capability = tool.capabilities?.[0];
+        if (!capability) continue;
+        best.set(tool.slug, { slug: tool.slug, capability, score: cosine * 0.5, cosine });
+        added += 1;
+        if (added >= 3 || best.size >= 5) break;
+      }
     }
   }
 
