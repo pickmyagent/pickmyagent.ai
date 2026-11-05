@@ -31,7 +31,7 @@
   "repoUrl": null,
   "bestFor": [
     "Connecting hosted apps without running a server",
-    "Teams that already live in Zapier\u2019s app directory"
+    "Teams that already live in Zapier’s app directory"
   ],
   "notIdealFor": [
     "Self-hosted or offline workflows",
@@ -67,15 +67,26 @@
     "workflow-automation": "Connects hosted apps, and the free plan includes 100 tasks per month."
   },
   "capabilities": [
-    "connect hosted apps, and the free plan includes 100 tasks per month",
-    "connect hosted apps",
-    "connect the free plan includes 100 tasks per month",
-    "help teams that already live in zapier\u2019s app directory",
-    "work from connecting hosted apps without running a server",
-    "work from teams that already live in zapier\u2019s app directory",
-    "work from connects the apps you already use. the free plan includes 100 tasks per month",
-    "work from free plan includes 100 tasks per month for connecting hosted apps without running a server",
-    "work from connects saas apps, including agent-style steps",
-    "connect hosted apps, and a free plan includes 100 tasks per month"
+    "automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "connect a crm to email",
+    "schedule a recurring job",
+    "move a row into another app",
+    "trigger a step when a payment succeeds",
+    "sync a contact between two apps"
+  ],
+  "searchPhrases": [
+    "automate a workflow across apps",
+    "help me automate a workflow across apps",
+    "can you automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "help me send a slack message when a form is submitted",
+    "can you send a slack message when a form is submitted",
+    "connect a crm to email",
+    "help me connect a crm to email",
+    "can you connect a crm to email",
+    "schedule a recurring job",
+    "help me schedule a recurring job",
+    "can you schedule a recurring job"
   ]
 }

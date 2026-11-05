@@ -62,17 +62,29 @@
     "finalUrl": "https://cash.app/taxes"
   },
   "capabilities": [
-    "file a tax return",
-    "estimate a refund",
-    "answer tax questions",
-    "create an account to get started",
-    "use secure & free tax filing online",
-    "use cash app taxes",
-    "use is cash app taxes really free",
-    "use is cash app taxes accurate",
-    "use how long does it take to file",
-    "use do i need to download cash app",
-    "use what about security",
-    "use banking services are provided by cash app"
+    "start a tax return",
+    "file a personal tax return",
+    "find freelance deductions",
+    "organize w2 and 1099 income",
+    "estimate a quarterly tax payment",
+    "efile a finished return",
+    "sort deductions into the return",
+    "prepare records for a tax filing"
+  ],
+  "searchPhrases": [
+    "start a tax return",
+    "help me start a tax return",
+    "can you start a tax return",
+    "file a personal tax return",
+    "help me file a personal tax return",
+    "can you file a personal tax return",
+    "find freelance deductions",
+    "help me find freelance deductions",
+    "can you find freelance deductions",
+    "organize w2 and 1099 income",
+    "help me organize w2 and 1099 income",
+    "can you organize w2 and 1099 income",
+    "file my 1040",
+    "where do these deductions go"
   ]
 }

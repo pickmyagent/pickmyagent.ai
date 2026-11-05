@@ -62,10 +62,27 @@
     "finalUrl": "https://10web.io/"
   },
   "capabilities": [
-    "build a wordpress site with ai",
-    "generate a website from a prompt",
-    "host a wordpress site",
-    "recreate a site from a url",
-    "turn what you have into a website, store or app | 10web start from files, links, social profiles or an idea"
+    "write a shopify product description",
+    "remove the background on a catalog photo",
+    "rewrite bulk product titles",
+    "draft an abandoned cart note",
+    "generate a simple storefront",
+    "write a product title and bullets",
+    "tag a catalog photo",
+    "update a product listing"
+  ],
+  "searchPhrases": [
+    "write a shopify product description",
+    "help me write a shopify product description",
+    "can you write a shopify product description",
+    "remove the background on a catalog photo",
+    "help me remove the background on a catalog photo",
+    "can you remove the background on a catalog photo",
+    "rewrite bulk product titles",
+    "help me rewrite bulk product titles",
+    "can you rewrite bulk product titles",
+    "draft an abandoned cart note",
+    "help me draft an abandoned cart note",
+    "can you draft an abandoned cart note"
   ]
 }

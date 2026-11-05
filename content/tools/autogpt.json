@@ -79,13 +79,31 @@
     "multi-agent-workflows": "Open-source agent project that can try a multi-step goal you give it."
   },
   "capabilities": [
-    "run an open-source agent loop toward a coding goal, and you review the output",
-    "run an open-source agent loop toward a coding goal",
-    "run you review the output",
-    "help teams watching the platform beta releases",
-    "work from reading an open-source autonomous-agent codebase",
-    "work from teams watching the platform beta releases",
-    "work from open-source agent project with a platform beta. the site and repo were reviewed",
-    "run an open-source agent loop toward the coding goal, and you review the output"
+    "orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "keep memory for an agent",
+    "use an open source agent framework",
+    "hand a task from one agent to another",
+    "define a tool an agent can call",
+    "trace an agent run",
+    "retry a failed agent step"
+  ],
+  "searchPhrases": [
+    "orchestrate agents that use tools",
+    "help me orchestrate agents that use tools",
+    "can you orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "help me run a multi agent research crew",
+    "can you run a multi agent research crew",
+    "keep memory for an agent",
+    "help me keep memory for an agent",
+    "can you keep memory for an agent",
+    "use an open source agent framework",
+    "help me use an open source agent framework",
+    "can you use an open source agent framework",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again",
+    "open source agent framework"
   ]
 }

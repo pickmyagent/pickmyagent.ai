@@ -67,15 +67,31 @@
     "manage-portfolio": "Links brokerage accounts on the $0 plan and adds forecasts on Premium."
   },
   "capabilities": [
-    "read a portfolio summary",
-    "ask a question about a portfolio",
-    "forecast a portfolio on a paid plan",
-    "link a brokerage account for a portfolio view",
-    "link brokerage accounts and reading a portfolio summary on the free plan",
-    "link reading a portfolio summary on the free plan",
-    "work from linking brokerage accounts and reading a portfolio summary on the free plan",
-    "work from links brokerage accounts on a plan. premium is per year",
-    "work from there is a plan that can link accounts, and premium is per year for forecasts",
-    "read the portfolio summary"
+    "track spending across accounts",
+    "build a monthly budget",
+    "see net worth in one place",
+    "categorize personal expenses",
+    "plan a savings goal",
+    "review a subscription charge",
+    "forecast cash for the month",
+    "compare a bill with last month"
+  ],
+  "searchPhrases": [
+    "track spending across accounts",
+    "help me track spending across accounts",
+    "can you track spending across accounts",
+    "build a monthly budget",
+    "help me build a monthly budget",
+    "can you build a monthly budget",
+    "see net worth in one place",
+    "help me see net worth in one place",
+    "can you see net worth in one place",
+    "categorize personal expenses",
+    "help me categorize personal expenses",
+    "can you categorize personal expenses",
+    "reconcile quickbooks",
+    "clean up xero",
+    "match the bank feed",
+    "profit and loss for last month"
   ]
 }

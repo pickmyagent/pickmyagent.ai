@@ -63,11 +63,26 @@
   },
   "capabilities": [
     "share a scheduling link",
-    "book a meeting without email tag",
-    "route a lead to the right calendar",
-    "send invoices with payment features that make it easy to get paid",
-    "help you show up prepared",
-    "capture focus on the conversation",
-    "review a pre-drafted email based on the recap, add an additional invoice link if needed,"
+    "protect focus time on a calendar",
+    "book a meeting without email ping pong",
+    "timeblock the next day",
+    "reschedule a flexible meeting",
+    "show open availability",
+    "hold a buffer between calls",
+    "find a time the group can meet"
+  ],
+  "searchPhrases": [
+    "share a scheduling link",
+    "help me share a scheduling link",
+    "can you share a scheduling link",
+    "protect focus time on a calendar",
+    "help me protect focus time on a calendar",
+    "can you protect focus time on a calendar",
+    "book a meeting without email ping pong",
+    "help me book a meeting without email ping pong",
+    "can you book a meeting without email ping pong",
+    "timeblock the next day",
+    "help me timeblock the next day",
+    "can you timeblock the next day"
   ]
 }

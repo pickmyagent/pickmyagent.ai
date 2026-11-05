@@ -62,17 +62,27 @@
     "finalUrl": "https://www.alltrails.com/"
   },
   "capabilities": [
-    "find a trail",
-    "take a class",
-    "create a own route build or edit the perfect trail for you",
-    "find a outside\u2122, plus\u2122, and peak\u2122 are trademarks of alltrails, llc",
-    "find a outside\u2122, plus\u2122,",
-    "plan around wildflowers or fall colors, or avoid months when the trail may be covered in snow",
-    "create lists\\\"}],\\\"9wm0lm\\\":[{\\\"type\\\":0,\\\"value\\\":\\\"hold tight",
-    "use explore the outdoors with alltrails",
-    "use discover curated guides",
-    "use trail guides & maps for hiking",
-    "use alltrails explore the outdoors with alltrails",
-    "search by city"
+    "build a strength workout",
+    "log a meal you ate",
+    "plan runs for a half marathon",
+    "review last night of sleep",
+    "guide a short meditation",
+    "track daily calories",
+    "adjust a training week",
+    "list a simple mobility routine"
+  ],
+  "searchPhrases": [
+    "build a strength workout",
+    "help me build a strength workout",
+    "can you build a strength workout",
+    "log a meal you ate",
+    "help me log a meal you ate",
+    "can you log a meal you ate",
+    "plan runs for a half marathon",
+    "help me plan runs for a half marathon",
+    "can you plan runs for a half marathon",
+    "review last night of sleep",
+    "help me review last night of sleep",
+    "can you review last night of sleep"
   ]
 }

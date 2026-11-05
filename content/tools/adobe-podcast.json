@@ -62,11 +62,26 @@
     "finalUrl": "https://podcast.adobe.com/"
   },
   "capabilities": [
-    "edit a podcast transcript",
-    "record transcribe, edit, share",
-    "use next generation audio from adobe is here",
-    "use crisp and clear",
-    "use adobe podcast",
-    "use ai audio recording and editing"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview",
+    "make a voiceover in another language",
+    "help me make a voiceover in another language",
+    "can you make a voiceover in another language"
   ]
 }

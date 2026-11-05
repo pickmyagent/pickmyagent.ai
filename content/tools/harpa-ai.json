@@ -62,17 +62,27 @@
     "finalUrl": "https://harpa.ai/"
   },
   "capabilities": [
-    "automate a browser task",
-    "scrape a page",
-    "click through a workflow",
-    "monitor a page",
-    "automate a work with contextual & practical ai",
-    "extract key takeaways from hours-long videos, seek information and jump to timestamps, talk to videos",
-    "extract key takeaways from hours-long videos, seek information",
-    "answer engine get hallucination-free ai responses alongside google search along with source citations",
-    "draft contextual replies in a tone of voice",
-    "track price drops get price drop",
-    "extract prospects, listings and data from any website",
-    "extract prospects, listings"
+    "fill a form in the browser",
+    "click through a checkout flow",
+    "scrape a page into a sheet",
+    "automate a web workflow",
+    "run a headless browser for an agent",
+    "stop at a login screen",
+    "extract a table from a page",
+    "repeat a browser task"
+  ],
+  "searchPhrases": [
+    "fill a form in the browser",
+    "help me fill a form in the browser",
+    "can you fill a form in the browser",
+    "click through a checkout flow",
+    "help me click through a checkout flow",
+    "can you click through a checkout flow",
+    "scrape a page into a sheet",
+    "help me scrape a page into a sheet",
+    "can you scrape a page into a sheet",
+    "automate a web workflow",
+    "help me automate a web workflow",
+    "can you automate a web workflow"
   ]
 }

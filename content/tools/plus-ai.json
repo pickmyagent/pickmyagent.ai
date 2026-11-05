@@ -62,12 +62,27 @@
     "finalUrl": "https://plusai.com/"
   },
   "capabilities": [
-    "generate slides inside google slides",
-    "remix a presentation",
-    "create a slide from a prompt",
-    "edit a deck with ai",
-    "keep a template",
-    "edit presentations directly in google slides",
-    "translate nearly any language"
+    "build a pitch deck from an outline",
+    "turn a doc into slides",
+    "make google slides from a prompt",
+    "write speaker notes for a deck",
+    "draft a presentation about quarterly numbers",
+    "redraw a slide for clarity",
+    "export a finished deck",
+    "shorten a slide to one idea"
+  ],
+  "searchPhrases": [
+    "build a pitch deck from an outline",
+    "help me build a pitch deck from an outline",
+    "can you build a pitch deck from an outline",
+    "turn a doc into slides",
+    "help me turn a doc into slides",
+    "can you turn a doc into slides",
+    "make google slides from a prompt",
+    "help me make google slides from a prompt",
+    "can you make google slides from a prompt",
+    "write speaker notes for a deck",
+    "help me write speaker notes for a deck",
+    "can you write speaker notes for a deck"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.codecademy.com/"
   },
   "capabilities": [
-    "learn a subject",
-    "solve a problem",
-    "build real skills through hands-on learning and keep pace with a fast-moving industry",
-    "build real skills through hands-on learning",
-    "track team progress go further together get help when you need it, build a network,",
-    "use learn to code - for free",
-    "use ai entrepreneur checker dense with certificate full-stack dev",
-    "use professional skills java web development data analytics inter",
-    "use game development cloud computing cybersecurity go devops cert",
-    "use top subjects certification prep code foundations python html",
-    "use looking for something else",
-    "use machine learning specialist machine learning data scientists"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

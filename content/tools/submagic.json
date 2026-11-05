@@ -62,17 +62,27 @@
     "finalUrl": "https://www.submagic.co/"
   },
   "capabilities": [
-    "add moving captions to a short",
-    "generate b roll for a clip",
-    "trim a video into a short",
-    "export a captioned reel",
-    "edit faster than ever before",
-    "publish video across channels create shorts without filming with ai avatars stay on brand",
-    "automate a video editing workflow",
-    "turn one video into multiple shorts instantly automatically repurpose videos into shorts with magic clips",
-    "extract key moments, cuts clips, and post content at scale",
-    "extract key moments, cuts clips,",
-    "edit any video instantly with ai edit videos in one click",
-    "publish shorts content 10x faster without spending hours in editing"
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
   ]
 }

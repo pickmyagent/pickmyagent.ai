@@ -62,17 +62,27 @@
     "finalUrl": "https://www.hyperwriteai.com/"
   },
   "capabilities": [
-    "draft an email from a short prompt",
-    "rewrite a paragraph",
-    "summarize a page in the browser",
-    "brainstorm ideas in a document",
-    "use hyperwrite uses the world",
-    "use ai document editor",
-    "use ai writing assistant ai writing assistant with autocomplete",
-    "use flexible autowrite explain like i",
-    "use hyperwrite for effortless replies hyperwrite",
-    "use ai writing assistant hyperwrite features templates lorem ipsu",
-    "write like a pro",
-    "use write like a pro"
+    "rewrite a paragraph so it is clearer",
+    "paraphrase a section",
+    "continue a short story",
+    "check grammar in a draft",
+    "write a blog post about a launch",
+    "change the tone of an email",
+    "shorten a long paragraph",
+    "expand a rough outline"
+  ],
+  "searchPhrases": [
+    "rewrite a paragraph so it is clearer",
+    "help me rewrite a paragraph so it is clearer",
+    "can you rewrite a paragraph so it is clearer",
+    "paraphrase a section",
+    "help me paraphrase a section",
+    "can you paraphrase a section",
+    "continue a short story",
+    "help me continue a short story",
+    "can you continue a short story",
+    "check grammar in a draft",
+    "help me check grammar in a draft",
+    "can you check grammar in a draft"
   ]
 }

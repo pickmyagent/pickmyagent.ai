@@ -62,17 +62,30 @@
     "finalUrl": "https://www.getapril.com/"
   },
   "capabilities": [
-    "file taxes inside another app",
-    "connect payroll data to a filing",
-    "use embedded tax solutions for modern financial platforms april",
-    "use ai-powered tax engine helps platforms offer tax filing",
-    "use integrate white-label tax solutions to deliver truly holistic",
-    "use embedded tax solutions for modern financial platforms trusted",
-    "use embedded tax solutions for modern financial platforms",
-    "use planning power more strategic",
-    "use industries industries wealth management a comprehensive tax p",
-    "use banking & fintech embedded",
-    "use developer resources guides",
-    "use in the news read all about it"
+    "start a tax return",
+    "file a personal tax return",
+    "find freelance deductions",
+    "organize w2 and 1099 income",
+    "estimate a quarterly tax payment",
+    "efile a finished return",
+    "sort deductions into the return",
+    "prepare records for a tax filing"
+  ],
+  "searchPhrases": [
+    "start a tax return",
+    "help me start a tax return",
+    "can you start a tax return",
+    "file a personal tax return",
+    "help me file a personal tax return",
+    "can you file a personal tax return",
+    "find freelance deductions",
+    "help me find freelance deductions",
+    "can you find freelance deductions",
+    "organize w2 and 1099 income",
+    "help me organize w2 and 1099 income",
+    "can you organize w2 and 1099 income",
+    "file my 1040",
+    "quarterly estimated taxes",
+    "where do these deductions go"
   ]
 }

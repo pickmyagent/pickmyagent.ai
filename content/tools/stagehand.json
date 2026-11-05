@@ -62,11 +62,27 @@
     "finalUrl": "https://www.stagehand.dev/"
   },
   "capabilities": [
-    "control a browser with natural language",
-    "click an element from a prompt",
-    "extract data from a page",
-    "build a browser agent",
-    "combine code with ai actions",
-    "extract with natural language to automate pages"
+    "fill a form in the browser",
+    "click through a checkout flow",
+    "scrape a page into a sheet",
+    "automate a web workflow",
+    "run a headless browser for an agent",
+    "stop at a login screen",
+    "extract a table from a page",
+    "repeat a browser task"
+  ],
+  "searchPhrases": [
+    "fill a form in the browser",
+    "help me fill a form in the browser",
+    "can you fill a form in the browser",
+    "click through a checkout flow",
+    "help me click through a checkout flow",
+    "can you click through a checkout flow",
+    "scrape a page into a sheet",
+    "help me scrape a page into a sheet",
+    "can you scrape a page into a sheet",
+    "automate a web workflow",
+    "help me automate a web workflow",
+    "can you automate a web workflow"
   ]
 }

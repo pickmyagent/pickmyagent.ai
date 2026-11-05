@@ -62,12 +62,27 @@
     "finalUrl": "https://www.alicetechnologies.com/home"
   },
   "capabilities": [
-    "simulate a construction schedule",
-    "optimize a project sequence",
-    "see schedule options",
-    "reduce project risk",
-    "plan a build sequence",
-    "make faster decisions with ai-powered scenario simulation",
-    "monitor project and portfolio performance to catch slipping activities and risks early"
+    "take off quantities from a floor plan",
+    "document jobsite photos",
+    "measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "schedule the trades",
+    "estimate a roofing job",
+    "list materials for a task",
+    "note a change on the job"
+  ],
+  "searchPhrases": [
+    "take off quantities from a floor plan",
+    "help me take off quantities from a floor plan",
+    "can you take off quantities from a floor plan",
+    "document jobsite photos",
+    "help me document jobsite photos",
+    "can you document jobsite photos",
+    "measure a roof from a satellite image",
+    "help me measure a roof from a satellite image",
+    "can you measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "help me make a safety inspection checklist",
+    "can you make a safety inspection checklist"
   ]
 }

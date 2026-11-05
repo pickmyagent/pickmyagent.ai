@@ -62,17 +62,27 @@
     "finalUrl": "https://www.framer.com/"
   },
   "capabilities": [
-    "design a website with ai",
-    "generate a landing page from a prompt",
-    "publish a site from a canvas",
-    "use changes stay editable",
-    "use free website builder and ai design agent framer",
-    "use free website builder and ai design agent html",
-    "use current a div span",
-    "use current a span span span",
-    "use current a p span span",
-    "use current a h1 span span",
-    "use current a h2 span span",
-    "use current a h3 span span"
+    "design a logo for a business",
+    "build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "mock up a settings screen",
+    "design a poster for an event",
+    "pick colors and type",
+    "export logo files"
+  ],
+  "searchPhrases": [
+    "design a logo for a business",
+    "help me design a logo for a business",
+    "can you design a logo for a business",
+    "build a brand kit from a name",
+    "help me build a brand kit from a name",
+    "can you build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "help me make a wireframe from a sketch",
+    "can you make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "help me draft a landing page from a prompt",
+    "can you draft a landing page from a prompt"
   ]
 }

@@ -62,11 +62,30 @@
     "finalUrl": "https://www.gitbook.com/"
   },
   "capabilities": [
-    "ask a question over docs",
-    "use docs-as-code support & ai insights included",
-    "use the knowledge layer for ai",
-    "use gitbook the knowledge layer for ai",
-    "use gitbook product",
-    "use zpkb framer-g2a58m framer-v-vybw7x"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

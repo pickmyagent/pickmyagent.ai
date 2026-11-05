@@ -62,17 +62,27 @@
     "finalUrl": "https://akiflow.com/"
   },
   "capabilities": [
-    "schedule focus time",
-    "use akiflow brings tasks",
-    "use ai into one time-blocking planner",
-    "use time-blocking digital planner & calendar akiflow brings tasks",
-    "use time-blocking digital planner & calendar akiflow",
-    "use time-blocking digital planner & calendar html",
-    "use inter placeholder",
-    "use current a div span",
-    "use current a span span span",
-    "use current a p span span",
-    "use current a h1 span span",
-    "use current a h2 span span"
+    "share a scheduling link",
+    "protect focus time on a calendar",
+    "book a meeting without email ping pong",
+    "timeblock the next day",
+    "reschedule a flexible meeting",
+    "show open availability",
+    "hold a buffer between calls",
+    "find a time the group can meet"
+  ],
+  "searchPhrases": [
+    "share a scheduling link",
+    "help me share a scheduling link",
+    "can you share a scheduling link",
+    "protect focus time on a calendar",
+    "help me protect focus time on a calendar",
+    "can you protect focus time on a calendar",
+    "book a meeting without email ping pong",
+    "help me book a meeting without email ping pong",
+    "can you book a meeting without email ping pong",
+    "timeblock the next day",
+    "help me timeblock the next day",
+    "can you timeblock the next day"
   ]
 }

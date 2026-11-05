@@ -62,17 +62,27 @@
     "finalUrl": "https://www.windmill.dev/"
   },
   "capabilities": [
-    "turn a script into a workflow",
-    "build an internal tool",
-    "self host an automation platform",
-    "connect an approval step",
-    "use code-first platform for workflows",
-    "use ai agents code-first platform for workflows",
-    "use ai agents trusted by 10",
-    "use ee customers at scale",
-    "build any internal software",
-    "use build any internal software",
-    "use ai agents everyone builds with ai",
-    "use open-source and easy to self-host"
+    "automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "connect a crm to email",
+    "schedule a recurring job",
+    "move a row into another app",
+    "trigger a step when a payment succeeds",
+    "sync a contact between two apps",
+    "build a zapier style automation"
+  ],
+  "searchPhrases": [
+    "automate a workflow across apps",
+    "help me automate a workflow across apps",
+    "can you automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "help me send a slack message when a form is submitted",
+    "can you send a slack message when a form is submitted",
+    "connect a crm to email",
+    "help me connect a crm to email",
+    "can you connect a crm to email",
+    "schedule a recurring job",
+    "help me schedule a recurring job",
+    "can you schedule a recurring job"
   ]
 }

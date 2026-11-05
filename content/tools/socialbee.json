@@ -62,17 +62,27 @@
     "finalUrl": "https://socialbee.com/"
   },
   "capabilities": [
-    "categorize and recycle posts",
-    "schedule a social calendar",
-    "generate a caption",
-    "publish to several networks",
-    "keep evergreen content posting",
-    "manage schedule, and grow a social media with socialbee",
-    "manage a social media help quickly find solutions within a intuitive help documentation all resources get access to free templates, guides, videos",
-    "schedule plan a social media posts with a visual content calendar, organize content into categories, and find the best times to publish",
-    "schedule plan a social media posts with a visual content calendar, organize content into categories,",
-    "find the best times to publish",
-    "analyze track social media performance across platforms, discover a best-performing content, and create shareable pdf reports",
-    "analyze track social media performance across platforms, discover a best-performing content,"
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
   ]
 }

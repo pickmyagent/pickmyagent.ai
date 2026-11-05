@@ -69,16 +69,26 @@
   "id": "architectgpt",
   "capabilities": [
     "turn a floor plan into a render",
-    "turn a floor plan photo into an image",
-    "redesign a room from a photo",
-    "restyle a room from a photo",
-    "turn a room photo into a redesign and a floor plan image into a furnished render on pro",
-    "turn a room photo into a redesign",
-    "turn a floor plan image into a furnished render on pro",
-    "turn a room photo into a redesign and, on pro, a floor plan image into a furnished render",
-    "turn a floor plan image into a furnished render",
-    "work from room or exterior photo that should become a redesign",
-    "work from plan image that should become a furnished top-down render",
-    "work from restyles a room photo or an exterior photo, and on pro it turns a plan image or a dwg or dxf file into a furnished top-down render"
+    "make a picture from a blueprint",
+    "render an elevation of a house",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan"
+  ],
+  "searchPhrases": [
+    "turn a floor plan into a render",
+    "help me turn a floor plan into a render",
+    "can you turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "render an elevation of a house",
+    "help me render an elevation of a house",
+    "can you render an elevation of a house",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout"
   ]
 }

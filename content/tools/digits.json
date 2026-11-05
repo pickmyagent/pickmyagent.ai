@@ -62,17 +62,31 @@
     "finalUrl": "https://digits.com/"
   },
   "capabilities": [
-    "categorize transactions automatically",
-    "close the books faster",
-    "see a live profit and loss",
-    "help us provide deeper insights to a clients",
-    "find one through digits' accounting firm directory",
-    "use free trial",
-    "use digits - ai-native accounting software accounting software",
-    "use ai accounting gather data and insights real-time categorizati",
-    "use agentic general ledger",
-    "use multi-entity is here",
-    "use one place to manage every entity",
-    "use separate books"
+    "reconcile a bank feed",
+    "categorize receipts for the books",
+    "catch up a messy ledger",
+    "match transactions to the books",
+    "clean up a bookkeeping file",
+    "prepare a profit and loss",
+    "scan receipts into the books",
+    "organize expenses for an accountant"
+  ],
+  "searchPhrases": [
+    "reconcile a bank feed",
+    "help me reconcile a bank feed",
+    "can you reconcile a bank feed",
+    "categorize receipts for the books",
+    "help me categorize receipts for the books",
+    "can you categorize receipts for the books",
+    "catch up a messy ledger",
+    "help me catch up a messy ledger",
+    "can you catch up a messy ledger",
+    "match transactions to the books",
+    "help me match transactions to the books",
+    "can you match transactions to the books",
+    "reconcile quickbooks",
+    "clean up xero",
+    "match the bank feed",
+    "profit and loss for last month"
   ]
 }

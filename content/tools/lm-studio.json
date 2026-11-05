@@ -62,17 +62,30 @@
     "finalUrl": "https://lmstudio.ai/"
   },
   "capabilities": [
-    "call a model api",
-    "run a model on your own computer",
-    "create documents, slides, pdfs, and software with local or frontier open models",
-    "create documents, slides, pdfs,",
-    "use bionic is lm studio",
-    "use create documents",
-    "use agentic power",
-    "use an agent for work and code",
-    "use real-time voice transcription",
-    "use natively local",
-    "use explore the open frontiers",
-    "use get it done with bionic"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

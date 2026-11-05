@@ -62,14 +62,30 @@
     "finalUrl": "https://readme.com/"
   },
   "capabilities": [
-    "publish api documentation",
-    "let users try an endpoint",
-    "personalize docs with an api key",
-    "track which pages developers read",
-    "write a guide",
-    "publish docs api reference use an oas file, or create one with readme build with ai write, review,",
-    "build a integration works where you do bi-directionally sync with github, github enterprise server,",
-    "review approve, and merge git branches directly in readme",
-    "organize projects \ud83d\udd0d 56 57 keep a projects organized"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

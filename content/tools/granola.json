@@ -69,17 +69,27 @@
     "meetings-knowledge": "Takes meeting notes alongside your calls, and the free plan covers that."
   },
   "capabilities": [
-    "take notes during a meeting",
-    "keep meeting notes on a free plan",
-    "jot notes in a desktop notepad",
-    "take notes in a meeting",
-    "take meeting notes alongside the calls, and the free plan covers that",
-    "take meeting notes alongside the calls",
-    "take notes during meetings you are already in",
-    "help people who want a desktop notepad more than a wiki",
-    "work from notes during meetings you are already in",
-    "work from people who want a desktop notepad more than a wiki",
-    "work from meeting notes that sit alongside the calls. free to start. paid plans are on their site",
-    "work from free plan covers meeting notes, and the paid plan starts at per month"
+    "search a company wiki",
+    "answer a question across team docs",
+    "link notes to each other",
+    "find where a policy was written",
+    "summarize a handbook page",
+    "ask a question about an sop",
+    "collect sources for an internal answer",
+    "keep a team knowledge base"
+  ],
+  "searchPhrases": [
+    "search a company wiki",
+    "help me search a company wiki",
+    "can you search a company wiki",
+    "answer a question across team docs",
+    "help me answer a question across team docs",
+    "can you answer a question across team docs",
+    "link notes to each other",
+    "help me link notes to each other",
+    "can you link notes to each other",
+    "find where a policy was written",
+    "help me find where a policy was written",
+    "can you find where a policy was written"
   ]
 }

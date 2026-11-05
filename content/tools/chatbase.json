@@ -62,13 +62,26 @@
     "finalUrl": "https://www.chatbase.co/"
   },
   "capabilities": [
-    "train a chatbot on your documents",
-    "embed a chat on a site",
-    "answer questions from a knowledge base",
-    "customize a support bot",
-    "build deploy and optimize across every channel, on one platform",
-    "optimize across every channel, on one platform",
-    "create agent instructions you are an ai agent helping customers with inquiries and requests",
-    "create agent instructions you are an ai agent helping customers with inquiries"
+    "answer a support ticket",
+    "check an order status",
+    "deflect a refund question",
+    "answer from a help center",
+    "draft a reply to an angry customer",
+    "apply a support macro",
+    "route a ticket to the right queue",
+    "cite the policy in a reply"
+  ],
+  "searchPhrases": [
+    "answer a support ticket",
+    "help me answer a support ticket",
+    "can you answer a support ticket",
+    "check an order status",
+    "help me check an order status",
+    "can you check an order status",
+    "deflect a refund question",
+    "help me deflect a refund question",
+    "can you deflect a refund question",
+    "answer from a help center",
+    "can you answer from a help center"
   ]
 }

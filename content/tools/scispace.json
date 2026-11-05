@@ -65,12 +65,27 @@
     "deep-research": "Literature review and chat-with-PDF tools for research papers."
   },
   "capabilities": [
-    "do a literature review and chat-with-pdf tools for research papers",
-    "do a literature chat-with-pdf tools for research papers",
-    "work from reading papers with chat and a literature-review tool",
-    "work from literature review and chat with pdf for scientific papers",
-    "do the literature review and chat-with-pdf tools for research papers",
-    "do the literature chat-with-pdf tools for research papers",
-    "work from reading papers with chat and the literature-review tool"
+    "draft a literature review",
+    "summarize what the papers say",
+    "chat with a pdf",
+    "map citations for a paper",
+    "summarize a study",
+    "find peer reviewed sources",
+    "check whether a claim is supported",
+    "collect quotes from a paper"
+  ],
+  "searchPhrases": [
+    "draft a literature review",
+    "help me draft a literature review",
+    "can you draft a literature review",
+    "summarize what the papers say",
+    "help me summarize what the papers say",
+    "can you summarize what the papers say",
+    "chat with a pdf",
+    "help me chat with a pdf",
+    "can you chat with a pdf",
+    "map citations for a paper",
+    "help me map citations for a paper",
+    "can you map citations for a paper"
   ]
 }

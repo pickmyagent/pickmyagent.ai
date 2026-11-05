@@ -62,17 +62,27 @@
     "finalUrl": "https://architechtures.com/en"
   },
   "capabilities": [
-    "generate a residential floor plan",
-    "optimize a building layout",
-    "edit a plan with constraints",
-    "design optimized to meet users needs the best solution is the one that best suits the user's needs",
-    "design downloads once the project is defined, the designs are available for download in report xlsx, dxf and ifc formats",
-    "design downloads once the project is defined, the designs are available for download in report xlsx, dxf",
-    "use ai architecture generator",
-    "use reduces architectural design time",
-    "use discover the power of artificial intelligence in architecture",
-    "use architechtures - ai architecture generator",
-    "use building design ai architecture generator",
-    "use building design ai-powered building design ai architecture ge"
+    "turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "render an elevation of a house",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan"
+  ],
+  "searchPhrases": [
+    "turn a floor plan into a render",
+    "help me turn a floor plan into a render",
+    "can you turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "render an elevation of a house",
+    "help me render an elevation of a house",
+    "can you render an elevation of a house",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout"
   ]
 }

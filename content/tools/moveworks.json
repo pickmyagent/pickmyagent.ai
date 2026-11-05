@@ -66,13 +66,26 @@
     "it-helpdesk": "Employee assistant for IT service management and self-service requests."
   },
   "capabilities": [
-    "use it service-management automation, employee self-service, and an ai agent marketplace",
-    "use it service-management automation",
-    "use an ai agent marketplace",
-    "work from routing it requests with an employee assistant",
-    "work from employee ai for it service management and self-service",
-    "work from moveworks' site describes itsm automation, employee self-service, employee onboarding, and an ai agent marketplace, including servicenow workflows",
-    "use it service-management automation, employee self-service, and the ai agent marketplace",
-    "use the ai agent marketplace"
+    "reset a password for a new hire",
+    "open an it help desk ticket",
+    "see which saas apps an employee connected",
+    "deflect a vpn question",
+    "automate a service desk reply",
+    "route a laptop issue",
+    "answer a common it question",
+    "log a ticket and the fix"
+  ],
+  "searchPhrases": [
+    "reset a password for a new hire",
+    "help me reset a password for a new hire",
+    "can you reset a password for a new hire",
+    "open an it help desk ticket",
+    "can you open an it help desk ticket",
+    "see which saas apps an employee connected",
+    "help me see which saas apps an employee connected",
+    "can you see which saas apps an employee connected",
+    "deflect a vpn question",
+    "help me deflect a vpn question",
+    "can you deflect a vpn question"
   ]
 }

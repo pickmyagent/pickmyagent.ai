@@ -63,16 +63,26 @@
   },
   "capabilities": [
     "draft a grant proposal",
-    "answer grant questions",
-    "organize a grant application",
-    "rewrite a proposal section",
-    "manage grant deadlines",
-    "find aligned funders, draft proposals in a voice, and manage the full grant lifecycle",
-    "find aligned funders, draft proposals in a voice,",
-    "manage the full grant lifecycle",
-    "find funders a ai grant writer researches funders for you, screening 990 filings",
-    "draft in a voice ai grant writing that starts from a real work, not boilerplate",
-    "edit before it goes out",
-    "manage the lifecycle grant writing software should not stop at the draft"
+    "find grants for a food pantry",
+    "build a donation form for a campaign",
+    "email donors about a campaign",
+    "track grant deadlines",
+    "write a grant narrative",
+    "summarize a funder guideline",
+    "thank a donor"
+  ],
+  "searchPhrases": [
+    "draft a grant proposal",
+    "help me draft a grant proposal",
+    "can you draft a grant proposal",
+    "find grants for a food pantry",
+    "help me find grants for a food pantry",
+    "can you find grants for a food pantry",
+    "build a donation form for a campaign",
+    "help me build a donation form for a campaign",
+    "can you build a donation form for a campaign",
+    "email donors about a campaign",
+    "help me email donors about a campaign",
+    "can you email donors about a campaign"
   ]
 }

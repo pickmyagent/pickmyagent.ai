@@ -62,17 +62,27 @@
     "finalUrl": "https://tractable.ai/"
   },
   "capabilities": [
-    "estimate vehicle damage from photos",
-    "assess a property claim from images",
-    "speed up a repair estimate",
-    "use automation faster",
-    "use request a demo automating the road ahead",
-    "use one scan at a time",
-    "use discover lumascanner",
-    "find the right",
-    "use find the right",
-    "use automation automating the road ahead",
-    "use smart ai solutions to industry challenges insurers dealership",
-    "use tractable industry solutions close industry solutions open in"
+    "estimate car damage from photos",
+    "start a renters insurance quote",
+    "flag a claim that looks like fraud",
+    "open a virtual auto claim",
+    "draft a commercial insurance quote",
+    "summarize damage in a photo set",
+    "list what a claim file still needs",
+    "compare two policy options"
+  ],
+  "searchPhrases": [
+    "estimate car damage from photos",
+    "help me estimate car damage from photos",
+    "can you estimate car damage from photos",
+    "start a renters insurance quote",
+    "help me start a renters insurance quote",
+    "can you start a renters insurance quote",
+    "flag a claim that looks like fraud",
+    "help me flag a claim that looks like fraud",
+    "can you flag a claim that looks like fraud",
+    "open a virtual auto claim",
+    "help me open a virtual auto claim",
+    "can you open a virtual auto claim"
   ]
 }

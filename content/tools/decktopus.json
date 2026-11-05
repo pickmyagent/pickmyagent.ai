@@ -62,17 +62,27 @@
     "finalUrl": "https://www.decktopus.com/"
   },
   "capabilities": [
-    "generate a presentation from a prompt",
-    "create on-brand decks and carousels in minutes, rehearse with ai, track every view, and generate leads",
-    "create on-brand decks",
-    "use ai presentation maker with built-in coaching and analytics",
-    "create on-brand decks and carousels in minutes",
-    "use create on-brand decks and carousels in minutes",
-    "use ai presentation maker",
-    "use coach & analytics decktopus ai",
-    "use coach & analytics html",
-    "use sailec regular",
-    "use sailec regular placeholder",
-    "use roboto placeholder"
+    "build a pitch deck from an outline",
+    "turn a doc into slides",
+    "make google slides from a prompt",
+    "write speaker notes for a deck",
+    "draft a presentation about quarterly numbers",
+    "redraw a slide for clarity",
+    "export a finished deck",
+    "shorten a slide to one idea"
+  ],
+  "searchPhrases": [
+    "build a pitch deck from an outline",
+    "help me build a pitch deck from an outline",
+    "can you build a pitch deck from an outline",
+    "turn a doc into slides",
+    "help me turn a doc into slides",
+    "can you turn a doc into slides",
+    "make google slides from a prompt",
+    "help me make google slides from a prompt",
+    "can you make google slides from a prompt",
+    "write speaker notes for a deck",
+    "help me write speaker notes for a deck",
+    "can you write speaker notes for a deck"
   ]
 }

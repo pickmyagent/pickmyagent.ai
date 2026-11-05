@@ -62,17 +62,27 @@
     "finalUrl": "https://riverside.com/"
   },
   "capabilities": [
-    "convert text to speech",
-    "remove noise",
-    "edit a podcast",
-    "record edit repurpose stream publish from concept to content, without ever leaving riverside",
-    "record record solo or with guests, in top quality",
-    "edit use the text-based editor, and ai when you want it",
-    "edit use the text-based editor,",
-    "publish publish straight to youtube, spotify and apple",
-    "publish publish straight to youtube, spotify",
-    "make any mic sound like it\u2019s professional-grade no matter where it is",
-    "edit further if you\u2019d like, or share as is",
-    "generate b-roll create video with just a prompt to use as b-roll in a content"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

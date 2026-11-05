@@ -62,17 +62,27 @@
     "finalUrl": "https://www.memrise.com/"
   },
   "capabilities": [
-    "practice a lesson",
-    "use trusted by 80 million learners",
-    "use unlike gamified apps with robotic voices",
-    "use learn a language",
-    "use memrise is authentic",
-    "use understand native speakers",
-    "use sound more like them",
-    "use learn from real people",
-    "use just like real people do",
-    "use real native speaker videos",
-    "use select page language english bahasa indonesia deutsch espa",
-    "use farsi fran"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

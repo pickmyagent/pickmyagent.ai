@@ -62,11 +62,27 @@
     "finalUrl": "https://exa.ai/"
   },
   "capabilities": [
-    "search the web with an api",
-    "retrieve content for an agent",
-    "search api for ai agents that need real-time web data, deep research, and structured content from one endpoint",
-    "search api for ai agents that need real-time web data, deep research,",
-    "search verticals best-in-class across code, finance, and gtm intelligence, not just general web queries",
-    "search verticals best-in-class across code, finance,"
+    "search the web for a question",
+    "crawl a site into an index",
+    "retrieve passages for an answer",
+    "ground an answer in sources",
+    "index documents for search",
+    "query a vector store",
+    "extract text from a page",
+    "rank sources for a question"
+  ],
+  "searchPhrases": [
+    "search the web for a question",
+    "help me search the web for a question",
+    "can you search the web for a question",
+    "crawl a site into an index",
+    "help me crawl a site into an index",
+    "can you crawl a site into an index",
+    "retrieve passages for an answer",
+    "help me retrieve passages for an answer",
+    "can you retrieve passages for an answer",
+    "ground an answer in sources",
+    "help me ground an answer in sources",
+    "can you ground an answer in sources"
   ]
 }

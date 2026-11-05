@@ -66,15 +66,27 @@
     "security-ops": "Email and identity security product described as behavioral AI."
   },
   "capabilities": [
-    "flag a phishing email from behavior",
-    "use email and identity security product described as behavioral ai",
-    "use email identity security product described as behavioral ai",
-    "use email security teams looking at behavioral ai for phishing and account risk",
-    "use email security teams looking at behavioral ai for phishing",
-    "use behavioral ai for email, identity, and ai security",
-    "use behavioral ai for email",
-    "work from email security teams looking at behavioral ai for phishing and account risk",
-    "work from behavioral ai for email, identity, and ai security",
-    "flag the phishing email from behavior"
+    "flag a phishing email",
+    "triage a soc alert",
+    "block a malicious ip",
+    "write a detection rule for a mailbox",
+    "investigate an alert",
+    "summarize a security incident",
+    "check a suspicious link",
+    "draft a response to a reported phish"
+  ],
+  "searchPhrases": [
+    "flag a phishing email",
+    "help me flag a phishing email",
+    "can you flag a phishing email",
+    "triage a soc alert",
+    "help me triage a soc alert",
+    "can you triage a soc alert",
+    "block a malicious ip",
+    "help me block a malicious ip",
+    "can you block a malicious ip",
+    "write a detection rule for a mailbox",
+    "help me write a detection rule for a mailbox",
+    "can you write a detection rule for a mailbox"
   ]
 }

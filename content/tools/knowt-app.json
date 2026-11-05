@@ -62,17 +62,27 @@
     "finalUrl": "https://knowt.com/"
   },
   "capabilities": [
-    "explain a problem",
-    "make flashcards",
-    "learn a subject",
-    "follow a course",
-    "make edits right there pointer pointer pointer pointer pointer pointer pointer ai lecture summarizer record live lectures",
-    "use knowt is also the",
-    "use free quizlet alternative with ai study tools",
-    "use ai lecture summarizer 8",
-    "use quizlet alternative with ai study tools yes you",
-    "use for mobile for desktop",
-    "use ai study tool you need for a 4",
-    "use knowt will create notes"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

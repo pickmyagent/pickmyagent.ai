@@ -62,17 +62,29 @@
     "finalUrl": "https://wanderlog.com/"
   },
   "capabilities": [
-    "compare flights",
-    "find a hotel",
-    "build an itinerary",
-    "plan a road trip or vacation with the best free itinerary and road trip planner",
-    "plan a road trip or vacation with the best free itinerary",
-    "create a bucket list of places to visit dennis gruetter helping me plan a super road trip",
-    "make it so easy to plan a trip and have all the information, itinerary, flights, activities in one place",
-    "make it so easy to plan a trip",
-    "plan a road trip to a favourite rock climbing destinations",
-    "use wanderlog lets you to make itineraries with friends",
-    "use wanderlog travel planner",
-    "use join wanderlog join wanderlog wanderlog travel planner"
+    "build an itinerary for a city",
+    "compare flights for a trip",
+    "find a hotel for a work trip",
+    "plan how to get between two cities",
+    "plan a group trip",
+    "balance a day so it is not packed",
+    "list neighborhoods to stay in"
+  ],
+  "searchPhrases": [
+    "build an itinerary for a city",
+    "help me build an itinerary for a city",
+    "can you build an itinerary for a city",
+    "compare flights for a trip",
+    "help me compare flights for a trip",
+    "can you compare flights for a trip",
+    "find a hotel for a work trip",
+    "help me find a hotel for a work trip",
+    "can you find a hotel for a work trip",
+    "plan how to get between two cities",
+    "help me plan how to get between two cities",
+    "can you plan how to get between two cities",
+    "how do I get from rome to florence",
+    "itinerary for four days in lisbon",
+    "compare flights to tokyo"
   ]
 }

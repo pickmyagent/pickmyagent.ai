@@ -62,10 +62,27 @@
     "finalUrl": "https://donorbox.org/"
   },
   "capabilities": [
-    "embed a donation form",
-    "accept recurring donations",
-    "run a crowdfunding page",
-    "email donors",
-    "track a campaign"
+    "draft a grant proposal",
+    "find grants for a food pantry",
+    "build a donation form for a campaign",
+    "email donors about a campaign",
+    "track grant deadlines",
+    "write a grant narrative",
+    "summarize a funder guideline",
+    "thank a donor"
+  ],
+  "searchPhrases": [
+    "draft a grant proposal",
+    "help me draft a grant proposal",
+    "can you draft a grant proposal",
+    "find grants for a food pantry",
+    "help me find grants for a food pantry",
+    "can you find grants for a food pantry",
+    "build a donation form for a campaign",
+    "help me build a donation form for a campaign",
+    "can you build a donation form for a campaign",
+    "email donors about a campaign",
+    "help me email donors about a campaign",
+    "can you email donors about a campaign"
   ]
 }

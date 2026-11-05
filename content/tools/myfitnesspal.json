@@ -62,17 +62,27 @@
     "finalUrl": "https://www.myfitnesspal.com/"
   },
   "capabilities": [
-    "track calories",
-    "scan a barcode",
-    "set a nutrition goal",
-    "manage a glp-1 progress log doses",
-    "use macro & calorie calculator",
-    "use myfitnesspal the world",
-    "use million 5-star reviews nutrition tracking made effortless get",
-    "use snap a photo",
-    "use sync steps",
-    "use restaurant menus",
-    "use nutrition tracking works",
-    "use myfitnesspal reviews apps advertise with us the world"
+    "build a strength workout",
+    "log a meal you ate",
+    "plan runs for a half marathon",
+    "review last night of sleep",
+    "guide a short meditation",
+    "track daily calories",
+    "adjust a training week",
+    "list a simple mobility routine"
+  ],
+  "searchPhrases": [
+    "build a strength workout",
+    "help me build a strength workout",
+    "can you build a strength workout",
+    "log a meal you ate",
+    "help me log a meal you ate",
+    "can you log a meal you ate",
+    "plan runs for a half marathon",
+    "help me plan runs for a half marathon",
+    "can you plan runs for a half marathon",
+    "review last night of sleep",
+    "help me review last night of sleep",
+    "can you review last night of sleep"
   ]
 }

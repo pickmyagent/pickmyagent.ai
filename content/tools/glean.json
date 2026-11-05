@@ -66,14 +66,27 @@
     "knowledge-qa": "Enterprise search with company context and more than 250 connectors."
   },
   "capabilities": [
-    "search across company documents",
-    "ask questions across a company's connected documents",
-    "use enterprise search over company context and says it offers more than 250 connectors",
-    "use enterprise search over company context",
-    "use says it offers more than 250 connectors",
-    "work from asking questions across a company's connected documents",
-    "work from enterprise search across company context, with 250+ connectors",
-    "work from glean's site describes enterprise search, grounding ai in company context, and more than 250 connectors, plus agents",
-    "ask questions across the company's connected documents"
+    "search a company wiki",
+    "answer a question across team docs",
+    "link notes to each other",
+    "find where a policy was written",
+    "summarize a handbook page",
+    "ask a question about an sop",
+    "collect sources for an internal answer",
+    "keep a team knowledge base"
+  ],
+  "searchPhrases": [
+    "search a company wiki",
+    "help me search a company wiki",
+    "can you search a company wiki",
+    "answer a question across team docs",
+    "help me answer a question across team docs",
+    "can you answer a question across team docs",
+    "link notes to each other",
+    "help me link notes to each other",
+    "can you link notes to each other",
+    "find where a policy was written",
+    "help me find where a policy was written",
+    "can you find where a policy was written"
   ]
 }

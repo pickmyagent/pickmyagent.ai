@@ -62,17 +62,30 @@
     "finalUrl": "https://www.postman.com/"
   },
   "capabilities": [
-    "test an api request",
-    "mock an endpoint",
-    "automate an api test",
-    "generate a request from a description",
-    "use catalog download postman",
-    "use runner performance testing monitors webhook testing functiona",
-    "use application inventory context graph ai engineer scale velocit",
-    "use keep quality and security",
-    "use onboard partners in days",
-    "use enterprise resources learn learning hub docs enterprise onboa",
-    "use postman academy liftoff customer stories postman best practic",
-    "use support support center release notes postman status security"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

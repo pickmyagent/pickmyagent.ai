@@ -62,13 +62,27 @@
     "finalUrl": "https://writer.com/"
   },
   "capabilities": [
-    "draft on-brand marketing content",
-    "generate content with company context",
-    "review a draft for brand voice",
-    "build a knowledge graph for writers",
-    "manage budget and usage with rate limits, consumption tracking, and spend alerts",
-    "manage and scale ai across a team understand adoption with detailed analytics for writer agent, playbooks, and skills",
-    "manage usage, transfer ownership, and disable skills and playbooks centrally",
-    "manage usage, transfer ownership,"
+    "rewrite a paragraph so it is clearer",
+    "paraphrase a section",
+    "continue a short story",
+    "check grammar in a draft",
+    "write a blog post about a launch",
+    "change the tone of an email",
+    "shorten a long paragraph",
+    "expand a rough outline"
+  ],
+  "searchPhrases": [
+    "rewrite a paragraph so it is clearer",
+    "help me rewrite a paragraph so it is clearer",
+    "can you rewrite a paragraph so it is clearer",
+    "paraphrase a section",
+    "help me paraphrase a section",
+    "can you paraphrase a section",
+    "continue a short story",
+    "help me continue a short story",
+    "can you continue a short story",
+    "check grammar in a draft",
+    "help me check grammar in a draft",
+    "can you check grammar in a draft"
   ]
 }

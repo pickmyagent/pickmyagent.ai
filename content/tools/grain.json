@@ -62,10 +62,27 @@
     "finalUrl": "https://grain.com/"
   },
   "capabilities": [
-    "record a customer call",
-    "share a meeting moment",
-    "transcribe a conversation",
-    "capture rules type notes, tag important moments, or clip segments to perfect a insights during a meeting",
-    "capture rules set rules for which meetings get recorded, so everything you want is captured without thinking about it"
+    "transcribe a meeting",
+    "pull action items from a call",
+    "summarize a zoom call",
+    "take notes on a customer call",
+    "clip a highlight from an interview",
+    "write a recap for people who missed it",
+    "list decisions from a call",
+    "turn a transcript into tasks"
+  ],
+  "searchPhrases": [
+    "transcribe a meeting",
+    "help me transcribe a meeting",
+    "can you transcribe a meeting",
+    "pull action items from a call",
+    "help me pull action items from a call",
+    "can you pull action items from a call",
+    "summarize a zoom call",
+    "help me summarize a zoom call",
+    "can you summarize a zoom call",
+    "take notes on a customer call",
+    "help me take notes on a customer call",
+    "can you take notes on a customer call"
   ]
 }

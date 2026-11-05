@@ -62,17 +62,30 @@
     "finalUrl": "https://www.columntax.com/"
   },
   "capabilities": [
-    "embed tax filing in an app",
-    "offer refund advance through a partner",
-    "use then column tax does the rest",
-    "use learn about tax for banking 20-35",
-    "use review product",
-    "use taxpayers trust column tax",
-    "use filing through column tax is already around 1",
-    "use diy tax software providers",
-    "use lauren myrick ceo",
-    "use moneylion the top-of-wallet relationship",
-    "use cynthia kleinbaum milner cmo",
-    "use varo has created yet another trusted"
+    "start a tax return",
+    "file a personal tax return",
+    "find freelance deductions",
+    "organize w2 and 1099 income",
+    "estimate a quarterly tax payment",
+    "efile a finished return",
+    "sort deductions into the return",
+    "prepare records for a tax filing"
+  ],
+  "searchPhrases": [
+    "start a tax return",
+    "help me start a tax return",
+    "can you start a tax return",
+    "file a personal tax return",
+    "help me file a personal tax return",
+    "can you file a personal tax return",
+    "find freelance deductions",
+    "help me find freelance deductions",
+    "can you find freelance deductions",
+    "organize w2 and 1099 income",
+    "help me organize w2 and 1099 income",
+    "can you organize w2 and 1099 income",
+    "file my 1040",
+    "quarterly estimated taxes",
+    "where do these deductions go"
   ]
 }

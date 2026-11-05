@@ -63,16 +63,26 @@
   },
   "capabilities": [
     "transcribe a meeting",
-    "summarize a call",
-    "capture action items",
-    "record a conversation",
-    "highlight a moment",
-    "capture every meeting",
-    "turn them into searchable transcripts, summaries,",
-    "manage meetings directly from a browser",
-    "use meetgeek is the ai meeting platform that records",
-    "use ai meeting assistant",
-    "use from notes to what happens next",
-    "use capture every meeting"
+    "pull action items from a call",
+    "summarize a zoom call",
+    "take notes on a customer call",
+    "clip a highlight from an interview",
+    "write a recap for people who missed it",
+    "list decisions from a call",
+    "turn a transcript into tasks"
+  ],
+  "searchPhrases": [
+    "transcribe a meeting",
+    "help me transcribe a meeting",
+    "can you transcribe a meeting",
+    "pull action items from a call",
+    "help me pull action items from a call",
+    "can you pull action items from a call",
+    "summarize a zoom call",
+    "help me summarize a zoom call",
+    "can you summarize a zoom call",
+    "take notes on a customer call",
+    "help me take notes on a customer call",
+    "can you take notes on a customer call"
   ]
 }

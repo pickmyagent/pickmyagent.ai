@@ -62,17 +62,27 @@
     "finalUrl": "https://www.servicetitan.com/"
   },
   "capabilities": [
-    "track a call center",
-    "invoice a home service job",
-    "use ai software for commercial and residential trades the",
-    "use titan commercial residential max products resources get demo",
-    "use started thanks",
-    "use started solutions commercial service & replacement constructi",
-    "use customer portal field application dispatch purchasing & inven",
-    "use accounting reporting trades view all mechanical refrigeration",
-    "use plumbing electrical landscaping roofing kitchen equipment wat",
-    "use content hub industry report commercial playbook prospecting u",
-    "use interactive demo commercial experts solutions residential ser",
-    "use replacement construction enterprise private equity franchise"
+    "draft a proposal and an invoice",
+    "text a customer to request a review",
+    "schedule a plumbing job",
+    "draft a client contract for a freelancer",
+    "plan the week for a one person shop",
+    "follow up with a waiting customer",
+    "capture a receipt and a customer note",
+    "keep a simple local business checklist"
+  ],
+  "searchPhrases": [
+    "draft a proposal and an invoice",
+    "help me draft a proposal and an invoice",
+    "can you draft a proposal and an invoice",
+    "text a customer to request a review",
+    "help me text a customer to request a review",
+    "can you text a customer to request a review",
+    "schedule a plumbing job",
+    "help me schedule a plumbing job",
+    "can you schedule a plumbing job",
+    "draft a client contract for a freelancer",
+    "help me draft a client contract for a freelancer",
+    "can you draft a client contract for a freelancer"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://kling.ai/"
   },
   "capabilities": [
-    "generate a video from a text prompt",
+    "make a video from a text prompt",
     "turn an image into a video",
-    "create a clip with camera motion",
-    "generate audio with a video",
-    "edit a generated video in the studio",
-    "create high-quality ai videos and images with kling ai",
-    "create high-quality ai videos",
-    "turn text, images, and references into multimodal creative content in one studio",
-    "create now kling 4.0 audio-visual performance for realistic results stable dynamic motions",
-    "edit a videos through multiple rounds of post-production",
-    "organize and manage a entire project like a director, all in one place",
-    "manage a entire project like a director, all in one place"
+    "add captions to an interview",
+    "cut silences from a clip",
+    "make an avatar video from a script",
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
   ]
 }

@@ -67,14 +67,31 @@
     "manage-portfolio": "Tracks a household balance sheet for $250 a year, with a 14-day trial."
   },
   "capabilities": [
-    "track a household balance sheet for $250 a year, with a 14-day trial",
-    "track a household balance sheet for $250 a year",
-    "track with a 14-day trial",
-    "track a household balance sheet for a flat annual fee",
-    "work from tracking a household balance sheet for a flat annual fee",
-    "work from household balance sheet. essentials is per year, with a 14-day trial",
-    "work from essentials is a flat per year for one household, with a 14-day trial and no asset-based fee",
-    "work from tracks a household balance sheet for a flat annual fee",
-    "track the household balance sheet for $250 a year, with a 14-day trial"
+    "track spending across accounts",
+    "build a monthly budget",
+    "see net worth in one place",
+    "categorize personal expenses",
+    "plan a savings goal",
+    "review a subscription charge",
+    "forecast cash for the month",
+    "compare a bill with last month"
+  ],
+  "searchPhrases": [
+    "track spending across accounts",
+    "help me track spending across accounts",
+    "can you track spending across accounts",
+    "build a monthly budget",
+    "help me build a monthly budget",
+    "can you build a monthly budget",
+    "see net worth in one place",
+    "help me see net worth in one place",
+    "can you see net worth in one place",
+    "categorize personal expenses",
+    "help me categorize personal expenses",
+    "can you categorize personal expenses",
+    "reconcile quickbooks",
+    "clean up xero",
+    "match the bank feed",
+    "profit and loss for last month"
   ]
 }

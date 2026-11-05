@@ -62,17 +62,27 @@
     "finalUrl": "https://mode.com/"
   },
   "capabilities": [
-    "build a report",
-    "notebook an analysis",
-    "share a dashboard",
-    "use modern business intelligence",
-    "use business intelligence built around business intelligence buil",
-    "use features sql editor integrated notebooks visual explorer repo",
-    "use dashboards datasets ai assist security integrations why mode",
-    "use advanced analytics interactive dashboards self-service report",
-    "use perform complex",
-    "use because everyone",
-    "use analysts can go deep",
-    "use behind every great idea is really great data"
+    "ask a question about a spreadsheet",
+    "explain an excel formula",
+    "forecast next quarter from a sheet",
+    "chart a csv file",
+    "pivot a table",
+    "write sql for a question",
+    "build a dashboard from a warehouse",
+    "clean a messy column"
+  ],
+  "searchPhrases": [
+    "ask a question about a spreadsheet",
+    "help me ask a question about a spreadsheet",
+    "can you ask a question about a spreadsheet",
+    "explain an excel formula",
+    "help me explain an excel formula",
+    "can you explain an excel formula",
+    "forecast next quarter from a sheet",
+    "help me forecast next quarter from a sheet",
+    "can you forecast next quarter from a sheet",
+    "chart a csv file",
+    "help me chart a csv file",
+    "can you chart a csv file"
   ]
 }

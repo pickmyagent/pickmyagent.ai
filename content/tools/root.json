@@ -62,17 +62,25 @@
     "finalUrl": "https://www.joinroot.com/"
   },
   "capabilities": [
-    "get a car insurance quote",
-    "price a policy from driving",
-    "manage a policy in an app",
-    "file an auto claim",
-    "use get a free quote",
-    "use car insurance for good drivers",
-    "use insurance root",
-    "use insurance car insurance made simple over 65",
-    "use car insurance with all the perks",
-    "use insurance this site works best with javascript enabled",
-    "use root insurance logo coverage claims auto insurance availabili",
-    "use apple app store safe driving"
+    "estimate car damage from photos",
+    "flag a claim that looks like fraud",
+    "open a virtual auto claim",
+    "summarize damage in a photo set",
+    "list what a claim file still needs",
+    "compare two policy options"
+  ],
+  "searchPhrases": [
+    "estimate car damage from photos",
+    "help me estimate car damage from photos",
+    "can you estimate car damage from photos",
+    "flag a claim that looks like fraud",
+    "help me flag a claim that looks like fraud",
+    "can you flag a claim that looks like fraud",
+    "open a virtual auto claim",
+    "help me open a virtual auto claim",
+    "can you open a virtual auto claim",
+    "summarize damage in a photo set",
+    "help me summarize damage in a photo set",
+    "can you summarize damage in a photo set"
   ]
 }

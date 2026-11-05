@@ -62,15 +62,27 @@
     "finalUrl": "https://uizard.io/"
   },
   "capabilities": [
-    "turn a sketch into a user interface",
-    "generate a wireframe from a prompt",
-    "convert a screenshot into an editable design",
-    "prototype an app screen",
-    "export a design to code",
-    "find out more generate prototypes no ideas left behind",
-    "generate multi-screen, editable prototypes in seconds using simple text",
-    "generate screens generate new screens for a uizard project with ease- expand the scope of a designs in no time at all",
-    "generate themes create new themes in seconds",
-    "generate a new theme for a project to instantly change the style"
+    "design a logo for a business",
+    "build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "mock up a settings screen",
+    "design a poster for an event",
+    "pick colors and type",
+    "export logo files"
+  ],
+  "searchPhrases": [
+    "design a logo for a business",
+    "help me design a logo for a business",
+    "can you design a logo for a business",
+    "build a brand kit from a name",
+    "help me build a brand kit from a name",
+    "can you build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "help me make a wireframe from a sketch",
+    "can you make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "help me draft a landing page from a prompt",
+    "can you draft a landing page from a prompt"
   ]
 }

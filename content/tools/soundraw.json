@@ -62,13 +62,30 @@
     "finalUrl": "https://soundraw.io/"
   },
   "capabilities": [
-    "generate a royalty free beat",
-    "customize the length of a track",
-    "pick a mood for background music",
-    "download a track for a video",
-    "edit the energy of a song",
-    "generate richer, unpredictable mixes mix any genres in one click discover truly one-of-a-kind tracks customize energy",
-    "record so every beat you generate comes with a worldwide, perpetual license",
-    "edit them in a daw"
+    "generate a song from a prompt",
+    "make a royalty free background track",
+    "separate a vocal stem",
+    "master a mix",
+    "make a beat for a video",
+    "compose a short soundtrack",
+    "extend a musical idea",
+    "export stems from a song"
+  ],
+  "searchPhrases": [
+    "generate a song from a prompt",
+    "help me generate a song from a prompt",
+    "can you generate a song from a prompt",
+    "make a royalty free background track",
+    "help me make a royalty free background track",
+    "can you make a royalty free background track",
+    "separate a vocal stem",
+    "help me separate a vocal stem",
+    "can you separate a vocal stem",
+    "master a mix",
+    "help me master a mix",
+    "can you master a mix",
+    "master this mix",
+    "beat for a youtube video",
+    "lofi beat about rainy tokyo"
   ]
 }

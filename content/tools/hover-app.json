@@ -62,17 +62,27 @@
     "finalUrl": "https://hover.to/"
   },
   "capabilities": [
-    "photo a project",
-    "estimate all in one place",
-    "send a message to partner with us",
-    "use estimate all in one place",
-    "design with real materials get accurate measurements calculat",
-    "use design with real materials get accurate measurements calculat",
-    "use document every step of the way",
-    "use use brands you trust hover",
-    "use help center contractors overview design measurements estimate",
-    "use agreements insurance insurance carriers independent adjusters",
-    "use try now play video play video description",
-    "use step 3 get accurate measurements explore detailed measurement"
+    "take off quantities from a floor plan",
+    "document jobsite photos",
+    "measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "schedule the trades",
+    "estimate a roofing job",
+    "list materials for a task",
+    "note a change on the job"
+  ],
+  "searchPhrases": [
+    "take off quantities from a floor plan",
+    "help me take off quantities from a floor plan",
+    "can you take off quantities from a floor plan",
+    "document jobsite photos",
+    "help me document jobsite photos",
+    "can you document jobsite photos",
+    "measure a roof from a satellite image",
+    "help me measure a roof from a satellite image",
+    "can you measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "help me make a safety inspection checklist",
+    "can you make a safety inspection checklist"
   ]
 }

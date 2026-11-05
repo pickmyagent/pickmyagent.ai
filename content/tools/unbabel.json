@@ -62,17 +62,27 @@
     "finalUrl": "https://unbabel.com/"
   },
   "capabilities": [
-    "translate customer support messages",
-    "localize a help center",
-    "measure translation quality",
-    "support customers in another language",
-    "use language operations platform gives businesses the ability to",
-    "use seamless multilingual translation services - unbabel unbabel",
-    "use seamless multilingual translation services - unbabel",
-    "use what is unbabel",
-    "use reduce costs with ai driven",
-    "use unbabel language operations language operations see how unbab",
-    "use languages explore the languages that unbabel supports privacy",
-    "use integrations salesforce zendesk intercom see all resources re"
+    "translate a contract into spanish",
+    "localize app strings",
+    "translate a pdf",
+    "keep a glossary of product terms",
+    "draft a support reply in french",
+    "translate a help center article",
+    "preserve a term in the glossary",
+    "review a translation for tone"
+  ],
+  "searchPhrases": [
+    "translate a contract into spanish",
+    "help me translate a contract into spanish",
+    "can you translate a contract into spanish",
+    "localize app strings",
+    "help me localize app strings",
+    "can you localize app strings",
+    "translate a pdf",
+    "help me translate a pdf",
+    "can you translate a pdf",
+    "keep a glossary of product terms",
+    "help me keep a glossary of product terms",
+    "can you keep a glossary of product terms"
   ]
 }

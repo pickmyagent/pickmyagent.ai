@@ -62,17 +62,27 @@
     "finalUrl": "https://www.limitless.ai/"
   },
   "capabilities": [
-    "use personalized ai powered by what you",
-    "use pendant customers",
-    "use what regions will limitless no longer support",
-    "use what is happening to the rewind app",
-    "use limitless limitless home solutions privacy developers about s",
-    "use limitless has been acquired by meta",
-    "use when we started limitless five years ago",
-    "use ai was a pipe dream to many",
-    "use hardware startups were considered unfundable",
-    "use ai and hardware would have been considered ludicrous",
-    "use the world has changed",
-    "use ai-enabled wearables"
+    "transcribe a meeting",
+    "pull action items from a call",
+    "summarize a zoom call",
+    "take notes on a customer call",
+    "clip a highlight from an interview",
+    "write a recap for people who missed it",
+    "list decisions from a call",
+    "turn a transcript into tasks"
+  ],
+  "searchPhrases": [
+    "transcribe a meeting",
+    "help me transcribe a meeting",
+    "can you transcribe a meeting",
+    "pull action items from a call",
+    "help me pull action items from a call",
+    "can you pull action items from a call",
+    "summarize a zoom call",
+    "help me summarize a zoom call",
+    "can you summarize a zoom call",
+    "take notes on a customer call",
+    "help me take notes on a customer call",
+    "can you take notes on a customer call"
   ]
 }

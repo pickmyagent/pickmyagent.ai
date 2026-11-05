@@ -68,13 +68,27 @@
     "listing-copy": "Drafts MLS remarks you still check against your board's rules."
   },
   "capabilities": [
-    "use content-creation workflows for marketing teams",
-    "draft mls remarks you still check against the board's rules",
-    "draft marketing content inside a workflow tool",
-    "work from drafting marketing content inside a workflow tool",
-    "work from workflows for marketing content and go-to-market writing",
-    "work from copy ai prices page describes workflows for content creation and other go-to-market writing",
-    "draft mls remarks you still check against a board's rules",
-    "draft marketing content inside the workflow tool"
+    "automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "connect a crm to email",
+    "schedule a recurring job",
+    "move a row into another app",
+    "trigger a step when a payment succeeds",
+    "sync a contact between two apps",
+    "build a zapier style automation"
+  ],
+  "searchPhrases": [
+    "automate a workflow across apps",
+    "help me automate a workflow across apps",
+    "can you automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "help me send a slack message when a form is submitted",
+    "can you send a slack message when a form is submitted",
+    "connect a crm to email",
+    "help me connect a crm to email",
+    "can you connect a crm to email",
+    "schedule a recurring job",
+    "help me schedule a recurring job",
+    "can you schedule a recurring job"
   ]
 }

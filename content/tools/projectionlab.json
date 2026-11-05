@@ -62,17 +62,27 @@
     "finalUrl": "https://projectionlab.com/"
   },
   "capabilities": [
-    "model retirement cash flow",
-    "compare financial scenarios",
-    "project a portfolio",
-    "test a savings plan",
-    "chart a long term plan",
-    "optimize coordinates roth conversions, capital gain harvesting, drawdown order, and more to find the combination that works best for a plan",
-    "optimize coordinates roth conversions, capital gain harvesting, drawdown order,",
-    "optimize automate advanced tax strategies throughout a plan",
-    "track a progress over time journal and visualize a actual progress over time and compare against a initial projections",
-    "track a progress over time journal",
-    "visualize a actual progress over time",
-    "compare against a initial projections"
+    "track a brokerage portfolio",
+    "rebalance a retirement account",
+    "chart a stock ticker",
+    "read an earnings transcript",
+    "screen stocks against a rule",
+    "compare an etf on cost",
+    "see net worth across accounts",
+    "budget monthly spending"
+  ],
+  "searchPhrases": [
+    "track a brokerage portfolio",
+    "help me track a brokerage portfolio",
+    "can you track a brokerage portfolio",
+    "rebalance a retirement account",
+    "help me rebalance a retirement account",
+    "can you rebalance a retirement account",
+    "chart a stock ticker",
+    "help me chart a stock ticker",
+    "can you chart a stock ticker",
+    "read an earnings transcript",
+    "help me read an earnings transcript",
+    "can you read an earnings transcript"
   ]
 }

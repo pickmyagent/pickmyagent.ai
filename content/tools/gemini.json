@@ -65,13 +65,25 @@
   "assistantName": "Gemini",
   "assistantKind": "draft",
   "capabilities": [
-    "draft text inside google apps",
-    "research comparing, and drafting inside google's apps",
-    "research drafting inside google's apps",
-    "work from researching, comparing, and drafting inside google's apps",
-    "work from general-purpose assistant from google, with a free plan and paid google ai plans",
-    "work from google lists a free gemini plan, and google ai plus starts at per month in the united states",
-    "work from gemini is google's general assistant",
-    "work from general-purpose assistant from google, with the free plan and paid google ai plans"
+    "draft a first version of a note",
+    "outline steps for a task",
+    "summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "list options for a decision",
+    "turn rough notes into a checklist"
+  ],
+  "searchPhrases": [
+    "draft a first version of a note",
+    "help me draft a first version of a note",
+    "can you draft a first version of a note",
+    "outline steps for a task",
+    "help me outline steps for a task",
+    "can you outline steps for a task",
+    "summarize a long passage",
+    "help me summarize a long passage",
+    "can you summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "help me rewrite a paragraph for clarity",
+    "can you rewrite a paragraph for clarity"
   ]
 }

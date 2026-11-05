@@ -62,17 +62,30 @@
     "finalUrl": "https://aws.amazon.com/q/developer/"
   },
   "capabilities": [
-    "get a code suggestion in the ide",
-    "transform a java upgrade",
-    "create queries using natural language, get coding help for data pipelines, design ml models,",
-    "use accelerate software development with amazon q developer",
-    "use ai coding assistant that writes",
-    "use invent discover aws products solutions pricing resources sear",
-    "use register now build & deploy ai agents 88",
-    "use global infrastructure careers featured products analytics app",
-    "use integration artificial intelligence business applications com",
-    "use customer experience databases developer tools end user comput",
-    "use multicloud & hybrid networking & content delivery operations",
-    "use transformation hubs migrate to modernize"
+    "fix a failing test",
+    "review a pull request",
+    "refactor a function",
+    "autocomplete code in an editor",
+    "pair program in a terminal",
+    "explain a stack trace",
+    "build an app from a prompt",
+    "write a unit test"
+  ],
+  "searchPhrases": [
+    "fix a failing test",
+    "help me fix a failing test",
+    "can you fix a failing test",
+    "review a pull request",
+    "help me review a pull request",
+    "can you review a pull request",
+    "refactor a function",
+    "help me refactor a function",
+    "can you refactor a function",
+    "autocomplete code in an editor",
+    "help me autocomplete code in an editor",
+    "can you autocomplete code in an editor",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

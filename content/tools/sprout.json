@@ -62,12 +62,25 @@
     "finalUrl": "https://sproutsocial.com/"
   },
   "capabilities": [
-    "schedule social posts",
-    "report on social performance",
-    "listen for brand mentions",
-    "plan & schedule content simplify workflows and collaboration to make sure a brand is always active where (and when) it matters most",
-    "plan & schedule content simplify workflows",
-    "analyze a performance access analytics that reveal insights that inform business goals and showcase a impact",
-    "analyze a performance access analytics that reveal insights that inform business goals"
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "write a thread for x",
+    "repurpose a webinar into clips"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
   ]
 }

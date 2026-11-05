@@ -62,16 +62,27 @@
     "finalUrl": "https://substack.com/"
   },
   "capabilities": [
-    "grow a paid subscription",
-    "use substack substack is the app for independent voices",
-    "use substack is the app for independent voices",
-    "use subscriptions chat activity explore profile create make money",
-    "use ludwig bemelmans",
-    "use bemelmans bar in the carlyle hotel",
-    "use share post share post at current time 0",
-    "use lewis official substack the lion",
-    "use with full editorial control and no gatekeepers",
-    "use the city edit 2d things i",
-    "use please turn on javascript or unblock scripts"
+    "draft a proposal and an invoice",
+    "text a customer to request a review",
+    "schedule a plumbing job",
+    "draft a client contract for a freelancer",
+    "plan the week for a one person shop",
+    "follow up with a waiting customer",
+    "capture a receipt and a customer note",
+    "keep a simple local business checklist"
+  ],
+  "searchPhrases": [
+    "draft a proposal and an invoice",
+    "help me draft a proposal and an invoice",
+    "can you draft a proposal and an invoice",
+    "text a customer to request a review",
+    "help me text a customer to request a review",
+    "can you text a customer to request a review",
+    "schedule a plumbing job",
+    "help me schedule a plumbing job",
+    "can you schedule a plumbing job",
+    "draft a client contract for a freelancer",
+    "help me draft a client contract for a freelancer",
+    "can you draft a client contract for a freelancer"
   ]
 }

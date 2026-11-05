@@ -62,17 +62,26 @@
     "finalUrl": "https://slickdeals.net/"
   },
   "capabilities": [
-    "see a community posted discount",
-    "set a deal alert",
-    "find the best bargains and money-saving offers, discounts, promo codes, freebies and price comparisons from the trusted slickdeals community",
-    "find the best bargains",
-    "use the best deals",
-    "find the best bargains and money-saving offers",
-    "use find the best bargains and money-saving offers",
-    "use slickdeals community",
-    "use promo codes & discounts slickdeals",
-    "use occasions office supplies other pets phones restaurants view",
-    "use all categories coupons legalzoom samsung aliexpress expedia e",
-    "use icon slickdealsheader"
+    "find a coupon for a checkout",
+    "show price history for an item",
+    "compare products before a purchase",
+    "find a lower price on a product",
+    "check whether a deal is real",
+    "list pros and cons of a product",
+    "track a price drop"
+  ],
+  "searchPhrases": [
+    "find a coupon for a checkout",
+    "help me find a coupon for a checkout",
+    "can you find a coupon for a checkout",
+    "show price history for an item",
+    "help me show price history for an item",
+    "can you show price history for an item",
+    "compare products before a purchase",
+    "help me compare products before a purchase",
+    "can you compare products before a purchase",
+    "find a lower price on a product",
+    "help me find a lower price on a product",
+    "can you find a lower price on a product"
   ]
 }

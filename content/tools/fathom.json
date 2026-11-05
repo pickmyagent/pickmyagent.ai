@@ -62,14 +62,27 @@
     "finalUrl": "https://www.fathom.ai/"
   },
   "capabilities": [
-    "record a zoom call",
-    "summarize a meeting",
-    "highlight a moment",
-    "share clips from a call",
-    "search conversations, spot patterns, and keep work moving without the manual work",
-    "search conversations, spot patterns,",
-    "turn conversations into clear next steps that move deals and projects forward",
-    "turn conversations into clear next steps that move deals",
-    "build stronger relationships without worrying about capturing every detail"
+    "transcribe a meeting",
+    "pull action items from a call",
+    "summarize a zoom call",
+    "take notes on a customer call",
+    "clip a highlight from an interview",
+    "write a recap for people who missed it",
+    "list decisions from a call",
+    "turn a transcript into tasks"
+  ],
+  "searchPhrases": [
+    "transcribe a meeting",
+    "help me transcribe a meeting",
+    "can you transcribe a meeting",
+    "pull action items from a call",
+    "help me pull action items from a call",
+    "can you pull action items from a call",
+    "summarize a zoom call",
+    "help me summarize a zoom call",
+    "can you summarize a zoom call",
+    "take notes on a customer call",
+    "help me take notes on a customer call",
+    "can you take notes on a customer call"
   ]
 }

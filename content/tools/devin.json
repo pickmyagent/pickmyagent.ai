@@ -62,17 +62,30 @@
     "finalUrl": "https://devin.ai/"
   },
   "capabilities": [
-    "assign a coding task to an agent",
-    "plan a software task",
-    "browse the web while coding",
-    "use parallel cloud agents for serious engineering teams",
-    "use meet devin",
-    "use o add multi-region failover upgrade node",
-    "use investigate api latency spike patch vulnerable dependencies f",
-    "review authentication changes expand payment test coverage do",
-    "use review authentication changes expand payment test coverage do",
-    "use sso xl add saml sso for enterprise customers",
-    "use explored authentication across 3 repositories implemented sso",
-    "use i tested setup"
+    "fix a failing test",
+    "review a pull request",
+    "refactor a function",
+    "autocomplete code in an editor",
+    "pair program in a terminal",
+    "explain a stack trace",
+    "build an app from a prompt",
+    "write a unit test"
+  ],
+  "searchPhrases": [
+    "fix a failing test",
+    "help me fix a failing test",
+    "can you fix a failing test",
+    "review a pull request",
+    "help me review a pull request",
+    "can you review a pull request",
+    "refactor a function",
+    "help me refactor a function",
+    "can you refactor a function",
+    "autocomplete code in an editor",
+    "help me autocomplete code in an editor",
+    "can you autocomplete code in an editor",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

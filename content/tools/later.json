@@ -62,17 +62,27 @@
     "finalUrl": "https://later.com/"
   },
   "capabilities": [
-    "publish to tiktok and instagram",
-    "track performance with ai-powered insights",
-    "use ai-powered insights",
-    "use influencer marketing and social media management influencer m",
-    "use influencer marketing and social media management later",
-    "use influencer marketing and social media management",
-    "use nvse span",
-    "use zdtg 1s cubic-bezier",
-    "use d 15s linear infinite",
-    "use tiktok blockquote p",
-    "use facebook iframe",
-    "use linkedin iframe"
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
   ]
 }

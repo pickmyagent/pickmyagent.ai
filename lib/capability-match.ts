@@ -1,3 +1,4 @@
+import { categoryPhrase, copyQualityProblems } from "./capability-quality.ts";
 import { articleVerbProblems, hasLowercaseI, headerEchoBroken } from "./header-grammar.ts";
 import { stemToken } from "./match-text.ts";
 import type { Tool } from "./types.ts";
@@ -324,8 +325,9 @@ const GERUND_FIX: Record<string, string> = {
 
 type CapDoc = {
   slug: string;
-  index: number;
+  id: string;
   text: string;
+  display: string;
   tokens: string[];
   stems: Set<string>;
 };
@@ -389,13 +391,20 @@ function load(tools: Tool[]): Cache {
   const vocab = new Map<string, number>();
   for (const tool of tools) {
     if (tool.generalPurpose || tool.status !== "published") continue;
-    const list = tool.capabilities ?? [];
-    list.forEach((text, index) => {
-      if (text.toLowerCase().startsWith("work from ")) return;
-      if (/^use (?!a\b|an\b|the\b)/i.test(text)) return;
-      const tokens = contentTokens(text);
+    const visible = tool.capabilities ?? [];
+    const hidden = tool.searchPhrases ?? [];
+    const rows: Array<{ id: string; text: string; display: string }> = [];
+    visible.forEach((text, index) => rows.push({ id: `${tool.slug}#${index}`, text, display: text }));
+    hidden.forEach((text, index) => {
+      const parent = visible[index % Math.max(visible.length, 1)] ?? text;
+      rows.push({ id: `${tool.slug}#p${index}`, text, display: parent });
+    });
+    for (const row of rows) {
+      if (row.text.toLowerCase().startsWith("work from ")) continue;
+      if (/^use (?!a\b|an\b|the\b)/i.test(row.text)) continue;
+      const tokens = contentTokens(row.text);
       const stems = new Set(tokens.map(capStem));
-      docs.push({ slug: tool.slug, index, text, tokens, stems });
+      docs.push({ slug: tool.slug, id: row.id, text: row.text, display: row.display, tokens, stems });
       const seen = new Set<string>();
       for (const token of tokens) {
         if (seen.has(token)) continue;
@@ -403,7 +412,7 @@ function load(tools: Tool[]): Cache {
         df.set(token, (df.get(token) ?? 0) + 1);
         vocab.set(token, (vocab.get(token) ?? 0) + 1);
       }
-    });
+    }
   }
   cache = { tools, docs, df, vocab };
   return cache;
@@ -443,6 +452,11 @@ export function toolFamilies(tool: Tool): Set<string> {
   if (/portfolio|invest/.test(tags)) families.add("investing");
   if (/bookkeep|finance/.test(tags)) families.add("books");
   if (/tax/.test(tags)) families.add("tax");
+  if (/meeting/.test(tags) || tool.categories.includes("meetings")) families.add("meetings");
+  const about = `${tool.shortDescription} ${(tool.bestFor ?? []).join(" ")}`.toLowerCase();
+  if (tool.categories.includes("email") || /\b(newsletter|email marketing|email campaign|inbox)\b/.test(about)) {
+    families.add("email");
+  }
   if (families.size === 0) families.add("other");
   return families;
 }
@@ -497,32 +511,48 @@ export function gerundPhrase(capability: string): string {
   return caseAcronyms(parts.join(" "));
 }
 
-export function capabilityLead(capability: string): string {
+function categoryHeader(phrase: string): string {
+  const lead = `For ${phrase}, here's how each tool can help:`;
+  if (copyQualityProblems(lead).length > 0 || articleVerbProblems(lead).length > 0 || hasLowercaseI(lead)) {
+    return "For this kind of work, here's how each tool can help:";
+  }
+  return lead;
+}
+
+function readable(text: string): boolean {
+  return copyQualityProblems(text).length === 0
+    && articleVerbProblems(text).length === 0
+    && !hasLowercaseI(text);
+}
+
+export function capabilityLead(capability: string, categories: string[] = []): string {
   const phrase = gerundPhrase(capability);
   const lead = `For ${phrase}, here's how each tool can help:`;
   const body = phrase;
   const words = body.split(/\s+/);
   const stem = (words[0] ?? "").replace(/ing$/, "");
-  const twoVerbs = ["test", "fit", "set", "cut", "run"].includes(stem)
-    && ["fit", "test", "up", "out"].includes(words[1] ?? "");
+  const twoVerbs = ["test", "fit", "set", "cut", "run", "turn", "text"].includes(stem)
+    && ["fit", "test", "up", "out", "text", "to", "into"].includes(words[1] ?? "");
   if (
     twoVerbs
     || headerEchoBroken(body)
-    || articleVerbProblems(lead).length > 0
-    || hasLowercaseI(lead)
+    || !readable(lead)
     || !/^[a-z]+ing\b/i.test(body)
   ) {
-    return "For help with this task, here's how each tool can help:";
+    return categoryHeader(categoryPhrase(categories));
   }
   return lead;
 }
 
-export function capabilityIntro(capabilities: string[]): string {
+export function capabilityIntro(capabilities: string[], categories: string[] = []): string {
   const unique: string[] = [];
+  const verbs = new Set<string>();
   for (const item of capabilities) {
     const text = caseAcronyms(item.replace(/[.?!]+$/g, "").trim());
-    if (!text || unique.includes(text)) continue;
+    const verb = text.split(/\s+/)[0]?.toLowerCase() ?? "";
+    if (!text || unique.includes(text) || verbs.has(verb)) continue;
     unique.push(text);
+    verbs.add(verb);
     if (unique.length === 2) break;
   }
   const first = unique[0] ?? "handle this job";
@@ -530,8 +560,9 @@ export function capabilityIntro(capabilities: string[]): string {
   const intro = second
     ? `AI agents can ${first}, and they can ${second}.`
     : `AI agents can ${first}, and you still decide what happens next.`;
-  if (articleVerbProblems(intro).length > 0 || hasLowercaseI(intro)) {
-    return "AI agents can help with this task, and you still decide what happens next.";
+  const fallback = `AI agents can help with ${categoryPhrase(categories)}, and you still decide what happens next.`;
+  if (!readable(intro)) {
+    return readable(fallback) ? fallback : "AI agents can help with this kind of work, and you still decide what happens next.";
   }
   return intro;
 }
@@ -616,19 +647,20 @@ export function pickCapabilities(
     }
     const bonus = phraseBonus(tokens, doc.text);
     const lexical = overlap * 5 + bonus * 4;
-    const cosine = cosines?.get(`${doc.slug}#${doc.index}`) ?? 0;
+    const cosine = cosines?.get(doc.id) ?? 0;
     const lexicalOk = overlap >= 2 || (allowed !== null && overlap >= 1) || (overlap >= 1 && bonus >= 1);
+    const floor = allowed ? 0.58 : 0.72;
     const semanticOk = Boolean(cosines)
       && familyAllows(family, allowed)
       && overlap >= 1
-      && cosine >= 0.7;
+      && cosine >= floor;
     if (!lexicalOk && !semanticOk) continue;
     const fused = cosines
       ? Math.min(lexical, 28) / 28 * 0.45 + cosine * 0.55
       : lexical;
     const current = best.get(doc.slug);
-    if (!current || fused > current.score || (fused === current.score && doc.text.length > current.capability.length)) {
-      best.set(doc.slug, { slug: doc.slug, capability: doc.text, score: fused, cosine });
+    if (!current || fused > current.score || (fused === current.score && doc.display.length > current.capability.length)) {
+      best.set(doc.slug, { slug: doc.slug, capability: doc.display, score: fused, cosine });
     }
   }
 

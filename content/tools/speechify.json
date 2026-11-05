@@ -62,12 +62,27 @@
     "finalUrl": "https://speechify.com/"
   },
   "capabilities": [
-    "listen to a document read aloud",
-    "convert text to speech",
-    "scan a page and hear it",
-    "change the reading voice",
-    "make podcasts for you, all by voice",
-    "create podcasts from any document or description,",
-    "write with a voice"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

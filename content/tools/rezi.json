@@ -66,14 +66,27 @@
     "write-resume": "Builds a resume, scores the sections, and pulls keywords from a job description."
   },
   "capabilities": [
-    "build a resume, scores the sections, and pulls keywords from a job description",
-    "build a resume",
-    "build scores the sections",
-    "build pulls keywords from a job description",
-    "build a resume and scoring it against a job description",
-    "build scoring it against a job description",
-    "work from building a resume and scoring it against a job description",
-    "work from ai resume builder that scores a resume and targets keywords. pro is a month",
-    "build the resume, scores the sections, and pulls keywords from a job description"
+    "source candidates for an opening",
+    "screen resumes against a role",
+    "write an unbiased job post",
+    "schedule candidate interviews",
+    "track applicants through stages",
+    "summarize an interview",
+    "compare candidates on one list",
+    "draft outreach to a prospect"
+  ],
+  "searchPhrases": [
+    "source candidates for an opening",
+    "help me source candidates for an opening",
+    "can you source candidates for an opening",
+    "screen resumes against a role",
+    "help me screen resumes against a role",
+    "can you screen resumes against a role",
+    "write an unbiased job post",
+    "help me write an unbiased job post",
+    "can you write an unbiased job post",
+    "schedule candidate interviews",
+    "help me schedule candidate interviews",
+    "can you schedule candidate interviews"
   ]
 }

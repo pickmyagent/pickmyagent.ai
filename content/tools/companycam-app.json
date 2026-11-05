@@ -62,17 +62,27 @@
     "finalUrl": "https://companycam.com/"
   },
   "capabilities": [
-    "schedule a crew",
-    "photo a project",
-    "capture work, track job progress,",
-    "track job progress from anywhere on any device",
-    "build team workflows and standardize all a work",
-    "turn them into google posts, social content, and review requests automatically",
-    "turn them into google posts, social content,",
-    "review requests automatically",
-    "use capture work",
-    "use ai tools that keep work moving",
-    "use sign up for a demo",
-    "use watch a pre-recorded demo here"
+    "take off quantities from a floor plan",
+    "document jobsite photos",
+    "measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "schedule the trades",
+    "estimate a roofing job",
+    "list materials for a task",
+    "note a change on the job"
+  ],
+  "searchPhrases": [
+    "take off quantities from a floor plan",
+    "help me take off quantities from a floor plan",
+    "can you take off quantities from a floor plan",
+    "document jobsite photos",
+    "help me document jobsite photos",
+    "can you document jobsite photos",
+    "measure a roof from a satellite image",
+    "help me measure a roof from a satellite image",
+    "can you measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "help me make a safety inspection checklist",
+    "can you make a safety inspection checklist"
   ]
 }

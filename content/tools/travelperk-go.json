@@ -62,17 +62,29 @@
     "finalUrl": "https://www.perk.com/"
   },
   "capabilities": [
-    "find a hotel",
-    "use the intelligent platform for travel and spend",
-    "use perk perk offers the freedom travelers want",
-    "use enjoy an industry-leading travel inventory",
-    "use perk the intelligent platform for travel and spend",
-    "use apple color emoji",
-    "use segoe ui emoji",
-    "use segoe ui symbol",
-    "use noto color emoji",
-    "use liberation mono",
-    "use csvg width",
-    "use cg clip-path"
+    "build an itinerary for a city",
+    "compare flights for a trip",
+    "find a hotel for a work trip",
+    "plan how to get between two cities",
+    "plan a group trip",
+    "balance a day so it is not packed",
+    "list neighborhoods to stay in"
+  ],
+  "searchPhrases": [
+    "build an itinerary for a city",
+    "help me build an itinerary for a city",
+    "can you build an itinerary for a city",
+    "compare flights for a trip",
+    "help me compare flights for a trip",
+    "can you compare flights for a trip",
+    "find a hotel for a work trip",
+    "help me find a hotel for a work trip",
+    "can you find a hotel for a work trip",
+    "plan how to get between two cities",
+    "help me plan how to get between two cities",
+    "can you plan how to get between two cities",
+    "how do I get from rome to florence",
+    "itinerary for four days in lisbon",
+    "compare flights to tokyo"
   ]
 }

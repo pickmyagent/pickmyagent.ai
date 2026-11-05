@@ -62,17 +62,27 @@
     "finalUrl": "https://www.feedhive.com/"
   },
   "capabilities": [
-    "schedule social posts",
-    "generate post ideas",
-    "recycle content",
-    "preview a calendar",
-    "write captions with ai",
-    "create schedule, and automate social media posts with feedhive",
-    "automate social media posts with feedhive",
-    "generate content that fits a tone-of-voice & brand",
-    "create advanced workflows and posting conditions",
-    "build a content machine for social",
-    "automate a content across every channel",
-    "plan with a favorite tools, create drafts, and manage what goes live in one place"
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
   ]
 }

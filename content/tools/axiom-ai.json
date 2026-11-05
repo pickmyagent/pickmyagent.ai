@@ -62,17 +62,27 @@
     "finalUrl": "https://axiom.ai/"
   },
   "capabilities": [
-    "automate a browser task",
-    "scrape a page",
-    "click through a workflow",
-    "monitor a page",
-    "automate any website with a no-code tool, a browser automation api, or by describing it to claude",
-    "create editable browser automations",
-    "build by description with ai describe it in the builder, ai assembles it",
-    "manage their runs over rest",
-    "build no-code in a browser, write code in a ide , or ask claude",
-    "build no-code in a browser, write code in a ide",
-    "edit a automation by hand from a prebuilt library of actions, scrapers",
-    "automate any website with a no-code tool"
+    "fill a form in the browser",
+    "click through a checkout flow",
+    "scrape a page into a sheet",
+    "automate a web workflow",
+    "run a headless browser for an agent",
+    "stop at a login screen",
+    "extract a table from a page",
+    "repeat a browser task"
+  ],
+  "searchPhrases": [
+    "fill a form in the browser",
+    "help me fill a form in the browser",
+    "can you fill a form in the browser",
+    "click through a checkout flow",
+    "help me click through a checkout flow",
+    "can you click through a checkout flow",
+    "scrape a page into a sheet",
+    "help me scrape a page into a sheet",
+    "can you scrape a page into a sheet",
+    "automate a web workflow",
+    "help me automate a web workflow",
+    "can you automate a web workflow"
   ]
 }

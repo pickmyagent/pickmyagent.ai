@@ -63,11 +63,26 @@
   },
   "capabilities": [
     "remove the background from a product photo",
+    "make an image from a text prompt",
+    "upscale a blurry picture",
+    "put text inside an image",
     "generate a product scene",
-    "turn product photos into listing images",
-    "create a product image for ecommerce",
-    "make a video ad from a product photo",
-    "remove background and create product pictures | photoroom turn a product photos into listing images and videos that help you sell",
-    "create product pictures | photoroom turn a product photos into listing images"
+    "export a transparent png",
+    "edit an image with a prompt",
+    "vary a picture in a new style"
+  ],
+  "searchPhrases": [
+    "remove the background from a product photo",
+    "help me remove the background from a product photo",
+    "can you remove the background from a product photo",
+    "make an image from a text prompt",
+    "help me make an image from a text prompt",
+    "can you make an image from a text prompt",
+    "upscale a blurry picture",
+    "help me upscale a blurry picture",
+    "can you upscale a blurry picture",
+    "put text inside an image",
+    "help me put text inside an image",
+    "can you put text inside an image"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.prometheanai.com/"
   },
   "capabilities": [
-    "place assets in a level",
-    "use w64m2--mobile button",
-    "use madefor display",
-    "use helvetica neue",
-    "use lcoth input",
-    "use c1u--focus input",
-    "use header header header header search",
-    "use tabs tabs tabs tabs tabs",
-    "use body body body body body",
-    "use header header header header header",
-    "use tabs body body body body",
-    "use y1h81f--mobile button"
+    "make an npc that remembers the player",
+    "generate game art in a house style",
+    "run an ai game master",
+    "prototype a game from a prompt",
+    "set dress a game level",
+    "write branching dialogue",
+    "export a sprite sheet",
+    "keep memory of what the player said"
+  ],
+  "searchPhrases": [
+    "make an npc that remembers the player",
+    "help me make an npc that remembers the player",
+    "can you make an npc that remembers the player",
+    "generate game art in a house style",
+    "help me generate game art in a house style",
+    "can you generate game art in a house style",
+    "run an ai game master",
+    "help me run an ai game master",
+    "can you run an ai game master",
+    "prototype a game from a prompt",
+    "help me prototype a game from a prompt",
+    "can you prototype a game from a prompt"
   ]
 }

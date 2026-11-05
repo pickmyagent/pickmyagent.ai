@@ -62,17 +62,27 @@
     "finalUrl": "https://www.mightycause.com/"
   },
   "capabilities": [
-    "create a fundraising page",
-    "accept donations",
-    "run a peer campaign",
-    "embed a form",
-    "build campaigns perfectly tailored to the way you fundraise",
-    "build engaging campaign pages that show progress towards a goal and inspire supporters to participate",
-    "build engaging campaign pages that show progress towards a goal",
-    "plan promote, and fundraise for a cause, and craft templates for peer-to-peer fundraising",
-    "build a giving day website complete with registration, prizes, matched gifts and leaderboards",
-    "build a giving day website complete with registration, prizes, matched gifts",
-    "create fundraising campaigns for classrooms, clubs, teams, scholarships, and school-wide initiatives with ease",
-    "create fundraising campaigns for classrooms, clubs, teams, scholarships,"
+    "draft a grant proposal",
+    "find grants for a food pantry",
+    "build a donation form for a campaign",
+    "email donors about a campaign",
+    "track grant deadlines",
+    "write a grant narrative",
+    "summarize a funder guideline",
+    "thank a donor"
+  ],
+  "searchPhrases": [
+    "draft a grant proposal",
+    "help me draft a grant proposal",
+    "can you draft a grant proposal",
+    "find grants for a food pantry",
+    "help me find grants for a food pantry",
+    "can you find grants for a food pantry",
+    "build a donation form for a campaign",
+    "help me build a donation form for a campaign",
+    "can you build a donation form for a campaign",
+    "email donors about a campaign",
+    "help me email donors about a campaign",
+    "can you email donors about a campaign"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://sonix.ai/"
   },
   "capabilities": [
-    "transcribe audio",
-    "convert text to speech",
-    "edit a podcast",
-    "transcribe audio and video to text in minutes with 99% accuracy",
-    "search across everything, uncover patterns, and generate insights in seconds",
-    "search across everything, uncover patterns,",
-    "generate insights in seconds",
-    "create incredibly accurate transcripts, combine them with a documents,",
-    "use try sonix free",
-    "use ai transcription software",
-    "use accuracy in 54+ languages",
-    "use sonix the world"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

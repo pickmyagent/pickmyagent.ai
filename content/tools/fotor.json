@@ -62,16 +62,30 @@
     "finalUrl": "https://www.fotor.com/"
   },
   "capabilities": [
-    "edit a photo online",
-    "remove a background",
-    "enhance a portrait",
-    "design a collage",
-    "generate an image from a prompt",
-    "edit photos with fotor\u2019s free online photo editor",
-    "retouch photo enhance portraits and photos for a polished look",
-    "retouch photo enhance portraits",
-    "remove & replace background remover hot remove background from image instantly",
-    "remove object hot remove unwanted objects from photos",
-    "remove person hot remove a person from a photo"
+    "cull a wedding shoot",
+    "retouch a portrait",
+    "replace a sky in a photo",
+    "denoise a raw file",
+    "edit a batch in one style",
+    "straighten a horizon",
+    "lift shadows in a photo",
+    "export a retouched image"
+  ],
+  "searchPhrases": [
+    "cull a wedding shoot",
+    "help me cull a wedding shoot",
+    "can you cull a wedding shoot",
+    "retouch a portrait",
+    "help me retouch a portrait",
+    "can you retouch a portrait",
+    "replace a sky in a photo",
+    "help me replace a sky in a photo",
+    "can you replace a sky in a photo",
+    "denoise a raw file",
+    "help me denoise a raw file",
+    "can you denoise a raw file",
+    "cull this wedding shoot",
+    "denoise the raw file",
+    "retouch the portraits"
   ]
 }

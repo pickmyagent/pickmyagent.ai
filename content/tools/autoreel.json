@@ -72,13 +72,31 @@
     "real-estate": "Turns listing photos into a property video with music and captions."
   },
   "capabilities": [
-    "edit a listing photo",
-    "make a listing video from photos",
-    "turn listing photos into a property video with music and captions",
-    "turn listing photos into a property video with music",
-    "work from realtor turning listing photos into a video",
-    "work from vertical reel for instagram or tiktok",
-    "edit the listing photo",
-    "make the listing video from photos"
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok",
+    "home value estimate",
+    "off-market houses",
+    "schedule a showing",
+    "listing photos need virtual staging"
   ]
 }

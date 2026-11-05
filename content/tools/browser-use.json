@@ -82,13 +82,26 @@
     "tool-use-browser": "Open-source Python agent that opens pages, clicks, and types in a browser."
   },
   "capabilities": [
-    "control a browser for an agent task",
-    "open pages and click in a browser",
-    "work from agents that need to open pages, click, and type",
-    "work from python projects that can bring their own browser and model",
-    "work from open-source python agent that controls a browser. install it yourself",
-    "work from 0.13.11 is built for agents that open pages, click, and type",
-    "control the browser for an agent task",
-    "control a browser for the agent task"
+    "connect an agent to a tool",
+    "call an api from an agent",
+    "search the web for an agent",
+    "pass a page to a model",
+    "run a tool with structured input",
+    "chain two tools in one task",
+    "return a source with the answer"
+  ],
+  "searchPhrases": [
+    "connect an agent to a tool",
+    "help me connect an agent to a tool",
+    "can you connect an agent to a tool",
+    "call an api from an agent",
+    "help me call an api from an agent",
+    "can you call an api from an agent",
+    "search the web for an agent",
+    "help me search the web for an agent",
+    "can you search the web for an agent",
+    "pass a page to a model",
+    "help me pass a page to a model",
+    "can you pass a page to a model"
   ]
 }

@@ -63,13 +63,26 @@
   },
   "capabilities": [
     "optimize a page for a keyword",
-    "write an seo article",
-    "audit content against competitors",
-    "plan a content brief",
-    "track search rankings",
-    "turn insights into content built to rank & be cited",
-    "analyze a social media from a single tool",
-    "monitor ai search visibility track how a brand appears in ai tools like chatgpt",
-    "find topics & ideas discover content angles that match a audience\u2019s intent"
+    "write a content brief",
+    "research keywords for a site",
+    "explain why a page is not ranking",
+    "find backlink opportunities",
+    "draft an seo article from a keyword",
+    "suggest on page seo edits",
+    "group keywords into a cluster"
+  ],
+  "searchPhrases": [
+    "optimize a page for a keyword",
+    "help me optimize a page for a keyword",
+    "can you optimize a page for a keyword",
+    "write a content brief",
+    "help me write a content brief",
+    "can you write a content brief",
+    "research keywords for a site",
+    "help me research keywords for a site",
+    "can you research keywords for a site",
+    "explain why a page is not ranking",
+    "help me explain why a page is not ranking",
+    "can you explain why a page is not ranking"
   ]
 }

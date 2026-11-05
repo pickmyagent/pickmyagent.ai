@@ -62,14 +62,27 @@
     "finalUrl": "https://www.busuu.com/"
   },
   "capabilities": [
-    "practice a lesson",
-    "use learn together with native speakers in busuu",
-    "use busuu - learn languages online",
-    "use practise pronunciation",
-    "use italiano fran",
-    "use polski deutsch",
-    "use bahasa indonesia learn languages online learn spanish online",
-    "use press partner with busuu covid-19 modern slavery statement",
-    "use busuu ltd terms privacy"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

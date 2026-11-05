@@ -62,17 +62,27 @@
     "finalUrl": "https://swapp.ai/"
   },
   "capabilities": [
-    "generate construction documents from a model",
-    "coordinate a revit model",
-    "use swapp helps architecture firms automate documentation and mod",
-    "use ai architectural documentation & bim automation",
-    "use ai swapp helps architecture firms automate documentation and",
-    "use ai complete construction documents",
-    "use revit and archicad",
-    "use an intelligence layer",
-    "use save hours",
-    "use succession insurance",
-    "use the ai architect inside revit",
-    "use from design to delivery and back"
+    "turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "render an elevation of a house",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan"
+  ],
+  "searchPhrases": [
+    "turn a floor plan into a render",
+    "help me turn a floor plan into a render",
+    "can you turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "render an elevation of a house",
+    "help me render an elevation of a house",
+    "can you render an elevation of a house",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout"
   ]
 }

@@ -62,17 +62,30 @@
     "finalUrl": "https://replicate.com/"
   },
   "capabilities": [
-    "call a model api",
-    "deploy an endpoint",
-    "fine tune a model",
-    "create and edit images from text with strong instruction following, sharp text rendering, and detailed editing",
-    "edit images from text with strong instruction following, sharp text rendering,",
-    "make it real by pushing it to replicate",
-    "generate video from text or images with speed and quality modes, first- and last-frame control, and durations up to 15 seconds",
-    "generate video from text or images with speed",
-    "use run and fine-tune models",
-    "use deploy custom models",
-    "use all with one line of code",
-    "use kuaishou replicate glyph replicate wordmark explore pricing e"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

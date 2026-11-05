@@ -70,15 +70,27 @@
     "avatar-video": "Generates an avatar or spokesperson video from a script."
   },
   "capabilities": [
+    "make a video from a text prompt",
+    "turn an image into a video",
+    "add captions to an interview",
+    "cut silences from a clip",
     "make an avatar video from a script",
-    "generate an avatar or spokesperson video from a script",
-    "generate an avatar",
-    "generate spokesperson video from a script",
-    "help teams that want a hosted avatar tool with a free plan",
-    "work from spokesperson or avatar videos",
-    "work from teams that want a hosted avatar tool with a free plan",
-    "work from avatar and spokesperson video from a script. free to start. paid plans are on their site",
-    "work from free plan includes 3 avatar videos per month, up to 1 minute each",
-    "make an avatar video from the script"
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
   ]
 }

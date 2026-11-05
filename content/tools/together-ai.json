@@ -62,17 +62,30 @@
     "finalUrl": "https://www.together.ai/"
   },
   "capabilities": [
-    "search documentation",
-    "fine tune a model",
-    "build what's next on the ai native cloud",
-    "use build what",
-    "use ai native cloud",
-    "use full-stack ai platform for inference",
-    "use the ai native cloud build what",
-    "use the ai native cloud webflow analyze/optimize tracking bridge",
-    "use introducing together post-training",
-    "use introducing together link",
-    "use the open source ai stack",
-    "use flash on deepswe"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

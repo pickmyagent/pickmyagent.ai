@@ -62,12 +62,27 @@
     "finalUrl": "https://www.wellsaid.io/"
   },
   "capabilities": [
-    "generate a voiceover for training",
-    "turn a script into studio speech",
-    "share a voice clip with a team",
-    "revise a narration without a studio",
-    "create an on brand voice",
-    "create professional-quality voice overs in any dialect or production style with a secure ai voices",
-    "create test, and launch new content in just a few minutes"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

@@ -69,13 +69,27 @@
     "game-creative": "Trims video and adds captions, and the free plan includes some of those edits."
   },
   "capabilities": [
-    "edit footage into a shorter captioned clip",
-    "work from captioning a talking-head or social video",
-    "work from editing footage into a shorter captioned clip",
-    "work from ai video editor and caption tool. the paid max plan is listed at /month",
-    "work from free plan includes trimming, transitions, and some media-library assets for captioned social video",
-    "edit footage into the shorter captioned clip",
-    "work from captioning the talking-head or social video",
-    "work from editing footage into the shorter captioned clip"
+    "make a video from a text prompt",
+    "turn an image into a video",
+    "cut silences from a clip",
+    "make an avatar video from a script",
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip",
+    "edit a creative asset"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip",
+    "make an avatar video from a script",
+    "help me make an avatar video from a script",
+    "can you make an avatar video from a script"
   ]
 }

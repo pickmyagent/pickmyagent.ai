@@ -62,10 +62,27 @@
     "finalUrl": "https://stability.ai/"
   },
   "capabilities": [
-    "edit an image with a stable diffusion model",
-    "create video from an image",
-    "use an open image model through an api",
-    "upscale an image with a diffusion model",
-    "create and ideate with the audio toolkit and commercially-safe models built for a process"
+    "remove the background from a product photo",
+    "make an image from a text prompt",
+    "upscale a blurry picture",
+    "put text inside an image",
+    "generate a product scene",
+    "export a transparent png",
+    "edit an image with a prompt",
+    "vary a picture in a new style"
+  ],
+  "searchPhrases": [
+    "remove the background from a product photo",
+    "help me remove the background from a product photo",
+    "can you remove the background from a product photo",
+    "make an image from a text prompt",
+    "help me make an image from a text prompt",
+    "can you make an image from a text prompt",
+    "upscale a blurry picture",
+    "help me upscale a blurry picture",
+    "can you upscale a blurry picture",
+    "put text inside an image",
+    "help me put text inside an image",
+    "can you put text inside an image"
   ]
 }

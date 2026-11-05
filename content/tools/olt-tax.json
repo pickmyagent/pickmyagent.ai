@@ -62,17 +62,30 @@
     "finalUrl": "https://www.olt.com/main/home/default.php"
   },
   "capabilities": [
-    "file a tax return",
-    "find a deduction",
-    "estimate a refund",
-    "answer tax questions",
-    "schedule c and all business forms included",
-    "track all property-related expenses",
-    "use state returns only",
-    "use free federal tax filing",
-    "use irs authorized e-file privacy settings 100",
-    "use free federal what you",
-    "use crypto self-employed rental property retirement income deduct",
-    "use federal free edition free federal tax filing"
+    "start a tax return",
+    "file a personal tax return",
+    "find freelance deductions",
+    "organize w2 and 1099 income",
+    "estimate a quarterly tax payment",
+    "efile a finished return",
+    "sort deductions into the return",
+    "prepare records for a tax filing"
+  ],
+  "searchPhrases": [
+    "start a tax return",
+    "help me start a tax return",
+    "can you start a tax return",
+    "file a personal tax return",
+    "help me file a personal tax return",
+    "can you file a personal tax return",
+    "find freelance deductions",
+    "help me find freelance deductions",
+    "can you find freelance deductions",
+    "organize w2 and 1099 income",
+    "help me organize w2 and 1099 income",
+    "can you organize w2 and 1099 income",
+    "file my 1040",
+    "quarterly estimated taxes",
+    "where do these deductions go"
   ]
 }

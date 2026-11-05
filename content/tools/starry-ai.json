@@ -62,17 +62,27 @@
     "finalUrl": "https://starryai.com/"
   },
   "capabilities": [
-    "generate an image from a prompt",
-    "edit an image",
-    "remove a background",
-    "create art from text",
-    "use ator the easiest way to generate ai images",
-    "use ai photo generator",
-    "use ai images without watermarks",
-    "use full ownership once you create images with starryai",
-    "use commercial rights 30 second sign up 4",
-    "use ai editor effortlessly turn words into high-quality visuals",
-    "use xafurus app store user i",
-    "use i use it quite a bit when i"
+    "remove the background from a product photo",
+    "make an image from a text prompt",
+    "upscale a blurry picture",
+    "put text inside an image",
+    "generate a product scene",
+    "export a transparent png",
+    "edit an image with a prompt",
+    "vary a picture in a new style"
+  ],
+  "searchPhrases": [
+    "remove the background from a product photo",
+    "help me remove the background from a product photo",
+    "can you remove the background from a product photo",
+    "make an image from a text prompt",
+    "help me make an image from a text prompt",
+    "can you make an image from a text prompt",
+    "upscale a blurry picture",
+    "help me upscale a blurry picture",
+    "can you upscale a blurry picture",
+    "put text inside an image",
+    "help me put text inside an image",
+    "can you put text inside an image"
   ]
 }

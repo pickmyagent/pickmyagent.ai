@@ -68,13 +68,27 @@
     "listing-videos": "Trims listing clips, adds captions, and can add music."
   },
   "capabilities": [
-    "edit a listing photo",
-    "make a listing video from photos",
-    "work from listing video started from a real estate template",
-    "work from adding photos, captions, and music in one editor",
-    "work from real estate video templates and a video editor for listing clips. free to start. paid plans are on their site",
-    "work from canva's real estate pages say you can start a listing video or walk-through from a template and add music",
-    "work from canva's real estate video gallery says you can start from a listing template and customize it",
-    "edit the listing photo"
+    "generate a song from a prompt",
+    "make a royalty free background track",
+    "separate a vocal stem",
+    "master a mix",
+    "make a beat for a video",
+    "compose a short soundtrack",
+    "extend a musical idea",
+    "export stems from a song"
+  ],
+  "searchPhrases": [
+    "generate a song from a prompt",
+    "help me generate a song from a prompt",
+    "can you generate a song from a prompt",
+    "make a royalty free background track",
+    "help me make a royalty free background track",
+    "can you make a royalty free background track",
+    "separate a vocal stem",
+    "help me separate a vocal stem",
+    "can you separate a vocal stem",
+    "master a mix",
+    "help me master a mix",
+    "can you master a mix"
   ]
 }

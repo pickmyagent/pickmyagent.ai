@@ -62,12 +62,26 @@
     "finalUrl": "https://www.gorgias.com/"
   },
   "capabilities": [
-    "answer an ecommerce support ticket",
-    "automate a shopify reply",
-    "automate support with ai agent, helpdesk integrated to a stack, chat, faq",
-    "use the conversational ai platform for ecommerce",
-    "use shopify brands the conversational ai platform for ecommerce",
-    "use new ai agent on channels",
-    "use shopify brands"
+    "answer a support ticket",
+    "check an order status",
+    "deflect a refund question",
+    "answer from a help center",
+    "draft a reply to an angry customer",
+    "apply a support macro",
+    "route a ticket to the right queue",
+    "cite the policy in a reply"
+  ],
+  "searchPhrases": [
+    "answer a support ticket",
+    "help me answer a support ticket",
+    "can you answer a support ticket",
+    "check an order status",
+    "help me check an order status",
+    "can you check an order status",
+    "deflect a refund question",
+    "help me deflect a refund question",
+    "can you deflect a refund question",
+    "answer from a help center",
+    "can you answer from a help center"
   ]
 }

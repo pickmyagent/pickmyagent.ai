@@ -62,16 +62,27 @@
     "finalUrl": "https://equals.com/"
   },
   "capabilities": [
-    "analyze data in a spreadsheet",
-    "connect live data",
-    "build a chart",
-    "query a warehouse",
-    "share an analysis",
-    "build expert workbooks, trust every answer, and deploy them across a company",
-    "build expert workbooks, trust every answer,",
-    "build once, iterate for years",
-    "write a message\u2026 opus 5 high 2",
-    "build understand a pipeline, arr, engagement, and more",
-    "build understand a pipeline, arr, engagement,"
+    "ask a question in a spreadsheet cell",
+    "explain a spreadsheet formula",
+    "clean a column of values",
+    "chart a range of cells",
+    "pivot a table",
+    "forecast a column of numbers",
+    "fill a sheet from a prompt",
+    "check a formula that looks wrong"
+  ],
+  "searchPhrases": [
+    "ask a question in a spreadsheet cell",
+    "help me ask a question in a spreadsheet cell",
+    "can you ask a question in a spreadsheet cell",
+    "explain a spreadsheet formula",
+    "help me explain a spreadsheet formula",
+    "can you explain a spreadsheet formula",
+    "clean a column of values",
+    "help me clean a column of values",
+    "can you clean a column of values",
+    "chart a range of cells",
+    "help me chart a range of cells",
+    "can you chart a range of cells"
   ]
 }

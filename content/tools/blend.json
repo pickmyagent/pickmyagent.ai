@@ -62,10 +62,27 @@
     "finalUrl": "https://blend.com/"
   },
   "capabilities": [
-    "take a digital mortgage application",
-    "move a loan through origination",
-    "offer a consumer banking workflow",
-    "track a mortgage file",
-    "capture new business opportunities"
+    "read a bank statement for a loan file",
+    "compare loan scenarios for a borrower",
+    "draft a mortgage presentation",
+    "check whether a guideline allows the dti",
+    "start a digital mortgage application",
+    "flag a suspicious document in a file",
+    "list documents still missing",
+    "summarize a loan scenario"
+  ],
+  "searchPhrases": [
+    "read a bank statement for a loan file",
+    "help me read a bank statement for a loan file",
+    "can you read a bank statement for a loan file",
+    "compare loan scenarios for a borrower",
+    "help me compare loan scenarios for a borrower",
+    "can you compare loan scenarios for a borrower",
+    "draft a mortgage presentation",
+    "help me draft a mortgage presentation",
+    "can you draft a mortgage presentation",
+    "check whether a guideline allows the dti",
+    "help me check whether a guideline allows the dti",
+    "can you check whether a guideline allows the dti"
   ]
 }

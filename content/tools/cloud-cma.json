@@ -68,17 +68,31 @@
     "market-reports": "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity."
   },
   "capabilities": [
-    "pull comparable sales for a home",
-    "build a cma from comparable sales",
-    "build a cma report from mls comps and neighborhood stats",
-    "build a cma report from mls comps",
-    "build neighborhood stats",
-    "use homebeat, which sends homeowners an automated update on their home's value and neighborhood activity",
-    "use which sends homeowners an automated update on their home's value",
-    "use neighborhood activity",
-    "build a branded cma from mls comps and neighborhood stats, and a 14-day trial is available",
-    "build a branded cma from mls comps",
-    "build a 14-day trial is available",
-    "work from branded cma built from mls comps and neighborhood stats"
+    "find land for sale",
+    "check zoning on a vacant lot",
+    "skip trace a property owner",
+    "pull comps for a house",
+    "build a cma from recent sales",
+    "write an mls listing description",
+    "estimate a home value",
+    "find fsbo leads nearby"
+  ],
+  "searchPhrases": [
+    "find land for sale",
+    "help me find land for sale",
+    "can you find land for sale",
+    "check zoning on a vacant lot",
+    "help me check zoning on a vacant lot",
+    "can you check zoning on a vacant lot",
+    "skip trace a property owner",
+    "help me skip trace a property owner",
+    "can you skip trace a property owner",
+    "pull comps for a house",
+    "help me pull comps for a house",
+    "can you pull comps for a house",
+    "home value estimate",
+    "off-market houses",
+    "schedule a showing",
+    "listing photos need virtual staging"
   ]
 }

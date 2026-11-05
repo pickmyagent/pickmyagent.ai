@@ -83,16 +83,27 @@
     "research-rag": "Stores memory an agent can read later, and we imported the Python package locally."
   },
   "capabilities": [
-    "store memory for an agent",
-    "add persistent memory to an agent",
-    "install an open-source memory library",
-    "keep agent memory in a cloud plan",
-    "store memory an agent can read later",
-    "work from adding persistent memory to an agent you already run",
-    "work from python projects that can install the open-source library",
-    "work from memory layer for agents. open-source, and you can install it yourself",
-    "work from 2.2.1 is the open-source library, and the cloud plan includes 10,000 add requests and 1,000 retrieval requests per month",
-    "work from stores memory for agents",
-    "store memory for the agent"
+    "search the web for a question",
+    "crawl a site into an index",
+    "retrieve passages for an answer",
+    "ground an answer in sources",
+    "index documents for search",
+    "query a vector store",
+    "extract text from a page",
+    "rank sources for a question"
+  ],
+  "searchPhrases": [
+    "search the web for a question",
+    "help me search the web for a question",
+    "can you search the web for a question",
+    "crawl a site into an index",
+    "help me crawl a site into an index",
+    "can you crawl a site into an index",
+    "retrieve passages for an answer",
+    "help me retrieve passages for an answer",
+    "can you retrieve passages for an answer",
+    "ground an answer in sources",
+    "help me ground an answer in sources",
+    "can you ground an answer in sources"
   ]
 }

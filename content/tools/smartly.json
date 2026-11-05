@@ -62,14 +62,29 @@
     "finalUrl": "https://www.smartly.io/"
   },
   "capabilities": [
-    "produce ad variations at scale",
-    "launch ads across channels",
-    "optimize creative performance",
-    "automate a campaign",
-    "report on ad results",
-    "make better decisions faster",
-    "optimize media across channels with ai-powered automation that improves efficiency",
-    "optimize creative for every major social platform",
-    "optimize video ads with ai-powered creative templates"
+    "generate a facebook ad creative",
+    "make a ugc style video ad",
+    "write google ads variations",
+    "score an ad before launch",
+    "draft meta ads creative",
+    "write ppc headlines",
+    "produce several ad variants",
+    "test which ad creative is clearer"
+  ],
+  "searchPhrases": [
+    "generate a facebook ad creative",
+    "help me generate a facebook ad creative",
+    "can you generate a facebook ad creative",
+    "make a ugc style video ad",
+    "help me make a ugc style video ad",
+    "can you make a ugc style video ad",
+    "write google ads variations",
+    "help me write google ads variations",
+    "can you write google ads variations",
+    "score an ad before launch",
+    "help me score an ad before launch",
+    "can you score an ad before launch",
+    "which ad will perform",
+    "ugc style video ad"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.assemblyai.com/"
   },
   "capabilities": [
-    "transcribe audio",
-    "convert text to speech",
-    "build voice into any product, on any stack",
-    "transcribe pre-recorded speech-to-text api realtime speech-to-text api sync speech-to-text api understand speech understanding api guardrails",
-    "use with assemblyai assemblyai",
-    "use infrastructure built to run them",
-    "use ranked first by independent benchmarks the infrastructure tha",
-    "use text-to-speech for voice agents",
-    "build voice into any product",
-    "use build voice into any product",
-    "use pre-recorded speech-to-text api realtime speech-to-text api s",
-    "use speech-to-text api understand speech understanding api guardr"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

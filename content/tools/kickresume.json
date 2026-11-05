@@ -67,14 +67,27 @@
     "write-resume": "Writes resume bullets from a job title and can score the resume."
   },
   "capabilities": [
-    "draft resume bullets for a role",
-    "write resume bullets from a job title and can score the resume",
-    "write resume bullets from a job title",
-    "write can score the resume",
-    "draft resume bullets from a job title",
-    "work from drafting resume bullets from a job title",
-    "work from scoring a resume and tailoring it to a posting",
-    "work from resume builder whose ai writes bullets from a job title. free to try. paid plans are on their site",
-    "draft resume bullets for the role"
+    "source candidates for an opening",
+    "screen resumes against a role",
+    "write an unbiased job post",
+    "schedule candidate interviews",
+    "track applicants through stages",
+    "summarize an interview",
+    "compare candidates on one list",
+    "draft outreach to a prospect"
+  ],
+  "searchPhrases": [
+    "source candidates for an opening",
+    "help me source candidates for an opening",
+    "can you source candidates for an opening",
+    "screen resumes against a role",
+    "help me screen resumes against a role",
+    "can you screen resumes against a role",
+    "write an unbiased job post",
+    "help me write an unbiased job post",
+    "can you write an unbiased job post",
+    "schedule candidate interviews",
+    "help me schedule candidate interviews",
+    "can you schedule candidate interviews"
   ]
 }

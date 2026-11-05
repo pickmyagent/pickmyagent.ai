@@ -5,6 +5,7 @@ import { matchTagsForConcept } from "../lib/search.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
+import { copyQualityProblems } from "../lib/capability-quality.ts";
 import { NEUTRAL_LEAD } from "../lib/header-grammar.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
 import { buildHeldOut, buildHomeHeldOut, buildOtherHeldOut, buildParaphrases, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
@@ -536,6 +537,8 @@ export function qaProblems(catalog: Catalog): string[] {
       if (caps.length > 0) problems.push(`${item.query}: mid-sentence capital ${caps.join(", ")} in "${text}"`);
       const grammar = grammarProblems(text, text === header ? "header" : "intro", item.query);
       if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in "${text}"`);
+      const quality = copyQualityProblems(text);
+      if (quality.length > 0) problems.push(`${item.query}: ${quality.join("; ")} in "${text}"`);
     }
     const whys = ranked.tools.map((tool) => tool.whyItHelps);
     if (new Set(whys).size !== whys.length) problems.push(`${item.query}: duplicate why-line`);

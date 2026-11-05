@@ -62,15 +62,27 @@
     "finalUrl": "https://www.sunsama.com/"
   },
   "capabilities": [
-    "plan a daily schedule",
-    "pull tasks onto a calendar",
-    "shutdown a workday with a review",
-    "timebox tasks",
-    "focus on a realistic plan",
-    "make work-life balance a reality the only task manager, calendar, and daily planner for modern professionals",
-    "make work-life balance a reality the only task manager, calendar,",
-    "organize it work through a day stay focused",
-    "plan a realistic day that fits both",
-    "track weekly goals to focus on what truly matters pomodoro timer use pomodoro timers to maintain flow"
+    "share a scheduling link",
+    "protect focus time on a calendar",
+    "book a meeting without email ping pong",
+    "timeblock the next day",
+    "reschedule a flexible meeting",
+    "show open availability",
+    "hold a buffer between calls",
+    "find a time the group can meet"
+  ],
+  "searchPhrases": [
+    "share a scheduling link",
+    "help me share a scheduling link",
+    "can you share a scheduling link",
+    "protect focus time on a calendar",
+    "help me protect focus time on a calendar",
+    "can you protect focus time on a calendar",
+    "book a meeting without email ping pong",
+    "help me book a meeting without email ping pong",
+    "can you book a meeting without email ping pong",
+    "timeblock the next day",
+    "help me timeblock the next day",
+    "can you timeblock the next day"
   ]
 }

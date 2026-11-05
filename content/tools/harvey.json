@@ -62,10 +62,27 @@
     "finalUrl": "https://www.harvey.ai/"
   },
   "capabilities": [
-    "research a legal question",
-    "review a contract",
-    "analyze a set of documents",
-    "assist a lawyer with a brief",
-    "review legal work with agents"
+    "redline an nda",
+    "review a vendor contract",
+    "draft a demand letter",
+    "extract clauses from a lease",
+    "research case law on an issue",
+    "check a contract against a playbook",
+    "summarize an agreement",
+    "find risky terms in an msa"
+  ],
+  "searchPhrases": [
+    "redline an nda",
+    "help me redline an nda",
+    "can you redline an nda",
+    "review a vendor contract",
+    "help me review a vendor contract",
+    "can you review a vendor contract",
+    "draft a demand letter",
+    "help me draft a demand letter",
+    "can you draft a demand letter",
+    "extract clauses from a lease",
+    "help me extract clauses from a lease",
+    "can you extract clauses from a lease"
   ]
 }

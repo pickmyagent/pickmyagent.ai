@@ -62,17 +62,27 @@
     "finalUrl": "https://slidesgo.com/"
   },
   "capabilities": [
-    "download a presentation template",
-    "edit a template in powerpoint",
-    "use free google slides themes and powerpoint templates",
-    "use education technology history slidesclass free google slides t",
-    "use powerpoint templates",
-    "use explore all ai tools templates collections presentation trend",
-    "use presentations that suit any project slidesclass monthly drops",
-    "use infographics templates for turning data and information into",
-    "use by industry business technology law sport architecture fashio",
-    "use money marketing newsletter campaign instagram social media me",
-    "use science art math biology chemistry geography psychology liter",
-    "use teacher toolkit ready-to-edit educational materials explore a"
+    "build a pitch deck from an outline",
+    "turn a doc into slides",
+    "make google slides from a prompt",
+    "write speaker notes for a deck",
+    "draft a presentation about quarterly numbers",
+    "redraw a slide for clarity",
+    "export a finished deck",
+    "shorten a slide to one idea"
+  ],
+  "searchPhrases": [
+    "build a pitch deck from an outline",
+    "help me build a pitch deck from an outline",
+    "can you build a pitch deck from an outline",
+    "turn a doc into slides",
+    "help me turn a doc into slides",
+    "can you turn a doc into slides",
+    "make google slides from a prompt",
+    "help me make google slides from a prompt",
+    "can you make google slides from a prompt",
+    "write speaker notes for a deck",
+    "help me write speaker notes for a deck",
+    "can you write speaker notes for a deck"
   ]
 }

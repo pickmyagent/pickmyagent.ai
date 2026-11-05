@@ -68,16 +68,27 @@
   },
   "id": "homestyler",
   "capabilities": [
-    "render a floor plan at 1k",
-    "render a layout at higher resolution",
-    "check a floor plan before you build",
     "turn a floor plan into a render",
-    "build a 3d floor plan in the browser and renders it",
-    "build a 3d floor plan in the browser",
-    "build renders it",
-    "work from floor plan you draw in the browser and then render",
-    "work from free 1k render while you check a layout",
-    "work from browser 3d floor planner with rendering. pro+ starts at a month",
-    "render the floor plan at 1k"
+    "make a picture from a blueprint",
+    "render an elevation of a house",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan"
+  ],
+  "searchPhrases": [
+    "turn a floor plan into a render",
+    "help me turn a floor plan into a render",
+    "can you turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "render an elevation of a house",
+    "help me render an elevation of a house",
+    "can you render an elevation of a house",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout"
   ]
 }

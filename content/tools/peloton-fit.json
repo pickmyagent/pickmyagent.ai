@@ -62,17 +62,27 @@
     "finalUrl": "https://www.onepeloton.com/"
   },
   "capabilities": [
-    "follow a meditation",
-    "take a class",
-    "find one that moves you",
-    "compare bikes peloton apparel look and train a best with instructor-approved styles, performance fabrics, and exclusive collabs",
-    "compare bikes peloton apparel look",
-    "use discover peloton",
-    "use from cardio to strength",
-    "use innovative exercise equipment and personalized workout plans",
-    "use meet the next generation of treads run",
-    "use bike row+ three new treads",
-    "use endless ways to move",
-    "use peloton iq peloton"
+    "build a strength workout",
+    "log a meal you ate",
+    "plan runs for a half marathon",
+    "review last night of sleep",
+    "guide a short meditation",
+    "track daily calories",
+    "adjust a training week",
+    "list a simple mobility routine"
+  ],
+  "searchPhrases": [
+    "build a strength workout",
+    "help me build a strength workout",
+    "can you build a strength workout",
+    "log a meal you ate",
+    "help me log a meal you ate",
+    "can you log a meal you ate",
+    "plan runs for a half marathon",
+    "help me plan runs for a half marathon",
+    "can you plan runs for a half marathon",
+    "review last night of sleep",
+    "help me review last night of sleep",
+    "can you review last night of sleep"
   ]
 }

@@ -62,17 +62,26 @@
     "finalUrl": "https://customgpt.ai/"
   },
   "capabilities": [
-    "build a chatbot from a content",
-    "answer questions from a sitemap",
-    "embed a gpt on a site",
-    "cite sources in an answer",
-    "use deliver exceptional customer experiences and maximize employe",
-    "use ai assistants for the enterprise",
-    "build custom ai solutions faster with zero coding",
-    "use build custom ai solutions faster with zero coding",
-    "use robust and comprehensive data integrations easy deployment to",
-    "use thousands of businesses rely on customgpt",
-    "use standard premium customgpt",
-    "use membership associations"
+    "answer a support ticket",
+    "check an order status",
+    "deflect a refund question",
+    "answer from a help center",
+    "draft a reply to an angry customer",
+    "apply a support macro",
+    "route a ticket to the right queue",
+    "cite the policy in a reply"
+  ],
+  "searchPhrases": [
+    "answer a support ticket",
+    "help me answer a support ticket",
+    "can you answer a support ticket",
+    "check an order status",
+    "help me check an order status",
+    "can you check an order status",
+    "deflect a refund question",
+    "help me deflect a refund question",
+    "can you deflect a refund question",
+    "answer from a help center",
+    "can you answer from a help center"
   ]
 }

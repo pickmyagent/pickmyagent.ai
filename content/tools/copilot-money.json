@@ -62,17 +62,27 @@
     "finalUrl": "https://www.copilot.money/"
   },
   "capabilities": [
-    "track spending against a budget",
-    "see recurring subscriptions",
-    "track spending, budgets, investments & net worth all in one beautifully designed place",
-    "use track spending",
-    "use copilot money",
-    "use no more messy transactions",
-    "use takes care of the details",
-    "use spots trends",
-    "find what you",
-    "use find what you",
-    "use more features amazon",
-    "use apple card"
+    "track a brokerage portfolio",
+    "rebalance a retirement account",
+    "chart a stock ticker",
+    "read an earnings transcript",
+    "screen stocks against a rule",
+    "compare an etf on cost",
+    "see net worth across accounts",
+    "budget monthly spending"
+  ],
+  "searchPhrases": [
+    "track a brokerage portfolio",
+    "help me track a brokerage portfolio",
+    "can you track a brokerage portfolio",
+    "rebalance a retirement account",
+    "help me rebalance a retirement account",
+    "can you rebalance a retirement account",
+    "chart a stock ticker",
+    "help me chart a stock ticker",
+    "can you chart a stock ticker",
+    "read an earnings transcript",
+    "help me read an earnings transcript",
+    "can you read an earnings transcript"
   ]
 }

@@ -68,13 +68,27 @@
   },
   "id": "renderahouse",
   "capabilities": [
-    "turn a floor plan into a render",
-    "turn a sketch, a floor plan, or a photo into a photorealistic render",
-    "turn a photo into a photorealistic render",
-    "turn a sketch, a floor plan, a photo, or a 3d model into a photorealistic render",
-    "turn a 3d model into a photorealistic render",
-    "work from sketch or floor plan that should become a photoreal render",
-    "work from 3d model you orbit and then render from a saved view",
-    "turn the floor plan into a render"
+    "make a picture from a blueprint",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan",
+    "edit a creative asset",
+    "generate a picture from a prompt"
+  ],
+  "searchPhrases": [
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout",
+    "build a massing study",
+    "help me build a massing study",
+    "can you build a massing study",
+    "generate a floor plan from a brief",
+    "help me generate a floor plan from a brief",
+    "can you generate a floor plan from a brief"
   ]
 }

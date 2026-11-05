@@ -66,13 +66,25 @@
   "assistantName": "ChatGPT",
   "assistantKind": "draft",
   "capabilities": [
-    "research comparing, and drafting in a general chat",
-    "research drafting in a general chat",
-    "work from researching, comparing, and drafting in a general chat",
-    "work from general-purpose chat assistant from openai, with a free plan and paid go and plus plans",
-    "work from openai lists a free chatgpt plan, with go at per month and plus at per month",
-    "research comparing, and drafting in the general chat",
-    "research drafting in the general chat",
-    "work from researching, comparing, and drafting in the general chat"
+    "draft a first version of a note",
+    "outline steps for a task",
+    "summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "list options for a decision",
+    "turn rough notes into a checklist"
+  ],
+  "searchPhrases": [
+    "draft a first version of a note",
+    "help me draft a first version of a note",
+    "can you draft a first version of a note",
+    "outline steps for a task",
+    "help me outline steps for a task",
+    "can you outline steps for a task",
+    "summarize a long passage",
+    "help me summarize a long passage",
+    "can you summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "help me rewrite a paragraph for clarity",
+    "can you rewrite a paragraph for clarity"
   ]
 }

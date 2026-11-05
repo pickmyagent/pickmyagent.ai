@@ -62,17 +62,27 @@
     "finalUrl": "https://givebutter.com/"
   },
   "capabilities": [
-    "text supporters",
-    "host an event page",
-    "track donors",
-    "manage it all with best-in-class security",
-    "use not another fundraising tool",
-    "use fundraising software for nonprofits",
-    "use the help you need",
-    "use raise funds better",
-    "use givebutter fundraising software for nonprofits",
-    "use givebutter make more possible this giving tuesday",
-    "use get free tools",
-    "use auctions widgets payment processing givebutter magic givebutt"
+    "draft a grant proposal",
+    "find grants for a food pantry",
+    "build a donation form for a campaign",
+    "email donors about a campaign",
+    "track grant deadlines",
+    "write a grant narrative",
+    "summarize a funder guideline",
+    "thank a donor"
+  ],
+  "searchPhrases": [
+    "draft a grant proposal",
+    "help me draft a grant proposal",
+    "can you draft a grant proposal",
+    "find grants for a food pantry",
+    "help me find grants for a food pantry",
+    "can you find grants for a food pantry",
+    "build a donation form for a campaign",
+    "help me build a donation form for a campaign",
+    "can you build a donation form for a campaign",
+    "email donors about a campaign",
+    "help me email donors about a campaign",
+    "can you email donors about a campaign"
   ]
 }

@@ -62,17 +62,30 @@
     "finalUrl": "https://sentry.io/welcome/"
   },
   "capabilities": [
-    "see an application error",
-    "group issues by stack trace",
-    "replay a user session",
-    "monitor in five lines drop in the sdk",
-    "visualize the spend",
-    "use application performance monitoring for developers & software",
-    "use get started at sentry",
-    "use application performance monitoring & error tracking software",
-    "use sentry solutions products products ai debugging ai debugging",
-    "use integrations integrations learn learn support support hang ou",
-    "use cron monitoring uptime monitoring labs new integrations githu",
-    "use reporting ai observability application performance monitoring"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

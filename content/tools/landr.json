@@ -62,12 +62,30 @@
     "finalUrl": "https://www.landr.com/"
   },
   "capabilities": [
-    "master a track with ai",
-    "distribute a release",
-    "create a pack of sounds",
-    "learn mixing feedback on a song",
-    "prepare audio for streaming",
-    "turn inspiration into music with a large royalty free library",
-    "monitor a progress with quizzes"
+    "generate a song from a prompt",
+    "make a royalty free background track",
+    "separate a vocal stem",
+    "master a mix",
+    "make a beat for a video",
+    "compose a short soundtrack",
+    "extend a musical idea",
+    "export stems from a song"
+  ],
+  "searchPhrases": [
+    "generate a song from a prompt",
+    "help me generate a song from a prompt",
+    "can you generate a song from a prompt",
+    "make a royalty free background track",
+    "help me make a royalty free background track",
+    "can you make a royalty free background track",
+    "separate a vocal stem",
+    "help me separate a vocal stem",
+    "can you separate a vocal stem",
+    "master a mix",
+    "help me master a mix",
+    "can you master a mix",
+    "master this mix",
+    "beat for a youtube video",
+    "lofi beat about rainy tokyo"
   ]
 }

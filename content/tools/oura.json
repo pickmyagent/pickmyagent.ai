@@ -62,10 +62,27 @@
     "finalUrl": "https://ouraring.com/"
   },
   "capabilities": [
-    "track sleep with a ring",
-    "see readiness each morning",
-    "monitor activity",
-    "review heart rate trends",
-    "use from oura email address we care about protecting a data"
+    "build a strength workout",
+    "log a meal you ate",
+    "plan runs for a half marathon",
+    "review last night of sleep",
+    "guide a short meditation",
+    "track daily calories",
+    "adjust a training week",
+    "list a simple mobility routine"
+  ],
+  "searchPhrases": [
+    "build a strength workout",
+    "help me build a strength workout",
+    "can you build a strength workout",
+    "log a meal you ate",
+    "help me log a meal you ate",
+    "can you log a meal you ate",
+    "plan runs for a half marathon",
+    "help me plan runs for a half marathon",
+    "can you plan runs for a half marathon",
+    "review last night of sleep",
+    "help me review last night of sleep",
+    "can you review last night of sleep"
   ]
 }

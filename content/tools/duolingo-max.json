@@ -65,13 +65,26 @@
     "learn-language": "Practices a language with the GPT-4 features Duolingo added for Max."
   },
   "capabilities": [
-    "practice a language practice in the max experience duolingo introduced in that post",
-    "work from language practice in the max experience duolingo introduced in that post",
-    "work from language practice. a 2023 duolingo post introduces max with gpt-4",
-    "work from duolingo's march 14, 2023 post introduces max as a learning experience powered by gpt-4",
-    "work from duolingo's official post dated march 14, 2023 introduces duolingo max as a learning experience powered by gpt-4",
-    "practice the language practice in the max experience duolingo introduced in that post",
-    "practice a language practice in a max experience duolingo introduced in that post",
-    "work from language practice in a max experience duolingo introduced in that post"
+    "quiz a student on a chapter",
+    "make practice problems",
+    "build a study plan",
+    "turn notes into flashcards",
+    "walk through a worked example",
+    "track what a student has mastered",
+    "give feedback on a practice answer"
+  ],
+  "searchPhrases": [
+    "quiz a student on a chapter",
+    "help me quiz a student on a chapter",
+    "can you quiz a student on a chapter",
+    "make practice problems",
+    "help me make practice problems",
+    "can you make practice problems",
+    "build a study plan",
+    "help me build a study plan",
+    "can you build a study plan",
+    "turn notes into flashcards",
+    "help me turn notes into flashcards",
+    "can you turn notes into flashcards"
   ]
 }

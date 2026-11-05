@@ -66,13 +66,26 @@
     "customer-support": "Describes AI agents aimed at customer service and customer experiences."
   },
   "capabilities": [
-    "build a customer service agent",
-    "use ai agents aimed at customer service and customer experiences",
-    "use ai agents aimed at customer service",
-    "work from brand that wants a customer-service agent built with sierra",
-    "work from ai agents for customer service and customer experiences",
-    "work from sierra's site says it helps companies build ai agents for customer experiences and customer service, including voice",
-    "build the customer service agent",
-    "work from brand that wants the customer-service agent built with sierra"
+    "answer a support ticket",
+    "check an order status",
+    "deflect a refund question",
+    "answer from a help center",
+    "draft a reply to an angry customer",
+    "apply a support macro",
+    "route a ticket to the right queue",
+    "cite the policy in a reply"
+  ],
+  "searchPhrases": [
+    "answer a support ticket",
+    "help me answer a support ticket",
+    "can you answer a support ticket",
+    "check an order status",
+    "help me check an order status",
+    "can you check an order status",
+    "deflect a refund question",
+    "help me deflect a refund question",
+    "can you deflect a refund question",
+    "answer from a help center",
+    "can you answer from a help center"
   ]
 }

@@ -62,11 +62,27 @@
     "finalUrl": "https://spline.design/"
   },
   "capabilities": [
-    "design a 3d scene in the browser",
-    "animate a 3d object",
-    "generate 3d from a prompt",
-    "export a 3d scene to the web",
-    "make a own editor everything you need to build in 3d model primitives, booleans, sculpting and 3d generation",
-    "make a own editor everything you need to build in 3d model primitives, booleans, sculpting"
+    "make a 3d model from text",
+    "turn an image into a 3d model",
+    "scan a room into a model",
+    "make a skybox from a prompt",
+    "build a game ready mesh",
+    "export a glb file",
+    "retopologize a scan",
+    "preview a model in the browser"
+  ],
+  "searchPhrases": [
+    "make a 3d model from text",
+    "help me make a 3d model from text",
+    "can you make a 3d model from text",
+    "turn an image into a 3d model",
+    "help me turn an image into a 3d model",
+    "can you turn an image into a 3d model",
+    "scan a room into a model",
+    "help me scan a room into a model",
+    "can you scan a room into a model",
+    "make a skybox from a prompt",
+    "help me make a skybox from a prompt",
+    "can you make a skybox from a prompt"
   ]
 }

@@ -70,13 +70,27 @@
     "run-a-business": "Sends email campaigns to the customers a small business already has."
   },
   "capabilities": [
-    "send email campaigns to the customers a small business already has",
-    "send email campaigns to a small list",
-    "work from sending email campaigns to a small list",
-    "work from email campaigns. the free plan includes 250 contacts and 500 sends a month",
-    "work from mailchimp's help center says the free plan includes up to 250 contacts and 500 sends a month",
-    "work from mailchimp's help center says the free marketing plan includes up to 250 contacts and 500 sends a month, with a daily send limit of 250",
-    "send email campaigns to the customers the small business already has",
-    "send email campaigns to a customers a small business already has"
+    "write a newsletter",
+    "build an abandoned cart email",
+    "triage an inbox",
+    "write a drip sequence for subscribers",
+    "draft subject lines for a launch",
+    "snooze an email thread",
+    "send a behavior triggered email",
+    "draft a reply to a thread"
+  ],
+  "searchPhrases": [
+    "write a newsletter",
+    "help me write a newsletter",
+    "can you write a newsletter",
+    "build an abandoned cart email",
+    "help me build an abandoned cart email",
+    "can you build an abandoned cart email",
+    "triage an inbox",
+    "help me triage an inbox",
+    "can you triage an inbox",
+    "write a drip sequence for subscribers",
+    "help me write a drip sequence for subscribers",
+    "can you write a drip sequence for subscribers"
   ]
 }

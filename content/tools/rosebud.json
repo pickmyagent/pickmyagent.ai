@@ -62,15 +62,27 @@
     "finalUrl": "https://rosebud.ai/"
   },
   "capabilities": [
-    "generate a game from a prompt",
-    "iterate on a game idea",
-    "create playable games with ai prompts",
-    "use create playable games with ai prompts",
-    "use no coding required",
-    "use rosebud ai game maker",
-    "use email products",
-    "use free online game maker blog",
-    "use games company",
-    "use ethics social media"
+    "make an npc that remembers the player",
+    "generate game art in a house style",
+    "run an ai game master",
+    "prototype a game from a prompt",
+    "set dress a game level",
+    "write branching dialogue",
+    "export a sprite sheet",
+    "keep memory of what the player said"
+  ],
+  "searchPhrases": [
+    "make an npc that remembers the player",
+    "help me make an npc that remembers the player",
+    "can you make an npc that remembers the player",
+    "generate game art in a house style",
+    "help me generate game art in a house style",
+    "can you generate game art in a house style",
+    "run an ai game master",
+    "help me run an ai game master",
+    "can you run an ai game master",
+    "prototype a game from a prompt",
+    "help me prototype a game from a prompt",
+    "can you prototype a game from a prompt"
   ]
 }

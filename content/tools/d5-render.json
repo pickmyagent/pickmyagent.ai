@@ -68,17 +68,27 @@
   },
   "id": "d5-render",
   "capabilities": [
-    "render a live 3d model",
-    "try ai visualization on a model",
-    "turn a blueprint into a render",
-    "make an image from a blueprint",
-    "render a live 3d model and includes ai image tools",
-    "render includes ai image tools",
-    "render a live 3d model and includes ai image tools, with a free community plan for non-commercial work",
-    "render with a free community plan for non-commercial work",
-    "work from 3d model you want to render in real time",
-    "work from architectural view that already exists in a modeling app",
-    "work from real-time renderer with ai features. the community plan is free for non-commercial work",
-    "work from renders a live 3d model and includes ai image tools, with a free community plan for non-commercial work"
+    "make a picture from a blueprint",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan",
+    "edit a creative asset",
+    "generate a picture from a prompt"
+  ],
+  "searchPhrases": [
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout",
+    "build a massing study",
+    "help me build a massing study",
+    "can you build a massing study",
+    "generate a floor plan from a brief",
+    "help me generate a floor plan from a brief",
+    "can you generate a floor plan from a brief"
   ]
 }

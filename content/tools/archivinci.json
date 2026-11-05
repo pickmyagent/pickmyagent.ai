@@ -68,16 +68,26 @@
   "id": "archivinci",
   "capabilities": [
     "turn a floor plan into a render",
-    "render a floor plan and furnishes a 2d plan",
-    "render a floor plan",
-    "render furnishes a 2d plan",
-    "render floor plans, furnishes a 2d floor plan, and can generate a 3d floor plan from an image",
-    "render floor plans",
-    "render furnishes a 2d floor plan",
-    "render can generate a 3d floor plan from an image",
-    "work from 2d floor plan you want furnished and rendered",
-    "work from floor plan, exterior, and masterplan renders in one suite",
-    "work from renders floor plans and furnishes a 2d plan. monthly access is",
-    "work from renders floor plans, furnishes a 2d floor plan, and can generate a 3d floor plan from an image"
+    "make a picture from a blueprint",
+    "render an elevation of a house",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan"
+  ],
+  "searchPhrases": [
+    "turn a floor plan into a render",
+    "help me turn a floor plan into a render",
+    "can you turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "render an elevation of a house",
+    "help me render an elevation of a house",
+    "can you render an elevation of a house",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout"
   ]
 }

@@ -62,17 +62,26 @@
     "finalUrl": "https://www.atomicwork.com/"
   },
   "capabilities": [
-    "answer employee requests with ai",
-    "automate a service request",
-    "chat with employees in slack",
-    "design and deploy ai coworkers that handle work end-to-end, from it operations to enterprise support",
-    "use atomicwork is the ai workforce platform for it",
-    "use itsm & esm that lets enterprises deploy",
-    "use ai coworkers alongside their people",
-    "use ai workforce for enterprise it",
-    "use agentic itsm & esm",
-    "use atomicwork ai workforce for enterprise it delightful employee",
-    "use govern the ai workforce",
-    "use identity and access governance modern cmdb leverage enterpris"
+    "reset a password for a new hire",
+    "open an it help desk ticket",
+    "see which saas apps an employee connected",
+    "deflect a vpn question",
+    "automate a service desk reply",
+    "route a laptop issue",
+    "answer a common it question",
+    "log a ticket and the fix"
+  ],
+  "searchPhrases": [
+    "reset a password for a new hire",
+    "help me reset a password for a new hire",
+    "can you reset a password for a new hire",
+    "open an it help desk ticket",
+    "can you open an it help desk ticket",
+    "see which saas apps an employee connected",
+    "help me see which saas apps an employee connected",
+    "can you see which saas apps an employee connected",
+    "deflect a vpn question",
+    "help me deflect a vpn question",
+    "can you deflect a vpn question"
   ]
 }

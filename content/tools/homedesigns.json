@@ -68,13 +68,27 @@
   },
   "id": "homedesigns",
   "capabilities": [
-    "redesign a room from a photo",
-    "work from room photo that should become an interior redesign",
-    "work from flat floor plan that should become a furnished 3d view",
-    "work from redesigns a room photo and turns a flat floor plan into a 3d view. standard is a month",
-    "work from redesigns a room photo and also turns a flat floor plan into a furnished 3d view",
-    "work from redesigns a photo of a room, an exterior, or a garden, and it also turns a flat floor plan into a furnished 3d view",
-    "redesign the room from a photo",
-    "work from room photo that should become the interior redesign"
+    "restyle a living room photo",
+    "virtually stage an empty room",
+    "show a kitchen in another style",
+    "lay out furniture in a bedroom",
+    "build a mood board for a condo",
+    "redesign a bathroom from a photo",
+    "stage a dining room",
+    "preview a room in a new finish"
+  ],
+  "searchPhrases": [
+    "restyle a living room photo",
+    "help me restyle a living room photo",
+    "can you restyle a living room photo",
+    "virtually stage an empty room",
+    "help me virtually stage an empty room",
+    "can you virtually stage an empty room",
+    "show a kitchen in another style",
+    "help me show a kitchen in another style",
+    "can you show a kitchen in another style",
+    "lay out furniture in a bedroom",
+    "help me lay out furniture in a bedroom",
+    "can you lay out furniture in a bedroom"
   ]
 }

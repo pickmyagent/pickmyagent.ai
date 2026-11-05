@@ -62,15 +62,27 @@
     "finalUrl": "https://hyper3d.ai/"
   },
   "capabilities": [
-    "generate a 3d model from an image",
-    "create a textured mesh from text",
-    "export a model for a game",
-    "control the topology of a mesh",
-    "turn a photo into a 3d asset",
-    "turn them into detailed 3d models in seconds",
-    "turn images, sketches, or illustrations into detailed 3d models with hyper3d rodin",
-    "turn it into a high-quality 3d asset in seconds",
-    "generate a short preview",
-    "manage 3d assets programmatically with hyper3d rodin\u2019s api"
+    "make a 3d model from text",
+    "turn an image into a 3d model",
+    "scan a room into a model",
+    "make a skybox from a prompt",
+    "build a game ready mesh",
+    "export a glb file",
+    "retopologize a scan",
+    "preview a model in the browser"
+  ],
+  "searchPhrases": [
+    "make a 3d model from text",
+    "help me make a 3d model from text",
+    "can you make a 3d model from text",
+    "turn an image into a 3d model",
+    "help me turn an image into a 3d model",
+    "can you turn an image into a 3d model",
+    "scan a room into a model",
+    "help me scan a room into a model",
+    "can you scan a room into a model",
+    "make a skybox from a prompt",
+    "help me make a skybox from a prompt",
+    "can you make a skybox from a prompt"
   ]
 }

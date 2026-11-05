@@ -62,17 +62,27 @@
     "finalUrl": "https://ironcladapp.com/"
   },
   "capabilities": [
-    "manage a contract workflow",
-    "generate a contract from a template",
-    "search a contract repository",
-    "design and deploy any type of contract in minutes",
-    "use instantly surface insights from legal agreements",
-    "use get a custom demo",
-    "use ai contract lifecycle management software ironclad",
-    "use ai contract lifecycle management software",
-    "use custom styling",
-    "use monday 27th july 2026 15",
-    "use mega menus",
-    "use tasty css-moving hamburgers"
+    "redline an nda",
+    "review a vendor contract",
+    "draft a demand letter",
+    "extract clauses from a lease",
+    "research case law on an issue",
+    "check a contract against a playbook",
+    "summarize an agreement",
+    "find risky terms in an msa"
+  ],
+  "searchPhrases": [
+    "redline an nda",
+    "help me redline an nda",
+    "can you redline an nda",
+    "review a vendor contract",
+    "help me review a vendor contract",
+    "can you review a vendor contract",
+    "draft a demand letter",
+    "help me draft a demand letter",
+    "can you draft a demand letter",
+    "extract clauses from a lease",
+    "help me extract clauses from a lease",
+    "can you extract clauses from a lease"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://brilliant.org/"
   },
   "capabilities": [
-    "practice a lesson",
-    "explain a problem",
-    "learn a subject",
-    "help you work through each step",
-    "use visual help",
-    "track a progress and know what to practice next see what you\u2019ve mastered and what still needs work",
-    "track a progress",
-    "use master concepts in algebra",
-    "use meet koji",
-    "use start at the right level",
-    "use from grade 5 to college and beyond foundations",
-    "use covered topics brilliant"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://wisecut.ai/"
   },
   "capabilities": [
-    "generate a video from a prompt",
-    "edit a video",
+    "make a video from a text prompt",
     "turn an image into a video",
-    "export a clip",
-    "turn long videos into ai-edited clips",
-    "track a results",
-    "turn long videos into ai-edited clips | wisecut turn long videos into ai-edited clips",
-    "turn long videos into ai-edited clips | wisecut long videos become ready-to-post clips",
-    "edit what you want, however you prefer",
-    "remove silences and unwanted takes, and customize each segment a way",
-    "create clips edit with wish text editing clean edit customize captions create a thumbnail export",
-    "edit with wish text editing clean edit explore wish 0 3 / finish every detail, ready to share"
+    "add captions to an interview",
+    "cut silences from a clip",
+    "make an avatar video from a script",
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
   ]
 }

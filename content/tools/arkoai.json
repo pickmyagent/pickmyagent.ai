@@ -67,17 +67,27 @@
   },
   "id": "arkoai",
   "capabilities": [
-    "render the active model view or a screenshot you upload",
-    "render the active model view",
-    "render a screenshot you upload",
-    "render the active view in rhino, revit, or sketchup, and the web app accepts a screenshot",
-    "render the active view in rhino",
-    "render the web app accepts a screenshot",
-    "work from model view you want rendered without leaving rhino, revit, or sketchup",
-    "work from screenshot of a model that should become a render",
-    "work from renders a rhino, revit, or sketchup view, or a screenshot. 20 free basic renders",
-    "work from renders the active view in rhino, revit, or sketchup, and the web app accepts a screenshot",
-    "work from renders the active view inside rhino, revit, or sketchup",
-    "render the active model view or the screenshot you upload"
+    "edit a creative asset",
+    "generate a picture from a prompt",
+    "cut a short video",
+    "clean up an audio clip",
+    "export a file for a project",
+    "vary a draft in a new style",
+    "remove a simple background",
+    "add a caption to a clip"
+  ],
+  "searchPhrases": [
+    "edit a creative asset",
+    "help me edit a creative asset",
+    "can you edit a creative asset",
+    "generate a picture from a prompt",
+    "help me generate a picture from a prompt",
+    "can you generate a picture from a prompt",
+    "cut a short video",
+    "help me cut a short video",
+    "can you cut a short video",
+    "clean up an audio clip",
+    "help me clean up an audio clip",
+    "can you clean up an audio clip"
   ]
 }

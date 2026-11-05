@@ -62,17 +62,27 @@
     "finalUrl": "https://lumalabs.ai/app"
   },
   "capabilities": [
-    "generate a video from a text prompt",
+    "make a video from a text prompt",
     "turn an image into a video",
-    "create a cinematic clip",
-    "modify a video with a prompt",
-    "render a short video from a keyframe",
-    "plan generate, iterate, and refine, keeping full context across every stage of creative work",
-    "manage usage in one place",
-    "localize a video into multiple languages translate and localize videos with natural voiceovers and synced visuals across languages",
-    "localize a video into multiple languages translate",
-    "localize videos with natural voiceovers",
-    "visualize academic content turn complex systems into labeled, easy-to-follow moving visualizations",
-    "turn a podcast clip into a video turn podcast audio into engaging video clips with captions, visuals,"
+    "add captions to an interview",
+    "cut silences from a clip",
+    "make an avatar video from a script",
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
   ]
 }

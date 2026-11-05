@@ -62,11 +62,27 @@
     "finalUrl": "https://savvycal.com/"
   },
   "capabilities": [
-    "share a scheduling link that overlays calendars",
-    "book a meeting",
-    "avoid back to back meetings",
-    "collect scheduling preferences",
-    "send a personalized booking page",
-    "collect payment when someone books, so a time is never free by accident"
+    "share a scheduling link",
+    "protect focus time on a calendar",
+    "book a meeting without email ping pong",
+    "timeblock the next day",
+    "reschedule a flexible meeting",
+    "show open availability",
+    "hold a buffer between calls",
+    "find a time the group can meet"
+  ],
+  "searchPhrases": [
+    "share a scheduling link",
+    "help me share a scheduling link",
+    "can you share a scheduling link",
+    "protect focus time on a calendar",
+    "help me protect focus time on a calendar",
+    "can you protect focus time on a calendar",
+    "book a meeting without email ping pong",
+    "help me book a meeting without email ping pong",
+    "can you book a meeting without email ping pong",
+    "timeblock the next day",
+    "help me timeblock the next day",
+    "can you timeblock the next day"
   ]
 }

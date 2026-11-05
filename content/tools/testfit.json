@@ -62,17 +62,27 @@
     "finalUrl": "https://www.testfit.io/"
   },
   "capabilities": [
-    "test a building massing on a site",
-    "generate a feasibility layout",
-    "compare unit mixes",
-    "export a site plan",
-    "evaluate a deal with a configurator",
-    "optimize for the best site layout instantly with testfit's site planning ai to meet both a pro forma and design intent",
-    "optimize for the best site layout instantly with testfit's site planning ai to meet both a pro forma",
-    "build out an entire site with customizable road layout, turning radius and topography data to avoid costly redesigns later",
-    "build out an entire site with customizable road layout, turning radius",
-    "visualize a site plans with 3d context to gain faster approvals",
-    "compare design schemes instantly with real-time deal prototyping to find the best option",
-    "help a clients make decisions on the deal"
+    "turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "render an elevation of a house",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan"
+  ],
+  "searchPhrases": [
+    "turn a floor plan into a render",
+    "help me turn a floor plan into a render",
+    "can you turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "render an elevation of a house",
+    "help me render an elevation of a house",
+    "can you render an elevation of a house",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout"
   ]
 }

@@ -62,10 +62,26 @@
     "finalUrl": "https://www.klarna.com/us/?grs=%2F&grr=empty"
   },
   "capabilities": [
-    "compare prices while you shop",
-    "pay over time",
-    "track a delivery",
-    "shop with a virtual card",
-    "manage everyday payments securely with klarna - online, in store, or with the klarna card"
+    "find a coupon for a checkout",
+    "show price history for an item",
+    "compare products before a purchase",
+    "find a lower price on a product",
+    "check whether a deal is real",
+    "list pros and cons of a product",
+    "track a price drop"
+  ],
+  "searchPhrases": [
+    "find a coupon for a checkout",
+    "help me find a coupon for a checkout",
+    "can you find a coupon for a checkout",
+    "show price history for an item",
+    "help me show price history for an item",
+    "can you show price history for an item",
+    "compare products before a purchase",
+    "help me compare products before a purchase",
+    "can you compare products before a purchase",
+    "find a lower price on a product",
+    "help me find a lower price on a product",
+    "can you find a lower price on a product"
   ]
 }

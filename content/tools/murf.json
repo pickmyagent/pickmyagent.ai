@@ -62,12 +62,27 @@
     "finalUrl": "https://murf.ai/"
   },
   "capabilities": [
-    "create a voiceover from a script",
-    "change the voice in a video",
-    "translate a voiceover",
-    "collaborate on a voice project",
-    "generate speech from text",
-    "generate human-like speech and deploy conversational agents with murf ai",
-    "localize videos instantly into multiple languages while preserving the original voice, meaning,"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

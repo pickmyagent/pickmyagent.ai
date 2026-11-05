@@ -62,17 +62,27 @@
     "finalUrl": "https://www.hunters.security/"
   },
   "capabilities": [
-    "investigate a security alert",
-    "correlate siem data",
-    "automate a threat hunt",
-    "triage an incident",
-    "use ai-driven next-gen siem",
-    "use hunters ai-driven next-gen siem",
-    "use hunters ai-driven next-gen siem automated detection",
-    "use secops teams",
-    "use a siem that works for you",
-    "use hunters next-gen siem recognized by leading analysts streamli",
-    "use hear what hunters",
-    "use next-gen siem"
+    "flag a phishing email",
+    "triage a soc alert",
+    "block a malicious ip",
+    "write a detection rule for a mailbox",
+    "investigate an alert",
+    "summarize a security incident",
+    "check a suspicious link",
+    "draft a response to a reported phish"
+  ],
+  "searchPhrases": [
+    "flag a phishing email",
+    "help me flag a phishing email",
+    "can you flag a phishing email",
+    "triage a soc alert",
+    "help me triage a soc alert",
+    "can you triage a soc alert",
+    "block a malicious ip",
+    "help me block a malicious ip",
+    "can you block a malicious ip",
+    "write a detection rule for a mailbox",
+    "help me write a detection rule for a mailbox",
+    "can you write a detection rule for a mailbox"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.browse.ai/"
   },
   "capabilities": [
-    "automate a browser task",
-    "scrape a page",
-    "click through a workflow",
-    "extract a table",
-    "monitor a page",
-    "turn websites into apis with browse ai",
-    "monitor data from any website with no code - browse ai scrape",
-    "monitor data from any website reliably at scale the #1 ai web scraper",
-    "monitor data from any website with no code - browse ai",
-    "monitor data on the best ai scraping platform",
-    "monitor product data, competitors,",
-    "monitor job listings, candidates,"
+    "fill a form in the browser",
+    "click through a checkout flow",
+    "scrape a page into a sheet",
+    "automate a web workflow",
+    "run a headless browser for an agent",
+    "stop at a login screen",
+    "extract a table from a page",
+    "repeat a browser task"
+  ],
+  "searchPhrases": [
+    "fill a form in the browser",
+    "help me fill a form in the browser",
+    "can you fill a form in the browser",
+    "click through a checkout flow",
+    "help me click through a checkout flow",
+    "can you click through a checkout flow",
+    "scrape a page into a sheet",
+    "help me scrape a page into a sheet",
+    "can you scrape a page into a sheet",
+    "automate a web workflow",
+    "help me automate a web workflow",
+    "can you automate a web workflow"
   ]
 }

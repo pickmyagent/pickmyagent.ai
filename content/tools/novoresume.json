@@ -62,17 +62,27 @@
     "finalUrl": "https://novoresume.com/"
   },
   "capabilities": [
-    "build a resume",
-    "tailor a resume to a job",
-    "write a cover letter",
-    "choose a template",
-    "create a professional resume fast with novor\u00e9sum\u00e9\u2019s free ai-powered builder",
-    "create a professional resume fast with novor",
-    "use create a professional resume fast with novor",
-    "use ai-powered builder",
-    "use free online resume builder",
-    "use ats-friendly resume templates",
-    "use designed to look great and",
-    "use ats-friendly templates"
+    "tailor a resume to a job description",
+    "match resume keywords for an ats",
+    "rewrite resume bullets",
+    "draft a cover letter for a role",
+    "improve a linkedin headline",
+    "score a resume against a posting",
+    "shorten a long resume",
+    "turn a career history into bullets"
+  ],
+  "searchPhrases": [
+    "tailor a resume to a job description",
+    "help me tailor a resume to a job description",
+    "can you tailor a resume to a job description",
+    "match resume keywords for an ats",
+    "help me match resume keywords for an ats",
+    "can you match resume keywords for an ats",
+    "rewrite resume bullets",
+    "help me rewrite resume bullets",
+    "can you rewrite resume bullets",
+    "draft a cover letter for a role",
+    "help me draft a cover letter for a role",
+    "can you draft a cover letter for a role"
   ]
 }

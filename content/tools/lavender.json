@@ -62,17 +62,27 @@
     "finalUrl": "https://lavender.ai/"
   },
   "capabilities": [
-    "score a sales email before you send it",
-    "rewrite a cold email",
-    "personalize an email to a buyer",
-    "generate a sales copy to help pipeline velocity",
-    "make me look super cool in front of a boss when i get email replies.\" heidi b",
-    "use blog support knowledge library sales certification course con",
-    "use ai sales agent",
-    "use let ora draft some emails",
-    "use something went wrong while submitting the form",
-    "use sales email certification today",
-    "use leaderboard play now",
-    "use letter a weekly sales email you"
+    "write a cold email to a lead",
+    "build an outbound sequence",
+    "find a vp email address",
+    "score a sales email before sending",
+    "summarize a discovery call",
+    "enrich a prospect list",
+    "update a crm pipeline",
+    "set a cadence for inbound leads"
+  ],
+  "searchPhrases": [
+    "write a cold email to a lead",
+    "help me write a cold email to a lead",
+    "can you write a cold email to a lead",
+    "build an outbound sequence",
+    "help me build an outbound sequence",
+    "can you build an outbound sequence",
+    "find a vp email address",
+    "help me find a vp email address",
+    "can you find a vp email address",
+    "score a sales email before sending",
+    "help me score a sales email before sending",
+    "can you score a sales email before sending"
   ]
 }

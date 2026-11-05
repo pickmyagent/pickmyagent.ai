@@ -65,13 +65,29 @@
     "plan-travel": "AI itinerary planner that says you can start for free."
   },
   "capabilities": [
-    "create a custom itinerary",
-    "build an itinerary for a trip",
-    "draft a custom itinerary",
-    "draft a trip itinerary",
-    "work from ai trip planner that builds itineraries. the site says you can start free",
-    "create the custom itinerary",
-    "build an itinerary for the trip",
-    "build the itinerary for a trip"
+    "build an itinerary for a city",
+    "compare flights for a trip",
+    "find a hotel for a work trip",
+    "plan how to get between two cities",
+    "plan a group trip",
+    "balance a day so it is not packed",
+    "list neighborhoods to stay in"
+  ],
+  "searchPhrases": [
+    "build an itinerary for a city",
+    "help me build an itinerary for a city",
+    "can you build an itinerary for a city",
+    "compare flights for a trip",
+    "help me compare flights for a trip",
+    "can you compare flights for a trip",
+    "find a hotel for a work trip",
+    "help me find a hotel for a work trip",
+    "can you find a hotel for a work trip",
+    "plan how to get between two cities",
+    "help me plan how to get between two cities",
+    "can you plan how to get between two cities",
+    "how do I get from rome to florence",
+    "itinerary for four days in lisbon",
+    "compare flights to tokyo"
   ]
 }

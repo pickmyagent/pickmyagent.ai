@@ -62,16 +62,27 @@
     "finalUrl": "https://www.openspace.ai/"
   },
   "capabilities": [
-    "capture a jobsite with a 360 camera",
-    "compare progress to a plan",
-    "track a construction site",
-    "share a site walk",
-    "document field conditions",
-    "turn jobsite imagery into real-time insights that drive better decisions, faster",
-    "capture where visual intelligence starts",
-    "capture a site from ground to sky, day one through turnover",
-    "turn images into intelligence",
-    "make better decisions, faster",
-    "turn images into proof"
+    "take off quantities from a floor plan",
+    "document jobsite photos",
+    "measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "schedule the trades",
+    "estimate a roofing job",
+    "list materials for a task",
+    "note a change on the job"
+  ],
+  "searchPhrases": [
+    "take off quantities from a floor plan",
+    "help me take off quantities from a floor plan",
+    "can you take off quantities from a floor plan",
+    "document jobsite photos",
+    "help me document jobsite photos",
+    "can you document jobsite photos",
+    "measure a roof from a satellite image",
+    "help me measure a roof from a satellite image",
+    "can you measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "help me make a safety inspection checklist",
+    "can you make a safety inspection checklist"
   ]
 }

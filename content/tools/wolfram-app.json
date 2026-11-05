@@ -62,17 +62,27 @@
     "finalUrl": "https://www.wolframalpha.com/"
   },
   "capabilities": [
-    "use compute answers using wolfram",
-    "use making the world",
-    "use computational intelligence mathematics",
-    "use science & technology",
-    "use society & culture",
-    "use everyday life",
-    "use computational intelligence uh oh",
-    "use alpha doesn",
-    "use please enable javascript",
-    "use math input compute verified",
-    "use step-by-step solutions elementary math algebra plotting & gra",
-    "use calculus & analysis geometry differential equations statistic"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

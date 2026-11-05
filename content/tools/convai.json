@@ -69,13 +69,27 @@
     "game-npcs": "Conversational characters that talk with the player inside a game."
   },
   "capabilities": [
-    "help teams comparing hosted npc platforms",
-    "work from in-game characters that talk with the player",
-    "work from teams comparing hosted npc platforms",
-    "work from conversational characters for games",
-    "work from site describes conversational characters that talk with the player inside a game",
-    "work from in-game characters that talk with a player",
-    "work from site describes conversational characters that talk with the player inside the game",
-    "work from site describes conversational characters that talk with a player inside a game"
+    "give an npc memory of the player",
+    "write dialogue for a game character",
+    "run a game master for a discord table",
+    "prototype a character from a prompt",
+    "keep quest state for an npc",
+    "vary a character voice line",
+    "export dialogue for a game",
+    "remember a choice the player made"
+  ],
+  "searchPhrases": [
+    "give an npc memory of the player",
+    "help me give an npc memory of the player",
+    "can you give an npc memory of the player",
+    "write dialogue for a game character",
+    "help me write dialogue for a game character",
+    "can you write dialogue for a game character",
+    "run a game master for a discord table",
+    "help me run a game master for a discord table",
+    "can you run a game master for a discord table",
+    "prototype a character from a prompt",
+    "help me prototype a character from a prompt",
+    "can you prototype a character from a prompt"
   ]
 }

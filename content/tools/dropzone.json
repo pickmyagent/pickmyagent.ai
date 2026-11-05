@@ -66,14 +66,27 @@
     "security-ops": "SOC analyst agent for alert triage and threat hunting."
   },
   "capabilities": [
-    "investigate a security alert end to end",
+    "flag a phishing email",
     "triage a soc alert",
-    "triage a security alert",
-    "help a security team that wants alert investigations with the reasoning shown",
-    "work from security team that wants alert investigations with the reasoning shown",
-    "work from ai soc analyst for alert triage and threat hunting",
-    "work from dropzone describes an ai soc analyst that investigates alerts end to end and shows its reasoning",
-    "work from dropzone's site describes an ai soc analyst that investigates alerts end to end and shows its reasoning, plus an ai threat hunter",
-    "investigate the security alert end to end"
+    "block a malicious ip",
+    "write a detection rule for a mailbox",
+    "investigate an alert",
+    "summarize a security incident",
+    "check a suspicious link",
+    "draft a response to a reported phish"
+  ],
+  "searchPhrases": [
+    "flag a phishing email",
+    "help me flag a phishing email",
+    "can you flag a phishing email",
+    "triage a soc alert",
+    "help me triage a soc alert",
+    "can you triage a soc alert",
+    "block a malicious ip",
+    "help me block a malicious ip",
+    "can you block a malicious ip",
+    "write a detection rule for a mailbox",
+    "help me write a detection rule for a mailbox",
+    "can you write a detection rule for a mailbox"
   ]
 }

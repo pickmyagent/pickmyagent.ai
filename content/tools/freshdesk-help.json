@@ -62,17 +62,26 @@
     "finalUrl": "https://www.freshworks.com/freshdesk/"
   },
   "capabilities": [
-    "use boost agent productivity and deliver seamless customer experi",
-    "use ai-powered customer service solution with omnichannel ticketi",
-    "use ai-powered customer service software",
-    "use freshworks boost agent productivity and deliver seamless cust",
-    "use report 2026 is now live",
-    "use products ai platform resources demo pricing languages contact",
-    "use freshdesk brings ready-to-use ai",
-    "use ai-powered over time",
-    "use panel surface",
-    "use metrics pin to the content bottom via margin-top",
-    "use right + bottom are always honored",
-    "use left keep-out zone on the asset"
+    "answer a support ticket",
+    "check an order status",
+    "deflect a refund question",
+    "answer from a help center",
+    "draft a reply to an angry customer",
+    "apply a support macro",
+    "route a ticket to the right queue",
+    "cite the policy in a reply"
+  ],
+  "searchPhrases": [
+    "answer a support ticket",
+    "help me answer a support ticket",
+    "can you answer a support ticket",
+    "check an order status",
+    "help me check an order status",
+    "can you check an order status",
+    "deflect a refund question",
+    "help me deflect a refund question",
+    "can you deflect a refund question",
+    "answer from a help center",
+    "can you answer from a help center"
   ]
 }

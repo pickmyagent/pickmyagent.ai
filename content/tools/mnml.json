@@ -72,14 +72,26 @@
   "id": "mnml",
   "capabilities": [
     "turn a floor plan into a render",
-    "turn a floor plan photo into an image",
-    "turn a sketch of a floor plan into an image",
-    "turn a photo of a floor plan into a furnished view and keeps the walls as drawn",
-    "turn a photo of a floor plan into a furnished view",
-    "turn keeps the walls as drawn",
-    "work from photo or scan of a floor plan that should become a furnished view",
-    "work from hand sketch that should become an architectural render",
-    "work from mnml takes a photo, pdf, or cad screenshot of a floor plan and returns a furnished view while keeping the walls as drawn",
-    "turn the floor plan into a render"
+    "make a picture from a blueprint",
+    "render an elevation of a house",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan"
+  ],
+  "searchPhrases": [
+    "turn a floor plan into a render",
+    "help me turn a floor plan into a render",
+    "can you turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "render an elevation of a house",
+    "help me render an elevation of a house",
+    "can you render an elevation of a house",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout"
   ]
 }

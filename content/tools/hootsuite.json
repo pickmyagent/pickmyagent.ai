@@ -68,13 +68,27 @@
     "agent-social": "Publishes an agent's social posts from one suite."
   },
   "capabilities": [
-    "plan and publishes social content, and the plans page says the suite is connected by ai",
-    "plan publishes social content",
-    "plan the plans page says the suite is connected by ai",
-    "work from planning and publishing social content",
-    "work from social planning and publishing. the plans page says it is connected by ai",
-    "work from hootsuite's plans page describes social content creation, planning, and publishing, and says the suite is connected by ai",
-    "work from hootsuite's plans page describes content creation, planning, and publishing for social, and says the suite is connected by ai",
-    "plan and publishes social content, and a plans page says the suite is connected by ai"
+    "draft a blog post",
+    "rewrite a paragraph for clarity",
+    "write an seo article",
+    "outline a marketing page",
+    "edit a draft for tone",
+    "turn notes into a post",
+    "write a social caption",
+    "check a draft for grammar"
+  ],
+  "searchPhrases": [
+    "draft a blog post",
+    "help me draft a blog post",
+    "can you draft a blog post",
+    "rewrite a paragraph for clarity",
+    "help me rewrite a paragraph for clarity",
+    "can you rewrite a paragraph for clarity",
+    "write an seo article",
+    "help me write an seo article",
+    "can you write an seo article",
+    "outline a marketing page",
+    "help me outline a marketing page",
+    "can you outline a marketing page"
   ]
 }

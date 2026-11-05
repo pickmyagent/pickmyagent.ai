@@ -62,17 +62,26 @@
     "finalUrl": "https://www.espocrm.com/"
   },
   "capabilities": [
-    "manage contacts",
-    "automate a workflow",
-    "find out the advantages of cloud-hosted and on-premise solutions and choose the right one for a business",
-    "find out the advantages of cloud-hosted",
-    "use customize workflows",
-    "use open source crm what is this",
-    "use wholesale and retail trade e-commerce banking call-centers ma",
-    "use open source crm",
-    "use toggle navigation features cloud extensions support forum dem",
-    "use emo what is this",
-    "use read more get started now",
-    "use languages api documentation community forum video tutorials h"
+    "reset a password for a new hire",
+    "open an it help desk ticket",
+    "see which saas apps an employee connected",
+    "deflect a vpn question",
+    "automate a service desk reply",
+    "route a laptop issue",
+    "answer a common it question",
+    "log a ticket and the fix"
+  ],
+  "searchPhrases": [
+    "reset a password for a new hire",
+    "help me reset a password for a new hire",
+    "can you reset a password for a new hire",
+    "open an it help desk ticket",
+    "can you open an it help desk ticket",
+    "see which saas apps an employee connected",
+    "help me see which saas apps an employee connected",
+    "can you see which saas apps an employee connected",
+    "deflect a vpn question",
+    "help me deflect a vpn question",
+    "can you deflect a vpn question"
   ]
 }

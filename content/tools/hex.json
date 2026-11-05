@@ -67,13 +67,27 @@
     "analyze-data": "Data workspace with a Hex agent, listed at $36 per editor per month."
   },
   "capabilities": [
-    "use $36 per editor per month and includes a hex agent above the community plan",
-    "use includes a hex agent above the community plan",
-    "work from team notebook that includes a hex agent on the listed editor price",
-    "work from collaborative data workspace. the page lists per editor each month",
-    "use $36 per editor per month and includes the hex agent above the community plan",
-    "use $36 per editor per month and includes a hex agent above a community plan",
-    "use includes the hex agent above the community plan",
-    "use includes a hex agent above a community plan"
+    "ask a question about a spreadsheet",
+    "explain an excel formula",
+    "forecast next quarter from a sheet",
+    "chart a csv file",
+    "pivot a table",
+    "write sql for a question",
+    "build a dashboard from a warehouse",
+    "clean a messy column"
+  ],
+  "searchPhrases": [
+    "ask a question about a spreadsheet",
+    "help me ask a question about a spreadsheet",
+    "can you ask a question about a spreadsheet",
+    "explain an excel formula",
+    "help me explain an excel formula",
+    "can you explain an excel formula",
+    "forecast next quarter from a sheet",
+    "help me forecast next quarter from a sheet",
+    "can you forecast next quarter from a sheet",
+    "chart a csv file",
+    "help me chart a csv file",
+    "can you chart a csv file"
   ]
 }

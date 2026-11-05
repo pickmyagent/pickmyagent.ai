@@ -62,16 +62,27 @@
     "finalUrl": "https://typefully.com/"
   },
   "capabilities": [
-    "draft a twitter thread",
-    "schedule a post",
-    "rewrite a hook",
-    "preview a thread",
-    "publish to linkedin and x",
-    "create schedule, and publish social media posts on x (twitter), linkedin, threads, bluesky, and more",
-    "publish social media posts on x (twitter), linkedin, threads, bluesky,",
-    "make it punchier \ud83d\udc4a typefully @ typefully we're launching a command bar today with great commands and features",
-    "make it punchier \ud83d\udc4a typefully @ typefully we're launching a command bar today with great commands",
-    "write plan analyze fabrizio rinaldi drafts queue 8 posted new draft most people overthink their first post",
-    "schedule publish fabrizio rinaldi @ linuz90 most people overthink their first post"
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.crowdsec.net/"
   },
   "capabilities": [
+    "flag a phishing email",
+    "triage a soc alert",
     "block a malicious ip",
-    "share threat signals",
-    "protect a server",
-    "use we turn crowd-powered intelligence into tactical intelligence",
-    "use curated threat intelligence powered by the crowd",
-    "use crowdsec we turn crowd-powered intelligence into tactical int",
-    "use crowdsec we know the ips attacking you",
-    "use crowdsec is trusted by",
-    "use crowdsec high threat list has 36",
-    "use safeguarded quality top-priority updates curated threat intel",
-    "use powered by the crowd",
-    "use crowdsec download the latest vulnerability & exploitation rep"
+    "write a detection rule for a mailbox",
+    "investigate an alert",
+    "summarize a security incident",
+    "check a suspicious link",
+    "draft a response to a reported phish"
+  ],
+  "searchPhrases": [
+    "flag a phishing email",
+    "help me flag a phishing email",
+    "can you flag a phishing email",
+    "triage a soc alert",
+    "help me triage a soc alert",
+    "can you triage a soc alert",
+    "block a malicious ip",
+    "help me block a malicious ip",
+    "can you block a malicious ip",
+    "write a detection rule for a mailbox",
+    "help me write a detection rule for a mailbox",
+    "can you write a detection rule for a mailbox"
   ]
 }

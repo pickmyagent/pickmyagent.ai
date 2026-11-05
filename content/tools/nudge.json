@@ -62,11 +62,26 @@
     "finalUrl": "https://www.nudgesecurity.com/"
   },
   "capabilities": [
-    "discover saas apps employees use",
-    "nudge an employee to secure an account",
-    "see oauth grants",
-    "govern shadow it",
-    "reduce saas risk",
-    "automate guardrails for safe ai adoption"
+    "reset a password for a new hire",
+    "open an it help desk ticket",
+    "see which saas apps an employee connected",
+    "deflect a vpn question",
+    "automate a service desk reply",
+    "route a laptop issue",
+    "answer a common it question",
+    "log a ticket and the fix"
+  ],
+  "searchPhrases": [
+    "reset a password for a new hire",
+    "help me reset a password for a new hire",
+    "can you reset a password for a new hire",
+    "open an it help desk ticket",
+    "can you open an it help desk ticket",
+    "see which saas apps an employee connected",
+    "help me see which saas apps an employee connected",
+    "can you see which saas apps an employee connected",
+    "deflect a vpn question",
+    "help me deflect a vpn question",
+    "can you deflect a vpn question"
   ]
 }

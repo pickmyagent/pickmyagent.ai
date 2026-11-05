@@ -62,17 +62,27 @@
     "finalUrl": "https://www.hippo.com/"
   },
   "capabilities": [
-    "get a home insurance quote",
-    "manage a homeowners policy",
-    "see coverage details",
-    "file a home claim",
-    "use hippo home insurance - affordable",
-    "use resources learn center blog faq insurance homeowners insuranc",
-    "use hippo makes homeownership effortless personalized coverage ou",
-    "use more protection protect what matters most",
-    "use hippo home app",
-    "use quick quotes today",
-    "use fewer problems tomorrow",
-    "use we make it simple to switch"
+    "estimate car damage from photos",
+    "start a renters insurance quote",
+    "flag a claim that looks like fraud",
+    "open a virtual auto claim",
+    "draft a commercial insurance quote",
+    "summarize damage in a photo set",
+    "list what a claim file still needs",
+    "compare two policy options"
+  ],
+  "searchPhrases": [
+    "estimate car damage from photos",
+    "help me estimate car damage from photos",
+    "can you estimate car damage from photos",
+    "start a renters insurance quote",
+    "help me start a renters insurance quote",
+    "can you start a renters insurance quote",
+    "flag a claim that looks like fraud",
+    "help me flag a claim that looks like fraud",
+    "can you flag a claim that looks like fraud",
+    "open a virtual auto claim",
+    "help me open a virtual auto claim",
+    "can you open a virtual auto claim"
   ]
 }

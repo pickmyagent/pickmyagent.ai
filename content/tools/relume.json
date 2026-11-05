@@ -62,17 +62,27 @@
     "finalUrl": "https://www.relume.ai/"
   },
   "capabilities": [
-    "generate a sitemap for a website",
-    "export a design to figma or webflow",
-    "build a landing page structure",
-    "plan a website from a prompt",
-    "manage it in one place, at no extra cost",
-    "use ai website builder",
-    "use relume or export to webflow",
-    "use figma & react",
-    "publish with relume",
-    "use publish with relume",
-    "use relume global edge network enterprise security 99",
-    "use improves after you publish relume"
+    "design a logo for a business",
+    "build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "mock up a settings screen",
+    "design a poster for an event",
+    "pick colors and type",
+    "export logo files"
+  ],
+  "searchPhrases": [
+    "design a logo for a business",
+    "help me design a logo for a business",
+    "can you design a logo for a business",
+    "build a brand kit from a name",
+    "help me build a brand kit from a name",
+    "can you build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "help me make a wireframe from a sketch",
+    "can you make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "help me draft a landing page from a prompt",
+    "can you draft a landing page from a prompt"
   ]
 }

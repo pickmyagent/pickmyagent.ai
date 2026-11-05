@@ -62,16 +62,27 @@
     "finalUrl": "https://async.com/"
   },
   "capabilities": [
-    "record a podcast in the browser",
-    "remove noise from a recording",
-    "generate a voiceover",
-    "edit audio with text",
-    "make voices sound clearer with magic dust, so rough recordings feel ready to publish",
-    "generate b-roll, voice or music generate b-roll, visuals, scenes, or music directly in chat with top models without leaving the edit",
-    "make clips find the strongest moments and turn them into short-form clips for tiktok, reels, shorts, or ads",
-    "make clips find the strongest moments",
-    "turn them into short-form clips for tiktok, reels, shorts, or ads",
-    "create shareable videos faster",
-    "create multilingual versions for global audiences"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

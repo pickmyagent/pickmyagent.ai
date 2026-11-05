@@ -5,7 +5,7 @@
   "websiteUrl": "https://roofr.com/",
   "affiliateUrl": null,
   "shortDescription": "Roofr can measure a plan.",
-  "longDescription": "Roofr can measure a plan. It can also manage a business capture leads instantly fast, accurate, affordable presentation ready, baby need \u2018em.",
+  "longDescription": "Roofr can measure a plan. It can also manage a business capture leads instantly fast, accurate, affordable presentation ready, baby need ‘em.",
   "categories": [
     "construction"
   ],
@@ -31,7 +31,7 @@
   "repoUrl": null,
   "bestFor": [
     "Measure a plan",
-    "Manage a business capture leads instantly fast, accurate, affordable presentation ready, baby need \u2018em"
+    "Manage a business capture leads instantly fast, accurate, affordable presentation ready, baby need ‘em"
   ],
   "notIdealFor": [
     "A task outside the jobs described on the official site",
@@ -62,17 +62,27 @@
     "finalUrl": "https://roofr.com/"
   },
   "capabilities": [
-    "measure a plan",
-    "manage a business capture leads instantly fast, accurate, affordable presentation ready, baby need \u2018em",
-    "collect payments in seconds",
-    "manage roofing jobs with ease",
-    "compare softwares see how we stack up against the competition",
-    "use all-in-one roofing software with crm",
-    "use best roofing software",
-    "use tools proven to win more jobs",
-    "manage a business capture leads instantly fast",
-    "use presentation ready",
-    "use proposals stunning contracts that close deals 10x faster",
-    "use calendar schedule and manage roofing jobs with ease"
+    "take off quantities from a floor plan",
+    "document jobsite photos",
+    "measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "schedule the trades",
+    "estimate a roofing job",
+    "list materials for a task",
+    "note a change on the job"
+  ],
+  "searchPhrases": [
+    "take off quantities from a floor plan",
+    "help me take off quantities from a floor plan",
+    "can you take off quantities from a floor plan",
+    "document jobsite photos",
+    "help me document jobsite photos",
+    "can you document jobsite photos",
+    "measure a roof from a satellite image",
+    "help me measure a roof from a satellite image",
+    "can you measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "help me make a safety inspection checklist",
+    "can you make a safety inspection checklist"
   ]
 }

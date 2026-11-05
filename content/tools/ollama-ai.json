@@ -62,11 +62,30 @@
     "finalUrl": "https://ollama.com/"
   },
   "capabilities": [
-    "call a model api",
-    "run a model on your own computer",
-    "build with open ai models on your own computer or in the cloud on macos, windows,",
-    "use b+ model downloads tokens served 200t+ tokens served",
-    "use ollama blog docs github discord x",
-    "use support meetups careers privacy terms"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

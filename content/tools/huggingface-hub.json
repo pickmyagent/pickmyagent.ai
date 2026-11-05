@@ -62,17 +62,30 @@
     "finalUrl": "https://huggingface.co/"
   },
   "capabilities": [
-    "search documentation",
-    "deploy an endpoint",
-    "fine tune a model",
-    "build a portfolio share a work with the world and build a ml profile",
-    "build a portfolio share a work with the world",
-    "build a ml profile",
-    "use hugging face",
-    "use the ai community building the future",
-    "use ml team & enterprise inference providers hugging face",
-    "use website tasks huggingchat collections languages organizations",
-    "use support inference providers inference endpoints storage bucke",
-    "use the platform where the machine learning community collaborate"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

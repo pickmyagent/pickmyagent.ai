@@ -62,17 +62,27 @@
     "finalUrl": "https://www.explainpaper.com/"
   },
   "capabilities": [
-    "explain a passage in a paper",
-    "highlight confusing text",
-    "get a plain language explanation",
-    "use faster loved by researchers worldwide in-context explanations",
-    "use explanations explainpaper explainpaper features pricing sign",
-    "use faster highlight confusing text and get instant",
-    "use no more drowning in jargon",
-    "use loved by researchers worldwide bindu reddy",
-    "use thanks to this amazing tool",
-    "use ai model to explain dense sections",
-    "use llm simplifies and explains complex concepts",
-    "use kenneth cassel"
+    "draft a literature review",
+    "summarize what the papers say",
+    "chat with a pdf",
+    "map citations for a paper",
+    "summarize a study",
+    "find peer reviewed sources",
+    "check whether a claim is supported",
+    "collect quotes from a paper"
+  ],
+  "searchPhrases": [
+    "draft a literature review",
+    "help me draft a literature review",
+    "can you draft a literature review",
+    "summarize what the papers say",
+    "help me summarize what the papers say",
+    "can you summarize what the papers say",
+    "chat with a pdf",
+    "help me chat with a pdf",
+    "can you chat with a pdf",
+    "map citations for a paper",
+    "help me map citations for a paper",
+    "can you map citations for a paper"
   ]
 }

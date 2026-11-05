@@ -62,17 +62,30 @@
     "finalUrl": "https://www.aiva.ai/"
   },
   "capabilities": [
-    "edit a generated score",
-    "export midi from a composition",
-    "create music for a video",
-    "edit a generated tracks",
-    "use ai music generation assistant aiva",
-    "create a free account already have an account",
-    "use create a free account already have an account",
-    "use upload an audio or midi influence",
-    "use download in any file format",
-    "use individuals billed monthly billed yearly free",
-    "use vat billed annually 26",
-    "use vat billed annually 33"
+    "generate a song from a prompt",
+    "make a royalty free background track",
+    "separate a vocal stem",
+    "master a mix",
+    "make a beat for a video",
+    "compose a short soundtrack",
+    "extend a musical idea",
+    "export stems from a song"
+  ],
+  "searchPhrases": [
+    "generate a song from a prompt",
+    "help me generate a song from a prompt",
+    "can you generate a song from a prompt",
+    "make a royalty free background track",
+    "help me make a royalty free background track",
+    "can you make a royalty free background track",
+    "separate a vocal stem",
+    "help me separate a vocal stem",
+    "can you separate a vocal stem",
+    "master a mix",
+    "help me master a mix",
+    "can you master a mix",
+    "master this mix",
+    "beat for a youtube video",
+    "lofi beat about rainy tokyo"
   ]
 }

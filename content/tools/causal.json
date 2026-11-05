@@ -62,15 +62,27 @@
     "finalUrl": "https://www.lucanet.com/en/solutions/extended-planning-and-analysis/"
   },
   "capabilities": [
-    "build a financial model",
-    "connect a model to data",
-    "share a business model",
-    "find out more embed intelligence into a workflows with the cfo solution platform",
-    "find out more \u00d7 solutions cfo group accountant controller sustainability manager head of tax consolidation",
-    "build powerful models with natural language",
-    "compare assumptions side-by-side to evaluate strategies",
-    "make informed decisions faster.</p>\\r\\n\"}}\"> compare actuals",
-    "compare assumptions side-by-side to evaluate strategies and make informed decisions faster",
-    "make informed decisions faster"
+    "ask a question in a spreadsheet cell",
+    "explain a spreadsheet formula",
+    "clean a column of values",
+    "chart a range of cells",
+    "pivot a table",
+    "forecast a column of numbers",
+    "fill a sheet from a prompt",
+    "check a formula that looks wrong"
+  ],
+  "searchPhrases": [
+    "ask a question in a spreadsheet cell",
+    "help me ask a question in a spreadsheet cell",
+    "can you ask a question in a spreadsheet cell",
+    "explain a spreadsheet formula",
+    "help me explain a spreadsheet formula",
+    "can you explain a spreadsheet formula",
+    "clean a column of values",
+    "help me clean a column of values",
+    "can you clean a column of values",
+    "chart a range of cells",
+    "help me chart a range of cells",
+    "can you chart a range of cells"
   ]
 }

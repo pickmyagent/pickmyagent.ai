@@ -62,17 +62,27 @@
     "finalUrl": "https://www.koyfin.com/"
   },
   "capabilities": [
-    "chart a stock",
-    "screen financial data",
-    "build a market dashboard",
-    "compare company fundamentals",
-    "read earnings transcripts",
-    "create client-ready reports in one place",
-    "find out more discover how we can help you financial advisors empower a client relationships with comprehensive insights, professional reports,",
-    "find out more investment research teams & cios access intuitive tools, comprehensive data,",
-    "make a insight a own",
-    "make the leap to a winning portfolio",
-    "monitor live yields from 40 countries and analyze yield curve spreads historically",
-    "monitor live yields from 40 countries"
+    "track a brokerage portfolio",
+    "rebalance a retirement account",
+    "chart a stock ticker",
+    "read an earnings transcript",
+    "screen stocks against a rule",
+    "compare an etf on cost",
+    "see net worth across accounts",
+    "budget monthly spending"
+  ],
+  "searchPhrases": [
+    "track a brokerage portfolio",
+    "help me track a brokerage portfolio",
+    "can you track a brokerage portfolio",
+    "rebalance a retirement account",
+    "help me rebalance a retirement account",
+    "can you rebalance a retirement account",
+    "chart a stock ticker",
+    "help me chart a stock ticker",
+    "can you chart a stock ticker",
+    "read an earnings transcript",
+    "help me read an earnings transcript",
+    "can you read an earnings transcript"
   ]
 }

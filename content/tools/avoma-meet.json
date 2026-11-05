@@ -63,16 +63,26 @@
   },
   "capabilities": [
     "transcribe a meeting",
-    "summarize a call",
-    "capture action items",
-    "record a conversation",
-    "schedule 2x more qualified meetings with effortless scheduling and instant lead routing",
-    "schedule 2x more qualified meetings with effortless scheduling",
-    "schedule a demo sign up for free no credit card is required",
-    "use automate note-taking",
-    "use pay only for what you need",
-    "use ai platform for note-taking",
-    "use revenue intelligence ai meeting assistant real-time transcrip",
-    "use ai-generated note-taking al-generated smart chapters avoma"
+    "pull action items from a call",
+    "summarize a zoom call",
+    "take notes on a customer call",
+    "clip a highlight from an interview",
+    "write a recap for people who missed it",
+    "list decisions from a call",
+    "turn a transcript into tasks"
+  ],
+  "searchPhrases": [
+    "transcribe a meeting",
+    "help me transcribe a meeting",
+    "can you transcribe a meeting",
+    "pull action items from a call",
+    "help me pull action items from a call",
+    "can you pull action items from a call",
+    "summarize a zoom call",
+    "help me summarize a zoom call",
+    "can you summarize a zoom call",
+    "take notes on a customer call",
+    "help me take notes on a customer call",
+    "can you take notes on a customer call"
   ]
 }

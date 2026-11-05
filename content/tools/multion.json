@@ -62,13 +62,27 @@
     "finalUrl": "https://theagi.company/"
   },
   "capabilities": [
-    "book or research through an agent",
-    "build agi-0, a small action model, and an agent that sees the screen and acts across any app on android",
-    "build agi-0, a small action model,",
-    "build fast, private action ai for a phone or computer",
-    "use no apis or integrations",
-    "use private action ai for phones and devices agi",
-    "use private action ai for phones and devices",
-    "use backed by backed by"
+    "fill a form in the browser",
+    "click through a checkout flow",
+    "scrape a page into a sheet",
+    "automate a web workflow",
+    "run a headless browser for an agent",
+    "stop at a login screen",
+    "extract a table from a page",
+    "repeat a browser task"
+  ],
+  "searchPhrases": [
+    "fill a form in the browser",
+    "help me fill a form in the browser",
+    "can you fill a form in the browser",
+    "click through a checkout flow",
+    "help me click through a checkout flow",
+    "can you click through a checkout flow",
+    "scrape a page into a sheet",
+    "help me scrape a page into a sheet",
+    "can you scrape a page into a sheet",
+    "automate a web workflow",
+    "help me automate a web workflow",
+    "can you automate a web workflow"
   ]
 }

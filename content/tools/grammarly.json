@@ -62,11 +62,27 @@
     "finalUrl": "https://www.grammarly.com/"
   },
   "capabilities": [
-    "rewrite a sentence for clarity",
-    "check grammar in a document",
-    "generate text with an ai assistant",
-    "improve the tone of an email",
-    "write more clearly on a web page",
-    "make sure a message is understood the first time"
+    "rewrite a paragraph so it is clearer",
+    "paraphrase a section",
+    "continue a short story",
+    "check grammar in a draft",
+    "write a blog post about a launch",
+    "change the tone of an email",
+    "shorten a long paragraph",
+    "expand a rough outline"
+  ],
+  "searchPhrases": [
+    "rewrite a paragraph so it is clearer",
+    "help me rewrite a paragraph so it is clearer",
+    "can you rewrite a paragraph so it is clearer",
+    "paraphrase a section",
+    "help me paraphrase a section",
+    "can you paraphrase a section",
+    "continue a short story",
+    "help me continue a short story",
+    "can you continue a short story",
+    "check grammar in a draft",
+    "help me check grammar in a draft",
+    "can you check grammar in a draft"
   ]
 }

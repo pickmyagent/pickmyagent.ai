@@ -62,12 +62,27 @@
     "finalUrl": "https://www.inscribe.ai/"
   },
   "capabilities": [
-    "detect document fraud",
-    "review a loan file",
-    "flag a suspicious document",
-    "extract data from a file",
-    "speed up underwriting review",
-    "automate workflows that were previously too risky to touch",
-    "answer follow-up questions, helping teams understand complex applications faster"
+    "read a bank statement for a loan file",
+    "compare loan scenarios for a borrower",
+    "draft a mortgage presentation",
+    "check whether a guideline allows the dti",
+    "start a digital mortgage application",
+    "flag a suspicious document in a file",
+    "list documents still missing",
+    "summarize a loan scenario"
+  ],
+  "searchPhrases": [
+    "read a bank statement for a loan file",
+    "help me read a bank statement for a loan file",
+    "can you read a bank statement for a loan file",
+    "compare loan scenarios for a borrower",
+    "help me compare loan scenarios for a borrower",
+    "can you compare loan scenarios for a borrower",
+    "draft a mortgage presentation",
+    "help me draft a mortgage presentation",
+    "can you draft a mortgage presentation",
+    "check whether a guideline allows the dti",
+    "help me check whether a guideline allows the dti",
+    "can you check whether a guideline allows the dti"
   ]
 }

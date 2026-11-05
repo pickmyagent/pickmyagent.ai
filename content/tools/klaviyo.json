@@ -68,13 +68,27 @@
     "marketing-promotions": "Describes email and SMS campaigns, flows, and a free email plan for small lists."
   },
   "capabilities": [
-    "use email and sms campaigns, flows, and a free email plan for small lists",
-    "use a free email plan for small lists",
-    "work from scheduling promo email and text campaigns",
-    "work from email and sms campaigns with flows, plus an ai subject-line generator",
-    "work from klaviyo's help center describes a free email plan with up to 250 active profiles and 500 email sends a month",
-    "work from sends email and text campaigns with flows and an ai subject-line generator",
-    "use email and sms campaigns, flows, and the free email plan for small lists",
-    "use the free email plan for small lists"
+    "draft a blog post",
+    "rewrite a paragraph for clarity",
+    "write an seo article",
+    "outline a marketing page",
+    "edit a draft for tone",
+    "turn notes into a post",
+    "write a social caption",
+    "check a draft for grammar"
+  ],
+  "searchPhrases": [
+    "draft a blog post",
+    "help me draft a blog post",
+    "can you draft a blog post",
+    "rewrite a paragraph for clarity",
+    "help me rewrite a paragraph for clarity",
+    "can you rewrite a paragraph for clarity",
+    "write an seo article",
+    "help me write an seo article",
+    "can you write an seo article",
+    "outline a marketing page",
+    "help me outline a marketing page",
+    "can you outline a marketing page"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://reflect.app/"
   },
   "capabilities": [
-    "search notes",
-    "capture a note",
-    "journal daily",
-    "capture ideas, connect notes, and keep a files in markdown",
-    "capture ideas, connect notes,",
-    "record audio memos",
-    "transcribe voice notes with a transcription provider ask a notes answers linked to source notes",
-    "record a ideas and to-do\u2019s easily, so you never miss a thing",
-    "record a ideas",
-    "write on mac, iphone,",
-    "use capture ideas",
-    "use phone and ipad"
+    "search a company wiki",
+    "answer a question across team docs",
+    "link notes to each other",
+    "find where a policy was written",
+    "summarize a handbook page",
+    "ask a question about an sop",
+    "collect sources for an internal answer",
+    "keep a team knowledge base"
+  ],
+  "searchPhrases": [
+    "search a company wiki",
+    "help me search a company wiki",
+    "can you search a company wiki",
+    "answer a question across team docs",
+    "help me answer a question across team docs",
+    "can you answer a question across team docs",
+    "link notes to each other",
+    "help me link notes to each other",
+    "can you link notes to each other",
+    "find where a policy was written",
+    "help me find where a policy was written",
+    "can you find where a policy was written"
   ]
 }

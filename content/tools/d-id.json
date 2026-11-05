@@ -70,13 +70,27 @@
     "avatar-video": "Turns a photo and a script into a talking-head video."
   },
   "capabilities": [
+    "make a video from a text prompt",
+    "turn an image into a video",
+    "add captions to an interview",
+    "cut silences from a clip",
     "make an avatar video from a script",
-    "turn a photo and a script into a talking-head video",
-    "turn a script into a talking-head video",
-    "work from talking-head video from a photo and a script",
-    "work from spokesperson clip without filming",
-    "work from talking-head video from a photo and a script. a 14-day trial is listed",
-    "work from official talking-head docs say a photo and a script become a video, and the help center lists a 14-day trial",
-    "make an avatar video from the script"
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
   ]
 }

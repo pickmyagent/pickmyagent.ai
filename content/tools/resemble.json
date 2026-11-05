@@ -62,15 +62,27 @@
     "finalUrl": "https://www.resemble.ai/"
   },
   "capabilities": [
-    "clone a voice",
-    "generate speech from text",
-    "detect a deepfake voice",
-    "localize a voice into another language",
-    "build a real time voice agent",
-    "detect ai-generated audio, video, and images in real time with explainable results enterprises can trust",
-    "detect ai-generated audio, video,",
-    "make confident decisions in seconds with the leading deepfake detection models",
-    "detect deepfaked participants in real time before sensitive information is shared",
-    "screen uploaded media at scale to keep a platform safe for users"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

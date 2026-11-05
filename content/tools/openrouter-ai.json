@@ -62,17 +62,30 @@
     "finalUrl": "https://openrouter.ai/"
   },
   "capabilities": [
-    "call a model api",
-    "search documentation",
-    "fine tune a model",
-    "find the best models & prices for a prompts openrouter the unified interface for every model",
-    "use the unified interface for every model",
-    "use posts how to prevent prompt injection",
-    "use every model better prices",
-    "use users 80+ providers 500+ models text",
-    "use audio generate anything through a single",
-    "use all major models in one place",
-    "use browse all anthropic/claude-opus-5",
-    "use model routing visualization higher availability reliable ai m"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

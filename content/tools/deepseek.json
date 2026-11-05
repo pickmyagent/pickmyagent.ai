@@ -81,13 +81,28 @@
     "deep-research": "The app announcement lists web search, and the API docs list a separate search API."
   },
   "capabilities": [
-    "chat with a coding model",
-    "work from chat in the free deepseek app, including web search and deep-think mode",
-    "work from coding through the api, including tool calls and fill-in-the-middle completion",
-    "work from chat app and api models for chat, coding, and web search",
-    "work from official app announcement says deepseek chat is free, with web search and no in-app purchases",
-    "chat with the coding model",
-    "work from chat in a free deepseek app, including web search and deep-think mode",
-    "work from coding through a api, including tool calls and fill-in-the-middle completion"
+    "draft a first version of a note",
+    "outline steps for a task",
+    "summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "list options for a decision",
+    "turn rough notes into a checklist"
+  ],
+  "searchPhrases": [
+    "draft a first version of a note",
+    "help me draft a first version of a note",
+    "can you draft a first version of a note",
+    "outline steps for a task",
+    "help me outline steps for a task",
+    "can you outline steps for a task",
+    "summarize a long passage",
+    "help me summarize a long passage",
+    "can you summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "help me rewrite a paragraph for clarity",
+    "can you rewrite a paragraph for clarity",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

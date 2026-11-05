@@ -85,12 +85,29 @@
     "research-rag": "Retrieves passages from documents you provide and can hand them to an agent."
   },
   "capabilities": [
-    "work from rag pipelines over documents you already have",
-    "work from python teams building retrieval into an agent",
-    "work from open-source framework for retrieval and agents. the cloud free plan includes 10,000 credits",
-    "work from 0.14.25 is the open-source library, and the cloud free plan includes 10,000 credits",
-    "work from python teams building retrieval into the agent",
-    "work from open-source framework for retrieval and agents. a cloud free plan includes 10,000 credits",
-    "work from 0.14.25 is a open-source library, and the cloud free plan includes 10,000 credits"
+    "orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "keep memory for an agent",
+    "use an open source agent framework",
+    "hand a task from one agent to another",
+    "define a tool an agent can call",
+    "trace an agent run",
+    "retry a failed agent step"
+  ],
+  "searchPhrases": [
+    "orchestrate agents that use tools",
+    "help me orchestrate agents that use tools",
+    "can you orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "help me run a multi agent research crew",
+    "can you run a multi agent research crew",
+    "keep memory for an agent",
+    "help me keep memory for an agent",
+    "can you keep memory for an agent",
+    "use an open source agent framework",
+    "help me use an open source agent framework",
+    "can you use an open source agent framework",
+    "open source agent framework",
+    "memory for an agent"
   ]
 }

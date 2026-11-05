@@ -62,17 +62,30 @@
     "finalUrl": "https://www.jacksonhewitt.com/"
   },
   "capabilities": [
-    "file a tax return",
-    "find a deduction",
-    "estimate a refund",
-    "answer tax questions",
-    "find a tax pro near you, or file online today",
-    "find a location today",
-    "find a location learn about refund recheck tax planning we\u2019ll evaluate a w-4 withholdings",
-    "review the tax credits you qualify for to help reduce a tax liability",
-    "search local jobs find a future at jackson hewitt let\u2019s expand a success, together",
-    "build a future success on decades of experience",
-    "find a tax pro near you",
-    "use find a tax pro near you"
+    "start a tax return",
+    "file a personal tax return",
+    "find freelance deductions",
+    "organize w2 and 1099 income",
+    "estimate a quarterly tax payment",
+    "efile a finished return",
+    "sort deductions into the return",
+    "prepare records for a tax filing"
+  ],
+  "searchPhrases": [
+    "start a tax return",
+    "help me start a tax return",
+    "can you start a tax return",
+    "file a personal tax return",
+    "help me file a personal tax return",
+    "can you file a personal tax return",
+    "find freelance deductions",
+    "help me find freelance deductions",
+    "can you find freelance deductions",
+    "organize w2 and 1099 income",
+    "help me organize w2 and 1099 income",
+    "can you organize w2 and 1099 income",
+    "file my 1040",
+    "quarterly estimated taxes",
+    "where do these deductions go"
   ]
 }

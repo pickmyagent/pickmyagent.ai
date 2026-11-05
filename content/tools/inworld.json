@@ -69,14 +69,27 @@
     "game-npcs": "Character dialogue for games, with an On-Demand plan that starts at $0."
   },
   "capabilities": [
-    "build for a game characters with dialogue",
-    "help teams that want a hosted character stack and docs",
-    "help teams that want a hosted character stack",
-    "work from game characters with dialogue",
-    "work from teams that want a hosted character stack and docs",
-    "work from character ai for games and interactive agents",
-    "work from on-demand plan is to start, then you pay as you go for game character dialogue",
-    "work from builds character ai for games and interactive experiences",
-    "build for the game characters with dialogue"
+    "give an npc memory of the player",
+    "write dialogue for a game character",
+    "run a game master for a discord table",
+    "prototype a character from a prompt",
+    "keep quest state for an npc",
+    "vary a character voice line",
+    "export dialogue for a game",
+    "remember a choice the player made"
+  ],
+  "searchPhrases": [
+    "give an npc memory of the player",
+    "help me give an npc memory of the player",
+    "can you give an npc memory of the player",
+    "write dialogue for a game character",
+    "help me write dialogue for a game character",
+    "can you write dialogue for a game character",
+    "run a game master for a discord table",
+    "help me run a game master for a discord table",
+    "can you run a game master for a discord table",
+    "prototype a character from a prompt",
+    "help me prototype a character from a prompt",
+    "can you prototype a character from a prompt"
   ]
 }

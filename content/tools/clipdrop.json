@@ -62,12 +62,27 @@
     "finalUrl": "https://clipdrop.co/"
   },
   "capabilities": [
-    "remove the background from a photo",
-    "upscale an image",
-    "relight a product photo",
-    "cleanup an object in a photo",
-    "replace the background of an image",
-    "remove background, cleanup pictures, upscaling, stable diffusion and more\u2026 create stunning visuals in seconds with ai",
-    "remove background, cleanup pictures, upscaling, stable diffusion"
+    "remove the background from a product photo",
+    "make an image from a text prompt",
+    "upscale a blurry picture",
+    "put text inside an image",
+    "generate a product scene",
+    "export a transparent png",
+    "edit an image with a prompt",
+    "vary a picture in a new style"
+  ],
+  "searchPhrases": [
+    "remove the background from a product photo",
+    "help me remove the background from a product photo",
+    "can you remove the background from a product photo",
+    "make an image from a text prompt",
+    "help me make an image from a text prompt",
+    "can you make an image from a text prompt",
+    "upscale a blurry picture",
+    "help me upscale a blurry picture",
+    "can you upscale a blurry picture",
+    "put text inside an image",
+    "help me put text inside an image",
+    "can you put text inside an image"
   ]
 }

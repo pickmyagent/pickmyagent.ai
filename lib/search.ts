@@ -2018,8 +2018,8 @@ function capabilityRanking(
     useCases: [],
     fallback: false,
     lowMatch: false,
-    lead: capabilityLead(leadCapability),
-    intro: capabilityIntro(chosen.map((item) => item.pick.capability)),
+    lead: capabilityLead(leadCapability, chosen[0].tool.source.categories),
+    intro: capabilityIntro(chosen.map((item) => item.pick.capability), chosen[0].tool.source.categories),
     disclaimer: capabilityDisclaimer(family),
   };
 }

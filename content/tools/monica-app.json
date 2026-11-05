@@ -62,17 +62,27 @@
     "finalUrl": "https://monica.im/"
   },
   "capabilities": [
-    "automate a workflow",
-    "track a project",
-    "summarize work",
-    "assign a task",
-    "create with monica on the web, in browser extensions,",
-    "write or improve any content 10x faster, from a paragraph to a full article",
-    "translate any web page for an immersive bilingual reading experience",
-    "use powerup by combining webpage content and specific skills",
-    "use powerup by combining webpage content",
-    "summarize youtube videos to get highlights with timestamps",
-    "generate appropriate replies",
-    "generate contextual response suggestions"
+    "automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "connect a crm to email",
+    "schedule a recurring job",
+    "move a row into another app",
+    "trigger a step when a payment succeeds",
+    "sync a contact between two apps",
+    "build a zapier style automation"
+  ],
+  "searchPhrases": [
+    "automate a workflow across apps",
+    "help me automate a workflow across apps",
+    "can you automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "help me send a slack message when a form is submitted",
+    "can you send a slack message when a form is submitted",
+    "connect a crm to email",
+    "help me connect a crm to email",
+    "can you connect a crm to email",
+    "schedule a recurring job",
+    "help me schedule a recurring job",
+    "can you schedule a recurring job"
   ]
 }

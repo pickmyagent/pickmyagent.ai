@@ -68,13 +68,27 @@
   },
   "id": "floorplanner",
   "capabilities": [
-    "work from floor plan you draw and then export as a 2d or 3d image",
-    "work from free project while you try the layout",
-    "work from draws 2d and 3d floor plans in the browser. up to 5 projects are free",
-    "work from draws a floor plan in the browser and exports 2d and 3d images, with up to 5 projects free",
-    "work from floor plan you draw and then export as the 2d or 3d image",
-    "work from free project while you try a layout",
-    "work from draws 2d and 3d floor plans in a browser. up to 5 projects are free",
-    "work from draws the floor plan in the browser and exports 2d and 3d images, with up to 5 projects free"
+    "turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "render an elevation of a house",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan"
+  ],
+  "searchPhrases": [
+    "turn a floor plan into a render",
+    "help me turn a floor plan into a render",
+    "can you turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "render an elevation of a house",
+    "help me render an elevation of a house",
+    "can you render an elevation of a house",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.lemonade.com/"
   },
   "capabilities": [
-    "get a renters insurance quote",
-    "file a claim in an app",
-    "manage a policy",
-    "chat with an insurance ai",
-    "use insurance built for the 21st century",
-    "use lemonade lemonade",
-    "use incredible prices",
-    "use bundle discounts",
-    "use amazing savings when you bundle the",
-    "use star insurance company instant everything already insured",
-    "use star insurance company lemonade has earned 4",
-    "use brent goforbrent"
+    "estimate car damage from photos",
+    "start a renters insurance quote",
+    "flag a claim that looks like fraud",
+    "open a virtual auto claim",
+    "draft a commercial insurance quote",
+    "summarize damage in a photo set",
+    "list what a claim file still needs",
+    "compare two policy options"
+  ],
+  "searchPhrases": [
+    "estimate car damage from photos",
+    "help me estimate car damage from photos",
+    "can you estimate car damage from photos",
+    "start a renters insurance quote",
+    "help me start a renters insurance quote",
+    "can you start a renters insurance quote",
+    "flag a claim that looks like fraud",
+    "help me flag a claim that looks like fraud",
+    "can you flag a claim that looks like fraud",
+    "open a virtual auto claim",
+    "help me open a virtual auto claim",
+    "can you open a virtual auto claim"
   ]
 }

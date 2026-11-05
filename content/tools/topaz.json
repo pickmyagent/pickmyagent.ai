@@ -62,11 +62,30 @@
     "finalUrl": "https://www.topazlabs.com/topaz-photo"
   },
   "capabilities": [
-    "upscale a photo",
-    "sharpen a blurry picture",
-    "reduce noise in a raw file",
-    "recover detail in an image",
-    "make good photos great",
-    "upscale a images with tomorrow\u2019s technology"
+    "cull a wedding shoot",
+    "retouch a portrait",
+    "replace a sky in a photo",
+    "denoise a raw file",
+    "edit a batch in one style",
+    "straighten a horizon",
+    "lift shadows in a photo",
+    "export a retouched image"
+  ],
+  "searchPhrases": [
+    "cull a wedding shoot",
+    "help me cull a wedding shoot",
+    "can you cull a wedding shoot",
+    "retouch a portrait",
+    "help me retouch a portrait",
+    "can you retouch a portrait",
+    "replace a sky in a photo",
+    "help me replace a sky in a photo",
+    "can you replace a sky in a photo",
+    "denoise a raw file",
+    "help me denoise a raw file",
+    "can you denoise a raw file",
+    "cull this wedding shoot",
+    "denoise the raw file",
+    "retouch the portraits"
   ]
 }

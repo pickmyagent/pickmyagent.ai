@@ -62,17 +62,27 @@
     "finalUrl": "https://www.meetjamie.ai/"
   },
   "capabilities": [
-    "capture action items",
-    "capture every meeting, online and in-person, and get accurate notes in seconds, without a bot",
-    "capture every meeting, online",
-    "automate time-consuming tasks",
-    "use the meeting intelligence platform you can trust",
-    "use iso 27001 and gdpr",
-    "use trusted by leading firms across private equity",
-    "use be fully present",
-    "use walk in prepared",
-    "use nordd saas",
-    "use coi partners family trust investor greenpeak partners bluemon",
-    "use it works across all platforms"
+    "transcribe a meeting",
+    "pull action items from a call",
+    "summarize a zoom call",
+    "take notes on a customer call",
+    "clip a highlight from an interview",
+    "write a recap for people who missed it",
+    "list decisions from a call",
+    "turn a transcript into tasks"
+  ],
+  "searchPhrases": [
+    "transcribe a meeting",
+    "help me transcribe a meeting",
+    "can you transcribe a meeting",
+    "pull action items from a call",
+    "help me pull action items from a call",
+    "can you pull action items from a call",
+    "summarize a zoom call",
+    "help me summarize a zoom call",
+    "can you summarize a zoom call",
+    "take notes on a customer call",
+    "help me take notes on a customer call",
+    "can you take notes on a customer call"
   ]
 }

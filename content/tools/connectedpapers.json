@@ -62,16 +62,26 @@
     "finalUrl": "https://www.connectedpapers.com/"
   },
   "capabilities": [
-    "map papers related to a seed paper",
-    "find a derivative work",
-    "use connected papers",
-    "find and explore academic papers a unique",
-    "use find and explore academic papers a unique",
-    "find and explore academic papers",
-    "use find and explore academic papers",
-    "use connected papers doesn",
-    "use javascript enabled",
-    "use please enable it to continue",
-    "use end of linkedin insight tag code"
+    "draft a literature review",
+    "chat with a pdf",
+    "map citations for a paper",
+    "summarize a study",
+    "find peer reviewed sources",
+    "check whether a claim is supported",
+    "collect quotes from a paper"
+  ],
+  "searchPhrases": [
+    "draft a literature review",
+    "help me draft a literature review",
+    "can you draft a literature review",
+    "chat with a pdf",
+    "help me chat with a pdf",
+    "can you chat with a pdf",
+    "map citations for a paper",
+    "help me map citations for a paper",
+    "can you map citations for a paper",
+    "summarize a study",
+    "help me summarize a study",
+    "can you summarize a study"
   ]
 }

@@ -71,17 +71,27 @@
     "listing-photos": "Edits a listing photo and virtually stages an empty room."
   },
   "capabilities": [
-    "virtually stage a listing photo",
-    "edit a listing photo",
-    "build a virtual tour of the home from 360 photos",
-    "edit a listing photo and virtually stages an empty room",
-    "edit virtually stages an empty room",
-    "edit a listing photo or virtually staging an empty room",
-    "edit virtually staging an empty room",
-    "edit a listing photo, virtually stages an empty room, and can stitch 360 photos into a tour a buyer can pan through",
-    "edit can stitch 360 photos into a tour a buyer can pan through",
-    "work from editing a listing photo or virtually staging an empty room",
-    "work from 360 virtual tour a buyer can pan through",
-    "work from edits listing photos, virtually stages rooms, and builds 360 tours. priced per image"
+    "restyle a living room photo",
+    "virtually stage an empty room",
+    "show a kitchen in another style",
+    "lay out furniture in a bedroom",
+    "build a mood board for a condo",
+    "redesign a bathroom from a photo",
+    "stage a dining room",
+    "preview a room in a new finish"
+  ],
+  "searchPhrases": [
+    "restyle a living room photo",
+    "help me restyle a living room photo",
+    "can you restyle a living room photo",
+    "virtually stage an empty room",
+    "help me virtually stage an empty room",
+    "can you virtually stage an empty room",
+    "show a kitchen in another style",
+    "help me show a kitchen in another style",
+    "can you show a kitchen in another style",
+    "lay out furniture in a bedroom",
+    "help me lay out furniture in a bedroom",
+    "can you lay out furniture in a bedroom"
   ]
 }

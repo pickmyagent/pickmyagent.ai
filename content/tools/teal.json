@@ -67,13 +67,27 @@
     "write-resume": "Tailors a resume to keywords in a job description and tracks saved jobs."
   },
   "capabilities": [
-    "tailor a resume to a job description",
-    "create a free resume account",
-    "track jobs saved from job boards",
-    "tailor resume keywords to a job",
-    "work from tailoring a resume to keywords in a job description",
-    "work from tracking jobs saved from job boards",
-    "work from resume builder that tailors a resume to a job description. free to try. paid plans are on their site",
-    "tailor the resume to a job description"
+    "source candidates for an opening",
+    "screen resumes against a role",
+    "write an unbiased job post",
+    "schedule candidate interviews",
+    "track applicants through stages",
+    "summarize an interview",
+    "compare candidates on one list",
+    "draft outreach to a prospect"
+  ],
+  "searchPhrases": [
+    "source candidates for an opening",
+    "help me source candidates for an opening",
+    "can you source candidates for an opening",
+    "screen resumes against a role",
+    "help me screen resumes against a role",
+    "can you screen resumes against a role",
+    "write an unbiased job post",
+    "help me write an unbiased job post",
+    "can you write an unbiased job post",
+    "schedule candidate interviews",
+    "help me schedule candidate interviews",
+    "can you schedule candidate interviews"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.fieldwire.com/"
   },
   "capabilities": [
-    "document a jobsite",
-    "mark up a drawing",
-    "photo a project",
-    "track tasks, update drawings,",
-    "track performance know exactly who did what",
-    "create schedules of upcoming work",
-    "track progress with real-time updates to boost jobsite coordination and deliver results on time, every time",
-    "track progress with real-time updates to boost jobsite coordination",
-    "capture work performed on the jobsite to reduce risk and help you get paid",
-    "capture work performed on the jobsite to reduce risk",
-    "schedule customized pdf reports including all a project details",
-    "use deliver projects faster with fieldwire"
+    "take off quantities from a floor plan",
+    "document jobsite photos",
+    "measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "schedule the trades",
+    "estimate a roofing job",
+    "list materials for a task",
+    "note a change on the job"
+  ],
+  "searchPhrases": [
+    "take off quantities from a floor plan",
+    "help me take off quantities from a floor plan",
+    "can you take off quantities from a floor plan",
+    "document jobsite photos",
+    "help me document jobsite photos",
+    "can you document jobsite photos",
+    "measure a roof from a satellite image",
+    "help me measure a roof from a satellite image",
+    "can you measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "help me make a safety inspection checklist",
+    "can you make a safety inspection checklist"
   ]
 }

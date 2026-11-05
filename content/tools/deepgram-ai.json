@@ -62,17 +62,27 @@
     "finalUrl": "https://deepgram.com/"
   },
   "capabilities": [
-    "convert text to speech",
-    "find a conversation style leading voice teams build with deepgram the whole voice ai stack in one platform",
-    "use power enterprise voice solutions with deepgram",
-    "use voice agent apis",
-    "use enterprise voice ai",
-    "use tts & agent apis",
-    "use deepgram power enterprise voice solutions with deepgram",
-    "use deepgram the future is talking",
-    "use deepgram daily + pipecat are joining deepgram",
-    "use read the announcement platform apis platform overview speech",
-    "use text-to-speech voice agent audio intelligence apps deepgram s",
-    "use explore languages & dialects flux tts playground"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

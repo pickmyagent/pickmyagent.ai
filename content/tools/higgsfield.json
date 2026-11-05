@@ -68,14 +68,27 @@
     "video-generation": "Generates cinematic clips with camera presets such as a POV or a helicopter shot."
   },
   "capabilities": [
-    "generate a clip with a camera move",
-    "generate cinematic clips with camera presets such as a pov or a helicopter shot",
-    "generate cinematic clips with camera presets such as a pov",
-    "generate a helicopter shot",
-    "work from cinematic video with camera-motion presets",
-    "work from short clips for a game, a stream, or a sizzle reel",
-    "work from ai video app with cinema studio camera-motion presets for cinematic clips",
-    "work from cinema studio 4.0, described on the official blog, offers 30+ camera-movement presets and clips up to 30 seconds",
-    "generate the clip with a camera move"
+    "make a video from a text prompt",
+    "turn an image into a video",
+    "add captions to an interview",
+    "cut silences from a clip",
+    "make an avatar video from a script",
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
   ]
 }

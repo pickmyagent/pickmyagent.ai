@@ -62,15 +62,27 @@
     "finalUrl": "https://www.monarch.com/"
   },
   "capabilities": [
-    "track a budget and net worth",
-    "link bank and investment accounts",
-    "categorize spending",
-    "share finances with a partner",
-    "manage a money with monarch",
-    "track accounts, build budgets, monitor investments, plan goals, and get a clearer view of a finances in one app",
-    "track accounts, build budgets, monitor investments, plan goals,",
-    "track budget, plan and manage money in one place | monarch manage a money with monarch",
-    "manage money in one place | monarch manage a money with monarch",
-    "track budget collaborate plan track know where you stand from a net worth to day-to-day spending"
+    "track a brokerage portfolio",
+    "rebalance a retirement account",
+    "chart a stock ticker",
+    "read an earnings transcript",
+    "screen stocks against a rule",
+    "compare an etf on cost",
+    "see net worth across accounts",
+    "budget monthly spending"
+  ],
+  "searchPhrases": [
+    "track a brokerage portfolio",
+    "help me track a brokerage portfolio",
+    "can you track a brokerage portfolio",
+    "rebalance a retirement account",
+    "help me rebalance a retirement account",
+    "can you rebalance a retirement account",
+    "chart a stock ticker",
+    "help me chart a stock ticker",
+    "can you chart a stock ticker",
+    "read an earnings transcript",
+    "help me read an earnings transcript",
+    "can you read an earnings transcript"
   ]
 }

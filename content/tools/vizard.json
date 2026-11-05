@@ -62,16 +62,27 @@
     "finalUrl": "https://vizard.ai/"
   },
   "capabilities": [
-    "clip a long video into shorts",
-    "add captions automatically",
-    "resize a video for tiktok",
-    "find highlights in a podcast",
-    "export a social clip",
-    "make a engaging social-ready videos with just a few clicks",
-    "transcribe vizard transcribes a video, cuts out speakers,",
-    "edit by text trim videos by deleting the corresponding video transcription",
-    "edit videos as easy as a doc",
-    "make a videos fit different social platform instantly",
-    "make a videos always stay on brand"
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
   ]
 }

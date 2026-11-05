@@ -62,17 +62,27 @@
     "finalUrl": "https://www.symbolab.com/"
   },
   "capabilities": [
-    "explain a problem",
-    "learn a subject",
-    "solve a problem",
-    "help students see patterns",
-    "build confidence along the way",
-    "generate the best way forward",
-    "practice problems : explore a wide range of examples, supported by hints designed to guide you towards the next step",
-    "use math solver - trusted online ai math calculator",
-    "use symbolab symbolab",
-    "use more than a calculator here",
-    "use features of symbolab",
-    "use ai math calculator step-by-step solutions how symbolab"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

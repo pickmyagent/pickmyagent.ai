@@ -72,13 +72,30 @@
     "coding-agents": "Desktop IDE agent that can edit the repo, with a free plan of limited requests."
   },
   "capabilities": [
-    "request a review from a customer",
-    "work from developers who want an agent inside the editor",
-    "work from day-to-day coding where the agent should touch the repo",
-    "work from desktop ide with an agent that can edit, run, and review code",
-    "work from free plan includes limited agent and chat requests in a desktop ide that can edit the repo",
-    "request the review from a customer",
-    "work from developers who want an agent inside a editor",
-    "work from developers who want the agent inside the editor"
+    "fix a failing test",
+    "review a pull request",
+    "refactor a function",
+    "autocomplete code in an editor",
+    "pair program in a terminal",
+    "explain a stack trace",
+    "build an app from a prompt",
+    "write a unit test"
+  ],
+  "searchPhrases": [
+    "fix a failing test",
+    "help me fix a failing test",
+    "can you fix a failing test",
+    "review a pull request",
+    "help me review a pull request",
+    "can you review a pull request",
+    "refactor a function",
+    "help me refactor a function",
+    "can you refactor a function",
+    "autocomplete code in an editor",
+    "help me autocomplete code in an editor",
+    "can you autocomplete code in an editor",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

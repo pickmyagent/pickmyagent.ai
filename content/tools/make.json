@@ -70,13 +70,27 @@
     "workflow-automation": "Visual automations across apps, and the pricing FAQ describes 1,000 free credits a month."
   },
   "capabilities": [
-    "help teams that want a hosted builder rather than a library",
-    "work from teams that want a hosted builder rather than a library",
-    "work from visual automation across apps. the free plan includes 1,000 credits a month",
-    "work from official pricing faq describes a free plan with 1,000 credits per month for visual automations",
-    "help teams that want the hosted builder rather than a library",
-    "work from teams that want the hosted builder rather than a library",
-    "work from visual automation across apps. the free plan includes 1,000 credits the month",
-    "work from visual automation across apps. a free plan includes 1,000 credits a month"
+    "automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "connect a crm to email",
+    "schedule a recurring job",
+    "move a row into another app",
+    "trigger a step when a payment succeeds",
+    "sync a contact between two apps",
+    "build a zapier style automation"
+  ],
+  "searchPhrases": [
+    "automate a workflow across apps",
+    "help me automate a workflow across apps",
+    "can you automate a workflow across apps",
+    "send a slack message when a form is submitted",
+    "help me send a slack message when a form is submitted",
+    "can you send a slack message when a form is submitted",
+    "connect a crm to email",
+    "help me connect a crm to email",
+    "can you connect a crm to email",
+    "schedule a recurring job",
+    "help me schedule a recurring job",
+    "can you schedule a recurring job"
   ]
 }

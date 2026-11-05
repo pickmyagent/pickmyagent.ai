@@ -62,13 +62,30 @@
     "finalUrl": "https://cline.bot/"
   },
   "capabilities": [
-    "edit files with an agent in the editor",
-    "run a terminal command for a task",
-    "use a model you bring",
-    "browse docs while coding",
-    "apply a multi file change",
-    "edit across a project coordinated multi-file changes with linter-aware fixes, diffs, checkpoints, and one-click undo on every step",
-    "edit across a project coordinated multi-file changes with linter-aware fixes, diffs, checkpoints,",
-    "plan then act toggle plan mode to align on a strategy, then act to execute"
+    "fix a failing test",
+    "review a pull request",
+    "refactor a function",
+    "autocomplete code in an editor",
+    "pair program in a terminal",
+    "explain a stack trace",
+    "build an app from a prompt",
+    "write a unit test"
+  ],
+  "searchPhrases": [
+    "fix a failing test",
+    "help me fix a failing test",
+    "can you fix a failing test",
+    "review a pull request",
+    "help me review a pull request",
+    "can you review a pull request",
+    "refactor a function",
+    "help me refactor a function",
+    "can you refactor a function",
+    "autocomplete code in an editor",
+    "help me autocomplete code in an editor",
+    "can you autocomplete code in an editor",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

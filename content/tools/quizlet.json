@@ -69,13 +69,26 @@
     "tutoring": "Turns notes into a practice test and explains a homework step with more practice."
   },
   "capabilities": [
-    "explain a homework step",
-    "turn notes into a practice test and explains a homework step with more practice",
-    "turn notes into a practice test",
-    "turn explains a homework step with more practice",
-    "work from practice tests from notes in science or humanities",
-    "work from homework help that explains a step and adds practice",
-    "explain the homework step",
-    "turn notes into the practice test and explains a homework step with more practice"
+    "quiz a student on a chapter",
+    "make practice problems",
+    "build a study plan",
+    "turn notes into flashcards",
+    "walk through a worked example",
+    "track what a student has mastered",
+    "give feedback on a practice answer"
+  ],
+  "searchPhrases": [
+    "quiz a student on a chapter",
+    "help me quiz a student on a chapter",
+    "can you quiz a student on a chapter",
+    "make practice problems",
+    "help me make practice problems",
+    "can you make practice problems",
+    "build a study plan",
+    "help me build a study plan",
+    "can you build a study plan",
+    "turn notes into flashcards",
+    "help me turn notes into flashcards",
+    "can you turn notes into flashcards"
   ]
 }

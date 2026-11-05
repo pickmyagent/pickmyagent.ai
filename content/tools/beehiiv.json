@@ -63,13 +63,26 @@
   },
   "capabilities": [
     "write a newsletter",
-    "grow an email list",
-    "send a newsletter campaign",
-    "recommend other newsletters",
-    "see which links readers click",
-    "find the best plan for you free starting at $ 0 what's included",
-    "create the most powerful editing and design tools in email",
-    "create the most powerful editing",
-    "design tools in email"
+    "build an abandoned cart email",
+    "triage an inbox",
+    "write a drip sequence for subscribers",
+    "draft subject lines for a launch",
+    "snooze an email thread",
+    "send a behavior triggered email",
+    "draft a reply to a thread"
+  ],
+  "searchPhrases": [
+    "write a newsletter",
+    "help me write a newsletter",
+    "can you write a newsletter",
+    "build an abandoned cart email",
+    "help me build an abandoned cart email",
+    "can you build an abandoned cart email",
+    "triage an inbox",
+    "help me triage an inbox",
+    "can you triage an inbox",
+    "write a drip sequence for subscribers",
+    "help me write a drip sequence for subscribers",
+    "can you write a drip sequence for subscribers"
   ]
 }

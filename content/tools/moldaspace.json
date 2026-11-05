@@ -70,13 +70,26 @@
   "id": "moldaspace",
   "capabilities": [
     "turn a floor plan into a render",
-    "restyle a room from a photo",
-    "turn a floor plan, a sketch, or a room photo into a photoreal render",
-    "turn a room photo into a photoreal render",
-    "turn a floor plan, a sketch, or a room photo into a photoreal render in the browser",
-    "turn a room photo into a photoreal render in the browser",
-    "work from floor plan or sketch that should become a client render in one meeting",
-    "work from room photo you want restyled before a design approval",
-    "turn the floor plan into a render"
+    "make a picture from a blueprint",
+    "render an elevation of a house",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan"
+  ],
+  "searchPhrases": [
+    "turn a floor plan into a render",
+    "help me turn a floor plan into a render",
+    "can you turn a floor plan into a render",
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "render an elevation of a house",
+    "help me render an elevation of a house",
+    "can you render an elevation of a house",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout"
   ]
 }

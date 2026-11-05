@@ -80,13 +80,29 @@
     "multi-agent-workflows": "Visual builder for agent workflows, with a self-hosted community edition."
   },
   "capabilities": [
-    "help teams who want a visual agent builder they can self-host",
-    "work from teams who want a visual agent builder they can self-host",
-    "work from projects that need a product ui, not only a library",
-    "work from open-source platform to build agent workflows visually, with a self-hosted community edition",
-    "work from there is a self-hosted community edition, and the cloud free plan includes 200 message credits",
-    "help teams who want the visual agent builder they can self-host",
-    "work from teams who want the visual agent builder they can self-host",
-    "work from projects that need the product ui, not only a library"
+    "orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "keep memory for an agent",
+    "use an open source agent framework",
+    "hand a task from one agent to another",
+    "define a tool an agent can call",
+    "trace an agent run",
+    "retry a failed agent step"
+  ],
+  "searchPhrases": [
+    "orchestrate agents that use tools",
+    "help me orchestrate agents that use tools",
+    "can you orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "help me run a multi agent research crew",
+    "can you run a multi agent research crew",
+    "keep memory for an agent",
+    "help me keep memory for an agent",
+    "can you keep memory for an agent",
+    "use an open source agent framework",
+    "help me use an open source agent framework",
+    "can you use an open source agent framework",
+    "open source agent framework",
+    "memory for an agent"
   ]
 }

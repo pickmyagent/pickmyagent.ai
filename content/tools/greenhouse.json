@@ -62,11 +62,27 @@
     "finalUrl": "https://www.greenhouse.com/"
   },
   "capabilities": [
-    "track applicants",
-    "structure an interview",
-    "score a candidate",
-    "report on a hiring funnel",
+    "source candidates for a role",
+    "write a job description",
+    "screen resumes for a role",
     "schedule an interview panel",
-    "make a application more visible for the role you want most"
+    "track applicants in one place",
+    "run a performance review cycle",
+    "keep an applicant pipeline",
+    "compare candidates on one list"
+  ],
+  "searchPhrases": [
+    "source candidates for a role",
+    "help me source candidates for a role",
+    "can you source candidates for a role",
+    "write a job description",
+    "help me write a job description",
+    "can you write a job description",
+    "screen resumes for a role",
+    "help me screen resumes for a role",
+    "can you screen resumes for a role",
+    "schedule an interview panel",
+    "help me schedule an interview panel",
+    "can you schedule an interview panel"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.todoist.com/"
   },
   "capabilities": [
-    "track a project",
-    "assign a task",
-    "capture and organize tasks instantly using easy-flowing, natural language",
-    "organize tasks instantly using easy-flowing, natural language",
-    "plan with confidence simplify a planning make the most of a time",
-    "schedule due dates, visualize a week in calendar view, and set recurring tasks with ease",
-    "schedule due dates, visualize a week in calendar view,",
-    "organize a teamwork, too a home for a team\u2019s tasks give a team a shared space to collaborate",
-    "create a habit of learning a new language",
-    "publish a marketing content on schedule",
-    "use trusted by 30 million people and teams",
-    "use todoist is the world todoist"
+    "triage an email inbox",
+    "draft a reply to a thread",
+    "schedule a meeting from an email",
+    "summarize a long thread",
+    "snooze a message until later",
+    "turn an email into a task",
+    "find a time on the calendar",
+    "keep a daily task list"
+  ],
+  "searchPhrases": [
+    "triage an email inbox",
+    "help me triage an email inbox",
+    "can you triage an email inbox",
+    "draft a reply to a thread",
+    "help me draft a reply to a thread",
+    "can you draft a reply to a thread",
+    "schedule a meeting from an email",
+    "help me schedule a meeting from an email",
+    "can you schedule a meeting from an email",
+    "summarize a long thread",
+    "help me summarize a long thread",
+    "can you summarize a long thread"
   ]
 }

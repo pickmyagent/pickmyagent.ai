@@ -62,17 +62,27 @@
     "finalUrl": "https://pitch.com/"
   },
   "capabilities": [
-    "present live",
-    "use current a div span",
-    "use current a span span span",
-    "use current a p span span",
-    "use current a h1 span span",
-    "use current a h2 span span",
-    "use current a h3 span span",
-    "use current a h4 span span",
-    "use current a h5 span span",
-    "use current a h6 span span",
-    "use inter placeholder",
-    "use eina 03 bold"
+    "build a pitch deck from an outline",
+    "turn a doc into slides",
+    "make google slides from a prompt",
+    "write speaker notes for a deck",
+    "draft a presentation about quarterly numbers",
+    "redraw a slide for clarity",
+    "export a finished deck",
+    "shorten a slide to one idea"
+  ],
+  "searchPhrases": [
+    "build a pitch deck from an outline",
+    "help me build a pitch deck from an outline",
+    "can you build a pitch deck from an outline",
+    "turn a doc into slides",
+    "help me turn a doc into slides",
+    "can you turn a doc into slides",
+    "make google slides from a prompt",
+    "help me make google slides from a prompt",
+    "can you make google slides from a prompt",
+    "write speaker notes for a deck",
+    "help me write speaker notes for a deck",
+    "can you write speaker notes for a deck"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.rev.com/"
   },
   "capabilities": [
-    "transcribe audio",
-    "convert text to speech",
-    "clip key moments fast ai templates pre-built workflows: chronologies, affidavits, more mobile app record",
-    "estimate costs for human and ai transcripts, captions, and subtitles in seconds, and find out how much a subscription can save you",
-    "estimate costs for human",
-    "find out how much a subscription can save you",
-    "edit inline and export straight to word or pdf",
-    "edit inline, then clip the exact moment that matters",
-    "record transcribe, and review from a phone or tablet",
-    "review from a phone or tablet",
-    "build a stronger case on evidence you can verify",
-    "create a document from it: a report, a motion, a case summary, all with the exact citation to the evidence attached"
+    "turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "remove noise from a podcast",
+    "transcribe an interview",
+    "make a voiceover in another language",
+    "clean up zoom audio",
+    "adjust the pace of a voiceover",
+    "export a narration track"
+  ],
+  "searchPhrases": [
+    "turn text into speech for an ad",
+    "help me turn text into speech for an ad",
+    "can you turn text into speech for an ad",
+    "clone a voice from a short clip",
+    "help me clone a voice from a short clip",
+    "can you clone a voice from a short clip",
+    "remove noise from a podcast",
+    "help me remove noise from a podcast",
+    "can you remove noise from a podcast",
+    "transcribe an interview",
+    "help me transcribe an interview",
+    "can you transcribe an interview"
   ]
 }

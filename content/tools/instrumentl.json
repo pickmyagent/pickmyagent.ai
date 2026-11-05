@@ -62,14 +62,27 @@
     "finalUrl": "https://www.instrumentl.com/"
   },
   "capabilities": [
-    "find a grant",
-    "track a grant deadline",
-    "manage a prospect",
-    "save a funder",
-    "get a grant match",
-    "manage every grant in one workspace",
-    "find funders that fit",
-    "write great proposals faster",
-    "extract funder-approved categories automatically"
+    "draft a grant proposal",
+    "find grants for a food pantry",
+    "build a donation form for a campaign",
+    "email donors about a campaign",
+    "track grant deadlines",
+    "write a grant narrative",
+    "summarize a funder guideline",
+    "thank a donor"
+  ],
+  "searchPhrases": [
+    "draft a grant proposal",
+    "help me draft a grant proposal",
+    "can you draft a grant proposal",
+    "find grants for a food pantry",
+    "help me find grants for a food pantry",
+    "can you find grants for a food pantry",
+    "build a donation form for a campaign",
+    "help me build a donation form for a campaign",
+    "can you build a donation form for a campaign",
+    "email donors about a campaign",
+    "help me email donors about a campaign",
+    "can you email donors about a campaign"
   ]
 }

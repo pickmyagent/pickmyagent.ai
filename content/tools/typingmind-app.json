@@ -62,17 +62,27 @@
     "finalUrl": "https://www.typingmind.com/"
   },
   "capabilities": [
-    "track a project",
-    "assign a task",
-    "use pay only for what you use",
-    "use llms supported",
-    "use ai chats trusted by the world",
-    "use all models in one place",
-    "use private and local",
-    "use get a lifetime license 50",
-    "use typingmind daily centralized all llm chats",
-    "use build agents",
-    "use so much better than the openai user interface",
-    "use mirel vasile co-founder nextasee and anticipal why typingmind"
+    "triage an email inbox",
+    "draft a reply to a thread",
+    "schedule a meeting from an email",
+    "summarize a long thread",
+    "snooze a message until later",
+    "turn an email into a task",
+    "find a time on the calendar",
+    "keep a daily task list"
+  ],
+  "searchPhrases": [
+    "triage an email inbox",
+    "help me triage an email inbox",
+    "can you triage an email inbox",
+    "draft a reply to a thread",
+    "help me draft a reply to a thread",
+    "can you draft a reply to a thread",
+    "schedule a meeting from an email",
+    "help me schedule a meeting from an email",
+    "can you schedule a meeting from an email",
+    "summarize a long thread",
+    "help me summarize a long thread",
+    "can you summarize a long thread"
   ]
 }

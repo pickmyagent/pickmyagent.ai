@@ -62,17 +62,27 @@
     "finalUrl": "https://www.alphasense.com/"
   },
   "capabilities": [
-    "monitor industry news",
-    "use welcome to alphasense",
-    "use we supply high-quality gas sensors",
-    "use discover more",
-    "use first galvanic lead-free oxygen sensor introducing new advanc",
-    "use pid sensors industry-leading air quality sensors high-quality",
-    "use sensors for gas safety best-in-class particle counting soluti",
-    "use monitors about us overview quality onewebnavigation-new techn",
-    "use onewebnavigation-new responsibility onewebnavigation-new work",
-    "use us onewebnavigation-new events onewebnavigation-new contact o",
-    "use webnavigation-new newsletter onewebnavigation-new webstore pr",
-    "use overview product selector onewebnavigation-new downloads over"
+    "track a brokerage portfolio",
+    "rebalance a retirement account",
+    "chart a stock ticker",
+    "read an earnings transcript",
+    "screen stocks against a rule",
+    "compare an etf on cost",
+    "see net worth across accounts",
+    "budget monthly spending"
+  ],
+  "searchPhrases": [
+    "track a brokerage portfolio",
+    "help me track a brokerage portfolio",
+    "can you track a brokerage portfolio",
+    "rebalance a retirement account",
+    "help me rebalance a retirement account",
+    "can you rebalance a retirement account",
+    "chart a stock ticker",
+    "help me chart a stock ticker",
+    "can you chart a stock ticker",
+    "read an earnings transcript",
+    "help me read an earnings transcript",
+    "can you read an earnings transcript"
   ]
 }

@@ -66,13 +66,27 @@
     "hire-candidates": "Recruiting workspace for sourcing, reviewing, and reporting on candidates."
   },
   "capabilities": [
-    "source candidates in a recruiting workspace",
-    "review candidates in a recruiting workspace",
-    "report on candidates in a recruiting workspace",
-    "hire from a recruiting workspace",
-    "source and review candidates together",
-    "work from sourcing and reporting on candidates in one recruiting workspace",
-    "work from recruiting platform to source, review, hire, and report with ai",
-    "source candidates in the recruiting workspace"
+    "source candidates for an opening",
+    "screen resumes against a role",
+    "write an unbiased job post",
+    "schedule candidate interviews",
+    "track applicants through stages",
+    "summarize an interview",
+    "compare candidates on one list",
+    "draft outreach to a prospect"
+  ],
+  "searchPhrases": [
+    "source candidates for an opening",
+    "help me source candidates for an opening",
+    "can you source candidates for an opening",
+    "screen resumes against a role",
+    "help me screen resumes against a role",
+    "can you screen resumes against a role",
+    "write an unbiased job post",
+    "help me write an unbiased job post",
+    "can you write an unbiased job post",
+    "schedule candidate interviews",
+    "help me schedule candidate interviews",
+    "can you schedule candidate interviews"
   ]
 }

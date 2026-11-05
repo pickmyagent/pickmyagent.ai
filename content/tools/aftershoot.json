@@ -63,10 +63,29 @@
   },
   "capabilities": [
     "cull a wedding shoot",
-    "pick the best photos",
-    "edit a batch of photos",
-    "speed up a photo selection",
-    "edit edit entire shoots in a signature style",
-    "retouch touch up a entire album in a click"
+    "retouch a portrait",
+    "replace a sky in a photo",
+    "denoise a raw file",
+    "edit a batch in one style",
+    "straighten a horizon",
+    "lift shadows in a photo",
+    "export a retouched image"
+  ],
+  "searchPhrases": [
+    "cull a wedding shoot",
+    "help me cull a wedding shoot",
+    "can you cull a wedding shoot",
+    "retouch a portrait",
+    "help me retouch a portrait",
+    "can you retouch a portrait",
+    "replace a sky in a photo",
+    "help me replace a sky in a photo",
+    "can you replace a sky in a photo",
+    "denoise a raw file",
+    "help me denoise a raw file",
+    "can you denoise a raw file",
+    "cull this wedding shoot",
+    "denoise the raw file",
+    "retouch the portraits"
   ]
 }

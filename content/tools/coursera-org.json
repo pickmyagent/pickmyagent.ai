@@ -62,17 +62,27 @@
     "finalUrl": "https://www.coursera.org/"
   },
   "capabilities": [
-    "use learn job-ready skills with online courses",
-    "use professional certificates",
-    "use degrees learn job-ready skills with online courses",
-    "use degrees coursera",
-    "use boutros coursera",
-    "source sans pro",
-    "use source sans pro",
-    "use buttontext solid",
-    "use search-inputroot fieldset",
-    "use selectgroup-list div",
-    "use selectgroup-list button",
-    "use selectgroup-divider hr"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

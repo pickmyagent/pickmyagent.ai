@@ -69,13 +69,27 @@
   },
   "id": "spacely",
   "capabilities": [
-    "turn a sketch, a 3d model, or a room photo into a photoreal render",
-    "turn a room photo into a photoreal render",
-    "turn a sketch, a 3d model, or a room photo into a photoreal render, and signup does not require a card",
-    "turn signup does not require a card",
-    "work from sketch or room photo that should become a photoreal render",
-    "work from sketchup view you want to render without leaving the model",
-    "turn the sketch, a 3d model, or a room photo into a photoreal render",
-    "turn the room photo into a photoreal render"
+    "make a 3d model from text",
+    "turn an image into a 3d model",
+    "scan a room into a model",
+    "make a skybox from a prompt",
+    "build a game ready mesh",
+    "export a glb file",
+    "retopologize a scan",
+    "preview a model in the browser"
+  ],
+  "searchPhrases": [
+    "make a 3d model from text",
+    "help me make a 3d model from text",
+    "can you make a 3d model from text",
+    "turn an image into a 3d model",
+    "help me turn an image into a 3d model",
+    "can you turn an image into a 3d model",
+    "scan a room into a model",
+    "help me scan a room into a model",
+    "can you scan a room into a model",
+    "make a skybox from a prompt",
+    "help me make a skybox from a prompt",
+    "can you make a skybox from a prompt"
   ]
 }

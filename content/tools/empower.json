@@ -62,16 +62,27 @@
     "finalUrl": "https://www.darkmatter.com/"
   },
   "capabilities": [
-    "create value from a data insights & research support",
-    "use ai data science",
-    "use company contact",
-    "use systems organize",
-    "use ai navigate the new world of llms",
-    "use rag data science",
-    "use advertising navigate today",
-    "use employees 200+ patents ai",
-    "use read more",
-    "use respond prevent heal solutions cloud security email security",
-    "use darkmatter solutions"
+    "read a bank statement for a loan file",
+    "compare loan scenarios for a borrower",
+    "draft a mortgage presentation",
+    "check whether a guideline allows the dti",
+    "start a digital mortgage application",
+    "flag a suspicious document in a file",
+    "list documents still missing",
+    "summarize a loan scenario"
+  ],
+  "searchPhrases": [
+    "read a bank statement for a loan file",
+    "help me read a bank statement for a loan file",
+    "can you read a bank statement for a loan file",
+    "compare loan scenarios for a borrower",
+    "help me compare loan scenarios for a borrower",
+    "can you compare loan scenarios for a borrower",
+    "draft a mortgage presentation",
+    "help me draft a mortgage presentation",
+    "can you draft a mortgage presentation",
+    "check whether a guideline allows the dti",
+    "help me check whether a guideline allows the dti",
+    "can you check whether a guideline allows the dti"
   ]
 }

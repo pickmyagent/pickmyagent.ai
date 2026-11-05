@@ -62,13 +62,27 @@
     "finalUrl": "https://cronometer.com/"
   },
   "capabilities": [
-    "track micronutrients",
-    "see vitamin intake",
-    "set a nutrition target",
-    "scan a barcode",
-    "track macro & micronutrients",
-    "track up to 95 different nutrients and compounds",
-    "track up to 95 different nutrients",
-    "track all a biometrics from pain symptoms to gut health to blood sugar levels"
+    "build a strength workout",
+    "log a meal you ate",
+    "plan runs for a half marathon",
+    "review last night of sleep",
+    "guide a short meditation",
+    "track daily calories",
+    "adjust a training week",
+    "list a simple mobility routine"
+  ],
+  "searchPhrases": [
+    "build a strength workout",
+    "help me build a strength workout",
+    "can you build a strength workout",
+    "log a meal you ate",
+    "help me log a meal you ate",
+    "can you log a meal you ate",
+    "plan runs for a half marathon",
+    "help me plan runs for a half marathon",
+    "can you plan runs for a half marathon",
+    "review last night of sleep",
+    "help me review last night of sleep",
+    "can you review last night of sleep"
   ]
 }

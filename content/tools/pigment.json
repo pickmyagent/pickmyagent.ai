@@ -62,16 +62,27 @@
     "finalUrl": "https://www.pigment.com/"
   },
   "capabilities": [
-    "plan a budget",
-    "build a forecast model",
-    "collaborate on a business plan",
-    "connect actuals to a plan",
-    "create a scenario",
-    "analyze model, and plan with pigment",
-    "build beautiful reports, in one place",
-    "optimize performance with esg reporting",
-    "analyze performance, explain drivers, and let agents simulate scenarios in real time",
-    "analyze performance, explain drivers,",
-    "build insightful reports, so a team can focus on decisions, not chasing numbers"
+    "ask a question in a spreadsheet cell",
+    "explain a spreadsheet formula",
+    "clean a column of values",
+    "chart a range of cells",
+    "pivot a table",
+    "forecast a column of numbers",
+    "fill a sheet from a prompt",
+    "check a formula that looks wrong"
+  ],
+  "searchPhrases": [
+    "ask a question in a spreadsheet cell",
+    "help me ask a question in a spreadsheet cell",
+    "can you ask a question in a spreadsheet cell",
+    "explain a spreadsheet formula",
+    "help me explain a spreadsheet formula",
+    "can you explain a spreadsheet formula",
+    "clean a column of values",
+    "help me clean a column of values",
+    "can you clean a column of values",
+    "chart a range of cells",
+    "help me chart a range of cells",
+    "can you chart a range of cells"
   ]
 }

@@ -62,17 +62,27 @@
     "finalUrl": "https://www.krea.ai/"
   },
   "capabilities": [
-    "generate an image from a prompt",
-    "enhance a generated image in real time",
-    "edit a region of an image",
-    "train a style for image generation",
-    "create with plugins use krea in a creative software",
-    "create videos seedance, minimax & more",
-    "make ads complete ad campaigns in seconds",
-    "render as you draw create on a live canvas",
-    "create with krea agent previous slide next slide swap model & product recast an ad with a new model",
-    "generate from text, animate between start and end frames, or condition on tagged image, video, and audio references",
-    "generate from text, animate between start",
-    "use sidebar span"
+    "remove the background from a product photo",
+    "make an image from a text prompt",
+    "upscale a blurry picture",
+    "put text inside an image",
+    "generate a product scene",
+    "export a transparent png",
+    "edit an image with a prompt",
+    "vary a picture in a new style"
+  ],
+  "searchPhrases": [
+    "remove the background from a product photo",
+    "help me remove the background from a product photo",
+    "can you remove the background from a product photo",
+    "make an image from a text prompt",
+    "help me make an image from a text prompt",
+    "can you make an image from a text prompt",
+    "upscale a blurry picture",
+    "help me upscale a blurry picture",
+    "can you upscale a blurry picture",
+    "put text inside an image",
+    "help me put text inside an image",
+    "can you put text inside an image"
   ]
 }

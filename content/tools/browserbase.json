@@ -62,15 +62,27 @@
     "finalUrl": "https://www.browserbase.com/"
   },
   "capabilities": [
+    "fill a form in the browser",
+    "click through a checkout flow",
+    "scrape a page into a sheet",
+    "automate a web workflow",
     "run a headless browser for an agent",
-    "manage browser sessions",
-    "connect a playwright script",
-    "scale browser automation",
-    "keep a session for an agent",
-    "search api fetch api browser-as-a-service use the whole web like it\u2019s an api",
-    "build agents that never sleep access the 85% apis can\u2019t reach browserbase browserbase give a agents access to the whole web",
-    "search api web search, built for agents",
-    "build agents that never sleep send a agent to search, organize, and act on data while you do literally anything else",
-    "build agents that never sleep send a agent to search, organize,"
+    "stop at a login screen",
+    "extract a table from a page",
+    "repeat a browser task"
+  ],
+  "searchPhrases": [
+    "fill a form in the browser",
+    "help me fill a form in the browser",
+    "can you fill a form in the browser",
+    "click through a checkout flow",
+    "help me click through a checkout flow",
+    "can you click through a checkout flow",
+    "scrape a page into a sheet",
+    "help me scrape a page into a sheet",
+    "can you scrape a page into a sheet",
+    "automate a web workflow",
+    "help me automate a web workflow",
+    "can you automate a web workflow"
   ]
 }

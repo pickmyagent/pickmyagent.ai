@@ -62,17 +62,27 @@
     "finalUrl": "https://durable.com/"
   },
   "capabilities": [
-    "generate a small business website",
-    "write service descriptions",
-    "publish a site in minutes",
-    "edit a website with ai",
-    "add a contact form",
-    "build a business with durable",
-    "create a website with ai, get discovered with seo and geo, manage customers and grow faster with ai marketing tools",
-    "create a website with ai, get discovered with seo",
-    "build a coaching business, fast",
-    "build a handyman business, fast",
-    "build a cleaning business, fast",
-    "build a marketing agency business, fast"
+    "write a shopify product description",
+    "remove the background on a catalog photo",
+    "rewrite bulk product titles",
+    "draft an abandoned cart note",
+    "generate a simple storefront",
+    "write a product title and bullets",
+    "tag a catalog photo",
+    "update a product listing"
+  ],
+  "searchPhrases": [
+    "write a shopify product description",
+    "help me write a shopify product description",
+    "can you write a shopify product description",
+    "remove the background on a catalog photo",
+    "help me remove the background on a catalog photo",
+    "can you remove the background on a catalog photo",
+    "rewrite bulk product titles",
+    "help me rewrite bulk product titles",
+    "can you rewrite bulk product titles",
+    "draft an abandoned cart note",
+    "help me draft an abandoned cart note",
+    "can you draft an abandoned cart note"
   ]
 }

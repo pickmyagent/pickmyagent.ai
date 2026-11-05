@@ -62,12 +62,27 @@
     "finalUrl": "https://www.kittl.com/"
   },
   "capabilities": [
-    "design a poster with ai",
-    "generate a print graphic",
-    "edit typography on a design",
-    "remove a background in a design",
-    "export a print ready file",
-    "create with top image gen models, pro editing tools, mockups,",
-    "generate ads, posts, campaigns, all on-brand"
+    "design a logo for a business",
+    "build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "mock up a settings screen",
+    "design a poster for an event",
+    "pick colors and type",
+    "export logo files"
+  ],
+  "searchPhrases": [
+    "design a logo for a business",
+    "help me design a logo for a business",
+    "can you design a logo for a business",
+    "build a brand kit from a name",
+    "help me build a brand kit from a name",
+    "can you build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "help me make a wireframe from a sketch",
+    "can you make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "help me draft a landing page from a prompt",
+    "can you draft a landing page from a prompt"
   ]
 }

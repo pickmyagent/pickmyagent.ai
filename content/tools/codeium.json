@@ -62,17 +62,30 @@
     "finalUrl": "https://devin.ai/desktop"
   },
   "capabilities": [
-    "edit multiple files with an agent",
-    "manage any agent, on your own computer or in the cloud, from one command center",
-    "plan review, and ship with a team of agents",
-    "manage any agent",
-    "use manage any agent",
-    "use devin desktop",
-    "use devin manage any agent",
-    "use devin product solutions resources customers pricing blog get",
-    "use learn more",
-    "use devin desktop manage any agent",
-    "use ome for every agent you run learn more",
-    "use agents new session automations security review wiki customize"
+    "fix a failing test",
+    "review a pull request",
+    "refactor a function",
+    "autocomplete code in an editor",
+    "pair program in a terminal",
+    "explain a stack trace",
+    "build an app from a prompt",
+    "write a unit test"
+  ],
+  "searchPhrases": [
+    "fix a failing test",
+    "help me fix a failing test",
+    "can you fix a failing test",
+    "review a pull request",
+    "help me review a pull request",
+    "can you review a pull request",
+    "refactor a function",
+    "help me refactor a function",
+    "can you refactor a function",
+    "autocomplete code in an editor",
+    "help me autocomplete code in an editor",
+    "can you autocomplete code in an editor",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

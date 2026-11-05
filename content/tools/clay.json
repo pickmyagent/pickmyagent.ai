@@ -66,13 +66,27 @@
     "sales-outreach": "Pulls sales data from a marketplace of more than 200 providers, with a free trial."
   },
   "capabilities": [
-    "build lead lists from many data providers in one table",
-    "use a data marketplace of more than 200 providers and offers a free trial",
-    "use a data marketplace of more than 200 providers",
-    "use offers a free trial",
-    "work from building lead lists from many data providers in one table",
-    "work from sales data workspace with a marketplace of 200+ providers and a free trial",
-    "use the data marketplace of more than 200 providers and offers a free trial",
-    "use the data marketplace of more than 200 providers"
+    "write a cold email to a lead",
+    "build an outbound sequence",
+    "find a vp email address",
+    "score a sales email before sending",
+    "summarize a discovery call",
+    "enrich a prospect list",
+    "update a crm pipeline",
+    "set a cadence for inbound leads"
+  ],
+  "searchPhrases": [
+    "write a cold email to a lead",
+    "help me write a cold email to a lead",
+    "can you write a cold email to a lead",
+    "build an outbound sequence",
+    "help me build an outbound sequence",
+    "can you build an outbound sequence",
+    "find a vp email address",
+    "help me find a vp email address",
+    "can you find a vp email address",
+    "score a sales email before sending",
+    "help me score a sales email before sending",
+    "can you score a sales email before sending"
   ]
 }

@@ -62,15 +62,27 @@
     "finalUrl": "https://taplio.com/"
   },
   "capabilities": [
-    "generate a linkedin post",
-    "schedule linkedin content",
-    "find post ideas",
-    "grow a linkedin audience",
-    "turn a audience into leads",
-    "turn a audience into a pipeline",
-    "send dms to warm leads new mcp 2.0 run taplio from claude, chatgpt, manus or any mcp-enabled llm create find ideas",
-    "compare yourself to others",
-    "write a post about the hiring mistake that cost me $40k",
-    "write them in a voice - in minutes"
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
   ]
 }

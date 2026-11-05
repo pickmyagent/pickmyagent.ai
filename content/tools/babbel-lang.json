@@ -62,17 +62,27 @@
     "finalUrl": "https://www.babbel.com/"
   },
   "capabilities": [
-    "practice a lesson",
-    "build a conversation skills with engaging, interactive dialogues",
-    "use learn a language online - fast & effective",
-    "use babbel which language do you want to learn",
-    "use the proven babbel method learn fast",
-    "use talk sooner",
-    "use fast & effective",
-    "use display language",
-    "use with babbel",
-    "use stay motivated with real-time feedback",
-    "build a conversation skills with engaging",
-    "use get helpful grammar tips while reading"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

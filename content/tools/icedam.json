@@ -62,17 +62,27 @@
     "finalUrl": "https://himaxwell.com/"
   },
   "capabilities": [
-    "match a borrower to a loan scenario",
-    "help a loan officer",
-    "schedule a call learn more maxwell\u2019s mortgage solutions suite maxwell goes beyond loan applications",
-    "use an end-to-end digital experience that saves borrowers 15+ minutes per application",
-    "use mortgage technology for lenders",
-    "use point of sale to business intelligence",
-    "use mortgage software for lenders",
-    "use maxwell mortgage technology for lenders",
-    "use mortgage solutions suite point of sale business intelligence",
-    "use maxwell products point of sale customization integrations qui",
-    "use pricer eclose business intelligence fulfillment overview proc",
-    "use underwriting closing diligence private label origination why"
+    "read a bank statement for a loan file",
+    "compare loan scenarios for a borrower",
+    "draft a mortgage presentation",
+    "check whether a guideline allows the dti",
+    "start a digital mortgage application",
+    "flag a suspicious document in a file",
+    "list documents still missing",
+    "summarize a loan scenario"
+  ],
+  "searchPhrases": [
+    "read a bank statement for a loan file",
+    "help me read a bank statement for a loan file",
+    "can you read a bank statement for a loan file",
+    "compare loan scenarios for a borrower",
+    "help me compare loan scenarios for a borrower",
+    "can you compare loan scenarios for a borrower",
+    "draft a mortgage presentation",
+    "help me draft a mortgage presentation",
+    "can you draft a mortgage presentation",
+    "check whether a guideline allows the dti",
+    "help me check whether a guideline allows the dti",
+    "can you check whether a guideline allows the dti"
   ]
 }

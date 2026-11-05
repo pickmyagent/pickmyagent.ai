@@ -62,16 +62,27 @@
     "finalUrl": "https://www.chatpdf.com/"
   },
   "capabilities": [
-    "summarize a paper",
-    "cite a page in an answer",
-    "upload a document",
-    "chat with a research paper",
-    "summarize chat, and analyze",
-    "summarize and answer questions for free",
-    "answer questions for free",
-    "answer multiple choice questions faster than a classmates",
-    "organize multi-file chats bring multiple pdfs into one conversation",
-    "extract the key insights without reading everything",
-    "extract information in seconds, backed up by the latest pdf ai technology"
+    "draft a literature review",
+    "summarize what the papers say",
+    "chat with a pdf",
+    "map citations for a paper",
+    "summarize a study",
+    "find peer reviewed sources",
+    "check whether a claim is supported",
+    "collect quotes from a paper"
+  ],
+  "searchPhrases": [
+    "draft a literature review",
+    "help me draft a literature review",
+    "can you draft a literature review",
+    "summarize what the papers say",
+    "help me summarize what the papers say",
+    "can you summarize what the papers say",
+    "chat with a pdf",
+    "help me chat with a pdf",
+    "can you chat with a pdf",
+    "map citations for a paper",
+    "help me map citations for a paper",
+    "can you map citations for a paper"
   ]
 }

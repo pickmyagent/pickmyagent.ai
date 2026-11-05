@@ -62,17 +62,27 @@
     "finalUrl": "https://lokalise.com/"
   },
   "capabilities": [
-    "translate strings with ai",
-    "manage a translation workflow",
-    "automate the process, integrate with a stack, and keep everything moving smoothly",
-    "automate the process, integrate with a stack,",
-    "automate translation, tm application, qa checks, approvals, and publishing",
-    "automate translation, tm application, qa checks, approvals,",
-    "use lokalise is a continuous localization and translation managem",
-    "use world-class ai localization platform",
-    "use lokalise lokalise is a continuous localization and translatio",
-    "use lokalise language quality",
-    "use turnaround speed",
-    "use one system for the entire business"
+    "translate a contract into spanish",
+    "localize app strings",
+    "translate a pdf",
+    "keep a glossary of product terms",
+    "draft a support reply in french",
+    "translate a help center article",
+    "preserve a term in the glossary",
+    "review a translation for tone"
+  ],
+  "searchPhrases": [
+    "translate a contract into spanish",
+    "help me translate a contract into spanish",
+    "can you translate a contract into spanish",
+    "localize app strings",
+    "help me localize app strings",
+    "can you localize app strings",
+    "translate a pdf",
+    "help me translate a pdf",
+    "can you translate a pdf",
+    "keep a glossary of product terms",
+    "help me keep a glossary of product terms",
+    "can you keep a glossary of product terms"
   ]
 }

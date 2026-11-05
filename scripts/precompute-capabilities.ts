@@ -19,7 +19,10 @@ type Extractor = (
   options: { pooling: "cls"; normalize: true },
 ) => Promise<{ data: Float32Array; dims: number[] }>;
 
-const catalog = JSON.parse(readFileSync(path.resolve("content/catalog.json"), "utf8")) as { tools: Tool[] };
+const catalog = JSON.parse(readFileSync(path.resolve("content/catalog.json"), "utf8")) as {
+  tools: Tool[];
+  categories: { slug: string; title: string; summary: string }[];
+};
 const docs: { id: string; text: string }[] = [];
 for (const tool of catalog.tools) {
   if (tool.generalPurpose || tool.status !== "published") continue;
@@ -27,6 +30,12 @@ for (const tool of catalog.tools) {
     if (text.toLowerCase().startsWith("work from ")) return;
     docs.push({ id: `${tool.slug}#${index}`, text });
   });
+  (tool.searchPhrases ?? []).forEach((text, index) => {
+    docs.push({ id: `${tool.slug}#p${index}`, text });
+  });
+}
+for (const category of catalog.categories) {
+  docs.push({ id: `cat#${category.slug}`, text: `${category.title}. ${category.summary}` });
 }
 
 const extractor = await pipeline("feature-extraction", EMBEDDING_MODEL, {

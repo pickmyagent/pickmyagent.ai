@@ -62,17 +62,26 @@
     "finalUrl": "https://www.joinhoney.com/"
   },
   "capabilities": [
-    "apply a coupon at checkout",
-    "find a promo code",
-    "droplist a product",
-    "use honey we search for coupons at 30",
-    "use we search for coupons at 30",
-    "use automatic coupons",
-    "use promo codes",
-    "use legal follow us get the app automatic coupons",
-    "use free how it works 1",
-    "use shop like normal we",
-    "use with a single click",
-    "use the price tracker droplist have an item you"
+    "find a coupon for a checkout",
+    "show price history for an item",
+    "compare products before a purchase",
+    "find a lower price on a product",
+    "check whether a deal is real",
+    "list pros and cons of a product",
+    "track a price drop"
+  ],
+  "searchPhrases": [
+    "find a coupon for a checkout",
+    "help me find a coupon for a checkout",
+    "can you find a coupon for a checkout",
+    "show price history for an item",
+    "help me show price history for an item",
+    "can you show price history for an item",
+    "compare products before a purchase",
+    "help me compare products before a purchase",
+    "can you compare products before a purchase",
+    "find a lower price on a product",
+    "help me find a lower price on a product",
+    "can you find a lower price on a product"
   ]
 }

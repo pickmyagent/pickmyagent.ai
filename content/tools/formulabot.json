@@ -62,12 +62,25 @@
     "finalUrl": "https://betteranalyst.com/"
   },
   "capabilities": [
-    "explain a spreadsheet formula",
-    "generate an excel formula",
-    "query a sheet in plain language",
-    "create a chart from data",
-    "convert a question into sql",
-    "turn the answer into a dashboard people open",
-    "turn it into an analysis, dashboard, report, or automated workflow"
+    "ask a question in a spreadsheet cell",
+    "clean a column of values",
+    "chart a range of cells",
+    "pivot a table",
+    "forecast a column of numbers",
+    "fill a sheet from a prompt"
+  ],
+  "searchPhrases": [
+    "ask a question in a spreadsheet cell",
+    "help me ask a question in a spreadsheet cell",
+    "can you ask a question in a spreadsheet cell",
+    "clean a column of values",
+    "help me clean a column of values",
+    "can you clean a column of values",
+    "chart a range of cells",
+    "help me chart a range of cells",
+    "can you chart a range of cells",
+    "pivot a table",
+    "help me pivot a table",
+    "can you pivot a table"
   ]
 }

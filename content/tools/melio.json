@@ -62,12 +62,31 @@
     "finalUrl": "https://melio.com/"
   },
   "capabilities": [
-    "pay a vendor bill",
-    "schedule a bill payment",
-    "sync payments to accounting",
-    "pay an international vendor",
-    "track accounts payable",
-    "capture receipts in real time",
-    "send invoices and receive payments online"
+    "read an invoice into the books",
+    "send an invoice to a client",
+    "match a bill to a purchase order",
+    "flag an expense that does not match",
+    "capture a receipt for accounts payable",
+    "track bills waiting to be paid",
+    "record a vendor payment",
+    "pull invoice fields into a ledger"
+  ],
+  "searchPhrases": [
+    "read an invoice into the books",
+    "help me read an invoice into the books",
+    "can you read an invoice into the books",
+    "send an invoice to a client",
+    "help me send an invoice to a client",
+    "can you send an invoice to a client",
+    "match a bill to a purchase order",
+    "help me match a bill to a purchase order",
+    "can you match a bill to a purchase order",
+    "flag an expense that does not match",
+    "help me flag an expense that does not match",
+    "can you flag an expense that does not match",
+    "reconcile quickbooks",
+    "clean up xero",
+    "match the bank feed",
+    "profit and loss for last month"
   ]
 }

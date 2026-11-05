@@ -32,7 +32,7 @@
   "openSource": null,
   "repoUrl": null,
   "bestFor": [
-    "Game teams already on NVIDIA\u2019s developer stack",
+    "Game teams already on NVIDIA’s developer stack",
     "In-game characters where a local or OEM runtime matters"
   ],
   "notIdealFor": [
@@ -68,13 +68,27 @@
     "game-npcs": "Developer downloads and plugins for in-game characters on NVIDIA's stack."
   },
   "capabilities": [
-    "add a plugin for game characters",
-    "work from game teams already on nvidia\u2019s developer stack",
-    "work from in-game characters where a local or oem runtime matters",
-    "work from nvidia ace toolkit for in-game characters, including developer downloads",
-    "work from developer page describes downloads and plugins for in-game characters on nvidia's stack",
-    "add the plugin for game characters",
-    "work from in-game characters where the local or oem runtime matters",
-    "work from nvidia ace toolkit for in-game characters and developer downloads"
+    "give an npc memory of the player",
+    "write dialogue for a game character",
+    "run a game master for a discord table",
+    "prototype a character from a prompt",
+    "keep quest state for an npc",
+    "vary a character voice line",
+    "export dialogue for a game",
+    "remember a choice the player made"
+  ],
+  "searchPhrases": [
+    "give an npc memory of the player",
+    "help me give an npc memory of the player",
+    "can you give an npc memory of the player",
+    "write dialogue for a game character",
+    "help me write dialogue for a game character",
+    "can you write dialogue for a game character",
+    "run a game master for a discord table",
+    "help me run a game master for a discord table",
+    "can you run a game master for a discord table",
+    "prototype a character from a prompt",
+    "help me prototype a character from a prompt",
+    "can you prototype a character from a prompt"
   ]
 }

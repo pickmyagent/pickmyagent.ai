@@ -62,17 +62,27 @@
     "finalUrl": "https://capacities.io/"
   },
   "capabilities": [
-    "search notes",
-    "ask a question over docs",
-    "organize a wiki",
-    "capture a note",
-    "find it at a desk",
-    "find what you need the moment you need it",
-    "use ideas nowhere",
-    "use organizing has become the work",
-    "use capacities capacities product resources download pricing disc",
-    "use back to school notes",
-    "use ai visual note-taking notes",
-    "use pro back to school season"
+    "search a company wiki",
+    "answer a question across team docs",
+    "link notes to each other",
+    "find where a policy was written",
+    "summarize a handbook page",
+    "ask a question about an sop",
+    "collect sources for an internal answer",
+    "keep a team knowledge base"
+  ],
+  "searchPhrases": [
+    "search a company wiki",
+    "help me search a company wiki",
+    "can you search a company wiki",
+    "answer a question across team docs",
+    "help me answer a question across team docs",
+    "can you answer a question across team docs",
+    "link notes to each other",
+    "help me link notes to each other",
+    "can you link notes to each other",
+    "find where a policy was written",
+    "help me find where a policy was written",
+    "can you find where a policy was written"
   ]
 }

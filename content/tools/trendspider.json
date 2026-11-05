@@ -62,17 +62,27 @@
     "finalUrl": "https://trendspider.com/"
   },
   "capabilities": [
-    "scan charts for a setup",
-    "backtest a trading strategy",
-    "set an alert on a chart",
-    "analyze technical indicators",
-    "automate a chart scan",
-    "analyze charts & market data elevate a technical and fundamental analysis with trendspider\u2019s automated, industry-leading charting platform",
-    "analyze charts & market data elevate a technical",
-    "create & refine strategies design, test, and refine a own trading systems using trendspider\u2019s strategy tester",
-    "create & refine strategies design, test,",
-    "automate the grunt work, get more done, faster, and without compromise",
-    "automate the grunt work, get more done, faster,",
-    "find analyze, test, and execute trades with an unfair advantage"
+    "track a brokerage portfolio",
+    "rebalance a retirement account",
+    "chart a stock ticker",
+    "read an earnings transcript",
+    "screen stocks against a rule",
+    "compare an etf on cost",
+    "see net worth across accounts",
+    "budget monthly spending"
+  ],
+  "searchPhrases": [
+    "track a brokerage portfolio",
+    "help me track a brokerage portfolio",
+    "can you track a brokerage portfolio",
+    "rebalance a retirement account",
+    "help me rebalance a retirement account",
+    "can you rebalance a retirement account",
+    "chart a stock ticker",
+    "help me chart a stock ticker",
+    "can you chart a stock ticker",
+    "read an earnings transcript",
+    "help me read an earnings transcript",
+    "can you read an earnings transcript"
   ]
 }

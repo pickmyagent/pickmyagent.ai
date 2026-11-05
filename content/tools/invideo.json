@@ -62,11 +62,27 @@
     "finalUrl": "https://invideo.io/"
   },
   "capabilities": [
-    "turn a prompt into a video",
-    "edit a video with text commands",
-    "generate captions for a video",
-    "make a social video from a script",
-    "edit a first project no need to become a prompt engineer you're an editor, not an ai expert",
-    "create video helping creatives stay creative multiplayer mode collaborate in real time with live cursors to show what everyone's working on"
+    "make a video from a text prompt",
+    "turn an image into a video",
+    "add captions to an interview",
+    "cut silences from a clip",
+    "make an avatar video from a script",
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
   ]
 }

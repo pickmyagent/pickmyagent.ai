@@ -62,12 +62,27 @@
     "finalUrl": "https://www.dubsado.com/"
   },
   "capabilities": [
-    "send a client proposal",
-    "automate a workflow",
-    "collect a form",
-    "schedule a project",
-    "make money flow proposal, contract,",
-    "capture and convert leads turn inquiries into booked clients, automatically",
-    "send invoice and accept payments keep cash flowing without keeping track by hand"
+    "draft a proposal and an invoice",
+    "text a customer to request a review",
+    "schedule a plumbing job",
+    "draft a client contract for a freelancer",
+    "plan the week for a one person shop",
+    "follow up with a waiting customer",
+    "capture a receipt and a customer note",
+    "keep a simple local business checklist"
+  ],
+  "searchPhrases": [
+    "draft a proposal and an invoice",
+    "help me draft a proposal and an invoice",
+    "can you draft a proposal and an invoice",
+    "text a customer to request a review",
+    "help me text a customer to request a review",
+    "can you text a customer to request a review",
+    "schedule a plumbing job",
+    "help me schedule a plumbing job",
+    "can you schedule a plumbing job",
+    "draft a client contract for a freelancer",
+    "help me draft a client contract for a freelancer",
+    "can you draft a client contract for a freelancer"
   ]
 }

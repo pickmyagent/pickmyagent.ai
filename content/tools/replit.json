@@ -70,13 +70,30 @@
     "coding-agents": "Browser IDE with a coding agent, and a recorded free plan of 30 chat hours."
   },
   "capabilities": [
-    "use a coding agent in the browser",
-    "work from coding in the browser, once you confirm the current product yourself",
-    "work from browser ide with a coding agent",
-    "work from recorded free plan includes up to 30 hours of chat and 60 projects in the browser ide",
-    "use the coding agent in the browser",
-    "use a coding agent in a browser",
-    "work from coding in a browser, once you confirm the current product yourself",
-    "work from browser ide with the coding agent"
+    "fix a failing test",
+    "review a pull request",
+    "refactor a function",
+    "autocomplete code in an editor",
+    "pair program in a terminal",
+    "explain a stack trace",
+    "build an app from a prompt",
+    "write a unit test"
+  ],
+  "searchPhrases": [
+    "fix a failing test",
+    "help me fix a failing test",
+    "can you fix a failing test",
+    "review a pull request",
+    "help me review a pull request",
+    "can you review a pull request",
+    "refactor a function",
+    "help me refactor a function",
+    "can you refactor a function",
+    "autocomplete code in an editor",
+    "help me autocomplete code in an editor",
+    "can you autocomplete code in an editor",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

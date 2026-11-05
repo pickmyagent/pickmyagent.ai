@@ -67,13 +67,26 @@
     "customer-support": "Sells a customer-support AI agent at $19 per seat per month plus $0.99 per outcome."
   },
   "capabilities": [
-    "run an ai agent on top of the inbox",
-    "use a customer-support ai agent at $19 per seat per month plus $0.99 per outcome",
-    "help a support inbox that wants an ai agent on top of intercom seats",
-    "work from support inbox that wants an ai agent on top of intercom seats",
-    "work from support agent priced from per outcome and per seat each month",
-    "work from intercom lists fin from per outcome and a seat price of per month on the starter plan",
-    "run an ai agent on top of a inbox",
-    "run the ai agent on top of the inbox"
+    "answer a support ticket",
+    "check an order status",
+    "deflect a refund question",
+    "answer from a help center",
+    "draft a reply to an angry customer",
+    "apply a support macro",
+    "route a ticket to the right queue",
+    "cite the policy in a reply"
+  ],
+  "searchPhrases": [
+    "answer a support ticket",
+    "help me answer a support ticket",
+    "can you answer a support ticket",
+    "check an order status",
+    "help me check an order status",
+    "can you check an order status",
+    "deflect a refund question",
+    "help me deflect a refund question",
+    "can you deflect a refund question",
+    "answer from a help center",
+    "can you answer from a help center"
   ]
 }

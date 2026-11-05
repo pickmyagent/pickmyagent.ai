@@ -62,17 +62,30 @@
     "finalUrl": "https://www.mintlify.com/"
   },
   "capabilities": [
-    "keep docs in sync with code",
-    "search documentation",
-    "use self-updating documentation for startups",
-    "use mintlify - the documentation platform for agents self-updatin",
-    "use agents that keep work moving 24/7",
-    "use agent-native platform self-updating knowledge control who has",
-    "use agent traffic 77",
-    "use the intelligent documentation platform self-updating document",
-    "use get started sign up with google join 20",
-    "use pages read 10",
-    "search requests 129",
-    "use search requests 129"
+    "read an api reference",
+    "trace an error in a service",
+    "review a code change",
+    "document a function",
+    "search a codebase",
+    "run a check on a repo",
+    "explain a stack trace",
+    "scaffold a small module"
+  ],
+  "searchPhrases": [
+    "read an api reference",
+    "help me read an api reference",
+    "can you read an api reference",
+    "trace an error in a service",
+    "help me trace an error in a service",
+    "can you trace an error in a service",
+    "review a code change",
+    "help me review a code change",
+    "can you review a code change",
+    "document a function",
+    "help me document a function",
+    "can you document a function",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

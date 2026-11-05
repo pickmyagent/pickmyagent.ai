@@ -62,17 +62,27 @@
     "finalUrl": "https://www.gigasheet.com/"
   },
   "capabilities": [
-    "group data without a database",
-    "analyze a large file",
-    "compare negotiated rates by provider, payer,",
-    "analyze networks with gigasheet analytics",
-    "use gigasheet turns healthcare price transparency data into clear",
-    "use benchmark rates",
-    "use mrf data directly",
-    "use healthcare price transparency data & tools",
-    "use gigasheet healthcare price intelligence trusted by healthcare",
-    "use made transparent",
-    "use see rates clearly",
-    "use compete confidently"
+    "ask a question in a spreadsheet cell",
+    "explain a spreadsheet formula",
+    "clean a column of values",
+    "chart a range of cells",
+    "pivot a table",
+    "forecast a column of numbers",
+    "fill a sheet from a prompt",
+    "check a formula that looks wrong"
+  ],
+  "searchPhrases": [
+    "ask a question in a spreadsheet cell",
+    "help me ask a question in a spreadsheet cell",
+    "can you ask a question in a spreadsheet cell",
+    "explain a spreadsheet formula",
+    "help me explain a spreadsheet formula",
+    "can you explain a spreadsheet formula",
+    "clean a column of values",
+    "help me clean a column of values",
+    "can you clean a column of values",
+    "chart a range of cells",
+    "help me chart a range of cells",
+    "can you chart a range of cells"
   ]
 }

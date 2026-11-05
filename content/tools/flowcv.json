@@ -62,17 +62,27 @@
     "finalUrl": "https://flowcv.com/"
   },
   "capabilities": [
-    "build a resume",
-    "tailor a resume to a job",
-    "write a cover letter",
-    "choose a template",
-    "build a professional, ats-ready resume for free in minutes",
-    "edit a resume (cv)",
-    "design until a resume feels like you",
-    "use free online resume builder",
-    "use cv maker build a professional",
-    "use ats-ready resume for free in minutes",
-    "use unlimited downloads",
-    "use no hidden fees"
+    "tailor a resume to a job description",
+    "match resume keywords for an ats",
+    "rewrite resume bullets",
+    "draft a cover letter for a role",
+    "improve a linkedin headline",
+    "score a resume against a posting",
+    "shorten a long resume",
+    "turn a career history into bullets"
+  ],
+  "searchPhrases": [
+    "tailor a resume to a job description",
+    "help me tailor a resume to a job description",
+    "can you tailor a resume to a job description",
+    "match resume keywords for an ats",
+    "help me match resume keywords for an ats",
+    "can you match resume keywords for an ats",
+    "rewrite resume bullets",
+    "help me rewrite resume bullets",
+    "can you rewrite resume bullets",
+    "draft a cover letter for a role",
+    "help me draft a cover letter for a role",
+    "can you draft a cover letter for a role"
   ]
 }

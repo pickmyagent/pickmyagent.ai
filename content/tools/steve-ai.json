@@ -62,17 +62,27 @@
     "finalUrl": "https://www.steve.ai/"
   },
   "capabilities": [
-    "generate a video from a prompt",
-    "edit a video",
+    "make a video from a text prompt",
     "turn an image into a video",
-    "export a clip",
-    "animate a photo",
-    "turn blogs, ideas, or audio into professional ai videos",
-    "create generative ai, live action, or moving videos in minutes",
-    "turn ideas into structured, professional videos in minutes",
-    "generate 7+ video output styles, including animations, generative ai, and live videos",
-    "generate 7+ video output styles, including animations, generative ai,",
-    "create engaging videos for social media, education, l&d training, promotional ads, or kids\u2019 storybooks from a single starting point",
-    "turn it into a finished video using a idea"
+    "add captions to an interview",
+    "cut silences from a clip",
+    "make an avatar video from a script",
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
   ]
 }

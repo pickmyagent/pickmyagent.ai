@@ -62,14 +62,27 @@
     "finalUrl": "https://fellow.ai/"
   },
   "capabilities": [
-    "track action items",
-    "record a meeting",
-    "use fellow records",
-    "use enterprise security and compliance controls",
-    "use fellow fellow records",
-    "use enterprise and regulated teams",
-    "use fellow product",
-    "use built for every team",
-    "use gdpr & hipaa"
+    "transcribe a meeting",
+    "pull action items from a call",
+    "summarize a zoom call",
+    "take notes on a customer call",
+    "clip a highlight from an interview",
+    "write a recap for people who missed it",
+    "list decisions from a call",
+    "turn a transcript into tasks"
+  ],
+  "searchPhrases": [
+    "transcribe a meeting",
+    "help me transcribe a meeting",
+    "can you transcribe a meeting",
+    "pull action items from a call",
+    "help me pull action items from a call",
+    "can you pull action items from a call",
+    "summarize a zoom call",
+    "help me summarize a zoom call",
+    "can you summarize a zoom call",
+    "take notes on a customer call",
+    "help me take notes on a customer call",
+    "can you take notes on a customer call"
   ]
 }

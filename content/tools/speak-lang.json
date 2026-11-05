@@ -62,17 +62,27 @@
     "finalUrl": "https://www.speak.com/"
   },
   "capabilities": [
-    "practice a lesson",
-    "practice repeat it until you feel confident you speak the same patterns in new situations, again and again",
-    "practice repeat it until you feel confident you speak the same patterns in new situations, again",
-    "use repeat it until you feel confident real conversation",
-    "use built by experts",
-    "use explore home careers blog b2b english english",
-    "use deutsch get started",
-    "use speak a new language with confidence",
-    "use start speaking for free don",
-    "use learn the phrases native speakers use",
-    "practice them until they",
-    "use practice them until they"
+    "tutor a calculus problem",
+    "explain a homework step",
+    "make flashcards from notes",
+    "practice a language conversation",
+    "scan a math problem",
+    "build a study plan",
+    "quiz a chapter",
+    "give a language lesson"
+  ],
+  "searchPhrases": [
+    "tutor a calculus problem",
+    "help me tutor a calculus problem",
+    "can you tutor a calculus problem",
+    "explain a homework step",
+    "help me explain a homework step",
+    "can you explain a homework step",
+    "make flashcards from notes",
+    "help me make flashcards from notes",
+    "can you make flashcards from notes",
+    "practice a language conversation",
+    "help me practice a language conversation",
+    "can you practice a language conversation"
   ]
 }

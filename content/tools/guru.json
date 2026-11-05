@@ -66,13 +66,27 @@
     "knowledge-qa": "Company knowledge base with agents that find and improve information."
   },
   "capabilities": [
-    "find company information with a knowledge agent",
-    "improve company information with a knowledge agent",
-    "answer from verified cards",
-    "find information in a company knowledge base",
-    "work from company wiki with agents that answer from verified cards",
-    "work from knowledge base whose agents find and improve company information",
-    "find company information with the knowledge agent",
-    "improve company information with the knowledge agent"
+    "search a company wiki",
+    "answer a question across team docs",
+    "link notes to each other",
+    "find where a policy was written",
+    "summarize a handbook page",
+    "ask a question about an sop",
+    "collect sources for an internal answer",
+    "keep a team knowledge base"
+  ],
+  "searchPhrases": [
+    "search a company wiki",
+    "help me search a company wiki",
+    "can you search a company wiki",
+    "answer a question across team docs",
+    "help me answer a question across team docs",
+    "can you answer a question across team docs",
+    "link notes to each other",
+    "help me link notes to each other",
+    "can you link notes to each other",
+    "find where a policy was written",
+    "help me find where a policy was written",
+    "can you find where a policy was written"
   ]
 }

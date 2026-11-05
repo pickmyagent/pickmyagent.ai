@@ -68,13 +68,31 @@
     "bookkeeping": "Keeps card charges and expenses together for the books."
   },
   "capabilities": [
-    "run finance workflows on a free plan",
-    "keep expenses together for the books",
-    "work from card, expense, and finance workflows on a listed free plan",
-    "work from finance platform with a free plan at and plus at per user",
-    "run finance workflows on the free plan",
-    "keep expenses together for a books",
-    "work from card, expense, and finance workflows on the listed free plan",
-    "work from finance platform with the free plan at and plus at per user"
+    "reconcile a bank feed",
+    "categorize receipts for the books",
+    "catch up a messy ledger",
+    "match transactions to the books",
+    "clean up a bookkeeping file",
+    "prepare a profit and loss",
+    "scan receipts into the books",
+    "organize expenses for an accountant"
+  ],
+  "searchPhrases": [
+    "reconcile a bank feed",
+    "help me reconcile a bank feed",
+    "can you reconcile a bank feed",
+    "categorize receipts for the books",
+    "help me categorize receipts for the books",
+    "can you categorize receipts for the books",
+    "catch up a messy ledger",
+    "help me catch up a messy ledger",
+    "can you catch up a messy ledger",
+    "match transactions to the books",
+    "help me match transactions to the books",
+    "can you match transactions to the books",
+    "reconcile quickbooks",
+    "clean up xero",
+    "match the bank feed",
+    "profit and loss for last month"
   ]
 }

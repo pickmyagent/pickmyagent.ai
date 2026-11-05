@@ -62,17 +62,29 @@
     "finalUrl": "https://navan.com/"
   },
   "capabilities": [
-    "manage events end-to-end",
-    "manage business travel and expense with ease",
-    "manage business travel",
-    "manage travel in a single place",
-    "automate categorization, reports, and reimbursements",
-    "automate categorization, reports,",
-    "optimize savings with ai-powered insights",
-    "manage more efficiently.\" sarah boorman",
-    "use save time",
-    "use corporate travel management platform business travel & expens",
-    "use the ai-powered business travel and expense platform unrivaled",
-    "use executive assistants navan"
+    "build an itinerary for a city",
+    "compare flights for a trip",
+    "find a hotel for a work trip",
+    "plan how to get between two cities",
+    "plan a group trip",
+    "balance a day so it is not packed",
+    "list neighborhoods to stay in"
+  ],
+  "searchPhrases": [
+    "build an itinerary for a city",
+    "help me build an itinerary for a city",
+    "can you build an itinerary for a city",
+    "compare flights for a trip",
+    "help me compare flights for a trip",
+    "can you compare flights for a trip",
+    "find a hotel for a work trip",
+    "help me find a hotel for a work trip",
+    "can you find a hotel for a work trip",
+    "plan how to get between two cities",
+    "help me plan how to get between two cities",
+    "can you plan how to get between two cities",
+    "how do I get from rome to florence",
+    "itinerary for four days in lisbon",
+    "compare flights to tokyo"
   ]
 }

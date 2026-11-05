@@ -8,6 +8,36 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
+const BRAND_OK = new Set([
+  "bill", "wave", "make", "pitch", "rows", "layer", "pilot", "remote", "lever",
+  "build", "scale", "super", "magic", "copy", "house", "smart", "cloud", "fresh",
+  "quick", "power", "light", "clear", "simple", "local", "paper", "resume",
+  "slack", "excel", "video", "audio", "image", "music", "email", "photo",
+  "voice", "sheet", "notes", "legal", "slide",
+]);
+const CAP_PRICE = /\$\s?\d|\b\d+(?:\.\d+)?\s*(?:usd|dollars?)\b|\bper\s+(?:seat|user|month|mo)\b|\blisted price\b/i;
+const CAP_URL = /https?:\/\/|\bwww\./i;
+const CAP_STORE = /\b(?:app store|play store|google play|download|downloads)\b/i;
+const CAP_REPEAT_OK = new Set(["a", "an", "the", "to", "for", "and", "of", "in", "on", "with", "from", "into", "your", "you", "our"]);
+
+function capabilityProblem(text, brand) {
+  const words = text.trim().split(/\s+/);
+  if (words.length > 14) return "more than 14 words";
+  if (CAP_PRICE.test(text)) return "contains a price";
+  if (CAP_URL.test(text)) return "contains a URL";
+  if (CAP_STORE.test(text)) return "contains store or download wording";
+  if (!/^[a-z]/.test(text.trim())) return "must start with a lowercase verb";
+  const seen = new Set();
+  for (const word of words) {
+    const token = word.toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (!token) continue;
+    if (seen.has(token) && !CAP_REPEAT_OK.has(token)) return `repeats ${token}`;
+    seen.add(token);
+    if (brand.has(token)) return "contains the brand name";
+  }
+  return null;
+}
+
 const SMOKE = new Set([
   "tested-hands-on",
   "verified-docs-only",
@@ -163,15 +193,26 @@ for (const tool of tools) {
     fail(`${tool.id} needs 5 to 15 capabilities`);
   } else {
     const seenCaps = new Set();
+    const brand = new Set(
+      `${tool.name} ${String(tool.slug).replace(/-/g, " ")}`
+        .toLowerCase()
+        .match(/[a-z0-9]+/g)
+        ?.filter((token) => token.length >= 5 && !BRAND_OK.has(token)) ?? [],
+    );
     for (const capability of tool.capabilities) {
       if (typeof capability !== "string" || capability.length < 12 || capability.length > 160) {
         fail(`${tool.id} capability must be 12–160 characters`);
         continue;
       }
+      const problem = capabilityProblem(capability, brand);
+      if (problem) fail(`${tool.id} capability "${capability}": ${problem}`);
       const key = capability.toLowerCase();
       if (seenCaps.has(key)) fail(`${tool.id} repeats a capability`);
       seenCaps.add(key);
     }
+  }
+  if (!Array.isArray(tool.searchPhrases) || tool.searchPhrases.length < 8 || tool.searchPhrases.length > 20) {
+    fail(`${tool.id} needs 8 to 20 hidden search phrases`);
   }
 }
 

@@ -62,17 +62,30 @@
     "finalUrl": "https://bolt.new/"
   },
   "capabilities": [
-    "edit code with an agent",
+    "fix a failing test",
+    "review a pull request",
+    "refactor a function",
+    "autocomplete code in an editor",
+    "pair program in a terminal",
+    "explain a stack trace",
     "build an app from a prompt",
-    "build and scale high-performing websites & apps using a words",
-    "make it yours",
-    "create stunning apps & websites by chatting with ai",
-    "let build a prototype",
-    "build big without breaking bolt handles projects 1,000 times larger than before",
-    "build with design system stop building from scratch",
-    "turn them into fully working apps",
-    "use join millions and start building today",
-    "use bolt ai builder",
-    "use what will you build today"
+    "write a unit test"
+  ],
+  "searchPhrases": [
+    "fix a failing test",
+    "help me fix a failing test",
+    "can you fix a failing test",
+    "review a pull request",
+    "help me review a pull request",
+    "can you review a pull request",
+    "refactor a function",
+    "help me refactor a function",
+    "can you refactor a function",
+    "autocomplete code in an editor",
+    "help me autocomplete code in an editor",
+    "can you autocomplete code in an editor",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

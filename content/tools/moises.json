@@ -62,17 +62,30 @@
     "finalUrl": "https://moises.ai/"
   },
   "capabilities": [
-    "separate stems from a song",
-    "remove vocals for practice",
-    "change the tempo of a track",
-    "practice with an isolated instrument",
-    "remove vocals, separate instruments, master a tracks, and remix songs with the power of ai",
-    "remove vocals, separate instruments, master a tracks,",
-    "edit the same session in real time with bandmates, producers, or co-writers, without leaving a browser",
-    "separate vocals, drums, bass, guitar, keys, and more from any audio file",
-    "separate vocals, drums, bass, guitar, keys,",
-    "separate a song video recording capture",
-    "capture performances a sound, any device upload a song and play along in seconds",
-    "capture performances a sound, any device upload a song"
+    "generate a song from a prompt",
+    "make a royalty free background track",
+    "separate a vocal stem",
+    "master a mix",
+    "make a beat for a video",
+    "compose a short soundtrack",
+    "extend a musical idea",
+    "export stems from a song"
+  ],
+  "searchPhrases": [
+    "generate a song from a prompt",
+    "help me generate a song from a prompt",
+    "can you generate a song from a prompt",
+    "make a royalty free background track",
+    "help me make a royalty free background track",
+    "can you make a royalty free background track",
+    "separate a vocal stem",
+    "help me separate a vocal stem",
+    "can you separate a vocal stem",
+    "master a mix",
+    "help me master a mix",
+    "can you master a mix",
+    "master this mix",
+    "beat for a youtube video",
+    "lofi beat about rainy tokyo"
   ]
 }

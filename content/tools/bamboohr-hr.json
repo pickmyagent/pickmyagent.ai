@@ -62,17 +62,27 @@
     "finalUrl": "https://www.bamboohr.com/"
   },
   "capabilities": [
-    "onboard an employee",
-    "manage benefits",
-    "manage multi-rate pay, simplify time off requests, streamline benefits enrollment,",
-    "create salary bands, streamline approvals, communicate total rewards,",
-    "make a hr operations more efficient",
-    "use bamboohr makes it easy to simplify hr",
-    "use learn more with a free demo today",
-    "use the complete hr software for people",
-    "use bamboohr announcements meet bamboo ai",
-    "use hiring & onboarding payroll",
-    "use time & benefits employee experience & performance compensatio",
-    "use meet the intelligence layer built into bamboohr"
+    "source candidates for a role",
+    "write a job description",
+    "screen resumes for a role",
+    "schedule an interview panel",
+    "track applicants in one place",
+    "run a performance review cycle",
+    "keep an applicant pipeline",
+    "compare candidates on one list"
+  ],
+  "searchPhrases": [
+    "source candidates for a role",
+    "help me source candidates for a role",
+    "can you source candidates for a role",
+    "write a job description",
+    "help me write a job description",
+    "can you write a job description",
+    "screen resumes for a role",
+    "help me screen resumes for a role",
+    "can you screen resumes for a role",
+    "schedule an interview panel",
+    "help me schedule an interview panel",
+    "can you schedule an interview panel"
   ]
 }

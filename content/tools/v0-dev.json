@@ -62,17 +62,27 @@
     "finalUrl": "https://v0.app/"
   },
   "capabilities": [
-    "generate a page",
-    "publish a site",
-    "generate working applications in minutes with ai",
-    "publish as live websites in seconds",
-    "edit with design mode fine-tune every detail with visual controls and live preview",
-    "edit with design mode fine-tune every detail with visual controls",
-    "create design systems define colors, typography, and styles that you can use across projects",
-    "create design systems define colors, typography,",
-    "use ai assistant to design",
-    "use start with a template prompt",
-    "use browse all prompt",
-    "use generate working applications in minutes with ai"
+    "design a logo for a business",
+    "build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "mock up a settings screen",
+    "design a poster for an event",
+    "pick colors and type",
+    "export logo files"
+  ],
+  "searchPhrases": [
+    "design a logo for a business",
+    "help me design a logo for a business",
+    "can you design a logo for a business",
+    "build a brand kit from a name",
+    "help me build a brand kit from a name",
+    "can you build a brand kit from a name",
+    "make a wireframe from a sketch",
+    "help me make a wireframe from a sketch",
+    "can you make a wireframe from a sketch",
+    "draft a landing page from a prompt",
+    "help me draft a landing page from a prompt",
+    "can you draft a landing page from a prompt"
   ]
 }

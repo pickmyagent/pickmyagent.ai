@@ -62,17 +62,30 @@
     "finalUrl": "https://aider.chat/"
   },
   "capabilities": [
-    "pair program in the terminal",
-    "edit a git repo with a model",
-    "commit a change the agent made",
-    "find additional resources llm leaderboards github repository discord community release notes blog documentation github discord blog",
-    "use github stars 44k",
-    "use tokens/week 15b",
-    "use deepseek r1 & chat v3",
-    "use aider works with most popular programming languages",
-    "use git integration aider automatically commits changes with sens",
-    "use use familiar git tools to easily diff",
-    "use request new features",
-    "use llm via its web chat interface"
+    "fix a failing test",
+    "review a pull request",
+    "refactor a function",
+    "autocomplete code in an editor",
+    "pair program in a terminal",
+    "explain a stack trace",
+    "build an app from a prompt",
+    "write a unit test"
+  ],
+  "searchPhrases": [
+    "fix a failing test",
+    "help me fix a failing test",
+    "can you fix a failing test",
+    "review a pull request",
+    "help me review a pull request",
+    "can you review a pull request",
+    "refactor a function",
+    "help me refactor a function",
+    "can you refactor a function",
+    "autocomplete code in an editor",
+    "help me autocomplete code in an editor",
+    "can you autocomplete code in an editor",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
   ]
 }

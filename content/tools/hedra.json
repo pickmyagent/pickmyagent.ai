@@ -62,17 +62,27 @@
     "finalUrl": "https://www.hedra.com/"
   },
   "capabilities": [
-    "animate a character from an image",
-    "generate a talking video from audio",
-    "build a model with you",
-    "use hedra builds models that generate",
-    "use visual inference models and infrastructure hedra builds model",
-    "use visual inference models and infrastructure production inferen",
-    "use recursive self-improvement",
-    "use models that keep getting better",
-    "use world model runtime vision-native kernels quality-aware quant",
-    "use hedra cloud hybrid / customer infrastructure sovereign deploy",
-    "use multimodal models push gpus hard",
-    "use general-purpose models fall short on real-world problems"
+    "make a video from a text prompt",
+    "turn an image into a video",
+    "add captions to an interview",
+    "cut silences from a clip",
+    "make an avatar video from a script",
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
   ]
 }

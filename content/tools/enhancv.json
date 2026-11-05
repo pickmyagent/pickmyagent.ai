@@ -62,14 +62,27 @@
     "finalUrl": "https://enhancv.com/"
   },
   "capabilities": [
-    "design a resume",
-    "tailor a resume to a job",
-    "get content suggestions",
-    "choose a resume template",
-    "export a resume to pdf",
-    "build a resume in minutes",
-    "build a resume get a resume score excellent 5,363 reviews pick a template and build a resume in minutes",
-    "build a resume get a resume score excellent 5,363 reviews pick a template",
-    "design with intuitive editing"
+    "tailor a resume to a job description",
+    "match resume keywords for an ats",
+    "rewrite resume bullets",
+    "draft a cover letter for a role",
+    "improve a linkedin headline",
+    "score a resume against a posting",
+    "shorten a long resume",
+    "turn a career history into bullets"
+  ],
+  "searchPhrases": [
+    "tailor a resume to a job description",
+    "help me tailor a resume to a job description",
+    "can you tailor a resume to a job description",
+    "match resume keywords for an ats",
+    "help me match resume keywords for an ats",
+    "can you match resume keywords for an ats",
+    "rewrite resume bullets",
+    "help me rewrite resume bullets",
+    "can you rewrite resume bullets",
+    "draft a cover letter for a role",
+    "help me draft a cover letter for a role",
+    "can you draft a cover letter for a role"
   ]
 }

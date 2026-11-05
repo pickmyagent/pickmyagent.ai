@@ -62,11 +62,27 @@
     "finalUrl": "https://www.scalenut.com/"
   },
   "capabilities": [
-    "write an seo article",
-    "plan a topic cluster",
-    "generate a content brief",
-    "create a cruise mode article",
-    "make you win the ai search",
-    "write the brief that every agent executes against"
+    "optimize a page for a keyword",
+    "write a content brief",
+    "research keywords for a site",
+    "explain why a page is not ranking",
+    "find backlink opportunities",
+    "draft an seo article from a keyword",
+    "suggest on page seo edits",
+    "group keywords into a cluster"
+  ],
+  "searchPhrases": [
+    "optimize a page for a keyword",
+    "help me optimize a page for a keyword",
+    "can you optimize a page for a keyword",
+    "write a content brief",
+    "help me write a content brief",
+    "can you write a content brief",
+    "research keywords for a site",
+    "help me research keywords for a site",
+    "can you research keywords for a site",
+    "explain why a page is not ranking",
+    "help me explain why a page is not ranking",
+    "can you explain why a page is not ranking"
   ]
 }

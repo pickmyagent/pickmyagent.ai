@@ -62,17 +62,27 @@
     "finalUrl": "https://mitti.com/"
   },
   "capabilities": [
-    "find out about a exclusive workshops, webinars, and trade shows",
-    "find out about a exclusive workshops, webinars,",
-    "use workplace operations system the operations system that gives",
-    "turn frontline signals into measurable outcomes quality manag",
-    "use turn frontline signals into measurable outcomes quality manag",
-    "use asset maintenance that runs itself",
-    "use training that gets every worker job-ready",
-    "use audit-ready compliance",
-    "use insurance that goes beyond claims trusted by 80",
-    "use ready to get ahead",
-    "use workplace operations system platform solutions resources pric",
-    "use the app built for frontline teams"
+    "take off quantities from a floor plan",
+    "document jobsite photos",
+    "measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "schedule the trades",
+    "estimate a roofing job",
+    "list materials for a task",
+    "note a change on the job"
+  ],
+  "searchPhrases": [
+    "take off quantities from a floor plan",
+    "help me take off quantities from a floor plan",
+    "can you take off quantities from a floor plan",
+    "document jobsite photos",
+    "help me document jobsite photos",
+    "can you document jobsite photos",
+    "measure a roof from a satellite image",
+    "help me measure a roof from a satellite image",
+    "can you measure a roof from a satellite image",
+    "make a safety inspection checklist",
+    "help me make a safety inspection checklist",
+    "can you make a safety inspection checklist"
   ]
 }

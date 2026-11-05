@@ -62,17 +62,29 @@
     "finalUrl": "https://www.kayak.com/"
   },
   "capabilities": [
-    "compare flights",
-    "find a hotel",
-    "search flights, hotels & rental cars | kayak ${e} find the right flight from 100s of sites",
-    "make booking seamless",
-    "search flights , hotels , rental cars , travel guides , cruises and more with kayak",
-    "use search flights",
-    "use hotels & rental cars",
-    "find the right flight from 100s of sites",
-    "use find the right flight from 100s of sites",
-    "use tokyo chicago phoenix india search flights",
-    "use new trips language currency argentina",
-    "use costa rica"
+    "build an itinerary for a city",
+    "compare flights for a trip",
+    "find a hotel for a work trip",
+    "plan how to get between two cities",
+    "plan a group trip",
+    "balance a day so it is not packed",
+    "list neighborhoods to stay in"
+  ],
+  "searchPhrases": [
+    "build an itinerary for a city",
+    "help me build an itinerary for a city",
+    "can you build an itinerary for a city",
+    "compare flights for a trip",
+    "help me compare flights for a trip",
+    "can you compare flights for a trip",
+    "find a hotel for a work trip",
+    "help me find a hotel for a work trip",
+    "can you find a hotel for a work trip",
+    "plan how to get between two cities",
+    "help me plan how to get between two cities",
+    "can you plan how to get between two cities",
+    "how do I get from rome to florence",
+    "itinerary for four days in lisbon",
+    "compare flights to tokyo"
   ]
 }
