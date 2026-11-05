@@ -658,6 +658,41 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
       "Zendesk runs the customer support inbox for a small business.",
     ],
   },
+  "showing-scheduling": {
+    "follow-up-boss": ["Follow Up Boss keeps a showing follow-up on the contact record."],
+    "launch-control": ["Launch Control texts a buyer to confirm a showing time."],
+    resimpli: ["REsimpli logs a showing and the follow-up on the property."],
+  },
+  "transaction-coordination": {},
+  payroll: {
+    "deel-hr": ["Deel runs payroll for a team the company pays."],
+    "remote-hr": ["Remote runs payroll for employees in other countries."],
+    "rippling-hr": ["Rippling runs payroll from the same system that onboarded the hire."],
+  },
+  "customer-follow-up": {
+    birdeye: ["Birdeye sends a check-in after a customer buys."],
+    honeybook: ["HoneyBook drafts a follow-up for a client already on the books."],
+    podium: ["Podium texts a customer to ask how the job went."],
+  },
+  "review-requests": {
+    birdeye: ["Birdeye asks a customer for a review after a visit."],
+    podium: ["Podium texts a request for a review after the job."],
+  },
+  quotes: {
+    bonsai: ["Bonsai drafts a proposal for a freelance job."],
+    dubsado: ["Dubsado sends a proposal to a client."],
+    honeybook: ["HoneyBook sends a quote from the job details."],
+  },
+  contracts: {
+    juro: ["Juro drafts a contract in the browser."],
+    spellbook: ["Spellbook reviews a contract in a Word document."],
+    ironclad: ["Ironclad tracks a contract through review."],
+  },
+  "sales-tax": {},
+  "shift-scheduling": {
+    housecall: ["Housecall Pro schedules a crew onto a job."],
+    servicetitan: ["ServiceTitan schedules technicians onto the day's jobs."],
+  },
 };
 
 /** Photo-to-video listing queries. Edit, trim, and caption queries stay on the editor lines. */

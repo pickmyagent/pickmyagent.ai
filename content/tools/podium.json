@@ -9,7 +9,10 @@
   "categories": [
     "small-business"
   ],
-  "useCaseTags": [],
+  "useCaseTags": [
+    "customer-follow-up",
+    "review-requests"
+  ],
   "toolTypes": [
     "other"
   ],
@@ -62,27 +65,27 @@
     "finalUrl": "https://www.podium.com/"
   },
   "capabilities": [
-    "draft a proposal and an invoice",
+    "follow up with a customer after a purchase",
+    "thank a recent buyer",
+    "ask how the product is working out",
+    "draft a check in after a job",
+    "reengage a past customer",
+    "send a note to someone who already bought",
     "text a customer to request a review",
-    "schedule a plumbing job",
-    "draft a client contract for a freelancer",
-    "plan the week for a one person shop",
-    "follow up with a waiting customer",
-    "capture a receipt and a customer note",
-    "keep a simple local business checklist"
+    "ask for a google review"
   ],
   "searchPhrases": [
-    "draft a proposal and an invoice",
-    "help me draft a proposal and an invoice",
-    "can you draft a proposal and an invoice",
-    "text a customer to request a review",
-    "help me text a customer to request a review",
-    "can you text a customer to request a review",
-    "schedule a plumbing job",
-    "help me schedule a plumbing job",
-    "can you schedule a plumbing job",
-    "draft a client contract for a freelancer",
-    "help me draft a client contract for a freelancer",
-    "can you draft a client contract for a freelancer"
+    "follow up with a customer after a purchase",
+    "help me follow up with a customer after a purchase",
+    "can you follow up with a customer after a purchase",
+    "thank a recent buyer",
+    "help me thank a recent buyer",
+    "can you thank a recent buyer",
+    "ask how the product is working out",
+    "help me ask how the product is working out",
+    "can you ask how the product is working out",
+    "draft a check in after a job",
+    "help me draft a check in after a job",
+    "can you draft a check in after a job"
   ]
 }

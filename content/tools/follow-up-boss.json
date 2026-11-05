@@ -10,8 +10,9 @@
     "real-estate"
   ],
   "useCaseTags": [
+    "real-estate-crm",
     "realtor-follow-up",
-    "real-estate-crm"
+    "showing-scheduling"
   ],
   "toolTypes": [
     "other"
@@ -67,28 +68,28 @@
     "real-estate-crm": "Keeps buyer and seller leads in one real estate CRM."
   },
   "capabilities": [
-    "find land for sale",
-    "check zoning on a vacant lot",
-    "skip trace a property owner",
-    "pull comps for a house",
-    "build a cma from recent sales",
-    "write an mls listing description",
-    "estimate a home value",
-    "find fsbo leads nearby"
+    "schedule a home showing",
+    "book an open house",
+    "send a showing reminder",
+    "confirm a lockbox time",
+    "set a showing appointment",
+    "list times a buyer can tour",
+    "remind the agent about a showing",
+    "hold an open house slot"
   ],
   "searchPhrases": [
-    "find land for sale",
-    "help me find land for sale",
-    "can you find land for sale",
-    "check zoning on a vacant lot",
-    "help me check zoning on a vacant lot",
-    "can you check zoning on a vacant lot",
-    "skip trace a property owner",
-    "help me skip trace a property owner",
-    "can you skip trace a property owner",
-    "pull comps for a house",
-    "help me pull comps for a house",
-    "can you pull comps for a house",
+    "schedule a home showing",
+    "help me schedule a home showing",
+    "can you schedule a home showing",
+    "book an open house",
+    "help me book an open house",
+    "can you book an open house",
+    "send a showing reminder",
+    "help me send a showing reminder",
+    "can you send a showing reminder",
+    "confirm a lockbox time",
+    "help me confirm a lockbox time",
+    "can you confirm a lockbox time",
     "home value estimate",
     "off-market houses",
     "schedule a showing",

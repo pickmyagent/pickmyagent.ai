@@ -91,6 +91,7 @@ const FILLER = [
   /\bi need an? ai that can\b/g,
   /\bi need an? ai\b/g,
   /\bplease\b/g,
+  /\bbefore the end of the day\b/g,
   /\bcan you\b/g,
   /\bfind and agent to\b/g,
   /\bfind an agent to\b/g,

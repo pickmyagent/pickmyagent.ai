@@ -9,7 +9,9 @@
   "categories": [
     "hr"
   ],
-  "useCaseTags": [],
+  "useCaseTags": [
+    "payroll"
+  ],
   "toolTypes": [
     "other"
   ],
@@ -62,27 +64,29 @@
     "finalUrl": "https://www.deel.com/"
   },
   "capabilities": [
+    "run payroll for the team",
+    "check hours before payday",
+    "prepare a paycheck run",
+    "list payroll questions to confirm",
+    "track wages for the period",
+    "review deductions before payday",
     "source candidates for a role",
-    "write a job description",
-    "screen resumes for a role",
-    "schedule an interview panel",
-    "track applicants in one place",
-    "run a performance review cycle",
-    "keep an applicant pipeline",
-    "compare candidates on one list"
+    "write a job description"
   ],
   "searchPhrases": [
-    "source candidates for a role",
-    "help me source candidates for a role",
-    "can you source candidates for a role",
-    "write a job description",
-    "help me write a job description",
-    "can you write a job description",
-    "screen resumes for a role",
-    "help me screen resumes for a role",
-    "can you screen resumes for a role",
-    "schedule an interview panel",
-    "help me schedule an interview panel",
-    "can you schedule an interview panel"
+    "run payroll for the team",
+    "help me run payroll for the team",
+    "can you run payroll for the team",
+    "check hours before payday",
+    "help me check hours before payday",
+    "can you check hours before payday",
+    "prepare a paycheck run",
+    "help me prepare a paycheck run",
+    "can you prepare a paycheck run",
+    "list payroll questions to confirm",
+    "help me list payroll questions to confirm",
+    "can you list payroll questions to confirm",
+    "paychecks for the staff",
+    "hours before payday"
   ]
 }

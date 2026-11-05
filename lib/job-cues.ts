@@ -81,6 +81,9 @@ export function dataCue(text: string): boolean {
 }
 
 export function followCue(text: string): boolean {
+  if (has(text, /\bbuyers?\b/) && has(text, /\b(product|working out|purchase)\b/) && !has(text, /\b(house|home|listing|ranch|property)\b/)) {
+    return true;
+  }
   if (has(text, /\b(schedul\w*|buyers?|sellers?|leads?|crm)\b/)) return false;
   if (has(text, /\b(check(?:\s|-)?ins?|thank(?:\s|-)?you|gone quiet|re-?engage)\b/)) return true;
   if (has(text, /\bthank\b/) && has(text, /\b(customers?|week|repeat)\b/)) return true;
@@ -102,6 +105,8 @@ export function shopCue(text: string): boolean {
 
 export function knowledgeCue(text: string): boolean {
   if (has(text, /\b(page states|vacation rules?)\b/)) return true;
+  if (has(text, /\bnew hire\b/) && has(text, /\b(asked|how|approved|policy)\b/) && !has(text, /\bpayroll\b/)) return true;
+  if (has(text, /\bhow\b/) && has(text, /\b(approved|approval)\b/) && has(text, /\b(expenses?|policy)\b/) && !has(text, /\bpayroll\b/)) return true;
   return has(text, /\b(wikis?|handbooks?|intranets?|sops?|policies|policy|knowledge bases?|document q and a|standard operating)\b/);
 }
 

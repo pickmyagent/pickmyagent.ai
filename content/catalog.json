@@ -4157,7 +4157,10 @@
       "categories": [
         "small-business"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "customer-follow-up",
+        "review-requests"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -4210,28 +4213,28 @@
         "finalUrl": "https://birdeye.com/"
       },
       "capabilities": [
-        "draft a proposal and an invoice",
+        "follow up with a customer after a purchase",
+        "thank a recent buyer",
+        "ask how the product is working out",
+        "draft a check in after a job",
+        "reengage a past customer",
+        "send a note to someone who already bought",
         "text a customer to request a review",
-        "schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "plan the week for a one person shop",
-        "follow up with a waiting customer",
-        "capture a receipt and a customer note",
-        "keep a simple local business checklist"
+        "ask for a google review"
       ],
       "searchPhrases": [
-        "draft a proposal and an invoice",
-        "help me draft a proposal and an invoice",
-        "can you draft a proposal and an invoice",
-        "text a customer to request a review",
-        "help me text a customer to request a review",
-        "can you text a customer to request a review",
-        "schedule a plumbing job",
-        "help me schedule a plumbing job",
-        "can you schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "help me draft a client contract for a freelancer",
-        "can you draft a client contract for a freelancer"
+        "follow up with a customer after a purchase",
+        "help me follow up with a customer after a purchase",
+        "can you follow up with a customer after a purchase",
+        "thank a recent buyer",
+        "help me thank a recent buyer",
+        "can you thank a recent buyer",
+        "ask how the product is working out",
+        "help me ask how the product is working out",
+        "can you ask how the product is working out",
+        "draft a check in after a job",
+        "help me draft a check in after a job",
+        "can you draft a check in after a job"
       ]
     },
     {
@@ -4608,7 +4611,9 @@
       "categories": [
         "small-business"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "quotes"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -4661,28 +4666,28 @@
         "finalUrl": "https://www.hellobonsai.com/"
       },
       "capabilities": [
+        "draft a quote from the job details",
+        "write a client proposal",
+        "price a job for a customer",
+        "send a proposal to a client",
+        "turn a scope into an estimate",
+        "update a quote before it goes out",
         "draft a proposal and an invoice",
-        "text a customer to request a review",
-        "schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "plan the week for a one person shop",
-        "follow up with a waiting customer",
-        "capture a receipt and a customer note",
-        "keep a simple local business checklist"
+        "text a customer to request a review"
       ],
       "searchPhrases": [
-        "draft a proposal and an invoice",
-        "help me draft a proposal and an invoice",
-        "can you draft a proposal and an invoice",
-        "text a customer to request a review",
-        "help me text a customer to request a review",
-        "can you text a customer to request a review",
-        "schedule a plumbing job",
-        "help me schedule a plumbing job",
-        "can you schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "help me draft a client contract for a freelancer",
-        "can you draft a client contract for a freelancer"
+        "draft a quote from the job details",
+        "help me draft a quote from the job details",
+        "can you draft a quote from the job details",
+        "write a client proposal",
+        "help me write a client proposal",
+        "can you write a client proposal",
+        "price a job for a customer",
+        "help me price a job for a customer",
+        "can you price a job for a customer",
+        "send a proposal to a client",
+        "help me send a proposal to a client",
+        "can you send a proposal to a client"
       ]
     },
     {
@@ -10581,7 +10586,9 @@
       "categories": [
         "hr"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "payroll"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -10634,28 +10641,30 @@
         "finalUrl": "https://www.deel.com/"
       },
       "capabilities": [
+        "run payroll for the team",
+        "check hours before payday",
+        "prepare a paycheck run",
+        "list payroll questions to confirm",
+        "track wages for the period",
+        "review deductions before payday",
         "source candidates for a role",
-        "write a job description",
-        "screen resumes for a role",
-        "schedule an interview panel",
-        "track applicants in one place",
-        "run a performance review cycle",
-        "keep an applicant pipeline",
-        "compare candidates on one list"
+        "write a job description"
       ],
       "searchPhrases": [
-        "source candidates for a role",
-        "help me source candidates for a role",
-        "can you source candidates for a role",
-        "write a job description",
-        "help me write a job description",
-        "can you write a job description",
-        "screen resumes for a role",
-        "help me screen resumes for a role",
-        "can you screen resumes for a role",
-        "schedule an interview panel",
-        "help me schedule an interview panel",
-        "can you schedule an interview panel"
+        "run payroll for the team",
+        "help me run payroll for the team",
+        "can you run payroll for the team",
+        "check hours before payday",
+        "help me check hours before payday",
+        "can you check hours before payday",
+        "prepare a paycheck run",
+        "help me prepare a paycheck run",
+        "can you prepare a paycheck run",
+        "list payroll questions to confirm",
+        "help me list payroll questions to confirm",
+        "can you list payroll questions to confirm",
+        "paychecks for the staff",
+        "hours before payday"
       ]
     },
     {
@@ -11894,7 +11903,9 @@
       "categories": [
         "small-business"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "quotes"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -11947,28 +11958,28 @@
         "finalUrl": "https://www.dubsado.com/"
       },
       "capabilities": [
+        "draft a quote from the job details",
+        "write a client proposal",
+        "price a job for a customer",
+        "send a proposal to a client",
+        "turn a scope into an estimate",
+        "update a quote before it goes out",
         "draft a proposal and an invoice",
-        "text a customer to request a review",
-        "schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "plan the week for a one person shop",
-        "follow up with a waiting customer",
-        "capture a receipt and a customer note",
-        "keep a simple local business checklist"
+        "text a customer to request a review"
       ],
       "searchPhrases": [
-        "draft a proposal and an invoice",
-        "help me draft a proposal and an invoice",
-        "can you draft a proposal and an invoice",
-        "text a customer to request a review",
-        "help me text a customer to request a review",
-        "can you text a customer to request a review",
-        "schedule a plumbing job",
-        "help me schedule a plumbing job",
-        "can you schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "help me draft a client contract for a freelancer",
-        "can you draft a client contract for a freelancer"
+        "draft a quote from the job details",
+        "help me draft a quote from the job details",
+        "can you draft a quote from the job details",
+        "write a client proposal",
+        "help me write a client proposal",
+        "can you write a client proposal",
+        "price a job for a customer",
+        "help me price a job for a customer",
+        "can you price a job for a customer",
+        "send a proposal to a client",
+        "help me send a proposal to a client",
+        "can you send a proposal to a client"
       ]
     },
     {
@@ -14790,8 +14801,9 @@
         "real-estate"
       ],
       "useCaseTags": [
+        "real-estate-crm",
         "realtor-follow-up",
-        "real-estate-crm"
+        "showing-scheduling"
       ],
       "toolTypes": [
         "other"
@@ -14847,28 +14859,28 @@
         "real-estate-crm": "Keeps buyer and seller leads in one real estate CRM."
       },
       "capabilities": [
-        "find land for sale",
-        "check zoning on a vacant lot",
-        "skip trace a property owner",
-        "pull comps for a house",
-        "build a cma from recent sales",
-        "write an mls listing description",
-        "estimate a home value",
-        "find fsbo leads nearby"
+        "schedule a home showing",
+        "book an open house",
+        "send a showing reminder",
+        "confirm a lockbox time",
+        "set a showing appointment",
+        "list times a buyer can tour",
+        "remind the agent about a showing",
+        "hold an open house slot"
       ],
       "searchPhrases": [
-        "find land for sale",
-        "help me find land for sale",
-        "can you find land for sale",
-        "check zoning on a vacant lot",
-        "help me check zoning on a vacant lot",
-        "can you check zoning on a vacant lot",
-        "skip trace a property owner",
-        "help me skip trace a property owner",
-        "can you skip trace a property owner",
-        "pull comps for a house",
-        "help me pull comps for a house",
-        "can you pull comps for a house",
+        "schedule a home showing",
+        "help me schedule a home showing",
+        "can you schedule a home showing",
+        "book an open house",
+        "help me book an open house",
+        "can you book an open house",
+        "send a showing reminder",
+        "help me send a showing reminder",
+        "can you send a showing reminder",
+        "confirm a lockbox time",
+        "help me confirm a lockbox time",
+        "can you confirm a lockbox time",
         "home value estimate",
         "off-market houses",
         "schedule a showing",
@@ -19096,7 +19108,10 @@
       "categories": [
         "small-business"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "customer-follow-up",
+        "quotes"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -19149,28 +19164,28 @@
         "finalUrl": "https://www.honeybook.com/"
       },
       "capabilities": [
-        "draft a proposal and an invoice",
-        "text a customer to request a review",
-        "schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "plan the week for a one person shop",
-        "follow up with a waiting customer",
-        "capture a receipt and a customer note",
-        "keep a simple local business checklist"
+        "follow up with a customer after a purchase",
+        "thank a recent buyer",
+        "ask how the product is working out",
+        "draft a check in after a job",
+        "reengage a past customer",
+        "send a note to someone who already bought",
+        "draft a quote from the job details",
+        "write a client proposal"
       ],
       "searchPhrases": [
-        "draft a proposal and an invoice",
-        "help me draft a proposal and an invoice",
-        "can you draft a proposal and an invoice",
-        "text a customer to request a review",
-        "help me text a customer to request a review",
-        "can you text a customer to request a review",
-        "schedule a plumbing job",
-        "help me schedule a plumbing job",
-        "can you schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "help me draft a client contract for a freelancer",
-        "can you draft a client contract for a freelancer"
+        "follow up with a customer after a purchase",
+        "help me follow up with a customer after a purchase",
+        "can you follow up with a customer after a purchase",
+        "thank a recent buyer",
+        "help me thank a recent buyer",
+        "can you thank a recent buyer",
+        "ask how the product is working out",
+        "help me ask how the product is working out",
+        "can you ask how the product is working out",
+        "draft a check in after a job",
+        "help me draft a check in after a job",
+        "can you draft a check in after a job"
       ]
     },
     {
@@ -19278,7 +19293,9 @@
       "categories": [
         "small-business"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "shift-scheduling"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -19331,28 +19348,27 @@
         "finalUrl": "https://www.housecallpro.com/"
       },
       "capabilities": [
+        "schedule shifts for a restaurant",
+        "build a weekly staff rota",
+        "see who can work a shift",
+        "message the team about the schedule",
+        "cover an open shift",
+        "track hours on the rota",
         "draft a proposal and an invoice",
-        "text a customer to request a review",
-        "schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "plan the week for a one person shop",
-        "follow up with a waiting customer",
-        "capture a receipt and a customer note",
-        "keep a simple local business checklist"
+        "text a customer to request a review"
       ],
       "searchPhrases": [
-        "draft a proposal and an invoice",
-        "help me draft a proposal and an invoice",
-        "can you draft a proposal and an invoice",
-        "text a customer to request a review",
-        "help me text a customer to request a review",
-        "can you text a customer to request a review",
-        "schedule a plumbing job",
-        "help me schedule a plumbing job",
-        "can you schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "help me draft a client contract for a freelancer",
-        "can you draft a client contract for a freelancer"
+        "schedule shifts for a restaurant",
+        "help me schedule shifts for a restaurant",
+        "can you schedule shifts for a restaurant",
+        "build a weekly staff rota",
+        "help me build a weekly staff rota",
+        "can you build a weekly staff rota",
+        "see who can work a shift",
+        "help me see who can work a shift",
+        "message the team about the schedule",
+        "help me message the team about the schedule",
+        "can you message the team about the schedule"
       ]
     },
     {
@@ -20800,7 +20816,9 @@
       "categories": [
         "legal"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "contracts"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -20853,28 +20871,28 @@
         "finalUrl": "https://ironcladapp.com/"
       },
       "capabilities": [
-        "redline an nda",
+        "draft a client contract",
         "review a vendor contract",
-        "draft a demand letter",
-        "extract clauses from a lease",
-        "research case law on an issue",
-        "check a contract against a playbook",
+        "mark clauses a person should read",
         "summarize an agreement",
-        "find risky terms in an msa"
+        "compare a contract with a playbook",
+        "list terms that need a lawyer",
+        "redline an nda",
+        "draft a demand letter"
       ],
       "searchPhrases": [
-        "redline an nda",
-        "help me redline an nda",
-        "can you redline an nda",
+        "draft a client contract",
+        "help me draft a client contract",
+        "can you draft a client contract",
         "review a vendor contract",
         "help me review a vendor contract",
         "can you review a vendor contract",
-        "draft a demand letter",
-        "help me draft a demand letter",
-        "can you draft a demand letter",
-        "extract clauses from a lease",
-        "help me extract clauses from a lease",
-        "can you extract clauses from a lease"
+        "mark clauses a person should read",
+        "help me mark clauses a person should read",
+        "can you mark clauses a person should read",
+        "summarize an agreement",
+        "help me summarize an agreement",
+        "can you summarize an agreement"
       ]
     },
     {
@@ -21254,7 +21272,9 @@
       "categories": [
         "legal"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "contracts"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -21307,28 +21327,28 @@
         "finalUrl": "https://juro.com/"
       },
       "capabilities": [
-        "redline an nda",
+        "draft a client contract",
         "review a vendor contract",
-        "draft a demand letter",
-        "extract clauses from a lease",
-        "research case law on an issue",
-        "check a contract against a playbook",
+        "mark clauses a person should read",
         "summarize an agreement",
-        "find risky terms in an msa"
+        "compare a contract with a playbook",
+        "list terms that need a lawyer",
+        "redline an nda",
+        "draft a demand letter"
       ],
       "searchPhrases": [
-        "redline an nda",
-        "help me redline an nda",
-        "can you redline an nda",
+        "draft a client contract",
+        "help me draft a client contract",
+        "can you draft a client contract",
         "review a vendor contract",
         "help me review a vendor contract",
         "can you review a vendor contract",
-        "draft a demand letter",
-        "help me draft a demand letter",
-        "can you draft a demand letter",
-        "extract clauses from a lease",
-        "help me extract clauses from a lease",
-        "can you extract clauses from a lease"
+        "mark clauses a person should read",
+        "help me mark clauses a person should read",
+        "can you mark clauses a person should read",
+        "summarize an agreement",
+        "help me summarize an agreement",
+        "can you summarize an agreement"
       ]
     },
     {
@@ -23529,7 +23549,8 @@
       ],
       "useCaseTags": [
         "find-off-market",
-        "realtor-prospecting"
+        "realtor-prospecting",
+        "showing-scheduling"
       ],
       "toolTypes": [
         "automation"
@@ -23586,28 +23607,28 @@
         "realtor-prospecting": "Messages owners whose numbers are already on a prospecting list."
       },
       "capabilities": [
-        "find land for sale",
-        "check zoning on a vacant lot",
-        "skip trace a property owner",
-        "pull comps for a house",
-        "build a cma from recent sales",
-        "write an mls listing description",
-        "estimate a home value",
-        "find fsbo leads nearby"
+        "schedule a home showing",
+        "book an open house",
+        "send a showing reminder",
+        "confirm a lockbox time",
+        "set a showing appointment",
+        "list times a buyer can tour",
+        "remind the agent about a showing",
+        "hold an open house slot"
       ],
       "searchPhrases": [
-        "find land for sale",
-        "help me find land for sale",
-        "can you find land for sale",
-        "check zoning on a vacant lot",
-        "help me check zoning on a vacant lot",
-        "can you check zoning on a vacant lot",
-        "skip trace a property owner",
-        "help me skip trace a property owner",
-        "can you skip trace a property owner",
-        "pull comps for a house",
-        "help me pull comps for a house",
-        "can you pull comps for a house",
+        "schedule a home showing",
+        "help me schedule a home showing",
+        "can you schedule a home showing",
+        "book an open house",
+        "help me book an open house",
+        "can you book an open house",
+        "send a showing reminder",
+        "help me send a showing reminder",
+        "can you send a showing reminder",
+        "confirm a lockbox time",
+        "help me confirm a lockbox time",
+        "can you confirm a lockbox time",
         "home value estimate",
         "off-market houses",
         "schedule a showing",
@@ -32460,7 +32481,10 @@
       "categories": [
         "small-business"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "customer-follow-up",
+        "review-requests"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -32513,28 +32537,28 @@
         "finalUrl": "https://www.podium.com/"
       },
       "capabilities": [
-        "draft a proposal and an invoice",
+        "follow up with a customer after a purchase",
+        "thank a recent buyer",
+        "ask how the product is working out",
+        "draft a check in after a job",
+        "reengage a past customer",
+        "send a note to someone who already bought",
         "text a customer to request a review",
-        "schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "plan the week for a one person shop",
-        "follow up with a waiting customer",
-        "capture a receipt and a customer note",
-        "keep a simple local business checklist"
+        "ask for a google review"
       ],
       "searchPhrases": [
-        "draft a proposal and an invoice",
-        "help me draft a proposal and an invoice",
-        "can you draft a proposal and an invoice",
-        "text a customer to request a review",
-        "help me text a customer to request a review",
-        "can you text a customer to request a review",
-        "schedule a plumbing job",
-        "help me schedule a plumbing job",
-        "can you schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "help me draft a client contract for a freelancer",
-        "can you draft a client contract for a freelancer"
+        "follow up with a customer after a purchase",
+        "help me follow up with a customer after a purchase",
+        "can you follow up with a customer after a purchase",
+        "thank a recent buyer",
+        "help me thank a recent buyer",
+        "can you thank a recent buyer",
+        "ask how the product is working out",
+        "help me ask how the product is working out",
+        "can you ask how the product is working out",
+        "draft a check in after a job",
+        "help me draft a check in after a job",
+        "can you draft a check in after a job"
       ]
     },
     {
@@ -34572,7 +34596,9 @@
       "categories": [
         "hr"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "payroll"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -34625,28 +34651,30 @@
         "finalUrl": "https://remote.com/"
       },
       "capabilities": [
+        "run payroll for the team",
+        "check hours before payday",
+        "prepare a paycheck run",
+        "list payroll questions to confirm",
+        "track wages for the period",
+        "review deductions before payday",
         "source candidates for a role",
-        "write a job description",
-        "screen resumes for a role",
-        "schedule an interview panel",
-        "track applicants in one place",
-        "run a performance review cycle",
-        "keep an applicant pipeline",
-        "compare candidates on one list"
+        "write a job description"
       ],
       "searchPhrases": [
-        "source candidates for a role",
-        "help me source candidates for a role",
-        "can you source candidates for a role",
-        "write a job description",
-        "help me write a job description",
-        "can you write a job description",
-        "screen resumes for a role",
-        "help me screen resumes for a role",
-        "can you screen resumes for a role",
-        "schedule an interview panel",
-        "help me schedule an interview panel",
-        "can you schedule an interview panel"
+        "run payroll for the team",
+        "help me run payroll for the team",
+        "can you run payroll for the team",
+        "check hours before payday",
+        "help me check hours before payday",
+        "can you check hours before payday",
+        "prepare a paycheck run",
+        "help me prepare a paycheck run",
+        "can you prepare a paycheck run",
+        "list payroll questions to confirm",
+        "help me list payroll questions to confirm",
+        "can you list payroll questions to confirm",
+        "paychecks for the staff",
+        "hours before payday"
       ]
     },
     {
@@ -35216,7 +35244,8 @@
       ],
       "useCaseTags": [
         "find-off-market",
-        "realtor-prospecting"
+        "realtor-prospecting",
+        "showing-scheduling"
       ],
       "toolTypes": [
         "agent"
@@ -35272,28 +35301,28 @@
         "realtor-prospecting": "Contacts owners by phone, text, and email from a prospecting list."
       },
       "capabilities": [
-        "find land for sale",
-        "check zoning on a vacant lot",
-        "skip trace a property owner",
-        "pull comps for a house",
-        "build a cma from recent sales",
-        "write an mls listing description",
-        "estimate a home value",
-        "find fsbo leads nearby"
+        "schedule a home showing",
+        "book an open house",
+        "send a showing reminder",
+        "confirm a lockbox time",
+        "set a showing appointment",
+        "list times a buyer can tour",
+        "remind the agent about a showing",
+        "hold an open house slot"
       ],
       "searchPhrases": [
-        "find land for sale",
-        "help me find land for sale",
-        "can you find land for sale",
-        "check zoning on a vacant lot",
-        "help me check zoning on a vacant lot",
-        "can you check zoning on a vacant lot",
-        "skip trace a property owner",
-        "help me skip trace a property owner",
-        "can you skip trace a property owner",
-        "pull comps for a house",
-        "help me pull comps for a house",
-        "can you pull comps for a house",
+        "schedule a home showing",
+        "help me schedule a home showing",
+        "can you schedule a home showing",
+        "book an open house",
+        "help me book an open house",
+        "can you book an open house",
+        "send a showing reminder",
+        "help me send a showing reminder",
+        "can you send a showing reminder",
+        "confirm a lockbox time",
+        "help me confirm a lockbox time",
+        "can you confirm a lockbox time",
         "home value estimate",
         "off-market houses",
         "schedule a showing",
@@ -35579,7 +35608,9 @@
       "categories": [
         "hr"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "payroll"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -35632,28 +35663,30 @@
         "finalUrl": "https://www.rippling.com/"
       },
       "capabilities": [
+        "run payroll for the team",
+        "check hours before payday",
+        "prepare a paycheck run",
+        "list payroll questions to confirm",
+        "track wages for the period",
+        "review deductions before payday",
         "source candidates for a role",
-        "write a job description",
-        "screen resumes for a role",
-        "schedule an interview panel",
-        "track applicants in one place",
-        "run a performance review cycle",
-        "keep an applicant pipeline",
-        "compare candidates on one list"
+        "write a job description"
       ],
       "searchPhrases": [
-        "source candidates for a role",
-        "help me source candidates for a role",
-        "can you source candidates for a role",
-        "write a job description",
-        "help me write a job description",
-        "can you write a job description",
-        "screen resumes for a role",
-        "help me screen resumes for a role",
-        "can you screen resumes for a role",
-        "schedule an interview panel",
-        "help me schedule an interview panel",
-        "can you schedule an interview panel"
+        "run payroll for the team",
+        "help me run payroll for the team",
+        "can you run payroll for the team",
+        "check hours before payday",
+        "help me check hours before payday",
+        "can you check hours before payday",
+        "prepare a paycheck run",
+        "help me prepare a paycheck run",
+        "can you prepare a paycheck run",
+        "list payroll questions to confirm",
+        "help me list payroll questions to confirm",
+        "can you list payroll questions to confirm",
+        "paychecks for the staff",
+        "hours before payday"
       ]
     },
     {
@@ -37909,7 +37942,9 @@
       "categories": [
         "small-business"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "shift-scheduling"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -37962,28 +37997,27 @@
         "finalUrl": "https://www.servicetitan.com/"
       },
       "capabilities": [
+        "schedule shifts for a restaurant",
+        "build a weekly staff rota",
+        "see who can work a shift",
+        "message the team about the schedule",
+        "cover an open shift",
+        "track hours on the rota",
         "draft a proposal and an invoice",
-        "text a customer to request a review",
-        "schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "plan the week for a one person shop",
-        "follow up with a waiting customer",
-        "capture a receipt and a customer note",
-        "keep a simple local business checklist"
+        "text a customer to request a review"
       ],
       "searchPhrases": [
-        "draft a proposal and an invoice",
-        "help me draft a proposal and an invoice",
-        "can you draft a proposal and an invoice",
-        "text a customer to request a review",
-        "help me text a customer to request a review",
-        "can you text a customer to request a review",
-        "schedule a plumbing job",
-        "help me schedule a plumbing job",
-        "can you schedule a plumbing job",
-        "draft a client contract for a freelancer",
-        "help me draft a client contract for a freelancer",
-        "can you draft a client contract for a freelancer"
+        "schedule shifts for a restaurant",
+        "help me schedule shifts for a restaurant",
+        "can you schedule shifts for a restaurant",
+        "build a weekly staff rota",
+        "help me build a weekly staff rota",
+        "can you build a weekly staff rota",
+        "see who can work a shift",
+        "help me see who can work a shift",
+        "message the team about the schedule",
+        "help me message the team about the schedule",
+        "can you message the team about the schedule"
       ]
     },
     {
@@ -39792,7 +39826,9 @@
       "categories": [
         "legal"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "contracts"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -39845,28 +39881,28 @@
         "finalUrl": "https://spellbook.com/"
       },
       "capabilities": [
-        "redline an nda",
+        "draft a client contract",
         "review a vendor contract",
-        "draft a demand letter",
-        "extract clauses from a lease",
-        "research case law on an issue",
-        "check a contract against a playbook",
+        "mark clauses a person should read",
         "summarize an agreement",
-        "find risky terms in an msa"
+        "compare a contract with a playbook",
+        "list terms that need a lawyer",
+        "redline an nda",
+        "draft a demand letter"
       ],
       "searchPhrases": [
-        "redline an nda",
-        "help me redline an nda",
-        "can you redline an nda",
+        "draft a client contract",
+        "help me draft a client contract",
+        "can you draft a client contract",
         "review a vendor contract",
         "help me review a vendor contract",
         "can you review a vendor contract",
-        "draft a demand letter",
-        "help me draft a demand letter",
-        "can you draft a demand letter",
-        "extract clauses from a lease",
-        "help me extract clauses from a lease",
-        "can you extract clauses from a lease"
+        "mark clauses a person should read",
+        "help me mark clauses a person should read",
+        "can you mark clauses a person should read",
+        "summarize an agreement",
+        "help me summarize an agreement",
+        "can you summarize an agreement"
       ]
     },
     {

@@ -8,14 +8,18 @@ import {
   capabilityDisclaimer,
   capabilityIntro,
   capabilityLead,
+  allowedFamilies,
   capabilityWhy,
   fallbackAssistantWhy,
+  familyAllows,
   pickCapabilities,
+  queryFamilies,
+  toolFamilies,
   toolFamily,
   type CapabilityPick,
 } from "./capability-match.ts";
 import { semanticHits } from "./semantic.ts";
-import { blockRealEstateConcept, businessValuationQuery, CANONICAL_REAL_ESTATE, CAP_RATE_INTRO, conceptHasSignal, deniesRealEstate, semanticRealEstateBlock } from "./real-estate-match.ts";
+import { blockRealEstateConcept, businessValuationQuery, buyerSellerNurture, CANONICAL_REAL_ESTATE, CAP_RATE_INTRO, conceptHasSignal, deniesRealEstate, semanticRealEstateBlock, showingSignal } from "./real-estate-match.ts";
 import {
   SEMANTIC_BROAD_FLOOR,
   SEMANTIC_CONFIDENT_GAP,
@@ -37,6 +41,9 @@ import {
   smallBusinessAssistantLine,
   smallBusinessCompoundIntro,
   smallBusinessHeader,
+  manyHats,
+  onboardingOnlyQuery,
+  payrollQuery,
   smallBusinessIntro,
   smallBusinessJobForms,
   smallBusinessRoleBonus,
@@ -274,6 +281,9 @@ function scoreConcept(concept: Concept, lower: string, tokens: Set<string>): num
   }
   if (concept.id === "video-generation" && videoGenerationQuery(lower)) score += 12;
   if (concept.id === "listing-video" && listingVideoQuery(lower)) score += 12;
+  if (concept.id === "small-business" && manyHats(lower)) score += 16;
+  if (concept.id === "realtor-follow-up" && buyerSellerNurture(lower)) score += 12;
+  if (concept.id === "taxes" && /\b1099s?\b/.test(lower)) score += 12;
   if (concept.id === "floor-plan-render" && floorPlanRenderQuery(lower)) score += 12;
   const phrases = concept.id === "deals" && !propertyMoneyQuery(lower)
     ? concept.phrases.filter((phrase) => phrase !== "cash flow")
@@ -346,6 +356,7 @@ const ACRONYM_CASE: Record<string, string> = {
 export function stripWrappers(input: string): string {
   let text = input.trim().replace(/[“”‘’"'`]+/g, "").replace(/\s+/g, " ").replace(/^[^A-Za-z0-9]+/, "").replace(/[.?!…]+$/g, "").replace(/\s+please$/i, "");
   text = text.replace(/\bfor me to\b/gi, " ");
+  text = text.replace(/\bbefore the end of the day\b/gi, " ");
   text = text.replace(/\band\s+(agent|ai)s?\b/gi, "an $1").replace(/\band\s+tools?\b/gi, "a tool");
   const patterns = [
     /^(?:hey|hi|hello|ok|okay|so)\s+/i,
@@ -837,6 +848,9 @@ function listingVideoQuery(query: string): boolean {
   if (/\bschedul\w*/i.test(query) && /\b(tours?|showings?)\b/i.test(query) && !/\b(videos?|reels?|edit|cut|footage)\b/i.test(query)) {
     return false;
   }
+  if (/\brooms?\b/i.test(query) && /\b(tours?|walkthroughs?)\b/i.test(query) && /\b(order|front door|starting)\b/i.test(query)) {
+    return true;
+  }
   if (/\b(listing videos?|video tours?|property walkthroughs?|realtor videos?|house tours?|home tours?|property reels?)\b/i.test(query)) return true;
   if (/\bwalkthroughs?\b/i.test(query) && /\b(videos?|reels?|cuts?|edit|footage)\b/i.test(query) && !/\b(code|app|software|bug)\b/i.test(query)) {
     return true;
@@ -1109,6 +1123,8 @@ function whyItHelps(tool: Tool, useCase: UseCase | null, query: string, general:
     const written = specialistLine(useCase.slug, tool.slug, index);
     if (written) return written;
   }
+  const job = (tool.capabilities ?? []).find((item) => item.split(/\s+/).length <= 14);
+  if (job) return capabilityWhy(tool.name, job);
   return `${tool.name} helps with this job.`;
 }
 
@@ -1274,6 +1290,9 @@ export function labelConceptForSeed(query: string, useCase: string): string {
 }
 
 function semanticAllowed(concept: Concept, lower: string): boolean {
+  if (concept.id === "showings" && !showingSignal(lower)) return false;
+  if (concept.id === "payroll" && !payrollQuery(lower)) return false;
+  if (manyHats(lower) && concept.id !== "small-business") return false;
   if (floorPlanRenderQuery(lower)) return concept.id === "floor-plan-render";
   if (concept.id === "floor-plan-render") return false;
   if (businessValuationQuery(lower)) return false;
@@ -1752,6 +1771,11 @@ function keepAssistantFallback(text: string): boolean {
   if (/\b(bake|baking)\b/.test(lower) && /\bcakes?\b/.test(lower)) return true;
   if (/\bcakes?\b/.test(lower)) return true;
   if (/\ba lot of deals\b/.test(lower)) return true;
+  if (onboardingOnlyQuery(lower)) return true;
+  if (/\bmeal prep\b/.test(lower)) return true;
+  if (/\bgrocery lists?\b/.test(lower)) return true;
+  if (/\bname a baby\b/.test(lower)) return true;
+  if (/\bbook clubs?\b/.test(lower)) return true;
   return false;
 }
 
@@ -1936,10 +1960,16 @@ export function rankCatalogQuery(
 
   const winner = chooseWinner(conceptHits(corrected, semanticScores));
   const specialists = winner ? collect(winner.concept, winner.score, corrected, true, false) : [];
-  if (!winner && !alt && !keepAssistantFallback(corrected)) {
+  const queryAllowed = allowedFamilies(queryFamilies(corrected));
+  const specialistsFit = specialists.some((tool) => familyAllows(toolFamilies(tool.source), queryAllowed));
+  const thinJob = Boolean(winner && specialists.length > 0 && specialists.length < 3 && !specialistsFit);
+  const strippedJob = stripWrappers(corrected).toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ").trim();
+  const genericWriteEmail = strippedJob === "write emails" || strippedJob === "write email";
+  if ((!winner || thinJob) && !alt && !keepAssistantFallback(corrected) && !genericWriteEmail) {
     const cosineMap = new Map((capabilityCosines ?? []).map((item) => [item.key, item.cosine]));
     const picks = pickCapabilities(corrected, catalog.tools, capabilityCosines ? cosineMap : undefined).slice(0, 5);
-    if (picks.length > 0) {
+    const enough = thinJob ? picks.length >= 3 : picks.length > 0;
+    if (enough) {
       const ranked = capabilityRanking(picks, indexedTools, assistants);
       if (ranked) return ranked;
     }

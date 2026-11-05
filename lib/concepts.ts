@@ -190,7 +190,7 @@ export const CONCEPTS: Concept[] = [
   {
     id: "showings",
     useCase: "showing-scheduling",
-    categories: [],
+    categories: ["real-estate"],
     phrases: [
       "open house",
       "open houses",
@@ -207,7 +207,7 @@ export const CONCEPTS: Concept[] = [
   {
     id: "transaction",
     useCase: "transaction-coordination",
-    categories: [],
+    categories: ["real-estate"],
     phrases: [
       "transaction coordinator",
       "transaction coordination",
@@ -409,7 +409,7 @@ export const CONCEPTS: Concept[] = [
   {
     id: "customer-follow-up",
     useCase: "customer-follow-up",
-    categories: [],
+    categories: ["small-business"],
     phrases: [
       "customer follow-up", "customer follow up",
       "follow up with customers", "follow up with my customers", "follow up with your customers",
@@ -472,6 +472,7 @@ export const CONCEPTS: Concept[] = [
     categories: ["content"],
     phrases: [
       "marketing copy", "blog post", "blog posts", "optimize content", "seo article", "seo articles",
+      "content brief", "landing page copy",
       "local seo", "google business profile", "google business", "business profile",
     ],
     anchors: ["seo", "blog", "copywriting"],
@@ -692,8 +693,8 @@ export const CONCEPTS: Concept[] = [
   {
     id: "payroll",
     useCase: "payroll",
-    categories: [],
-    phrases: ["run payroll", "do payroll", "my payroll", "payroll taxes", "payroll tax"],
+    categories: ["hr"],
+    phrases: ["run payroll", "do payroll", "my payroll", "payroll taxes", "payroll tax", "hours and rates", "pay rate", "pay date", "gross pay", "timesheet"],
     anchors: ["payroll", "paycheck", "paychecks", "paystub", "paystubs"],
     coveredVerbs: ["run"],
     covered: ["payroll", "paycheck", "paychecks", "paystub", "hours", "wages"],
@@ -701,7 +702,7 @@ export const CONCEPTS: Concept[] = [
   {
     id: "sales-tax",
     useCase: "sales-tax",
-    categories: [],
+    categories: ["tax"],
     phrases: ["sales tax", "sales taxes", "vat return", "vat returns", "gst return", "gst returns"],
     anchors: ["vat"],
     coveredVerbs: [],
@@ -710,7 +711,7 @@ export const CONCEPTS: Concept[] = [
   {
     id: "shifts",
     useCase: "shift-scheduling",
-    categories: [],
+    categories: ["small-business", "scheduling"],
     phrases: ["schedule shifts", "scheduling shifts", "shift schedule", "staff schedule", "employee schedule"],
     anchors: ["shift", "shifts", "rota", "roster"],
     coveredVerbs: ["schedule"],
@@ -719,7 +720,7 @@ export const CONCEPTS: Concept[] = [
   {
     id: "reviews",
     useCase: "review-requests",
-    categories: [],
+    categories: ["small-business"],
     phrases: [
       "review request", "review requests", "google review", "google reviews",
       "ask for reviews", "online reputation",
@@ -731,7 +732,7 @@ export const CONCEPTS: Concept[] = [
   {
     id: "quotes",
     useCase: "quotes",
-    categories: [],
+    categories: ["small-business"],
     phrases: [
       "write a quote", "draft a quote", "send a quote", "price quote", "client quote",
       "write a proposal", "draft a proposal", "client proposal",
@@ -743,7 +744,7 @@ export const CONCEPTS: Concept[] = [
   {
     id: "contracts",
     useCase: "contracts",
-    categories: [],
+    categories: ["legal"],
     phrases: ["write a contract", "draft a contract", "service agreement", "client contract", "service contract"],
     anchors: ["contract", "contracts"],
     coveredVerbs: ["draft", "write"],
@@ -758,6 +759,7 @@ export const CONCEPTS: Concept[] = [
       "small business", "my business", "whole business", "run my business", "run the business",
       "running the business", "running a business", "running my business",
       "automate my business",
+      "every hat",
     ],
     anchors: [],
     coveredVerbs: [],

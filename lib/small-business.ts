@@ -4,6 +4,7 @@
  * states only what the directory, or the tool's own site, supports.
  */
 
+import { payCue } from "./job-cues.ts";
 import { dealSpecificSignal, propertyOpsSignal } from "./real-estate-match.ts";
 
 export const SMB_SPELLING: Record<string, string> = {
@@ -128,6 +129,15 @@ export function payrollQuery(text: string): boolean {
   return /\bpayroll\b/i.test(text) || /\bpaychecks?\b/i.test(text) || /\bpaystubs?\b/i.test(text);
 }
 
+export function manyHats(text: string): boolean {
+  if (/\bevery hat\b/i.test(text)) return true;
+  let count = 0;
+  if (/\b(receipts?|invoices?)\b/i.test(text)) count += 1;
+  if (/\b(posts?|social)\b/i.test(text)) count += 1;
+  if (/\b(customers?|waiting on me)\b/i.test(text)) count += 1;
+  return count >= 3;
+}
+
 export function shiftQuery(text: string): boolean {
   return /\b(shifts?|rota|rosters?)\b/i.test(text)
     || /\b(staff|employee|team)\s+schedule\b/i.test(text);
@@ -247,6 +257,26 @@ export function conceptBlocked(id: string, lower: string): boolean {
   if (id === "quotes" && /\bbrand\b/.test(lower) && !/\b(quotes?|proposals?|estimates?)\b/.test(lower)) return true;
   if (id === "content" && /\bexports?\b/.test(lower) && !/\b(blog|seo|articles?|copy)\b/.test(lower)) return true;
   if ((id === "invoices" || id === "books-reports") && /\bhave not heard\b/.test(lower)) return true;
+  if (id === "payroll" && !payrollQuery(lower) && !payCue(lower)) return true;
+  if (id === "quotes" && /\b(insurance|roof(?:ing)?|grant|nonprofit|fender|car damage)\b/.test(lower)) return true;
+  if (id === "research" && /\b(case law|lawsuit|legal brief|nda\b|massing|floor plan|keyword|\bseo\b)\b/.test(lower)) return true;
+  if (id === "social" && /\b(ad creatives?|google ads|meta ads|ppc|ugc)\b/.test(lower)) return true;
+  if ((id === "content" || id === "social") && /\b(ad creatives?|ad variations|ugc|google ads)\b/.test(lower)) return true;
+  if (id === "shifts" && !shiftQuery(lower) && !/\b(who can work|nobody assigned|who is available)\b/.test(lower)) return true;
+  if ((id === "video" || id === "video-generation") && /\b(short story|cold email|newsletter|google slides|build an app)\b/.test(lower) && !/\b(clip|clips|reel|reels|twitch)\b/.test(lower)) return true;
+  if (id === "video" && /\b(interview|highlight)\b/.test(lower) && /\b(clip|highlight)\b/.test(lower) && !/\b(twitch|stream)\b/.test(lower)) return true;
+  if (id === "knowledge" && /\b(case law|nda\b|lawsuit|parking ticket)\b/.test(lower)) return true;
+  if (id === "support" && /\b(parking ticket|case law|nda\b)\b/.test(lower)) return true;
+  if (id === "commerce" && /\b(product descriptions?|product titles|catalog photos|support macros)\b/.test(lower) && !/\b(inventory|shipping)\b/.test(lower)) return true;
+  if (id === "email" && /\b(angry|demand letter)\b/.test(lower)) return true;
+  if (id === "schedule" && /\b(trades|subject house|math|homework)\b/.test(lower)) return true;
+  if (id === "transaction" && /\b(lease|tenant)\b/.test(lower)) return true;
+  if (id === "contracts" && /\b(hours|payroll|pay rate|timesheet|translat|locali)/.test(lower)) return true;
+  if (id === "listing-copy" && /\b(furniture|bedroom|mood board|landing page)\b/.test(lower)) return true;
+  if (id === "tutoring" && /\b(unit tests?|pull requests?)\b/.test(lower)) return true;
+  if (id === "language" && /\b(translat|locali|app strings)/.test(lower)) return true;
+  if (id === "property-mgmt" && /\b(clause|nda)\b/.test(lower) && !/\blease renewal\b/.test(lower)) return true;
+  if (manyHats(lower) && id !== "small-business") return true;
   return false;
 }
 
