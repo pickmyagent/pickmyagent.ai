@@ -13,5 +13,5 @@
   "assistantContext": "drafting a contract",
   "searchTopic": "which contract lines a person should review",
   "recommended": [],
-  "intro": "AI agents can draft a contract from the terms you list and mark the lines a person should review. A lawyer still needs to read the wording."
+  "intro": "AI agents can draft a contract from the terms you list and mark lines to review. A lawyer still reads it."
 }

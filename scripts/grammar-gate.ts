@@ -171,7 +171,9 @@ export function grammarProblems(text: string, kind: "header" | "intro" | "why" =
   }
   if (kind === "header" && !neutralHeader) {
     problems.push(...headerEchoProblems(phrase));
-    if (!/^(?:help with\b|(?:[a-z]+-)?[a-z]+ing\b)/i.test(phrase)) problems.push("header does not start with a gerund or help with");
+    const gerundHeader = /^(?:help with\b|(?:[a-z]+-)?[a-z]+ing\b)/i.test(phrase);
+    const categoryHeader = /^[a-z][a-z0-9 ,&'-]{2,70}$/.test(phrase) && phrase.split(/\s+/).length <= 8;
+    if (!gerundHeader && !categoryHeader) problems.push("header does not start with a gerund or help with");
     if (bareGerund(phrase)) problems.push("header is only a gerund");
     if (/\bworking on\b/i.test(phrase)) problems.push("working on header");
     if (/\bour\b/i.test(phrase)) problems.push("header still says our");

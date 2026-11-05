@@ -65,5 +65,29 @@
   },
   "useCaseFit": {
     "tool-use-browser": "Automates browser steps, with a free plan and a $29 per month plan."
-  }
+  },
+  "capabilities": [
+    "connect an agent to a tool",
+    "call an api from an agent",
+    "search the web for an agent",
+    "fill a browser form for an agent",
+    "pass a page to a model",
+    "run a tool with structured input",
+    "chain two tools in one task",
+    "return a source with the answer"
+  ],
+  "searchPhrases": [
+    "connect an agent to a tool",
+    "help me connect an agent to a tool",
+    "can you connect an agent to a tool",
+    "call an api from an agent",
+    "help me call an api from an agent",
+    "can you call an api from an agent",
+    "search the web for an agent",
+    "help me search the web for an agent",
+    "can you search the web for an agent",
+    "fill a browser form for an agent",
+    "help me fill a browser form for an agent",
+    "can you fill a browser form for an agent"
+  ]
 }

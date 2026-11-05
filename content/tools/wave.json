@@ -1,0 +1,92 @@
+{
+  "id": "wave",
+  "slug": "wave",
+  "name": "Wave",
+  "websiteUrl": "https://www.waveapps.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Wave can send a free invoice.",
+  "longDescription": "Wave can send a free invoice. It can also track income and expenses.",
+  "categories": [
+    "bookkeeping"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.waveapps.com/",
+  "docsUrl": "https://www.waveapps.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Send a free invoice",
+    "Track income and expenses"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Wave can send a free invoice for this kind of work.",
+  "weakness": "You still review the books before you close the period.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.waveapps.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.waveapps.com/"
+  },
+  "capabilities": [
+    "reconcile a bank feed",
+    "categorize receipts for the books",
+    "catch up a messy ledger",
+    "match transactions to the books",
+    "clean up a bookkeeping file",
+    "prepare a profit and loss",
+    "scan receipts into the books",
+    "organize expenses for an accountant"
+  ],
+  "searchPhrases": [
+    "reconcile a bank feed",
+    "help me reconcile a bank feed",
+    "can you reconcile a bank feed",
+    "categorize receipts for the books",
+    "help me categorize receipts for the books",
+    "can you categorize receipts for the books",
+    "catch up a messy ledger",
+    "help me catch up a messy ledger",
+    "can you catch up a messy ledger",
+    "match transactions to the books",
+    "help me match transactions to the books",
+    "can you match transactions to the books",
+    "reconcile quickbooks",
+    "clean up xero",
+    "match the bank feed",
+    "profit and loss for last month"
+  ]
+}

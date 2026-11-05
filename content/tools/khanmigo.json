@@ -63,5 +63,28 @@
   },
   "useCaseFit": {
     "tutoring": "Tutors almost any academic subject and helps a teacher plan a lesson."
-  }
+  },
+  "capabilities": [
+    "quiz a student on a chapter",
+    "make practice problems",
+    "build a study plan",
+    "turn notes into flashcards",
+    "walk through a worked example",
+    "track what a student has mastered",
+    "give feedback on a practice answer"
+  ],
+  "searchPhrases": [
+    "quiz a student on a chapter",
+    "help me quiz a student on a chapter",
+    "can you quiz a student on a chapter",
+    "make practice problems",
+    "help me make practice problems",
+    "can you make practice problems",
+    "build a study plan",
+    "help me build a study plan",
+    "can you build a study plan",
+    "turn notes into flashcards",
+    "help me turn notes into flashcards",
+    "can you turn notes into flashcards"
+  ]
 }

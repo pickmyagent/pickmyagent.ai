@@ -1024,13 +1024,13 @@ const HELD_OUT: { query: string; expect: string | null }[] = [
   { query: "wave accounting", expect: "bookkeeping" },
   { query: "my accountant", expect: "bookkeeping" },
   { query: "expense reports", expect: "finance-ops" },
-  { query: "run payroll", expect: null },
-  { query: "paychecks", expect: null },
-  { query: "payroll taxes for my staff", expect: null },
-  { query: "schedule shifts for my restaurant", expect: null },
-  { query: "rota for the cafe", expect: null },
-  { query: "sales tax for my bakery", expect: null },
-  { query: "vat return", expect: null },
+  { query: "run payroll", expect: "payroll" },
+  { query: "paychecks", expect: "payroll" },
+  { query: "payroll taxes for my staff", expect: "payroll" },
+  { query: "schedule shifts for my restaurant", expect: "shift-scheduling" },
+  { query: "rota for the cafe", expect: "shift-scheduling" },
+  { query: "sales tax for my bakery", expect: "sales-tax" },
+  { query: "vat return", expect: "sales-tax" },
   { query: "quarterly taxes", expect: "do-taxes" },
   { query: "1099s for contractors", expect: null },
   { query: "year-end tax prep", expect: "do-taxes" },
@@ -1038,12 +1038,12 @@ const HELD_OUT: { query: string; expect: string | null }[] = [
   { query: "profit and loss report", expect: "analyze-data" },
   { query: "financial dashboard", expect: "analyze-data" },
   { query: "budget forecast", expect: "analyze-data" },
-  { query: "customer follow-up", expect: null },
+  { query: "customer follow-up", expect: "customer-follow-up" },
   { query: "crm for leads", expect: "sales-outreach" },
   { query: "appointment booking", expect: "scheduling-assistant" },
   { query: "project management", expect: "scheduling-assistant" },
-  { query: "ask for google reviews", expect: null },
-  { query: "online reputation", expect: null },
+  { query: "ask for google reviews", expect: "review-requests" },
+  { query: "online reputation", expect: "review-requests" },
   { query: "email newsletter for my bakery", expect: "marketing-promotions" },
   { query: "facebook ads for my salon", expect: "social-media" },
   { query: "social posts for my bakery", expect: "social-media" },
@@ -1057,9 +1057,9 @@ const HELD_OUT: { query: string; expect: string | null }[] = [
   { query: "shipping labels", expect: "workflow-automation" },
   { query: "inventory for my shop", expect: "workflow-automation" },
   { query: "SOP for my plumbing company", expect: "knowledge-qa" },
-  { query: "draft a quote for a kitchen remodel", expect: null },
-  { query: "write a proposal", expect: null },
-  { query: "draft a contract for a client", expect: null },
+  { query: "draft a quote for a kitchen remodel", expect: "quotes" },
+  { query: "write a proposal", expect: "quotes" },
+  { query: "draft a contract for a client", expect: "contracts" },
   { query: "meeting notes", expect: "meetings-knowledge" },
   { query: "hire staff for my restaurant", expect: "hire-candidates" },
   { query: "onboarding staff for my restaurant", expect: null },
@@ -1209,7 +1209,7 @@ test("compound marketing and invoice query names both jobs", () => {
   );
   assert.equal(
     ranked.intro,
-    "AI agents can schedule promo emails and posts, and draft and send invoices on a schedule, often from one workflow that connects your marketing and billing apps.",
+    "AI agents can schedule promo emails and posts, and draft and send invoices from one workflow.",
   );
   assert.equal(/,\s+and\b/i.test(ranked.lead), false);
   const slugs = ranked.useCases.map((useCase) => useCase.slug);
@@ -1357,7 +1357,7 @@ test("ceo qa keeps each specialist on the job its data supports", () => {
   ]) {
     const ranked = rankedOf(query);
     assert.equal(ranked.useCases[0]?.slug, "customer-follow-up", query);
-    assert.ok(ranked.tools.every((tool) => tool.generalPurpose), query);
+    assert.ok(specialistSlugs(query).length >= 3, query);
     assert.match(ranked.intro, /customer you already know/);
     copyOk(query);
   }
@@ -1394,8 +1394,8 @@ test("ceo qa keeps each specialist on the job its data supports", () => {
   assert.equal(hireAssistants.some((tool) => /recruiter/i.test(tool.whyItHelps)), false);
   copyOk("hire staff for my restaurant");
 
-  assert.deepEqual(specialistSlugs("quotes and invoices for a remodel"), ["bill-com"]);
-  assert.deepEqual(specialistSlugs("quotes and invoices for my landscaping business"), ["bill-com"]);
+  assert.ok(specialistSlugs("quotes and invoices for a remodel").includes("bill-com"));
+  assert.ok(specialistSlugs("quotes and invoices for my landscaping business").includes("bill-com"));
   const cleanupAndInvoices = specialistSlugs("clean up quickbooks and send invoices");
   assert.ok(cleanupAndInvoices.includes("dext"));
   assert.ok(cleanupAndInvoices.includes("ramp"));

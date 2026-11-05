@@ -7,7 +7,7 @@
     "build": "node scripts/assemble-catalog.mjs && node --experimental-strip-types --test tests/search.test.ts && next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node scripts/assemble-catalog.mjs && node --experimental-strip-types --test tests/search.test.ts tests/seo.test.ts tests/community.test.ts",
+    "test": "node scripts/assemble-catalog.mjs && node --experimental-strip-types --test tests/search.test.ts tests/seo.test.ts tests/community.test.ts tests/capability.test.ts",
     "catalog": "node scripts/assemble-catalog.mjs",
     "seed": "node scripts/seed-catalog.mjs"
   },

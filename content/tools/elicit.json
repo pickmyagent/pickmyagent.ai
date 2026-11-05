@@ -64,5 +64,29 @@
   },
   "useCaseFit": {
     "deep-research": "AI research assistant with Plus at $11 per user per month when billed annually."
-  }
+  },
+  "capabilities": [
+    "draft a literature review",
+    "summarize what the papers say",
+    "chat with a pdf",
+    "map citations for a paper",
+    "summarize a study",
+    "find peer reviewed sources",
+    "check whether a claim is supported",
+    "collect quotes from a paper"
+  ],
+  "searchPhrases": [
+    "draft a literature review",
+    "help me draft a literature review",
+    "can you draft a literature review",
+    "summarize what the papers say",
+    "help me summarize what the papers say",
+    "can you summarize what the papers say",
+    "chat with a pdf",
+    "help me chat with a pdf",
+    "can you chat with a pdf",
+    "map citations for a paper",
+    "help me map citations for a paper",
+    "can you map citations for a paper"
+  ]
 }

@@ -81,5 +81,29 @@
   },
   "useCaseFit": {
     "research-rag": "Stores memory an agent can read later, and we imported the Python package locally."
-  }
+  },
+  "capabilities": [
+    "search the web for a question",
+    "crawl a site into an index",
+    "retrieve passages for an answer",
+    "ground an answer in sources",
+    "index documents for search",
+    "query a vector store",
+    "extract text from a page",
+    "rank sources for a question"
+  ],
+  "searchPhrases": [
+    "search the web for a question",
+    "help me search the web for a question",
+    "can you search the web for a question",
+    "crawl a site into an index",
+    "help me crawl a site into an index",
+    "can you crawl a site into an index",
+    "retrieve passages for an answer",
+    "help me retrieve passages for an answer",
+    "can you retrieve passages for an answer",
+    "ground an answer in sources",
+    "help me ground an answer in sources",
+    "can you ground an answer in sources"
+  ]
 }

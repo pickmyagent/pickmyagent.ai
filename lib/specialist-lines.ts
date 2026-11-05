@@ -493,6 +493,18 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
     "cloud-cma": [
       "Cloud CMA builds a CMA report from MLS comps and leaves the list price with the agent.",
     ],
+    "housecanary-app": [
+      "HouseCanary estimates a home value and can include that figure in a CMA.",
+    ],
+    "corelogic-app": [
+      "CoreLogic estimates a property value from its own data.",
+    ],
+    rpr: [
+      "RPR researches a property and creates a client-ready CMA report.",
+    ],
+    quantarium: [
+      "Quantarium prices a broker price opinion and an automated valuation.",
+    ],
   },
   "listing-copy": {
     jasper: [
@@ -509,20 +521,56 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
     boxbrownie: [
       "BoxBrownie edits a listing photo and virtually stages an empty room.",
     ],
+    veras: [
+      "Veras turns an uploaded room photo into a staged listing image.",
+    ],
+    lookx: [
+      "LookX turns an empty listing photo into a staged room.",
+    ],
+    spacely: [
+      "Spacely AI turns a listing photo into a staged room you can compare with the original.",
+    ],
   },
   "realtor-follow-up": {
     "follow-up-boss": [
       "Follow Up Boss runs action plans that remind you to follow up with buyers and sellers.",
+    ],
+    resimpli: [
+      "REsimpli texts or emails a buyer after a showing.",
+    ],
+    "wise-agent": [
+      "Wise Agent reminds an agent to follow up with a past client.",
+    ],
+    lofty: [
+      "Lofty logs the next follow-up on a buyer or seller lead.",
     ],
   },
   "real-estate-crm": {
     "follow-up-boss": [
       "Follow Up Boss keeps buyer and seller leads in one real estate CRM.",
     ],
+    resimpli: [
+      "REsimpli keeps buyer and seller contacts with calling and texting on the record.",
+    ],
+    "wise-agent": [
+      "Wise Agent stores client contacts in a real estate CRM.",
+    ],
+    "real-geeks": [
+      "Real Geeks manages leads inside a real estate CRM and website.",
+    ],
+    lofty: [
+      "Lofty keeps leads in a real estate CRM next to the agent website.",
+    ],
   },
   "market-reports": {
     "cloud-cma": [
       "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity.",
+    ],
+    "housecanary-app": [
+      "HouseCanary summarizes a local market next to a value estimate.",
+    ],
+    rpr: [
+      "RPR turns property research and market trends into a client-ready report.",
     ],
   },
   "realtor-prospecting": {
@@ -559,6 +607,15 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
   "property-management": {
     doorloop: [
       "DoorLoop tracks rent, maintenance, and leases and includes an assistant for tenant questions.",
+    ],
+    appfolio: [
+      "AppFolio tracks rent and maintenance for a rental portfolio.",
+    ],
+    "rentec-direct": [
+      "Rentec Direct collects rent and screens a tenant for a landlord.",
+    ],
+    avail: [
+      "Avail screens a tenant and collects rent for a landlord.",
     ],
   },
   "floor-plan-rendering": {
@@ -657,6 +714,53 @@ const LINES: Record<string, Record<string, readonly string[]>> = {
     zendesk: [
       "Zendesk runs the customer support inbox for a small business.",
     ],
+  },
+  "showing-scheduling": {
+    "follow-up-boss": ["Follow Up Boss keeps a showing follow-up on the contact record."],
+    "launch-control": ["Launch Control texts a buyer to confirm a showing time."],
+    resimpli: ["REsimpli logs a showing and the follow-up on the property."],
+    showingtime: ["ShowingTime schedules a showing and sends a reminder."],
+  },
+  "transaction-coordination": {
+    showingtime: ["ShowingTime keeps the listing file moving toward closing."],
+    skyslope: ["SkySlope tracks a transaction checklist through closing."],
+    dotloop: ["Dotloop stores the purchase documents in one file."],
+  },
+  payroll: {
+    "deel-hr": ["Deel runs payroll for a team the company pays."],
+    "remote-hr": ["Remote runs payroll for employees in other countries."],
+    "rippling-hr": ["Rippling runs payroll from the same system that onboarded the hire."],
+  },
+  "customer-follow-up": {
+    birdeye: ["Birdeye sends a check-in after a customer buys."],
+    honeybook: ["HoneyBook drafts a follow-up for a client already on the books."],
+    podium: ["Podium texts a customer to ask how the job went."],
+  },
+  "review-requests": {
+    birdeye: ["Birdeye asks a customer for a review after a visit."],
+    podium: ["Podium texts a request for a review after the job."],
+    "grade-us": ["Grade.us asks a customer for a public review."],
+  },
+  quotes: {
+    bonsai: ["Bonsai drafts a proposal for a freelance job."],
+    dubsado: ["Dubsado sends a proposal to a client."],
+    honeybook: ["HoneyBook sends a quote from the job details."],
+  },
+  contracts: {
+    juro: ["Juro drafts a contract in the browser."],
+    spellbook: ["Spellbook reviews a contract in a Word document."],
+    ironclad: ["Ironclad tracks a contract through review."],
+  },
+  "sales-tax": {
+    taxjar: ["TaxJar calculates sales tax on an order."],
+    avalara: ["Avalara calculates the sales tax for a sale."],
+    vertex: ["Vertex calculates indirect tax for a filing."],
+  },
+  "shift-scheduling": {
+    housecall: ["Housecall Pro schedules a crew onto a job."],
+    servicetitan: ["ServiceTitan schedules technicians onto the day's jobs."],
+    "when-i-work": ["When I Work schedules shifts and tracks who can work."],
+    "7shifts": ["7shifts schedules restaurant shifts for the week."],
   },
 };
 

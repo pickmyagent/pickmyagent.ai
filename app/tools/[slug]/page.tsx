@@ -154,6 +154,17 @@ export default async function ToolPage({
             <Prose text={tool.longDescription} />
           </div>
 
+          {tool.capabilities && tool.capabilities.length > 0 ? (
+            <section className="mt-8 max-w-2xl">
+              <h2 className="font-semibold">What it can do</h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
+                {tool.capabilities.map((item) => (
+                  <li key={item}>{item.charAt(0).toUpperCase() + item.slice(1)}</li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
+
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <section className="border border-line bg-panel p-4">
               <h2 className="font-semibold">Best for</h2>

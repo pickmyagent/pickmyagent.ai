@@ -81,5 +81,31 @@
   },
   "useCaseFit": {
     "multi-agent-workflows": "Open-source library for agents that call tools in code you write."
-  }
+  },
+  "capabilities": [
+    "orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "keep memory for an agent",
+    "use an open source agent framework",
+    "hand a task from one agent to another",
+    "define a tool an agent can call",
+    "trace an agent run",
+    "retry a failed agent step"
+  ],
+  "searchPhrases": [
+    "orchestrate agents that use tools",
+    "help me orchestrate agents that use tools",
+    "can you orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "help me run a multi agent research crew",
+    "can you run a multi agent research crew",
+    "keep memory for an agent",
+    "help me keep memory for an agent",
+    "can you keep memory for an agent",
+    "use an open source agent framework",
+    "help me use an open source agent framework",
+    "can you use an open source agent framework",
+    "open source agent framework",
+    "memory for an agent"
+  ]
 }

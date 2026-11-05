@@ -13,5 +13,5 @@
   "assistantContext": "writing a customer quote",
   "searchTopic": "what a simple quote should include",
   "recommended": [],
-  "intro": "AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers before it goes out."
+  "intro": "AI agents can draft a quote or proposal from the job details and the price you set. You still check the numbers."
 }

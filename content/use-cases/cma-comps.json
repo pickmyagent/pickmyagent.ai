@@ -14,5 +14,5 @@
       "why": "Builds a CMA report from MLS comps and leaves the list price with the agent."
     }
   ],
-  "intro": "AI agents can gather comparable sales and draft a CMA, and you still pick the final comps and set the price. MLS access depends on the tool and your board."
+  "intro": "AI agents can gather comparable sales and draft a CMA. You still pick the comps and set the price."
 }

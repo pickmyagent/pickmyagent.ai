@@ -6,11 +6,22 @@
   "affiliateUrl": null,
   "shortDescription": "Branded CMA reports from MLS comps, with a 14-day trial.",
   "longDescription": "Cloud CMA builds branded CMA reports from MLS comps, comparable sales, and neighborhood stats. Lone Wolf lists Cloud CMA at $49 per month, or $499 annually, and that price includes Homebeat. A 14-day trial is available. Many MLS memberships include Cloud CMA, and access still depends on the board.",
-  "categories": ["real-estate"],
-  "useCaseTags": ["cma-comps", "market-reports"],
-  "toolTypes": ["other"],
-  "platforms": ["web"],
-  "pricingModel": ["subscription"],
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "cma-comps",
+    "market-reports"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "subscription"
+  ],
   "pricingNotes": "Cloud CMA is $49 per month or $499 annually, and that price includes Homebeat. A 14-day trial is available. Some MLS memberships include Cloud CMA.",
   "pricingUrl": "https://www.lwolf.com/resources/cloud-cma-vs-moxiworks-cma-moxipresent-which-cma-tool-wins",
   "docsUrl": "https://www.lwolf.com/engage/cma",
@@ -34,7 +45,9 @@
   "checkedAt": "2026-10-27T12:00:00-04:00",
   "checkedDate": "2026-10-27",
   "smokeTestNotes": "Product and comparison pages reviewed on October 27, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -53,5 +66,33 @@
   "useCaseFit": {
     "cma-comps": "Builds a CMA report from MLS comps and neighborhood stats.",
     "market-reports": "Cloud CMA includes Homebeat, which sends homeowners an automated update on their home's value and neighborhood activity."
-  }
+  },
+  "capabilities": [
+    "find land for sale",
+    "check zoning on a vacant lot",
+    "skip trace a property owner",
+    "pull comps for a house",
+    "build a cma from recent sales",
+    "write an mls listing description",
+    "estimate a home value",
+    "find fsbo leads nearby"
+  ],
+  "searchPhrases": [
+    "find land for sale",
+    "help me find land for sale",
+    "can you find land for sale",
+    "check zoning on a vacant lot",
+    "help me check zoning on a vacant lot",
+    "can you check zoning on a vacant lot",
+    "skip trace a property owner",
+    "help me skip trace a property owner",
+    "can you skip trace a property owner",
+    "pull comps for a house",
+    "help me pull comps for a house",
+    "can you pull comps for a house",
+    "home value estimate",
+    "off-market houses",
+    "schedule a showing",
+    "listing photos need virtual staging"
+  ]
 }

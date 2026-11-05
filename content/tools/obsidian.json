@@ -22,7 +22,7 @@
     "free",
     "subscription"
   ],
-  "pricingNotes": "Catalyst $25 one-time optional; Commercial $50/user/year optional.",
+  "pricingNotes": "Catalyst $25 one-time optional, Commercial $50/user/year optional.",
   "pricingUrl": "https://obsidian.md/pricing",
   "docsUrl": "https://help.obsidian.md/",
   "freeTier": true,
@@ -68,5 +68,29 @@
   },
   "useCaseFit": {
     "meetings-knowledge": "Local-first notes app that the official pricing page says is free without limits."
-  }
+  },
+  "capabilities": [
+    "search a company wiki",
+    "answer a question across team docs",
+    "link notes to each other",
+    "find where a policy was written",
+    "summarize a handbook page",
+    "ask a question about an sop",
+    "collect sources for an internal answer",
+    "keep a team knowledge base"
+  ],
+  "searchPhrases": [
+    "search a company wiki",
+    "help me search a company wiki",
+    "can you search a company wiki",
+    "answer a question across team docs",
+    "help me answer a question across team docs",
+    "can you answer a question across team docs",
+    "link notes to each other",
+    "help me link notes to each other",
+    "can you link notes to each other",
+    "find where a policy was written",
+    "help me find where a policy was written",
+    "can you find where a policy was written"
+  ]
 }

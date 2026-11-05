@@ -1,0 +1,94 @@
+{
+  "id": "corelogic-app",
+  "slug": "corelogic-app",
+  "name": "CoreLogic",
+  "websiteUrl": "https://www.cotality.com/",
+  "affiliateUrl": null,
+  "shortDescription": "CoreLogic can estimate a value.",
+  "longDescription": "CoreLogic can estimate a value. It can also research a property.",
+  "categories": [
+    "real-estate"
+  ],
+  "useCaseTags": [
+    "cma-comps"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.cotality.com/",
+  "docsUrl": "https://www.cotality.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Estimate a value",
+    "Research a property"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "CoreLogic can estimate a value for this kind of work.",
+  "weakness": "You still confirm the records before you make an offer.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.cotality.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.cotality.com/"
+  },
+  "capabilities": [
+    "find land for sale",
+    "check zoning on a vacant lot",
+    "skip trace a property owner",
+    "pull comps for a house",
+    "build a cma from recent sales",
+    "write an mls listing description",
+    "estimate a home value",
+    "find fsbo leads nearby"
+  ],
+  "searchPhrases": [
+    "find land for sale",
+    "help me find land for sale",
+    "can you find land for sale",
+    "check zoning on a vacant lot",
+    "help me check zoning on a vacant lot",
+    "can you check zoning on a vacant lot",
+    "skip trace a property owner",
+    "help me skip trace a property owner",
+    "can you skip trace a property owner",
+    "pull comps for a house",
+    "help me pull comps for a house",
+    "can you pull comps for a house",
+    "home value estimate",
+    "off-market houses",
+    "schedule a showing",
+    "listing photos need virtual staging"
+  ]
+}

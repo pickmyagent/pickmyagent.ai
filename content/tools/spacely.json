@@ -4,7 +4,8 @@
     "creative-media"
   ],
   "useCaseTags": [
-    "floor-plan-rendering"
+    "floor-plan-rendering",
+    "listing-photos"
   ],
   "toolTypes": [
     "creative"
@@ -67,5 +68,29 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns a sketch, a 3D model, or a room photo into a photoreal render."
   },
-  "id": "spacely"
+  "id": "spacely",
+  "capabilities": [
+    "make a 3d model from text",
+    "turn an image into a 3d model",
+    "scan a room into a model",
+    "make a skybox from a prompt",
+    "build a game ready mesh",
+    "export a glb file",
+    "retopologize a scan",
+    "preview a model in the browser"
+  ],
+  "searchPhrases": [
+    "make a 3d model from text",
+    "help me make a 3d model from text",
+    "can you make a 3d model from text",
+    "turn an image into a 3d model",
+    "help me turn an image into a 3d model",
+    "can you turn an image into a 3d model",
+    "scan a room into a model",
+    "help me scan a room into a model",
+    "can you scan a room into a model",
+    "make a skybox from a prompt",
+    "help me make a skybox from a prompt",
+    "can you make a skybox from a prompt"
+  ]
 }

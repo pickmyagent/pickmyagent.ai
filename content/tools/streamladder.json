@@ -64,5 +64,29 @@
   },
   "useCaseFit": {
     "game-creative": "Reframes Twitch, YouTube, and Kick clips into vertical Shorts, Reels, and TikToks."
-  }
+  },
+  "capabilities": [
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
+  ]
 }

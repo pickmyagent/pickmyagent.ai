@@ -65,5 +65,33 @@
   },
   "useCaseFit": {
     "do-taxes": "Lists federal and state tax filing, quarterly payments, and a free start on the homepage."
-  }
+  },
+  "capabilities": [
+    "track spending across accounts",
+    "build a monthly budget",
+    "see net worth in one place",
+    "categorize personal expenses",
+    "plan a savings goal",
+    "review a subscription charge",
+    "forecast cash for the month",
+    "compare a bill with last month"
+  ],
+  "searchPhrases": [
+    "track spending across accounts",
+    "help me track spending across accounts",
+    "can you track spending across accounts",
+    "build a monthly budget",
+    "help me build a monthly budget",
+    "can you build a monthly budget",
+    "see net worth in one place",
+    "help me see net worth in one place",
+    "can you see net worth in one place",
+    "categorize personal expenses",
+    "help me categorize personal expenses",
+    "can you categorize personal expenses",
+    "reconcile quickbooks",
+    "clean up xero",
+    "match the bank feed",
+    "profit and loss for last month"
+  ]
 }

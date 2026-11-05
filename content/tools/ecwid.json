@@ -1,0 +1,88 @@
+{
+  "id": "ecwid",
+  "slug": "ecwid",
+  "name": "Ecwid",
+  "websiteUrl": "https://www.ecwid.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Ecwid adds an online store and product catalog to a site.",
+  "longDescription": "Ecwid adds an online store and product catalog to a site.",
+  "categories": [
+    "ecommerce"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.ecwid.com/",
+  "docsUrl": "https://www.ecwid.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "List a product",
+    "Run an online store"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "The product covers the jobs described on its official site, and you still review the result.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.ecwid.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.ecwid.com/"
+  },
+  "capabilities": [
+    "write a shopify product description",
+    "remove the background on a catalog photo",
+    "rewrite bulk product titles",
+    "draft an abandoned cart note",
+    "generate a simple storefront",
+    "write a product title and bullets",
+    "tag a catalog photo",
+    "update a product listing"
+  ],
+  "searchPhrases": [
+    "write a shopify product description",
+    "help me write a shopify product description",
+    "can you write a shopify product description",
+    "remove the background on a catalog photo",
+    "help me remove the background on a catalog photo",
+    "can you remove the background on a catalog photo",
+    "rewrite bulk product titles",
+    "help me rewrite bulk product titles",
+    "can you rewrite bulk product titles",
+    "draft an abandoned cart note",
+    "help me draft an abandoned cart note",
+    "can you draft an abandoned cart note"
+  ]
+}

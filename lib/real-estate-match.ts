@@ -48,6 +48,7 @@ export function listingVideoSignal(text: string): boolean {
   if (has(text, /\bschedul\w*/) && has(text, /\b(tours?|showings?)\b/) && !has(text, /\b(videos?|reels?|edit|cut|footage)\b/)) {
     return false;
   }
+  if (has(text, /\brooms?\b/) && has(text, /\b(tours?|walkthroughs?)\b/) && has(text, /\b(order|front door|starting)\b/)) return true;
   if (has(text, /\b(listing videos?|video tours?|property walkthroughs?|realtor videos?)\b/)) return true;
   if (has(text, /\bwalkthroughs?\b/) && has(text, /\b(videos?|reels?|cuts?|edit|footage)\b/) && !has(text, /\b(code|app|software|bug)\b/)) {
     return true;
@@ -135,6 +136,8 @@ export function transactionSignal(text: string): boolean {
 }
 
 export function buyerSellerNurture(text: string): boolean {
+  if (has(text, /\bproducts?\b/) && !has(text, /\b(ranch|listing|open house|property)\b/)) return false;
+  if (has(text, /\bfollow/) && has(text, /\b(ranch|couple)\b/)) return true;
   return has(text, /\b(buyers?|sellers?|sphere of influence|sphere|past clients?)\b/)
     && has(text, /\b(follow(?:\s|-)?ups?|nurture|nurturing|drips?|check-?ins?|check in|stay in touch|keep in touch|quiet|notes?)\b/);
 }

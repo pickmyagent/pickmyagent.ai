@@ -6,11 +6,21 @@
   "affiliateUrl": null,
   "shortDescription": "Resume builder that tailors a resume to a job description. Free to try. Paid plans are on their site.",
   "longDescription": "Teal's homepage says you can create an ATS-friendly resume, tailor it with keywords from a job description, and track jobs saved from job boards with its Chrome extension. It also says you can create a free account. The page did not list a monthly plan price.",
-  "categories": ["hiring"],
-  "useCaseTags": ["write-resume"],
-  "toolTypes": ["other"],
-  "platforms": ["web"],
-  "pricingModel": ["freemium"],
+  "categories": [
+    "hiring"
+  ],
+  "useCaseTags": [
+    "write-resume"
+  ],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium"
+  ],
   "pricingNotes": "The homepage says you can create a free account. It did not list a monthly plan price.",
   "pricingUrl": "https://www.tealhq.com/",
   "docsUrl": "https://www.tealhq.com/",
@@ -36,7 +46,9 @@
   "checkedAt": "2026-10-19T22:00:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Homepage reviewed on October 19, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -44,9 +56,38 @@
   "status": "published",
   "publishedAt": "2026-10-19",
   "updatedAt": "2026-10-19",
-  "sources": ["https://www.tealhq.com/"],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.tealhq.com/" },
+  "sources": [
+    "https://www.tealhq.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.tealhq.com/"
+  },
   "useCaseFit": {
     "write-resume": "Tailors a resume to keywords in a job description and tracks saved jobs."
-  }
+  },
+  "capabilities": [
+    "source candidates for an opening",
+    "screen resumes against a role",
+    "write an unbiased job post",
+    "schedule candidate interviews",
+    "track applicants through stages",
+    "summarize an interview",
+    "compare candidates on one list",
+    "draft outreach to a prospect"
+  ],
+  "searchPhrases": [
+    "source candidates for an opening",
+    "help me source candidates for an opening",
+    "can you source candidates for an opening",
+    "screen resumes against a role",
+    "help me screen resumes against a role",
+    "can you screen resumes against a role",
+    "write an unbiased job post",
+    "help me write an unbiased job post",
+    "can you write an unbiased job post",
+    "schedule candidate interviews",
+    "help me schedule candidate interviews",
+    "can you schedule candidate interviews"
+  ]
 }

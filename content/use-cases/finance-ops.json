@@ -30,6 +30,6 @@
       "why": "Invoicing and AP controls."
     }
   ],
-  "intro": "AI agents can read an invoice, pull out the fields, and flag expenses that do not match a purchase order so a person can approve the exception.",
+  "intro": "AI agents can read an invoice, pull out the fields, and flag a purchase order mismatch.",
   "disclaimer": "PickMyAgent is not tax or financial advice."
 }

@@ -6,11 +6,27 @@
   "affiliateUrl": null,
   "shortDescription": "DeepSeek chat app and API models for chat, coding, and web search.",
   "longDescription": "DeepSeek publishes a chat app and an API. The app is free, with no ads or in-app purchases, and includes web search, a deep-think mode, and file upload. It is the official assistant for chat. The API docs list deepseek-flash and deepseek-v4-pro, with tool calls and a beta fill-in-the-middle completion used for code. API prices are per million tokens.",
-  "categories": ["general-assistants", "coding-agents", "research"],
-  "useCaseTags": ["coding-agents", "deep-research"],
-  "toolTypes": ["model_api", "agent"],
-  "platforms": ["web", "api"],
-  "pricingModel": ["free", "usage"],
+  "categories": [
+    "general-assistants",
+    "coding-agents",
+    "research"
+  ],
+  "useCaseTags": [
+    "coding-agents",
+    "deep-research"
+  ],
+  "toolTypes": [
+    "model_api",
+    "agent"
+  ],
+  "platforms": [
+    "web",
+    "api"
+  ],
+  "pricingModel": [
+    "free",
+    "usage"
+  ],
   "pricingNotes": "The API docs price deepseek-flash input at $0.15 per million tokens off-peak on a cache miss and $0.30 at peak. Output is $0.60 off-peak and $1.20 at peak. deepseek-v4-pro is higher on the same table. The app announcement says the chat app is free.",
   "pricingUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
   "docsUrl": "https://api-docs.deepseek.com/",
@@ -36,7 +52,9 @@
   "checkedAt": "2026-10-19T12:00:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "The app announcement, download page, and API docs were reviewed. The chat website did not open.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -51,12 +69,40 @@
     "https://api-docs.deepseek.com/quick_start/pricing/",
     "https://api-docs.deepseek.com/guides/fim_completion"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.deepseek.com/" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.deepseek.com/"
+  },
   "generalPurpose": true,
   "assistantName": "DeepSeek",
   "assistantKind": "draft",
   "useCaseFit": {
     "coding-agents": "API docs include tool calls and fill-in-the-middle completion for code.",
     "deep-research": "The app announcement lists web search, and the API docs list a separate search API."
-  }
+  },
+  "capabilities": [
+    "draft a first version of a note",
+    "outline steps for a task",
+    "summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "list options for a decision",
+    "turn rough notes into a checklist"
+  ],
+  "searchPhrases": [
+    "draft a first version of a note",
+    "help me draft a first version of a note",
+    "can you draft a first version of a note",
+    "outline steps for a task",
+    "help me outline steps for a task",
+    "can you outline steps for a task",
+    "summarize a long passage",
+    "help me summarize a long passage",
+    "can you summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "help me rewrite a paragraph for clarity",
+    "can you rewrite a paragraph for clarity",
+    "build an app from a prompt",
+    "fix the failing test",
+    "the ci failed again"
+  ]
 }

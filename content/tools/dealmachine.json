@@ -67,5 +67,33 @@
     "find-off-market": "Lists owner data and a driving app, and Basic is $99 per seat per month.",
     "real-estate": "Pulls owner records and tags a property during a drive.",
     "realtor-prospecting": "Pulls owner records for a farm area and tags a property during a drive."
-  }
+  },
+  "capabilities": [
+    "find land for sale",
+    "check zoning on a vacant lot",
+    "skip trace a property owner",
+    "pull comps for a house",
+    "build a cma from recent sales",
+    "write an mls listing description",
+    "estimate a home value",
+    "find fsbo leads nearby"
+  ],
+  "searchPhrases": [
+    "find land for sale",
+    "help me find land for sale",
+    "can you find land for sale",
+    "check zoning on a vacant lot",
+    "help me check zoning on a vacant lot",
+    "can you check zoning on a vacant lot",
+    "skip trace a property owner",
+    "help me skip trace a property owner",
+    "can you skip trace a property owner",
+    "pull comps for a house",
+    "help me pull comps for a house",
+    "can you pull comps for a house",
+    "home value estimate",
+    "off-market houses",
+    "schedule a showing",
+    "listing photos need virtual staging"
+  ]
 }

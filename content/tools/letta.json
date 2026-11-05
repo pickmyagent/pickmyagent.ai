@@ -1,0 +1,90 @@
+{
+  "id": "letta",
+  "slug": "letta",
+  "name": "Letta",
+  "websiteUrl": "https://www.letta.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Letta creates stateful agents that remember and learn over time.",
+  "longDescription": "Letta creates stateful agents that remember and learn over time.",
+  "categories": [
+    "agent-frameworks"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.letta.com/",
+  "docsUrl": "https://www.letta.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Build a stateful agent",
+    "Give an agent memory"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "The product covers the jobs described on its official site, and you still review the result.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.letta.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.letta.com/"
+  },
+  "capabilities": [
+    "orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "keep memory for an agent",
+    "use an open source agent framework",
+    "hand a task from one agent to another",
+    "define a tool an agent can call",
+    "trace an agent run",
+    "retry a failed agent step"
+  ],
+  "searchPhrases": [
+    "orchestrate agents that use tools",
+    "help me orchestrate agents that use tools",
+    "can you orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "help me run a multi agent research crew",
+    "can you run a multi agent research crew",
+    "keep memory for an agent",
+    "help me keep memory for an agent",
+    "can you keep memory for an agent",
+    "use an open source agent framework",
+    "help me use an open source agent framework",
+    "can you use an open source agent framework",
+    "open source agent framework",
+    "memory for an agent"
+  ]
+}

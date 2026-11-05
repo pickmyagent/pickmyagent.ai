@@ -62,5 +62,29 @@
     "status": 200,
     "finalUrl": "https://modl.ai/"
   },
-  "useCaseFit": {}
+  "useCaseFit": {},
+  "capabilities": [
+    "give an npc memory of the player",
+    "write dialogue for a game character",
+    "run a game master for a discord table",
+    "prototype a character from a prompt",
+    "keep quest state for an npc",
+    "vary a character voice line",
+    "export dialogue for a game",
+    "remember a choice the player made"
+  ],
+  "searchPhrases": [
+    "give an npc memory of the player",
+    "help me give an npc memory of the player",
+    "can you give an npc memory of the player",
+    "write dialogue for a game character",
+    "help me write dialogue for a game character",
+    "can you write dialogue for a game character",
+    "run a game master for a discord table",
+    "help me run a game master for a discord table",
+    "can you run a game master for a discord table",
+    "prototype a character from a prompt",
+    "help me prototype a character from a prompt",
+    "can you prototype a character from a prompt"
+  ]
 }

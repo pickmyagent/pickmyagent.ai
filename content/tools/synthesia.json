@@ -6,11 +6,22 @@
   "affiliateUrl": null,
   "shortDescription": "AI avatar videos from a script. Basic is free, and Starter is $29 a month.",
   "longDescription": "Synthesia creates studio videos with AI avatars and voiceovers. Basic is $0 a month, with no credit card, and those videos carry a watermark. Starter is $29 a month when billed monthly.",
-  "categories": ["creative-media"],
-  "useCaseTags": ["avatar-video"],
-  "toolTypes": ["creative"],
-  "platforms": ["web"],
-  "pricingModel": ["freemium", "subscription"],
+  "categories": [
+    "creative-media"
+  ],
+  "useCaseTags": [
+    "avatar-video"
+  ],
+  "toolTypes": [
+    "creative"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "freemium",
+    "subscription"
+  ],
   "pricingNotes": "Basic is $0 a month. Starter is $29 a month when billed monthly, from the pricing page on 2026-10-19.",
   "pricingUrl": "https://www.synthesia.io/pricing",
   "docsUrl": "https://www.synthesia.io/features/avatars",
@@ -21,8 +32,14 @@
   "pricingCheckedAt": "2026-10-19",
   "openSource": false,
   "repoUrl": null,
-  "bestFor": ["An avatar video from a script without filming", "A free Basic plan to try a stock avatar"],
-  "notIdealFor": ["A cinematic camera-move clip", "Cutting a long stream into shorts"],
+  "bestFor": [
+    "An avatar video from a script without filming",
+    "A free Basic plan to try a stock avatar"
+  ],
+  "notIdealFor": [
+    "A cinematic camera-move clip",
+    "Cutting a long stream into shorts"
+  ],
   "strength": "Synthesia's homepage says it creates videos with AI avatars from a script, and Basic is free with no credit card.",
   "weakness": "Starter is $29 a month when billed monthly, and the free plan's videos carry a watermark.",
   "smokeStatus": "verified-docs-only",
@@ -30,7 +47,9 @@
   "checkedAt": "2026-10-19T23:40:00-04:00",
   "checkedDate": "2026-10-19",
   "smokeTestNotes": "Homepage, pricing page, and avatar page reviewed on October 19, 2026.",
-  "handsOn": { "performed": false },
+  "handsOn": {
+    "performed": false
+  },
   "latestRelease": null,
   "problems": [],
   "featured": false,
@@ -43,8 +62,35 @@
     "https://www.synthesia.io/pricing",
     "https://www.synthesia.io/features/avatars"
   ],
-  "siteLoad": { "status": 200, "finalUrl": "https://www.synthesia.io/" },
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.synthesia.io/"
+  },
   "useCaseFit": {
     "avatar-video": "Generates an avatar video from a script and a stock or custom avatar."
-  }
+  },
+  "capabilities": [
+    "make a video from a text prompt",
+    "turn an image into a video",
+    "add captions to an interview",
+    "cut silences from a clip",
+    "make an avatar video from a script",
+    "animate a still photo",
+    "find b-roll from a prompt",
+    "export a short vertical clip"
+  ],
+  "searchPhrases": [
+    "make a video from a text prompt",
+    "help me make a video from a text prompt",
+    "can you make a video from a text prompt",
+    "turn an image into a video",
+    "help me turn an image into a video",
+    "can you turn an image into a video",
+    "add captions to an interview",
+    "help me add captions to an interview",
+    "can you add captions to an interview",
+    "cut silences from a clip",
+    "help me cut silences from a clip",
+    "can you cut silences from a clip"
+  ]
 }

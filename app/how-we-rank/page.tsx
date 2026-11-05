@@ -38,7 +38,12 @@ export default function HowWeRankPage() {
           Commissions never affect rankings or which tool we recommend.
         </p>
         <p>
-          We match tools to the use case you describe. For each tool we show a
+          We match your search to the concrete jobs each tool lists. When the
+          wording fits a job we already publish, that job supplies the header.
+          When it does not, the closest specialist tools still show, and each
+          why-line names the job that matched. A general chat assistant is
+          labeled, and it is marked as a fallback when fewer than three
+          specialists fit. For each tool we show a
           starting cost when we could verify one, the date we checked it, and a
           link to the official pricing page. Every listing has one strength and
           one weakness. Tools we have tested hands-on are labeled Smoke-tested.

@@ -1,6 +1,7 @@
-import { decodeStoredIndex, scoresForVector, type StoredEmbeddingIndex } from "./embedding-math.ts";
+import { capabilityCosines, decodeCapabilityIndex, decodeStoredIndex, scoresForVector, type StoredCapabilityIndex, type StoredEmbeddingIndex } from "./embedding-math.ts";
 import { EMBEDDING_DTYPE, EMBEDDING_MODEL, EMBEDDING_POOLING, EMBEDDING_QUERY_PREFIX } from "./semantic-config.ts";
-import { rankCatalogQuery, textForEmbedding } from "./search.ts";
+import { rankCatalogQuery, textForEmbedding, type CapabilityCosine } from "./search.ts";
+import { wasmSessionPlan } from "./wasm-runtime.ts";
 import type { Category, Tool, UseCase } from "./types.ts";
 import type { RankedSearch } from "./search.ts";
 
@@ -17,16 +18,18 @@ type RemoteEnv = {
   remoteHost: string;
   useBrowserCache: boolean;
   fetch: typeof fetch;
-  backends: { onnx: { wasm: { wasmPaths: { mjs: string; wasm: string }; numThreads: number } } };
+  backends: { onnx: { wasm: { wasmPaths: { mjs: string; wasm: string }; numThreads: number; proxy?: boolean } } };
 };
 
 const TRANSFORMERS_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.1/+esm";
 const WASM_BASE = "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.31.0-dev.20260914-8d85527a0/dist/";
 const CACHE_NAME = "pickmyagent-embed-v1";
 const INDEX_URL = "/embeddings/use-cases.json";
+const CAPABILITY_URL = "/embeddings/capabilities.json";
 
 let extractorPromise: Promise<Extractor> | null = null;
 let indexPromise: Promise<ReturnType<typeof decodeStoredIndex>> | null = null;
+let capabilityPromise: Promise<ReturnType<typeof decodeCapabilityIndex> | null> | null = null;
 let embedChain: Promise<unknown> = Promise.resolve();
 
 function exclusive<T>(work: () => Promise<T>): Promise<T> {
@@ -95,14 +98,19 @@ async function loadExtractor(): Promise<Extractor> {
       env.remoteHost = "https://huggingface.co/";
       env.useBrowserCache = true;
       env.fetch = fetchWithCache;
+      const plan = wasmSessionPlan({
+        userAgent: navigator.userAgent,
+        crossOriginIsolated: typeof crossOriginIsolated !== "undefined" && crossOriginIsolated,
+      });
       const [mjs, wasm] = await Promise.all([
-        runtimeUrl("ort-wasm-simd-threaded.asyncify.mjs"),
-        runtimeUrl("ort-wasm-simd-threaded.asyncify.wasm"),
+        runtimeUrl(`${plan.fileStem}.mjs`),
+        runtimeUrl(`${plan.fileStem}.wasm`),
       ]);
       env.backends.onnx.wasm.wasmPaths = { mjs, wasm };
-      // iOS Safari is not cross-origin isolated, so a threaded or WebGPU session can
-      // throw. Pin one WASM thread. A thrown session would otherwise leave lexical results.
-      env.backends.onnx.wasm.numThreads = 1;
+      // iOS Safari is not cross-origin isolated. The asyncify build and one
+      // thread avoid a pthread session that throws and leaves lexical results.
+      env.backends.onnx.wasm.numThreads = plan.numThreads;
+      env.backends.onnx.wasm.proxy = plan.proxy;
       const extractor = await remote.pipeline("feature-extraction", EMBEDDING_MODEL, {
         dtype: EMBEDDING_DTYPE,
         device: "wasm",
@@ -122,16 +130,29 @@ function loadIndex() {
   return indexPromise;
 }
 
+function loadCapabilities() {
+  if (!capabilityPromise) {
+    capabilityPromise = fetchWithCache(CAPABILITY_URL)
+      .then((response) => (response.ok ? response.json() as Promise<StoredCapabilityIndex> : null))
+      .then((stored) => (stored ? decodeCapabilityIndex(stored) : null))
+      .catch(() => null);
+  }
+  return capabilityPromise;
+}
+
 /** Lexical results are already on screen. This replaces them once meaning scores exist. */
 export async function refineQuery(query: string, catalog: CatalogSlice): Promise<RankedSearch | null> {
   const trimmed = query.trim();
   if (!trimmed) return null;
-  const [extractor, index] = await Promise.all([loadExtractor(), loadIndex()]);
+  const [extractor, index, capabilities] = await Promise.all([loadExtractor(), loadIndex(), loadCapabilities()]);
   return exclusive(async () => {
     const output = await extractor(EMBEDDING_QUERY_PREFIX + textForEmbedding(trimmed), { pooling: EMBEDDING_POOLING, normalize: true });
     const data = output.data;
     const view = data.length === index.dim ? data : data.subarray(data.length - index.dim);
     const vector = Float32Array.from(view);
-    return rankCatalogQuery(trimmed, catalog, scoresForVector(index, vector));
+    const meaning: CapabilityCosine[] | undefined = capabilities
+      ? capabilityCosines(capabilities, vector)
+      : undefined;
+    return rankCatalogQuery(trimmed, catalog, scoresForVector(index, vector), meaning);
   });
 }

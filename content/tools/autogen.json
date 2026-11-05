@@ -24,7 +24,7 @@
     "open_source",
     "free"
   ],
-  "pricingNotes": "No SaaS pricing page for the framework. Latest GitHub python release python-v0.7.5 dated 2025-09-30 — older than peers; industry notes mention Microsoft Agent Framework as successor — flag for catalog freshness.",
+  "pricingNotes": "No SaaS pricing page for the framework. Latest GitHub python release python-v0.7.5 dated 2025-09-30 older than peers, industry notes mention Microsoft Agent Framework as successor flag for catalog freshness.",
   "pricingUrl": "https://microsoft.github.io/autogen/stable/index.html",
   "docsUrl": "https://microsoft.github.io/autogen/stable/index.html",
   "freeTier": null,
@@ -83,5 +83,31 @@
   },
   "useCaseFit": {
     "multi-agent-workflows": "Open-source Python library for conversations between more than one agent."
-  }
+  },
+  "capabilities": [
+    "orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "keep memory for an agent",
+    "use an open source agent framework",
+    "hand a task from one agent to another",
+    "define a tool an agent can call",
+    "trace an agent run",
+    "retry a failed agent step"
+  ],
+  "searchPhrases": [
+    "orchestrate agents that use tools",
+    "help me orchestrate agents that use tools",
+    "can you orchestrate agents that use tools",
+    "run a multi agent research crew",
+    "help me run a multi agent research crew",
+    "can you run a multi agent research crew",
+    "keep memory for an agent",
+    "help me keep memory for an agent",
+    "can you keep memory for an agent",
+    "use an open source agent framework",
+    "help me use an open source agent framework",
+    "can you use an open source agent framework",
+    "open source agent framework",
+    "memory for an agent"
+  ]
 }

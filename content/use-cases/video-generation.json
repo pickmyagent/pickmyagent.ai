@@ -30,5 +30,5 @@
   "assistantTask": "outline a shot list, name the camera move, and draft the prompt",
   "assistantContext": "generating a video from a prompt",
   "searchTopic": "the shot and camera move you want",
-  "intro": "AI agents can outline a cinematic shot, name the camera move, and draft the prompt so you generate the clip in a video app and check it yourself."
+  "intro": "AI agents can outline a cinematic shot, name the camera move, and draft the prompt you check."
 }

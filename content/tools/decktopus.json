@@ -1,0 +1,88 @@
+{
+  "id": "decktopus",
+  "slug": "decktopus",
+  "name": "Decktopus",
+  "websiteUrl": "https://www.decktopus.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Decktopus can generate a presentation from a prompt.",
+  "longDescription": "Decktopus can generate a presentation from a prompt. It can also create on-brand decks and carousels in minutes, rehearse with ai, track every view, and generate leads.",
+  "categories": [
+    "presentations"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.decktopus.com/",
+  "docsUrl": "https://www.decktopus.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Generate a presentation from a prompt",
+    "Create on-brand decks and carousels in minutes, rehearse with ai, track every view, and generate leads"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Decktopus can generate a presentation from a prompt.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.decktopus.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.decktopus.com/"
+  },
+  "capabilities": [
+    "build a pitch deck from an outline",
+    "turn a doc into slides",
+    "make google slides from a prompt",
+    "write speaker notes for a deck",
+    "draft a presentation about quarterly numbers",
+    "redraw a slide for clarity",
+    "export a finished deck",
+    "shorten a slide to one idea"
+  ],
+  "searchPhrases": [
+    "build a pitch deck from an outline",
+    "help me build a pitch deck from an outline",
+    "can you build a pitch deck from an outline",
+    "turn a doc into slides",
+    "help me turn a doc into slides",
+    "can you turn a doc into slides",
+    "make google slides from a prompt",
+    "help me make google slides from a prompt",
+    "can you make google slides from a prompt",
+    "write speaker notes for a deck",
+    "help me write speaker notes for a deck",
+    "can you write speaker notes for a deck"
+  ]
+}

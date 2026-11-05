@@ -68,5 +68,29 @@
     "social-media": "Schedules social posts from $5 per month and describes an AI assistant for content.",
     "run-a-business": "Schedules social posts a small business can publish through the week.",
     "agent-social": "Schedules listing posts and drafts captions for an agent's social channels."
-  }
+  },
+  "capabilities": [
+    "schedule instagram posts",
+    "write a linkedin post",
+    "turn a talk into short clips",
+    "caption a tiktok",
+    "plan a week of social posts",
+    "write a thread for x",
+    "repurpose a webinar into clips",
+    "draft a social caption"
+  ],
+  "searchPhrases": [
+    "schedule instagram posts",
+    "help me schedule instagram posts",
+    "can you schedule instagram posts",
+    "write a linkedin post",
+    "help me write a linkedin post",
+    "can you write a linkedin post",
+    "turn a talk into short clips",
+    "help me turn a talk into short clips",
+    "can you turn a talk into short clips",
+    "caption a tiktok",
+    "help me caption a tiktok",
+    "can you caption a tiktok"
+  ]
 }

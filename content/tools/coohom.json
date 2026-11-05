@@ -67,5 +67,29 @@
   "useCaseFit": {
     "floor-plan-rendering": "Turns an uploaded floor plan into an editable 3D scene."
   },
-  "id": "coohom"
+  "id": "coohom",
+  "capabilities": [
+    "restyle a living room photo",
+    "virtually stage an empty room",
+    "show a kitchen in another style",
+    "lay out furniture in a bedroom",
+    "build a mood board for a condo",
+    "redesign a bathroom from a photo",
+    "stage a dining room",
+    "preview a room in a new finish"
+  ],
+  "searchPhrases": [
+    "restyle a living room photo",
+    "help me restyle a living room photo",
+    "can you restyle a living room photo",
+    "virtually stage an empty room",
+    "help me virtually stage an empty room",
+    "can you virtually stage an empty room",
+    "show a kitchen in another style",
+    "help me show a kitchen in another style",
+    "can you show a kitchen in another style",
+    "lay out furniture in a bedroom",
+    "help me lay out furniture in a bedroom",
+    "can you lay out furniture in a bedroom"
+  ]
 }

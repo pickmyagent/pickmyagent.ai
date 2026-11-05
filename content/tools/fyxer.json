@@ -64,5 +64,29 @@
   },
   "useCaseFit": {
     "manage-inbox": "Organizes an inbox and drafts email, with a 14-day trial on the site."
-  }
+  },
+  "capabilities": [
+    "write a newsletter",
+    "build an abandoned cart email",
+    "triage an inbox",
+    "write a drip sequence for subscribers",
+    "draft subject lines for a launch",
+    "snooze an email thread",
+    "send a behavior triggered email",
+    "draft a reply to a thread"
+  ],
+  "searchPhrases": [
+    "write a newsletter",
+    "help me write a newsletter",
+    "can you write a newsletter",
+    "build an abandoned cart email",
+    "help me build an abandoned cart email",
+    "can you build an abandoned cart email",
+    "triage an inbox",
+    "help me triage an inbox",
+    "can you triage an inbox",
+    "write a drip sequence for subscribers",
+    "help me write a drip sequence for subscribers",
+    "can you write a drip sequence for subscribers"
+  ]
 }

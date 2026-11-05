@@ -1,12 +1,18 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { gzipSync } from "node:zlib";
 import { CONCEPTS } from "../lib/concepts.ts";
-import { matchTagsForConcept } from "../lib/search.ts";
+import { isQueryDerivedLead, matchTagsForConcept } from "../lib/search.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
+import { CATEGORY_PHRASE, copyQualityProblems } from "../lib/capability-quality.ts";
+import { BANNED_INTRO } from "../lib/category-intros.ts";
+import { headerSpellProblems } from "../lib/header-spell.ts";
 import { NEUTRAL_LEAD } from "../lib/header-grammar.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
 import { buildHeldOut, buildHomeHeldOut, buildOtherHeldOut, buildParaphrases, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
+import { HELD_OUT_BROAD } from "./held-out-broad.ts";
+import { gradeBroad } from "./grade-broad.ts";
 import { rankObserved } from "./rank-observed.ts";
 
 export type QaQuery = {
@@ -418,13 +424,13 @@ const DOUBLED = /\b([A-Za-z]+)\s+\1\b/i;
 const PROSE_KEYS = new Set([
   "shortDescription", "longDescription", "strength", "weakness", "freeTierNotes",
   "smokeTestNotes", "pricingNotes", "bestFor", "notIdealFor", "problems", "useCaseFit",
-  "why", "summary", "intro", "title", "disclaimer",
+  "why", "summary", "intro", "title", "disclaimer", "capabilities",
 ]);
 
 /** Fields and lists that render on a tool page. Why-lines and intros are not in this set. */
 const TOOL_PAGE_KEYS = new Set([
   "shortDescription", "longDescription", "strength", "weakness", "freeTierNotes", "freeTrial",
-  "smokeTestNotes", "bestFor", "notIdealFor", "problems",
+  "smokeTestNotes", "bestFor", "notIdealFor", "problems", "capabilities",
 ]);
 
 export type QaCard = {
@@ -533,6 +539,16 @@ export function qaProblems(catalog: Catalog): string[] {
       if (caps.length > 0) problems.push(`${item.query}: mid-sentence capital ${caps.join(", ")} in "${text}"`);
       const grammar = grammarProblems(text, text === header ? "header" : "intro", item.query);
       if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in "${text}"`);
+      const quality = copyQualityProblems(text);
+      if (quality.length > 0) problems.push(`${item.query}: ${quality.join("; ")} in "${text}"`);
+      if (text === header) {
+        const body = header.replace(/^For /i, "").replace(/, here's how each tool can help:$/i, "");
+        const spelling = headerSpellProblems(body);
+        if (spelling.length > 0) problems.push(`${item.query}: header ${spelling.join("; ")} in "${header}"`);
+      }
+      if (text.toLowerCase().includes(BANNED_INTRO)) {
+        problems.push(`${item.query}: formulaic intro in "${text}"`);
+      }
     }
     const whys = ranked.tools.map((tool) => tool.whyItHelps);
     if (new Set(whys).size !== whys.length) problems.push(`${item.query}: duplicate why-line`);
@@ -746,6 +762,20 @@ export function reportQueries(): string[] {
     ...buildParaphrases().map((item) => item.query),
     ...OFF_DOMAIN.map((item) => item.query),
     ...SPOT_QUERIES,
+    ...HELD_OUT_BROAD.map((item) => item.query),
+  ];
+}
+
+function indexSizeLines(): string[] {
+  const jobsPath = new URL("../public/embeddings/use-cases.json", import.meta.url);
+  const capsPath = new URL("../public/embeddings/capabilities.json", import.meta.url);
+  if (!existsSync(jobsPath) || !existsSync(capsPath)) return [];
+  const jobs = readFileSync(jobsPath);
+  const caps = readFileSync(capsPath);
+  const jobsGzip = gzipSync(jobs).length;
+  const capsGzip = gzipSync(caps).length;
+  return [
+    `Embedding indexes served by this site: job index ${jobs.length} bytes (${jobsGzip} gzipped) and capability index ${caps.length} bytes (${capsGzip} gzipped). Together ${jobsGzip + capsGzip} bytes gzipped, under the 2 MB first-search budget. The bge-small weights and the WASM runtime stay on Hugging Face and jsDelivr.`,
   ];
 }
 
@@ -802,7 +832,18 @@ export function offDomainProblems(catalog: Catalog): string[] {
   return problems;
 }
 
+function noteDerived(rows: QaRow[], found: Map<string, string>) {
+  const categoryBodies = new Set(Object.values(CATEGORY_PHRASE).map((phrase) => phrase.toLowerCase()));
+  for (const row of rows) {
+    if (!isQueryDerivedLead(row.header)) continue;
+    const body = row.header.replace(/^For /i, "").replace(/, here's how each tool can help:$/i, "").toLowerCase();
+    if (categoryBodies.has(body)) continue;
+    if (!found.has(row.header)) found.set(row.header, row.query);
+  }
+}
+
 export function renderSearchQaReport(catalog: Catalog): string {
+  const derived = new Map<string, string>();
   const rows = runSearchQa(catalog);
   const graded = gradeParaphrases(catalog);
   const seeds = buildSeeds();
@@ -826,6 +867,7 @@ export function renderSearchQaReport(catalog: Catalog): string {
     `Held-out home pass rate ${(graded.homeHeldOutPassRate * 100).toFixed(1)}% (${graded.homeHeldOutCount} home, design, and construction queries, including plain floor-plan wording).`,
     `Seed precision@3 ${graded.precisionAt3.toFixed(3)}. Real-estate held-out precision@3 ${graded.heldOutPrecisionAt3.toFixed(3)}. Other held-out precision@3 ${graded.otherHeldOutPrecisionAt3.toFixed(3)}.`,
     `Founder demo query: ${FOUNDER_QUERY}`,
+    ...indexSizeLines(),
     "",
     "Per-use-case seed pass rate:",
     "",
@@ -872,7 +914,9 @@ export function renderSearchQaReport(catalog: Catalog): string {
     `${realEstateSeeds.length} natural real estate seeds. The founder demo is first. Template wraps are graded in the summary and are not repeated here.`,
     "",
   );
-  lines.push(...renderRows(paraphraseRows(catalog, realEstateSeeds), 1));
+  const realEstateRows = paraphraseRows(catalog, realEstateSeeds);
+  noteDerived(realEstateRows, derived);
+  lines.push(...renderRows(realEstateRows, 1));
   lines.push(
     "# Held-out real estate queries",
     "",
@@ -880,6 +924,7 @@ export function renderSearchQaReport(catalog: Catalog): string {
     "",
   );
   const heldRows = paraphraseRows(catalog, heldOut);
+  noteDerived(heldRows, derived);
   heldRows.forEach((row, index) => {
     const key = `${heldOut[index]?.useCase}: ${heldOut[index]?.query}`;
     if (heldOutFail.has(key)) row.header = `MISS ${row.header}`;
@@ -892,6 +937,7 @@ export function renderSearchQaReport(catalog: Catalog): string {
     "",
   );
   const otherRows = paraphraseRows(catalog, otherHeldOut);
+  noteDerived(otherRows, derived);
   otherRows.forEach((row, index) => {
     const key = `${otherHeldOut[index]?.useCase}: ${otherHeldOut[index]?.query}`;
     if (otherFail.has(key)) row.header = `MISS ${row.header}`;
@@ -904,20 +950,64 @@ export function renderSearchQaReport(catalog: Catalog): string {
     "",
   );
   const homeRows = paraphraseRows(catalog, homeHeldOut);
+  noteDerived(homeRows, derived);
   homeRows.forEach((row, index) => {
     const key = `${homeHeldOut[index]?.useCase}: ${homeHeldOut[index]?.query}`;
     if (homeFail.has(key)) row.header = `MISS ${row.header}`;
   });
   lines.push(...renderRows(homeRows, 1));
   lines.push("# Other natural seeds", "");
-  lines.push(...renderRows(paraphraseRows(catalog, otherSeeds), 1));
+  const otherSeedRows = paraphraseRows(catalog, otherSeeds);
+  noteDerived(otherSeedRows, derived);
+  lines.push(...renderRows(otherSeedRows, 1));
   lines.push(
     "# Legacy search QA",
     "",
     `${rows.length} queries through the ranker and the header, intro, and why-line renderers.`,
     "",
   );
+  noteDerived(rows, derived);
   lines.push(...renderRows(rows, 1));
+  const broad = gradeBroad(catalog);
+  const broadRate = broad.total === 0 ? 0 : broad.passed / broad.total;
+  lines.push(
+    "# Held-out plain-language queries",
+    "",
+    `${broad.total} queries written across the directory before this score was inspected. ${broad.passed} passed (${(broadRate * 100).toFixed(1)}%). A pass puts a fitting specialist in the top 3 and keeps off-domain tools out of the top 5.`,
+    "",
+  );
+  if (broad.misses.length > 0) {
+    lines.push("Misses:", "");
+    for (const miss of broad.misses) {
+      lines.push(`- ${miss.domains.join(", ")}: ${miss.query} → ${miss.reason} [${miss.top.join(", ")}]`);
+    }
+    lines.push("");
+  }
+  const broadRows: QaRow[] = HELD_OUT_BROAD.slice(0, 320).map((item) => {
+    const ranked = rankObserved(item.query, catalog);
+    return {
+      query: item.query,
+      domain: item.domains.join(", "),
+      header: ranked.lead,
+      intro: ranked.intro,
+      cards: ranked.tools.map((tool) => ({
+        name: tool.name,
+        label: cardLabel(tool.generalPurpose, tool.smokeStatus),
+        why: tool.whyItHelps,
+      })),
+    };
+  });
+  noteDerived(broadRows, derived);
+  lines.push(...renderRows(broadRows, 1));
+  const listed = [...derived.entries()].sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]));
+  lines.push(
+    "",
+    "# Query-derived headers",
+    "",
+    `${listed.length} headers are built from the query rather than a canonical job or category line. Each one passed the dictionary, brand-casing, and apostrophe check.`,
+    "",
+  );
+  for (const [header, query] of listed) lines.push(`- ${query} → ${header}`);
   return lines.join("\n");
 }
 

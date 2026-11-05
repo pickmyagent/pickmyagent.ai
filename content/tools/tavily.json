@@ -24,7 +24,7 @@
     "freemium",
     "usage"
   ],
-  "pricingNotes": "Usage samples also showed paid figures; confirm free credit allotment on page.",
+  "pricingNotes": "Usage samples also showed paid figures, confirm free credit allotment on page.",
   "pricingUrl": "https://tavily.com/pricing",
   "docsUrl": "https://docs.tavily.com/",
   "freeTier": true,
@@ -71,5 +71,29 @@
   "useCaseFit": {
     "tool-use-browser": "Search API that gives an agent web results, with 1,000 free credits a month.",
     "research-rag": "Search API for agents that need web results, with a free credit plan."
-  }
+  },
+  "capabilities": [
+    "connect an agent to a tool",
+    "call an api from an agent",
+    "search the web for an agent",
+    "fill a browser form for an agent",
+    "pass a page to a model",
+    "run a tool with structured input",
+    "chain two tools in one task",
+    "return a source with the answer"
+  ],
+  "searchPhrases": [
+    "connect an agent to a tool",
+    "help me connect an agent to a tool",
+    "can you connect an agent to a tool",
+    "call an api from an agent",
+    "help me call an api from an agent",
+    "can you call an api from an agent",
+    "search the web for an agent",
+    "help me search the web for an agent",
+    "can you search the web for an agent",
+    "fill a browser form for an agent",
+    "help me fill a browser form for an agent",
+    "can you fill a browser form for an agent"
+  ]
 }

@@ -64,5 +64,29 @@
   },
   "useCaseFit": {
     "hire-candidates": "Free hiring plan with AI sourcing for the first 100 profiles and a notetaker."
-  }
+  },
+  "capabilities": [
+    "source candidates for an opening",
+    "screen resumes against a role",
+    "write an unbiased job post",
+    "schedule candidate interviews",
+    "track applicants through stages",
+    "summarize an interview",
+    "compare candidates on one list",
+    "draft outreach to a prospect"
+  ],
+  "searchPhrases": [
+    "source candidates for an opening",
+    "help me source candidates for an opening",
+    "can you source candidates for an opening",
+    "screen resumes against a role",
+    "help me screen resumes against a role",
+    "can you screen resumes against a role",
+    "write an unbiased job post",
+    "help me write an unbiased job post",
+    "can you write an unbiased job post",
+    "schedule candidate interviews",
+    "help me schedule candidate interviews",
+    "can you schedule candidate interviews"
+  ]
 }

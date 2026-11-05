@@ -64,5 +64,27 @@
   },
   "generalPurpose": true,
   "assistantName": "ChatGPT",
-  "assistantKind": "draft"
+  "assistantKind": "draft",
+  "capabilities": [
+    "draft a first version of a note",
+    "outline steps for a task",
+    "summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "list options for a decision",
+    "turn rough notes into a checklist"
+  ],
+  "searchPhrases": [
+    "draft a first version of a note",
+    "help me draft a first version of a note",
+    "can you draft a first version of a note",
+    "outline steps for a task",
+    "help me outline steps for a task",
+    "can you outline steps for a task",
+    "summarize a long passage",
+    "help me summarize a long passage",
+    "can you summarize a long passage",
+    "rewrite a paragraph for clarity",
+    "help me rewrite a paragraph for clarity",
+    "can you rewrite a paragraph for clarity"
+  ]
 }

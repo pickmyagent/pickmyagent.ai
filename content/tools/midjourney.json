@@ -71,5 +71,29 @@
   },
   "useCaseFit": {
     "make-images": "Draws images from a text prompt."
-  }
+  },
+  "capabilities": [
+    "edit a creative asset",
+    "generate a picture from a prompt",
+    "cut a short video",
+    "clean up an audio clip",
+    "export a file for a project",
+    "vary a draft in a new style",
+    "remove a simple background",
+    "add a caption to a clip"
+  ],
+  "searchPhrases": [
+    "edit a creative asset",
+    "help me edit a creative asset",
+    "can you edit a creative asset",
+    "generate a picture from a prompt",
+    "help me generate a picture from a prompt",
+    "can you generate a picture from a prompt",
+    "cut a short video",
+    "help me cut a short video",
+    "can you cut a short video",
+    "clean up an audio clip",
+    "help me clean up an audio clip",
+    "can you clean up an audio clip"
+  ]
 }

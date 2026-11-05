@@ -1,0 +1,88 @@
+{
+  "id": "clearscope",
+  "slug": "clearscope",
+  "name": "Clearscope",
+  "websiteUrl": "https://www.clearscope.io/",
+  "affiliateUrl": null,
+  "shortDescription": "Clearscope can grade content for a keyword.",
+  "longDescription": "Clearscope can grade content for a keyword. It can also find related terms to cover.",
+  "categories": [
+    "seo"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.clearscope.io/",
+  "docsUrl": "https://www.clearscope.io/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Grade content for a keyword",
+    "Find related terms to cover"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Clearscope can grade content for a keyword.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.clearscope.io/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.clearscope.io/"
+  },
+  "capabilities": [
+    "optimize a page for a keyword",
+    "write a content brief",
+    "research keywords for a site",
+    "explain why a page is not ranking",
+    "find backlink opportunities",
+    "draft an seo article from a keyword",
+    "suggest on page seo edits",
+    "group keywords into a cluster"
+  ],
+  "searchPhrases": [
+    "optimize a page for a keyword",
+    "help me optimize a page for a keyword",
+    "can you optimize a page for a keyword",
+    "write a content brief",
+    "help me write a content brief",
+    "can you write a content brief",
+    "research keywords for a site",
+    "help me research keywords for a site",
+    "can you research keywords for a site",
+    "explain why a page is not ranking",
+    "help me explain why a page is not ranking",
+    "can you explain why a page is not ranking"
+  ]
+}

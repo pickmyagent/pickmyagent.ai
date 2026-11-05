@@ -63,5 +63,29 @@
   },
   "useCaseFit": {
     "sales-outreach": "Lists sales email outreach from $47 per month and an AI sales agent."
-  }
+  },
+  "capabilities": [
+    "write a cold email to a lead",
+    "build an outbound sequence",
+    "find a vp email address",
+    "score a sales email before sending",
+    "summarize a discovery call",
+    "enrich a prospect list",
+    "update a crm pipeline",
+    "set a cadence for inbound leads"
+  ],
+  "searchPhrases": [
+    "write a cold email to a lead",
+    "help me write a cold email to a lead",
+    "can you write a cold email to a lead",
+    "build an outbound sequence",
+    "help me build an outbound sequence",
+    "can you build an outbound sequence",
+    "find a vp email address",
+    "help me find a vp email address",
+    "can you find a vp email address",
+    "score a sales email before sending",
+    "help me score a sales email before sending",
+    "can you score a sales email before sending"
+  ]
 }

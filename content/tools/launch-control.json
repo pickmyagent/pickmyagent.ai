@@ -11,7 +11,8 @@
   ],
   "useCaseTags": [
     "find-off-market",
-    "realtor-prospecting"
+    "realtor-prospecting",
+    "showing-scheduling"
   ],
   "toolTypes": [
     "automation"
@@ -66,5 +67,33 @@
   "useCaseFit": {
     "find-off-market": "Sends texts to owner lists, and the pricing page lists skip tracing at $0.13.",
     "realtor-prospecting": "Messages owners whose numbers are already on a prospecting list."
-  }
+  },
+  "capabilities": [
+    "schedule a home showing",
+    "book an open house",
+    "send a showing reminder",
+    "confirm a lockbox time",
+    "set a showing appointment",
+    "list times a buyer can tour",
+    "remind the agent about a showing",
+    "hold an open house slot"
+  ],
+  "searchPhrases": [
+    "schedule a home showing",
+    "help me schedule a home showing",
+    "can you schedule a home showing",
+    "book an open house",
+    "help me book an open house",
+    "can you book an open house",
+    "send a showing reminder",
+    "help me send a showing reminder",
+    "can you send a showing reminder",
+    "confirm a lockbox time",
+    "help me confirm a lockbox time",
+    "can you confirm a lockbox time",
+    "home value estimate",
+    "off-market houses",
+    "schedule a showing",
+    "listing photos need virtual staging"
+  ]
 }

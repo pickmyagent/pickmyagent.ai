@@ -66,5 +66,29 @@
   "useCaseFit": {
     "floor-plan-rendering": "Renders a live 3D model and includes AI image tools."
   },
-  "id": "d5-render"
+  "id": "d5-render",
+  "capabilities": [
+    "make a picture from a blueprint",
+    "test fit an office layout",
+    "build a massing study",
+    "generate a floor plan from a brief",
+    "show a remodel before it is built",
+    "make a photoreal interior from a plan",
+    "edit a creative asset",
+    "generate a picture from a prompt"
+  ],
+  "searchPhrases": [
+    "make a picture from a blueprint",
+    "help me make a picture from a blueprint",
+    "can you make a picture from a blueprint",
+    "test fit an office layout",
+    "help me test fit an office layout",
+    "can you test fit an office layout",
+    "build a massing study",
+    "help me build a massing study",
+    "can you build a massing study",
+    "generate a floor plan from a brief",
+    "help me generate a floor plan from a brief",
+    "can you generate a floor plan from a brief"
+  ]
 }

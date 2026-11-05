@@ -66,5 +66,29 @@
   },
   "useCaseFit": {
     "marketing-promotions": "Describes email and SMS campaigns, flows, and a free email plan for small lists."
-  }
+  },
+  "capabilities": [
+    "draft a blog post",
+    "rewrite a paragraph for clarity",
+    "write an seo article",
+    "outline a marketing page",
+    "edit a draft for tone",
+    "turn notes into a post",
+    "write a social caption",
+    "check a draft for grammar"
+  ],
+  "searchPhrases": [
+    "draft a blog post",
+    "help me draft a blog post",
+    "can you draft a blog post",
+    "rewrite a paragraph for clarity",
+    "help me rewrite a paragraph for clarity",
+    "can you rewrite a paragraph for clarity",
+    "write an seo article",
+    "help me write an seo article",
+    "can you write an seo article",
+    "outline a marketing page",
+    "help me outline a marketing page",
+    "can you outline a marketing page"
+  ]
 }

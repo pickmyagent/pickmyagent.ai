@@ -1,0 +1,88 @@
+{
+  "id": "hyperwrite",
+  "slug": "hyperwrite",
+  "name": "HyperWrite",
+  "websiteUrl": "https://www.hyperwriteai.com/",
+  "affiliateUrl": null,
+  "shortDescription": "HyperWrite can draft an email from a short prompt.",
+  "longDescription": "HyperWrite can draft an email from a short prompt. It can also rewrite a paragraph.",
+  "categories": [
+    "writing"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.hyperwriteai.com/",
+  "docsUrl": "https://www.hyperwriteai.com/",
+  "freeTier": true,
+  "freeTierNotes": "A free option is mentioned on the site.",
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Draft an email from a short prompt",
+    "Rewrite a paragraph"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "HyperWrite can draft an email from a short prompt.",
+  "weakness": "You still review the output before a customer or client sees it.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.hyperwriteai.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.hyperwriteai.com/"
+  },
+  "capabilities": [
+    "rewrite a paragraph so it is clearer",
+    "paraphrase a section",
+    "continue a short story",
+    "check grammar in a draft",
+    "write a blog post about a launch",
+    "change the tone of an email",
+    "shorten a long paragraph",
+    "expand a rough outline"
+  ],
+  "searchPhrases": [
+    "rewrite a paragraph so it is clearer",
+    "help me rewrite a paragraph so it is clearer",
+    "can you rewrite a paragraph so it is clearer",
+    "paraphrase a section",
+    "help me paraphrase a section",
+    "can you paraphrase a section",
+    "continue a short story",
+    "help me continue a short story",
+    "can you continue a short story",
+    "check grammar in a draft",
+    "help me check grammar in a draft",
+    "can you check grammar in a draft"
+  ]
+}

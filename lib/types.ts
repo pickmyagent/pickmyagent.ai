@@ -88,6 +88,16 @@ export type Tool = {
   updatedAt: string;
   sources: string[];
   siteLoad: { status: number; finalUrl: string };
+  /**
+   * Concrete jobs this tool does, in plain language.
+   * Search matches these when the query is not one of the predefined jobs.
+   */
+  capabilities?: string[];
+  /**
+   * Plain-language paraphrases of the jobs above.
+   * Embedded for search. Not shown on the tool page.
+   */
+  searchPhrases?: string[];
   /** One factual sentence per use case this tool can appear for. */
   useCaseFit?: Record<string, string>;
   /** Chat assistant shown only after specialist tools, with a fixed label. */

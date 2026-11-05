@@ -66,5 +66,29 @@
   "useCaseFit": {
     "social-media": "Generates social posts and ads with AI, without a clear base price in the fetch.",
     "agent-social": "Generates social posts and ad creatives for a listing."
-  }
+  },
+  "capabilities": [
+    "generate a facebook ad creative",
+    "make a ugc style video ad",
+    "write google ads variations",
+    "score an ad before launch",
+    "draft meta ads creative",
+    "write ppc headlines",
+    "produce several ad variants",
+    "test which ad creative is clearer"
+  ],
+  "searchPhrases": [
+    "generate a facebook ad creative",
+    "help me generate a facebook ad creative",
+    "can you generate a facebook ad creative",
+    "make a ugc style video ad",
+    "help me make a ugc style video ad",
+    "can you make a ugc style video ad",
+    "write google ads variations",
+    "help me write google ads variations",
+    "can you write google ads variations",
+    "score an ad before launch",
+    "help me score an ad before launch",
+    "can you score an ad before launch"
+  ]
 }

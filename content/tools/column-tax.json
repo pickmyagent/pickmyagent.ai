@@ -1,0 +1,91 @@
+{
+  "id": "column-tax",
+  "slug": "column-tax",
+  "name": "Column Tax",
+  "websiteUrl": "https://www.columntax.com/",
+  "affiliateUrl": null,
+  "shortDescription": "Column Tax can embed tax filing in an app.",
+  "longDescription": "Column Tax can embed tax filing in an app. It can also offer refund advance through a partner.",
+  "categories": [
+    "tax"
+  ],
+  "useCaseTags": [],
+  "toolTypes": [
+    "other"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "pricingModel": [
+    "contact"
+  ],
+  "pricingNotes": "See site",
+  "pricingUrl": "https://www.columntax.com/",
+  "docsUrl": "https://www.columntax.com/",
+  "freeTier": null,
+  "freeTierNotes": null,
+  "startingPrice": null,
+  "freeTrial": null,
+  "pricingCheckedAt": "2026-10-29",
+  "openSource": false,
+  "repoUrl": null,
+  "bestFor": [
+    "Embed tax filing in an app",
+    "Offer refund advance through a partner"
+  ],
+  "notIdealFor": [
+    "A task outside the jobs described on the official site",
+    "Someone who wants the work finished by hand with no software"
+  ],
+  "strength": "Column Tax can embed tax filing in an app.",
+  "weakness": "You still review the return before filing, and this is not tax advice.",
+  "smokeStatus": "verified-docs-only",
+  "smokeTested": false,
+  "checkedAt": "2026-10-29T12:00:00-04:00",
+  "checkedDate": "2026-10-29",
+  "smokeTestNotes": "Official site reviewed.",
+  "handsOn": {
+    "performed": false
+  },
+  "latestRelease": null,
+  "problems": [],
+  "featured": false,
+  "featuredPaid": false,
+  "status": "published",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "sources": [
+    "https://www.columntax.com/"
+  ],
+  "siteLoad": {
+    "status": 200,
+    "finalUrl": "https://www.columntax.com/"
+  },
+  "capabilities": [
+    "start a tax return",
+    "file a personal tax return",
+    "find freelance deductions",
+    "organize w2 and 1099 income",
+    "estimate a quarterly tax payment",
+    "efile a finished return",
+    "sort deductions into the return",
+    "prepare records for a tax filing"
+  ],
+  "searchPhrases": [
+    "start a tax return",
+    "help me start a tax return",
+    "can you start a tax return",
+    "file a personal tax return",
+    "help me file a personal tax return",
+    "can you file a personal tax return",
+    "find freelance deductions",
+    "help me find freelance deductions",
+    "can you find freelance deductions",
+    "organize w2 and 1099 income",
+    "help me organize w2 and 1099 income",
+    "can you organize w2 and 1099 income",
+    "file my 1040",
+    "quarterly estimated taxes",
+    "where do these deductions go"
+  ]
+}
