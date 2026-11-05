@@ -1,5 +1,6 @@
 import { domainAssistantLine, neutralAssistantLine, openAssistantLine } from "./assistant-lines.ts";
 import { headerEchoBroken, NEUTRAL_INTRO, NEUTRAL_LEAD, pronounFlip, safeHelpWith } from "./header-grammar.ts";
+import { headerSpellProblems, polishHeaderPhrase } from "./header-spell.ts";
 import { BRIDGE_LINES, isListingMakeQuery, isListingPhotoQuery, listingSpecialistLine, specialistLine } from "./specialist-lines.ts";
 import { CONCEPT_THRESHOLD, CONCEPTS, type Concept } from "./concepts.ts";
 import { jobCueBlocks, jobCueBonus } from "./job-cues.ts";
@@ -685,9 +686,8 @@ function restoreDisplayedContractions(phrase: string, original: string): string 
   let next = phrase;
   for (const contraction of found) {
     const smashed = contraction.replace(/['’]/g, "").toLowerCase();
-    if (!DISPLAY_CONTRACTIONS.has(smashed)) continue;
-    const restored = contraction.replace(/’/g, "'").toLowerCase();
-    const display = restored.startsWith("i'") ? `I${restored.slice(1)}` : restored;
+    let display = contraction.replace(/’/g, "'").toLowerCase();
+    if (display.startsWith("i'")) display = `I${display.slice(1)}`;
     next = next.replace(new RegExp(`\\b${smashed}\\b`, "gi"), display);
   }
   return next;
@@ -718,10 +718,13 @@ export function jobPhrase(query: string, useCase?: UseCase | null): string {
       .trim(),
     query,
   );
-  display = display.replace(/\btutoring for (\d+(?:st|nd|rd|th) grade)\b/gi, "tutoring $1");
-  if (cleanVerbEcho(display, query) || trustedHelp(display, query)) return display;
+  display = polishHeaderPhrase(display.replace(/\btutoring for (\d+(?:st|nd|rd|th) grade)\b/gi, "tutoring $1"));
+  const readableEcho = headerSpellProblems(display).length === 0 && !headerEchoBroken(display);
+  if (readableEcho && (cleanVerbEcho(display, query) || trustedHelp(display, query))) return display;
   const canonical = useCaseHeader(useCase, wantsYour);
-  if (canonical && !headerEchoBroken(canonical) && !pronounFlip(canonical, query)) return canonical;
+  if (canonical && !headerEchoBroken(canonical) && headerSpellProblems(canonical).length === 0 && !pronounFlip(canonical, query)) {
+    return canonical;
+  }
   return "";
 }
 
@@ -761,6 +764,17 @@ export function jobLead(query: string, useCase?: UseCase | null): string {
   const phrase = jobPhrase(query, useCase);
   if (!phrase) return NEUTRAL_LEAD;
   return `For ${phrase}, here's how each tool can help:`;
+}
+
+const CANONICAL_HEADER_BODIES = new Set(
+  [...Object.values(CANONICAL_JOB), ...Object.values(PHRASE_HEADER)].map((phrase) => phrase.toLowerCase()),
+);
+
+/** True when the header was built from the query instead of a canonical job line. */
+export function isQueryDerivedLead(lead: string): boolean {
+  const match = /^For (.+), here's how each tool can help:$/i.exec(lead.trim());
+  if (!match) return false;
+  return !CANONICAL_HEADER_BODIES.has(match[1].toLowerCase());
 }
 
 function introVerbs(query: string): string[] {
@@ -903,7 +917,7 @@ function roleBonus(conceptId: string, slug: string, query: string): number {
   const smb = smallBusinessRoleBonus(conceptId, slug, query);
   if (smb) return smb;
   const realEstateOrder: Record<string, string[]> = {
-    cma: ["cloud-cma"],
+    cma: ["cloud-cma", "rpr", "housecanary-app", "quantarium", "corelogic-app"],
     "listing-copy": ["jasper", "copy-ai", "writesonic"],
     "listing-photos": ["boxbrownie"],
     "realtor-follow-up": ["follow-up-boss"],
@@ -1721,7 +1735,8 @@ function compoundIntro(hits: CompoundHit[]): string {
     return "AI agents can compare hotels and plan your stay, and cut your Twitch stream into vertical clips.";
   }
   const forms = compoundForms(hits);
-  return `AI agents can help with ${joinAnd(forms.map((form) => form.gerund))}, and you still decide what happens next.`;
+  const jobs = joinAnd(forms.map((form) => form.gerund));
+  return `AI agents can help with ${jobs}, and you still review the result before anyone relies on it.`;
 }
 
 function compoundAssistantWhy(tool: Tool, hits: CompoundHit[]): string {

@@ -1,4 +1,6 @@
 import { categoryPhrase, copyQualityProblems } from "./capability-quality.ts";
+import { categoryIntro } from "./category-intros.ts";
+import { headerSpellProblems, polishHeaderPhrase } from "./header-spell.ts";
 import { articleVerbProblems, hasLowercaseI, headerEchoBroken } from "./header-grammar.ts";
 import { stemToken } from "./match-text.ts";
 import type { Tool } from "./types.ts";
@@ -494,12 +496,12 @@ function toGerund(verb: string): string {
   if (GERUND_FIX[lower]) return GERUND_FIX[lower];
   if (lower.endsWith("ie")) return `${lower.slice(0, -2)}ying`;
   if (lower.endsWith("e") && !lower.endsWith("ee")) return `${lower.slice(0, -1)}ing`;
-  if (/^[a-z]*[aeiou][^aeiou]$/.test(lower) && lower.length <= 4) return `${lower}${lower.slice(-1)}ing`;
+  if (/^[a-z]*[aeiou][^aeiouwxy]$/.test(lower) && lower.length <= 4) return `${lower}${lower.slice(-1)}ing`;
   return `${lower}ing`;
 }
 
 function caseAcronyms(text: string): string {
-  return text.replace(/\b[a-z][a-z0-9&]+\b/g, (word) => ACRONYM_CASE[word] ?? word);
+  return polishHeaderPhrase(text.replace(/\b[a-z][a-z0-9&]+\b/g, (word) => ACRONYM_CASE[word] ?? word));
 }
 
 export function gerundPhrase(capability: string): string {
@@ -512,7 +514,7 @@ export function gerundPhrase(capability: string): string {
 }
 
 function categoryHeader(phrase: string): string {
-  const lead = `For ${phrase}, here's how each tool can help:`;
+  const lead = `For ${polishHeaderPhrase(phrase)}, here's how each tool can help:`;
   if (copyQualityProblems(lead).length > 0 || articleVerbProblems(lead).length > 0 || hasLowercaseI(lead)) {
     return "For this kind of work, here's how each tool can help:";
   }
@@ -526,7 +528,7 @@ function readable(text: string): boolean {
 }
 
 export function capabilityLead(capability: string, categories: string[] = []): string {
-  const phrase = gerundPhrase(capability);
+  const phrase = polishHeaderPhrase(gerundPhrase(capability));
   const lead = `For ${phrase}, here's how each tool can help:`;
   const body = phrase;
   const words = body.split(/\s+/);
@@ -536,6 +538,7 @@ export function capabilityLead(capability: string, categories: string[] = []): s
   if (
     twoVerbs
     || headerEchoBroken(body)
+    || headerSpellProblems(body).length > 0
     || !readable(lead)
     || !/^[a-z]+ing\b/i.test(body)
   ) {
@@ -544,27 +547,8 @@ export function capabilityLead(capability: string, categories: string[] = []): s
   return lead;
 }
 
-export function capabilityIntro(capabilities: string[], categories: string[] = []): string {
-  const unique: string[] = [];
-  const verbs = new Set<string>();
-  for (const item of capabilities) {
-    const text = caseAcronyms(item.replace(/[.?!]+$/g, "").trim());
-    const verb = text.split(/\s+/)[0]?.toLowerCase() ?? "";
-    if (!text || unique.includes(text) || verbs.has(verb)) continue;
-    unique.push(text);
-    verbs.add(verb);
-    if (unique.length === 2) break;
-  }
-  const first = unique[0] ?? "handle this job";
-  const second = unique[1];
-  const intro = second
-    ? `AI agents can ${first}, and they can ${second}.`
-    : `AI agents can ${first}, and you still decide what happens next.`;
-  const fallback = `AI agents can help with ${categoryPhrase(categories)}, and you still decide what happens next.`;
-  if (!readable(intro)) {
-    return readable(fallback) ? fallback : "AI agents can help with this kind of work, and you still decide what happens next.";
-  }
-  return intro;
+export function capabilityIntro(_capabilities: string[], categories: string[] = []): string {
+  return categoryIntro(categories);
 }
 
 export function capabilityWhy(name: string, capability: string): string {

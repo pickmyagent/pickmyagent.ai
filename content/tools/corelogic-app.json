@@ -9,7 +9,9 @@
   "categories": [
     "real-estate"
   ],
-  "useCaseTags": [],
+  "useCaseTags": [
+    "cma-comps"
+  ],
   "toolTypes": [
     "other"
   ],

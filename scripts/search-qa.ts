@@ -1,11 +1,13 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { gzipSync } from "node:zlib";
 import { CONCEPTS } from "../lib/concepts.ts";
-import { matchTagsForConcept } from "../lib/search.ts";
+import { isQueryDerivedLead, matchTagsForConcept } from "../lib/search.ts";
 import { smokeLabel } from "../lib/labels.ts";
 import { releaseLabel, toolPageChromeStrings } from "../lib/tool-page-copy.ts";
 import type { Catalog, Tool } from "../lib/types.ts";
-import { copyQualityProblems } from "../lib/capability-quality.ts";
+import { CATEGORY_PHRASE, copyQualityProblems } from "../lib/capability-quality.ts";
+import { BANNED_INTRO } from "../lib/category-intros.ts";
+import { headerSpellProblems } from "../lib/header-spell.ts";
 import { NEUTRAL_LEAD } from "../lib/header-grammar.ts";
 import { BROKEN_ASSISTANT, descriptionProblems, grammarProblems, headerUsesBrokenPhrase, specialistWhyProblems, toolPageBulletProblems, toolPageCopyProblems } from "./grammar-gate.ts";
 import { buildHeldOut, buildHomeHeldOut, buildOtherHeldOut, buildParaphrases, buildSeeds, FOUNDER_QUERY, gradeParaphrases, paraphraseProblems, type Paraphrase } from "./paraphrases.ts";
@@ -539,6 +541,14 @@ export function qaProblems(catalog: Catalog): string[] {
       if (grammar.length > 0) problems.push(`${item.query}: ${grammar.join("; ")} in "${text}"`);
       const quality = copyQualityProblems(text);
       if (quality.length > 0) problems.push(`${item.query}: ${quality.join("; ")} in "${text}"`);
+      if (text === header) {
+        const body = header.replace(/^For /i, "").replace(/, here's how each tool can help:$/i, "");
+        const spelling = headerSpellProblems(body);
+        if (spelling.length > 0) problems.push(`${item.query}: header ${spelling.join("; ")} in "${header}"`);
+      }
+      if (text.toLowerCase().includes(BANNED_INTRO)) {
+        problems.push(`${item.query}: formulaic intro in "${text}"`);
+      }
     }
     const whys = ranked.tools.map((tool) => tool.whyItHelps);
     if (new Set(whys).size !== whys.length) problems.push(`${item.query}: duplicate why-line`);
@@ -822,7 +832,18 @@ export function offDomainProblems(catalog: Catalog): string[] {
   return problems;
 }
 
+function noteDerived(rows: QaRow[], found: Map<string, string>) {
+  const categoryBodies = new Set(Object.values(CATEGORY_PHRASE).map((phrase) => phrase.toLowerCase()));
+  for (const row of rows) {
+    if (!isQueryDerivedLead(row.header)) continue;
+    const body = row.header.replace(/^For /i, "").replace(/, here's how each tool can help:$/i, "").toLowerCase();
+    if (categoryBodies.has(body)) continue;
+    if (!found.has(row.header)) found.set(row.header, row.query);
+  }
+}
+
 export function renderSearchQaReport(catalog: Catalog): string {
+  const derived = new Map<string, string>();
   const rows = runSearchQa(catalog);
   const graded = gradeParaphrases(catalog);
   const seeds = buildSeeds();
@@ -893,7 +914,9 @@ export function renderSearchQaReport(catalog: Catalog): string {
     `${realEstateSeeds.length} natural real estate seeds. The founder demo is first. Template wraps are graded in the summary and are not repeated here.`,
     "",
   );
-  lines.push(...renderRows(paraphraseRows(catalog, realEstateSeeds), 1));
+  const realEstateRows = paraphraseRows(catalog, realEstateSeeds);
+  noteDerived(realEstateRows, derived);
+  lines.push(...renderRows(realEstateRows, 1));
   lines.push(
     "# Held-out real estate queries",
     "",
@@ -901,6 +924,7 @@ export function renderSearchQaReport(catalog: Catalog): string {
     "",
   );
   const heldRows = paraphraseRows(catalog, heldOut);
+  noteDerived(heldRows, derived);
   heldRows.forEach((row, index) => {
     const key = `${heldOut[index]?.useCase}: ${heldOut[index]?.query}`;
     if (heldOutFail.has(key)) row.header = `MISS ${row.header}`;
@@ -913,6 +937,7 @@ export function renderSearchQaReport(catalog: Catalog): string {
     "",
   );
   const otherRows = paraphraseRows(catalog, otherHeldOut);
+  noteDerived(otherRows, derived);
   otherRows.forEach((row, index) => {
     const key = `${otherHeldOut[index]?.useCase}: ${otherHeldOut[index]?.query}`;
     if (otherFail.has(key)) row.header = `MISS ${row.header}`;
@@ -925,19 +950,23 @@ export function renderSearchQaReport(catalog: Catalog): string {
     "",
   );
   const homeRows = paraphraseRows(catalog, homeHeldOut);
+  noteDerived(homeRows, derived);
   homeRows.forEach((row, index) => {
     const key = `${homeHeldOut[index]?.useCase}: ${homeHeldOut[index]?.query}`;
     if (homeFail.has(key)) row.header = `MISS ${row.header}`;
   });
   lines.push(...renderRows(homeRows, 1));
   lines.push("# Other natural seeds", "");
-  lines.push(...renderRows(paraphraseRows(catalog, otherSeeds), 1));
+  const otherSeedRows = paraphraseRows(catalog, otherSeeds);
+  noteDerived(otherSeedRows, derived);
+  lines.push(...renderRows(otherSeedRows, 1));
   lines.push(
     "# Legacy search QA",
     "",
     `${rows.length} queries through the ranker and the header, intro, and why-line renderers.`,
     "",
   );
+  noteDerived(rows, derived);
   lines.push(...renderRows(rows, 1));
   const broad = gradeBroad(catalog);
   const broadRate = broad.total === 0 ? 0 : broad.passed / broad.total;
@@ -968,7 +997,17 @@ export function renderSearchQaReport(catalog: Catalog): string {
       })),
     };
   });
+  noteDerived(broadRows, derived);
   lines.push(...renderRows(broadRows, 1));
+  const listed = [...derived.entries()].sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]));
+  lines.push(
+    "",
+    "# Query-derived headers",
+    "",
+    `${listed.length} headers are built from the query rather than a canonical job or category line. Each one passed the dictionary, brand-casing, and apostrophe check.`,
+    "",
+  );
+  for (const [header, query] of listed) lines.push(`- ${query} → ${header}`);
   return lines.join("\n");
 }
 

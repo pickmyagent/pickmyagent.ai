@@ -293,7 +293,8 @@ export function conceptBlocked(id: string, lower: string): boolean {
   if (id === "listing-copy" && /\b(furniture|bedroom|mood board|landing page)\b/.test(lower)) return true;
   if (id === "tutoring" && /\b(unit tests?|pull requests?)\b/.test(lower)) return true;
   if (id === "language" && /\b(translat|locali|app strings)/.test(lower)) return true;
-  if (id === "property-mgmt" && /\b(clause|nda)\b/.test(lower) && !/\blease renewal\b/.test(lower)) return true;
+  if (id === "property-mgmt" && /\b(clause|clauses|extract|nda)\b/.test(lower) && !/\b(rent|tenant|maintenance)\b/.test(lower)) return true;
+  if ((id === "realtor-crm" || id === "realtor-follow-up") && /\b(calories|workout|fitness|meal)\b/.test(lower)) return true;
   if (manyHats(lower) && id !== "small-business") return true;
   return false;
 }
@@ -619,7 +620,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list which Xero transactions still need a receipt or a category.",
       chatgpt: "for a Xero cleanup checklist of statements, receipts, and uncategorized expenses.",
-      gemini: "to build a sheet of Xero transactions, the category, and whether a receipt is attached.",
+      gemini: "to set each Xero line beside a category and the receipt you still need to attach.",
       perplexity: "for sourced steps on reconciling Xero to a bank statement, with links you can check.",
       deepseek: "to flag which Xero lines you should ask an accountant about.",
     });
@@ -628,7 +629,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list which FreshBooks entries still need a receipt or a category.",
       chatgpt: "for a FreshBooks checklist of invoices, receipts, and uncategorized expenses.",
-      gemini: "to build a sheet of FreshBooks invoices, the amount, and whether a receipt is attached.",
+      gemini: "to list each FreshBooks invoice with the amount and the receipt still missing.",
       perplexity: "for sourced steps on a FreshBooks cleanup, with links you can check.",
       deepseek: "to flag which FreshBooks lines you should ask an accountant about.",
     });
@@ -637,7 +638,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list which Zoho Books entries still need a receipt or a category.",
       chatgpt: "for a checklist of Zoho Books expenses, receipts, and open invoices.",
-      gemini: "to build a sheet of Zoho Books transactions, the category, and whether a receipt is attached.",
+      gemini: "to pair each Zoho Books entry with a category and note which receipt is missing.",
       perplexity: "for sourced steps on a Zoho Books cleanup, with links you can check.",
       deepseek: "to flag which Zoho Books lines you should ask an accountant about.",
     });
@@ -646,7 +647,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list which Wave entries still need a receipt or a category.",
       chatgpt: "for a Wave checklist of invoices, receipts, and uncategorized expenses.",
-      gemini: "to build a sheet of Wave transactions, the category, and whether a receipt is attached.",
+      gemini: "to lay Wave transactions next to a category and the receipt, when you have one.",
       perplexity: "for sourced steps on cleaning up Wave, with links you can check.",
       deepseek: "to flag which Wave lines you should ask an accountant about.",
     });
@@ -655,7 +656,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list which QuickBooks transactions still need a receipt or a category.",
       chatgpt: "for a QuickBooks cleanup checklist of statements, receipts, and uncategorized expenses.",
-      gemini: "to build a sheet of QuickBooks transactions, the category, and whether a receipt is attached.",
+      gemini: "to place each QuickBooks transaction beside its category and the matching receipt.",
       perplexity: "for sourced steps on reconciling QuickBooks to a bank statement, with links you can check.",
       deepseek: "to flag which QuickBooks lines you should ask an accountant about.",
     });
@@ -664,7 +665,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to suggest a category for each transaction and mark the ones you should correct.",
       chatgpt: "for a checklist of transaction categories a small business usually uses.",
-      gemini: "to build a sheet of transactions, a suggested category, and whether you approved it.",
+      gemini: "to suggest a category for each transaction and leave a blank until you approve it.",
       perplexity: "for sourced notes on expense categories, with links you can check.",
       deepseek: "to flag transactions whose category does not match the receipt.",
     });
@@ -673,7 +674,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list the statement lines that still need a receipt before you reconcile.",
       chatgpt: "for a reconciliation checklist of the statement, the receipts, and the unmatched lines.",
-      gemini: "to build a sheet of statement lines, the amount, and whether a receipt is attached.",
+      gemini: "to line statement amounts up against the receipts you have already saved.",
       perplexity: "for sourced steps on a bank reconciliation, with links you can check.",
       deepseek: "to point at statement lines that do not have a matching receipt.",
     });
@@ -682,7 +683,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list the receipts an expense report is still missing.",
       chatgpt: "for a checklist of the date, the amount, and the category on an expense report.",
-      gemini: "to build a sheet of expenses, the receipt, and whether the report is approved.",
+      gemini: "to group expenses with their receipts and leave the report unsigned until you approve it.",
       perplexity: "for sourced notes on what an expense report should include, with links you can check.",
       deepseek: "to flag expense lines that do not have a receipt.",
     });
@@ -691,7 +692,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft a recurring invoice and list which clients are on that schedule.",
       chatgpt: "for a checklist of the amount, how often it repeats, and who receives it.",
-      gemini: "to build a sheet of clients, the repeating amount, and the next invoice date.",
+      gemini: "to list each client, the amount that repeats, and the next invoice date.",
       perplexity: "for sourced notes on recurring invoice schedules, with links you can check.",
       deepseek: "to flag a repeating invoice whose amount or end date you still need to set.",
     });
@@ -700,7 +701,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list unpaid invoices and draft a short reminder you still approve.",
       chatgpt: "for a checklist of invoice number, due date, and who has not paid.",
-      gemini: "to build a sheet of open invoices, the amount, and the last reminder.",
+      gemini: "to list open invoices with the amount and the date of the last reminder.",
       perplexity: "for sourced notes on invoice payment terms, with links you can check.",
       deepseek: "to draft a late-payment note that states the amount and the due date.",
     });
@@ -709,7 +710,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list contractor payments a 1099 still needs and the amounts you must confirm.",
       chatgpt: "for a checklist of contractor name, payments, and the 1099 boxes still blank.",
-      gemini: "to build a sheet of contractors, the amount paid, and whether a 1099 is ready.",
+      gemini: "to list each contractor, the amount paid, and the 1099 you still have to confirm.",
       perplexity: "for sourced notes on what a 1099 asks for, with links you can check.",
       deepseek: "to flag which 1099 amounts you should confirm before anything is filed.",
     });
@@ -718,7 +719,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list quarterly income and expenses and the payment date you still confirm.",
       chatgpt: "for a checklist of quarterly income, expenses, and the estimate you still check.",
-      gemini: "to build a sheet of quarters, income, expenses, and the estimate.",
+      gemini: "to put each quarter's income and expenses next to the estimate you still check.",
       perplexity: "for sourced notes on quarterly estimated taxes, with links you can check.",
       deepseek: "to flag which quarterly figures you should confirm before you pay.",
     });
@@ -727,7 +728,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to gather year-end income and expenses into questions for the person who files.",
       chatgpt: "for a year-end checklist of income, expenses, and receipts to gather.",
-      gemini: "to build a sheet of year-end totals and the documents still missing.",
+      gemini: "to gather year-end totals and list the documents that are still missing.",
       perplexity: "for sourced notes on a year-end tax packet, with links you can check.",
       deepseek: "to flag which year-end totals you should confirm before filing.",
     });
@@ -736,7 +737,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list VAT collected and VAT paid and the figures you still confirm.",
       chatgpt: "for a checklist of VAT collected, VAT paid, and the return date.",
-      gemini: "to build a sheet of sales, the VAT collected, and the VAT paid.",
+      gemini: "to separate VAT collected from VAT paid so the return figures sit side by side.",
       perplexity: "for sourced notes on a VAT return, with links you can check.",
       deepseek: "to flag which VAT figures you should confirm before you file.",
     });
@@ -745,7 +746,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to list GST collected and GST paid and the figures you still confirm.",
       chatgpt: "for a checklist of GST collected, GST paid, and the return date.",
-      gemini: "to build a sheet of sales, the GST collected, and the GST paid.",
+      gemini: "to separate GST collected from GST paid so you can see both figures.",
       perplexity: "for sourced notes on a GST return, with links you can check.",
       deepseek: "to flag which GST figures you should confirm before you file.",
     });
@@ -754,7 +755,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft a thank-you or a check-in for someone already in your contacts.",
       chatgpt: "for a checklist of which customers to thank and what the note should say.",
-      gemini: "to build a sheet of customers, the last visit, and whether you followed up.",
+      gemini: "to list customers by the last visit and the follow-up note you still owe.",
       perplexity: "for sourced notes on a short customer thank-you, with links you can check.",
       deepseek: "to shorten a customer note so it thanks them and asks one clear question.",
     });
@@ -763,7 +764,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft a Google business profile description and mark the hours you must confirm.",
       chatgpt: "for a checklist of the business name, hours, services, and address to verify.",
-      gemini: "to build a sheet of local pages, the target phrase, and whether the draft is approved.",
+      gemini: "to list each local page, the phrase it targets, and leave it unmarked until you approve the draft.",
       perplexity: "for sourced notes on local pages, with links you can check before you publish.",
       deepseek: "to shorten a business description so it states the service and the city.",
     });
@@ -772,7 +773,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft an email newsletter and mark the lines you still want to change.",
       chatgpt: "for a checklist of the subject line, the offer, and the list a newsletter goes to.",
-      gemini: "to build a sheet of newsletter drafts, the subject, and whether the send is approved.",
+      gemini: "to list newsletter drafts with the subject line and leave the send unmarked until you approve it.",
       perplexity: "for sourced notes on email newsletter timing, with links you can check.",
       deepseek: "to shorten a newsletter so it states one offer and the next step.",
     });
@@ -781,7 +782,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft ad copy and mark the budget and the audience you still choose.",
       chatgpt: "for a checklist of the offer, the caption, and where an ad will run.",
-      gemini: "to build a sheet of ad drafts, the caption, and whether you approved the spend.",
+      gemini: "to set each ad caption next to the spend and leave it blank until you approve it.",
       perplexity: "for sourced notes on writing a local ad, with links you can check.",
       deepseek: "to rewrite an ad so it states the offer and does not invent a discount.",
     });
@@ -790,7 +791,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft the text that shares a booking link and a reminder for the day before.",
       chatgpt: "for a checklist of the service, the length, and what the booking page should say.",
-      gemini: "to build a sheet of appointments, the customer, and whether they confirmed.",
+      gemini: "to list appointments with the customer and a mark after they confirm.",
       perplexity: "for sourced notes on a simple booking page, with links you can check.",
       deepseek: "to shorten a booking reminder so it states the time and how to cancel.",
     });
@@ -799,7 +800,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft a reminder that cuts down no-shows and a note for anyone who missed.",
       chatgpt: "for a checklist of confirmation texts to send before an appointment.",
-      gemini: "to build a sheet of appointments, whether they confirmed, and who did not show.",
+      gemini: "to separate confirmed appointments from the people who did not show.",
       perplexity: "for sourced notes on reducing no-shows, with links you can check.",
       deepseek: "to shorten a reminder so it states the time and how to cancel.",
     });
@@ -808,7 +809,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to turn a project into a task list and mark what you still have to schedule.",
       chatgpt: "for a checklist of project tasks, the owner, and the due date.",
-      gemini: "to build a sheet of tasks, the owner, and whether each one is done.",
+      gemini: "to give each task an owner and leave it open until it is done.",
       perplexity: "for sourced notes on a simple project list, with links you can check.",
       deepseek: "to split a project into the next three tasks you can actually finish.",
     });
@@ -817,7 +818,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to compare an application with the shift you need filled and list what you still confirm.",
       chatgpt: "for a checklist of questions to ask before you hire someone for a shift.",
-      gemini: "to build a sheet of applicants, the role, and whether you scheduled an interview.",
+      gemini: "to list applicants by role and the interview time you still have to offer.",
       perplexity: "for sourced notes on hiring hourly staff, with links you can check.",
       deepseek: "to shorten a note to an applicant so it states the shift and the next step.",
     });
@@ -826,7 +827,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft an onboarding checklist for a new hire and the first note you send them.",
       chatgpt: "for a checklist of paperwork, tools, and the first-week tasks for a new hire.",
-      gemini: "to build a sheet of new hires, the start date, and the tasks still open.",
+      gemini: "to list each new hire, the start date, and the onboarding tasks still open.",
       perplexity: "for sourced notes on a simple onboarding list, with links you can check.",
       deepseek: "to shorten an onboarding note so it states the start time and who to ask.",
     });
@@ -835,7 +836,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft the questions a website chatbot may answer and which ones a person still takes.",
       chatgpt: "for a checklist of FAQ answers a chatbot can give before a person steps in.",
-      gemini: "to build a sheet of frequent questions, the chatbot reply, and when to hand off.",
+      gemini: "to pair frequent questions with the reply and the point where a person should take over.",
       perplexity: "for sourced notes on a website FAQ chatbot, with links you can check.",
       deepseek: "to shorten a FAQ answer so a chatbot can say it in one or two sentences.",
     });
@@ -844,7 +845,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to draft what a voice agent should say and which calls a person still takes.",
       chatgpt: "for a checklist of questions the phone greeting should ask.",
-      gemini: "to build a sheet of call types, the answer, and when to hand the call to a person.",
+      gemini: "to group call types by the answer and the moment a person should take the call.",
       perplexity: "for sourced notes on small-business phone greetings, with links you can check.",
       deepseek: "to draft a short greeting that states the hours and how to reach a person.",
     });
@@ -853,7 +854,7 @@ export function smallBusinessAssistantLine(slug: string, useCaseSlug: string | u
     return ask(slug, {
       claude: "to explain a cash-flow spreadsheet and name the total you should recompute.",
       chatgpt: "for a checklist of income, expenses, and the months a cash-flow sheet should show.",
-      gemini: "to build a sheet layout for profit and loss, with one tab for the source numbers.",
+      gemini: "to sketch a profit and loss layout and keep the source numbers on their own tab.",
       perplexity: "for sourced definitions of cash-flow terms, with links you can check.",
       deepseek: "to list which figures in a profit-and-loss table do not support the conclusion.",
     });

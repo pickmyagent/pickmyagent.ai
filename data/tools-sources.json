@@ -6520,5 +6520,94 @@
     ],
     "siteStatus": 200,
     "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "appfolio",
+    "name": "AppFolio",
+    "category": "real-estate",
+    "websiteUrl": "https://www.appfolio.com/",
+    "sources": [
+      "https://www.appfolio.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "avail",
+    "name": "Avail",
+    "category": "real-estate",
+    "websiteUrl": "https://www.avail.com/",
+    "sources": [
+      "https://www.avail.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "lofty",
+    "name": "Lofty",
+    "category": "real-estate",
+    "websiteUrl": "https://www.lofty.com/",
+    "sources": [
+      "https://www.lofty.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "quantarium",
+    "name": "Quantarium",
+    "category": "real-estate",
+    "websiteUrl": "https://www.quantarium.com/",
+    "sources": [
+      "https://www.quantarium.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "real-geeks",
+    "name": "Real Geeks",
+    "category": "real-estate",
+    "websiteUrl": "https://www.realgeeks.com/",
+    "sources": [
+      "https://www.realgeeks.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rentec-direct",
+    "name": "Rentec Direct",
+    "category": "real-estate",
+    "websiteUrl": "https://www.rentecdirect.com/",
+    "sources": [
+      "https://www.rentecdirect.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "rpr",
+    "name": "RPR",
+    "category": "real-estate",
+    "websiteUrl": "https://www.narrpr.com/",
+    "sources": [
+      "https://www.narrpr.com/",
+      "https://www.nar.realtor/realtors-property-resource"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
+  },
+  {
+    "slug": "wise-agent",
+    "name": "Wise Agent",
+    "category": "real-estate",
+    "websiteUrl": "https://www.wiseagent.com/",
+    "sources": [
+      "https://www.wiseagent.com/"
+    ],
+    "siteStatus": 200,
+    "smokeStatus": "verified-docs-only"
   }
 ]

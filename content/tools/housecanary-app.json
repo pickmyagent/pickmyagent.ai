@@ -9,7 +9,10 @@
   "categories": [
     "real-estate"
   ],
-  "useCaseTags": [],
+  "useCaseTags": [
+    "cma-comps",
+    "market-reports"
+  ],
   "toolTypes": [
     "other"
   ],
