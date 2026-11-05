@@ -415,7 +415,9 @@
       "categories": [
         "scheduling"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "shift-scheduling"
+      ],
       "toolTypes": [
         "other"
       ],
@@ -51322,7 +51324,9 @@
       "categories": [
         "scheduling"
       ],
-      "useCaseTags": [],
+      "useCaseTags": [
+        "shift-scheduling"
+      ],
       "toolTypes": [
         "other"
       ],

@@ -264,7 +264,6 @@ export function conceptBlocked(id: string, lower: string): boolean {
   if ((id === "content" || id === "social") && /\b(ad creatives?|ad variations|ugc|google ads)\b/.test(lower)) return true;
   if (id === "shifts" && !shiftQuery(lower) && !/\b(who can work|nobody assigned|who is available)\b/.test(lower)) return true;
   if ((id === "video" || id === "video-generation") && /\b(short story|cold email|newsletter|google slides|build an app)\b/.test(lower) && !/\b(clip|clips|reel|reels|twitch)\b/.test(lower)) return true;
-  if (id === "video" && /\b(interview|highlight)\b/.test(lower) && /\b(clip|highlight)\b/.test(lower) && !/\b(twitch|stream)\b/.test(lower)) return true;
   if (id === "knowledge" && /\b(case law|nda\b|lawsuit|parking ticket)\b/.test(lower)) return true;
   if (id === "support" && /\b(parking ticket|case law|nda\b)\b/.test(lower)) return true;
   if (id === "commerce" && /\b(product descriptions?|product titles|catalog photos|support macros)\b/.test(lower) && !/\b(inventory|shipping)\b/.test(lower)) return true;
